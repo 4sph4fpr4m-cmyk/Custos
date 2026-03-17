@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="#1a2744"/>
+  
+  <!-- Soft glow -->
+  <circle cx="256" cy="260" r="150" fill="#d4a843" opacity="0.08"/>
+  
+  <!-- Wings from behind the back/shoulder blades - LEFT -->
+  <path d="M220 270 
+    C195 250, 150 210, 100 175 
+    C75 160, 55 165, 52 180 
+    C48 200, 65 225, 95 245 
+    C130 268, 180 275, 220 270Z" 
+    fill="#d4a843" opacity="0.5"/>
+  <path d="M225 265 
+    C208 248, 172 220, 130 200 
+    C110 192, 95 198, 95 212 
+    C95 228, 115 245, 150 258 
+    C178 268, 210 268, 225 265Z" 
+    fill="#d4a843" opacity="0.3"/>
+    
+  <!-- Wings from behind the back/shoulder blades - RIGHT -->
+  <path d="M292 270 
+    C317 250, 362 210, 412 175 
+    C437 160, 457 165, 460 180 
+    C464 200, 447 225, 417 245 
+    C382 268, 332 275, 292 270Z" 
+    fill="#d4a843" opacity="0.5"/>
+  <path d="M287 265 
+    C304 248, 340 220, 382 200 
+    C402 192, 417 198, 417 212 
+    C417 228, 397 245, 362 258 
+    C334 268, 302 268, 287 265Z" 
+    fill="#d4a843" opacity="0.3"/>
+  
+  <!-- Halo -->
+  <ellipse cx="256" cy="160" rx="48" ry="14" fill="none" stroke="#d4a843" stroke-width="5" opacity="0.65"/>
+  
+  <!-- Head -->
+  <circle cx="256" cy="198" r="35" fill="#d4a843" opacity="0.18" stroke="#d4a843" stroke-width="4" stroke-opacity="0.55"/>
+  
+  <!-- Body drawn OVER wing origins so wings appear behind -->
+  <path d="M224 230 
+    L210 390 C210 403, 222 412, 238 412 
+    L274 412 C290 412, 302 403, 302 390 
+    L288 230 C276 248, 236 248, 224 230Z" 
+    fill="#1a2744" opacity="0.85"/>
+  <path d="M224 230 
+    L210 390 C210 403, 222 412, 238 412 
+    L274 412 C290 412, 302 403, 302 390 
+    L288 230 C276 248, 236 248, 224 230Z" 
+    fill="#d4a843" opacity="0.15" stroke="#d4a843" stroke-width="3.5" stroke-opacity="0.45"/>
+  
+  <!-- Cross held at center -->
+  <line x1="256" y1="275" x2="256" y2="325" stroke="#d4a843" stroke-width="4.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="242" y1="290" x2="270" y2="290" stroke="#d4a843" stroke-width="4.5" opacity="0.7" stroke-linecap="round"/>
+  
+  <!-- CUSTOS -->
+  <text x="256" y="465" text-anchor="middle" font-family="serif" font-size="36" font-weight="600" fill="#d4a843" letter-spacing="10" opacity="0.55">CUSTOS</text>
+</svg>
