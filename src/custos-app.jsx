@@ -1545,26 +1545,29 @@ function SourceLink({ text, extraCheck }) {
 function parseGuidance(text) {
   const s = { shortAnswer: "", tradition: [], magisterium: [], scripture: [], pastoralWarning: "", calibration: "" };
   try {
-    const sa = text.match(/SHORT ANSWER[:\s]*\n([\s\S]*?)(?=\nTRADITION|$)/i);
+    // Strip markdown bold markers from section headers
+    const t = text.replace(/\*\*(SHORT ANSWER|TRADITION|MAGISTERIUM|SCRIPTURE|PASTORAL|CALIBRATION)[:\s]*\*\*/gi, '$1:');
+
+    const sa = t.match(/SHORT ANSWER[:\s]*\n([\s\S]*?)(?=\nTRADITION[:\s]|$)/i);
     if (sa) s.shortAnswer = sa[1].trim();
-    const tr = text.match(/TRADITION[:\s]*\n([\s\S]*?)(?=\nMAGISTERIUM|$)/i);
+    const tr = t.match(/TRADITION[:\s]*\n([\s\S]*?)(?=\nMAGISTERIUM[:\s]|$)/i);
     if (tr) tr[1].split(/(?=AUTHOR:)/i).filter(e => e.trim()).forEach(e => {
       const a = e.match(/AUTHOR:\s*(.+)/i)?.[1]?.trim()||"", q = (e.match(/QUOTE:\s*"?([^"]*)"?/i)?.[1]||e.match(/QUOTE:\s*([\s\S]*?)(?=SOURCE:|$)/i)?.[1]||"").trim().replace(/^"|"$/g,""), src = e.match(/SOURCE:\s*(.+)/i)?.[1]?.trim()||"";
       if (a||q) s.tradition.push({ author: a, quote: q, source: src });
     });
-    const mg = text.match(/MAGISTERIUM[:\s]*\n([\s\S]*?)(?=\nSCRIPTURE|\nPASTORAL|\nCALIBRATION|$)/i);
+    const mg = t.match(/MAGISTERIUM[:\s]*\n([\s\S]*?)(?=\nSCRIPTURE[:\s]|\nPASTORAL[:\s]|\nCALIBRATION[:\s]|$)/i);
     if (mg) mg[1].split(/(?=REF:)/i).filter(e => e.trim()).forEach(e => {
       const r = e.match(/REF:\s*(.+)/i)?.[1]?.trim()||"", t2 = e.match(/TEACHING:\s*([\s\S]*?)(?=REF:|$)/i)?.[1]?.trim()||"";
       if (r||t2) s.magisterium.push({ ref: r, teaching: t2 });
     });
-    const sc = text.match(/SCRIPTURE[:\s]*\n([\s\S]*?)(?=\nPASTORAL|\nCALIBRATION|$)/i);
+    const sc = t.match(/SCRIPTURE[:\s]*\n([\s\S]*?)(?=\nPASTORAL[:\s]|\nCALIBRATION[:\s]|$)/i);
     if (sc) sc[1].split(/(?=VERSE:)/i).filter(e => e.trim()).forEach(e => {
       const v = e.match(/VERSE:\s*(.+)/i)?.[1]?.trim()||"", t2 = e.match(/TEXT:\s*([\s\S]*?)(?=VERSE:|$)/i)?.[1]?.trim()||"";
       if (v||t2) s.scripture.push({ verse: v, text: t2 });
     });
-    const pw = text.match(/PASTORAL[:\s]*(?:WARNING)?[:\s]*\n([\s\S]*?)(?=\nCALIBRATION|$)/i);
+    const pw = t.match(/PASTORAL[:\s]*(?:WARNING)?[:\s]*\n([\s\S]*?)(?=\nCALIBRATION[:\s]|$)/i);
     if (pw) s.pastoralWarning = pw[1].trim();
-    const cal = text.match(/CALIBRATION[:\s]*\n?([\s\S]*?)$/i);
+    const cal = t.match(/CALIBRATION[:\s]*\n?([\s\S]*?)$/i);
     if (cal) s.calibration = cal[1].trim();
   } catch(e){}
   if (!s.shortAnswer && !s.tradition.length) s.shortAnswer = text;
