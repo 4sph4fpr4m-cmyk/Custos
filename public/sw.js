@@ -1,12 +1,12 @@
-// Custos Service Worker — Cache-first for app shell, network-first for API
+// Custos Service Worker — Network-first for app, cache as offline fallback
 
-const CACHE_NAME = 'custos-v1';
+const CACHE_NAME = 'custos-v2';
 const APP_SHELL = [
   '/',
   '/manifest.json',
 ];
 
-// Install: cache app shell
+// Install: cache app shell, skip waiting immediately
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))
@@ -14,7 +14,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// Activate: clean old caches
+// Activate: clean ALL old caches immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -24,17 +24,17 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch: network-first for API, cache-first for everything else
+// Fetch: network-first for everything except fonts
 self.addEventListener('fetch', (event) => {
   const { request } = event;
 
-  // API calls: always go to network
+  // API calls: always network, never cache
   if (request.url.includes('/api/')) {
     event.respondWith(fetch(request));
     return;
   }
 
-  // Google Fonts: cache with network fallback
+  // Google Fonts: cache-first (they never change)
   if (request.url.includes('fonts.googleapis.com') || request.url.includes('fonts.gstatic.com')) {
     event.respondWith(
       caches.match(request).then((cached) => {
@@ -49,18 +49,17 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // App shell: cache-first with network fallback
+  // Everything else: NETWORK-FIRST with cache fallback
   event.respondWith(
-    caches.match(request).then((cached) => {
-      return cached || fetch(request).then((response) => {
-        // Cache successful responses for next time
-        if (response.status === 200) {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-        }
-        return response;
-      }).catch(() => {
-        // Offline fallback for navigation requests
+    fetch(request).then((response) => {
+      if (response.status === 200) {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+      }
+      return response;
+    }).catch(() => {
+      return caches.match(request).then((cached) => {
+        if (cached) return cached;
         if (request.mode === 'navigate') {
           return caches.match('/');
         }
