@@ -178,7 +178,7 @@ CALIBRATION DISCIPLINE — ABSOLUTE RULES
 
 FLAGGED EDGE CASES — REQUIRED CALIBRATIONS
 These questions have known correct calibrations. Do not deviate:
-• Embryo adoption / "snowflake babies": CALIBRATION = "Addressed but not resolved." Dignitas Personae §19 called the intention "praiseworthy" but said the proposal "presents various problems" and deliberately stopped short of prohibition or permission. IVF itself is definitively condemned (Donum Vitae); the rescue of already-existing embryos is the unresolved question.
+• Embryo adoption / "snowflake babies": THIS IS A MANDATORY CALIBRATION. You MUST state: "Addressed but not resolved." The Church has NOT "strongly encouraged," "approved," "permitted," or "condemned" embryo adoption. Dignitas Personae §19 called the intention "praiseworthy with regard to the intention of respecting and defending human life" BUT stated the proposal "presents various problems not dissimilar to those mentioned above" and concluded that the situation "cannot be resolved." The CDF DELIBERATELY chose not to permit or prohibit. You must present BOTH the argument for (rescue of innocent life) and the argument against (implantation outside the conjugal act) and state that the Church has not resolved the tension. If you say the Church "encourages," "approves," "permits," "condemns," or "prohibits" embryo adoption, you are WRONG. IVF itself is definitively condemned (Donum Vitae); the rescue of already-existing embryos is the unresolved question.
 • NFP with contraceptive intent (using NFP specifically to avoid children indefinitely without serious reason): CALIBRATION = "Authoritative teaching." Humanae Vitae §10 and §16 teach that married couples must have serious reasons for spacing births. The Church approves NFP as a method but requires just cause for its use. The distinction between method (approved) and intent (requires serious reason) is authoritative but the precise threshold of "serious reason" is not infallibly defined.
 • Material cooperation in evil (e.g., attending an invalid wedding, working for a morally problematic employer): CALIBRATION = "Addressed in principle." Aquinas on scandal (ST II-II, Q.43) and Liguori on cooperation provide the moral framework, but no approved source gives a binding judgment on specific cases. The circumstances matter. Direct the person to a confessor.
 
@@ -1658,47 +1658,34 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
       setCurrentQ(text);
     }
     setView("loading");
-    let debugInfo = "";
     try {
-      // Build messages array with history for follow-ups
-      const newMsg = { role: "user", content: isFollowUp ? text.trim() : (domain ? `Domain: ${domain.label}. My question: ${text.trim()}` : `My question: ${text.trim()}`) };
-      const msgs = [...history, newMsg];
+      const body = isFollowUp
+        ? { question: text.trim(), history: history }
+        : { question: text.trim(), domain: domain ? domain.label : null };
 
-      const r = await fetch("https://api.anthropic.com/v1/messages", {
+      const r = await fetch("/api/guidance", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "anthropic-version": "2023-06-01"
-        },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1000,
-          messages: msgs
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
       });
-
-      debugInfo = "status:" + r.status;
       const data = await r.json();
-      debugInfo += " keys:" + Object.keys(data);
+      if (data.error) throw new Error(data.error);
+      if (!data.guidance) throw new Error("No guidance returned");
 
-      const fullResponse = data.content
-        .map(item => (item.type === "text" ? item.text : ""))
-        .filter(Boolean)
-        .join("\n");
-
-      if (!fullResponse) throw new Error("Empty. " + debugInfo);
-
-      // Update history with this exchange
-      setHistory([...msgs, { role: "assistant", content: fullResponse }]);
-      setGuidance(parseGuidance(fullResponse));
+      // Build history for follow-ups
+      const userMsg = isFollowUp
+        ? { role: "user", content: text.trim() }
+        : { role: "user", content: domain ? "Domain: " + domain.label + ". My question: " + text.trim() : "My question: " + text.trim() };
+      setHistory([...history, userMsg, { role: "assistant", content: data.guidance }]);
+      setGuidance(parseGuidance(data.guidance));
       setFollowUp("");
       setView("response");
     } catch(e) {
       setGuidance({
-        shortAnswer: "Unable to generate guidance. " + debugInfo,
+        shortAnswer: "Custos was unable to generate guidance. Please try again.",
         tradition: [], magisterium: [], scripture: [],
-        pastoralWarning: "",
-        calibration: (e.name || "") + ": " + (e.message || String(e)).substring(0, 300)
+        pastoralWarning: "If this persists, consider consulting your parish priest or the Baltimore Catechism directly.",
+        calibration: e.message || "Connection error"
       });
       setView("response");
     }
