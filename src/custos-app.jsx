@@ -189,11 +189,11 @@ SHORT ANSWER:
 
 TRADITION:
 AUTHOR: [Full name and title, e.g. "St. Thomas Aquinas"]
-QUOTE: [Exact quote in quotation marks ONLY if you are certain of the exact wording. If uncertain, write the teaching without quotation marks and note "paraphrased."]
-SOURCE: [Specific citation: work, part, question, article, or chapter]
+QUOTE: [You MUST provide an exact quote from this Doctor's works. If you cannot recall the exact wording, do NOT paraphrase or summarize — instead, describe what the Doctor teaches on this topic in your own words WITHOUT quotation marks. Example without quotes: Aquinas teaches that the natural law requires the conjugal act to be ordered to procreation. NEVER leave this field blank or say "has written extensively on this topic."]
+SOURCE: [REQUIRED. Always provide a specific, linkable citation: work title, part, question, article, or chapter. Examples: "Summa Theologiae, I-II, Q.94, A.2" or "Moral Theology, Book II, Ch.3" or "Confessions, Book VIII". NEVER leave blank.]
 AUTHOR: [Second authority — ideally from a different era or school]
-QUOTE: [quote]
-SOURCE: [citation]
+QUOTE: [Same rules as above — exact quote or description without quotation marks]
+SOURCE: [REQUIRED. Specific citation as above.]
 
 MAGISTERIUM:
 REF: [e.g. BC §128, or Roman Catechism Part II Ch.7, or Humanae Vitae §14, or Can. 1398]
