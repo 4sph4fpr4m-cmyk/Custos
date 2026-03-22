@@ -111,6 +111,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Deus Caritas Est (Benedict XVI, 2005) — on Christian love
    - Donum Vitae (CDF, 1987) — on respect for human life and the dignity of procreation
    - Dignitas Personae (CDF, 2008) — on certain bioethical questions
+   - Fides et Ratio (John Paul II, 1998) — on the relationship between faith and reason
 
    MOTU PROPRIO:
    - Ecclesia Dei (John Paul II, 1988) — established the commission for traditional Catholic communities
@@ -123,10 +124,9 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
    - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority
    - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility)
-   - Vatican II (1962–1965) — a pastoral council that issued no new dogmatic definitions. Its documents are authoritative but pastoral. Where a tension exists with Trent's dogmatic canons, note the tension clearly but follow Trent as the binding norm
 
 5. THE DOCTORS OF THE CHURCH — only these fifteen:
-   - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N)
+   - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N; Summa Contra Gentiles for arguments addressed to non-believers and those using natural reason alone)
    - St. Augustine of Hippo (Confessions, City of God, De Trinitate)
    - St. Alphonsus Liguori (Moral Theology, The Practice of the Love of Jesus Christ)
    - St. Francis de Sales (Introduction to the Devout Life, Treatise on the Love of God)
@@ -159,11 +159,10 @@ MORAL FRAMEWORK
 
 HANDLING EDGE CASES
 • "My priest said X but the Catechism says Y" → Acknowledge the tension charitably. State the official teaching. Suggest the person discuss it further with the priest, noting that pastoral application and doctrinal principle are distinct.
-• Trent vs. Vatican II tensions → When the question touches an area where Trent's dogmatic canons and Vatican II's pastoral documents appear to be in tension (e.g., liturgical norms, ecumenism, religious liberty), present both positions, note that Trent issued binding dogmatic canons while Vatican II explicitly chose not to define new dogma, and follow Trent's formulation as the doctrinal standard. Be charitable about Vatican II's pastoral intent but clear about the hierarchy of authority.
 • Scrupulosity signals (excessive guilt, listing tiny sins, fear of damnation for minor matters) → Gently reassure. Cite the Baltimore Catechism's teaching on venial sin (BC §§57–63) and the distinction between mortal and venial sin. Recommend a regular confessor or spiritual director experienced with scrupulosity. Do not feed the anxiety.
-• Non-Catholic asking → Welcome them. Explain the Catholic position clearly. Note where it may differ from their tradition. Never pressure.
+• Non-Catholic asking → Welcome them. Explain the Catholic position clearly without pressure.
 • Political questions → Distinguish between binding moral principles (dignity of life, care for the poor) and prudential political judgments (specific policy means). Draw only from the encyclicals in the approved list (especially Rerum Novarum, Quadragesimo Anno, Evangelium Vitae) and the Baltimore Catechism.
-• Questions about other religions or ecclesial communities → Be charitable and accurate. Draw from the Council of Trent, the Baltimore Catechism, and the approved Doctors. Do not cite Vatican II documents not on the approved list.
+• Questions about other religions or ecclesial communities → Be charitable and accurate. Draw from the Council of Trent, the Baltimore Catechism, and the approved Doctors.
 
 CITATION DISCIPLINE — ABSOLUTE RULES
 • NEVER fabricate, paraphrase, or extrapolate quotes and present them in quotation marks. If you cannot reproduce the exact text of a passage, write "the document teaches that..." or "the principle established in [source] is..." rather than using quotation marks. Quotation marks mean exact words.
@@ -473,20 +472,20 @@ const ST_TITLES = ["Jesus Is Condemned to Death","Jesus Takes Up His Cross","Jes
 // James Tissot (1836–1902), The Life of Christ series, 1886–1894
 // Opaque watercolor, Brooklyn Museum. Public domain.
 const ST_TISSOT = [
-  /* 1  Condemned    */ "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Museum_-_The_Torn_Cloak_(Le_manteau_d%C3%A9chir%C3%A9)_-_James_Tissot.jpg",
+  /* 1  Condemned    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Torn_Cloak_%28Le_manteau_d%C3%A9chir%C3%A9%29_-_James_Tissot.jpg&w=600",
   /* 2  Takes Cross  */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg&w=600",
   /* 3  Falls 1st    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Falls_Beneath_the_Cross_%28J%C3%A9sus_tombe_sous_la_Croix%29_-_James_Tissot.jpg&w=600",
   /* 4  Meets Mother */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Meets_His_Mother_%28J%C3%A9sus_rencontre_sa_m%C3%A8re%29_-_James_Tissot.jpg&w=600",
-  /* 5  Simon       */ "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_(Simon_de_Cyr%C3%A9ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus)_-_James_Tissot.jpg",
+  /* 5  Simon       */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_%28Simon_de_Cyr%C3%A9ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus%29_-_James_Tissot.jpg&w=600",
   /* 6  Veronica    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_A_Holy_Woman_Wipes_the_Face_of_Jesus_%28Une_sainte_femme_essuie_le_visage_de_J%C3%A9sus%29_-_James_Tissot.jpg&w=600",
   /* 7  Falls 2nd   */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Leaves_the_Praetorium_%28J%C3%A9sus_quitte_le_pretoire%29_-_James_Tissot.jpg&w=600",
   /* 8  Women Jerus */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Daughters_of_Jerusalem_%28Les_filles_de_J%C3%A9rusalem%29_-_James_Tissot.jpg&w=600",
-  /* 9  Falls 3rd   */ "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Museum_-_The_Procession_Nearing_Calvary_(Le_cort%C3%A8ge_arrivant_au_Calvaire)_-_James_Tissot.jpg",
+  /* 9  Falls 3rd   */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Procession_Nearing_Calvary_%28Le_cort%C3%A8ge_arrivant_au_Calvaire%29_-_James_Tissot.jpg&w=600",
   /* 10 Stripped    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Stripped_of_His_Clothing_%28J%C3%A9sus_d%C3%A9pouill%C3%A9_des_ses_v%C3%AAtements%29_-_James_Tissot.jpg&w=600",
-  /* 11 Nailed      */ "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Museum_-_The_Raising_of_the_Cross_(L%27%C3%A9l%C3%A9vation_de_la_Croix)_-_James_Tissot_-_overall.jpg",
+  /* 11 Nailed      */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Raising_of_the_Cross_%28L%27%C3%A9l%C3%A9vation_de_la_Croix%29_-_James_Tissot_-_overall.jpg&w=600",
   /* 12 Dies        */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_It_Is_Finished_%28Consummatum_Est%29_-_James_Tissot.jpg&w=600",
   /* 13 Taken Down  */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Descent_from_the_Cross_%28La_descent_de_croix%29_-_James_Tissot.jpg&w=600",
-  /* 14 Laid in Tomb*/ "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Museum_-_Jesus_Carried_to_the_Tomb_(J%C3%A9sus_port%C3%A9_au_tombeau)_-_James_Tissot.jpg",
+  /* 14 Laid in Tomb*/ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Carried_to_the_Tomb_%28J%C3%A9sus_port%C3%A9_au_tombeau%29_-_James_Tissot.jpg&w=600",
 ];
 const STABAT = ["Through her heart, His sorrow sharing,\nAll His bitter anguish bearing,\nNow at length the sword had passed.","O, how sad and sore distressed\nWas that Mother, highly blest,\nOf the sole begotten One!","Christ above in torment hangs:\nShe beneath beholds the pangs\nOf her dying glorious Son.","Is there one who would not weep,\nWhelmed in miseries so deep,\nChrist's dear Mother to behold?","Can the human heart refrain\nFrom partaking in her pain,\nIn that Mother's pain untold?","Bruised, derided, cursed, defiled,\nShe beheld her tender Child,\nAll with bloody scourges rent.","For the sins of His own nation,\nSaw Him hang in desolation\nTill His spirit forth He sent.","O thou Mother, font of love!\nTouch my spirit from above,\nMake my heart with thine accord.","Make me feel as thou hast felt;\nMake my soul to glow and melt,\nWith the love of Christ my Lord.","Holy Mother, pierce me through;\nIn my heart each wound renew\nOf my Savior crucified.","Let me share with thee His pain,\nWho for all my sins was slain,\nWho for me in torment died.","Let me mingle tears with thee,\nMourning Him who mourned for me,\nAll the days that I may live.","By the cross with thee to stay;\nThere with thee to weep and pray\nIs all I ask of thee to give.","Virgin of all virgins best,\nListen to my fond request:\nLet me share thy grief divine."];
 const ST_VERSICLE = { v: "We adore Thee, O Christ, and we praise Thee.", r: "Because by Thy holy Cross, Thou hast redeemed the world." };
@@ -1244,7 +1243,7 @@ function SaintQuote({ name, quote, source, borderColor }) {
   return (
     <div style={{ borderLeft: `3px solid ${borderColor || T.gold}`, paddingLeft: 16 }}>
       <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{name}</div>
-      <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>"{quote}"</div>
+      {quote && quote.trim() && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>"{quote}"</div>}
       {source && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginTop: 3 }}>{source}</div>}
     </div>
   );
@@ -1487,6 +1486,12 @@ function resolveSourceUrl(citation) {
   if (/ad\s*tuendam\s*fidem/i.test(c)) return "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_30061998_ad-tuendam-fidem.html";
   if (/summorum\s*pontificum/i.test(c)) return "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html";
   if (/omnium\s*in\s*mentem/i.test(c)) return "https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20091026_codex-iuris-canonici.html";
+
+  // Fides et Ratio
+  if (/fides\s*et\s*ratio/i.test(c)) return "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html";
+
+  // Summa Contra Gentiles
+  if (/contra\s*gentiles/i.test(c)) return "https://isidore.co/aquinas/ContraGentiles.htm";
   if (/dignitas\s*personae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081208_dignitas-personae_en.html";
   if (/donum\s*vitae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19870222_respect-for-human-life_en.html";
 
@@ -1608,6 +1613,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
   const [followUp, setFollowUp] = useState("");
   const [pastExchanges, setPastExchanges] = useState([]); // [{question, guidance}] for display
   const [currentQ, setCurrentQ] = useState(""); // the question that produced current guidance
+  const [streamingText, setStreamingText] = useState(""); // raw text during streaming
   const ref = useRef(null);
   const followRef = useRef(null);
   const homeRef = useRef(null);
@@ -1651,13 +1657,13 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
       setHistory([]);
       setPastExchanges([]);
     } else {
-      // Save current exchange to history before loading new one
       if (guidance && currentQ) {
         setPastExchanges(prev => [...prev, { question: currentQ, guidance: guidance }]);
       }
       setCurrentQ(text);
     }
-    setView("loading");
+    setStreamingText("");
+    setView("streaming");
     try {
       const body = isFollowUp
         ? { question: text.trim(), history: history }
@@ -1668,16 +1674,43 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
-      const data = await r.json();
-      if (data.error) throw new Error(data.error);
-      if (!data.guidance) throw new Error("No guidance returned");
 
-      // Build history for follow-ups
+      if (!r.ok) {
+        const errData = await r.json().catch(() => ({}));
+        throw new Error(errData.error || "Server error");
+      }
+
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6);
+            if (data === "[DONE]") continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.type === "content_block_delta" && parsed.delta?.text) {
+                fullText += parsed.delta.text;
+                setStreamingText(fullText);
+              }
+            } catch(e) { /* skip non-JSON lines */ }
+          }
+        }
+      }
+
+      if (!fullText.trim()) throw new Error("Empty response");
+
       const userMsg = isFollowUp
         ? { role: "user", content: text.trim() }
         : { role: "user", content: domain ? "Domain: " + domain.label + ". My question: " + text.trim() : "My question: " + text.trim() };
-      setHistory([...history, userMsg, { role: "assistant", content: data.guidance }]);
-      setGuidance(parseGuidance(data.guidance));
+      setHistory([...history, userMsg, { role: "assistant", content: fullText }]);
+      setGuidance(parseGuidance(fullText));
       setFollowUp("");
       setView("response");
     } catch(e) {
@@ -1845,6 +1878,24 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkLight, fontStyle: "italic", animation: "pulse 2s ease infinite" }}>Consulting the Tradition…</p>
         </div>
       )}
+      {view === "streaming" && (
+        <div style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
+          <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); setPastExchanges([]); setCurrentQ(""); setHistory([]); }} />
+          {currentQ && (
+            <div style={{ margin: "12px 20px 0" }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Your question</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.45 }}>{currentQ}</p>
+            </div>
+          )}
+          <Card style={{ margin: "12px 20px 0" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+              <CardTitle>Consulting the Tradition</CardTitle>
+              <div style={{ width: 12, height: 12, border: `2px solid ${T.goldFaint}`, borderTopColor: T.gold, borderRadius: "50%", animation: "spin 1s linear infinite" }} />
+            </div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.65, margin: 0, whiteSpace: "pre-wrap" }}>{streamingText || "…"}</p>
+          </Card>
+        </div>
+      )}
       {view === "response" && guidance && (
         <div style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
           <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); setPastExchanges([]); setCurrentQ(""); setHistory([]); }} />
@@ -1902,7 +1953,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             </div>)}</div>
           </Card>}
           {guidance.calibration && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(26,39,68,0.04)", borderRadius: 8 }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 3 }}>Certainty</div><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, fontStyle: "italic", margin: 0 }}>{guidance.calibration}</p></div>}
-          {guidance.pastoralWarning && <div style={{ margin: "12px 20px 0", padding: "12px 14px", background: "rgba(212,168,67,0.08)", border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, display: "flex", gap: 10, alignItems: "flex-start" }}><span style={{ fontSize: fz(16) }}>⚠️</span><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.5, margin: 0 }}>{guidance.pastoralWarning}</p></div>}
+          {guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}><CardTitle>Conclusion</CardTitle><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{guidance.pastoralWarning}</p></Card>}
           <div style={{ display: "flex", gap: 8, margin: "20px 20px 0" }}>
             <button onClick={() => { setQuestion(""); setView("home"); setCopied(false); setHistory([]); setFollowUp(""); setPastExchanges([]); setCurrentQ(""); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
             <button onClick={() => { navigator.clipboard.writeText(formatGuidanceText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
@@ -1931,9 +1982,9 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             {[
               { label: "Sacred Scripture", items: ["Douay-Rheims Bible (required for all quotations)", "The Vulgate (Latin reference)"] },
               { label: "Catechisms", items: ["The Baltimore Catechism", "The Catechism of the Council of Trent (Roman Catechism)", "The Catechism of Pope St. Pius X", "Catechism of the Catholic Church (1992) — supplementary only"] },
-              { label: "Papal Encyclicals & CDF Documents (22)", items: ["Mirari Vos (Gregory XVI, 1832)", "Quanta Cura & Syllabus of Errors (Pius IX, 1864)", "Aeterni Patris (Leo XIII, 1879)", "Immortale Dei (Leo XIII, 1885)", "Libertas (Leo XIII, 1888)", "Rerum Novarum (Leo XIII, 1891)", "Pascendi Dominici Gregis (Pius X, 1907)", "Mortalium Animos (Pius XI, 1928)", "Casti Connubii (Pius XI, 1930)", "Quadragesimo Anno (Pius XI, 1931)", "Divini Redemptoris (Pius XI, 1937)", "Mit brennender Sorge (Pius XI, 1937)", "Mystici Corporis Christi (Pius XII, 1943)", "Mediator Dei (Pius XII, 1947)", "Humani Generis (Pius XII, 1950)", "Humanae Vitae (Paul VI, 1968)", "Familiaris Consortio (John Paul II, 1981)", "Veritatis Splendor (John Paul II, 1993)", "Evangelium Vitae (John Paul II, 1995)", "Deus Caritas Est (Benedict XVI, 2005)", "Donum Vitae (CDF, 1987)", "Dignitas Personae (CDF, 2008)"] },
+              { label: "Papal Encyclicals & CDF Documents (23)", items: ["Mirari Vos (Gregory XVI, 1832)", "Quanta Cura & Syllabus of Errors (Pius IX, 1864)", "Aeterni Patris (Leo XIII, 1879)", "Immortale Dei (Leo XIII, 1885)", "Libertas (Leo XIII, 1888)", "Rerum Novarum (Leo XIII, 1891)", "Pascendi Dominici Gregis (Pius X, 1907)", "Mortalium Animos (Pius XI, 1928)", "Casti Connubii (Pius XI, 1930)", "Quadragesimo Anno (Pius XI, 1931)", "Divini Redemptoris (Pius XI, 1937)", "Mit brennender Sorge (Pius XI, 1937)", "Mystici Corporis Christi (Pius XII, 1943)", "Mediator Dei (Pius XII, 1947)", "Humani Generis (Pius XII, 1950)", "Humanae Vitae (Paul VI, 1968)", "Familiaris Consortio (John Paul II, 1981)", "Veritatis Splendor (John Paul II, 1993)", "Evangelium Vitae (John Paul II, 1995)", "Fides et Ratio (John Paul II, 1998)", "Deus Caritas Est (Benedict XVI, 2005)", "Donum Vitae (CDF, 1987)", "Dignitas Personae (CDF, 2008)"] },
               { label: "Motu Proprio (4)", items: ["Ecclesia Dei (John Paul II, 1988) — traditional Catholic communities", "Ad Tuendam Fidem (John Paul II, 1998) — grades of theological assent", "Summorum Pontificum (Benedict XVI, 2007) — the Traditional Latin Mass", "Omnium in Mentem (Benedict XVI, 2009) — marriage and canonical form"] },
-              { label: "Church Councils (5)", items: ["Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments", "Council of Florence (1438–1445) — the seven sacraments, extra ecclesiam nulla salus", "Council of Trent — dogmatic canons (highest authority)", "Vatican I — dogmatic definitions", "Vatican II — pastoral documents only; Trent prevails where tension exists"] },
+              { label: "Church Councils (4)", items: ["Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments", "Council of Florence (1438–1445) — the seven sacraments, extra ecclesiam nulla salus", "Council of Trent — dogmatic canons (highest authority)", "Vatican I — dogmatic definitions"] },
               { label: "Doctors of the Church (15)", items: ["St. Thomas Aquinas", "St. Augustine of Hippo", "St. Alphonsus Liguori", "St. Francis de Sales", "St. Teresa of Ávila", "St. John of the Cross", "St. Catherine of Siena", "St. Bonaventure", "St. Robert Bellarmine", "St. Jerome", "St. John Chrysostom", "St. Gregory the Great", "St. Bernard of Clairvaux", "St. Ambrose of Milan", "St. Thérèse of Lisieux"] },
               { label: "Canon Law (both codes, cited side by side)", items: ["1917 Code of Canon Law — the law of the Church from 1917 until 1983", "1983 Code of Canon Law — the current law of the Church", "When both codes address a question, Custos cites both so you can see what changed"] },
             ].map((section, si) => (
@@ -3201,7 +3252,7 @@ function PrayHub({ onTab }) {
 
 // ═══════════════════════════════════════════════════════════════════
 export default function Custos() {
-  const [tab, setTab] = useState("seek");
+  const [tab, setTab] = useState("landing");
   const [seekStartView, setSeekStartView] = useState(null); // null or "privacy" or "sources"
   const [dark, setDark] = useState(false);
   const [fszGlobal, setFszGlobal] = useState(1); // 0=small, 1=medium, 2=large
@@ -3213,11 +3264,13 @@ export default function Custos() {
   fontScale = FSCALES[fszGlobal];
 
   const navTab = (tab === "confession" || tab === "stations" || tab === "rosary" || tab === "examen") ? "pray"
-    : tab === "settings" ? "seek" : tab;
+    : tab === "settings" ? "seek" : tab === "landing" ? "landing" : tab;
+
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 640;
 
   return (
     <div style={{
-      width: "100%", maxWidth: 430, margin: "0 auto",
+      width: "100%", maxWidth: isDesktop ? 780 : 430, margin: "0 auto",
       minHeight: "100vh", background: T.parchment,
       fontFamily: "EB Garamond, serif",
       display: "flex", flexDirection: "column",
@@ -3231,6 +3284,143 @@ export default function Custos() {
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
       `}</style>
+
+      {/* ═══ LANDING PAGE ═══ */}
+      {tab === "landing" && (
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {/* Hero */}
+          <div style={{ background: `linear-gradient(175deg, ${T.navy} 0%, #243456 55%, ${T.crimson} 200%)`, padding: "60px 24px 50px", textAlign: "center", position: "relative" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: "rgba(212,168,67,0.12)", border: "2px solid rgba(212,168,67,0.25)", marginBottom: 16 }}>
+              <svg width="40" height="40" viewBox="0 0 512 512" fill="none">
+                <path d="M220 270 C195 250,150 210,100 175 C75 160,55 165,52 180 C48 200,65 225,95 245 C130 268,180 275,220 270Z" fill="#d4a843" opacity="0.5"/>
+                <path d="M292 270 C317 250,362 210,412 175 C437 160,457 165,460 180 C464 200,447 225,417 245 C382 268,332 275,292 270Z" fill="#d4a843" opacity="0.5"/>
+                <ellipse cx="256" cy="160" rx="48" ry="14" fill="none" stroke="#d4a843" strokeWidth="8" opacity="0.65"/>
+                <circle cx="256" cy="198" r="35" fill="#d4a843" opacity="0.18" stroke="#d4a843" strokeWidth="6" strokeOpacity="0.55"/>
+                <path d="M224 230 L210 390 C210 403,222 412,238 412 L274 412 C290 412,302 403,302 390 L288 230 C276 248,236 248,224 230Z" fill="#1a2744" opacity="0.85"/>
+                <line x1="256" y1="275" x2="256" y2="325" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+                <line x1="242" y1="290" x2="270" y2="290" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(36), fontWeight: 400, letterSpacing: "0.14em", color: "#fff", textTransform: "uppercase", margin: "0 0 6px" }}>Custos</h1>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.gold, fontStyle: "italic", margin: "0 0 20px" }}>A guardian for your conscience</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: "rgba(255,255,255,0.8)", maxWidth: 400, margin: "0 auto 28px", lineHeight: 1.55 }}>When you need the Church's wisdom, not the world's opinion</p>
+            <button onClick={() => setTab("seek")} style={{ padding: "14px 44px", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: T.navy, background: "linear-gradient(135deg, #d4a843, #e8c06a)", border: "none", borderRadius: 12, cursor: "pointer", boxShadow: "0 4px 20px rgba(212,168,67,0.35)" }}>Ask Your Question</button>
+          </div>
+
+          {/* How it works */}
+          <div style={{ padding: "40px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>How it works</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Three Steps to Clarity</h2>
+            {[
+              { num: "I", title: "Ask", desc: "Describe your moral question, dilemma, or situation in your own words." },
+              { num: "II", title: "Receive", desc: "Get structured guidance: the answer, the reasoning, the sources, and the certainty level." },
+              { num: "III", title: "Verify", desc: "Every citation links to the full original text. Read it yourself. Then bring it to your confessor." },
+            ].map((step, i) => (
+              <Card key={i} style={{ marginBottom: 10, textAlign: "center" }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 700, color: T.gold, marginBottom: 4 }}>{step.num}</div>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em", marginBottom: 4 }}>{step.title}</div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0 }}>{step.desc}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Why Custos */}
+          <div style={{ padding: "10px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>Why Custos</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Not Just the Rule — the Reason</h2>
+            {[
+              { icon: "📖", title: "Closed Universe", desc: "Only named, approved sources. No blogs, no unnamed scholars. You always know where the teaching comes from." },
+              { icon: "⚖", title: "Calibrated Certainty", desc: "Every response states whether the teaching is definitive, authoritative, addressed but not resolved, or not addressed." },
+              { icon: "🔗", title: "Linked Primary Sources", desc: "Every citation links directly to the full text online. Verify everything." },
+              { icon: "🔒", title: "Private by Architecture", desc: "No accounts. No login. No stored questions. Your questions are processed and immediately forgotten." },
+            ].map((item, i) => (
+              <Card key={i} style={{ marginBottom: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <span style={{ fontSize: 16 }}>{item.icon}</span>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em" }}>{item.title}</div>
+                </div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Devotional Features */}
+          <div style={{ padding: "10px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>More than guidance</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>A Complete Devotional Companion</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              {[
+                { icon: "🙏", title: "Holy Rosary", desc: "Three mystery sets with Tissot paintings" },
+                { icon: "✝", title: "Stations", desc: "14 stations with Tissot artwork" },
+                { icon: "🕯", title: "Daily Examen", desc: "Guided five-step evening prayer" },
+                { icon: "⛪", title: "Confession", desc: "Private examination of conscience" },
+                { icon: "📅", title: "Calendar", desc: "Traditional liturgical calendar" },
+                { icon: "🏛", title: "15 Doctors", desc: "Bios, quotes, and linked works" },
+              ].map((f, i) => (
+                <Card key={i} style={{ textAlign: "center", padding: "14px 12px" }}>
+                  <span style={{ fontSize: 20 }}>{f.icon}</span>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em", marginTop: 4, marginBottom: 2 }}>{f.title}</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, lineHeight: 1.4, margin: 0 }}>{f.desc}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Sources */}
+          <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>53 Approved Sources. Nothing Else.</h2>
+            {[
+              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
+              { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
+              { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
+              { icon: "✉", title: "23 Encyclicals", desc: "Gregory XVI through Benedict XVI" },
+              { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
+              { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
+            ].map((s, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "10px 14px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,168,67,0.15)", borderRadius: 10, marginBottom: 8 }}>
+                <span style={{ fontSize: 18, flexShrink: 0 }}>{s.icon}</span>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.gold, letterSpacing: "0.03em" }}>{s.title}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>{s.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Privacy */}
+          <div style={{ padding: "30px 20px", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}` }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>Your Privacy</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Built to Forget</h2>
+            <div style={{ display: "flex", justifyContent: "space-around", textAlign: "center", gap: 12 }}>
+              {[
+                { icon: "🔒", title: "No Accounts", desc: "No login required" },
+                { icon: "🗑", title: "No Storage", desc: "Questions immediately discarded" },
+                { icon: "👁‍🗨", title: "No Tracking", desc: "No cookies or analytics" },
+              ].map((p, i) => (
+                <div key={i} style={{ flex: 1 }}>
+                  <div style={{ fontSize: 24, marginBottom: 6 }}>{p.icon}</div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, marginBottom: 2 }}>{p.title}</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: 0 }}>{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div style={{ padding: "40px 24px 50px", textAlign: "center", background: T.parchment }}>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 500, color: T.navyText, marginBottom: 10 }}>Ask Your First Question</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkMid, marginBottom: 24 }}>Free. Private. Faithful to the Tradition.</p>
+            <button onClick={() => setTab("seek")} style={{ padding: "14px 44px", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: T.navy, background: "linear-gradient(135deg, #d4a843, #e8c06a)", border: "none", borderRadius: 12, cursor: "pointer", boxShadow: "0 4px 20px rgba(212,168,67,0.35)" }}>Seek Guidance</button>
+          </div>
+
+          {/* Footer */}
+          <div style={{ background: T.navy, padding: "20px 24px", textAlign: "center" }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.4)", margin: "0 0 4px" }}>Custos · askcustos.com · A guardian for your conscience</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: "rgba(255,255,255,0.25)", margin: 0 }}>This tool supplements — never replaces — a confessor or spiritual director.</p>
+          </div>
+        </div>
+      )}
 
       {/* ═══ MAIN TABS ═══ */}
       {tab === "seek" && (
