@@ -67,11 +67,11 @@ SHORT ANSWER:
 
 TRADITION:
 AUTHOR: [Full name and title]
-QUOTE: [Exact quote ONLY if you are certain of the exact wording. If uncertain, write the teaching without quotation marks and note "paraphrased."]
-SOURCE: [Specific citation]
+QUOTE: [Provide an exact quote. If you cannot recall the exact wording, describe the teaching in your own words WITHOUT quotation marks. NEVER leave blank or say "has written extensively."]
+SOURCE: [REQUIRED. Specific linkable citation: work title, part, question, chapter. NEVER leave blank.]
 AUTHOR: [Second authority — ideally from a different era]
-QUOTE: [quote]
-SOURCE: [citation]
+QUOTE: [Same rules — exact quote or description without quotation marks]
+SOURCE: [REQUIRED. Specific citation.]
 
 MAGISTERIUM:
 REF: [e.g. BC §128, or Roman Catechism Part II Ch.7, or Humanae Vitae §14]
