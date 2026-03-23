@@ -215,8 +215,9 @@ Always encourage the person to bring the question to a real human guide.]
 
 CALIBRATION:
 [State the certainty level based ONLY on what the approved sources explicitly say. Use one of these levels:
-- "Definitive teaching" = infallibly defined by a Council or Pope, or universally and constantly held by the Church (e.g., Trent's dogmatic canons)
-- "Authoritative teaching" = the Magisterium has spoken clearly in an approved encyclical or catechism but has not defined it infallibly
+- "Definitive teaching" = infallibly defined by an Ecumenical Council or ex cathedra papal definition, or universally and constantly held by the Church (e.g., Trent's dogmatic canons, the Immaculate Conception)
+- "Authoritative teaching" = the Pope has spoken clearly in an encyclical to the universal Church, or a catechism teaches it explicitly, but it has not been infallibly defined (e.g., Humanae Vitae on contraception, Baltimore Catechism on Sunday obligation)
+- "CDF instruction" = the Congregation for the Doctrine of the Faith has issued an instruction approved by the Pope. This carries real authority but is delegated — it is not the Pope teaching in his own name. Use this level for Donum Vitae and Dignitas Personae. Do NOT call CDF documents "authoritative teaching" — they are a distinct and lower level.
 - "Addressed but not resolved" = an approved source has discussed the question but deliberately stopped short of a binding judgment (cite the specific document and its language)
 - "Not addressed" = no document in the approved source list speaks to this question; state this honestly and direct the person to a confessor or moral theologian
 Do NOT use the phrase "genuinely disputed," "theologians disagree," or any formulation that implies knowledge of debates outside the approved sources. If the sources are silent, say the sources are silent.]`;
@@ -469,23 +470,31 @@ const ACT_OF_CONTRITION = "O my God, I am heartily sorry for having offended The
 // ═══════════════════════════════════════════════════════════════════
 const ST_TITLES = ["Jesus Is Condemned to Death","Jesus Takes Up His Cross","Jesus Falls the First Time","Jesus Meets His Mother","Simon Helps Jesus Carry the Cross","Veronica Wipes the Face of Jesus","Jesus Falls the Second Time","Jesus Meets the Women of Jerusalem","Jesus Falls the Third Time","Jesus Is Stripped of His Garments","Jesus Is Nailed to the Cross","Jesus Dies on the Cross","Jesus Is Taken Down from the Cross","Jesus Is Laid in the Tomb"];
 
-// James Tissot (1836–1902), The Life of Christ series, 1886–1894
-// Opaque watercolor, Brooklyn Museum. Public domain.
-const ST_TISSOT = [
-  /* 1  Condemned    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Torn_Cloak_%28Le_manteau_d%C3%A9chir%C3%A9%29_-_James_Tissot.jpg&w=600",
-  /* 2  Takes Cross  */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg&w=600",
-  /* 3  Falls 1st    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Falls_Beneath_the_Cross_%28J%C3%A9sus_tombe_sous_la_Croix%29_-_James_Tissot.jpg&w=600",
-  /* 4  Meets Mother */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Meets_His_Mother_%28J%C3%A9sus_rencontre_sa_m%C3%A8re%29_-_James_Tissot.jpg&w=600",
-  /* 5  Simon       */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_%28Simon_de_Cyr%C3%A9ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus%29_-_James_Tissot.jpg&w=600",
-  /* 6  Veronica    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_A_Holy_Woman_Wipes_the_Face_of_Jesus_%28Une_sainte_femme_essuie_le_visage_de_J%C3%A9sus%29_-_James_Tissot.jpg&w=600",
-  /* 7  Falls 2nd   */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Leaves_the_Praetorium_%28J%C3%A9sus_quitte_le_pretoire%29_-_James_Tissot.jpg&w=600",
-  /* 8  Women Jerus */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Daughters_of_Jerusalem_%28Les_filles_de_J%C3%A9rusalem%29_-_James_Tissot.jpg&w=600",
-  /* 9  Falls 3rd   */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Procession_Nearing_Calvary_%28Le_cort%C3%A8ge_arrivant_au_Calvaire%29_-_James_Tissot.jpg&w=600",
-  /* 10 Stripped    */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Stripped_of_His_Clothing_%28J%C3%A9sus_d%C3%A9pouill%C3%A9_des_ses_v%C3%AAtements%29_-_James_Tissot.jpg&w=600",
-  /* 11 Nailed      */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Raising_of_the_Cross_%28L%27%C3%A9l%C3%A9vation_de_la_Croix%29_-_James_Tissot_-_overall.jpg&w=600",
-  /* 12 Dies        */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_It_Is_Finished_%28Consummatum_Est%29_-_James_Tissot.jpg&w=600",
-  /* 13 Taken Down  */ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Descent_from_the_Cross_%28La_descent_de_croix%29_-_James_Tissot.jpg&w=600",
-  /* 14 Laid in Tomb*/ "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Carried_to_the_Tomb_%28J%C3%A9sus_port%C3%A9_au_tombeau%29_-_James_Tissot.jpg&w=600",
+// Station artwork — mostly James Tissot (1836–1902), Brooklyn Museum. Public domain.
+// Stations 7, 9, 11 replaced with other masters for better subject match.
+const ST_IMGS = [
+  /* 1  Condemned    */ "/images/stations/station-01.jpg",
+  /* 2  Takes Cross  */ "/images/stations/station-02.jpg",
+  /* 3  Falls 1st    */ "/images/stations/station-03.jpg",
+  /* 4  Meets Mother */ "/images/stations/station-04.jpg",
+  /* 5  Simon       */ "/images/stations/station-05.jpg",
+  /* 6  Veronica    */ "/images/stations/station-06.jpg",
+  /* 7  Falls 2nd   */ "/images/stations/station-07.jpg",  // Raphael, Lo Spasimo
+  /* 8  Women Jerus */ "/images/stations/station-08.jpg",
+  /* 9  Falls 3rd   */ "/images/stations/station-09.jpg",  // Titian
+  /* 10 Stripped    */ "/images/stations/station-10.jpg",
+  /* 11 Nailed      */ "/images/stations/station-11.jpg",  // Rubens
+  /* 12 Dies        */ "/images/stations/station-12.jpg",
+  /* 13 Taken Down  */ "/images/stations/station-13.jpg",
+  /* 14 Laid in Tomb*/ "/images/stations/station-14.jpg",
+];
+const ST_CREDITS = [
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
+  "Raphael (c. 1516) · Museo del Prado","James Tissot · Brooklyn Museum",
+  "Titian (c. 1565) · Museo del Prado","James Tissot · Brooklyn Museum",
+  "Peter Paul Rubens (1610) · Antwerp","James Tissot · Brooklyn Museum",
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
 ];
 const STABAT = ["Through her heart, His sorrow sharing,\nAll His bitter anguish bearing,\nNow at length the sword had passed.","O, how sad and sore distressed\nWas that Mother, highly blest,\nOf the sole begotten One!","Christ above in torment hangs:\nShe beneath beholds the pangs\nOf her dying glorious Son.","Is there one who would not weep,\nWhelmed in miseries so deep,\nChrist's dear Mother to behold?","Can the human heart refrain\nFrom partaking in her pain,\nIn that Mother's pain untold?","Bruised, derided, cursed, defiled,\nShe beheld her tender Child,\nAll with bloody scourges rent.","For the sins of His own nation,\nSaw Him hang in desolation\nTill His spirit forth He sent.","O thou Mother, font of love!\nTouch my spirit from above,\nMake my heart with thine accord.","Make me feel as thou hast felt;\nMake my soul to glow and melt,\nWith the love of Christ my Lord.","Holy Mother, pierce me through;\nIn my heart each wound renew\nOf my Savior crucified.","Let me share with thee His pain,\nWho for all my sins was slain,\nWho for me in torment died.","Let me mingle tears with thee,\nMourning Him who mourned for me,\nAll the days that I may live.","By the cross with thee to stay;\nThere with thee to weep and pray\nIs all I ask of thee to give.","Virgin of all virgins best,\nListen to my fond request:\nLet me share thy grief divine."];
 const ST_VERSICLE = { v: "We adore Thee, O Christ, and we praise Thee.", r: "Because by Thy holy Cross, Thou hast redeemed the world." };
@@ -581,39 +590,39 @@ const ROSARY_PRAYERS = {
 const ROSARY_MYSTERIES = {
   joyful: { label: "Joyful Mysteries", day: "Monday & Saturday", icon: "⭐", color: "#d4a843", mysteries: [
     { title: "The Annunciation", scripture: "The angel Gabriel was sent from God to a virgin betrothed to a man named Joseph. The angel said, 'Hail, full of grace, the Lord is with thee.'", ref: "Lk 1:26\u201338", fruit: "Humility",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Annunciation_%28L%27annonciation%29_-_James_Tissot_-_overall.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/joyful-1-annunciation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Visitation", scripture: "Mary arose and went with haste into the hill country. Elizabeth was filled with the Holy Spirit and cried out, 'Blessed art thou among women.'", ref: "Lk 1:39\u201356", fruit: "Love of Neighbor",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Visitation_%28La_Visitation%29_-_James_Tissot_-_overall.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/joyful-2-visitation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Nativity", scripture: "She brought forth her firstborn Son, and wrapped Him in swaddling clothes, and laid Him in a manger, because there was no room for them in the inn.", ref: "Lk 2:1\u201321", fruit: "Poverty of Spirit",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Birth_of_Our_Lord_Jesus_Christ_%28La_nativit%C3%A9_de_Notre-Seigneur_J%C3%A9sus-Christ%29_-_James_Tissot_-_overall.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/joyful-3-nativity.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Presentation", scripture: "They brought Him to Jerusalem to present Him to the Lord. Simeon said, 'Now Thou dost dismiss Thy servant in peace, for mine eyes have seen Thy salvation.'", ref: "Lk 2:22\u201340", fruit: "Obedience",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Aged_Simeon_%28Le_vieux_Sim%C3%A9on%29_-_James_Tissot_-_overall.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/joyful-4-presentation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "Finding in the Temple", scripture: "After three days they found Him in the temple, sitting among the teachers. He said, 'Did you not know that I must be about My Father's business?'", ref: "Lk 2:41\u201352", fruit: "Joy in Finding Jesus",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Found_in_the_Temple_%28Jesus_retrouv%C3%A9_dans_le_temple%29_-_James_Tissot_-_overall.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/joyful-5-finding.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
   sorrowful: { label: "Sorrowful Mysteries", day: "Tuesday & Friday", icon: "✝", color: "#7a1c1c", mysteries: [
     { title: "The Agony in the Garden", scripture: "He went a little further and fell on His face and prayed, 'My Father, if it be possible, let this chalice pass from Me; yet not My will but Thine be done.'", ref: "Mt 26:36\u201346", fruit: "Sorrow for Sin",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_My_Soul_is_Sorrowful_unto_Death_%28Mon_%C3%A2me_est_triste_jusqu%27%C3%A0_la_mort%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/sorrowful-1-agony.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Scourging at the Pillar", scripture: "Then Pilate took Jesus and had Him scourged.", ref: "Jn 19:1", fruit: "Purity",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Scourging_on_the_Back_%28La_flagellation_de_dos%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/sorrowful-2-scourging.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crowning with Thorns", scripture: "They twisted together a crown of thorns and put it on His head, and a reed in His right hand, and knelt before Him and mocked Him.", ref: "Mt 27:27\u201331", fruit: "Courage",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Crowning_of_Thorns_%28Le_couronnement_d%27%C3%A9pines%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/sorrowful-3-crowning.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Carrying of the Cross", scripture: "And bearing His own cross, He went forth to the place called Calvary.", ref: "Jn 19:17", fruit: "Patience",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/sorrowful-4-carrying.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crucifixion", scripture: "Jesus said, 'Father, forgive them, for they know not what they do.' And bowing His head, He gave up His spirit.", ref: "Jn 19:18\u201330", fruit: "Perseverance",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_Jesus_Alone_on_the_Cross_%28J%C3%A9sus_seul_sur_la_Croix%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/sorrowful-5-crucifixion.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
   glorious: { label: "Glorious Mysteries", day: "Wednesday & Sunday", icon: "👑", color: "#d4a843", mysteries: [
     { title: "The Resurrection", scripture: "He is not here; He is risen, as He said. Come, see the place where the Lord was laid.", ref: "Mt 28:1\u201310", fruit: "Faith",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Resurrection_%28La_R%C3%A9surrection%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/glorious-1-resurrection.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Ascension", scripture: "He was lifted up, and a cloud took Him out of their sight. 'This Jesus will come in the same way as you saw Him go into heaven.'", ref: "Acts 1:9\u201311", fruit: "Hope",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Ascension_%28L%27Ascension%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/glorious-2-ascension.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Descent of the Holy Spirit", scripture: "They were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.", ref: "Acts 2:1\u201313", fruit: "Love of God",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Brooklyn_Museum_-_The_Descent_of_the_Holy_Spirit_%28La_descent_du_Saint-Esprit%29_-_James_Tissot.jpg&w=600", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/rosary/glorious-3-pentecost.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Assumption of Mary", scripture: "A great sign appeared in heaven: a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.", ref: "Rev 12:1", fruit: "Grace of a Happy Death",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Guido_Reni_-_The_Assumption_of_the_Virgin_Mary_-_Google_Art_Project.jpg&w=600", credit: "Guido Reni (1642) · Alte Pinakothek" },
+      img: "/images/rosary/glorious-4-assumption.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
     { title: "The Coronation of Mary", scripture: "The Lord said, 'Well done, good and faithful servant; enter into the joy of thy Master.'", ref: "Mt 25:21", fruit: "Trust in Mary's Intercession",
-      img: "https://commons.wikimedia.org/w/thumb.php?f=Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg&w=600", credit: "Diego Velázquez (1644) · Museo del Prado" },
+      img: "/images/rosary/glorious-5-coronation.jpg", credit: "Diego Velázquez (1644) · Museo del Prado" },
   ]},
 };
 
@@ -1239,11 +1248,11 @@ function BottomNav({ active, onTab }) {
   );
 }
 
-function SaintQuote({ name, quote, source, borderColor }) {
+function SaintQuote({ name, quote, source, borderColor, isExact }) {
   return (
     <div style={{ borderLeft: `3px solid ${borderColor || T.gold}`, paddingLeft: 16 }}>
       <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{name}</div>
-      {quote && quote.trim() && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>"{quote}"</div>}
+      {quote && quote.trim() && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>{isExact ? `\u201C${quote}\u201D` : quote}</div>}
       {source && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginTop: 3 }}>{source}</div>}
     </div>
   );
@@ -1579,8 +1588,12 @@ function parseGuidance(text) {
     if (sa) s.shortAnswer = sa[1].trim();
     const tr = t.match(/TRADITION[:\s]*\n([\s\S]*?)(?=\nMAGISTERIUM[:\s]|$)/i);
     if (tr) tr[1].split(/(?=AUTHOR:)/i).filter(e => e.trim()).forEach(e => {
-      const a = e.match(/AUTHOR:\s*(.+)/i)?.[1]?.trim()||"", q = (e.match(/QUOTE:\s*"?([^"]*)"?/i)?.[1]||e.match(/QUOTE:\s*([\s\S]*?)(?=SOURCE:|$)/i)?.[1]||"").trim().replace(/^"|"$/g,""), src = e.match(/SOURCE:\s*(.+)/i)?.[1]?.trim()||"";
-      if (a||q) s.tradition.push({ author: a, quote: q, source: src });
+      const a = e.match(/AUTHOR:\s*(.+)/i)?.[1]?.trim()||"";
+      const rawQ = e.match(/QUOTE:\s*([\s\S]*?)(?=SOURCE:|$)/i)?.[1]?.trim()||"";
+      const isExact = /^"/.test(rawQ);
+      const q = rawQ.replace(/^"|"$/g,"").trim();
+      const src = e.match(/SOURCE:\s*(.+)/i)?.[1]?.trim()||"";
+      if (a||q) s.tradition.push({ author: a, quote: q, source: src, isExact: isExact });
     });
     const mg = t.match(/MAGISTERIUM[:\s]*\n([\s\S]*?)(?=\nSCRIPTURE[:\s]|\nPASTORAL[:\s]|\nCALIBRATION[:\s]|$)/i);
     if (mg) mg[1].split(/(?=REF:)/i).filter(e => e.trim()).forEach(e => {
@@ -1622,7 +1635,25 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
   useEffect(() => { if (seekStartView) { setView(seekStartView); clearStartView(); } }, [seekStartView]);
 
   // Scroll to top when returning to home
-  useEffect(() => { if (view === "home" && homeRef.current) homeRef.current.scrollTop = 0; }, [view]);
+  useEffect(() => {
+    if (view === "home") {
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        if (homeRef.current) {
+          homeRef.current.scrollTop = 0;
+          let el = homeRef.current.parentElement;
+          while (el) { el.scrollTop = 0; el = el.parentElement; }
+        }
+      };
+      scrollToTop();
+      // Retry after React renders the DOM
+      requestAnimationFrame(scrollToTop);
+      setTimeout(scrollToTop, 50);
+      setTimeout(scrollToTop, 150);
+    }
+  }, [view]);
 
   // Format guidance as plain text for copy/share
   const formatGuidanceText = () => {
@@ -1928,7 +1959,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           {guidance.tradition.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <button onClick={() => setTradOpen(!tradOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}><CardTitle>What the Tradition Says</CardTitle><span style={{ color: T.gold, fontSize: fz(14), transform: tradOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▴</span></button>
             {tradOpen && <div style={{ marginTop: 12 }}>{guidance.tradition.map((e,i) => <div key={i} style={{ marginBottom: 16 }}>
-              <SaintQuote name={e.author} quote={e.quote} source={e.source} />
+              <SaintQuote name={e.author} quote={e.quote} source={e.source} isExact={e.isExact} />
               <SourceLink text={e.source} extraCheck={e.author + " " + (e.source || "")} />
             </div>)}</div>}
           </Card>}
@@ -1958,6 +1989,29 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <button onClick={() => { setQuestion(""); setView("home"); setCopied(false); setHistory([]); setFollowUp(""); setPastExchanges([]); setCurrentQ(""); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
             <button onClick={() => { navigator.clipboard.writeText(formatGuidanceText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
             <button onClick={() => { if (navigator.share) { navigator.share({ title: "Custos — Moral Guidance", text: formatGuidanceText() }).catch(() => {}); } else { navigator.clipboard.writeText(formatGuidanceText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); } }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.inkLight, background: T.warmWhite, border: "1px solid rgba(138,126,108,0.2)", borderRadius: 10, cursor: "pointer" }}>↗ Share</button>
+          </div>
+
+          {/* Dig Deeper */}
+          <div style={{ margin: "20px 20px 0" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8, textAlign: "center" }}>Dig Deeper</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+              {[
+                { icon: "🔍", label: "Explain the reasoning", prompt: "Explain the reasoning behind this teaching. Walk me through the natural law argument, the theology of the act, and why the Church arrived at this position. Assume I'm a faithful Catholic who wants to understand, not just obey." },
+                { icon: "🏛", label: "What do the Doctors teach?", prompt: "Explain what the Doctors of the Church you cited actually teach on this topic. Use plain, accessible language — as if you were explaining their ideas to someone who hasn't read their works. Include what makes each Doctor's perspective distinctive." },
+                { icon: "📖", label: "Break down the sources", prompt: "Break down the encyclicals, catechism passages, and other sources you cited. For each one, explain in plain language: what does it actually say, what problem was it addressing when it was written, and how does it apply to my question?" },
+                { icon: "💡", label: "Give me an analogy", prompt: "Explain this teaching using analogies and everyday language that a non-theologian would understand. Help me grasp the underlying principle, not just the rule. Use comparisons from ordinary life, relationships, or common experience." },
+              ].map((d, i) => (
+                <button key={i} onClick={() => submit(d.prompt, true)} style={{
+                  display: "flex", alignItems: "center", gap: 8, padding: "10px 12px",
+                  fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.navyText,
+                  background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`,
+                  borderRadius: 10, cursor: "pointer", textAlign: "left", lineHeight: 1.3,
+                }}>
+                  <span style={{ fontSize: 16, flexShrink: 0 }}>{d.icon}</span>
+                  <span>{d.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Follow-up input */}
@@ -2107,7 +2161,7 @@ function ExamenTab() {
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: "0 0 12px" }}>{s.prompt}</p>
               <textarea value={reflections[step] || ""} onChange={e => setReflections(p => ({...p, [step]: e.target.value}))} placeholder="Write your reflection…" rows={4} style={{ width: "100%", padding: 12, fontFamily: "EB Garamond, serif", fontSize: fz(16), lineHeight: 1.6, color: T.inkDark, background: T.parchment, border: "1px solid rgba(212,168,67,0.2)", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }} />
             </Card>}
-            {s.saint && <div style={{ marginTop: 16 }}><SaintQuote name={s.saint.name} quote={s.saint.quote} source={s.saint.source} /></div>}
+            {s.saint && <div style={{ marginTop: 16 }}><SaintQuote name={s.saint.name} quote={s.saint.quote} source={s.saint.source} isExact={true} /></div>}
           </div>
           <div style={{ padding: "10px 22px 18px", borderTop: "1px solid rgba(212,168,67,0.12)", display: "flex", gap: 10 }}>
             {step > 0 && <div style={{ flex: 1 }}><GhostBtn onClick={() => setStep(step - 1)}>‹ Back</GhostBtn></div>}
@@ -2362,7 +2416,7 @@ function TraditionTab() {
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{doctor.bio}</p>
           </div>
           <div style={{ margin: "18px 22px 0" }}>
-            <SaintQuote name={doctor.name} quote={doctor.quotes[quoteIdx % doctor.quotes.length].text} source={doctor.quotes[quoteIdx % doctor.quotes.length].source} />
+            <SaintQuote name={doctor.name} quote={doctor.quotes[quoteIdx % doctor.quotes.length].text} source={doctor.quotes[quoteIdx % doctor.quotes.length].source} isExact={true} />
             <div style={{ display: "flex", gap: 5, marginTop: 8, paddingLeft: 16 }}>
               {doctor.quotes.map((_, i) => <button key={i} onClick={() => setQuoteIdx(i)} style={{ width: i === quoteIdx % doctor.quotes.length ? 18 : 6, height: 6, borderRadius: 3, background: i === quoteIdx % doctor.quotes.length ? T.gold : "rgba(212,168,67,0.3)", border: "none", cursor: "pointer", padding: 0, transition: "all 0.3s" }} />)}
             </div>
@@ -2405,16 +2459,16 @@ function TraditionTab() {
 function StationIcon({ idx }) {
   const c = ST_COLORS[idx] || ["#654321","#8B6914"];
   const [imgError, setImgError] = useState(false);
-  const tissotUrl = ST_TISSOT[idx];
+  const imgUrl = ST_IMGS[idx];
 
   return (
     <div style={{ width: "100%", borderRadius: 10, marginBottom: 14, overflow: "hidden", position: "relative", background: `linear-gradient(135deg, ${c[0]}, ${c[1]})` }}>
-      {tissotUrl && !imgError ? (
+      {imgUrl && !imgError ? (
         <>
-          <img referrerPolicy="no-referrer" src={tissotUrl} alt={ST_TITLES[idx]} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block", minHeight: 120, objectFit: "cover" }} />
+          <img src={imgUrl} alt={ST_TITLES[idx]} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block", minHeight: 120, objectFit: "cover" }} />
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "24px 10px 6px", background: "linear-gradient(transparent, rgba(0,0,0,0.6))", display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
             <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: "rgba(255,255,255,0.7)", letterSpacing: "0.06em" }}>Station {["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV"][idx]}</span>
-            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>James Tissot · Brooklyn Museum</span>
+            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>{ST_CREDITS[idx]}</span>
           </div>
         </>
       ) : (
@@ -2754,10 +2808,10 @@ function RosaryTab({ goHome }) {
       return { label: "Glory Be", text: P.gloryBe };
     }
     if (step === "announce") return { label: `${decade + 1}${["st","nd","rd","th","th"][decade]} Mystery`, text: mystery.scripture, ref: mystery.ref, title: mystery.title, fruit: mystery.fruit, isAnnounce: true, img: mystery.img, credit: mystery.credit };
-    if (step === "ourfather") return { label: "Our Father", text: P.ourFather };
-    if (step === "hailmary") return { label: "Hail Mary", text: P.hailMary, beadOf: bead, beadTotal: 10 };
-    if (step === "glory") return { label: "Glory Be", text: P.gloryBe };
-    if (step === "fatima") return { label: "Fatima Prayer", text: P.fatima };
+    if (step === "ourfather") return { label: "Our Father", text: P.ourFather, img: mystery.img, credit: mystery.credit };
+    if (step === "hailmary") return { label: "Hail Mary", text: P.hailMary, beadOf: bead, beadTotal: 10, img: mystery.img, credit: mystery.credit };
+    if (step === "glory") return { label: "Glory Be", text: P.gloryBe, img: mystery.img, credit: mystery.credit };
+    if (step === "fatima") return { label: "Fatima Prayer", text: P.fatima, img: mystery.img, credit: mystery.credit };
     if (step === "closing") return { label: "Hail, Holy Queen", text: P.hailHolyQueen + "\n\n" + P.closing };
     return { label: "", text: "" };
   };
@@ -2832,7 +2886,7 @@ function RosaryTab({ goHome }) {
                 <>
                   {content.img && (
                     <div style={{ borderRadius: 12, overflow: "hidden", marginBottom: 14, position: "relative" }}>
-                      <img referrerPolicy="no-referrer" src={content.img} alt={content.title} style={{ width: "100%", height: "auto", display: "block", minHeight: 100 }} onError={e => e.target.style.display = "none"} />
+                      <img src={content.img} alt={content.title} style={{ width: "100%", height: "auto", display: "block", minHeight: 100 }} onError={e => e.target.style.display = "none"} />
                       {content.credit && <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 10px 6px", background: "linear-gradient(transparent, rgba(0,0,0,0.55))", textAlign: "right" }}>
                         <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>{content.credit}</span>
                       </div>}
@@ -2874,6 +2928,14 @@ function RosaryTab({ goHome }) {
                           opacity: i < content.beadOf ? 1 : 0.35,
                         }} />
                       ))}
+                    </div>
+                  )}
+
+                  {/* Mystery artwork for meditation */}
+                  {content.img && (
+                    <div style={{ marginBottom: 14, borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                      <img src={content.img} alt="" style={{ width: "100%", height: "auto", display: "block", maxHeight: 180, objectFit: "cover" }} onError={e => e.target.style.display = "none"} />
+                      {content.credit && <div style={{ position: "absolute", bottom: 0, right: 0, padding: "3px 8px", background: "rgba(0,0,0,0.5)", fontFamily: "EB Garamond, serif", fontSize: fz(10), color: "rgba(255,255,255,0.7)" }}>{content.credit}</div>}
                     </div>
                   )}
 
@@ -3189,7 +3251,7 @@ function TodayTab() {
             <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight }}>{ref.cite}</span>
           </div>
           <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 16px" }}>"{ref.text}"</p>
-          <SaintQuote name={ref.saint} quote={ref.sq} source={ref.ss} />
+          <SaintQuote name={ref.saint} quote={ref.sq} source={ref.ss} isExact={true} />
         </Card>
 
         {/* Saint of the Day */}
@@ -3262,6 +3324,18 @@ export default function Custos() {
   const FSCALES = [0.88, 1, 1.14];
   const FLABELS = ["A⁻", "A", "A⁺"];
   fontScale = FSCALES[fszGlobal];
+
+  // Scroll to top on every tab change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    // Also reset any scrollable child containers
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.querySelectorAll('[style*="overflow"]').forEach(el => { el.scrollTop = 0; });
+    });
+  }, [tab]);
 
   const navTab = (tab === "confession" || tab === "stations" || tab === "rosary" || tab === "examen") ? "pray"
     : tab === "settings" ? "seek" : tab === "landing" ? "landing" : tab;
@@ -3351,7 +3425,7 @@ export default function Custos() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               {[
                 { icon: "🙏", title: "Holy Rosary", desc: "Three mystery sets with Tissot paintings" },
-                { icon: "✝", title: "Stations", desc: "14 stations with Tissot artwork" },
+                { icon: "✝", title: "Stations", desc: "14 stations with master artwork" },
                 { icon: "🕯", title: "Daily Examen", desc: "Guided five-step evening prayer" },
                 { icon: "⛪", title: "Confession", desc: "Private examination of conscience" },
                 { icon: "📅", title: "Calendar", desc: "Traditional liturgical calendar" },
