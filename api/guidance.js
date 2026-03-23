@@ -87,7 +87,7 @@ PASTORAL:
 [Practical, compassionate guidance. Direct the person to their parish priest or confessor, a spiritual director (suggest their parish or a local Opus Dei center), a Catholic bioethicist (ncbcenter.org) for medical questions, or a canon lawyer as appropriate. Always encourage bringing the question to a real human guide.]
 
 CALIBRATION:
-[State certainty based ONLY on the approved sources. Use: "Definitive teaching" (infallibly defined), "Authoritative teaching" (Magisterium has spoken clearly), "Addressed but not resolved" (an approved source discussed it but stopped short of binding judgment — cite the document), or "Not addressed" (no approved source speaks to it — say so honestly). Do NOT say "genuinely disputed" or "theologians disagree" — if the sources are silent, say the sources are silent.]`;
+[State certainty based ONLY on the approved sources. Use: "Definitive teaching" (infallibly defined by Council or ex cathedra), "Authoritative teaching" (Pope has spoken clearly in an encyclical or a catechism teaches it explicitly), "CDF instruction" (CDF has issued an instruction approved by the Pope — real authority but delegated, not the Pope teaching in his own name; use for Donum Vitae and Dignitas Personae), "Addressed but not resolved" (an approved source discussed it but stopped short of binding judgment — cite the document), or "Not addressed" (no approved source speaks to it — say so honestly). Do NOT call CDF documents "authoritative teaching." Do NOT say "genuinely disputed" or "theologians disagree" — if the sources are silent, say the sources are silent.]`;
 
 export default async function handler(req, res) {
   // CORS headers
