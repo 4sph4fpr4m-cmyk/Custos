@@ -473,20 +473,20 @@ const ST_TITLES = ["Jesus Is Condemned to Death","Jesus Takes Up His Cross","Jes
 // Station artwork — mostly James Tissot (1836–1902), Brooklyn Museum. Public domain.
 // Stations 7, 9, 11 replaced with other masters for better subject match.
 const ST_IMGS = [
-  /* 1  Condemned    */ "/images/stations/station-01.jpg",
-  /* 2  Takes Cross  */ "/images/stations/station-02.jpg",
-  /* 3  Falls 1st    */ "/images/stations/station-03.jpg",
-  /* 4  Meets Mother */ "/images/stations/station-04.jpg",
-  /* 5  Simon       */ "/images/stations/station-05.jpg",
-  /* 6  Veronica    */ "/images/stations/station-06.jpg",
-  /* 7  Falls 2nd   */ "/images/stations/station-07.jpg",  // Raphael, Lo Spasimo
-  /* 8  Women Jerus */ "/images/stations/station-08.jpg",
-  /* 9  Falls 3rd   */ "/images/stations/station-09.jpg",  // Titian
-  /* 10 Stripped    */ "/images/stations/station-10.jpg",
-  /* 11 Nailed      */ "/images/stations/station-11.jpg",  // Rubens
-  /* 12 Dies        */ "/images/stations/station-12.jpg",
-  /* 13 Taken Down  */ "/images/stations/station-13.jpg",
-  /* 14 Laid in Tomb*/ "/images/stations/station-14.jpg",
+  /* 1  Condemned    */ "/images/station-01.jpg",
+  /* 2  Takes Cross  */ "/images/station-02.jpg",
+  /* 3  Falls 1st    */ "/images/station-03.jpg",
+  /* 4  Meets Mother */ "/images/station-04.jpg",
+  /* 5  Simon       */ "/images/station-05.jpg",
+  /* 6  Veronica    */ "/images/station-06.jpg",
+  /* 7  Falls 2nd   */ "/images/station-07.jpg",  // Raphael, Lo Spasimo
+  /* 8  Women Jerus */ "/images/station-08.jpg",
+  /* 9  Falls 3rd   */ "/images/station-09.jpg",  // Titian
+  /* 10 Stripped    */ "/images/station-10.jpg",
+  /* 11 Nailed      */ "/images/station-11.jpg",  // Rubens
+  /* 12 Dies        */ "/images/station-12.jpg",
+  /* 13 Taken Down  */ "/images/station-13.jpg",
+  /* 14 Laid in Tomb*/ "/images/station-14.jpg",
 ];
 const ST_CREDITS = [
   "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
@@ -590,39 +590,39 @@ const ROSARY_PRAYERS = {
 const ROSARY_MYSTERIES = {
   joyful: { label: "Joyful Mysteries", day: "Monday & Saturday", icon: "⭐", color: "#d4a843", mysteries: [
     { title: "The Annunciation", scripture: "The angel Gabriel was sent from God to a virgin betrothed to a man named Joseph. The angel said, 'Hail, full of grace, the Lord is with thee.'", ref: "Lk 1:26\u201338", fruit: "Humility",
-      img: "/images/rosary/joyful-1-annunciation.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-1-annunciation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Visitation", scripture: "Mary arose and went with haste into the hill country. Elizabeth was filled with the Holy Spirit and cried out, 'Blessed art thou among women.'", ref: "Lk 1:39\u201356", fruit: "Love of Neighbor",
-      img: "/images/rosary/joyful-2-visitation.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-2-visitation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Nativity", scripture: "She brought forth her firstborn Son, and wrapped Him in swaddling clothes, and laid Him in a manger, because there was no room for them in the inn.", ref: "Lk 2:1\u201321", fruit: "Poverty of Spirit",
-      img: "/images/rosary/joyful-3-nativity.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-3-nativity.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Presentation", scripture: "They brought Him to Jerusalem to present Him to the Lord. Simeon said, 'Now Thou dost dismiss Thy servant in peace, for mine eyes have seen Thy salvation.'", ref: "Lk 2:22\u201340", fruit: "Obedience",
-      img: "/images/rosary/joyful-4-presentation.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-4-presentation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "Finding in the Temple", scripture: "After three days they found Him in the temple, sitting among the teachers. He said, 'Did you not know that I must be about My Father's business?'", ref: "Lk 2:41\u201352", fruit: "Joy in Finding Jesus",
-      img: "/images/rosary/joyful-5-finding.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-5-finding.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
   sorrowful: { label: "Sorrowful Mysteries", day: "Tuesday & Friday", icon: "✝", color: "#7a1c1c", mysteries: [
     { title: "The Agony in the Garden", scripture: "He went a little further and fell on His face and prayed, 'My Father, if it be possible, let this chalice pass from Me; yet not My will but Thine be done.'", ref: "Mt 26:36\u201346", fruit: "Sorrow for Sin",
-      img: "/images/rosary/sorrowful-1-agony.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-1-agony.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Scourging at the Pillar", scripture: "Then Pilate took Jesus and had Him scourged.", ref: "Jn 19:1", fruit: "Purity",
-      img: "/images/rosary/sorrowful-2-scourging.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-2-scourging.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crowning with Thorns", scripture: "They twisted together a crown of thorns and put it on His head, and a reed in His right hand, and knelt before Him and mocked Him.", ref: "Mt 27:27\u201331", fruit: "Courage",
-      img: "/images/rosary/sorrowful-3-crowning.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-3-crowning.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Carrying of the Cross", scripture: "And bearing His own cross, He went forth to the place called Calvary.", ref: "Jn 19:17", fruit: "Patience",
-      img: "/images/rosary/sorrowful-4-carrying.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-4-carrying.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crucifixion", scripture: "Jesus said, 'Father, forgive them, for they know not what they do.' And bowing His head, He gave up His spirit.", ref: "Jn 19:18\u201330", fruit: "Perseverance",
-      img: "/images/rosary/sorrowful-5-crucifixion.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-5-crucifixion.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
   glorious: { label: "Glorious Mysteries", day: "Wednesday & Sunday", icon: "👑", color: "#d4a843", mysteries: [
     { title: "The Resurrection", scripture: "He is not here; He is risen, as He said. Come, see the place where the Lord was laid.", ref: "Mt 28:1\u201310", fruit: "Faith",
-      img: "/images/rosary/glorious-1-resurrection.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-1-resurrection.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Ascension", scripture: "He was lifted up, and a cloud took Him out of their sight. 'This Jesus will come in the same way as you saw Him go into heaven.'", ref: "Acts 1:9\u201311", fruit: "Hope",
-      img: "/images/rosary/glorious-2-ascension.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-2-ascension.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Descent of the Holy Spirit", scripture: "They were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.", ref: "Acts 2:1\u201313", fruit: "Love of God",
-      img: "/images/rosary/glorious-3-pentecost.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-3-pentecost.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Assumption of Mary", scripture: "A great sign appeared in heaven: a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.", ref: "Rev 12:1", fruit: "Grace of a Happy Death",
-      img: "/images/rosary/glorious-4-assumption.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
+      img: "/images/glorious-4-assumption.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
     { title: "The Coronation of Mary", scripture: "The Lord said, 'Well done, good and faithful servant; enter into the joy of thy Master.'", ref: "Mt 25:21", fruit: "Trust in Mary's Intercession",
-      img: "/images/rosary/glorious-5-coronation.jpg", credit: "Diego Velázquez (1644) · Museo del Prado" },
+      img: "/images/glorious-5-coronation.jpg", credit: "Diego Velázquez (1644) · Museo del Prado" },
   ]},
 };
 
