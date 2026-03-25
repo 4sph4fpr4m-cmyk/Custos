@@ -2943,12 +2943,36 @@ function RosaryTab({ goHome }) {
               </div>
             </div>
 
-            {/* ── SPLIT LAYOUT: artwork top, prayer bottom ── */}
+            {/* ── SPLIT LAYOUT: beads → artwork → prayer → nav ── */}
             {isImmersive && (
               <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }}>
 
-                {/* TOP: Artwork — fixed 42% of available height, tap to advance */}
-                <div onClick={advance} style={{ flexShrink: 0, height: "42%", position: "relative", overflow: "hidden", borderBottom: `1px solid ${T.cardBorder}`, cursor: "pointer", WebkitTapHighlightColor: "transparent" }}>
+                {/* TOP: Label + beads — pinned above artwork */}
+                <div style={{ flexShrink: 0, padding: "8px 22px 7px", background: T.warmWhite, borderBottom: `1px solid ${T.cardBorder}` }}>
+                  <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 7 : 0 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
+                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
+                  </div>
+                  {content.beadTotal && (
+                    <div style={{ display: "flex", justifyContent: "center", gap: 5 }}>
+                      {Array.from({ length: content.beadTotal }, (_, i) => (
+                        <div key={i} style={{
+                          width: content.beadTotal > 5 ? 18 : 22,
+                          height: content.beadTotal > 5 ? 18 : 22,
+                          borderRadius: "50%",
+                          background: i < content.beadOf ? T.gold : "transparent",
+                          border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
+                          transition: "all 0.3s ease",
+                          opacity: i < content.beadOf ? 1 : 0.35,
+                          boxShadow: i < content.beadOf ? `0 0 5px rgba(212,168,67,0.5)` : "none",
+                        }} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* ARTWORK — capped at 170px, tap to advance */}
+                <div onClick={advance} style={{ flexShrink: 0, height: 170, position: "relative", overflow: "hidden", borderBottom: `1px solid ${T.cardBorder}`, cursor: "pointer", WebkitTapHighlightColor: "transparent" }}>
                   <img
                     src={content.img}
                     alt=""
@@ -2962,45 +2986,17 @@ function RosaryTab({ goHome }) {
                   )}
                 </div>
 
-                {/* BOTTOM: Prayer label, beads, text, nav — scrollable internally */}
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", background: T.warmWhite, minHeight: 0 }}>
+                {/* Prayer text — takes remaining space, scrollable */}
+                <div style={{ flex: 1, overflowY: "auto", padding: "10px 22px 0", background: T.warmWhite, minHeight: 0 }}>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.7, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
+                </div>
 
-                  {/* Label + beads — pinned */}
-                  <div style={{ flexShrink: 0, padding: "10px 22px 8px", borderBottom: `1px solid ${T.cardBorder}` }}>
-                    <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 8 : 0 }}>
-                      <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
-                      {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
-                    </div>
-                    {content.beadTotal && (
-                      <div style={{ display: "flex", justifyContent: "center", gap: 5 }}>
-                        {Array.from({ length: content.beadTotal }, (_, i) => (
-                          <div key={i} style={{
-                            width: content.beadTotal > 5 ? 18 : 22,
-                            height: content.beadTotal > 5 ? 18 : 22,
-                            borderRadius: "50%",
-                            background: i < content.beadOf ? T.gold : "transparent",
-                            border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
-                            transition: "all 0.3s ease",
-                            opacity: i < content.beadOf ? 1 : 0.35,
-                            boxShadow: i < content.beadOf ? `0 0 5px rgba(212,168,67,0.5)` : "none",
-                          }} />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Prayer text — scrollable */}
-                  <div style={{ flex: 1, overflowY: "auto", padding: "10px 22px 0" }}>
-                    <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.7, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
-                  </div>
-
-                  {/* Navigation — pinned at bottom */}
-                  <div style={{ padding: "10px 22px 18px", display: "flex", gap: 10, flexShrink: 0 }}>
-                    <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
-                    <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
-                      {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
-                    </CrimsonBtn></div>
-                  </div>
+                {/* Navigation — pinned at bottom */}
+                <div style={{ padding: "10px 22px 18px", display: "flex", gap: 10, flexShrink: 0, background: T.warmWhite }}>
+                  <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
+                  <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
+                    {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
+                  </CrimsonBtn></div>
                 </div>
               </div>
             )}
