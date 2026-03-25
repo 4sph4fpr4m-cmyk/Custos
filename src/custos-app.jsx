@@ -2927,11 +2927,12 @@ function RosaryTab({ goHome }) {
       {scr === "pray" && M && (() => {
         const content = getPrayerContent();
         const progress = getTotalProgress();
-        // Full-screen immersive layout when there is artwork and beads (Hail Mary / Our Father during decade)
-        const isImmersive = !content.isAnnounce && !!content.img && !!content.beadTotal;
+        // Immersive layout for all mystery steps that have artwork (ourfather, hailmary, glory, fatima)
+        const isImmersive = !content.isAnnounce && !!content.img;
         return (
           <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
-            {/* Progress bar + label — always visible */}
+
+            {/* ── Progress bar + decade label — always visible ── */}
             <div style={{ padding: "10px 22px 4px", display: "flex", justifyContent: "space-between", flexShrink: 0 }}>
               <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>{M.label}</span>
               {step !== "opening" && step !== "closing" && <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>Decade {decade + 1} / 5</span>}
@@ -2942,14 +2943,38 @@ function RosaryTab({ goHome }) {
               </div>
             </div>
 
-            {/* ── IMMERSIVE ARTWORK LAYOUT (Hail Mary / beaded prayers with image) ── */}
+            {/* ── IMMERSIVE LAYOUT: all mystery steps with artwork ── */}
             {isImmersive && (
-              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", position: "relative" }}>
-                {/* Artwork fills remaining space — tap to advance */}
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+
+                {/* Prayer label + bead counter pinned at top */}
+                <div style={{ flexShrink: 0, padding: "6px 22px 8px", background: T.warmWhite, borderBottom: `1px solid ${T.cardBorder}` }}>
+                  <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 8 : 0 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
+                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
+                  </div>
+                  {content.beadTotal && (
+                    <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
+                      {Array.from({ length: content.beadTotal }, (_, i) => (
+                        <div key={i} style={{
+                          width: content.beadTotal > 5 ? 20 : 26,
+                          height: content.beadTotal > 5 ? 20 : 26,
+                          borderRadius: "50%",
+                          background: i < content.beadOf ? T.gold : "transparent",
+                          border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
+                          transition: "all 0.3s ease",
+                          opacity: i < content.beadOf ? 1 : 0.35,
+                          boxShadow: i < content.beadOf ? `0 0 5px rgba(212,168,67,0.5)` : "none",
+                        }} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Artwork fills all remaining space — tap to advance */}
                 <div
                   onClick={advance}
-                  style={{ flex: 1, position: "relative", overflow: "hidden", cursor: "pointer", WebkitTapHighlightColor: "transparent" }}
-                  title="Tap to advance"
+                  style={{ flex: 1, position: "relative", overflow: "hidden", cursor: "pointer", WebkitTapHighlightColor: "transparent", minHeight: 0 }}
                 >
                   <img
                     src={content.img}
@@ -2957,51 +2982,35 @@ function RosaryTab({ goHome }) {
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     onError={e => e.target.style.display = "none"}
                   />
-                  {/* Gradient overlay at top for prayer label */}
-                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, padding: "12px 18px 40px", background: "linear-gradient(rgba(0,0,0,0.55), transparent)", pointerEvents: "none" }}>
-                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 700, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase", textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}>{content.label}</div>
-                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: "rgba(255,255,255,0.8)", marginTop: 2 }}>{content.note}</div>}
-                  </div>
-                  {/* Bead counter over image at bottom */}
-                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "30px 18px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.6))", pointerEvents: "none" }}>
-                    <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 8 }}>
-                      {Array.from({ length: content.beadTotal }, (_, i) => (
-                        <div key={i} style={{
-                          width: content.beadTotal > 5 ? 18 : 22,
-                          height: content.beadTotal > 5 ? 18 : 22,
-                          borderRadius: "50%",
-                          background: i < content.beadOf ? T.gold : "transparent",
-                          border: `2px solid ${i < content.beadOf ? T.gold : "rgba(255,255,255,0.5)"}`,
-                          transition: "all 0.3s ease",
-                          opacity: i < content.beadOf ? 1 : 0.5,
-                          boxShadow: i < content.beadOf ? `0 0 6px rgba(212,168,67,0.7)` : "none",
-                        }} />
-                      ))}
-                    </div>
-                    {/* Tap hint */}
+                  {/* Tap hint overlay at bottom of image */}
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "24px 14px 8px", background: "linear-gradient(transparent, rgba(0,0,0,0.5))", pointerEvents: "none" }}>
                     <div style={{ textAlign: "center" }}>
-                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: "rgba(255,255,255,0.55)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                        {content.beadOf < content.beadTotal ? `Tap image · Bead ${content.beadOf + 1} of ${content.beadTotal}` : "Tap image to continue"}
+                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: "rgba(255,255,255,0.6)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                        {content.beadTotal
+                          ? (content.beadOf < content.beadTotal ? `Tap image · Bead ${content.beadOf + 1} of ${content.beadTotal}` : "Tap image to continue")
+                          : "Tap image to continue"}
                       </span>
                     </div>
-                    {content.credit && <div style={{ textAlign: "right", marginTop: 4 }}><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.4)", fontStyle: "italic" }}>{content.credit}</span></div>}
+                    {content.credit && <div style={{ textAlign: "right", marginTop: 2 }}><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.4)", fontStyle: "italic" }}>{content.credit}</span></div>}
                   </div>
                 </div>
-                {/* Prayer text pinned at bottom — no scroll needed */}
-                <div style={{ flexShrink: 0, padding: "12px 22px 0", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}` }}>
+
+                {/* Prayer text pinned at bottom */}
+                <div style={{ flexShrink: 0, padding: "10px 22px 0", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}` }}>
                   <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.7, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
                 </div>
+
                 {/* Navigation */}
                 <div style={{ padding: "10px 22px 18px", background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
                   <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
                   <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
-                    {content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
+                    {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
                   </CrimsonBtn></div>
                 </div>
               </div>
             )}
 
-            {/* ── STANDARD SCROLLABLE LAYOUT (no artwork, or announce, or closing) ── */}
+            {/* ── STANDARD SCROLLABLE LAYOUT: opening, closing, announcements ── */}
             {!isImmersive && (
               <>
                 <div style={{ flex: 1, overflowY: "auto", padding: "6px 22px 22px" }}>
@@ -3027,10 +3036,17 @@ function RosaryTab({ goHome }) {
                         <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Scripture · {content.ref}</div>
                         <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.m, fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{content.text}</p>
                       </Card>
+                      <div style={{ textAlign: "center", margin: "14px 0", padding: "10px 0" }}>
+                        <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "7px 18px", background: T.goldFaint, borderRadius: 20, border: `1px solid rgba(212,168,67,0.15)` }}>
+                          <span style={{ fontSize: fz(13) }}>🕯</span>
+                          <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Meditate on this mystery</span>
+                          <span style={{ fontSize: fz(13) }}>🕯</span>
+                        </div>
+                      </div>
                     </>
                   )}
 
-                  {/* Standard prayer display (no artwork or no beads) */}
+                  {/* Opening / closing prayers (no artwork) */}
                   {!content.isAnnounce && (
                     <>
                       <div style={{ textAlign: "center", marginBottom: 16 }}>
@@ -3052,27 +3068,10 @@ function RosaryTab({ goHome }) {
                           ))}
                         </div>
                       )}
-                      {content.img && (
-                        <div style={{ marginBottom: 14, borderRadius: 10, overflow: "hidden", position: "relative" }}>
-                          <img src={content.img} alt="" style={{ width: "100%", height: "auto", display: "block" }} onError={e => e.target.style.display = "none"} />
-                          {content.credit && <div style={{ position: "absolute", bottom: 0, right: 0, padding: "3px 8px", background: "rgba(0,0,0,0.5)", fontFamily: "EB Garamond, serif", fontSize: fz(10), color: "rgba(255,255,255,0.7)" }}>{content.credit}</div>}
-                        </div>
-                      )}
                       <Card style={{ borderLeft: `3px solid ${T.gold}` }}>
                         <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
                       </Card>
                     </>
-                  )}
-
-                  {/* Pause prompt for mystery announcements */}
-                  {content.isAnnounce && (
-                    <div style={{ textAlign: "center", margin: "14px 0", padding: "10px 0" }}>
-                      <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "7px 18px", background: T.goldFaint, borderRadius: 20, border: `1px solid rgba(212,168,67,0.15)` }}>
-                        <span style={{ fontSize: fz(13) }}>🕯</span>
-                        <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Meditate on this mystery</span>
-                        <span style={{ fontSize: fz(13) }}>🕯</span>
-                      </div>
-                    </div>
                   )}
                 </div>
 
