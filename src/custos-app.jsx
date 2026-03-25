@@ -2992,7 +2992,7 @@ function RosaryTab({ goHome }) {
                   {/* Mystery artwork for meditation */}
                   {content.img && (
                     <div style={{ marginBottom: 14, borderRadius: 10, overflow: "hidden", position: "relative" }}>
-                      <img src={content.img} alt="" style={{ width: "100%", height: "auto", display: "block", maxHeight: 180, objectFit: "cover" }} onError={e => e.target.style.display = "none"} />
+                      <img src={content.img} alt="" style={{ width: "100%", height: "auto", display: "block" }} onError={e => e.target.style.display = "none"} />
                       {content.credit && <div style={{ position: "absolute", bottom: 0, right: 0, padding: "3px 8px", background: "rgba(0,0,0,0.5)", fontFamily: "EB Garamond, serif", fontSize: fz(10), color: "rgba(255,255,255,0.7)" }}>{content.credit}</div>}
                     </div>
                   )}
