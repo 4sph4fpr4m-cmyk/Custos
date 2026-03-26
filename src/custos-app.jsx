@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 // ═══════════════════════════════════════════════════════════════════
 // DESIGN TOKENS — LIGHT / DARK
@@ -4008,6 +4009,7 @@ export default function Custos() {
                 <line x1="256" y1="275" x2="256" y2="325" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
                 <line x1="242" y1="290" x2="270" y2="290" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
               </svg>
+      <Analytics />
             </div>
             <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(36), fontWeight: 400, letterSpacing: "0.14em", color: "#fff", textTransform: "uppercase", margin: "0 0 6px" }}>Custos</h1>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.gold, fontStyle: "italic", margin: "0 0 20px" }}>A guardian for your conscience</p>
@@ -4194,6 +4196,7 @@ export default function Custos() {
         <SettingsTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal}
           goHome={() => setTab("seek")} onPrivacy={() => { setSeekStartView("privacy"); setTab("seek"); }} />
       )}
+      <Analytics />
     </div>
   );
 }
