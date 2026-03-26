@@ -3909,12 +3909,1023 @@ function TodayTab() {
 // ═══════════════════════════════════════════════════════════════════
 // PRAY HUB — Gateway to all devotional features
 // ═══════════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════════
+// CATECHISM DRILL — BALTIMORE CATECHISM Q&A
+// ═══════════════════════════════════════════════════════════════════
+
+const BC_DECKS = [
+  {
+    id: "creed",
+    icon: "✝",
+    title: "The Creed",
+    subtitle: "Faith & the Holy Trinity",
+    color: "#1a2744",
+    desc: "God, the Trinity, Creation, the Incarnation, and the Last Things",
+    cards: [
+      { q: "Who made us?", a: "God made us.", ref: "BC §1", note: "The first question and answer of the Baltimore Catechism. All catechesis begins here — with the fundamental fact that we are creatures, not self-made." },
+      { q: "Who is God?", a: "God is the Supreme Being, infinitely perfect, who made all things and keeps them in existence.", ref: "BC §4", note: "God is not merely a powerful being among others but the Supreme Being — existence itself. Cf. Exodus 3:14: 'I am Who am.'" },
+      { q: "Why did God make us?", a: "God made us to know Him, to love Him, and to serve Him in this world, and to be happy with Him forever in the next.", ref: "BC §6", note: "This is the foundational teleological statement of Catholic anthropology: our purpose is not self-fulfillment but union with God." },
+      { q: "What is the Blessed Trinity?", a: "The Blessed Trinity is one God in three divine Persons — the Father, the Son, and the Holy Ghost.", ref: "BC §29", note: "The Trinity is the central mystery of Christian faith. Each Person is fully and equally God; the three are one in substance, distinct in Person." },
+      { q: "Is the Son of God really a man?", a: "Yes, the Son of God is true God and true man.", ref: "BC §60", note: "Defined by the Council of Chalcedon (451 AD): Christ has two complete natures — divine and human — united in one divine Person, without confusion or division." },
+      { q: "What do we mean by the Incarnation?", a: "By the Incarnation we mean that the Son of God took to Himself a human nature — a body and soul like ours.", ref: "BC §57", note: "John 1:14: 'And the Word was made flesh, and dwelt among us.' The Incarnation is the hinge of all history." },
+      { q: "Why did the Son of God become man?", a: "The Son of God became man to satisfy for the sins of mankind and to bring us back to God.", ref: "BC §58", note: "The Redemption is the purpose of the Incarnation. The Catechism of Trent adds: also to be our model of holiness, and to raise human nature to its highest dignity." },
+      { q: "What do we mean by the Redemption?", a: "By the Redemption we mean that Jesus Christ, as the Redeemer of the whole human race, offered His sufferings and death to God as a fitting sacrifice in satisfaction for the sins of men, and regained for them the right to be children of God and heirs of heaven.", ref: "BC §110", note: "Cf. Romans 5:19 (Douay-Rheims): 'For as by the disobedience of one man, many were made sinners; so also by the obedience of one, many shall be made just.'" },
+      { q: "What is meant by the 'descent into hell'?", a: "By the descent of Christ into hell is meant that, after He died, the soul of Christ descended into a place or state of rest, called limbo, where the souls of the just were waiting for Him.", ref: "BC §112", note: "This is not the hell of the damned but the 'limbo of the Fathers' (sheol) — the place where the just awaited redemption before heaven was opened by Christ's death." },
+      { q: "What do we mean by the Resurrection of Christ?", a: "By the Resurrection of Christ we mean that Christ, on the third day after His death, rose from the dead with His glorified body.", ref: "BC §113", note: "The Resurrection is not a resuscitation but a transformation. Christ rose bodily and gloriously. St. Paul: 'If Christ be not risen again, your faith is vain' (1 Cor 15:17)." },
+      { q: "What is the Holy Ghost?", a: "The Holy Ghost is the Third Person of the Blessed Trinity, equal to the Father and the Son.", ref: "BC §30", note: "The Holy Ghost proceeds from the Father and the Son (Filioque). He is the bond of love between Father and Son and the Sanctifier of souls." },
+      { q: "What is meant by the 'communion of saints'?", a: "By the communion of saints is meant the union of the faithful on earth, the blessed in heaven, and the souls in purgatory with Christ as their Head.", ref: "BC §197", note: "Death does not dissolve the Church. The living can assist the dead through prayer and indulgences; the saints intercede for us. We are one body in Christ." },
+      { q: "What are the four last things?", a: "The four last things are: Death, Judgment, Hell, and Heaven.", ref: "BC §156", note: "Ecclesiasticus 7:40 (Douay-Rheims): 'In all thy works remember thy last end, and thou shalt never sin.' Meditation on the four last things is a classical aid to moral seriousness." },
+      { q: "What is original sin?", a: "Original sin is the sin that was committed by our first parents, Adam and Eve, and which is passed on to all their descendants.", ref: "BC §48", note: "We inherit not Adam's personal guilt but the privation of sanctifying grace and the resulting disordering of human nature: darkened intellect, weakened will, concupiscence." },
+      { q: "Is God all-knowing?", a: "Yes, God knows all things, even our most secret thoughts, words, and actions.", ref: "BC §5", note: "The divine omniscience is foundational to the moral life: we cannot hide our acts from God. It also grounds confidence in providence — God knows and cares for every detail." },
+    ],
+  },
+  {
+    id: "sacraments",
+    icon: "🕊",
+    title: "The Sacraments",
+    subtitle: "Grace & the Seven Sacraments",
+    color: "#7a1c1c",
+    desc: "What the sacraments are, what they do, and how to receive them worthily",
+    cards: [
+      { q: "What is a sacrament?", a: "A sacrament is an outward sign instituted by Christ to give grace.", ref: "BC §130", note: "This classic definition contains three elements: (1) outward sign — sensible matter and form, (2) instituted by Christ — not the Church's invention, (3) to give grace — it actually produces what it signifies." },
+      { q: "How many sacraments are there?", a: "There are seven sacraments: Baptism, Confirmation, Holy Eucharist, Penance, Extreme Unction, Holy Orders, and Matrimony.", ref: "BC §131", note: "Defined at the Council of Trent (Session VII, 1547) against the Protestant reduction to two. Each sacrament confers grace proper to its specific end." },
+      { q: "What is Baptism?", a: "Baptism is a sacrament which cleanses us from original sin, makes us Christians, children of God, and heirs of heaven.", ref: "BC §156", note: "Baptism is the gateway to all other sacraments. It imprints an indelible character on the soul and can never be repeated. John 3:5: 'Unless a man be born again of water and the Holy Ghost, he cannot enter into the kingdom of God.'" },
+      { q: "What is the Holy Eucharist?", a: "The Holy Eucharist is a sacrament and a sacrifice. In the sacrament it is the Body and Blood, Soul and Divinity of Jesus Christ under the appearances of bread and wine.", ref: "BC §208", note: "The Eucharist is the 'source and summit' of the Catholic faith. Transubstantiation — defined at the Fourth Lateran Council (1215) and Trent — means the substance is wholly changed while accidents remain." },
+      { q: "What is Transubstantiation?", a: "Transubstantiation is the changing of the whole substance of the bread into the Body, and the whole substance of the wine into the Blood of Christ.", ref: "BC §214", note: "After the consecration, there is no longer bread and wine — only Christ. The appearances remain for our weakness. This is a miracle of the highest order, renewed at every Mass." },
+      { q: "What is the Sacrament of Penance?", a: "Penance is a sacrament in which the sins committed after Baptism are forgiven through the absolution of a priest.", ref: "BC §234", note: "Christ gave this power to the Apostles on Easter night: 'Receive ye the Holy Ghost. Whose sins you shall forgive, they are forgiven them' (John 20:22–23). Only a validly ordained priest can absolve." },
+      { q: "What is required for a good confession?", a: "For a good confession five things are required: examination of conscience, sorrow for sin, firm purpose of amendment, confession of sins to the priest, and satisfaction or penance.", ref: "BC §237", note: "Each of these five acts is essential. Notably, 'firm purpose of amendment' means a genuine intention to avoid the sin and its near occasions — not merely a hope or wish." },
+      { q: "What is an act of perfect contrition?", a: "An act of perfect contrition is sorrow for sin because sin offends God, who is all-good and deserving of all our love.", ref: "BC §241", note: "Perfect contrition arises from love of God, not merely fear of punishment (which is imperfect contrition, or attrition). Perfect contrition restores grace even before absolution, but one must still confess mortal sins." },
+      { q: "What is Confirmation?", a: "Confirmation is the sacrament by which we receive the Holy Ghost to make us strong and perfect Christians and soldiers of Jesus Christ.", ref: "BC §193", note: "The analogy of the soldier is classical: Confirmation strengthens us for spiritual combat. The bishop (or delegated priest) anoints with chrism, making the character of the soldier of Christ permanent." },
+      { q: "What is Extreme Unction?", a: "Extreme Unction is a sacrament that gives health and strength to the soul, and sometimes to the body, when we are in danger of death from sickness.", ref: "BC §261", note: "James 5:14–15: 'Is any man sick among you? Let him bring in the priests of the church, and let them pray over him, anointing him with oil in the name of the Lord.' It remits venial sins and remnants of sin." },
+      { q: "What is the sacrament of Holy Orders?", a: "Holy Orders is the sacrament by which men are ordained as priests or deacons of the Church.", ref: "BC §265", note: "Holy Orders imprints an indelible character and confers the power to offer Mass, forgive sins (in the case of priests), and preach with authority. Women cannot receive Holy Orders — this teaching was definitively reaffirmed by John Paul II in Ordinatio Sacerdotalis (1994)." },
+      { q: "What is the sacrament of Matrimony?", a: "Matrimony is the sacrament by which a baptized man and a baptized woman bind themselves for life in a lawful marriage and receive the grace to discharge its duties.", ref: "BC §268", note: "Marriage between the baptized is not merely a contract but a sacrament. Its three goods are: fides (fidelity), proles (openness to children), and sacramentum (indissolubility). Casti Connubii (1930) is the fullest modern treatment." },
+      { q: "What is sanctifying grace?", a: "Sanctifying grace is that grace which confers on our souls a new life, that is, a sharing in the life of God Himself.", ref: "BC §136", note: "Sanctifying grace is a permanent, habitual quality of the soul that makes us truly pleasing to God and capable of meritorious acts. It is lost by mortal sin and restored by worthy reception of Penance." },
+    ],
+  },
+  {
+    id: "commandments",
+    icon: "⚖",
+    title: "The Commandments",
+    subtitle: "God's Law & our moral duties",
+    color: "#1a2744",
+    desc: "The Ten Commandments, the precepts of the Church, and the moral life",
+    cards: [
+      { q: "What are the chief sources of actual sin?", a: "The chief sources of actual sin are: Pride, Covetousness, Lust, Anger, Gluttony, Envy, and Sloth — the seven capital sins.", ref: "BC §59", note: "These are called 'capital' (from caput, head) because they are the roots from which other sins spring. St. Gregory the Great codified the traditional list. Each has a corresponding virtue that counters it." },
+      { q: "What is a mortal sin?", a: "A mortal sin is a grievous offense against the law of God, committed with full knowledge and full consent of the will.", ref: "BC §57", note: "Three conditions are all required: (1) grave matter, (2) full knowledge, (3) full consent. If any one is lacking, the sin is venial, not mortal. Mortal sin kills sanctifying grace in the soul." },
+      { q: "What is a venial sin?", a: "A venial sin is a less serious offense against the law of God, which does not kill the soul but weakens it.", ref: "BC §58", note: "Venial sin weakens charity, disorders the affections, and disposes one toward greater sin, but does not deprive the soul of sanctifying grace or rupture friendship with God." },
+      { q: "What is the First Commandment?", a: "The First Commandment is: I am the Lord thy God; thou shalt not have strange gods before Me.", ref: "BC §71", note: "This commandment governs all worship. It forbids false religion, superstition, divination, magic, astrology, and consulting the occult. It requires faith, hope, and charity toward God above all things." },
+      { q: "What does the Second Commandment forbid?", a: "The Second Commandment forbids all false, rash, unjust, or irreverent use of God's name.", ref: "BC §81", note: "This includes blasphemy, perjury, and profanity. An oath calls God to witness; invoking Him falsely or for trifles is a grave misuse of the divine name." },
+      { q: "What does the Third Commandment require?", a: "The Third Commandment requires us to keep holy the Lord's day by hearing Mass and resting from servile work.", ref: "BC §83", note: "For Catholics, Sunday (the day of Resurrection) fulfills the Sabbath obligation. Missing Sunday Mass without grave cause is a mortal sin. The obligation is one of the precepts of the Church." },
+      { q: "What does the Fourth Commandment require?", a: "The Fourth Commandment requires us to honor, love, and obey our parents and all lawful superiors.", ref: "BC §91", note: "Ephesians 6:2–3: 'Honour thy father and thy mother, which is the first commandment with a promise.' The family is the first school of virtue; filial piety is the foundation of all social order." },
+      { q: "What does the Fifth Commandment forbid?", a: "The Fifth Commandment forbids all wilful murder, fighting, anger, hatred, revenge, and bad example.", ref: "BC §97", note: "The negative precept (do not kill) is the minimum. The positive aspect demands care for our own life and health and genuine love of neighbor. Evangelium Vitae (1995) applies this to abortion, euthanasia, and capital punishment." },
+      { q: "What does the Sixth Commandment forbid?", a: "The Sixth Commandment forbids all sins of impurity with another's spouse.", ref: "BC §101", note: "The Sixth and Ninth Commandments together govern chastity. The BC addresses adultery (Sixth) and impure desires (Ninth). Casti Connubii and Humanae Vitae address the full scope of sexual morality." },
+      { q: "What does the Seventh Commandment forbid?", a: "The Seventh Commandment forbids all unjust taking or keeping of another's property.", ref: "BC §103", note: "This covers theft, fraud, cheating, unjust contracts, and failure to pay just wages. It also obliges restitution: stolen goods must be returned if possible." },
+      { q: "What does the Eighth Commandment forbid?", a: "The Eighth Commandment forbids all false statements that unjustly injure the reputation of another.", ref: "BC §106", note: "Detraction reveals true but hidden faults without just cause. Calumny adds falsehood. Rash judgment assumes another's guilt without sufficient reason. All three sin against truth and charity." },
+      { q: "What are the chief precepts of the Church?", a: "The chief precepts of the Church are: (1) attend Mass on Sundays and holy days, (2) fast and abstain on days prescribed, (3) confess at least once a year, (4) receive Communion during Eastertide, (5) contribute to the support of the Church.", ref: "BC §120", note: "These are the minimum obligations imposed by the Church. They presuppose but do not exhaust the moral life. The precepts point to an interior life that must animate the external observances." },
+      { q: "What is the virtue of justice?", a: "Justice is the virtue that inclines us to give to every man what is his due.", ref: "BC §107", note: "Justice is one of the four cardinal virtues. It governs our relations with others — both commutative justice (individual exchanges) and distributive justice (social arrangements). Rerum Novarum and Quadragesimo Anno develop this in the social order." },
+      { q: "What is the virtue of prudence?", a: "Prudence is the virtue that inclines us to see what is good in every circumstance and to use the best means to accomplish it.", ref: "BC §109", note: "Prudence is the 'charioteer of the virtues' (St. Thomas Aquinas, Summa II-II, Q.47). It is the practical wisdom by which we discern the right action in concrete situations. It cannot be replaced by following rules mechanically." },
+    ],
+  },
+  {
+    id: "prayer",
+    icon: "🙏",
+    title: "Prayer",
+    subtitle: "The Our Father & Christian prayer",
+    color: "#7a1c1c",
+    desc: "The nature of prayer, the Our Father, and the Hail Mary",
+    cards: [
+      { q: "What is prayer?", a: "Prayer is the lifting up of our minds and hearts to God.", ref: "BC §112", note: "This classical definition (from St. John Damascene) encompasses all forms of prayer: petition, thanksgiving, adoration, and contrition. Prayer is not first about words but about the movement of the soul toward God." },
+      { q: "Why must we pray?", a: "We must pray because prayer is necessary for salvation — God has commanded it, and without it we cannot obtain His help.", ref: "BC §113", note: "Luke 18:1: 'We ought always to pray, and not to faint.' Prayer is not optional devotion but a grave obligation. The Baltimore Catechism notes that God has attached the graces we need to the act of asking for them." },
+      { q: "What are the chief kinds of prayer?", a: "The chief kinds of prayer are: adoration, thanksgiving, contrition, and petition.", ref: "BC §116", note: "The acronym ACTS captures these. Adoration acknowledges God's majesty; thanksgiving returns gratitude for gifts; contrition expresses sorrow for sin; petition asks for our needs." },
+      { q: "Who taught us the Our Father?", a: "Jesus Christ Himself taught us the Our Father when His disciples asked Him: 'Lord, teach us to pray.'", ref: "BC §118", note: "Luke 11:1–4; Matthew 6:9–13 (Douay-Rheims). The Our Father is the perfect prayer because its author is the Son of God. The Roman Catechism devotes an entire section to its seven petitions." },
+      { q: "What do we ask in the first three petitions of the Our Father?", a: "In the first three petitions we ask that God may be honored by all men, that His kingdom may be established, and that His will may be done on earth.", ref: "BC §120", note: "These petitions are directed to God's glory. They express the fundamental priority of the Christian life: God first, self second. 'Thy kingdom come' is a prayer for the conversion of souls and the final coming of Christ." },
+      { q: "What do we ask in the last four petitions of the Our Father?", a: "In the last four petitions we ask for our daily bread, for the forgiveness of our sins, for help against temptation, and for deliverance from evil.", ref: "BC §121", note: "The 'daily bread' encompasses both material needs and the Eucharist. The petition for forgiveness explicitly ties our receiving of pardon to our granting of it: 'as we forgive those who trespass against us.'" },
+      { q: "What is the Hail Mary?", a: "The Hail Mary is a prayer honoring the Blessed Virgin Mary, combining the words of the Angel Gabriel, St. Elizabeth, and the Church's petition.", ref: "BC §124", note: "Luke 1:28: 'Hail, full of grace, the Lord is with thee'; Luke 1:42: 'Blessed art thou among women, and blessed is the fruit of thy womb.' The second half was added by the Church: 'Holy Mary, Mother of God…'" },
+      { q: "What is meditation?", a: "Meditation is a form of mental prayer in which we use our mind and imagination to consider the truths of faith and apply them to our lives.", ref: "BC §116 (extended)", note: "The Ignatian method of meditation — placing oneself in a scene from Scripture and applying the three faculties (memory, understanding, will) — is one of many classical forms. St. Francis de Sales also taught accessible methods of meditation." },
+      { q: "What are the conditions for prayer to be heard?", a: "For prayer to be heard, it must be humble, trusting, persevering, resigned to God's will, and in the name of Jesus Christ.", ref: "BC §114", note: "God always hears prayer, but He may not always grant what we ask in the way or time we expect. The Catechism teaches that God answers every sincere prayer — sometimes with yes, sometimes no, sometimes with something better." },
+      { q: "What is the Angelus?", a: "The Angelus is a prayer honoring the Incarnation, recited three times a day at the sound of the bell, commemorating the Annunciation.", ref: "BC devotional tradition", note: "The Angelus recalls Gabriel's announcement to Mary (Luke 1:26–38) and her fiat. The concluding prayer ('Pour forth, we beseech Thee…') is drawn from tradition. Its three-times-daily rhythm is an ancient way of sanctifying the hours." },
+    ],
+  },
+  {
+    id: "sin_grace",
+    icon: "⛰",
+    title: "Sin & Grace",
+    subtitle: "The moral life and God's mercy",
+    color: "#1a2744",
+    desc: "The nature of sin, grace, virtue, and the path to holiness",
+    cards: [
+      { q: "What is actual sin?", a: "Actual sin is any willful thought, desire, word, action, or omission forbidden by the law of God.", ref: "BC §56", note: "The Baltimore Catechism lists five species: thought, desire, word, action, and omission. We can sin by what we do and by what we fail to do — including the omission of required good acts." },
+      { q: "What are the three conditions for mortal sin?", a: "For a sin to be mortal it must be: (1) a grievous matter, (2) committed with sufficient reflection, and (3) with full consent of the will.", ref: "BC §57", note: "All three must be present. A gravely wrong act done without full knowledge or consent is venial, not mortal. This is important for avoiding scrupulosity: invincible ignorance and diminished freedom reduce culpability." },
+      { q: "What is the sin against the Holy Ghost?", a: "The sin against the Holy Ghost is final impenitence — the deliberate refusal, until death, to repent and accept God's mercy.", ref: "BC §83", note: "Matthew 12:31–32 (Douay-Rheims): 'Blasphemy against the Spirit shall not be forgiven.' This sin is unforgivable not because God's mercy is limited but because the sinner refuses to receive it. It is a closing of the will against grace itself." },
+      { q: "What are the sins that cry to heaven for vengeance?", a: "The sins that cry to heaven for vengeance are: wilful murder, sodomy, oppression of the poor, and defrauding laborers of their wages.", ref: "BC §83 (extended)", note: "These four are so called because Scripture explicitly says their cry reaches God (cf. Gen 4:10; Gen 19; Exod 22:22–24; James 5:4). They represent the gravest disorders against life, nature, dignity, and justice." },
+      { q: "What are the virtues opposed to the seven capital sins?", a: "The opposing virtues are: Humility (against Pride), Liberality (against Covetousness), Chastity (against Lust), Meekness (against Anger), Temperance (against Gluttony), Brotherly Love (against Envy), and Diligence (against Sloth).", ref: "BC §60 (traditional list)", note: "Virtues are not merely the absence of vices but positive habits of soul. St. Thomas Aquinas (Summa I-II, Q.55) defines a virtue as 'a good operative habit' — a stable disposition that makes its acts easy and excellent." },
+      { q: "What is actual grace?", a: "Actual grace is a supernatural help that God gives us to enlighten our mind and strengthen our will to do good and avoid evil.", ref: "BC §135", note: "Actual grace is a transient divine assistance given for particular acts, distinct from sanctifying grace (a permanent quality of the soul). It precedes free acts (prevenient grace) and accompanies them (cooperative grace)." },
+      { q: "Can we resist the grace of God?", a: "Yes, we can resist the grace of God, for our will is free.", ref: "BC §137", note: "This is the Catholic teaching against Calvinist double predestination. God's grace moves us without compelling us. Council of Trent (Session VI): 'man may reject grace.' Free will and grace are both real and both necessary." },
+      { q: "What is conscience?", a: "Conscience is the judgment of our reason by which we decide that something is right or wrong.", ref: "BC §109", note: "Conscience is the proximate norm of morality, but it must be formed. An erroneous conscience can lead to sin if the error is culpable. The Baltimore Catechism and CCC 1776–1779 together give the full treatment." },
+      { q: "What is an occasion of sin?", a: "An occasion of sin is any person, place, or thing that leads us into sin or temptation.", ref: "BC §91", note: "A 'near occasion' is one in which we almost always sin or are in grave danger; we are strictly obliged to avoid these. A 'remote occasion' carries less danger but still requires prudence. Firm purpose of amendment requires resolving to avoid near occasions." },
+      { q: "What are the theological virtues?", a: "The theological virtues are Faith, Hope, and Charity — virtues that have God Himself as their object.", ref: "BC §108", note: "They are called 'theological' (from theos, God) because they relate us directly to God. They are infused at Baptism, distinct from the moral virtues, and cannot be acquired by human effort alone. 1 Corinthians 13:13: 'And now there remain faith, hope, and charity, these three: but the greatest of these is charity.'" },
+      { q: "What is charity?", a: "Charity is the virtue by which we love God above all things and our neighbor as ourselves for the love of God.", ref: "BC §109", note: "Charity is the highest of all virtues — 'the bond of perfection' (Col 3:14). Without charity, all other virtues and external acts are without merit. St. Paul's hymn to charity (1 Cor 13) remains the supreme scriptural description." },
+    ],
+  },
+  {
+    id: "last_things",
+    icon: "🕯",
+    title: "The Last Things",
+    subtitle: "Death, Judgment, Heaven & Hell",
+    color: "#7a1c1c",
+    desc: "What the Church teaches about death, the soul's judgment, and eternity",
+    cards: [
+      { q: "What happens to the soul at death?", a: "At death, the soul is separated from the body and immediately judged by God in what is called the Particular Judgment.", ref: "BC §156", note: "Hebrews 9:27 (Douay-Rheims): 'It is appointed unto men once to die, and after this the judgment.' The Particular Judgment is immediate and individual; the General Judgment at the end of time confirms it publicly." },
+      { q: "What is Purgatory?", a: "Purgatory is a place or state of punishment in the next life, where some souls suffer for a time before they can enter heaven.", ref: "BC §160", note: "Defined at the Council of Florence (1439) and Trent (Session XXV). Purgatory is a doctrine of mercy: God completes the purification of those who die in His grace but still carry the debt of temporal punishment or imperfectly purified affections." },
+      { q: "How can we help the souls in Purgatory?", a: "We can help the souls in Purgatory by prayer, indulgences, fasting, almsgiving, and especially by having Mass offered for them.", ref: "BC §161", note: "The Mass is the most powerful suffrages for the holy souls. This is why Masses for the dead are offered and why Catholics pray the Prayer for the Dead and observe November as the Month of the Holy Souls." },
+      { q: "What is Heaven?", a: "Heaven is the state of perfect and everlasting happiness with God, enjoyed by the angels and saints.", ref: "BC §162", note: "Heaven is the Beatific Vision — knowing God as He knows Himself, face to face. 1 Corinthians 2:9 (Douay-Rheims): 'Eye hath not seen, nor ear heard, neither hath it entered into the heart of man, what things God hath prepared for them that love Him.'" },
+      { q: "What is Hell?", a: "Hell is a state of everlasting punishment for those who die in mortal sin.", ref: "BC §163", note: "Hell is not primarily fire but the eternal loss of God (poena damni) — the worst suffering conceivable for a being created for union with Him. The Church has always taught that Hell is real and possible; she has never taught that it is empty." },
+      { q: "What is the General Judgment?", a: "The General Judgment is the judgment that will take place at the end of the world, when all men will be judged together before God.", ref: "BC §158", note: "The General Judgment confirms and makes manifest the Particular Judgment. At it, the secret works and interior life of all will be revealed, and God's justice and mercy will be vindicated before the whole creation." },
+      { q: "What does the Church teach about indulgences?", a: "An indulgence is the remission of the temporal punishment due to sins already forgiven, granted by the Church from the treasury of the merits of Christ and the saints.", ref: "BC §168", note: "An indulgence remits temporal punishment, not the guilt of sin (which is forgiven in Penance). The doctrine is grounded in the Church's authority to bind and loose (Mt 16:19) and the Communion of Saints." },
+      { q: "What is the resurrection of the body?", a: "The resurrection of the body means that at the Last Day the souls of all men will be reunited with their bodies to share in the final reward or punishment.", ref: "BC §157", note: "The Catholic doctrine is not merely the immortality of the soul (held by many ancient philosophers) but the resurrection of the whole person. Christ's bodily Resurrection is the 'firstfruits' and guarantee of ours (1 Cor 15:20)." },
+      { q: "Who will be saved?", a: "Those will be saved who die in God's grace — that is, in friendship with God, free from mortal sin.", ref: "BC §154", note: "The Church teaches that salvation requires dying in sanctifying grace. Outside mortal sin, the soul is in God's friendship. The Catechism also teaches that invincible ignorance may allow salvation for those who are not formal members of the Church but who follow the natural law faithfully." },
+    ],
+  },
+];
+
+function CatechismDrillTab({ goHome }) {
+  const [view, setView] = useState("menu"); // menu | drill | result
+  const [selectedDeck, setSelectedDeck] = useState(null);
+  const [queue, setQueue] = useState([]);
+  const [masteredCount, setMasteredCount] = useState(0);
+  const [cardIdx, setCardIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [showNote, setShowNote] = useState(false);
+  const [sessionResults, setSessionResults] = useState([]); // "got" | "review"
+  const [fade, setFade] = useState(true);
+
+  const startDeck = (deck) => {
+    const shuffled = [...deck.cards].sort(() => Math.random() - 0.5);
+    setSelectedDeck(deck);
+    setQueue(shuffled);
+    setMasteredCount(0);
+    setCardIdx(0);
+    setFlipped(false);
+    setShowNote(false);
+    setSessionResults([]);
+    setView("drill");
+  };
+
+  const transition = (fn) => {
+    setFade(false);
+    setTimeout(() => { fn(); setFade(true); }, 180);
+  };
+
+  const handleGot = () => {
+    const newResults = [...sessionResults, "got"];
+    const newQueue = queue.filter((_, i) => i !== cardIdx);
+    const newMastered = masteredCount + 1;
+    if (newQueue.length === 0) {
+      setSessionResults(newResults);
+      setMasteredCount(newMastered);
+      setView("result");
+      return;
+    }
+    const nextIdx = cardIdx >= newQueue.length ? 0 : cardIdx;
+    transition(() => {
+      setQueue(newQueue);
+      setCardIdx(nextIdx);
+      setFlipped(false);
+      setShowNote(false);
+      setSessionResults(newResults);
+      setMasteredCount(newMastered);
+    });
+  };
+
+  const handleReview = () => {
+    const newResults = [...sessionResults, "review"];
+    // Move card to end of queue
+    const card = queue[cardIdx];
+    const newQueue = [...queue.filter((_, i) => i !== cardIdx), card];
+    const nextIdx = cardIdx >= newQueue.length - 1 ? 0 : cardIdx;
+    transition(() => {
+      setQueue(newQueue);
+      setCardIdx(nextIdx);
+      setFlipped(false);
+      setShowNote(false);
+      setSessionResults(newResults);
+    });
+  };
+
+  // ── Menu ──
+  if (view === "menu") {
+    return (
+      <>
+        <TopBar title="Catechism Drill" showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 22 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>📕</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Catechism Drill</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5 }}>Baltimore Catechism · Question & Answer</p>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {BC_DECKS.map(deck => (
+              <button key={deck.id} onClick={() => startDeck(deck)} style={{
+                display: "flex", alignItems: "center", gap: 14,
+                padding: "15px 16px",
+                background: T.warmWhite,
+                border: `1px solid ${T.cardBorder}`,
+                borderRadius: 14, cursor: "pointer", textAlign: "left",
+                boxShadow: "0 2px 8px rgba(26,39,68,0.05)",
+              }}>
+                <div style={{
+                  width: 46, height: 46, borderRadius: 10,
+                  background: `linear-gradient(135deg, ${deck.color}, ${deck.color}cc)`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: fz(20), flexShrink: 0,
+                }}>{deck.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.02em" }}>{deck.title}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{deck.subtitle}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, marginTop: 2 }}>{deck.cards.length} questions</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: 18 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 20, padding: "14px 16px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
+              All questions and answers are drawn from the Baltimore Catechism, the primary catechetical authority in Custos's approved source library.
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Result ──
+  if (view === "result") {
+    const total = sessionResults.length;
+    const gotCount = sessionResults.filter(r => r === "got").length + masteredCount - (masteredCount > 0 ? masteredCount - (sessionResults.filter(r => r === "got").length) : 0);
+    const pct = total > 0 ? Math.round((masteredCount / selectedDeck.cards.length) * 100) : 0;
+    return (
+      <>
+        <TopBar title="Drill Complete" showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 26 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: "50%", background: T.goldFaint, border: "2px solid rgba(212,168,67,0.35)", marginBottom: 14 }}>
+              <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(28), fontWeight: 700, color: T.gold }}>{pct}%</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{selectedDeck.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.gold, margin: 0 }}>
+              {masteredCount === selectedDeck.cards.length ? "All cards mastered!" : `${masteredCount} of ${selectedDeck.cards.length} mastered`}
+            </p>
+          </div>
+
+          <Card style={{ marginBottom: 16, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+              "Study of the catechism is not merely an intellectual exercise. It is formation — the shaping of a mind and heart capable of loving God intelligently."
+            </p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: "8px 0 0", fontStyle: "italic" }}>— Baltimore Catechism tradition</p>
+          </Card>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <CrimsonBtn onClick={() => startDeck(selectedDeck)}>Drill Again</CrimsonBtn>
+            <NavyBtn onClick={() => setView("menu")}>Choose Another Deck</NavyBtn>
+            <GhostBtn onClick={goHome}>Return</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Drill ──
+  const card = queue[cardIdx];
+  const remaining = queue.length;
+  const total = selectedDeck.cards.length;
+  const mastered = masteredCount;
+  const progress = mastered / total;
+
+  return (
+    <>
+      <TopBar
+        title={selectedDeck.title}
+        showBack={true}
+        onBack={() => transition(() => { setView("menu"); setSelectedDeck(null); })}
+        rightAction={
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.04em" }}>
+            {mastered}/{total}
+          </div>
+        }
+      />
+
+      {/* Progress bar */}
+      <div style={{ height: 4, background: "rgba(212,168,67,0.15)", flexShrink: 0 }}>
+        <div style={{ height: "100%", width: `${progress * 100}%`, background: `linear-gradient(90deg, ${T.gold}, ${T.goldLight})`, transition: "width 0.5s ease", borderRadius: "0 2px 2px 0" }} />
+      </div>
+
+      <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 16px", display: "flex", flexDirection: "column", opacity: fade ? 1 : 0, transition: "opacity 0.18s ease" }}>
+
+        {/* Deck label + remaining */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase" }}>{selectedDeck.title}</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic" }}>{remaining} remaining</div>
+        </div>
+
+        {/* Card */}
+        <div
+          onClick={() => !flipped && setFlipped(true)}
+          style={{
+            flex: "0 0 auto",
+            minHeight: 200,
+            background: flipped ? T.warmWhite : `linear-gradient(145deg, ${selectedDeck.color}, ${selectedDeck.color}dd)`,
+            border: `1.5px solid ${flipped ? T.cardBorderStrong : "rgba(212,168,67,0.3)"}`,
+            borderRadius: 18,
+            padding: "24px 22px",
+            cursor: flipped ? "default" : "pointer",
+            boxShadow: flipped ? "0 2px 12px rgba(26,39,68,0.08)" : "0 6px 24px rgba(26,39,68,0.18)",
+            transition: "all 0.3s ease",
+            display: "flex", flexDirection: "column", justifyContent: "center",
+          }}
+        >
+          {!flipped ? (
+            <>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: "rgba(212,168,67,0.7)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Question</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(20), color: "#f5f0e8", lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>{card.q}</p>
+              <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 6 }}>
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.45)", fontStyle: "italic" }}>Tap to reveal answer</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Answer</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18.5), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px", fontStyle: "italic" }}>{card.a}</p>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.crimson, letterSpacing: "0.06em" }}>{card.ref}</div>
+            </>
+          )}
+        </div>
+
+        {/* Note / explanation toggle */}
+        {flipped && (
+          <div style={{ marginTop: 12 }}>
+            <button onClick={() => setShowNote(n => !n)} style={{ background: "none", border: "none", cursor: "pointer", padding: "6px 0", display: "flex", alignItems: "center", gap: 6 }}>
+              <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>{showNote ? "▴ Hide Note" : "▾ Why does this matter?"}</span>
+            </button>
+            {showNote && (
+              <div style={{ padding: "12px 16px", background: T.goldFaint, borderRadius: 10, border: `1px solid rgba(212,168,67,0.2)`, marginTop: 4 }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{card.note}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div style={{ flex: 1 }} />
+
+        {/* Question again (above buttons) */}
+        {flipped && (
+          <div style={{ marginBottom: 10, padding: "10px 14px", background: T.subtleBg, borderRadius: 10 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.inkLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Question</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>{card.q}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Action buttons */}
+      <div style={{ padding: "10px 20px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, flexShrink: 0 }}>
+        {!flipped ? (
+          <CrimsonBtn onClick={() => setFlipped(true)}>Reveal Answer</CrimsonBtn>
+        ) : (
+          <div style={{ display: "flex", gap: 10 }}>
+            <div style={{ flex: 1 }}>
+              <button onClick={handleReview} style={{
+                width: "100%", padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
+                color: T.inkDark, background: T.warmWhite,
+                border: `1.5px solid rgba(26,39,68,0.2)`, borderRadius: 10, cursor: "pointer",
+              }}>Review Again</button>
+            </div>
+            <div style={{ flex: 1 }}>
+              <button onClick={handleGot} style={{
+                width: "100%", padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
+                color: T.warmWhite,
+                background: `linear-gradient(135deg, #2a6b3a, #3a8a4e)`,
+                border: "none", borderRadius: 10, cursor: "pointer",
+                boxShadow: "0 3px 12px rgba(42,107,58,0.3)",
+              }}>Got It ✓</button>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+
+// ═══════════════════════════════════════════════════════════════════
+const HOURS = [
+  {
+    id: "lauds",
+    name: "Lauds",
+    latin: "Laudes",
+    label: "Morning Prayer",
+    time: "Dawn · 5–7 AM",
+    timeRange: [5, 7],
+    icon: "🌅",
+    color: "#c4880a",
+    desc: "The Church's morning hymn of praise at the rising of the sun",
+    opening: {
+      versicle: "O Lord, open my lips.",
+      response: "And my mouth shall proclaim Thy praise.",
+    },
+    hymn: {
+      title: "Iam lucis orto sidere",
+      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.",
+      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.",
+      note: "Traditional Lauds hymn, rendered in Ambrosian meter",
+    },
+    psalm: {
+      ref: "Psalm 62 (63)",
+      title: "O God, Thou art my God",
+      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands.",
+      ref2: "Ps 62:2–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Lamentations 3:22–23",
+      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.",
+    },
+    canticle: {
+      title: "Benedictus",
+      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. Through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.",
+      ref: "Luke 1:68–69, 78–79 (Douay-Rheims)",
+    },
+    prayer: "Grant us, O Lord, to begin this day with holy fear, to pass it in holy service, and to end it in Thy love; through Jesus Christ our Lord. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "prime",
+    name: "Prime",
+    latin: "Prima hora",
+    label: "First Hour",
+    time: "Sunrise · 6 AM",
+    timeRange: [6, 9],
+    icon: "🌤",
+    color: "#1a2744",
+    desc: "The first prayer of the day offering work and waking hours to God",
+    opening: {
+      versicle: "O Lord, open my lips.",
+      response: "And my mouth shall proclaim Thy praise.",
+    },
+    hymn: {
+      title: "Iam surgit hora tertia",
+      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.",
+      english: "The hour of Prime now bids us rise,\nAnd lift our morning sacrifice;\nLet no vain thought our hearts possess,\nBut fasting, holy watchfulness.",
+      note: "Traditional Prime hymn",
+    },
+    psalm: {
+      ref: "Psalm 5",
+      title: "Give ear, O Lord, to my words",
+      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity.",
+      ref2: "Ps 5:2–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Isaiah 33:2",
+      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.",
+    },
+    canticle: null,
+    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "terce",
+    name: "Terce",
+    latin: "Hora tertia",
+    label: "Mid-Morning Prayer",
+    time: "Mid-Morning · 9 AM",
+    timeRange: [9, 11],
+    icon: "☀",
+    color: "#b87a10",
+    desc: "Prayer at the third hour, when the Holy Ghost descended at Pentecost",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Nunc Sancte nobis Spiritus",
+      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.",
+      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.",
+      note: "Attributed to St. Ambrose; traditional Terce hymn",
+    },
+    psalm: {
+      ref: "Psalm 118 (119):33–40",
+      title: "Set before me for a law",
+      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way.",
+      ref2: "Ps 118:33–37 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Acts 2:1–4",
+      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.",
+    },
+    canticle: null,
+    prayer: "Lord God, Whose only-begotten Son, at this hour, hung upon the Cross for us: grant us grace to persevere in good works, to carry our daily cross patiently, and to offer all our labors for Thy greater glory. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "sext",
+    name: "Sext",
+    latin: "Hora sexta",
+    label: "Midday Prayer",
+    time: "Noon · 12 PM",
+    timeRange: [11, 14],
+    icon: "🌞",
+    color: "#7a1c1c",
+    desc: "The sixth hour, when our Lord was nailed to the Cross",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Rector potens, verax Deus",
+      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.",
+      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day.",
+      note: "Traditional Sext hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 118 (119):97–104",
+      title: "O how have I loved Thy law",
+      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth.",
+      ref2: "Ps 118:97–103 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "John 4:34",
+      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.",
+    },
+    canticle: null,
+    prayer: "Almighty and eternal God, Who in the mystery of the Incarnation didst consecrate this noon hour with the presence of Thy only-begotten Son: grant us to persevere to midday in virtue, and so to finish well all the work of this day, to Thy glory. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "none",
+    name: "None",
+    latin: "Hora nona",
+    label: "Afternoon Prayer",
+    time: "Afternoon · 3 PM",
+    timeRange: [14, 17],
+    icon: "🌤",
+    color: "#1a2744",
+    desc: "The ninth hour, the hour of Christ's death on the Cross",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Rerum Deus tenax vigor",
+      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.",
+      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nBright light of day's declining hours,\nUntouched by age or time's swift powers.",
+      note: "Traditional None hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 90 (91)",
+      title: "He that dwelleth in the aid of the most High",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. For He hath delivered me from the snare of the hunters: and from the sharp word. He will overshadow thee with His shoulders: and under His wings thou shalt trust. His truth shall compass thee with a shield.",
+      ref2: "Ps 90:1–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Matthew 27:45–46",
+      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me?",
+    },
+    canticle: null,
+    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head and give up the ghost for our sins: deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "vespers",
+    name: "Vespers",
+    latin: "Vesperae",
+    label: "Evening Prayer",
+    time: "Evening · 6 PM",
+    timeRange: [17, 21],
+    icon: "🌆",
+    color: "#7a1c1c",
+    desc: "The crown of the day — the Church's evening sacrifice of praise",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Lucis Creator optime",
+      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.",
+      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all.",
+      note: "Traditional Vespers hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 140 (141):1–4",
+      title: "Let my prayer be directed",
+      text: "Lord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.",
+      ref2: "Ps 140:1–4 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "1 Peter 5:8–9",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.",
+    },
+    canticle: {
+      title: "Magnificat",
+      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him.",
+      ref: "Luke 1:46–50 (Douay-Rheims)",
+    },
+    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits this day. Pardon our failures, protect us through the night, and grant that in Thy mercy we may rise again to praise Thee. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "compline",
+    name: "Compline",
+    latin: "Completorium",
+    label: "Night Prayer",
+    time: "Before Sleep · 9 PM",
+    timeRange: [21, 24],
+    icon: "🌙",
+    color: "#1a2744",
+    desc: "The last prayer of the day — surrendering to God's care through the night",
+    opening: {
+      versicle: "Convert us, O God our Saviour.",
+      response: "And turn away Thy anger from us.",
+    },
+    hymn: {
+      title: "Te lucis ante terminum",
+      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.",
+      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.",
+      note: "Traditional Compline hymn; one of the most ancient in the Office",
+    },
+    psalm: {
+      ref: "Psalm 90 (91):1–6, 10–11",
+      title: "Under the protection of the most High",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways.",
+      ref2: "Ps 90:1–2, 5–6, 10–11 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "1 Peter 5:8–9",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.",
+    },
+    canticle: {
+      title: "Nunc dimittis",
+      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.",
+      ref: "Luke 2:29–32 (Douay-Rheims)",
+    },
+    antiphon: {
+      title: "Salve Regina",
+      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+    },
+    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore. Amen.",
+    closing: {
+      versicle: "May the almighty and merciful Lord grant us a quiet night and a perfect end.",
+      response: "Amen.",
+    },
+  },
+];
+
+function getDefaultHour() {
+  const h = new Date().getHours();
+  if (h >= 21 || h < 5) return "compline";
+  if (h < 7) return "lauds";
+  if (h < 9) return "prime";
+  if (h < 11) return "terce";
+  if (h < 14) return "sext";
+  if (h < 17) return "none";
+  if (h < 21) return "vespers";
+  return "compline";
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// LITURGY OF THE HOURS COMPONENT
+// ═══════════════════════════════════════════════════════════════════
+function LiturgyTab({ goHome }) {
+  const [view, setView] = useState("selector"); // "selector" | "prayer"
+  const [selectedId, setSelectedId] = useState(getDefaultHour());
+  const [step, setStep] = useState(0);
+  const [fade, setFade] = useState(true);
+  const scrollRef = useRef(null);
+
+  const hour = HOURS.find(h => h.id === selectedId);
+
+  // Build steps for this hour
+  const buildSteps = (h) => {
+    const steps = [];
+    steps.push({ type: "opening", label: "Opening Versicle" });
+    steps.push({ type: "hymn", label: "Hymn" });
+    steps.push({ type: "psalm", label: h.psalm.ref });
+    steps.push({ type: "reading", label: "Scripture Reading" });
+    if (h.canticle) steps.push({ type: "canticle", label: h.canticle.title });
+    if (h.antiphon) steps.push({ type: "antiphon", label: h.antiphon.title });
+    steps.push({ type: "prayer", label: "Closing Prayer" });
+    steps.push({ type: "closing", label: "Dismissal" });
+    return steps;
+  };
+
+  const steps = buildSteps(hour);
+  const currentStep = steps[step];
+
+  const advance = () => {
+    if (step < steps.length - 1) {
+      setFade(false);
+      setTimeout(() => { setStep(s => s + 1); setFade(true); scrollRef.current?.scrollTo(0, 0); }, 180);
+    } else {
+      setView("complete");
+    }
+  };
+
+  const back = () => {
+    if (step > 0) {
+      setFade(false);
+      setTimeout(() => { setStep(s => s - 1); setFade(true); scrollRef.current?.scrollTo(0, 0); }, 180);
+    } else {
+      setView("selector");
+    }
+  };
+
+  const startHour = (id) => {
+    setSelectedId(id);
+    setStep(0);
+    setFade(true);
+    setView("prayer");
+  };
+
+  // ── Selector view ──
+  if (view === "selector") {
+    const suggestedId = getDefaultHour();
+    return (
+      <>
+        <TopBar title="Liturgy of the Hours" showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 20 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>📖</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Divine Office</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5 }}>Sanctifying the hours of the day</p>
+          </div>
+
+          {/* Suggested hour */}
+          <div style={{ marginBottom: 14 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Suggested for Now</div>
+            {HOURS.filter(h => h.id === suggestedId).map(h => (
+              <button key={h.id} onClick={() => startHour(h.id)} style={{
+                width: "100%", display: "flex", alignItems: "center", gap: 14,
+                padding: "16px 18px",
+                background: `linear-gradient(135deg, ${h.color}, ${h.color}cc)`,
+                border: `2px solid rgba(212,168,67,0.4)`, borderRadius: 14,
+                cursor: "pointer", textAlign: "left", boxShadow: "0 4px 18px rgba(212,168,67,0.15)",
+              }}>
+                <div style={{ fontSize: fz(28), width: 44, textAlign: "center", flexShrink: 0 }}>{h.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(15), fontWeight: 700, color: "#d4a843", letterSpacing: "0.04em" }}>{h.name} — {h.label}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.75)", fontStyle: "italic", marginTop: 3 }}>{h.time}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.55)", marginTop: 3 }}>{h.desc}</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: 20 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          {/* All hours */}
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>All Hours</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {HOURS.map(h => (
+              <button key={h.id} onClick={() => startHour(h.id)} style={{
+                display: "flex", alignItems: "center", gap: 14,
+                padding: "13px 16px",
+                background: h.id === suggestedId ? T.goldFaint : T.warmWhite,
+                border: `1px solid ${h.id === suggestedId ? "rgba(212,168,67,0.35)" : T.cardBorder}`,
+                borderRadius: 12, cursor: "pointer", textAlign: "left",
+              }}>
+                <div style={{ fontSize: fz(20), width: 32, textAlign: "center", flexShrink: 0 }}>{h.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em" }}>{h.name} <span style={{ fontWeight: 400, color: T.inkLight }}>· {h.label}</span></div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{h.time}</div>
+                </div>
+                {h.id === suggestedId && <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.gold, fontStyle: "italic" }}>now</span>}
+                <span style={{ color: T.inkLight, fontSize: 16 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 20, padding: "14px 16px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
+              The Liturgy of the Hours sanctifies each part of the day, uniting the faithful to the prayer of the universal Church. "Seven times a day I have given praise to Thee." — Psalm 118:164 (Douay-Rheims)
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Complete view ──
+  if (view === "complete") {
+    return (
+      <>
+        <TopBar title={`${hour.name} Complete`} showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.3)", marginBottom: 12 }}>
+              <span style={{ fontSize: fz(28) }}>{hour.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 6px" }}>{hour.name} · {hour.label}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.gold, margin: 0 }}>Let us bless the Lord. Thanks be to God.</p>
+          </div>
+          <Card style={{ marginBottom: 16, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+              "Seven times a day I have given praise to Thee: for the judgments of Thy justice." — Psalm 118:164
+            </p>
+          </Card>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <CrimsonBtn onClick={() => { setStep(0); setView("prayer"); }}>Pray Again</CrimsonBtn>
+            <NavyBtn onClick={() => setView("selector")}>Choose Another Hour</NavyBtn>
+            <GhostBtn onClick={goHome}>Return to Prayer</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Prayer view ──
+  const renderStepContent = () => {
+    switch (currentStep.type) {
+      case "opening":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Opening</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 22px" }}>Opening Versicle</h2>
+            <Card style={{ marginBottom: 14 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣ Versicle</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.versicle}</p>
+                </div>
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟ Response</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.response}</p>
+                </div>
+              </div>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 12 }}>Take a moment to still yourself and enter into God's presence.</p>
+          </div>
+        );
+
+      case "hymn":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Hymn</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 20px" }}>{hour.hymn.title}</h2>
+            <Card style={{ marginBottom: 14 }}>
+              <CardTitle>Latin</CardTitle>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkMid, lineHeight: 1.75, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.hymn.latin}</p>
+            </Card>
+            <Card>
+              <CardTitle>English</CardTitle>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-line" }}>{hour.hymn.english}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: "10px 0 0" }}>{hour.hymn.note}</p>
+            </Card>
+          </div>
+        );
+
+      case "psalm":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Psalmody</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.psalm.ref}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.gold, fontStyle: "italic", margin: "0 0 18px" }}>{hour.psalm.title}</p>
+            <Card style={{ marginBottom: 10 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{hour.psalm.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.psalm.ref2}</p>
+          </div>
+        );
+
+      case "reading":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Scripture Reading</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.reading.ref}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.gold}`, marginBottom: 14 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.reading.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center" }}>Pause. Receive the word. Let it rest in your heart.</p>
+          </div>
+        );
+
+      case "canticle":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Canticle</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.canticle.title}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.crimson}`, marginBottom: 10 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.canticle.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.canticle.ref}</p>
+          </div>
+        );
+
+      case "antiphon":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Marian Antiphon</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.antiphon.title}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.crimson}` }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.antiphon.text}</p>
+            </Card>
+          </div>
+        );
+
+      case "prayer":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Closing Prayer</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>Collect</h2>
+            <Card style={{ borderLeft: `3px solid ${T.navy}` }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.prayer}</p>
+            </Card>
+          </div>
+        );
+
+      case "closing":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Dismissal</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 22px" }}>Closing Versicle</h2>
+            <Card>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.versicle}</p>
+                </div>
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.response}</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <>
+      <TopBar title={`${hour.name} · ${hour.label}`} showBack={true} onBack={back} />
+      {/* Progress bar */}
+      <div style={{ display: "flex", gap: 4, padding: "10px 20px 6px", background: T.warmWhite }}>
+        {steps.map((s2, i) => (
+          <div key={i} style={{
+            flex: 1, height: 3, borderRadius: 2,
+            background: i <= step ? T.gold : "rgba(212,168,67,0.2)",
+            opacity: i < step ? 0.5 : 1,
+            transition: "all 0.4s",
+          }} />
+        ))}
+      </div>
+      <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "16px 22px 20px", opacity: fade ? 1 : 0, transform: fade ? "translateY(0)" : "translateY(8px)", transition: "all 0.3s ease" }}>
+        {renderStepContent()}
+      </div>
+      <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
+        {step > 0 && <div style={{ flex: 1 }}><GhostBtn onClick={back}>‹ Back</GhostBtn></div>}
+        <div style={{ flex: step > 0 ? 2 : 1 }}>
+          {step < steps.length - 1
+            ? <CrimsonBtn onClick={advance}>{step === 0 ? "Begin ›" : "Continue ›"}</CrimsonBtn>
+            : <NavyBtn onClick={advance}>Finish Hour ✓</NavyBtn>
+          }
+        </div>
+      </div>
+    </>
+  );
+}
+
 function PrayHub({ onTab }) {
   const items = [
     { id: "examen", icon: "🕯", title: "Daily Examen", desc: "Ignatian five-movement prayer to review your day with God", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "rosary", icon: "📿", title: "Holy Rosary", desc: "Joyful · Sorrowful · Glorious mysteries, bead by bead", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
     { id: "stations", icon: "✝", title: "Stations of the Cross", desc: "Via Crucis — three devotional versions with illustrations", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "confession", icon: "⚖", title: "Confession Preparation", desc: "Examination of conscience by the Ten Commandments", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
+    { id: "liturgy", icon: "📖", title: "Liturgy of the Hours", desc: "Lauds · Terce · Sext · None · Vespers · Compline", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
+    { id: "drill", icon: "📕", title: "Catechism Drill", desc: "Baltimore Catechism flashcards — Question & Answer", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
   ];
 
   return (
@@ -4178,6 +5189,20 @@ export default function Custos() {
       {tab === "rosary" && (
         <>
           <RosaryTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "liturgy" && (
+        <>
+          <LiturgyTab goHome={() => setTab("pray")} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "drill" && (
+        <>
+          <CatechismDrillTab goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
