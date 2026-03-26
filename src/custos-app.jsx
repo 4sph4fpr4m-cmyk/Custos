@@ -88,13 +88,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - The Catechism of Pope St. Pius X (cite by part and question number)
    - The 1992 Catechism of the Catholic Church may be cited as supplementary only (cite as CCC §NNNN), and must not contradict or override the Baltimore, Roman, or Pius X Catechisms
 
-3. CHURCH COUNCILS — in descending order of doctrinal authority:
-   - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority; its definitions are irreformable
-   - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility; Dei Filius on faith and reason)
-   - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
-   - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
-
-4. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
+3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
    - Mirari Vos (Gregory XVI, 1832) — against indifferentism and religious liberty errors
    - Quanta Cura and the Syllabus of Errors (Pius IX, 1864) — condemned modernist propositions
    - Aeterni Patris (Leo XIII, 1879) — on the restoration of Thomistic philosophy
@@ -123,18 +117,24 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Summorum Pontificum (Benedict XVI, 2007) — on the use of the Roman Liturgy prior to the reform of 1970 (the Traditional Latin Mass)
    - Omnium in Mentem (Benedict XVI, 2009) — amended Canon Law on marriage and canonical form, removing the formal defection exemption
 
-5. CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
+   CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
    These three documents were formally approved by the reigning Pope in forma specifica, meaning the Pope made them his own and they carry the weight of his proper magisterium, not merely the CDF's delegated authority.
    - Persona Humana (CDF, approved in forma specifica by Paul VI, 1975) — on sexual ethics: fornication, homosexuality, masturbation; the most authoritative pre-existing treatment of sexual morality from this period
    - Inter Insigniores (CDF, approved in forma specifica by Paul VI, 1976) — on the question of the admission of women to the ministerial priesthood; definitively ruled out women's ordination before Ordinatio Sacerdotalis
    - Dominus Iesus (CDF, approved in forma specifica by John Paul II, 2000) — on the unicity and salvific universality of Jesus Christ and the Church; essential for apologetics and ecumenical questions
 
-6. CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
+   CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
    These two documents were approved by the reigning Pope in the ordinary common form. They carry real but delegated authority — they are the CDF teaching with the Pope's general approval, not the Pope teaching in his own name. They are retained because no encyclical fills the bioethical gap they address.
    - Donum Vitae (CDF, approved in common form by John Paul II, 1987) — on respect for human life and the dignity of procreation; IVF, artificial insemination, embryo research
    - Dignitas Personae (CDF, approved in common form by Benedict XVI, 2008) — on certain bioethical questions including embryo adoption, stem cell research, cloning
 
-7. THE DOCTORS OF THE CHURCH — only these fifteen:
+4. CHURCH COUNCILS
+   - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
+   - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
+   - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority
+   - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility)
+
+5. THE DOCTORS OF THE CHURCH — only these fifteen:
    - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N; Summa Contra Gentiles for arguments addressed to non-believers and those using natural reason alone)
    - St. Augustine of Hippo (Confessions, City of God, De Trinitate)
    - St. Alphonsus Liguori (Moral Theology, The Practice of the Love of Jesus Christ)
@@ -151,7 +151,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - St. Ambrose of Milan (On the Duties of the Clergy, On the Mysteries, On Repentance)
    - St. Thérèse of Lisieux (Story of a Soul, Letters, Last Conversations)
 
-8. CANON LAW
+6. CANON LAW
    - 1917 Code of Canon Law (cite as 1917 Can. NNN) — the law of the Church from 1917 until 1983
    - 1983 Code of Canon Law (cite as Can. NNN) — the current law of the Church
    When a question touches canon law, you MUST cite BOTH codes and explicitly identify what changed. Do not merely cite the 1983 Code alone. Show: (a) what the 1917 Code required, (b) what the 1983 Code now requires, and (c) whether the change was a relaxation, tightening, or reformulation of the discipline. Key areas where the codes differ and which you must flag when relevant: Eucharistic fast (1917 Can. 858: midnight fast vs. Can. 919: one hour), Friday abstinence (1917 Can. 1252: obligatory every Friday vs. Can. 1253: bishops' conferences may substitute), mixed marriages (1917 Can. 1060–1064 vs. Can. 1124–1129: conditions loosened), excommunication latae sententiae (many 1917 automatic excommunications were removed in 1983), age of Confirmation (1917 Can. 788: around age 7 vs. Can. 891: bishops may set later age), Sunday obligation (substantially unchanged: 1917 Can. 1248 vs. Can. 1247), impediments to marriage (several 1917 impediments removed or modified in 1983).
@@ -163,7 +163,7 @@ SUBSEQUENT DOCUMENTS THAT DEPART FROM TRADITION — GENERAL RULE: Where document
 EXCLUSION FENCE — COMPREHENSIVE
 The following is a complete exclusion fence. You must NOT cite, reference, quote, rely on, or draw from ANY source not explicitly named above. This includes but is not limited to:
 
-BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Sections 5 and 6 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
+BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Section 3 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
 
 BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list entirely. Do NOT cite, reference, paraphrase, or rely on any of the following — not even to "supplement" or "contextualize" an approved source:
    - Sacrosanctum Concilium (Constitution on the Sacred Liturgy, 1963)
@@ -184,13 +184,13 @@ BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list en
    - Gravissimum Educationis (Declaration on Christian Education, 1965)
    Do not use phrases like "Vatican II taught," "the Council Fathers said," or "in the spirit of the Council." If a question specifically asks about Vatican II, you may note that these documents exist but you may not cite their content as authoritative within Custos's source framework.
 
-BANNED PAPAL DOCUMENTS: The ONLY papal documents permitted are the 21 encyclicals, 4 motu proprio, and 5 CDF instructions explicitly named in Sections 4, 5, and 6 above. ALL other papal documents are excluded — encyclicals, apostolic exhortations, apostolic letters, apostolic constitutions, and any other form — regardless of their subject matter or apparent relevance. This includes but is not limited to Amoris Laetitia, Laudato Si', Fratelli Tutti, Lumen Fidei, Evangelii Gaudium, Redemptor Hominis, Laborem Exercens, Centesimus Annus, Sollicitudo Rei Socialis, Ut Unum Sint, Ecclesia de Eucharistia, Spe Salvi, Caritas in Veritate, Traditionis Custodes, Redemptoris Missio, Mulieris Dignitatem, Ordinatio Sacerdotalis, Sacramentum Caritatis, Verbum Domini, Ecclesia in Europa, and any other papal document not on the approved list. If a papal document exists that would answer the question but is not on the approved list, state that the question exceeds Custos's source library.
+BANNED PAPAL DOCUMENTS: The ONLY papal documents permitted are the 22 encyclicals/CDF instructions and 4 motu proprio explicitly named in Section 3 above. ALL other papal documents are excluded — encyclicals, apostolic exhortations, apostolic letters, apostolic constitutions, and any other form — regardless of their subject matter or apparent relevance. This includes but is not limited to Amoris Laetitia, Laudato Si', Fratelli Tutti, Lumen Fidei, Evangelii Gaudium, Redemptor Hominis, Laborem Exercens, Centesimus Annus, Sollicitudo Rei Socialis, Ut Unum Sint, Ecclesia de Eucharistia, Spe Salvi, Caritas in Veritate, Traditionis Custodes, Redemptoris Missio, Mulieris Dignitatem, Ordinatio Sacerdotalis, Sacramentum Caritatis, Verbum Domini, Ecclesia in Europa, and any other papal document not on the approved list. If a papal document exists that would answer the question but is not on the approved list, state that the question exceeds Custos's source library.
 
 BANNED INFORMAL PAPAL STATEMENTS: No papal audiences, homilies, Wednesday catecheses, Angelus addresses, in-flight press conferences, private letters, interviews, or off-the-cuff remarks may be cited — regardless of the pope. Only formal magisterial documents on the approved list carry weight in Custos.
 
-BANNED THEOLOGIANS: The ONLY theological authorities permitted are the fifteen Doctors of the Church named in Section 7 above. ALL other theologians are excluded — modern, medieval, or ancient — regardless of their orthodoxy or reputation. This includes but is not limited to Karl Rahner, Hans Urs von Balthasar, Germain Grisez, John Finnis, Garrigou-Lagrange, Henri de Lubac, Yves Congar, Hans Küng, Charles Curran, Dietrich von Hildebrand, Josef Pieper, Romano Guardini, Ludwig Ott, and any other theologian not on the fifteen-Doctor list. If a theological argument is sound, make it from the approved Doctors and sources — not by citing any other theologian.
+BANNED THEOLOGIANS: The ONLY theological authorities permitted are the fifteen Doctors of the Church named in Section 5 above. ALL other theologians are excluded — modern, medieval, or ancient — regardless of their orthodoxy or reputation. This includes but is not limited to Karl Rahner, Hans Urs von Balthasar, Germain Grisez, John Finnis, Garrigou-Lagrange, Henri de Lubac, Yves Congar, Hans Küng, Charles Curran, Dietrich von Hildebrand, Josef Pieper, Romano Guardini, Ludwig Ott, and any other theologian not on the fifteen-Doctor list. If a theological argument is sound, make it from the approved Doctors and sources — not by citing any other theologian.
 
-BANNED SAINTS WHO ARE NOT DOCTORS: The ONLY saints whose writings may be cited as moral authority in guidance responses are the fifteen Doctors named in Section 7. ALL other saints are excluded as sources, regardless of their holiness or popularity. This includes but is not limited to Padre Pio, Maximilian Kolbe, Josemaría Escrivá, Faustina Kowalska, John Henry Newman, Louis de Montfort, Ignatius of Loyola, John Bosco, Edith Stein, and any other saint or blessed not on the fifteen-Doctor list. (Exception: saints may appear in the Saint of the Day feature, but their writings may not be cited as moral authority in guidance responses.)
+BANNED SAINTS WHO ARE NOT DOCTORS: The ONLY saints whose writings may be cited as moral authority in guidance responses are the fifteen Doctors named in Section 5. ALL other saints are excluded as sources, regardless of their holiness or popularity. This includes but is not limited to Padre Pio, Maximilian Kolbe, Josemaría Escrivá, Faustina Kowalska, John Henry Newman, Louis de Montfort, Ignatius of Loyola, John Bosco, Edith Stein, and any other saint or blessed not on the fifteen-Doctor list. (Exception: saints may appear in the Saint of the Day feature, but their writings may not be cited as moral authority in guidance responses.)
 
 BANNED VAGUE AUTHORITY: NEVER use phrases like "Church tradition holds," "the constant teaching of the Church is," "it has always been understood that," or "Catholic moral theology teaches" without citing a SPECIFIC document from the approved list. Every doctrinal claim must be traceable to a named source. If you cannot name the source, do not make the claim.
 
@@ -516,6 +516,8 @@ const DOCTORS = [
 ];
 
 const ACT_OF_CONTRITION = "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen.";
+
+const ACT_OF_CONTRITION_CHILD = "O my God, I am sorry for all my sins. I know I have not been kind and good the way You want me to be. I am sorry because You love me so much and I want to love You back. Please forgive me, and help me to be good. Amen.";
 
 // ═══════════════════════════════════════════════════════════════════
 // STATIONS OF THE CROSS — DATA
@@ -2109,7 +2111,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         </div>
       )}
       {view === "sources" && (
-        <div ref={el => { if (el) el.scrollTop = 0; }} style={{ flex: 1, overflowY: "auto" }}>
+        <div style={{ flex: 1, overflowY: "auto" }}>
           <TopBar title="Our Sources" showBack={true} onBack={() => setView("home")} />
           <div style={{ padding: "14px 20px 30px" }}>
             <div style={{ textAlign: "center", marginBottom: 18 }}>
@@ -2135,17 +2137,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "The Catechism of the Council of Trent (Roman Catechism)" },
                   { text: "The Catechism of Pope St. Pius X" },
                   { text: "Catechism of the Catholic Church (1992) — supplementary only; may not override the older catechisms" },
-                ]
-              },
-              {
-                label: "Church Councils",
-                count: "4",
-                note: "Dogmatic conciliar decrees — particularly those of Trent and Vatican I — represent the highest binding authority in the source universe.",
-                items: [
-                  { text: "Council of Trent — dogmatic canons and decrees; highest conciliar authority" },
-                  { text: "Vatican I — Pastor Aeternus on papal infallibility; Dei Filius on faith and reason" },
-                  { text: "Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession, marriage impediments" },
-                  { text: "Council of Florence (1438–1445) — defined the seven sacraments, extra ecclesiam nulla salus" },
                 ]
               },
               {
@@ -2205,24 +2196,24 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 ]
               },
               {
+                label: "Church Councils",
+                count: "4",
+                items: [
+                  { text: "Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments" },
+                  { text: "Council of Florence (1438–1445) — seven sacraments, extra ecclesiam nulla salus" },
+                  { text: "Council of Trent — dogmatic canons and decrees, highest conciliar authority" },
+                  { text: "Vatican I — Pastor Aeternus on papal infallibility" },
+                ]
+              },
+              {
                 label: "Doctors of the Church",
                 count: "15",
                 items: [
-                  { text: "St. Thomas Aquinas — The Angelic Doctor; Summa Theologiae, Summa Contra Gentiles" },
-                  { text: "St. Augustine of Hippo — Doctor of Grace; Confessions, City of God, De Trinitate" },
-                  { text: "St. Alphonsus Liguori — Patron of Moral Theologians; Moral Theology, The Practice of the Love of Jesus Christ" },
-                  { text: "St. Francis de Sales — The Gentleman Saint; Introduction to the Devout Life, Treatise on the Love of God" },
-                  { text: "St. Teresa of Ávila — Doctor of Prayer; Interior Castle, Way of Perfection" },
-                  { text: "St. John of the Cross — The Mystical Doctor; Dark Night of the Soul, Ascent of Mount Carmel" },
-                  { text: "St. Catherine of Siena — The Mystic of Fire; Dialogue of Divine Providence" },
-                  { text: "St. Bonaventure — The Seraphic Doctor; The Mind's Road to God, Breviloquium" },
-                  { text: "St. Robert Bellarmine — The Hammer of Heretics; De Controversiis, The Art of Dying Well" },
-                  { text: "St. Jerome — The Greatest Doctor; Vulgate translation, Commentaries on Scripture, Letters" },
-                  { text: "St. John Chrysostom — The Golden Mouth; Homilies on Matthew, On Marriage and Family Life" },
-                  { text: "St. Gregory the Great — Doctor and Pope; Pastoral Care, Moralia in Job, Dialogues" },
-                  { text: "St. Bernard of Clairvaux — The Mellifluous Doctor; On Loving God, Sermons on the Song of Songs" },
-                  { text: "St. Ambrose of Milan — The Honey-Tongued Doctor; On the Duties of the Clergy, On Repentance" },
-                  { text: "St. Thérèse of Lisieux — The Little Flower; Story of a Soul, Letters, Last Conversations" },
+                  { text: "St. Thomas Aquinas · St. Augustine of Hippo · St. Alphonsus Liguori" },
+                  { text: "St. Francis de Sales · St. Teresa of Ávila · St. John of the Cross" },
+                  { text: "St. Catherine of Siena · St. Bonaventure · St. Robert Bellarmine" },
+                  { text: "St. Jerome · St. John Chrysostom · St. Gregory the Great" },
+                  { text: "St. Bernard of Clairvaux · St. Ambrose of Milan · St. Thérèse of Lisieux" },
                 ]
               },
               {
@@ -2264,7 +2255,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         </div>
       )}
       {view === "privacy" && (
-        <div ref={el => { if (el) el.scrollTop = 0; }} style={{ flex: 1, overflowY: "auto" }}>
+        <div style={{ flex: 1, overflowY: "auto" }}>
           <TopBar title="Your Privacy" showBack={true} onBack={() => setView("home")} />
           <div style={{ padding: "14px 20px 30px" }}>
             <div style={{ textAlign: "center", marginBottom: 18 }}>
@@ -2405,6 +2396,18 @@ function ConfessionTab() {
   useEffect(() => { setFade(false); setTimeout(() => setFade(true), 50); }, [cmdIdx]);
 
   const LIFE_STATE_QUESTIONS = {
+    child: { num: "✦", title: "A Child's Heart", cite: "\"Let the children come to me, for of such is the kingdom of heaven.\"", src: "Mt 19:14", questions: [
+      { text: "I disobeyed or was rude to my parents, grandparents, or teachers.", grave: false },
+      { text: "I was mean, unkind, or said hurtful things to a brother, sister, or friend.", grave: false },
+      { text: "I told a lie, even a small one.", grave: false },
+      { text: "I took something that wasn't mine, or didn't return something I borrowed.", grave: false },
+      { text: "I hit, kicked, or hurt someone on purpose.", grave: false },
+      { text: "I was selfish and didn't want to share or help.", grave: false },
+      { text: "I missed Mass on Sunday without a good reason.", grave: false },
+      { text: "I used God's name as a bad word or made fun of holy things.", grave: false },
+      { text: "I watched, played, or looked at things I knew were wrong.", grave: false },
+      { text: "I forgot to say my morning or night prayers for a long time.", grave: false },
+    ]},
     single: { num: "✦", title: "State in Life — Single", cite: "\"It is good for a man not to touch a woman.\"", src: "1 Cor 7:1", questions: [
       { text: "I failed to guard my chastity in thought, word, or deed.", grave: true },
       { text: "I wasted time in idleness or worldly amusements rather than growing in virtue.", grave: false },
@@ -2435,9 +2438,11 @@ function ConfessionTab() {
     ]},
   };
 
-  const examSteps = lifeState
-    ? [...COMMANDMENTS, LIFE_STATE_QUESTIONS[lifeState]]
-    : COMMANDMENTS;
+  const examSteps = lifeState === "child"
+    ? [LIFE_STATE_QUESTIONS["child"]]
+    : lifeState
+      ? [...COMMANDMENTS, LIFE_STATE_QUESTIONS[lifeState]]
+      : COMMANDMENTS;
 
   const cmd = examSteps[cmdIdx];
   const timeSince = daysSince < 7 ? `${daysSince} days` : daysSince < 30 ? `${Math.round(daysSince/7)} weeks` : `${Math.round(daysSince/30)} months`;
@@ -2466,7 +2471,10 @@ function ConfessionTab() {
         <div style={{ flex: 1, overflowY: "auto", padding: "20px 20px" }}>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>Opening Prayer</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Come, Holy Spirit, enlighten my heart to see what is sin in my life, give me the grace of true sorrow, and help me to resolve to amend my life. Amen."</p>
+            {lifeState === "child"
+              ? <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Dear Holy Spirit, please help me to remember my sins and to be sorry for them. Help me to make a good confession. Amen."</p>
+              : <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Come, Holy Spirit, enlighten my heart to see what is sin in my life, give me the grace of true sorrow, and help me to resolve to amend my life. Amen."</p>
+            }
           </Card>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
             <div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 2 }}>Last Confession</div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 600, color: T.navyText }}>{daysSince} <span style={{ fontSize: fz(13), fontWeight: 400, color: T.inkLight }}>days ago</span></div></div>
@@ -2475,6 +2483,7 @@ function ConfessionTab() {
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 10 }}>Your State in Life</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
               {[
+                { id: "child", icon: "🌟", label: "Child", sub: "Under 14" },
                 { id: "single", icon: "🙏", label: "Single", sub: "Unmarried adult" },
                 { id: "married", icon: "💍", label: "Married", sub: "Spouse, no children" },
                 { id: "parent", icon: "👨‍👩‍👧", label: "Parent", sub: "Raising children" },
@@ -2490,7 +2499,7 @@ function ConfessionTab() {
             {lifeState && (
               <div style={{ marginTop: 10, padding: "8px 12px", background: T.goldFaint, borderRadius: 8, border: `1px solid rgba(212,168,67,0.2)` }}>
                 <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>
-                  {lifeState === "single" && "The examination will include duties of chastity, use of time, charity toward others, and the obligations of single life."}
+                  {lifeState === "child" && "A gentle examination written just for children — simple questions about kindness, honesty, obedience, and love of God. With a child's Act of Contrition at the end."}
                   {lifeState === "married" && "The examination will include the duties of spouses: fidelity, conjugal love, openness to life, mutual respect, and the obligations of the married state."}
                   {lifeState === "parent" && "The examination will include the duties of spouses and parents: raising children in the Faith, example, discipline, care, and transmission of the faith."}
                   {lifeState === "consecrated" && "The examination will include the vows or promises of your state: obedience, chastity, poverty, prayer, and fidelity to your rule of life."}
@@ -2567,7 +2576,7 @@ function ConfessionTab() {
             {venialSins.map((s2,i) => <div key={i} style={{ borderLeft: `3px solid ${T.gold}`, paddingLeft: 14, background: T.warmWhite, padding: "8px 14px 8px 16px", borderRadius: "0 10px 10px 0", marginBottom: 6 }}><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.45, margin: 0 }}>{s2.text}</p></div>)}
           </div>}
           {mortalSins.length > 0 && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(212,168,67,0.08)", border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, display: "flex", gap: 8, alignItems: "center" }}><span style={{ fontSize: fz(14) }}>⚠️</span><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark }}>{mortalSins.length} mortal sin{mortalSins.length > 1 ? "s" : ""} — a priest's absolution is essential</span></div>}
-          <div style={{ padding: "18px 20px 0" }}><CrimsonBtn onClick={() => { setAbsolved(false); setShowPrayer(false); setView("confess"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Go to Confession ›</CrimsonBtn></div>
+          <div style={{ padding: "18px 20px 0" }}><CrimsonBtn onClick={() => { setAbsolved(false); setView("confess"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Go to Confession ›</CrimsonBtn></div>
         </div>
       )}
 
@@ -2575,9 +2584,12 @@ function ConfessionTab() {
         <div style={{ flex: 1, overflowY: "auto", padding: "20px 20px 30px" }}>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>When the Priest Is Ready</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkMid, margin: "0 0 10px" }}>Make the Sign of the Cross, then say:</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkMid, margin: "0 0 10px" }}>{lifeState === "child" ? "Make the Sign of the Cross, then say:" : "Make the Sign of the Cross, then say:"}</p>
             <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.7, padding: "12px 14px", background: T.parchment, borderRadius: 8, borderLeft: `3px solid ${T.navyText}` }}>
-              "Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"
+              {lifeState === "child"
+                ? <>"Bless me Father, for I have sinned. This is my <strong style={{ color: T.crimson }}>first confession</strong> <em style={{ color: T.inkLight, fontSize: fz(14) }}>(or: It has been {timeSince} since my last confession)</em>. These are my sins:"</>
+                : <>"Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"</>
+              }
             </div>
           </Card>
           {mortalSins.length > 0 && <div style={{ marginBottom: 14 }}>
@@ -2590,9 +2602,19 @@ function ConfessionTab() {
           </div>}
           <Card style={{ borderLeft: `3px solid ${T.navyText}`, marginBottom: 16 }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>After Listing Your Sins</div>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"For these and all the sins of my past life, I am truly sorry."</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>
+              {lifeState === "child"
+                ? "\"I am sorry for all my sins.\""
+                : "\"For these and all the sins of my past life, I am truly sorry.\""
+              }
+            </p>
           </Card>
-          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkMid, textAlign: "center", marginBottom: 16 }}>The priest may offer counsel and assign a penance, then ask for your Act of Contrition.</p>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkMid, textAlign: "center", marginBottom: 16 }}>
+            {lifeState === "child"
+              ? "The priest may give you a penance (like a prayer to say). Then he will ask for your Act of Contrition."
+              : "The priest may offer counsel and assign a penance, then ask for your Act of Contrition."
+            }
+          </p>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>Act of Contrition</CardTitle>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{ACT_OF_CONTRITION}</p>
@@ -3357,6 +3379,39 @@ const OB_INTERESTS = [
 // ═══════════════════════════════════════════════════════════════════
 function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy }) {
   const [saved, setSaved] = useState(false);
+  const [notifPerm, setNotifPerm] = useState(() => {
+    if (typeof Notification !== "undefined") return Notification.permission;
+    return "denied";
+  });
+  const [reminders, setReminders] = useState(() => {
+    try {
+      const stored = localStorage.getItem("custos_reminders");
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false };
+    } catch { return { prayer: false, confession: false, stations: false }; }
+  });
+
+  const saveReminders = (updated) => {
+    setReminders(updated);
+    try { localStorage.setItem("custos_reminders", JSON.stringify(updated)); } catch {}
+  };
+
+  const requestNotifPermission = async () => {
+    if (typeof Notification === "undefined") return;
+    const perm = await Notification.requestPermission();
+    setNotifPerm(perm);
+    return perm;
+  };
+
+  const toggleReminder = async (key) => {
+    const newVal = !reminders[key];
+    if (newVal && notifPerm !== "granted") {
+      const perm = await requestNotifPermission();
+      if (perm !== "granted") {
+        // Still save the preference; we'll show in-app indicator
+      }
+    }
+    saveReminders({ ...reminders, [key]: newVal });
+  };
 
   // Flash "saved" indicator on any change
   const prevRef = useRef(JSON.stringify({ dark, fszGlobal }));
@@ -3450,6 +3505,20 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
         </Section>
 
 
+        {/* ═══ REMINDERS ═══ */}
+        <Section title="Daily Reminders">
+          {notifPerm === "denied" && (reminders.prayer || reminders.confession || reminders.stations) && (
+            <div style={{ padding: "10px 16px", borderBottom: `1px solid ${T.cardBorder}`, background: T.goldFaint }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, fontStyle: "italic" }}>
+                Browser notifications are blocked. Reminders will appear as banners in the Today tab instead.
+              </p>
+            </div>
+          )}
+          <Row icon="🙏" label="Morning Prayer Reminder" right={<Toggle on={reminders.prayer} onToggle={() => toggleReminder("prayer")} />} />
+          <Row icon="⚖" label="Confession Reminder" right={<Toggle on={reminders.confession} onToggle={() => toggleReminder("confession")} />} />
+          <Row icon="✝" label="Stations of the Cross" last right={<Toggle on={reminders.stations} onToggle={() => toggleReminder("stations")} />} />
+        </Section>
+
         {/* ═══ ABOUT ═══ */}
         <Section title="About Custos">
           <Row icon="📖" label="Version 1.0 (Lent 2026)" right={
@@ -3482,6 +3551,198 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
 }
 
 // ═══════════════════════════════════════════════════════════════════
+// DAILY TRIVIA — Catholic history, theology, liturgy
+// ═══════════════════════════════════════════════════════════════════
+
+const TRIVIA_BANK = [
+  // ── HISTORY ──
+  { cat: "History", q: "In what year did the Council of Nicaea define the divinity of Christ against Arianism?", a: "325 AD", detail: "The First Council of Nicaea (325 AD) produced the Nicene Creed, declaring the Son 'consubstantial with the Father' — homoousios — against Arius, who taught the Son was a creature.", attr: "Council of Nicaea (325)", seasons: [] },
+  { cat: "History", q: "Which pope declared the dogma of the Immaculate Conception in 1854?", a: "Pope Pius IX", detail: "With the bull Ineffabilis Deus, Pius IX defined that the Blessed Virgin Mary was preserved from original sin from the first moment of her conception.", attr: "Ineffabilis Deus (1854)", seasons: [] },
+  { cat: "History", q: "What year did the Great Schism split Eastern and Western Christianity?", a: "1054 AD", detail: "Cardinal Humbert placed a bull of excommunication on the altar of Hagia Sophia on July 16, 1054, formalizing the split between Rome and Constantinople.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which ecumenical council defined the canon of Sacred Scripture?", a: "Council of Trent (1546)", detail: "Session IV of the Council of Trent formally defined the 73-book canon of Scripture, including the deuterocanonical books rejected by Protestants.", attr: "Council of Trent", seasons: [] },
+  { cat: "History", q: "What was the name of the edict that granted Christians legal status in the Roman Empire?", a: "Edict of Milan (313 AD)", detail: "Emperors Constantine I and Licinius issued the Edict of Milan, granting freedom of worship throughout the empire and ending the persecutions.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "In what century did St. Benedict write his Rule for monasteries?", a: "6th century (c. 530 AD)", detail: "The Rule of St. Benedict, written around 530 AD at Monte Cassino, became the foundation of Western monasticism and is still followed by Benedictines today.", attr: "Rule of St. Benedict", seasons: [] },
+  { cat: "History", q: "Which pope called the Second Vatican Council?", a: "Pope John XXIII", detail: "Pope John XXIII announced Vatican II on January 25, 1959. It opened in October 1962, though he died in June 1963 before its conclusion.", attr: "Vatican II", seasons: [] },
+  { cat: "History", q: "In what ancient city did St. Augustine of Hippo serve as bishop?", a: "Hippo Regius (modern Algeria)", detail: "Augustine served as Bishop of Hippo Regius in North Africa from 395 until his death in 430 AD as the Vandals besieged the city.", attr: "Life of St. Augustine", seasons: [] },
+  { cat: "History", q: "Which pope defined papal infallibility as a dogma?", a: "Pope Pius IX at Vatican I (1870)", detail: "The First Vatican Council defined papal infallibility in Pastor Aeternus (1870): the pope speaks infallibly ex cathedra on faith and morals.", attr: "Pastor Aeternus (1870)", seasons: [] },
+  { cat: "History", q: "What order did St. Dominic found to combat the Albigensian heresy?", a: "The Order of Preachers (Dominicans)", detail: "Dominic de Guzmán founded the Order of Preachers c. 1216, emphasizing preaching, study, and poverty to counter the Cathar heresy in southern France.", attr: "Dominican Order", seasons: [] },
+  { cat: "History", q: "In what year did Pope Urban II preach the First Crusade?", a: "1095 AD at the Council of Clermont", detail: "On November 27, 1095, Urban II called upon Christians to liberate Jerusalem, launching the First Crusade.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which empress convened the Second Council of Nicaea (787), restoring veneration of icons?", a: "Empress Irene of Byzantium", detail: "Irene acted as regent for her son Constantine VI and convened the Seventh Ecumenical Council, which condemned iconoclasm and restored veneration of sacred images.", attr: "Second Council of Nicaea", seasons: [] },
+  { cat: "History", q: "What heresy did the Council of Ephesus (431) condemn when it declared Mary 'Theotokos'?", a: "Nestorianism", detail: "Nestorius, Archbishop of Constantinople, denied Mary the title 'God-bearer' (Theotokos), effectively dividing Christ into two persons. The Council of Ephesus condemned this and defined Mary as Theotokos.", attr: "Council of Ephesus (431)", seasons: [] },
+  { cat: "History", q: "What was the Babylonian Captivity of the Church?", a: "The period 1309–1377 when popes resided in Avignon, France, instead of Rome", detail: "Clement V moved the papacy to Avignon under pressure from the French crown. Seven popes reigned there over 68 years. St. Catherine of Siena famously urged Gregory XI to return to Rome.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Who was the first pope, and what does the name 'Peter' mean?", a: "St. Peter (Simon bar Jonah); 'Peter' means 'Rock' in Greek (Petros)", detail: "Christ gave Simon the name Kepha/Petros — Rock — at Caesarea Philippi (Mt 16:18), promising to build His Church upon this rock.", attr: "Mt 16:18", seasons: [] },
+  { cat: "History", q: "In what year did Martin Luther post his Ninety-Five Theses?", a: "1517", detail: "On October 31, 1517, Luther reportedly posted his theses challenging indulgence practices on the door of the Castle Church in Wittenberg, sparking the Protestant Reformation.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "What was the Counter-Reformation council that defined Catholic doctrine against Protestant challenges?", a: "The Council of Trent (1545–1563)", detail: "The Council of Trent met in 25 sessions over 18 years, defining doctrines on Scripture, Tradition, justification, the sacraments, and the Mass — the theological backbone of the Catholic response to the Reformation.", attr: "Council of Trent", seasons: [] },
+  { cat: "History", q: "Which pope issued the encyclical Rerum Novarum (1891), the founding document of modern Catholic social teaching?", a: "Pope Leo XIII", detail: "Rerum Novarum addressed the condition of workers in industrial society, affirming the rights of labor, private property, just wages, and the duties of both employers and the state.", attr: "Rerum Novarum (1891)", seasons: [] },
+  { cat: "History", q: "In what century did St. Patrick evangelize Ireland?", a: "5th century (c. 432 AD)", detail: "Patrick, a Romano-British Christian who had been enslaved in Ireland as a youth, returned as a missionary bishop around 432 AD and evangelized the Irish over some 30 years.", attr: "Life of St. Patrick", seasons: [] },
+  { cat: "History", q: "What is Papal Infallibility, and how many times has it been formally invoked?", a: "The pope is preserved from error when speaking ex cathedra on faith and morals; invoked formally twice: 1854 (Immaculate Conception) and 1950 (Assumption)", detail: "The dogma was defined at Vatican I (1870). It was exercised ex cathedra by Pius IX in 1854 and Pius XII in 1950 for the Assumption of Mary.", attr: "Pastor Aeternus (1870)", seasons: [] },
+  { cat: "History", q: "Which 4th-century bishop single-handedly defended Nicene orthodoxy against an Arian majority?", a: "St. Athanasius of Alexandria", detail: "Athanasius was exiled five times for defending the Nicene definition against Arian emperors and bishops. His tenacity earned the phrase 'Athanasius contra mundum' — Athanasius against the world.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "What apparition did Our Lady appear in 1917, requesting the Rosary and the consecration of Russia?", a: "Fatima, Portugal", detail: "The Virgin Mary appeared to Lucia, Francisco, and Jacinta from May to October 1917, revealing three secrets and requesting prayer, penance, and the consecration of Russia to her Immaculate Heart.", attr: "Fatima (1917)", seasons: [] },
+  { cat: "History", q: "In what century was the Summa Theologiae of St. Thomas Aquinas written?", a: "13th century (c. 1265–1274)", detail: "Aquinas began the Summa around 1265 and left it unfinished at his death in 1274, famously declaring after a mystical experience that all he had written seemed 'like straw.'", attr: "St. Thomas Aquinas", seasons: [] },
+  { cat: "History", q: "What did Emperor Theodosius I declare in the Edict of Thessalonica (380 AD)?", a: "Nicene Christianity the official religion of the Roman Empire", detail: "The edict declared that all peoples of the empire should hold to the Nicene faith of the bishops of Rome and Alexandria, effectively establishing Catholicism as the state religion.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Who wrote the Confessions, the first great spiritual autobiography in history?", a: "St. Augustine of Hippo", detail: "Written c. 397–400 AD, the Confessions traces Augustine's journey from paganism through Manichaeism to baptism, opening with the famous line: 'Our hearts are restless until they rest in Thee.'", attr: "St. Augustine, Confessions", seasons: [] },
+  { cat: "History", q: "The Franciscan Order was founded by St. Francis of Assisi. In what year was it formally approved?", a: "1209 (Rule approved verbally by Innocent III)", detail: "Francis and his first 12 companions traveled to Rome in 1209, where Pope Innocent III gave verbal approval to their way of life. The written Rule was confirmed by Honorius III in 1223.", attr: "Franciscan Order", seasons: [] },
+
+  // ── THEOLOGY ──
+  { cat: "Theology", q: "What are the three theological virtues?", a: "Faith, Hope, and Charity", detail: "St. Paul names them in 1 Corinthians 13:13. They are called 'theological' because they relate directly to God; they are infused — not acquired — by God at Baptism.", attr: "CCC 1813", seasons: [] },
+  { cat: "Theology", q: "What is the Hypostatic Union?", a: "Christ has two natures — divine and human — in one divine Person", detail: "Defined at the Council of Chalcedon (451 AD), the Hypostatic Union teaches that the Son of God assumed a full human nature while remaining fully divine: two natures without confusion or separation.", attr: "Council of Chalcedon (451)", seasons: [] },
+  { cat: "Theology", q: "According to St. Thomas Aquinas, what is the definition of law?", a: "An ordinance of reason for the common good, made by one who has care of the community, and promulgated", detail: "Thomas defines law in the Summa Theologiae (I-II, Q.90): it must be rational, directed to the common good, made by legitimate authority, and made known through promulgation.", attr: "Summa Theologiae I-II, Q.90", seasons: [] },
+  { cat: "Theology", q: "What are the four marks of the Church?", a: "One, Holy, Catholic, and Apostolic", detail: "These four marks, professed in the Nicene Creed, describe the essential characteristics of the Church Christ founded, distinguishing it from any merely human institution.", attr: "CCC 811", seasons: [] },
+  { cat: "Theology", q: "What three conditions make a sin mortal?", a: "Grave matter, full knowledge, and deliberate consent", detail: "All three must be present for a sin to be mortal. Without any one of them — if the matter is light, or knowledge incomplete, or consent compromised — the sin is venial.", attr: "CCC 1857", seasons: [] },
+  { cat: "Theology", q: "What does the Church teach about the Real Presence in the Eucharist?", a: "Christ is truly, really, and substantially present — Body, Blood, Soul, and Divinity", detail: "The Council of Trent defined transubstantiation: the entire substance of bread and wine is converted into the Body and Blood of Christ, while the appearances remain.", attr: "Council of Trent, Session XIII", seasons: [] },
+  { cat: "Theology", q: "What is the Beatific Vision?", a: "The direct, unmediated vision of God enjoyed by the saints in heaven", detail: "The Beatific Vision is the ultimate end of man — seeing God face to face (1 Cor 13:12). It is supernatural, beyond any natural capacity, and is the source of perfect happiness.", attr: "CCC 1023–1026", seasons: [] },
+  { cat: "Theology", q: "How many sacraments does the Catholic Church have, and who defined this number?", a: "Seven, defined at the Council of Florence (1439) and reaffirmed at Trent", detail: "Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony.", attr: "Council of Trent, Session VII", seasons: [] },
+  { cat: "Theology", q: "What is the doctrine of Original Sin?", a: "The sin of Adam, transmitted to all humanity, depriving us of sanctifying grace and wounding human nature", detail: "Defined at the Council of Trent, original sin is not a personal act but a state of deprivation inherited from Adam. It is remitted by Baptism.", attr: "CCC 402–406", seasons: [] },
+  { cat: "Theology", q: "What does 'ex opere operato' mean in sacramental theology?", a: "Sacraments confer grace by the performance of the sacramental act itself, not by the merit of the minister", detail: "The sacrament's efficacy depends on Christ acting through the Church, not on the holiness of the priest (though the recipient's dispositions affect the fruit received).", attr: "CCC 1128", seasons: [] },
+  { cat: "Theology", q: "What are the four cardinal virtues?", a: "Prudence, Justice, Fortitude, and Temperance", detail: "These 'hinge' virtues (from the Latin cardo, hinge) are the foundation of the moral life. They can be acquired by human effort and perfected by grace. All other moral virtues are grouped around them.", attr: "CCC 1805", seasons: [] },
+  { cat: "Theology", q: "What is the 'sensus fidei'?", a: "The supernatural instinct of the faithful for recognizing truths of the faith", detail: "The sensus fidei (sense of the faith) is a gift of the Holy Spirit by which the whole body of the faithful cannot err in matters of belief (Lumen Gentium 12).", attr: "Lumen Gentium 12", seasons: [] },
+  { cat: "Theology", q: "What is the doctrine of the Assumption of Mary?", a: "At the end of her earthly life, the Blessed Virgin Mary was taken up body and soul into heavenly glory", detail: "Defined as dogma by Pope Pius XII in Munificentissimus Deus (1950), the Assumption is not explicitly narrated in Scripture but is grounded in Tradition and the Church's understanding of Mary's unique role.", attr: "Munificentissimus Deus (1950)", seasons: [] },
+  { cat: "Theology", q: "What is Natural Law, according to St. Thomas Aquinas?", a: "The rational creature's participation in the eternal law of God — the moral order inscribed in human nature and discoverable by reason", detail: "Aquinas teaches in the Summa (I-II, Q.94) that natural law is the first principle of practical reason: do good and avoid evil. From this, more specific norms are derived.", attr: "Summa Theologiae I-II, Q.94", seasons: [] },
+  { cat: "Theology", q: "What is the difference between justification and sanctification?", a: "Justification is the initial remission of sin and infusion of grace; sanctification is the ongoing growth in holiness that follows", detail: "The Council of Trent (Session VI) defined justification as not merely the remission of sins but a true interior renewal. Sanctification describes the ongoing transformation into likeness with Christ.", attr: "Council of Trent, Session VI", seasons: [] },
+  { cat: "Theology", q: "What does 'Purgatory' mean in Catholic doctrine?", a: "A state of purification after death for those who die in God's grace but still need cleansing before entering heaven", detail: "The Church teaches (CCC 1030) that those who die in God's friendship but imperfectly purified undergo purification to achieve the holiness needed to enter heavenly joy.", attr: "CCC 1030–1032", seasons: [] },
+  { cat: "Theology", q: "What are the seven gifts of the Holy Spirit?", a: "Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord", detail: "These gifts perfect the soul's capacity for virtue and are infused at Baptism and strengthened at Confirmation. They are drawn from Isaiah 11:2–3.", attr: "CCC 1831", seasons: [] },
+  { cat: "Theology", q: "What is Transubstantiation?", a: "The complete conversion of the substance of bread and wine into the Body and Blood of Christ at the consecration of the Mass", detail: "Defined at the Fourth Lateran Council (1215) and confirmed at Trent: the accidents (appearances) remain, but the substance is entirely changed into Christ.", attr: "Council of Trent, Session XIII", seasons: [] },
+  { cat: "Theology", q: "What is the 'double effect' principle in Catholic moral theology?", a: "An action with both good and bad effects may be permissible if the act is not intrinsically evil, the agent intends the good effect, and the good is proportionate to the harm", detail: "St. Thomas Aquinas first articulated this principle in discussing self-defense (Summa II-II, Q.64). It governs many complex medical and ethical decisions.", attr: "Summa Theologiae II-II, Q.64", seasons: [] },
+  { cat: "Theology", q: "What does the Church mean by 'intrinsically evil' acts?", a: "Acts that are evil by their very object, regardless of intention or circumstances — they can never be justified", detail: "CCC 1756 teaches that certain acts are 'by their very object morally disordered' and 'are always and without exception unlawful' regardless of purpose or context.", attr: "CCC 1756", seasons: [] },
+  { cat: "Theology", q: "What is the 'preferential option for the poor' in Catholic social teaching?", a: "The obligation to give priority attention to the needs and rights of the poor in moral decision-making and social policy", detail: "While not favoring the poor exclusively, the Church teaches (CCC 2448) a special love for the poor following Christ's example and the prophets' call for justice.", attr: "CCC 2448", seasons: [] },
+  { cat: "Theology", q: "What does the phrase 'Fiat voluntas tua' mean, and where does it appear?", a: "'Thy will be done' — from the Lord's Prayer (Mt 6:10) and Christ's prayer in Gethsemane (Mt 26:42)", detail: "The phrase expresses the complete surrender of human will to divine providence. It is both a petition and an act of trust.", attr: "Mt 6:10; 26:42", seasons: [] },
+  { cat: "Theology", q: "What does the Church teach about conscience?", a: "Conscience is the proximate norm of morality — one must always follow it, but it must be formed in accordance with truth and Church teaching", detail: "CCC 1776 defines conscience as 'a judgment of reason whereby the human person recognizes the moral quality of a concrete act.' It must be educated; an erroneous conscience does not excuse culpability if the error is one's own fault.", attr: "CCC 1776–1779", seasons: [] },
+  { cat: "Theology", q: "What are the corporal works of mercy?", a: "Feed the hungry, give drink to the thirsty, clothe the naked, shelter the homeless, visit the sick, visit the imprisoned, bury the dead", detail: "Based on Matthew 25:31–46 and Tobit 1:17. They address bodily needs and are balanced by the seven spiritual works of mercy.", attr: "CCC 2447", seasons: [] },
+  { cat: "Theology", q: "What is the distinction between the Church Militant, Church Suffering, and Church Triumphant?", a: "The living faithful on earth (Militant), the souls in Purgatory (Suffering), and the saints in heaven (Triumphant) — together, the Communion of Saints", detail: "This distinction expresses the Church's reach across life and death. We can assist the souls in Purgatory through prayer, Masses, and indulgences.", attr: "CCC 954–959", seasons: [] },
+  { cat: "Theology", q: "What does 'Magisterium' mean?", a: "The teaching authority of the Church, exercised by the pope and bishops in communion with him", detail: "From the Latin magister (teacher), the Magisterium is the Church's living authority to interpret Scripture and Tradition authentically. It can be exercised solemnly (ex cathedra, councils) or ordinarily (regular papal teaching).", attr: "CCC 85–87", seasons: [] },
+
+  // ── LITURGY ──
+  { cat: "Liturgy", q: "What are the five parts of the Ordinary of the Mass?", a: "Kyrie, Gloria, Credo, Sanctus, and Agnus Dei", detail: "These fixed texts recur at every Mass (the Gloria and Credo are omitted on certain days). They give the Mass its enduring structure regardless of the feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What liturgical color is worn during Advent and Lent?", a: "Violet (purple)", detail: "Violet signifies penance, preparation, and longing. Rose may be worn on Gaudete Sunday (Advent III) and Laetare Sunday (Lent IV), expressing mid-season joy.", attr: "Roman Rite", seasons: ["Advent","Lent"] },
+  { cat: "Liturgy", q: "What is the Introit?", a: "The entrance antiphon sung at the beginning of Mass", detail: "The Introit is the first chant of the Proper of the Mass, sung as the priest approaches the altar. Its text, drawn from Scripture, sets the spiritual tone of each feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does 'ad orientem' worship mean?", a: "Celebrating Mass with the priest and people facing the same direction — toward God (liturgical East)", detail: "Historically, both priest and faithful faced East, symbolizing the eschatological expectation of Christ's return. It was standard before the post-Vatican II reform of altar orientation.", attr: "Liturgical Tradition", seasons: [] },
+  { cat: "Liturgy", q: "What is the Liturgy of the Hours?", a: "The daily prayer of the Church, sanctifying the hours of the day — from Lauds to Compline", detail: "The Divine Office (CCC 1174–1178) extends the Eucharist's praise through the day: Lauds, Terce, Sext, None, Vespers, Compline, and the Office of Readings.", attr: "CCC 1174–1178", seasons: [] },
+  { cat: "Liturgy", q: "What is Septuagesima?", a: "The pre-Lenten season in the traditional calendar, beginning 70 days before Easter", detail: "Septuagesima, Sexagesima, and Quinquagesima Sundays form a three-week preparation before Ash Wednesday in the 1962 calendar. The Alleluia is omitted during this season.", attr: "1962 Roman Missal", seasons: ["Septuagesima · Pre-Lent"] },
+  { cat: "Liturgy", q: "What is the significance of the Alleluia being suppressed during Lent?", a: "It symbolizes mourning and penance — the joy of the Resurrection is 'buried' until Easter", detail: "In the traditional rite, the Alleluia is ceremonially 'buried' at the end of Quinquagesima. Its joyful return at the Easter Vigil marks the great night of resurrection.", attr: "Roman Rite · Lenten Tradition", seasons: ["Lent","Septuagesima · Pre-Lent"] },
+  { cat: "Liturgy", q: "What is the Proper of the Mass?", a: "The variable texts that change with each feast: Introit, Gradual, Alleluia/Tract, Offertory, and Communion antiphons", detail: "The Proper contrasts with the Ordinary (fixed texts). The Proper texts are drawn from Scripture and give each day's Mass its unique spiritual character.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does 'Canon of the Mass' refer to?", a: "The central Eucharistic prayer, traditionally the Roman Canon (now Eucharistic Prayer I)", detail: "The Roman Canon is one of the oldest texts in Christendom, with roots in the 4th century. It includes the consecratory words, intercessions, memento for the living and dead, and doxology.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "On what day is the Church's oldest and most solemn liturgy celebrated?", a: "Holy Saturday — the Easter Vigil", detail: "The Easter Vigil is the 'mother of all vigils' (St. Augustine). It begins in darkness, includes the lighting of the Paschal Candle, the Exsultet, extensive Scripture readings, Baptisms, and the first Mass of Easter.", attr: "Easter Vigil", seasons: ["Eastertide","Passiontide"] },
+  { cat: "Liturgy", q: "What is Gregorian Chant?", a: "The ancient monophonic sacred music of the Roman Rite, traditionally attributed to Pope Gregory the Great", detail: "Gregorian chant is the Church's own music, called 'treasure of inestimable value' by Vatican II's Sacrosanctum Concilium (§114). It is the normative music of the Latin rite.", attr: "Sacrosanctum Concilium §114", seasons: [] },
+  { cat: "Liturgy", q: "What is the 'Collect'?", a: "The opening prayer of the Mass that 'collects' the intentions of the congregation and addresses them to God", detail: "The Collect is the first of three variable presidential prayers (with the Secret/Prayer over the Offerings and the Postcommunion). It concludes with 'through Christ our Lord.'", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does the color red signify in liturgical vestments?", a: "The Holy Spirit, martyrdom, and royal dignity — worn on Pentecost, feasts of martyrs, Palm Sunday, and Good Friday", detail: "Red recalls both fire (the Holy Spirit at Pentecost) and blood (the martyrs). It is the color of sacrifice and the kingship of Christ.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What are the Major Rogation Days?", a: "April 25 (feast of St. Mark) — days of litanies and processions to pray for crops and protection from calamity", detail: "The Major Rogation on April 25 and the Minor Rogations (Monday–Wednesday before Ascension) are ancient penitential days with outdoor processions, the Litany of the Saints, and prayer for God's blessing on the harvest.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What is the 'Ordinary Form' and 'Extraordinary Form' of the Roman Rite?", a: "The 1970 Missal (OF) and the 1962 Missal (EF/Traditional Latin Mass) — two forms of one Roman Rite", detail: "Benedict XVI in Summorum Pontificum (2007) designated these two forms, allowing the Traditional Latin Mass to be celebrated more widely.", attr: "Summorum Pontificum (2007)", seasons: [] },
+  { cat: "Liturgy", q: "What is the Gradual?", a: "A chant sung between the Epistle and Gospel in the traditional Mass, named for the 'step' (gradus) of the ambo from which it was sung", detail: "The Gradual is among the most ancient and musically elaborate chants of the Mass. It is replaced by the Alleluia in Eastertide (except at Requiem Masses).", attr: "1962 Roman Missal", seasons: [] },
+  { cat: "Liturgy", q: "What does the term 'anamnesis' mean in liturgical theology?", a: "The ritual memorial of Christ's Passion, Death, and Resurrection — a making-present of past saving events, not merely a remembrance", detail: "From the Greek for 'remembrance,' the anamnesis in the Eucharistic prayer (Do this in memory of Me) is understood not as mere recollection but as a sacramental participation in the original events.", attr: "CCC 1362–1364", seasons: [] },
+  { cat: "Liturgy", q: "What vestment does a bishop wear that a priest does not?", a: "The miter, pectoral cross, and ring — and the pallium for archbishops", detail: "The miter is the bishop's ceremonial headdress. The pectoral cross is worn over vestments. The pallium — a woolen band worn over the chasuble — is granted by the pope to archbishops and signifies their union with Rome.", attr: "Liturgical Tradition", seasons: [] },
+  { cat: "Liturgy", q: "What is the difference between a Feast, a Solemnity, and a Memorial?", a: "In the current calendar: Solemnities are the highest rank, then Feasts, then Obligatory Memorials, then Optional Memorials", detail: "Solemnities celebrate the most important mysteries (Christmas, Easter, Corpus Christi). Feasts celebrate events in the Lord's life and major saints. Memorials honor saints with less universal prominence.", attr: "Roman Rite", seasons: [] },
+
+  // ── SEASON-SPECIFIC ──
+  // Advent
+  { cat: "Liturgy", q: "How many Sundays are in the season of Advent?", a: "Four Sundays", detail: "Advent spans four Sundays before Christmas. Each week increases in eschatological anticipation: the Second Coming, John the Baptist, the prophets, and the Virgin Mary.", attr: "Roman Rite", seasons: ["Advent"] },
+  { cat: "History", q: "What ancient prophecy does the Church read every Advent about a virgin bearing a son?", a: "Isaiah 7:14 — 'Behold, a virgin shall conceive and bear a son, and his name shall be called Emmanuel'", detail: "This 8th-century BC prophecy is quoted in Matthew 1:23 as fulfilled in the Virgin Birth. It is a central text of the Advent liturgy.", attr: "Isaiah 7:14", seasons: ["Advent"] },
+  { cat: "Theology", q: "What is the 'O Antiphons' of Advent?", a: "Seven ancient antiphons sung before the Magnificat at Vespers from December 17–23, each beginning 'O' and invoking a title of Christ", detail: "O Sapientia, O Adonai, O Radix Jesse, O Clavis David, O Oriens, O Rex Gentium, O Emmanuel — the first letters in reverse spell SARCORE, or re-arranged, ERO CRAS — 'I will be [there] tomorrow.'", attr: "Advent Liturgy", seasons: ["Advent"] },
+  { cat: "Liturgy", q: "What is Gaudete Sunday?", a: "The Third Sunday of Advent — a day of rejoicing (gaudete = 'rejoice') when the penitential fast is briefly relaxed", detail: "Named from the entrance antiphon (Philippians 4:4), Gaudete Sunday is marked by rose vestments (rather than violet), flowers, and organ music, anticipating the joy of Christmas.", attr: "Roman Rite", seasons: ["Advent"] },
+
+  // Christmas
+  { cat: "Theology", q: "What does the Incarnation mean?", a: "The eternal Son of God took on human flesh and became man in the womb of the Virgin Mary", detail: "John 1:14 — 'And the Word was made flesh.' The Incarnation is not a transformation of God but an assumption of human nature: one divine Person, two natures.", attr: "CCC 461–463", seasons: ["Christmastide"] },
+  { cat: "Liturgy", q: "What are the Twelve Days of Christmas?", a: "December 25 (Christmas) through January 5, ending on the Epiphany (January 6)", detail: "The Christmas octave ends on January 1, the Circumcision/Solemnity of Mary. The full Christmas season extends to the Baptism of the Lord (or, in the traditional calendar, Candlemas, February 2).", attr: "Roman Rite", seasons: ["Christmastide"] },
+
+  // Lent
+  { cat: "Theology", q: "What are the three Lenten disciplines the Church commends?", a: "Prayer, Fasting, and Almsgiving", detail: "Jesus names these in Matthew 6:1–18. The Church channels them through Lent as preparation for the Paschal Mystery.", attr: "CCC 1434", seasons: ["Lent"] },
+  { cat: "History", q: "When did the practice of marking foreheads with ash on Ash Wednesday become universal in Rome?", a: "It developed through the early medieval period, widely observed by the 11th century", detail: "The use of ashes as a sign of penitence is biblical (Job, Jonah, Esther). The Roman practice of Ash Wednesday as the formal start of Lent became universal by the time of Gregory VII (d. 1085).", attr: "Liturgical History", seasons: ["Lent"] },
+  { cat: "Liturgy", q: "What is Laetare Sunday?", a: "The Fourth Sunday of Lent — a day of rejoicing midway through Lent, marked by rose vestments", detail: "Named from the entrance antiphon ('Laetare Jerusalem — Rejoice, O Jerusalem'), Laetare Sunday mirrors Gaudete Sunday in Advent: a brief relaxation of penitential observance.", attr: "Roman Rite", seasons: ["Lent"] },
+
+  // Holy Week / Passiontide
+  { cat: "Liturgy", q: "What is Tenebrae?", a: "A nocturnal Holy Week office in which candles are extinguished one by one to symbolize Christ's approaching death", detail: "Tenebrae (Latin for 'darkness') combines Matins and Lauds for Wednesday, Thursday, and Friday of Holy Week. As each candle is snuffed, the church grows dark.", attr: "Holy Week Liturgy", seasons: ["Passiontide"] },
+  { cat: "History", q: "What is the Mandatum, performed on Holy Thursday?", a: "The washing of feet, recalling Christ's washing of the Apostles' feet at the Last Supper (Jn 13)", detail: "The word 'Mandatum' comes from Christ's command: 'A new commandment I give you, that you love one another' (Jn 13:34). The ceremony follows the Mass of the Lord's Supper.", attr: "Holy Thursday Liturgy", seasons: ["Passiontide"] },
+  { cat: "Theology", q: "What does the Church teach about the meaning of Good Friday?", a: "Christ's death on the Cross is the sacrifice by which He redeems humanity — the fulfillment of all Old Testament sacrifices", detail: "On Good Friday alone, no Mass is celebrated. The liturgy includes veneration of the Cross and a service of the Word, recalling that all sacramental life flows from the Cross.", attr: "CCC 613–615", seasons: ["Passiontide"] },
+
+  // Easter
+  { cat: "Theology", q: "What does 'Paschal Mystery' refer to?", a: "Christ's Passion, Death, Resurrection, and Ascension — through which He redeems humanity", detail: "The Paschal Mystery (CCC 571) is the center of the Christian faith. Through it, Christ passes from death to life and opens the way of salvation for all who are united to Him in Baptism.", attr: "CCC 571", seasons: ["Eastertide"] },
+  { cat: "Liturgy", q: "What is the Exsultet?", a: "The ancient Easter proclamation (Praeconium Paschale) sung at the Easter Vigil, celebrating the Resurrection", detail: "Possibly composed in part by St. Ambrose, the Exsultet is one of the Church's oldest hymns. It famously praises even the 'felix culpa' — 'O happy fault that merited so great a Redeemer.'", attr: "Easter Vigil", seasons: ["Eastertide"] },
+  { cat: "History", q: "What is the Octave of Easter?", a: "The eight days following Easter Sunday (through Divine Mercy Sunday), all celebrated as one prolonged feast", detail: "The Easter Octave is the most solemn in the Church's calendar — every day is celebrated as Easter Sunday itself. The practice of an octave dates to the earliest centuries of Christianity.", attr: "Roman Rite", seasons: ["Eastertide"] },
+  { cat: "Theology", q: "What did Christ tell St. Faustina about Divine Mercy Sunday?", a: "That He wished a feast on the first Sunday after Easter, promising that whoever received Communion on that day would receive complete forgiveness of sins and punishment", detail: "The devotion to Divine Mercy was revealed to St. Faustina Kowalska in Poland in the 1930s. Pope John Paul II officially established Divine Mercy Sunday for the universal Church in 2000.", attr: "Diary of St. Faustina", seasons: ["Eastertide"] },
+
+  // Pentecost
+  { cat: "Theology", q: "What is the gift the Holy Spirit pours into the soul at Baptism and Confirmation?", a: "Sanctifying grace — and the seven gifts of the Holy Spirit", detail: "The seven gifts are: Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord (Is 11:2–3). They perfect the theological and cardinal virtues.", attr: "CCC 1830–1831", seasons: ["Pentecost"] },
+  { cat: "History", q: "What feast follows Pentecost in the traditional calendar, celebrating the mystery of the Trinity?", a: "Trinity Sunday — the First Sunday after Pentecost", detail: "Trinity Sunday was established by Pope John XXII for the universal Church in 1334, though it had been celebrated locally in the West since the 10th century.", attr: "Roman Rite", seasons: ["Pentecost","After Pentecost"] },
+  { cat: "Liturgy", q: "What is the 'Sequence' at Pentecost?", a: "The Veni Sancte Spiritus ('Come, Holy Spirit') — one of the most beautiful hymns in the Roman Rite", detail: "The Sequence is a poetic hymn sung before the Gospel on major feasts. Pentecost's Veni Sancte Spiritus is attributed to Stephen Langton or Pope Innocent III (13th century).", attr: "Pentecost Liturgy", seasons: ["Pentecost"] },
+];
+
+// Deterministic daily trivia: pick by day-of-year
+  { cat: "History", q: "Which pope declared the dogma of the Immaculate Conception in 1854?", a: "Pope Pius IX", detail: "With the bull Ineffabilis Deus, Pius IX defined that the Blessed Virgin Mary was preserved from original sin from the first moment of her conception.", attr: "Ineffabilis Deus (1854)", seasons: [] },
+  { cat: "History", q: "What year did the Great Schism split Eastern and Western Christianity?", a: "1054 AD", detail: "Cardinal Humbert placed a bull of excommunication on the altar of Hagia Sophia on July 16, 1054, formalizing the split between Rome and Constantinople.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which ecumenical council defined the canon of Sacred Scripture?", a: "Council of Trent (1546)", detail: "Session IV of the Council of Trent formally defined the 73-book canon of Scripture, including the deuterocanonical books rejected by Protestants.", attr: "Council of Trent", seasons: [] },
+  { cat: "History", q: "What was the name of the edict that granted Christians legal status in the Roman Empire?", a: "Edict of Milan (313 AD)", detail: "Emperors Constantine I and Licinius issued the Edict of Milan, granting freedom of worship throughout the empire and ending the persecutions.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "In what century did St. Benedict write his famous Rule for monasteries?", a: "6th century (c. 530 AD)", detail: "The Rule of St. Benedict, written around 530 AD at Monte Cassino, became the foundation of Western monasticism and is still followed by Benedictines today.", attr: "Rule of St. Benedict", seasons: [] },
+  { cat: "History", q: "Which pope called the Second Vatican Council?", a: "Pope John XXIII", detail: "Pope John XXIII announced Vatican II on January 25, 1959. It opened in October 1962, though he died in June 1963 before its conclusion; Paul VI presided over its remaining sessions.", attr: "Vatican II", seasons: [] },
+  { cat: "History", q: "What ancient city was the seat of St. Augustine of Hippo?", a: "Hippo Regius (modern Algeria)", detail: "Augustine served as Bishop of Hippo Regius in North Africa from 395 until his death in 430 AD as the Vandals besieged the city.", attr: "Life of St. Augustine", seasons: [] },
+  { cat: "History", q: "Which pope defined papal infallibility as a dogma?", a: "Pope Pius IX at Vatican I (1870)", detail: "The First Vatican Council defined papal infallibility in Pastor Aeternus (1870): the pope speaks infallibly ex cathedra on faith and morals.", attr: "Pastor Aeternus (1870)", seasons: [] },
+  { cat: "History", q: "What order did St. Dominic found to combat the Albigensian heresy?", a: "The Order of Preachers (Dominicans)", detail: "Dominic de Guzmán founded the Order of Preachers c. 1216, emphasizing preaching, study, and poverty to counter the Cathar heresy in southern France.", attr: "Dominican Order", seasons: [] },
+  { cat: "History", q: "In what year did Pope Urban II preach the First Crusade?", a: "1095 AD at the Council of Clermont", detail: "On November 27, 1095, Urban II called upon Christians to liberate Jerusalem, launching the First Crusade and the era of crusading.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which empress called the Second Council of Nicaea (787), restoring veneration of icons?", a: "Empress Irene of Byzantium", detail: "Irene acted as regent for her son Constantine VI and convened the Seventh Ecumenical Council, which condemned iconoclasm and restored the veneration of sacred images.", attr: "Second Council of Nicaea", seasons: [] },
+
+  // ── THEOLOGY ──
+  { cat: "Theology", q: "What are the three theological virtues?", a: "Faith, Hope, and Charity", detail: "St. Paul names them in 1 Corinthians 13:13: 'And now there remain faith, hope, and charity, these three: but the greatest of these is charity.' They are infused by God at Baptism.", attr: "CCC 1813", seasons: [] },
+  { cat: "Theology", q: "What is the Hypostatic Union?", a: "Christ has two natures — divine and human — in one divine Person", detail: "Defined at the Council of Chalcedon (451 AD), the Hypostatic Union teaches that the Son of God assumed a full human nature while remaining fully divine, two natures without confusion or separation.", attr: "Council of Chalcedon (451)", seasons: [] },
+  { cat: "Theology", q: "According to St. Thomas Aquinas, what is the definition of law?", a: "An ordinance of reason for the common good, made by one who has care of the community, and promulgated", detail: "Thomas defines law in the Summa Theologiae (I-II, Q.90): it must be rational, directed to the common good, made by legitimate authority, and made known through promulgation.", attr: "Summa Theologiae I-II, Q.90", seasons: [] },
+  { cat: "Theology", q: "What are the four marks of the Church?", a: "One, Holy, Catholic, and Apostolic", detail: "These four marks, professed in the Nicene Creed, describe the essential characteristics of the Church Christ founded.", attr: "CCC 811", seasons: [] },
+  { cat: "Theology", q: "What is the difference between mortal and venial sin?", a: "Mortal sin destroys charity; venial sin weakens but does not sever the soul's union with God", detail: "A mortal sin requires: (1) grave matter, (2) full knowledge, and (3) deliberate consent. Without these three, the sin is venial.", attr: "CCC 1857–1862", seasons: [] },
+  { cat: "Theology", q: "What does the Church teach about the Real Presence in the Eucharist?", a: "Christ is truly, really, and substantially present — Body, Blood, Soul, and Divinity", detail: "The Council of Trent defined transubstantiation: the entire substance of bread and wine is converted into the Body and Blood of Christ, while the appearances remain.", attr: "Council of Trent, Session XIII", seasons: [] },
+  { cat: "Theology", q: "What is the Beatific Vision?", a: "The direct, unmediated vision of God enjoyed by the saints in heaven", detail: "The Beatific Vision is the ultimate end of man — seeing God face to face (1 Cor 13:12). It is supernatural, beyond any natural capacity, and is the source of perfect happiness.", attr: "CCC 1023–1026", seasons: [] },
+  { cat: "Theology", q: "What is the 'sensus fidei'?", a: "The supernatural instinct of the faithful for recognizing truths of the faith", detail: "The sensus fidei (sense of the faith) is a gift of the Holy Spirit by which the whole body of the faithful cannot err in matters of belief.", attr: "Lumen Gentium 12", seasons: [] },
+  { cat: "Theology", q: "How many sacraments does the Catholic Church have, and who defined this number?", a: "Seven, defined at the Council of Florence (1439) and reaffirmed at Trent", detail: "Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony. The Council of Trent (Session VII, 1547) solemnly defined seven against Protestant reductions.", attr: "Council of Trent, Session VII", seasons: [] },
+  { cat: "Theology", q: "What is the doctrine of Original Sin?", a: "The sin of Adam, transmitted to all humanity, depriving us of sanctifying grace and wounding human nature", detail: "Defined at the Council of Trent, original sin is not a personal act but a state of deprivation inherited from Adam. It is remitted by Baptism.", attr: "CCC 402–406", seasons: [] },
+  { cat: "Theology", q: "What does 'ex opere operato' mean in sacramental theology?", a: "Sacraments confer grace by the performance of the sacramental act itself, not by the merit of the minister", detail: "The term means 'from the work performed.' The sacrament's efficacy depends on Christ acting through the Church, not on the holiness of the priest or recipient (though the recipient's dispositions affect the fruit received).", attr: "CCC 1128", seasons: [] },
+
+  // ── LITURGY ──
+  { cat: "Liturgy", q: "What are the five parts of the Ordinary of the Mass?", a: "Kyrie, Gloria, Credo, Sanctus, and Agnus Dei", detail: "These fixed texts recur at every Mass (except the Gloria and Credo are omitted on certain days). They give the Mass its enduring structure regardless of the feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What liturgical color is worn during Advent and Lent?", a: "Violet (purple)", detail: "Violet signifies penance, preparation, and longing. Rose may be worn on Gaudete Sunday (Advent III) and Laetare Sunday (Lent IV), expressing mid-season joy.", attr: "Roman Rite", seasons: ["Advent","Lent"] },
+  { cat: "Liturgy", q: "What is the Introit?", a: "The entrance antiphon sung at the beginning of Mass", detail: "The Introit is the first chant of the Proper of the Mass, sung as the priest approaches the altar. Its text, drawn from Scripture, sets the spiritual tone of each feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does 'Ordinary Form' and 'Extraordinary Form' refer to?", a: "Two forms of the Roman Rite: the 1970 Missal (OF) and the 1962 Missal (EF/Traditional Latin Mass)", detail: "Benedict XVI in Summorum Pontificum (2007) designated these two forms of one Roman Rite, allowing the Traditional Latin Mass to be celebrated more widely.", attr: "Summorum Pontificum (2007)", seasons: [] },
+  { cat: "Liturgy", q: "What is 'ad orientem' worship?", a: "Celebrating Mass with the priest and people facing the same direction — liturgical East — toward God", detail: "Historically, both priest and faithful faced East (or the liturgical East), symbolizing the eschatological expectation of Christ's return. It was standard before the post-Vatican II reform of altar orientation.", attr: "Liturgical Tradition", seasons: [] },
+  { cat: "Liturgy", q: "What is the Liturgy of the Hours?", a: "The daily prayer of the Church, sanctifying the hours of the day — from Lauds to Compline", detail: "The Divine Office (CCC 1174–1178) extends the Eucharist's praise through the day: Lauds (morning), Terce, Sext, None, Vespers (evening), Compline (night), and the Office of Readings.", attr: "CCC 1174–1178", seasons: [] },
+  { cat: "Liturgy", q: "What is Septuagesima?", a: "The pre-Lenten season in the traditional calendar, beginning 70 days before Easter", detail: "Septuagesima, Sexagesima, and Quinquagesima Sundays form a three-week preparation before Ash Wednesday in the 1962 calendar. The Alleluia is omitted during this season.", attr: "1962 Roman Missal", seasons: ["Septuagesima · Pre-Lent"] },
+  { cat: "Liturgy", q: "What is the significance of the Alleluia being suppressed during Lent?", a: "It symbolizes mourning and penance — the joy of the Resurrection is 'buried' until Easter", detail: "In the traditional rite, the Alleluia is ceremonially 'buried' at the end of Septuagesima/Quinquagesima. Its joyful return at the Easter Vigil marks the great night of resurrection.", attr: "Roman Rite · Lenten Tradition", seasons: ["Lent","Septuagesima · Pre-Lent"] },
+
+  // ── ADVENT ──
+  { cat: "Liturgy", q: "How many Sundays are in the season of Advent?", a: "Four Sundays", detail: "Advent spans four Sundays before Christmas. Each week increases in eschatological anticipation: the Second Coming, John the Baptist, the prophets, and the Virgin Mary's role in the Incarnation.", attr: "Roman Rite", seasons: ["Advent"] },
+  { cat: "History", q: "What ancient prophecy does the Church read every Advent about a virgin bearing a son?", a: "Isaiah 7:14 — 'Behold, a virgin shall conceive and bear a son, and his name shall be called Emmanuel'", detail: "This prophecy from the 8th century BC is quoted in Matthew 1:23 as fulfilled in the Virgin Birth of Christ. It is a central text of the Advent liturgy.", attr: "Isaiah 7:14", seasons: ["Advent"] },
+
+  // ── CHRISTMAS ──
+  { cat: "Theology", q: "What does the Incarnation mean?", a: "The eternal Son of God took on human flesh and became man in the womb of the Virgin Mary", detail: "John 1:14 — 'And the Word was made flesh.' The Incarnation is not a transformation of God but an assumption of human nature: one divine Person, two natures.", attr: "CCC 461–463", seasons: ["Christmastide"] },
+
+  // ── LENT ──
+  { cat: "Theology", q: "What are the three Lenten disciplines the Church commends?", a: "Prayer, Fasting, and Almsgiving", detail: "Jesus names these in Matthew 6:1–18 as interior acts of righteousness. The Church channels them liturgically through Lent as preparation for the Paschal Mystery.", attr: "CCC 1434", seasons: ["Lent"] },
+  { cat: "History", q: "When did the practice of marking foreheads with ash on Ash Wednesday originate?", a: "It developed throughout the early medieval period, with papal promulgation by the 11th century", detail: "The use of ashes as a sign of penitence is biblical (Job, Jonah). The universal Roman practice of Ash Wednesday as the formal start of Lent became widespread by the time of Gregory VII (d. 1085).", attr: "Liturgical History", seasons: ["Lent"] },
+
+  // ── HOLY WEEK / PASSIONTIDE ──
+  { cat: "Liturgy", q: "What is Tenebrae?", a: "A nocturnal Holy Week office in which candles are extinguished one by one to symbolize Christ's approaching death", detail: "Tenebrae (Latin for 'darkness') combines Matins and Lauds for Wednesday, Thursday, and Friday of Holy Week. As each candle is snuffed, the church grows dark, ending in utter darkness at Christ's death.", attr: "Holy Week Liturgy", seasons: ["Passiontide"] },
+  { cat: "History", q: "What is the Mandatum, performed on Holy Thursday?", a: "The washing of feet, recalling Christ's washing of the Apostles' feet at the Last Supper (Jn 13)", detail: "The word 'Mandatum' comes from Christ's command (mandatum novum): 'A new commandment I give you, that you love one another.' The ceremony is performed after the Mass of the Lord's Supper.", attr: "Holy Thursday Liturgy", seasons: ["Passiontide"] },
+
+  // ── EASTER ──
+  { cat: "Theology", q: "What does 'Paschal Mystery' refer to?", a: "Christ's Passion, Death, Resurrection, and Ascension — through which He redeems humanity", detail: "The Paschal Mystery (CCC 571) is the center of the Christian faith. Through it, Christ passes from death to life and opens the way of salvation for all who are united to Him in Baptism.", attr: "CCC 571", seasons: ["Eastertide"] },
+  { cat: "Liturgy", q: "What is the Exsultet?", a: "The ancient Easter proclamation (Praeconium Paschale) sung at the Easter Vigil, praising the Paschal candle and celebrating the Resurrection", detail: "Possibly composed in part by St. Ambrose, the Exsultet is one of the Church's oldest hymns, addressed to the bees whose wax provides the candle, to the earth, and ultimately to God for the gift of redemption.", attr: "Easter Vigil", seasons: ["Eastertide"] },
+
+  // ── PENTECOST ──
+  { cat: "Theology", q: "What is the gift the Holy Spirit pours into the soul at Baptism and Confirmation?", a: "Sanctifying grace — and the seven gifts of the Holy Spirit", detail: "The seven gifts are: Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord (Is 11:2–3). They perfect the theological and cardinal virtues.", attr: "CCC 1830–1831", seasons: ["Pentecost"] },
+];
+
+// Deterministic daily trivia: pick by day-of-year
+function getDailyTrivia(liturgicalSeason) {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((now - start) / 86400000);
+
+  // Try season-specific questions first
+  const seasonQ = TRIVIA_BANK.filter(q => q.seasons.includes(liturgicalSeason));
+  const allQ = TRIVIA_BANK;
+
+  // If we have season questions, weight toward them (first half of candidates)
+  const pool = seasonQ.length >= 3
+    ? [...seasonQ, ...seasonQ, ...allQ]  // double-weight season questions
+    : allQ;
+
+  return pool[dayOfYear % pool.length];
+}
+
+// ═══════════════════════════════════════════════════════════════════
 // TODAY TAB — Liturgical calendar, readings, saint, reflection
 // ═══════════════════════════════════════════════════════════════════
 function TodayTab() {
@@ -3491,6 +3752,13 @@ function TodayTab() {
   const dateStr = `${days[today.getDay()]} · ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`;
   const [showOF, setShowOF] = useState(false);
   const [showReadings, setShowReadings] = useState(false);
+  const [triviaRevealed, setTriviaRevealed] = useState(false);
+  const [reminders] = useState(() => {
+    try {
+      const stored = localStorage.getItem("custos_reminders");
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false };
+    } catch { return { prayer: false, confession: false, stations: false }; }
+  });
 
   const lit = getLiturgicalDay(today);
   const colorDot = COLOR_HEX[lit.color] || COLOR_HEX.green;
@@ -3525,7 +3793,38 @@ function TodayTab() {
       <div style={{ flex: 1, overflowY: "auto", paddingBottom: 8 }}>
         <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", padding: "18px 20px 0" }}>{dateStr}</div>
 
-        {/* Liturgical Calendar */}
+        {/* Reminder banners */}
+        {(reminders.prayer || reminders.confession || reminders.stations) && (
+          <div style={{ margin: "10px 20px 0", display: "flex", flexDirection: "column", gap: 6 }}>
+            {reminders.prayer && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: T.goldFaint, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>🙏</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>Morning Prayer</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Have you prayed your morning offering today?</div>
+                </div>
+              </div>
+            )}
+            {reminders.confession && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(122,28,28,0.05)", border: `1px solid rgba(122,28,28,0.15)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>⚖</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.06em", textTransform: "uppercase" }}>Confession</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>When did you last receive the Sacrament of Penance?</div>
+                </div>
+              </div>
+            )}
+            {reminders.stations && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(26,39,68,0.05)", border: `1px solid rgba(26,39,68,0.12)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>✝</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>Stations of the Cross</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Walk the Via Crucis with Christ today.</div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
         <Card style={{ margin: "12px 20px 0", cursor: readings ? "pointer" : "default" }}>
           <div onClick={() => { if (readings) setShowReadings(!showReadings); }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
@@ -3589,6 +3888,50 @@ function TodayTab() {
                 <div style={{ flex: 1 }}><CardTitle>Saint of the Day</CardTitle><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 500, color: T.inkDark }}>{saint.n}</div></div>
               </div>
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkMid, lineHeight: 1.6, margin: 0 }}>{saint.bio}</p>
+            </Card>
+          );
+        })()}
+
+        {/* Daily Catholic Trivia */}
+        {(() => {
+          const trivia = getDailyTrivia(lit.season);
+          const CAT_COLORS = { History: T.navy, Theology: T.crimson, Liturgy: "#5a7a2a" };
+          const CAT_ICONS = { History: "📜", Theology: "✝", Liturgy: "🕯" };
+          const catColor = CAT_COLORS[trivia.cat] || T.navy;
+          return (
+            <Card style={{ margin: "12px 20px 8px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                <span style={{ fontSize: fz(18) }}>{CAT_ICONS[trivia.cat] || "❓"}</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.gold, letterSpacing: "0.10em", textTransform: "uppercase" }}>Daily Trivia</div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: catColor, letterSpacing: "0.08em", textTransform: "uppercase", opacity: 0.85 }}>{trivia.cat}</div>
+                </div>
+              </div>
+
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), color: T.inkDark, lineHeight: 1.55, margin: "0 0 14px", fontStyle: "italic" }}>{trivia.q}</p>
+
+              {!triviaRevealed ? (
+                <button
+                  onClick={() => setTriviaRevealed(true)}
+                  style={{
+                    width: "100%", padding: "10px 16px",
+                    fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600,
+                    letterSpacing: "0.06em", textTransform: "uppercase",
+                    color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`,
+                    border: "none", borderRadius: 10, cursor: "pointer",
+                  }}
+                >Reveal Answer</button>
+              ) : (
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 12 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: catColor, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Answer</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontWeight: 600, color: T.inkDark, lineHeight: 1.5, margin: "0 0 10px" }}>{trivia.a}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkMid, lineHeight: 1.55, margin: "0 0 10px" }}>{trivia.detail}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <div style={{ width: 3, height: 3, borderRadius: "50%", background: T.gold }} />
+                    <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.inkLight, letterSpacing: "0.04em" }}>{trivia.attr}</span>
+                  </div>
+                </div>
+              )}
             </Card>
           );
         })()}
