@@ -88,7 +88,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - The Catechism of Pope St. Pius X (cite by part and question number)
    - The 1992 Catechism of the Catholic Church may be cited as supplementary only (cite as CCC §NNNN), and must not contradict or override the Baltimore, Roman, or Pius X Catechisms
 
-3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these (in chronological order):
+3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
    - Mirari Vos (Gregory XVI, 1832) — against indifferentism and religious liberty errors
    - Quanta Cura and the Syllabus of Errors (Pius IX, 1864) — condemned modernist propositions
    - Aeterni Patris (Leo XIII, 1879) — on the restoration of Thomistic philosophy
@@ -108,16 +108,25 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Familiaris Consortio (John Paul II, 1981) — on the role of the Christian family
    - Veritatis Splendor (John Paul II, 1993) — on the foundations of moral theology
    - Evangelium Vitae (John Paul II, 1995) — on the value and inviolability of human life
-   - Deus Caritas Est (Benedict XVI, 2005) — on Christian love
-   - Donum Vitae (CDF, 1987) — on respect for human life and the dignity of procreation
-   - Dignitas Personae (CDF, 2008) — on certain bioethical questions
    - Fides et Ratio (John Paul II, 1998) — on the relationship between faith and reason
+   - Deus Caritas Est (Benedict XVI, 2005) — on Christian love
 
-   MOTU PROPRIO:
+   MOTU PROPRIO — only these 4:
    - Ecclesia Dei (John Paul II, 1988) — established the commission for traditional Catholic communities
    - Ad Tuendam Fidem (John Paul II, 1998) — on the grades of theological assent owed to Church teaching
    - Summorum Pontificum (Benedict XVI, 2007) — on the use of the Roman Liturgy prior to the reform of 1970 (the Traditional Latin Mass)
    - Omnium in Mentem (Benedict XVI, 2009) — amended Canon Law on marriage and canonical form, removing the formal defection exemption
+
+   CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
+   These three documents were formally approved by the reigning Pope in forma specifica, meaning the Pope made them his own and they carry the weight of his proper magisterium, not merely the CDF's delegated authority.
+   - Persona Humana (CDF, approved in forma specifica by Paul VI, 1975) — on sexual ethics: fornication, homosexuality, masturbation; the most authoritative pre-existing treatment of sexual morality from this period
+   - Inter Insigniores (CDF, approved in forma specifica by Paul VI, 1976) — on the question of the admission of women to the ministerial priesthood; definitively ruled out women's ordination before Ordinatio Sacerdotalis
+   - Dominus Iesus (CDF, approved in forma specifica by John Paul II, 2000) — on the unicity and salvific universality of Jesus Christ and the Church; essential for apologetics and ecumenical questions
+
+   CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
+   These two documents were approved by the reigning Pope in the ordinary common form. They carry real but delegated authority — they are the CDF teaching with the Pope's general approval, not the Pope teaching in his own name. They are retained because no encyclical fills the bioethical gap they address.
+   - Donum Vitae (CDF, approved in common form by John Paul II, 1987) — on respect for human life and the dignity of procreation; IVF, artificial insemination, embryo research
+   - Dignitas Personae (CDF, approved in common form by Benedict XVI, 2008) — on certain bioethical questions including embryo adoption, stem cell research, cloning
 
 4. CHURCH COUNCILS
    - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
@@ -147,10 +156,14 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - 1983 Code of Canon Law (cite as Can. NNN) — the current law of the Church
    When a question touches canon law, you MUST cite BOTH codes and explicitly identify what changed. Do not merely cite the 1983 Code alone. Show: (a) what the 1917 Code required, (b) what the 1983 Code now requires, and (c) whether the change was a relaxation, tightening, or reformulation of the discipline. Key areas where the codes differ and which you must flag when relevant: Eucharistic fast (1917 Can. 858: midnight fast vs. Can. 919: one hour), Friday abstinence (1917 Can. 1252: obligatory every Friday vs. Can. 1253: bishops' conferences may substitute), mixed marriages (1917 Can. 1060–1064 vs. Can. 1124–1129: conditions loosened), excommunication latae sententiae (many 1917 automatic excommunications were removed in 1983), age of Confirmation (1917 Can. 788: around age 7 vs. Can. 891: bishops may set later age), Sunday obligation (substantially unchanged: 1917 Can. 1248 vs. Can. 1247), impediments to marriage (several 1917 impediments removed or modified in 1983).
 
+   COMMUNION IN THE HAND — SPECIAL NOTE: The unbroken practice of the Church, reflected in the implicit reverence requirements of 1917 Can. 845 and confirmed by the universal discipline enforced until the late 1960s, required reception of Holy Communion on the tongue while kneeling. The 1983 Code (Can. 844, 910, 918) does not explicitly resolve the mode of reception, leaving the discipline to particular law. Subsequent documents addressed this question — most notably Memoriale Domini (Congregation for Divine Worship, 1969), which polled bishops worldwide and confirmed the traditional practice of reception on the tongue, while reluctantly granting an indult for Communion in hand where local bishops' conferences petitioned for it; and Redemptionis Sacramentum (2004), which reiterated that reception on the tongue is always licit and must never be refused. However, these subsequent documents depart from or represent a break with the unbroken Tradition, and they fall outside Custos's approved source universe. Custos therefore answers from the pre-existing tradition: the Church's universal and unbroken practice was reception on the tongue, and no source within this universe authorizes Communion in hand. If asked about this topic, you MUST: (1) state the traditional teaching and practice from the approved sources, (2) note that subsequent documents addressed this question but that those documents depart from the Tradition and are not within Custos's source universe, and (3) direct the person to a qualified confessor or canonist for guidance on their particular situation.
+
+SUBSEQUENT DOCUMENTS THAT DEPART FROM TRADITION — GENERAL RULE: Where documents exist that address a question but represent a departure or break from the continuous Tradition reflected in Custos's approved sources, you MUST explicitly note: "Subsequent documents have addressed this question, but because they represent a departure from the unbroken Tradition, they are not included within Custos's approved source universe. Custos answers from the pre-existing tradition." Do NOT simply pretend those documents do not exist — acknowledge them, explain why they fall outside this universe, and answer from the Tradition. This rule applies to any post-1965 document that contradicts, substantially modifies, or departs from what the pre-existing approved sources plainly teach.
+
 EXCLUSION FENCE — COMPREHENSIVE
 The following is a complete exclusion fence. You must NOT cite, reference, quote, rely on, or draw from ANY source not explicitly named above. This includes but is not limited to:
 
-BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are Donum Vitae (CDF, 1987) and Dignitas Personae (CDF, 2008), which are explicitly named in Section 3 above. ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
+BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Section 3 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
 
 BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list entirely. Do NOT cite, reference, paraphrase, or rely on any of the following — not even to "supplement" or "contextualize" an approved source:
    - Sacrosanctum Concilium (Constitution on the Sacred Liturgy, 1963)
@@ -255,7 +268,8 @@ CALIBRATION:
 [State the certainty level based ONLY on what the approved sources explicitly say. Use one of these levels:
 - "Definitive teaching" = infallibly defined by an Ecumenical Council or ex cathedra papal definition, or universally and constantly held by the Church (e.g., Trent's dogmatic canons, the Immaculate Conception)
 - "Authoritative teaching" = the Pope has spoken clearly in an encyclical to the universal Church, or a catechism teaches it explicitly, but it has not been infallibly defined (e.g., Humanae Vitae on contraception, Baltimore Catechism on Sunday obligation)
-- "CDF instruction" = the Congregation for the Doctrine of the Faith has issued an instruction approved by the Pope. This carries real authority but is delegated — it is not the Pope teaching in his own name. Use this level for Donum Vitae and Dignitas Personae. Do NOT call CDF documents "authoritative teaching" — they are a distinct and lower level.
+- "CDF instruction — papal authority (in forma specifica)" = the CDF issued the instruction AND the Pope formally approved it in forma specifica, making it his own. This level applies to Persona Humana, Inter Insigniores, and Dominus Iesus. These carry weight equivalent to an authoritative teaching because the Pope expressly ratified them.
+- "CDF instruction — delegated authority (common form)" = the CDF issued the instruction with the Pope's general approval but not formal ratification. The Pope was informed and consented but did not make it his own act. This level applies to Donum Vitae and Dignitas Personae. These carry real but delegated authority — not the Pope teaching in his own name.
 - "Addressed but not resolved" = an approved source has discussed the question but deliberately stopped short of a binding judgment (cite the specific document and its language)
 - "Not addressed" = no document in the approved source list speaks to this question; state this honestly and direct the person to a confessor or moral theologian
 Do NOT use the phrase "genuinely disputed," "theologians disagree," or any formulation that implies knowledge of debates outside the approved sources. If the sources are silent, say the sources are silent.]`;
@@ -271,50 +285,50 @@ const EXAMEN_STEPS = [
 
 const COMMANDMENTS = [
   { num: "I", title: "Love of God", cite: "\"I am the Lord thy God; thou shalt not have strange gods before Me.\"", src: "Exodus 20:2–3", questions: [
-    { text: "Have I doubted or denied God, or given in to despair of His mercy?", grave: true },
-    { text: "Have I placed excessive trust in money, career, or reputation above God?", grave: false },
-    { text: "Have I neglected prayer for extended periods?", grave: false },
+    { text: "I doubted or denied God, or gave in to despair of His mercy.", grave: true },
+    { text: "I placed excessive trust in money, career, or reputation above God.", grave: false },
+    { text: "I neglected prayer for extended periods.", grave: false },
   ]},
   { num: "II", title: "The Lord's Name", cite: "\"Thou shalt not take the name of the Lord thy God in vain.\"", src: "Exodus 20:7", questions: [
-    { text: "Have I used God's name carelessly or in anger?", grave: false },
-    { text: "Have I blasphemed God or spoken contemptuously of sacred things?", grave: true },
+    { text: "I used God's name carelessly or in anger.", grave: false },
+    { text: "I blasphemed God or spoke contemptuously of sacred things.", grave: true },
   ]},
   { num: "III", title: "The Sabbath", cite: "\"Remember that thou keep holy the Lord's day.\"", src: "Catechism of Trent", questions: [
-    { text: "Have I deliberately missed Sunday Mass without serious reason?", grave: true },
-    { text: "Have I been careless or distracted during Sunday Mass?", grave: false },
-    { text: "Have I done unnecessary servile work on Sunday?", grave: false },
+    { text: "I deliberately missed Sunday Mass without serious reason.", grave: true },
+    { text: "I was careless or deliberately distracted during Sunday Mass.", grave: false },
+    { text: "I did unnecessary servile work on Sunday.", grave: false },
   ]},
   { num: "IV", title: "Honour Thy Parents", cite: "\"Honour thy father and thy mother.\"", src: "Exodus 20:12", questions: [
-    { text: "Have I been disrespectful or disobedient to parents or lawful superiors?", grave: false },
-    { text: "Have I neglected to care for ageing parents when able?", grave: true },
+    { text: "I was disrespectful or disobedient to parents or lawful superiors.", grave: false },
+    { text: "I neglected to care for ageing parents when I was able to do so.", grave: true },
   ]},
   { num: "V", title: "Thou Shalt Not Kill", cite: "\"Thou shalt not kill.\"", src: "Exodus 20:13", questions: [
-    { text: "Have I harbored anger, resentment, or hatred without seeking reconciliation?", grave: false },
-    { text: "Have I caused serious physical harm to another person?", grave: true },
-    { text: "Have I abused alcohol, drugs, or endangered my health recklessly?", grave: false },
+    { text: "I harbored anger, resentment, or hatred without seeking reconciliation.", grave: false },
+    { text: "I caused serious physical harm to another person.", grave: true },
+    { text: "I abused alcohol, drugs, or recklessly endangered my health.", grave: false },
   ]},
   { num: "VI", title: "Purity", cite: "\"Thou shalt not commit adultery.\"", src: "Exodus 20:14", questions: [
-    { text: "Have I willfully entertained impure thoughts or desires?", grave: false },
-    { text: "Have I engaged in sexual activity outside of marriage?", grave: true },
-    { text: "Have I used pornography?", grave: true },
+    { text: "I willfully entertained impure thoughts or desires.", grave: false },
+    { text: "I engaged in sexual activity outside of marriage.", grave: true },
+    { text: "I used pornography.", grave: true },
   ]},
   { num: "VII", title: "Thou Shalt Not Steal", cite: "\"Thou shalt not steal.\"", src: "Exodus 20:15", questions: [
-    { text: "Have I stolen or damaged another's property?", grave: false },
-    { text: "Have I been dishonest in business or financial matters?", grave: false },
-    { text: "Have I wasted time through sloth when duty called?", grave: false },
+    { text: "I stole or deliberately damaged another's property.", grave: false },
+    { text: "I was dishonest in business or financial matters.", grave: false },
+    { text: "I wasted time through sloth when duty called.", grave: false },
   ]},
   { num: "VIII", title: "False Witness", cite: "\"Thou shalt not bear false witness.\"", src: "Exodus 20:16", questions: [
-    { text: "Have I told serious lies that harmed another's reputation?", grave: true },
-    { text: "Have I engaged in gossip, detraction, or calumny?", grave: false },
-    { text: "Have I judged others rashly or uncharitably?", grave: false },
+    { text: "I told serious lies that harmed another's reputation.", grave: true },
+    { text: "I engaged in gossip, detraction, or calumny.", grave: false },
+    { text: "I judged others rashly or uncharitably.", grave: false },
   ]},
   { num: "IX", title: "Purity of Heart", cite: "\"Thou shalt not covet thy neighbour's wife.\"", src: "Exodus 20:17", questions: [
-    { text: "Have I deliberately dwelt on lustful thoughts or fantasies?", grave: false },
-    { text: "Have I placed myself in occasions of sin against purity?", grave: false },
+    { text: "I deliberately dwelt on lustful thoughts or fantasies.", grave: false },
+    { text: "I placed myself in occasions of sin against purity.", grave: false },
   ]},
   { num: "X", title: "Contentment", cite: "\"Thou shalt not covet thy neighbour's goods.\"", src: "Exodus 20:17", questions: [
-    { text: "Have I been envious of others' possessions, talents, or success?", grave: false },
-    { text: "Have I been ungrateful for the gifts God has given me?", grave: false },
+    { text: "I was envious of others' possessions, talents, or success.", grave: false },
+    { text: "I was ungrateful for the gifts God has given me.", grave: false },
   ]},
 ];
 
@@ -656,7 +670,7 @@ const ROSARY_MYSTERIES = {
     { title: "The Ascension", scripture: "He was lifted up, and a cloud took Him out of their sight. 'This Jesus will come in the same way as you saw Him go into heaven.'", ref: "Acts 1:9\u201311", fruit: "Hope",
       img: "/images/glorious-2-ascension.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Descent of the Holy Spirit", scripture: "They were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.", ref: "Acts 2:1\u201313", fruit: "Love of God",
-      img: "/images/glorious-3-pentecost.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-3-pentecost.jpg", credit: "Adriaen van der Werff · Bavarian State Painting Collections, Electoral Gallery Düsseldorf" },
     { title: "The Assumption of Mary", scripture: "A great sign appeared in heaven: a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.", ref: "Rev 12:1", fruit: "Grace of a Happy Death",
       img: "/images/glorious-4-assumption.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
     { title: "The Coronation of Mary", scripture: "The Lord said, 'Well done, good and faithful servant; enter into the joy of thy Master.'", ref: "Mt 25:21", fruit: "Trust in Mary's Intercession",
@@ -1539,12 +1553,25 @@ function resolveSourceUrl(citation) {
 
   // Summa Contra Gentiles
   if (/contra\s*gentiles/i.test(c)) return "https://isidore.co/aquinas/ContraGentiles.htm";
+  // CDF documents
+  if (/persona\s*humana/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19751229_persona-humana_en.html";
+  if (/inter\s*insigniores/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19761015_inter-insigniores_en.html";
+  if (/dominus\s*iesus/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000806_dominus-iesus_en.html";
   if (/dignitas\s*personae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081208_dignitas-personae_en.html";
   if (/donum\s*vitae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19870222_respect-for-human-life_en.html";
 
   // Canon Law
-  const canon = c.match(/Can\.?\s*(\d+)/i);
-  if (canon) return `https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib${parseInt(canon[1]) < 204 ? "1" : parseInt(canon[1]) < 747 ? "2" : parseInt(canon[1]) < 1055 ? "3" : parseInt(canon[1]) < 1253 ? "4" : parseInt(canon[1]) < 1401 ? "5" : parseInt(canon[1]) < 1753 ? "6" : "7"}_cann${canon[1]}.html`;
+  // 1917 Code of Canon Law
+  const canon1917 = c.match(/1917\s*Can\.?\s*(\d+)/i);
+  if (canon1917) return `https://www.jgray.org/codes/1917cic.html`;
+  // 1983 Code of Canon Law — Vatican's actual URL structure
+  const canon = c.match(/(?<!1917\s*)Can\.?\s*(\d+)/i);
+  if (canon) {
+    const n = parseInt(canon[1]);
+    // Vatican hosts the 1983 CIC by book; map canon number to book
+    const book = n <= 203 ? "1" : n <= 746 ? "2" : n <= 1054 ? "3" : n <= 1252 ? "4" : n <= 1400 ? "5" : n <= 1752 ? "6" : "7";
+    return `https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib${book}_en.html`;
+  }
 
   // Scripture — Douay-Rheims Bible Online
   const book = c.match(/^((?:\d\s*)?[A-Z][a-z]+)\s*(\d+)/i);
@@ -2257,20 +2284,56 @@ function ConfessionTab() {
   const [answers, setAnswers] = useState({});
   const [notes, setNotes] = useState({});
   const [daysSince] = useState(32);
-  const [showPrayer, setShowPrayer] = useState(false);
   const [absolved, setAbsolved] = useState(false);
   const [fade, setFade] = useState(true);
+  const [lifeState, setLifeState] = useState(null); // null | "single" | "married" | "parent" | "consecrated"
 
   useEffect(() => { setFade(false); setTimeout(() => setFade(true), 50); }, [cmdIdx]);
 
-  const cmd = COMMANDMENTS[cmdIdx];
+  const LIFE_STATE_QUESTIONS = {
+    single: { num: "✦", title: "State in Life — Single", cite: "\"It is good for a man not to touch a woman.\"", src: "1 Cor 7:1", questions: [
+      { text: "I failed to guard my chastity in thought, word, or deed.", grave: true },
+      { text: "I wasted time in idleness or worldly amusements rather than growing in virtue.", grave: false },
+      { text: "I was uncharitable or unkind to those entrusted to my care.", grave: false },
+      { text: "I failed to use my freedom as a single person for works of charity and prayer.", grave: false },
+    ]},
+    married: { num: "✦", title: "State in Life — Married", cite: "\"What God hath joined together, let no man put asunder.\"", src: "Mt 19:6", questions: [
+      { text: "I was unfaithful in thought or deed to my spouse.", grave: true },
+      { text: "I used contraception or deliberately rendered the conjugal act sterile.", grave: true },
+      { text: "I was unkind, impatient, or uncharitable toward my spouse.", grave: false },
+      { text: "I neglected prayer in common or the spiritual life of my marriage.", grave: false },
+      { text: "I failed to provide financially or emotionally for my household.", grave: false },
+    ]},
+    parent: { num: "✦", title: "State in Life — Parent", cite: "\"Train up a child in the way he should go.\"", src: "Prov 22:6", questions: [
+      { text: "I was unfaithful in thought or deed to my spouse.", grave: true },
+      { text: "I used contraception or deliberately rendered the conjugal act sterile.", grave: true },
+      { text: "I failed to teach my children the Faith, prayers, and commandments.", grave: true },
+      { text: "I gave bad example to my children by my words, actions, or neglect of religion.", grave: false },
+      { text: "I was harsh, impatient, or unjust in my discipline of my children.", grave: false },
+      { text: "I neglected the physical, emotional, or spiritual needs of my children.", grave: false },
+    ]},
+    consecrated: { num: "✦", title: "State in Life — Consecrated", cite: "\"He that can take, let him take it.\"", src: "Mt 19:12", questions: [
+      { text: "I failed in obedience to my superiors or my rule of life.", grave: true },
+      { text: "I violated or was careless in my vow or promise of chastity.", grave: true },
+      { text: "I was attached to or used material things contrary to my vow or spirit of poverty.", grave: false },
+      { text: "I neglected the Divine Office, mental prayer, or the prescribed spiritual exercises.", grave: false },
+      { text: "I gave bad example to those entrusted to my care or to the faithful generally.", grave: false },
+    ]},
+  };
+
+  const examSteps = lifeState
+    ? [...COMMANDMENTS, LIFE_STATE_QUESTIONS[lifeState]]
+    : COMMANDMENTS;
+
+  const cmd = examSteps[cmdIdx];
   const timeSince = daysSince < 7 ? `${daysSince} days` : daysSince < 30 ? `${Math.round(daysSince/7)} weeks` : `${Math.round(daysSince/30)} months`;
 
   const mortalSins = [], venialSins = [];
-  COMMANDMENTS.forEach((c, ci) => c.questions.forEach((q, qi) => {
+  examSteps.forEach((c, ci) => c.questions.forEach((q, qi) => {
     const k = `${ci}-${qi}`;
-    if (answers[k] === "mortal") mortalSins.push({ text: q.text, cmd: `${c.num} Commandment`, note: notes[k] });
-    if (answers[k] === "venial") venialSins.push({ text: q.text, cmd: `${c.num} Commandment`, note: notes[k] });
+    const label = ci < COMMANDMENTS.length ? `${c.num} Commandment` : c.title;
+    if (answers[k] === "mortal") mortalSins.push({ text: q.text, cmd: label, note: notes[k] });
+    if (answers[k] === "venial") venialSins.push({ text: q.text, cmd: label, note: notes[k] });
   }));
 
   const title = view === "exam" ? "Examination" : view === "review" ? "Your Examination" : view === "confess" ? "In the Confessional" : "Confession";
@@ -2280,7 +2343,7 @@ function ConfessionTab() {
       <TopBar title={title} showBack={view !== "setup"} onBack={() => {
         if (view === "exam" && cmdIdx > 0) setCmdIdx(cmdIdx - 1);
         else if (view === "exam") setView("setup");
-        else if (view === "review") { setView("exam"); setCmdIdx(COMMANDMENTS.length - 1); }
+        else if (view === "review") { setView("exam"); setCmdIdx(examSteps.length - 1); }
         else if (view === "confess") setView("review");
         else setView("setup");
       }} />
@@ -2294,6 +2357,33 @@ function ConfessionTab() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
             <div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 2 }}>Last Confession</div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 600, color: T.navyText }}>{daysSince} <span style={{ fontSize: fz(13), fontWeight: 400, color: T.inkLight }}>days ago</span></div></div>
           </div>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 10 }}>Your State in Life</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+              {[
+                { id: "single", icon: "🙏", label: "Single", sub: "Unmarried adult" },
+                { id: "married", icon: "💍", label: "Married", sub: "Spouse, no children" },
+                { id: "parent", icon: "👨‍👩‍👧", label: "Parent", sub: "Raising children" },
+                { id: "consecrated", icon: "✝", label: "Consecrated", sub: "Religious or clergy" },
+              ].map(ls => (
+                <button key={ls.id} onClick={() => setLifeState(lifeState === ls.id ? null : ls.id)} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: "12px 8px", background: lifeState === ls.id ? T.goldFaint : T.warmWhite, border: `1.5px solid ${lifeState === ls.id ? T.gold : T.cardBorder}`, borderRadius: 10, cursor: "pointer" }}>
+                  <span style={{ fontSize: fz(20) }}>{ls.icon}</span>
+                  <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: lifeState === ls.id ? T.gold : T.navyText, letterSpacing: "0.04em" }}>{ls.label}</span>
+                  <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.inkLight }}>{ls.sub}</span>
+                </button>
+              ))}
+            </div>
+            {lifeState && (
+              <div style={{ marginTop: 10, padding: "8px 12px", background: T.goldFaint, borderRadius: 8, border: `1px solid rgba(212,168,67,0.2)` }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>
+                  {lifeState === "single" && "The examination will include duties of chastity, use of time, charity toward others, and the obligations of single life."}
+                  {lifeState === "married" && "The examination will include the duties of spouses: fidelity, conjugal love, openness to life, mutual respect, and the obligations of the married state."}
+                  {lifeState === "parent" && "The examination will include the duties of spouses and parents: raising children in the Faith, example, discipline, care, and transmission of the faith."}
+                  {lifeState === "consecrated" && "The examination will include the vows or promises of your state: obedience, chastity, poverty, prayer, and fidelity to your rule of life."}
+                </p>
+              </div>
+            )}
+          </div>
           <CrimsonBtn onClick={() => { setCmdIdx(0); setAnswers({}); setNotes({}); setView("exam"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Begin Examination</CrimsonBtn>
           <div style={{ marginTop: 16, padding: "10px 12px", background: T.subtleBg, borderRadius: 8, display: "flex", gap: 8, alignItems: "flex-start" }}>
             <span style={{ fontSize: fz(14), flexShrink: 0 }}>🔒</span>
@@ -2305,10 +2395,10 @@ function ConfessionTab() {
       {view === "exam" && (
         <div style={{ flex: 1, display: "flex", flexDirection: "column", opacity: fade ? 1 : 0, transform: fade ? "translateY(0)" : "translateY(10px)", transition: "all 0.4s" }}>
           <div style={{ padding: "10px 20px 4px", display: "flex", justifyContent: "space-between" }}>
-            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>Ten Commandments</span>
-            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>{cmd.num} of X</span>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>{cmdIdx < COMMANDMENTS.length ? "Ten Commandments" : "State in Life"}</span>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>{cmdIdx + 1} / {examSteps.length}</span>
           </div>
-          <div style={{ padding: "0 20px 6px" }}><div style={{ height: 3, borderRadius: 2, background: "rgba(212,168,67,0.15)" }}><div style={{ height: "100%", borderRadius: 2, background: `linear-gradient(90deg, ${T.crimson}, ${T.gold})`, width: `${((cmdIdx+1)/COMMANDMENTS.length)*100}%`, transition: "width 0.5s" }} /></div></div>
+          <div style={{ padding: "0 20px 6px" }}><div style={{ height: 3, borderRadius: 2, background: "rgba(212,168,67,0.15)" }}><div style={{ height: "100%", borderRadius: 2, background: `linear-gradient(90deg, ${T.crimson}, ${T.gold})`, width: `${((cmdIdx+1)/examSteps.length)*100}%`, transition: "width 0.5s" }} /></div></div>
           <div style={{ flex: 1, overflowY: "auto", padding: "6px 20px 16px" }}>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 3px" }}>{cmd.num} · {cmd.title}</h2>
             <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.gold, lineHeight: 1.5, marginBottom: 2 }}>{cmd.cite}</div>
@@ -2339,7 +2429,7 @@ function ConfessionTab() {
           </div>
           <div style={{ padding: "16px 20px 26px", borderTop: "1px solid rgba(212,168,67,0.12)", display: "flex", gap: 10 }}>
             {cmdIdx > 0 && <button onClick={() => setCmdIdx(cmdIdx - 1)} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1.5px solid rgba(26,39,68,0.2)`, borderRadius: 10, cursor: "pointer" }}>‹ Back</button>}
-            <button onClick={() => { if (cmdIdx < COMMANDMENTS.length - 1) setCmdIdx(cmdIdx + 1); else setView("review"); }} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}` }}>{cmdIdx < COMMANDMENTS.length - 1 ? "Next ›" : "Review ›"}</button>
+            <button onClick={() => { if (cmdIdx < examSteps.length - 1) setCmdIdx(cmdIdx + 1); else setView("review"); }} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}` }}>{cmdIdx < examSteps.length - 1 ? "Next ›" : "Review ›"}</button>
           </div>
         </div>
       )}
@@ -2391,8 +2481,7 @@ function ConfessionTab() {
           <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkMid, textAlign: "center", marginBottom: 16 }}>The priest may offer counsel and assign a penance, then ask for your Act of Contrition.</p>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>Act of Contrition</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{showPrayer ? ACT_OF_CONTRITION : ACT_OF_CONTRITION.substring(0, 160) + "…"}</p>
-            {!showPrayer && <button onClick={() => setShowPrayer(true)} style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.gold, background: "none", border: "none", cursor: "pointer", marginTop: 6, textDecoration: "underline", textDecorationColor: "rgba(212,168,67,0.4)", textUnderlineOffset: 3 }}>Show full prayer ›</button>}
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{ACT_OF_CONTRITION}</p>
           </Card>
           <NavyBtn onClick={() => setAbsolved(true)} style={{ padding: "20px 0", fontSize: fz(16) }}>Confession Complete ›</NavyBtn>
         </div>
@@ -2748,7 +2837,7 @@ function StationsTab({ goHome }) {
 // ═══════════════════════════════════════════════════════════════════
 // ROSARY — TAB
 // ═══════════════════════════════════════════════════════════════════
-function RosaryTab({ goHome }) {
+function RosaryTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [scr, setScr] = useState("select"); // select | pray | complete
   const [mys, setMys] = useState(null); // joyful|sorrowful|glorious|luminous
   const [decade, setDecade] = useState(0); // 0-4
@@ -2887,7 +2976,9 @@ function RosaryTab({ goHome }) {
   return (
     <>
       <div ref={topRef} style={{ height: 0, overflow: "hidden" }} />
-      <TopBar title={getTitle()} showBack onBack={handleBack} />
+      <TopBar title={getTitle()} showBack onBack={handleBack} rightAction={
+        <button onClick={() => setDark && setDark(d => !d)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(17), color: T.inkLight, width: 28, padding: 0, lineHeight: 1 }} title="Toggle dark mode">{dark ? "☀️" : "🌙"}</button>
+      } />
 
       {scr !== "select" && (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", padding: "6px 22px 4px", gap: 4, flexShrink: 0 }}>
@@ -2943,22 +3034,22 @@ function RosaryTab({ goHome }) {
               </div>
             </div>
 
-            {/* ── SPLIT LAYOUT: beads → artwork → prayer → nav ── */}
+            {/* ── IMMERSIVE LAYOUT: all mystery steps with artwork ── */}
             {isImmersive && (
-              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }}>
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
-                {/* TOP: Label + beads — pinned above artwork */}
-                <div style={{ flexShrink: 0, padding: "8px 22px 7px", background: T.warmWhite, borderBottom: `1px solid ${T.cardBorder}` }}>
-                  <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 7 : 0 }}>
-                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
-                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
+                {/* Prayer label + bead counter pinned at top */}
+                <div style={{ flexShrink: 0, padding: "6px 22px 8px", background: T.warmWhite, borderBottom: `1px solid ${T.cardBorder}` }}>
+                  <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 8 : 0 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
+                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
                   </div>
                   {content.beadTotal && (
-                    <div style={{ display: "flex", justifyContent: "center", gap: 5 }}>
+                    <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
                       {Array.from({ length: content.beadTotal }, (_, i) => (
                         <div key={i} style={{
-                          width: content.beadTotal > 5 ? 18 : 22,
-                          height: content.beadTotal > 5 ? 18 : 22,
+                          width: content.beadTotal > 5 ? 20 : 26,
+                          height: content.beadTotal > 5 ? 20 : 26,
                           borderRadius: "50%",
                           background: i < content.beadOf ? T.gold : "transparent",
                           border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
@@ -2971,28 +3062,37 @@ function RosaryTab({ goHome }) {
                   )}
                 </div>
 
-                {/* ARTWORK — capped at 170px, tap to advance */}
-                <div onClick={advance} style={{ flexShrink: 0, height: 170, position: "relative", overflow: "hidden", borderBottom: `1px solid ${T.cardBorder}`, cursor: "pointer", WebkitTapHighlightColor: "transparent" }}>
+                {/* Artwork — tap to advance, object-fit contain so full painting is visible */}
+                <div
+                  onClick={advance}
+                  style={{ flex: 1, position: "relative", overflow: "hidden", cursor: "pointer", WebkitTapHighlightColor: "transparent", minHeight: 0, background: "#0a0a0a", display: "flex", alignItems: "center", justifyContent: "center" }}
+                >
                   <img
                     src={content.img}
                     alt=""
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
+                    style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
                     onError={e => e.target.style.display = "none"}
                   />
-                  {content.credit && (
-                    <div style={{ position: "absolute", bottom: 0, right: 0, padding: "2px 8px", background: "rgba(0,0,0,0.35)", borderTopLeftRadius: 6 }}>
-                      <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.55)", fontStyle: "italic" }}>{content.credit}</span>
+                  {/* Tap hint + credit overlay at bottom */}
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "24px 14px 8px", background: "linear-gradient(transparent, rgba(0,0,0,0.55))", pointerEvents: "none" }}>
+                    <div style={{ textAlign: "center" }}>
+                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: "rgba(255,255,255,0.6)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                        {content.beadTotal
+                          ? (content.beadOf < content.beadTotal ? `Tap image · Bead ${content.beadOf + 1} of ${content.beadTotal}` : "Tap image to continue")
+                          : "Tap image to continue"}
+                      </span>
                     </div>
-                  )}
+                    {content.credit && <div style={{ textAlign: "right", marginTop: 2 }}><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.45)", fontStyle: "italic" }}>{content.credit}</span></div>}
+                  </div>
                 </div>
 
-                {/* Prayer text — takes remaining space, scrollable */}
-                <div style={{ flex: 1, overflowY: "auto", padding: "10px 22px 0", background: T.warmWhite, minHeight: 0 }}>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.7, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
+                {/* Prayer text — compact strip below artwork, scrollable if needed */}
+                <div style={{ flexShrink: 0, padding: "8px 22px 6px", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}`, maxHeight: "26%", overflowY: "auto" }}>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.65, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
                 </div>
 
-                {/* Navigation — pinned at bottom */}
-                <div style={{ padding: "10px 22px 18px", display: "flex", gap: 10, flexShrink: 0, background: T.warmWhite }}>
+                {/* Navigation */}
+                <div style={{ padding: "8px 22px 14px", background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
                   <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
                   <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
                     {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
@@ -3554,12 +3654,13 @@ export default function Custos() {
           {/* Sources */}
           <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>53 Approved Sources. Nothing Else.</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>56 Approved Sources. Nothing Else.</h2>
             {[
               { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
               { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
               { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
-              { icon: "✉", title: "23 Encyclicals", desc: "Gregory XVI through Benedict XVI" },
+              { icon: "✉", title: "21 Encyclicals & 4 Motu Proprio", desc: "Gregory XVI through Benedict XVI" },
+              { icon: "📋", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
               { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
               { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
             ].map((s, i) => (
@@ -3653,7 +3754,7 @@ export default function Custos() {
 
       {tab === "rosary" && (
         <>
-          <RosaryTab goHome={() => setTab("pray")} />
+          <RosaryTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
