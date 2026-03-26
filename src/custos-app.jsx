@@ -2388,7 +2388,12 @@ function ConfessionTab() {
   const [cmdIdx, setCmdIdx] = useState(0);
   const [answers, setAnswers] = useState({});
   const [notes, setNotes] = useState({});
-  const [daysSince] = useState(32);
+  const [lastConfessionDate, setLastConfessionDate] = useState(() => {
+    try { return localStorage.getItem("custos_last_confession") || ""; } catch { return ""; }
+  });
+  const daysSince = lastConfessionDate
+    ? Math.floor((new Date() - new Date(lastConfessionDate)) / 86400000)
+    : null;
   const [absolved, setAbsolved] = useState(false);
   const [fade, setFade] = useState(true);
   const [lifeState, setLifeState] = useState(null); // null | "single" | "married" | "parent" | "consecrated"
@@ -2445,7 +2450,11 @@ function ConfessionTab() {
       : COMMANDMENTS;
 
   const cmd = examSteps[cmdIdx];
-  const timeSince = daysSince < 7 ? `${daysSince} days` : daysSince < 30 ? `${Math.round(daysSince/7)} weeks` : `${Math.round(daysSince/30)} months`;
+  const timeSince = daysSince === null ? "some time"
+    : daysSince === 0 ? "today"
+    : daysSince < 7 ? `${daysSince} day${daysSince === 1 ? "" : "s"}`
+    : daysSince < 30 ? `${Math.round(daysSince/7)} week${Math.round(daysSince/7) === 1 ? "" : "s"}`
+    : `${Math.round(daysSince/30)} month${Math.round(daysSince/30) === 1 ? "" : "s"}`;
 
   const mortalSins = [], venialSins = [];
   examSteps.forEach((c, ci) => c.questions.forEach((q, qi) => {
@@ -2476,8 +2485,25 @@ function ConfessionTab() {
               : <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Come, Holy Spirit, enlighten my heart to see what is sin in my life, give me the grace of true sorrow, and help me to resolve to amend my life. Amen."</p>
             }
           </Card>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-            <div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 2 }}>Last Confession</div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 600, color: T.navyText }}>{daysSince} <span style={{ fontSize: fz(13), fontWeight: 400, color: T.inkLight }}>days ago</span></div></div>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 8 }}>Last Confession</div>
+            <div style={{ padding: "12px 16px", background: T.warmWhite, border: `1px solid ${T.cardBorder}`, borderRadius: 10 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 600, color: T.navyText }}>
+                  {daysSince === null ? "Not set" : daysSince === 0 ? "Today" : `${daysSince} day${daysSince === 1 ? "" : "s"} ago`}
+                </div>
+                {daysSince !== null && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: daysSince > 30 ? T.crimson : T.inkLight }}>
+                  {daysSince > 30 ? "Consider going soon" : daysSince > 7 ? "Within the month" : "Recent"}
+                </div>}
+              </div>
+              <input type="date" value={lastConfessionDate} max={new Date().toISOString().split("T")[0]}
+                onChange={e => {
+                  setLastConfessionDate(e.target.value);
+                  try { localStorage.setItem("custos_last_confession", e.target.value); } catch {}
+                }}
+                style={{ width: "100%", padding: "8px 10px", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, background: T.parchment, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 8, boxSizing: "border-box", colorScheme: "light" }}
+              />
+            </div>
           </div>
           <div style={{ marginBottom: 18 }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 10 }}>Your State in Life</div>
@@ -2560,7 +2586,7 @@ function ConfessionTab() {
       {view === "review" && (
         <div style={{ flex: 1, overflowY: "auto", paddingBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, padding: "22px 20px 6px" }}>
-            {[{ v: mortalSins.length, l: "Mortal", c: T.crimson }, { v: venialSins.length, l: "Venial", c: T.gold }, { v: daysSince, l: "Days Since", c: T.navy }].map((s2,i) => (
+            {[{ v: mortalSins.length, l: "Mortal", c: T.crimson }, { v: venialSins.length, l: "Venial", c: T.gold }, { v: daysSince === null ? "—" : daysSince, l: "Days Since", c: T.navy }].map((s2,i) => (
               <div key={i} style={{ textAlign: "center", padding: "10px 16px", background: T.warmWhite, borderRadius: 10, border: `1px solid ${T.cardBorder}`, flex: 1 }}>
                 <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 600, color: s2.c }}>{s2.v}</div>
                 <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s2.l}</div>
