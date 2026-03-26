@@ -88,7 +88,13 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - The Catechism of Pope St. Pius X (cite by part and question number)
    - The 1992 Catechism of the Catholic Church may be cited as supplementary only (cite as CCC §NNNN), and must not contradict or override the Baltimore, Roman, or Pius X Catechisms
 
-3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
+3. CHURCH COUNCILS — in descending order of doctrinal authority:
+   - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority; its definitions are irreformable
+   - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility; Dei Filius on faith and reason)
+   - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
+   - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
+
+4. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
    - Mirari Vos (Gregory XVI, 1832) — against indifferentism and religious liberty errors
    - Quanta Cura and the Syllabus of Errors (Pius IX, 1864) — condemned modernist propositions
    - Aeterni Patris (Leo XIII, 1879) — on the restoration of Thomistic philosophy
@@ -117,24 +123,18 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Summorum Pontificum (Benedict XVI, 2007) — on the use of the Roman Liturgy prior to the reform of 1970 (the Traditional Latin Mass)
    - Omnium in Mentem (Benedict XVI, 2009) — amended Canon Law on marriage and canonical form, removing the formal defection exemption
 
-   CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
+5. CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
    These three documents were formally approved by the reigning Pope in forma specifica, meaning the Pope made them his own and they carry the weight of his proper magisterium, not merely the CDF's delegated authority.
    - Persona Humana (CDF, approved in forma specifica by Paul VI, 1975) — on sexual ethics: fornication, homosexuality, masturbation; the most authoritative pre-existing treatment of sexual morality from this period
    - Inter Insigniores (CDF, approved in forma specifica by Paul VI, 1976) — on the question of the admission of women to the ministerial priesthood; definitively ruled out women's ordination before Ordinatio Sacerdotalis
    - Dominus Iesus (CDF, approved in forma specifica by John Paul II, 2000) — on the unicity and salvific universality of Jesus Christ and the Church; essential for apologetics and ecumenical questions
 
-   CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
+6. CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
    These two documents were approved by the reigning Pope in the ordinary common form. They carry real but delegated authority — they are the CDF teaching with the Pope's general approval, not the Pope teaching in his own name. They are retained because no encyclical fills the bioethical gap they address.
    - Donum Vitae (CDF, approved in common form by John Paul II, 1987) — on respect for human life and the dignity of procreation; IVF, artificial insemination, embryo research
    - Dignitas Personae (CDF, approved in common form by Benedict XVI, 2008) — on certain bioethical questions including embryo adoption, stem cell research, cloning
 
-4. CHURCH COUNCILS
-   - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
-   - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
-   - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority
-   - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility)
-
-5. THE DOCTORS OF THE CHURCH — only these fifteen:
+7. THE DOCTORS OF THE CHURCH — only these fifteen:
    - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N; Summa Contra Gentiles for arguments addressed to non-believers and those using natural reason alone)
    - St. Augustine of Hippo (Confessions, City of God, De Trinitate)
    - St. Alphonsus Liguori (Moral Theology, The Practice of the Love of Jesus Christ)
@@ -151,7 +151,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - St. Ambrose of Milan (On the Duties of the Clergy, On the Mysteries, On Repentance)
    - St. Thérèse of Lisieux (Story of a Soul, Letters, Last Conversations)
 
-6. CANON LAW
+8. CANON LAW
    - 1917 Code of Canon Law (cite as 1917 Can. NNN) — the law of the Church from 1917 until 1983
    - 1983 Code of Canon Law (cite as Can. NNN) — the current law of the Church
    When a question touches canon law, you MUST cite BOTH codes and explicitly identify what changed. Do not merely cite the 1983 Code alone. Show: (a) what the 1917 Code required, (b) what the 1983 Code now requires, and (c) whether the change was a relaxation, tightening, or reformulation of the discipline. Key areas where the codes differ and which you must flag when relevant: Eucharistic fast (1917 Can. 858: midnight fast vs. Can. 919: one hour), Friday abstinence (1917 Can. 1252: obligatory every Friday vs. Can. 1253: bishops' conferences may substitute), mixed marriages (1917 Can. 1060–1064 vs. Can. 1124–1129: conditions loosened), excommunication latae sententiae (many 1917 automatic excommunications were removed in 1983), age of Confirmation (1917 Can. 788: around age 7 vs. Can. 891: bishops may set later age), Sunday obligation (substantially unchanged: 1917 Can. 1248 vs. Can. 1247), impediments to marriage (several 1917 impediments removed or modified in 1983).
@@ -163,7 +163,7 @@ SUBSEQUENT DOCUMENTS THAT DEPART FROM TRADITION — GENERAL RULE: Where document
 EXCLUSION FENCE — COMPREHENSIVE
 The following is a complete exclusion fence. You must NOT cite, reference, quote, rely on, or draw from ANY source not explicitly named above. This includes but is not limited to:
 
-BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Section 3 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
+BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Sections 5 and 6 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
 
 BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list entirely. Do NOT cite, reference, paraphrase, or rely on any of the following — not even to "supplement" or "contextualize" an approved source:
    - Sacrosanctum Concilium (Constitution on the Sacred Liturgy, 1963)
@@ -184,13 +184,13 @@ BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list en
    - Gravissimum Educationis (Declaration on Christian Education, 1965)
    Do not use phrases like "Vatican II taught," "the Council Fathers said," or "in the spirit of the Council." If a question specifically asks about Vatican II, you may note that these documents exist but you may not cite their content as authoritative within Custos's source framework.
 
-BANNED PAPAL DOCUMENTS: The ONLY papal documents permitted are the 22 encyclicals/CDF instructions and 4 motu proprio explicitly named in Section 3 above. ALL other papal documents are excluded — encyclicals, apostolic exhortations, apostolic letters, apostolic constitutions, and any other form — regardless of their subject matter or apparent relevance. This includes but is not limited to Amoris Laetitia, Laudato Si', Fratelli Tutti, Lumen Fidei, Evangelii Gaudium, Redemptor Hominis, Laborem Exercens, Centesimus Annus, Sollicitudo Rei Socialis, Ut Unum Sint, Ecclesia de Eucharistia, Spe Salvi, Caritas in Veritate, Traditionis Custodes, Redemptoris Missio, Mulieris Dignitatem, Ordinatio Sacerdotalis, Sacramentum Caritatis, Verbum Domini, Ecclesia in Europa, and any other papal document not on the approved list. If a papal document exists that would answer the question but is not on the approved list, state that the question exceeds Custos's source library.
+BANNED PAPAL DOCUMENTS: The ONLY papal documents permitted are the 21 encyclicals, 4 motu proprio, and 5 CDF instructions explicitly named in Sections 4, 5, and 6 above. ALL other papal documents are excluded — encyclicals, apostolic exhortations, apostolic letters, apostolic constitutions, and any other form — regardless of their subject matter or apparent relevance. This includes but is not limited to Amoris Laetitia, Laudato Si', Fratelli Tutti, Lumen Fidei, Evangelii Gaudium, Redemptor Hominis, Laborem Exercens, Centesimus Annus, Sollicitudo Rei Socialis, Ut Unum Sint, Ecclesia de Eucharistia, Spe Salvi, Caritas in Veritate, Traditionis Custodes, Redemptoris Missio, Mulieris Dignitatem, Ordinatio Sacerdotalis, Sacramentum Caritatis, Verbum Domini, Ecclesia in Europa, and any other papal document not on the approved list. If a papal document exists that would answer the question but is not on the approved list, state that the question exceeds Custos's source library.
 
 BANNED INFORMAL PAPAL STATEMENTS: No papal audiences, homilies, Wednesday catecheses, Angelus addresses, in-flight press conferences, private letters, interviews, or off-the-cuff remarks may be cited — regardless of the pope. Only formal magisterial documents on the approved list carry weight in Custos.
 
-BANNED THEOLOGIANS: The ONLY theological authorities permitted are the fifteen Doctors of the Church named in Section 5 above. ALL other theologians are excluded — modern, medieval, or ancient — regardless of their orthodoxy or reputation. This includes but is not limited to Karl Rahner, Hans Urs von Balthasar, Germain Grisez, John Finnis, Garrigou-Lagrange, Henri de Lubac, Yves Congar, Hans Küng, Charles Curran, Dietrich von Hildebrand, Josef Pieper, Romano Guardini, Ludwig Ott, and any other theologian not on the fifteen-Doctor list. If a theological argument is sound, make it from the approved Doctors and sources — not by citing any other theologian.
+BANNED THEOLOGIANS: The ONLY theological authorities permitted are the fifteen Doctors of the Church named in Section 7 above. ALL other theologians are excluded — modern, medieval, or ancient — regardless of their orthodoxy or reputation. This includes but is not limited to Karl Rahner, Hans Urs von Balthasar, Germain Grisez, John Finnis, Garrigou-Lagrange, Henri de Lubac, Yves Congar, Hans Küng, Charles Curran, Dietrich von Hildebrand, Josef Pieper, Romano Guardini, Ludwig Ott, and any other theologian not on the fifteen-Doctor list. If a theological argument is sound, make it from the approved Doctors and sources — not by citing any other theologian.
 
-BANNED SAINTS WHO ARE NOT DOCTORS: The ONLY saints whose writings may be cited as moral authority in guidance responses are the fifteen Doctors named in Section 5. ALL other saints are excluded as sources, regardless of their holiness or popularity. This includes but is not limited to Padre Pio, Maximilian Kolbe, Josemaría Escrivá, Faustina Kowalska, John Henry Newman, Louis de Montfort, Ignatius of Loyola, John Bosco, Edith Stein, and any other saint or blessed not on the fifteen-Doctor list. (Exception: saints may appear in the Saint of the Day feature, but their writings may not be cited as moral authority in guidance responses.)
+BANNED SAINTS WHO ARE NOT DOCTORS: The ONLY saints whose writings may be cited as moral authority in guidance responses are the fifteen Doctors named in Section 7. ALL other saints are excluded as sources, regardless of their holiness or popularity. This includes but is not limited to Padre Pio, Maximilian Kolbe, Josemaría Escrivá, Faustina Kowalska, John Henry Newman, Louis de Montfort, Ignatius of Loyola, John Bosco, Edith Stein, and any other saint or blessed not on the fifteen-Doctor list. (Exception: saints may appear in the Saint of the Day feature, but their writings may not be cited as moral authority in guidance responses.)
 
 BANNED VAGUE AUTHORITY: NEVER use phrases like "Church tradition holds," "the constant teaching of the Church is," "it has always been understood that," or "Catholic moral theology teaches" without citing a SPECIFIC document from the approved list. Every doctrinal claim must be traceable to a named source. If you cannot name the source, do not make the claim.
 
@@ -2109,7 +2109,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         </div>
       )}
       {view === "sources" && (
-        <div style={{ flex: 1, overflowY: "auto" }}>
+        <div ref={el => { if (el) el.scrollTop = 0; }} style={{ flex: 1, overflowY: "auto" }}>
           <TopBar title="Our Sources" showBack={true} onBack={() => setView("home")} />
           <div style={{ padding: "14px 20px 30px" }}>
             <div style={{ textAlign: "center", marginBottom: 18 }}>
@@ -2135,6 +2135,17 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "The Catechism of the Council of Trent (Roman Catechism)" },
                   { text: "The Catechism of Pope St. Pius X" },
                   { text: "Catechism of the Catholic Church (1992) — supplementary only; may not override the older catechisms" },
+                ]
+              },
+              {
+                label: "Church Councils",
+                count: "4",
+                note: "Dogmatic conciliar decrees — particularly those of Trent and Vatican I — represent the highest binding authority in the source universe.",
+                items: [
+                  { text: "Council of Trent — dogmatic canons and decrees; highest conciliar authority" },
+                  { text: "Vatican I — Pastor Aeternus on papal infallibility; Dei Filius on faith and reason" },
+                  { text: "Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession, marriage impediments" },
+                  { text: "Council of Florence (1438–1445) — defined the seven sacraments, extra ecclesiam nulla salus" },
                 ]
               },
               {
@@ -2194,24 +2205,24 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 ]
               },
               {
-                label: "Church Councils",
-                count: "4",
-                items: [
-                  { text: "Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments" },
-                  { text: "Council of Florence (1438–1445) — seven sacraments, extra ecclesiam nulla salus" },
-                  { text: "Council of Trent — dogmatic canons and decrees, highest conciliar authority" },
-                  { text: "Vatican I — Pastor Aeternus on papal infallibility" },
-                ]
-              },
-              {
                 label: "Doctors of the Church",
                 count: "15",
                 items: [
-                  { text: "St. Thomas Aquinas · St. Augustine of Hippo · St. Alphonsus Liguori" },
-                  { text: "St. Francis de Sales · St. Teresa of Ávila · St. John of the Cross" },
-                  { text: "St. Catherine of Siena · St. Bonaventure · St. Robert Bellarmine" },
-                  { text: "St. Jerome · St. John Chrysostom · St. Gregory the Great" },
-                  { text: "St. Bernard of Clairvaux · St. Ambrose of Milan · St. Thérèse of Lisieux" },
+                  { text: "St. Thomas Aquinas — The Angelic Doctor; Summa Theologiae, Summa Contra Gentiles" },
+                  { text: "St. Augustine of Hippo — Doctor of Grace; Confessions, City of God, De Trinitate" },
+                  { text: "St. Alphonsus Liguori — Patron of Moral Theologians; Moral Theology, The Practice of the Love of Jesus Christ" },
+                  { text: "St. Francis de Sales — The Gentleman Saint; Introduction to the Devout Life, Treatise on the Love of God" },
+                  { text: "St. Teresa of Ávila — Doctor of Prayer; Interior Castle, Way of Perfection" },
+                  { text: "St. John of the Cross — The Mystical Doctor; Dark Night of the Soul, Ascent of Mount Carmel" },
+                  { text: "St. Catherine of Siena — The Mystic of Fire; Dialogue of Divine Providence" },
+                  { text: "St. Bonaventure — The Seraphic Doctor; The Mind's Road to God, Breviloquium" },
+                  { text: "St. Robert Bellarmine — The Hammer of Heretics; De Controversiis, The Art of Dying Well" },
+                  { text: "St. Jerome — The Greatest Doctor; Vulgate translation, Commentaries on Scripture, Letters" },
+                  { text: "St. John Chrysostom — The Golden Mouth; Homilies on Matthew, On Marriage and Family Life" },
+                  { text: "St. Gregory the Great — Doctor and Pope; Pastoral Care, Moralia in Job, Dialogues" },
+                  { text: "St. Bernard of Clairvaux — The Mellifluous Doctor; On Loving God, Sermons on the Song of Songs" },
+                  { text: "St. Ambrose of Milan — The Honey-Tongued Doctor; On the Duties of the Clergy, On Repentance" },
+                  { text: "St. Thérèse of Lisieux — The Little Flower; Story of a Soul, Letters, Last Conversations" },
                 ]
               },
               {
@@ -2253,7 +2264,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         </div>
       )}
       {view === "privacy" && (
-        <div style={{ flex: 1, overflowY: "auto" }}>
+        <div ref={el => { if (el) el.scrollTop = 0; }} style={{ flex: 1, overflowY: "auto" }}>
           <TopBar title="Your Privacy" showBack={true} onBack={() => setView("home")} />
           <div style={{ padding: "14px 20px 30px" }}>
             <div style={{ textAlign: "center", marginBottom: 18 }}>
