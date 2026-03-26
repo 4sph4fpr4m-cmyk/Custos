@@ -2587,8 +2587,8 @@ function ConfessionTab() {
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkMid, margin: "0 0 10px" }}>{lifeState === "child" ? "Make the Sign of the Cross, then say:" : "Make the Sign of the Cross, then say:"}</p>
             <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.7, padding: "12px 14px", background: T.parchment, borderRadius: 8, borderLeft: `3px solid ${T.navyText}` }}>
               {lifeState === "child"
-                ? <>"Bless me Father, for I have sinned. This is my <strong style={{ color: T.crimson }}>first confession</strong> <em style={{ color: T.inkLight, fontSize: fz(14) }}>(or: It has been {timeSince} since my last confession)</em>. These are my sins:"</>
-                : <>"Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"</>
+                ? <span>"Bless me Father, for I have sinned. This is my <strong style={{ color: T.crimson }}>first confession</strong> <em style={{ color: T.inkLight, fontSize: fz(14) }}>(or: It has been {timeSince} since my last confession)</em>. These are my sins:"</span>
+                : <span>"Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"</span>
               }
             </div>
           </Card>
