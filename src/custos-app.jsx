@@ -3910,6 +3910,469 @@ function TodayTab() {
 // PRAY HUB — Gateway to all devotional features
 // ═══════════════════════════════════════════════════════════════════
 // ═══════════════════════════════════════════════════════════════════
+// NOVENA DATA
+// ═══════════════════════════════════════════════════════════════════
+
+const NOVENAS = [
+  {
+    id: "sacred_heart",
+    title: "Sacred Heart of Jesus",
+    subtitle: "Nine Days of Reparation & Love",
+    icon: "❤",
+    color: "#7a1c1c",
+    feast: "June (Friday after Corpus Christi)",
+    patron: "Reparation, mercy for sinners, conversion of the lukewarm",
+    intro: "This novena is prayed in honor of the Sacred Heart of Jesus, whose burning love for mankind was revealed to St. Margaret Mary Alacoque. It is traditionally begun nine days before the Feast of the Sacred Heart.",
+    openingPrayer: "O my Jesus, You have said: 'Truly I say to you, ask and you will receive, seek and you will find, knock and the door will be opened to you.' Behold, I knock, I seek, and I ask for the grace of this novena.",
+    closingPrayer: "O Sacred Heart of Jesus, I have asked for many graces, but above all I ask for this: that my heart may be converted and conformed to Thine. Take my heart and possess it entirely. Let it love only what Thou lovest, will only what Thou willest, be united to Thine in all things. Amen.",
+    days: [
+      { theme: "Surrender", prayer: "O Sacred Heart of Jesus, I come before Thee in the poverty of my soul. I have strayed from Thee and relied on my own strength. Today I surrender myself entirely to Thy Heart. Let Thy love be the fire that consumes my pride, my self-sufficiency, and all that stands between my soul and Thee. I trust in Thy mercy. Accept this poor heart as Thine own." },
+      { theme: "Reparation", prayer: "O Sacred Heart of Jesus, wounded by the sins of men, I offer this day in reparation for my own sins and for the sins of those who do not love Thee, who know Thee not, or who have forgotten Thy love. Receive my poor acts of this day as an offering of love. I grieve for every offence against Thee. Have mercy on sinners, and have mercy on me." },
+      { theme: "Confidence", prayer: "O Sacred Heart of Jesus, Thou art my refuge and my strength. The world offers false consolations and empty promises, but Thou alone art steadfast. Today I cast all my anxieties into Thy Heart, trusting in Thy promise to those who consecrate themselves to Thee. Grant me a faith that does not falter when trials come, and a hope rooted not in circumstances but in Thee alone." },
+      { theme: "Charity", prayer: "O Sacred Heart of Jesus, Who art Love itself, enkindle in my heart a fire of true charity — not the sentimental imitation the world offers, but the love that bears all things, endures all things, and seeks not its own. Let me love my neighbor for love of Thee, even when that love is costly. Let my charity be the overflow of my love for Thee." },
+      { theme: "Humility", prayer: "O Sacred Heart of Jesus, meek and humble of Heart, make my heart like unto Thine. I confess that pride is the root of my greatest failures — the pride that resists correction, that seeks its own glory, that finds others' success bitter. Pierce this pride with the wound of Thy humility. Let me decrease that Thou mayest increase in all I do." },
+      { theme: "Perseverance", prayer: "O Sacred Heart of Jesus, Thou who didst persevere even to the agony of the Cross, grant me the grace of holy perseverance. I am weak and easily discouraged. I begin well and fall away. I promise and relapse. Thou knowest my weakness better than I do. Grant me the grace not of never falling, but of always rising — to approach Thy Heart again and again without despair." },
+      { theme: "Purity of Intention", prayer: "O Sacred Heart of Jesus, purify my intentions. Too often I pray with divided attention, work with mixed motives, and serve with one eye on my own reputation. Grant me the singleness of purpose that seeks only Thy glory and the good of souls. Let every act of this day — however small — be done purely for love of Thee." },
+      { theme: "Intercession for Others", prayer: "O Sacred Heart of Jesus, I bring before Thee today all those I love, and all those I find difficult to love. I bring the lukewarm, the lapsed, and the lost. I bring those in suffering of body or soul who have no one to pray for them. Receive this novena day as an offering for them. Let Thy grace reach those who are farthest from Thee, especially those for whom no one prays." },
+      { theme: "Consecration", prayer: "O Sacred Heart of Jesus, on this final day I consecrate myself entirely to Thee — my mind, my will, my heart, my body, my past, my present, and my future. I am Thine. Whatever comes, let me find in Thy Heart my dwelling place. I ask for the grace of final perseverance: that this consecration may not be a moment's devotion but the direction of my whole life. Sacred Heart of Jesus, I place my trust in Thee." },
+    ],
+  },
+  {
+    id: "guadalupe",
+    title: "Our Lady of Guadalupe",
+    subtitle: "Queen of the Americas · Star of the New Evangelization",
+    icon: "🌹",
+    color: "#1a2744",
+    feast: "December 12",
+    patron: "The Americas, the unborn, the poor, indigenous peoples",
+    intro: "Our Lady appeared to St. Juan Diego on Tepeyac Hill in 1531, leaving her miraculous image on his tilma. Under her patronage, millions converted to the Faith. This novena is traditionally prayed before her feast on December 12.",
+    openingPrayer: "Our Lady of Guadalupe, by the grace of God you appeared to your servant Juan Diego and left on his cloak your holy image. Hear my prayer as I come before you in this novena, trusting in your powerful intercession before your divine Son.",
+    closingPrayer: "Most Holy Virgin, thou didst choose to reside among us by leaving us thine image. We beseech thee to obtain for us from thy divine Son the graces we have asked during these nine days, but above all, obtain for us the grace of final perseverance in His love. Amen.",
+    days: [
+      { theme: "Her Apparition", prayer: "Our Lady of Guadalupe, you came not to the powerful but to the humble. You appeared to Juan Diego — a poor indigenous man — and showed the world that God's designs are accomplished not through human prestige but through holy simplicity. Grant me the humility to hear God's voice as Juan Diego heard it, even when the message seems beyond my station or ability. Help me to say, as he did, 'Here I am.'" },
+      { theme: "Her Motherhood", prayer: "Our Lady of Guadalupe, you spoke to Juan Diego with the tenderness of a mother: 'Am I not here, I who am your Mother?' I come before you as a child before its mother, bringing before you all my needs — spiritual and temporal. You know what I carry. You know what I fear. Intercede for me before your divine Son, and draw me ever closer to His Sacred Heart." },
+      { theme: "The Unborn", prayer: "Our Lady of Guadalupe, you are the patron of the unborn, depicted in your tilma as a woman with child, bearing the Child of the world's salvation. I pray today for all unborn children — for their protection, for the conversion of those who do not see their dignity, and for mothers and fathers in crisis. Be the advocate of every child who has no voice, as you were the advocate of Juan Diego when no one believed him." },
+      { theme: "Conversion", prayer: "Our Lady of Guadalupe, through your apparition and miraculous image, nine million people came to the Faith in a matter of years. This was not human persuasion but your intercession. I ask today for the conversion of someone I love — someone who has left the Faith, who has never known it, or who knows it but does not live it. Place them under your mantle as you placed the stars on your cloak." },
+      { theme: "The Poor", prayer: "Our Lady of Guadalupe, you came to the poor and the marginalized. You stood with those whom the powerful dismissed. Open my heart to see the poor as you see them — not as burdens but as Christ Himself in disguise (cf. Matthew 25:40). Move me to concrete works of mercy, not merely sympathy. Grant that my charity may have the warmth of a mother's love rather than the coldness of obligation." },
+      { theme: "Faith Under Trial", prayer: "Our Lady of Guadalupe, Juan Diego carried your message even when the bishop did not believe him. He persisted not out of stubbornness but out of obedience to you. Grant me the same perseverance in following God's call even when it is met with skepticism or rejection. When my faith is tested by the disbelief of the world around me, let me return again and again to the certainty of your maternal presence." },
+      { theme: "The Church in the Americas", prayer: "Our Lady of Guadalupe, Queen of the Americas, I pray for the Church in this land — for bishops, priests, and deacons; for catechists, teachers, and parents; for all the faithful who struggle to hand on the Faith. Purify the Church. Strengthen what is weak. Correct what has gone astray. Raise up holy priests and consecrated souls. Let the New Evangelization bear the fruit that your original apparition bore." },
+      { theme: "Trust in Providence", prayer: "Our Lady of Guadalupe, Juan Diego's uncle was gravely ill, and in his grief Juan feared he would miss the message you had entrusted to him. Yet you healed the uncle and fulfilled all your promises. Teach me this trust — that God's plans are not thwarted by our circumstances, that even our detours and disasters are within His providence. Let me not lose heart when the way seems blocked." },
+      { theme: "Her Perpetual Intercession", prayer: "Our Lady of Guadalupe, as I complete this novena I consecrate myself to your maternal care. I ask you to place me and all those I love under your sacred mantle. Intercede for us with your divine Son — not only for the intention of this novena, but throughout our lives and at the hour of our death. Be our advocate before God as you were Juan Diego's advocate before the bishop." },
+    ],
+  },
+  {
+    id: "st_joseph",
+    title: "St. Joseph",
+    subtitle: "Terror of Demons · Patron of the Universal Church",
+    icon: "⚒",
+    color: "#1a2744",
+    feast: "March 19 (also May 1 — St. Joseph the Worker)",
+    patron: "The Universal Church, families, workers, a happy death, the dying",
+    intro: "St. Joseph, foster-father of Jesus and spouse of the Virgin Mary, is the patron of the Universal Church. His silence in the Gospels speaks of a holiness too deep for words. This novena is prayed for his powerful, fatherly intercession.",
+    openingPrayer: "O glorious St. Joseph, spouse of Mary and foster-father of Jesus, to thee was committed the custody of the Holy Family. I come before thee in confidence, asking thee to take my needs before the throne of God.",
+    closingPrayer: "O St. Joseph, whose protection is so great, so strong, so prompt before the throne of God, I place in thee all my interests and desires. Do not abandon me. Intercede for me as thou didst intercede for the Holy Family. And obtain for me above all the grace of a holy death. Amen.",
+    days: [
+      { theme: "His Hidden Life", prayer: "O St. Joseph, most of your life was hidden. Scripture records almost nothing of your years in Nazareth, yet in that hiddenness you sustained the Word made flesh with your labor, your protection, and your love. Teach me the holiness of the ordinary — that my hidden acts, known only to God, are of infinite value in His sight. Grant me peace with a life that seeks no applause but God's." },
+      { theme: "His Obedience", prayer: "O St. Joseph, when the angel spoke to you in dreams, you obeyed without argument or delay. You rose in the middle of the night and fled to Egypt. You returned when commanded. You asked no explanations. Grant me this prompt and trusting obedience to God's will — especially when I do not understand it, when it is inconvenient, when it costs me something I hold dear." },
+      { theme: "Patron of Workers", prayer: "O St. Joseph the Worker, you supported the Holy Family by the labor of your hands. You taught Jesus the carpenter's trade. Sanctify my work — whether it is honored or obscure, whether I love it or endure it. Let me work not merely for wages or recognition but as a participation in God's creative act. When work is hard, let me offer it. When it is rewarding, let me be grateful." },
+      { theme: "Protector of Families", prayer: "O St. Joseph, guardian of the Holy Family, protect my family. You kept watch over Jesus and Mary through dangers — the threat of Herod, exile in a foreign land, poverty and uncertainty. Extend that same vigilance over my household. Protect our faith, our unity, and our love. Drive away whatever threatens the peace and holiness of our home." },
+      { theme: "His Chastity", prayer: "O St. Joseph, most chaste spouse of the Blessed Virgin, your entire life was a testament to the beauty and power of chastity. In an age that has forgotten this virtue, intercede for me and for all those who struggle against impurity. Obtain for us the grace to see chastity not as deprivation but as a gift — a freeing of love from the tyranny of concupiscence." },
+      { theme: "Terror of Demons", prayer: "O St. Joseph, Terror of Demons — the devil fears thee because thou wast the earthly guardian of the Incarnate God. I ask thy protection against all spiritual enemies. Guard my soul, my family, and my home against the assaults of the evil one. Let thy presence be a wall of defense against every temptation and every spiritual attack." },
+      { theme: "His Interior Life", prayer: "O St. Joseph, man of silence and interior depth, you lived in the constant company of the incarnate Word and His immaculate Mother. Your soul was formed by this proximity to divine holiness. Grant me an interior life that is real — not merely external practice but a genuine friendship with God. Let me seek the silence that makes prayer possible and the recollection that makes virtue stable." },
+      { theme: "Patron of the Church", prayer: "O St. Joseph, proclaimed Patron of the Universal Church by Blessed Pius IX, I pray for the Church today — for the Holy Father, for bishops and priests, for all the faithful. The Church faces great trials: persecution from without, weakness and infidelity from within. As you once protected the child Jesus, protect His Mystical Body. Intercede for the Church's unity, purity, and fidelity." },
+      { theme: "Patron of a Happy Death", prayer: "O St. Joseph, patron of a happy death, you died with Jesus at your side and Mary holding your hand — the most blessed death imaginable. When my hour comes, be at my side as you were at yours. Obtain for me the last sacraments, final perseverance in grace, and a death that is not a catastrophe but a homecoming. Pray for me now and at the hour of my death. Amen." },
+    ],
+  },
+  {
+    id: "padre_pio",
+    title: "St. Padre Pio of Pietrelcina",
+    subtitle: "Stigmatist · Confessor of Millions",
+    icon: "🩸",
+    color: "#7a1c1c",
+    feast: "September 23",
+    patron: "Civil defense volunteers, adolescents, stress relief, the sick",
+    intro: "St. Padre Pio (1887–1968) was a Capuchin Franciscan priest who bore the wounds of Christ in his body for fifty years. He spent up to eighteen hours a day in the confessional and is reported to have miraculously read souls. His counsel: 'Pray, hope, and don't worry.'",
+    openingPrayer: "O St. Padre Pio, wounded with the five wounds of Christ, I come before thee with confidence. Thou who spent thy life bringing souls to God through the confessional and through thy suffering — look upon me with compassion and bring my petition before the throne of grace.",
+    closingPrayer: "Dear Padre Pio, as I end this novena I ask thee to continue to intercede for me. Teach me thy counsel: to pray, to hope, and not to worry. Obtain for me a faith that does not flinch and a love that does not count the cost. Amen.",
+    days: [
+      { theme: "The Stigmata", prayer: "O St. Padre Pio, God chose thee to be configured to the suffering Christ in a visible and extraordinary way. The wounds of Jesus appeared in thy flesh. I do not ask for extraordinary gifts, but I ask to share in what they signify: a true participation in Christ's redemptive suffering. Let me embrace the crosses of my daily life not with resentment but with the offering of love, united to Christ's Passion." },
+      { theme: "The Confessional", prayer: "O St. Padre Pio, thou spent more of thy priestly life in the confessional than in any other ministry. Thou had a supernatural knowledge of souls and led thousands to true repentance. Intercede for me that I may approach the Sacrament of Penance with genuine contrition — not fear of punishment but grief for having offended a God who is all love. Obtain for me a good confessor and the grace of a thorough, humble confession." },
+      { theme: "His Prayer Life", prayer: "O St. Padre Pio, thy days began before dawn and were spent almost entirely in prayer. The Mass lasted hours for thee, because thou wast truly present at Calvary. Intercede for me who am so easily distracted and discouraged in prayer. Obtain for me a love of prayer that is not dependent on feeling but rooted in faith — the faith that God hears, and that prayer is never wasted." },
+      { theme: "Pray, Hope, Don't Worry", prayer: "O St. Padre Pio, thy counsel was simple and profound: 'Pray, hope, and don't worry.' I confess that worry is one of my greatest failings — I carry tomorrow's burdens today, and multiply suffering by anticipation. Help me to pray instead of panic, to hope instead of despair, to trust instead of control. Let thy counsel become the pattern of my days." },
+      { theme: "His Suffering", prayer: "O St. Padre Pio, thou suffered not only the physical wounds of the stigmata but also spiritual darkness, demonic attacks, and misunderstanding from ecclesiastical superiors who restricted thy ministry for years. Thou endured all of this in obedience and without bitterness. When I suffer — in body, soul, or relationships — let me look to thy example and find in it the courage to offer rather than complain." },
+      { theme: "His Love for the Mass", prayer: "O St. Padre Pio, thou once said it would be easier for the world to survive without the sun than without the Holy Sacrifice of the Mass. Help me to understand what thou understood — that the Mass is not merely a ritual but the same sacrifice of Calvary, made present on the altar. Rekindle in me a reverence for the Mass, a desire to attend, a gratitude for this gift that no one in heaven can receive as we can." },
+      { theme: "Intercession for the Sick", prayer: "O St. Padre Pio, who bore sickness in thy own body and ministered to the sick throughout thy life — intercede today for all those who are ill in body, in mind, and in spirit. I bring before thee the sick persons I love and those who have no one to pray for them. Touch them with the healing grace of God, and if physical healing is not His will, grant them the deeper healing of a soul at peace with God." },
+      { theme: "The Spiritual Battle", prayer: "O St. Padre Pio, thou knew the spiritual battle as few saints have — thou encountered the devil directly and physically, yet wast not overcome, because thy trust in God was complete. I ask thy intercession in my own spiritual struggles: against the temptations I keep falling into, against the darkness that descends on my soul, against discouragement and despair. Arm me with prayer, the sacraments, and holy boldness." },
+      { theme: "His Intercession for Souls", prayer: "O St. Padre Pio, intercede for me as thou didst for so many souls who came to thee burdened and left consoled. I ask to be among those for whom thou prayest — through this novena and through my desire to imitate thy love for God. Intercede for me at the hour of my death, and do not cease to pray for me until I stand safely before the throne of God." },
+    ],
+  },
+  {
+    id: "josemaria",
+    title: "St. Josemaría Escrivá",
+    subtitle: "Founder of Opus Dei · Apostle of Ordinary Life",
+    icon: "✏",
+    color: "#1a2744",
+    feast: "June 26",
+    patron: "Opus Dei, diocesan priests, ordinary Christians seeking holiness",
+    intro: "St. Josemaría Escrivá (1902–1975) founded Opus Dei in 1928 after receiving a vision of the universal call to holiness through ordinary work and daily life. He was canonized by St. John Paul II in 2002. His central insight: the street, the office, and the kitchen are places of sanctity.",
+    openingPrayer: "O St. Josemaría, you showed the world that holiness is not reserved for monasteries but is found in the middle of the world — in work, in friendship, in family, in the texture of ordinary days. I ask your intercession as I pray this novena.",
+    closingPrayer: "St. Josemaría, obtain for me the grace to see God in the midst of my ordinary life — to sanctify my work, to love those around me with supernatural charity, and to bring Christ to every corner of my world. Help me to begin again whenever I fall, with the confidence of a child before a loving Father. Amen.",
+    days: [
+      { theme: "The Universal Call to Holiness", prayer: "O St. Josemaría, you heard from God the truth that the world had forgotten: every baptized soul is called to holiness. Not just priests and religious, but lawyers, mothers, students, workers — all. This is not an extraordinary calling but the ordinary consequence of Baptism. Help me to take my own call to holiness seriously, and to stop treating it as an ideal for others." },
+      { theme: "Sanctifying Ordinary Work", prayer: "O St. Josemaría, you taught that work is a participation in God's creative act and can be offered as prayer. The key is not what we do but the love with which we do it. Help me to bring this spirit to my work today — to do it well, as unto God, with attention and love. Let my ordinary tasks become an unbroken thread of prayer woven through the day." },
+      { theme: "Divine Filiation", prayer: "O St. Josemaría, the cornerstone of your teaching was divine filiation — the knowledge that we are truly children of God, not slaves or distant admirers. You prayed 'Abba, Father' with the simplicity and confidence of a beloved child. Grant me this same consciousness: that God is not an abstract principle or a distant judge but a Father who loves me personally and infinitely." },
+      { theme: "Unity of Life", prayer: "O St. Josemaría, you taught unity of life — that faith is not a compartment separate from work, family, and leisure, but the animating principle of everything. I confess that I often live a divided life: religious on Sundays, secular the rest of the week. Help me to weave faith into the whole fabric of my existence, so that there is no act, however small, that is not offered to God." },
+      { theme: "Apostolate of Friendship", prayer: "O St. Josemaría, you taught that the most natural apostolate is friendship — that souls are won not by argument but by the contagion of a genuine Christian life. Give me a holy zeal for the souls of those around me — not the zeal that lectures and moralizes, but the zeal that serves, listens, and loves until others ask what makes us different." },
+      { theme: "The Cross", prayer: "O St. Josemaría, you saw in the Cross not an obstacle but the very shape of the Christian life. You taught your sons and daughters to embrace contradiction, failure, illness, and humiliation as the royal road to union with Christ. Grant me this perspective when my own cross grows heavy: that it is not a sign of abandonment but of intimacy with a God who was not ashamed to die." },
+      { theme: "Humility & Beginning Again", prayer: "O St. Josemaría, one of your most consoling teachings was the call to begin again — that the response to every fall is not despair but a humble new beginning, with the cheerfulness of a child who falls learning to walk. I have fallen many times and grown weary of my own weakness. Grant me the grace to rise once more, without self-pity, and to approach God with the trust of a child, not the shame of a slave." },
+      { theme: "Love for the Church", prayer: "O St. Josemaría, you had a burning, filial love for the Church and for the Pope. Intercede today for the Church: for her unity, her fidelity to Tradition, and her courage in the face of the world's hostility and internal division. Strengthen the love for the Church in my own heart, that I may serve her without bitterness and love her without illusion." },
+      { theme: "Interior Life", prayer: "O St. Josemaría, everything in your teaching rested on the foundation of a serious interior life — daily Mass when possible, mental prayer, examination of conscience, frequent Confession, the Rosary. Help me to order my days so that these practices have their proper place — not squeezed into the margins but given the time they deserve as the most important acts of my day." },
+    ],
+  },
+  {
+    id: "st_jude",
+    title: "St. Jude Thaddaeus",
+    subtitle: "Patron of Hopeless Cases",
+    icon: "🕯",
+    color: "#7a1c1c",
+    feast: "October 28",
+    patron: "Hopeless cases, desperate situations, hospitals, the forgotten",
+    intro: "St. Jude Thaddaeus was one of the Twelve Apostles, cousin of Our Lord, and author of the Epistle of Jude. He is invoked as the patron of hopeless and desperate cases — perhaps because, sharing a name with the traitor Judas, he was often overlooked by those seeking heavenly help.",
+    openingPrayer: "O most holy Apostle St. Jude, faithful servant and friend of Jesus, the Church honors and invokes thee universally as the patron of hopeless cases — of things despaired of. Pray for me who am so miserable and helpless. I promise to honor thee as my patron and to make known thy glorious intercession.",
+    closingPrayer: "O glorious Apostle St. Jude, I thank thee for hearing my prayer. Grant that I may never lose hope in God's mercy, no matter how desperate my circumstances appear. Intercede for me that I may persevere in faith, in hope, and in love until I come at last to see the God whom thou didst serve and now behold face to face. Amen.",
+    days: [
+      { theme: "Hope in God Alone", prayer: "O St. Jude, I come to thee in a situation that seems hopeless to me, and perhaps it is — by human measure. But God's measure is different. What is impossible with men is possible with God (Luke 18:27). Grant me a hope that is not anchored in circumstances but in the character of God Himself — a God who raises the dead and calls into being what does not exist (Romans 4:17)." },
+      { theme: "His Apostolic Witness", prayer: "O St. Jude, Apostle and martyr, thou preached the Gospel at the cost of thy life. Thou died rather than deny the Christ thou had walked with and touched. Grant me a faith that has the same weight and seriousness — not a comfortable faith that costs nothing, but a faith that is worth dying for and therefore worth living for. Strengthen my resolve to hold fast to the faith whatever it costs." },
+      { theme: "Contending for the Faith", prayer: "O St. Jude, whose epistle urges us to contend earnestly for the faith once delivered to the saints (Jude 1:3), intercede for me in my own struggles to hold and defend the faith. I face the quiet apostasy of a culture that has abandoned God. Grant me a holy combativeness for the truth, joined with the charity that wins souls." },
+      { theme: "In Desperate Need", prayer: "O St. Jude, I bring before thee now the specific need that has brought me to this novena — the situation I cannot resolve, the suffering I cannot bear, the person I cannot reach, the sin I cannot break. I do not demand a miracle, but I ask for one if it be God's will. And if not, I ask for the grace to bear my cross with the same fidelity that thou bore thine." },
+      { theme: "The Forgotten", prayer: "O St. Jude, patron of those who feel overlooked and forgotten, intercede for all who cry out and are not heard — the chronically ill, the imprisoned, the elderly, the abandoned. I pray today not only for my own needs but for all those in desperate situations who have no one to advocate for them. Let thy powerful intercession reach those who feel furthest from God's mercy." },
+      { theme: "Mercy for Sinners", prayer: "O St. Jude, the mercy of God is the last hope of sinners — including me. I have sinned gravely, and sometimes my sins seem to multiply faster than my repentance. Yet God's mercy is greater than my sin. Remind me that God is able to keep us from stumbling and to present us faultless before His glory (Jude 1:24). I cling to that promise today." },
+      { theme: "Fidelity in Small Things", prayer: "O St. Jude, the hopeless cases that most defeat us are often not dramatic crises but the slow erosion of daily fidelity — prayers abandoned, resolutions broken, small compromises accumulated. Intercede for me that I may be faithful in small things, trusting that great holiness is built one small act of love at a time. Let me not despair of the slow work of sanctification." },
+      { theme: "Protection from Despair", prayer: "O St. Jude, despair is the most dangerous sin — for it holds that one is beyond God's mercy, which is a lie. Protect me from this spiritual catastrophe. When my soul grows dark and I am tempted to believe that God has abandoned me or that my case is truly hopeless, remind me of thy patronage: thou art the saint of hopeless cases precisely because no case is truly hopeless for God." },
+      { theme: "Thanksgiving and Trust", prayer: "O St. Jude, as I complete this novena I thank thee whether or not I have received what I asked for. God's ways are not my ways. Perhaps He has given me something better than what I asked — perhaps He has given me closer union with Himself through this trial. I place my petition at thy feet and leave it there. Intercede for me that whatever God's answer, I will receive it with faith, with hope, and with love." },
+    ],
+  },
+  {
+    id: "st_anthony",
+    title: "St. Anthony of Padua",
+    subtitle: "Evangelical Doctor · Finder of Lost Things",
+    icon: "📖",
+    color: "#1a2744",
+    feast: "June 13",
+    patron: "Lost things, the poor, travelers, marriage, fertility, amputees",
+    intro: "St. Anthony of Padua (1195–1231) was a Franciscan priest and Doctor of the Church whose preaching converted thousands and whose miracles were legendary. He died at 35. His tomb in Padua has been a place of pilgrimage for eight centuries.",
+    openingPrayer: "O gentle and loving St. Anthony, whose heart was ever full of human sympathy — thou art called the finder of lost things, but thy greatest work was finding lost souls and returning them to God. Hear my prayer as I begin this novena.",
+    closingPrayer: "O wonder-working St. Anthony, I thank thee for thy intercession. Thou who didst give back the Gospel book to a thief who repented, give back to me whatever I have lost — whether it be a possession, a relationship, a virtue, or my peace of soul. Help me to find above all what alone matters: God Himself. Amen.",
+    days: [
+      { theme: "Finder of Lost Things", prayer: "O St. Anthony, thou art invoked for things lost — keys, documents, objects misplaced. But the deepest lost things are spiritual: a faith grown cold, a virtue once possessed and now gone, a peace of soul that used to be one's constant companion. I ask thee today to help me find what is lost in my soul — to recover the fervour, the innocence, the closeness to God that I once had and have allowed to slip away." },
+      { theme: "His Love of Scripture", prayer: "O St. Anthony, the book of the Gospels was found miraculously with thee when thou were thought dead — as if Scripture had claimed thee for its own. Intercede for me that I may love the word of God as thou loved it. Grant me a hunger for Scripture, patience to read it slowly, and the grace to receive it not as information but as a living word spoken to me by God today." },
+      { theme: "Preacher of Conversion", prayer: "O St. Anthony, the Hammer of Heretics, thou could silence a crowd with thy preaching and move hard hearts to tears of repentance. I pray today for those I know who are far from God. Thou did not merely argue them into belief — thou loved them into it. Intercede for the conversion of hearts I carry in my own: those who have drifted, those who have been wounded by the Church, those who never knew God." },
+      { theme: "Patron of the Poor", prayer: "O St. Anthony, thou distributed bread to the hungry from thy own table and thy own poverty. The tradition of giving bread to the poor in thy honor continues today. Open my heart to those in material need. Let me not walk past poverty with indifference. Grant me the practical, flesh-and-blood charity that thy own life exemplified." },
+      { theme: "His Miracles", prayer: "O St. Anthony, miracle-worker, thou restored a severed foot, preached to the fish when men would not listen, and converted the hardened with a word. I do not presume to command miracles, but I ask for one if it be God's will. I believe God can intervene in what seems fixed and irreversible. I ask for His intervention in my present need, trusting that with Him nothing is impossible." },
+      { theme: "His Franciscan Spirit", prayer: "O St. Anthony, son of St. Francis, thou shared the Poverello's love of poverty, simplicity, and the suffering Christ. In an age of comfort and accumulation, this witness is desperately needed. Grant me some portion of this spirit — a detachment from possessions and status, a simplicity of life that clears away the clutter and makes room for God." },
+      { theme: "Doctor of the Church", prayer: "O St. Anthony, Evangelical Doctor, thy theological learning was sanctified by a burning love for souls. Thou did not study in order to display learning but in order to bring truth to those who were perishing for lack of it. Intercede for catechists, teachers, theologians, and all who hand on the faith. Grant them thy combination of learning and love, precision and pastoral warmth." },
+      { theme: "Intercession for Marriages", prayer: "O St. Anthony, traditional patron of marriages and those seeking a spouse, intercede today for all who carry the longing for love — the unmarried who desire marriage, the married who are struggling, the widowed who grieve. Grant that every marriage may be rooted in the love of God and that every family may be a domestic church, however imperfect." },
+      { theme: "Return of Lost Souls", prayer: "O St. Anthony, the greatest lost thing is a soul separated from God. On this final day of the novena, I ask above all for the return of any soul that has strayed — including my own, in whatever ways it has wandered. Thou art the finder of what is lost. Find me wherever I am hiding. Bring me back, made whole and restored to the Body of Christ." },
+    ],
+  },
+  {
+    id: "immaculate_conception",
+    title: "Immaculate Conception",
+    subtitle: "Nine Days of Marian Devotion",
+    icon: "⭐",
+    color: "#1a2744",
+    feast: "December 8",
+    patron: "The United States, purity, the unborn",
+    intro: "The dogma of the Immaculate Conception — defined by Blessed Pius IX in Ineffabilis Deus (1854) — teaches that Mary was preserved from original sin from the first moment of her conception. This novena is traditionally prayed in the nine days before her feast on December 8.",
+    openingPrayer: "O Most Holy Virgin Mary, conceived without sin, I come before thee in this novena trusting in thy powerful intercession. Thou who art full of grace, hear my prayer and present it before thy divine Son.",
+    closingPrayer: "O Immaculate Virgin, preserve me from sin, increase my love for God, and obtain for me the graces I have asked in this novena. Above all, obtain for me the grace to imitate thy fiat — thy complete surrender to the will of God — in every circumstance of my life. Amen.",
+    days: [
+      { theme: "Her Immaculate Conception", prayer: "O Blessed Virgin, conceived without sin, the Church teaches that thou wast preserved from original sin not by thy own merit but by the anticipated merits of thy Son's Redemption. Thou wast the one human person who never experienced the darkening of intellect and weakening of will that afflict the rest of us. Yet thou were utterly dependent on God's grace for this privilege. Help me to contemplate this mystery with gratitude — that God prepared a vessel worthy of His Son." },
+      { theme: "Her Fiat", prayer: "O Blessed Virgin, when Gabriel announced to thee the mystery of the Incarnation, thou asked only one question — and then said 'Be it done to me according to thy word' (Luke 1:38). Teach me this fiat. I know what God asks of me in my conscience, and I resist it. Grant me the simplicity and courage to say yes — completely, immediately, irrevocably." },
+      { theme: "Her Humility", prayer: "O Blessed Virgin, thou said: 'He hath regarded the humility of His handmaid' (Luke 1:48). Thou wast the most exalted creature ever made and thou called thyself a handmaid. Grant me a glimpse of thy humility — the radical acknowledgment that I am nothing without God and everything with Him." },
+      { theme: "Her Role at Cana", prayer: "O Blessed Virgin, at Cana thou saw a need that others had not yet noticed and brought it to thy Son. Thy words to the servants remain thy counsel to us: 'Do whatever He tells you' (John 2:5). I bring before thee today needs that I cannot meet myself. Present them to thy Son as thou presented the embarrassed host's need." },
+      { theme: "Her Presence at Calvary", prayer: "O Blessed Virgin, thou stood at the foot of the Cross when nearly all the Apostles had fled. Thou did not prevent thy Son's Passion — thou offered it with Him. Teach me to stand at the foot of the Cross — in the liturgy, in suffering, in prayer — with thy constancy. Let me not flee when following Christ becomes costly." },
+      { theme: "Mother of the Church", prayer: "O Blessed Virgin, from the Cross thy Son gave thee to us as Mother: 'Woman, behold thy son' (John 19:26). Thou accepted this maternal role for all the children of God. I place myself under thy maternal care today. Protect me, form me, and bring me to thy Son as thou brought the disciples in the upper room to the descent of the Holy Ghost." },
+      { theme: "Her Assumption", prayer: "O Blessed Virgin, thou wast assumed body and soul into heavenly glory — the foretaste and promise of our own resurrection. Thou art already fully what we are called to become. Intercede for me that I may live this earthly life with eyes fixed on eternity — not with indifference to daily duty, but with the perspective that makes every act of love immortal." },
+      { theme: "Mediatrix of Grace", prayer: "O Blessed Virgin, the Church has from ancient times understood thee as Mediatrix — not a mediator equal to Christ, but a channel through whom His graces flow to us, as all graces came to the world through thee in the Incarnation. I ask thee today to intercede for the specific graces I need most. Present them to thy Son with the authority of a mother who knows her child's heart." },
+      { theme: "Queen of Heaven", prayer: "O Blessed Virgin, Queen of Heaven and Earth — a queen mother intercedes for her people before the king. I come before thee as a subject before a queen who also happens to be a mother. Present my needs to the King of Kings who is also thy Son. And when this life is over, receive me under thy mantle and bring me home." },
+    ],
+  },
+  {
+    id: "divine_mercy",
+    title: "Divine Mercy",
+    subtitle: "Nine Days of Trust in God's Mercy",
+    icon: "💧",
+    color: "#7a1c1c",
+    feast: "Divine Mercy Sunday (Second Sunday of Easter)",
+    patron: "Sinners, the dying, those in despair of God's mercy",
+    intro: "The Divine Mercy devotion was given in a series of visions in the 1930s. Our Lord asked that a Feast of Divine Mercy be observed on the Sunday after Easter and that a novena begin on Good Friday. Each day is prayed for a different group of souls.",
+    openingPrayer: "O Jesus, eternal truth, our life, I call upon Thee and I beg Thy mercy for poor sinners. O sweetest Heart of Jesus, full of pity and compassion, I implore Thy mercy for poor sinners. Amen.",
+    closingPrayer: "O Blood and Water that gushed forth from the Heart of Jesus as a fount of mercy for us — I trust in Thee. Jesus, I trust in Thee. Make of me a worthy vessel of Thy mercy, that I may bring others to trust in Thee as I have learned to trust. Amen.",
+    days: [
+      { theme: "All Mankind, Especially Sinners", prayer: "Most merciful Jesus, whose very nature it is to have compassion on us and to forgive us — do not look upon our sins, but upon the trust we place in Thy infinite goodness. Receive us all into the abode of Thy most compassionate Heart. Never let us escape from It. We beg this of Thee by Thy love which unites Thee to the Father and the Holy Spirit. O omnipotence of Divine Mercy, help us in all our needs." },
+      { theme: "Priests and Religious", prayer: "Most merciful Jesus, from whom comes all that is good, increase Thy grace in men and women consecrated to Thy service. Grant them the light of Thy wisdom and protect them with Thy strength. Guard them from the world's contamination, and give them the grace of a burning charity. May the power of Thy mercy accompany them wherever they go." },
+      { theme: "Devout and Faithful Souls", prayer: "Most merciful Jesus, Thou dost bestow special graces on those who have given themselves to a life of fidelity and love. Grant that those who serve Thee with the constancy of daily devotion may become ever more deeply united to Thee. Strengthen them in times of trial, console them in darkness, and let Thy mercy sustain them as they sustain others." },
+      { theme: "Those Who Do Not Yet Know God", prayer: "Most compassionate Jesus, Thou art the Light of the whole world. Receive into the abode of Thy most compassionate Heart the souls of those who do not yet know Thee. Let the rays of Thy grace enlighten them that they, too, may glorify the generosity of Thy mercy for endless ages. May they come to know the God who loves them before they made any move toward Him." },
+      { theme: "Separated Brethren", prayer: "Most merciful Jesus, goodness itself, Thou dost not refuse light to those who seek it of Thee. Receive into the abode of Thy most compassionate Heart those souls who have separated from Thy Church. Draw them by Thy light into the unity of the Church, and do not let them escape from the abode of Thy most compassionate Heart." },
+      { theme: "The Meek and Humble", prayer: "Most merciful Jesus, Thou Thyself said: 'Learn from Me for I am meek and humble of Heart.' Receive into the abode of Thy most compassionate Heart all meek and humble souls and the souls of little children. These souls send all heaven into ecstasy, and they are the Father's favorites — they are a fragrant bouquet before the throne of God." },
+      { theme: "Those Who Venerate the Divine Mercy", prayer: "Most merciful Jesus, whose Heart is Love itself, receive into the abode of Thy most compassionate Heart the souls of those who particularly venerate and glorify the greatness of Thy mercy. These souls are mighty with the very power of God Himself. In the midst of all afflictions and adversities they go forward confident in God's mercy — united to Thee they carry all of mankind on their shoulders." },
+      { theme: "The Souls in Purgatory", prayer: "Most merciful Jesus, Thou Thyself have said that Thou desire mercy. Behold, I bring into the abode of Thy most compassionate Heart the souls in Purgatory — souls who are very dear to Thee, and yet who must make retribution to Thy justice. May the streams of blood and water which gushed forth from Thy Heart put out the flames of Purgatory." },
+      { theme: "Lukewarm Souls", prayer: "Most compassionate Jesus, Thou art compassion itself. I bring lukewarm souls into the abode of Thy most compassionate Heart. In this fire of pure love let these tepid souls — who, like corpses, fill Thee with such deep loathing — be once again set aflame. O most compassionate Jesus, exercise the omnipotence of Thy mercy and draw them into the very ardour of Thy love." },
+    ],
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// NOVENA TAB COMPONENT
+// ═══════════════════════════════════════════════════════════════════
+function NovenaTab({ goHome }) {
+  const [view, setView] = useState("list");
+  const [selected, setSelected] = useState(null);
+  const [dayIdx, setDayIdx] = useState(0);
+  const [completedDays, setCompletedDays] = useState({});
+  const [storageReady, setStorageReady] = useState(false);
+  const [fade, setFade] = useState(true);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await window.storage.get("novena_progress");
+        if (result && result.value) setCompletedDays(JSON.parse(result.value));
+      } catch (_) {}
+      setStorageReady(true);
+    })();
+  }, []);
+
+  const saveProgress = async (updated) => {
+    try { await window.storage.set("novena_progress", JSON.stringify(updated)); } catch (_) {}
+  };
+
+  const getDaysCompleted = (id) => (completedDays[id] || Array(9).fill(false)).filter(Boolean).length;
+  const isDayDone = (id, idx) => (completedDays[id] || Array(9).fill(false))[idx] === true;
+
+  const markDayComplete = async (id, idx) => {
+    const days = completedDays[id] ? [...completedDays[id]] : Array(9).fill(false);
+    days[idx] = true;
+    const updated = { ...completedDays, [id]: days };
+    setCompletedDays(updated);
+    await saveProgress(updated);
+    return days.every(Boolean);
+  };
+
+  const resetNovena = async (id) => {
+    const updated = { ...completedDays, [id]: Array(9).fill(false) };
+    setCompletedDays(updated);
+    await saveProgress(updated);
+  };
+
+  const transition = (fn) => {
+    setFade(false);
+    setTimeout(() => { fn(); setFade(true); if (scrollRef.current) scrollRef.current.scrollTop = 0; }, 160);
+  };
+
+  const openNovena = (novena) => {
+    setSelected(novena);
+    const days = completedDays[novena.id] || Array(9).fill(false);
+    const firstIncomplete = days.findIndex(d => !d);
+    setDayIdx(firstIncomplete === -1 ? 8 : firstIncomplete);
+    setView("detail");
+  };
+
+  const completeDay = async () => {
+    const allDone = await markDayComplete(selected.id, dayIdx);
+    if (allDone) {
+      transition(() => setView("complete"));
+    } else {
+      transition(() => setView("detail"));
+    }
+  };
+
+  // ── List ──
+  if (view === "list") {
+    return (
+      <>
+        <TopBar title="Novena Guide" showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 22 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>🕯</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Novena Guide</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0 }}>Nine days of prayer · Progress saved</p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {NOVENAS.map(nov => {
+              const done = getDaysCompleted(nov.id);
+              const isComplete = done === 9;
+              return (
+                <button key={nov.id} onClick={() => openNovena(nov)} style={{
+                  display: "flex", alignItems: "center", gap: 14, padding: "14px 16px",
+                  background: T.warmWhite,
+                  border: `1px solid ${isComplete ? "rgba(212,168,67,0.45)" : T.cardBorder}`,
+                  borderRadius: 14, cursor: "pointer", textAlign: "left",
+                  boxShadow: isComplete ? "0 2px 12px rgba(212,168,67,0.12)" : "none",
+                }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 12, flexShrink: 0, background: `linear-gradient(135deg, ${nov.color}, ${nov.color}cc)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: fz(22) }}>{nov.icon}</div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{nov.title}</div>
+                    <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12.5), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{nov.feast}</div>
+                    <div style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
+                      <div style={{ flex: 1, height: 4, background: "rgba(212,168,67,0.15)", borderRadius: 2, overflow: "hidden" }}>
+                        <div style={{ height: "100%", width: `${(done / 9) * 100}%`, background: isComplete ? `linear-gradient(90deg, ${T.gold}, ${T.goldLight})` : T.gold, borderRadius: 2, transition: "width 0.4s" }} />
+                      </div>
+                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: isComplete ? T.gold : T.inkLight, letterSpacing: "0.04em", flexShrink: 0 }}>
+                        {isComplete ? "✓ Done" : done === 0 ? "Begin" : `Day ${done + 1}/9`}
+                      </span>
+                    </div>
+                  </div>
+                  <span style={{ color: T.gold, fontSize: 18 }}>›</span>
+                </button>
+              );
+            })}
+          </div>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 18, lineHeight: 1.5 }}>
+            Your progress is saved on this device and persists between sessions.
+          </p>
+        </div>
+      </>
+    );
+  }
+
+  // ── Detail (day selector) ──
+  if (view === "detail" && selected) {
+    return (
+      <>
+        <TopBar title={selected.title} showBack={true} onBack={() => transition(() => setView("list"))} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px", opacity: fade ? 1 : 0, transition: "opacity 0.16s" }}>
+          <div style={{ textAlign: "center", marginBottom: 18 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 58, height: 58, borderRadius: "50%", background: `linear-gradient(135deg, ${selected.color}, ${selected.color}cc)`, border: "1.5px solid rgba(212,168,67,0.3)", marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>{selected.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 2px" }}>{selected.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.gold, margin: "0 0 2px" }}>{selected.subtitle}</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: 0 }}>Feast: {selected.feast}</p>
+          </div>
+          <Card style={{ marginBottom: 14 }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{selected.intro}</p>
+          </Card>
+          <div style={{ marginBottom: 14, padding: "10px 14px", background: T.goldFaint, borderRadius: 10, border: `1px solid rgba(212,168,67,0.2)` }}>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Patron of · </span>
+            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark, fontStyle: "italic" }}>{selected.patron}</span>
+          </div>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>Nine Days</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 18 }}>
+            {selected.days.map((day, i) => {
+              const done2 = isDayDone(selected.id, i);
+              const isNext = !done2 && (i === 0 || isDayDone(selected.id, i - 1));
+              return (
+                <button key={i} onClick={() => { setDayIdx(i); setView("pray"); }} style={{
+                  display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
+                  background: done2 ? "rgba(212,168,67,0.08)" : T.warmWhite,
+                  border: `1px solid ${done2 ? "rgba(212,168,67,0.35)" : isNext ? T.cardBorderStrong : T.cardBorder}`,
+                  borderRadius: 12, cursor: "pointer", textAlign: "left",
+                }}>
+                  <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, background: done2 ? `linear-gradient(135deg, ${T.gold}, ${T.goldLight})` : isNext ? `linear-gradient(135deg, ${selected.color}, ${selected.color}cc)` : "rgba(212,168,67,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    {done2 ? <span style={{ color: T.navy, fontSize: fz(14), fontWeight: 700 }}>✓</span> : <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: isNext ? "#d4a843" : T.inkLight }}>{i + 1}</span>}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: done2 ? T.gold : T.navyText, letterSpacing: "0.04em" }}>Day {i + 1} · {day.theme}</div>
+                    {done2 && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>Completed</div>}
+                    {isNext && !done2 && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.gold, fontStyle: "italic", marginTop: 1 }}>Up next</div>}
+                  </div>
+                  <span style={{ color: T.inkLight, fontSize: 15 }}>›</span>
+                </button>
+              );
+            })}
+          </div>
+          {getDaysCompleted(selected.id) > 0 && (
+            <button onClick={() => resetNovena(selected.id)} style={{ background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "center" }}>
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textDecoration: "underline" }}>Reset progress</span>
+            </button>
+          )}
+        </div>
+      </>
+    );
+  }
+
+  // ── Pray (single day) ──
+  if (view === "pray" && selected) {
+    const day = selected.days[dayIdx];
+    const alreadyDone = isDayDone(selected.id, dayIdx);
+    return (
+      <>
+        <TopBar title={`Day ${dayIdx + 1} of 9`} showBack={true} onBack={() => transition(() => setView("detail"))}
+          rightAction={<div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", maxWidth: 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{selected.icon}</div>}
+        />
+        <div style={{ display: "flex", gap: 4, padding: "10px 20px 6px", background: T.warmWhite, justifyContent: "center" }}>
+          {selected.days.map((_, i) => (
+            <div key={i} style={{ width: i === dayIdx ? 20 : 7, height: 7, borderRadius: 4, background: isDayDone(selected.id, i) ? T.gold : i === dayIdx ? selected.color : "rgba(212,168,67,0.2)", opacity: isDayDone(selected.id, i) && i !== dayIdx ? 0.6 : 1, transition: "all 0.3s" }} />
+          ))}
+        </div>
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "18px 22px 20px", opacity: fade ? 1 : 0, transition: "opacity 0.16s" }}>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Day {dayIdx + 1} · {day.theme}</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: 0 }}>{selected.title}</h2>
+          </div>
+          <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.navy}` }}>
+            <CardTitle color={T.navyText}>Opening Prayer</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.openingPrayer}</p>
+          </Card>
+          <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.crimson}` }}>
+            <CardTitle color={T.crimson}>Day {dayIdx + 1} — {day.theme}</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{day.prayer}</p>
+          </Card>
+          <Card style={{ marginBottom: 20, borderLeft: `3px solid ${T.gold}` }}>
+            <CardTitle color={T.gold}>Closing Prayer</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.closingPrayer}</p>
+          </Card>
+        </div>
+        <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, flexShrink: 0 }}>
+          {alreadyDone ? (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ textAlign: "center", padding: "8px", fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.gold, fontStyle: "italic" }}>✓ This day is already completed</div>
+              {dayIdx < 8 ? <CrimsonBtn onClick={() => transition(() => setDayIdx(dayIdx + 1))}>Next Day ›</CrimsonBtn> : <NavyBtn onClick={() => transition(() => setView("detail"))}>Return to Novena</NavyBtn>}
+            </div>
+          ) : (
+            <CrimsonBtn onClick={completeDay}>{dayIdx < 8 ? "Mark Complete & Continue ›" : "Complete Novena ✓"}</CrimsonBtn>
+          )}
+        </div>
+      </>
+    );
+  }
+
+  // ── Complete ──
+  if (view === "complete" && selected) {
+    return (
+      <>
+        <TopBar title="Novena Complete" showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: "50%", background: T.goldFaint, border: "2px solid rgba(212,168,67,0.4)", marginBottom: 14 }}>
+              <span style={{ fontSize: fz(32) }}>{selected.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 500, color: T.inkDark, margin: "0 0 6px" }}>{selected.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.gold, margin: "0 0 4px" }}>Nine days completed</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, margin: 0 }}>Your prayer has been heard.</p>
+          </div>
+          <Card style={{ marginBottom: 20, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.closingPrayer}</p>
+          </Card>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <GhostBtn onClick={() => resetNovena(selected.id).then(() => transition(() => setView("detail")))}>Pray Again</GhostBtn>
+            <NavyBtn onClick={() => transition(() => setView("list"))}>All Novenas</NavyBtn>
+            <GhostBtn onClick={goHome}>Return to Prayer</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════════
 // CATECHISM DRILL — BALTIMORE CATECHISM Q&A
 // ═══════════════════════════════════════════════════════════════════
 
@@ -4926,6 +5389,7 @@ function PrayHub({ onTab }) {
     { id: "confession", icon: "⚖", title: "Confession Preparation", desc: "Examination of conscience by the Ten Commandments", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
     { id: "liturgy", icon: "📖", title: "Liturgy of the Hours", desc: "Lauds · Terce · Sext · None · Vespers · Compline", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "drill", icon: "📕", title: "Catechism Drill", desc: "Baltimore Catechism flashcards — Question & Answer", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
+    { id: "novena", icon: "🕯", title: "Novena Guide", desc: "Nine-day prayer tracker · Sacred Heart, Padre Pio, St. Jude & more", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
   ];
 
   return (
@@ -5203,6 +5667,13 @@ export default function Custos() {
       {tab === "drill" && (
         <>
           <CatechismDrillTab goHome={() => setTab("pray")} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "novena" && (
+        <>
+          <NovenaTab goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
