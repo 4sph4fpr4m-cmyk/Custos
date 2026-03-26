@@ -1302,6 +1302,30 @@ function BottomNav({ active, onTab }) {
   );
 }
 
+// Reusable settings strip used by every primary tab (Today, Pray, Doctors)
+function GlobalTopBar({ title, dark, setDark, fszGlobal, setFszGlobal, onSettings, showBack, onBack }) {
+  return (
+    <>
+      <div style={{
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        padding: "14px 20px 12px", background: T.warmWhite,
+        borderBottom: "1px solid rgba(212,168,67,0.2)", flexShrink: 0,
+      }}>
+        {showBack ? (
+          <button onClick={onBack} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(24), color: T.navyText, padding: 0, lineHeight: 1, width: 28 }}>←</button>
+        ) : <div style={{ width: 28 }} />}
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center" }}>{title}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 6, width: 72, justifyContent: "flex-end" }}>
+          <button onClick={() => setFszGlobal((fszGlobal + 1) % 3)} style={{ background: "none", border: `1px solid ${T.cardBorder}`, borderRadius: 6, cursor: "pointer", fontFamily: "Cinzel, serif", fontSize: 12, fontWeight: 700, color: T.inkLight, padding: "2px 7px", lineHeight: 1.4 }}>{["A⁻", "A", "A⁺"][fszGlobal]}</button>
+          <button onClick={() => setDark(!dark)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(18), padding: 0, width: 24, lineHeight: 1, color: T.inkLight }}>{dark ? "☀" : "☽"}</button>
+          <button onClick={onSettings} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(16), padding: 0, width: 20, lineHeight: 1, color: T.inkLight }}>⚙</button>
+        </div>
+      </div>
+      <div style={{ height: 2, flexShrink: 0, background: `linear-gradient(90deg, transparent, ${T.gold}, transparent)`, opacity: 0.4 }} />
+    </>
+  );
+}
+
 function SaintQuote({ name, quote, source, borderColor, isExact }) {
   return (
     <div style={{ borderLeft: `3px solid ${borderColor || T.gold}`, paddingLeft: 16 }}>
@@ -2665,7 +2689,7 @@ function ConfessionTab() {
 // TRADITION BROWSER
 // ═══════════════════════════════════════════════════════════════════
 
-function TraditionTab() {
+function TraditionTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const [view, setView] = useState("list");
   const [doctor, setDoctor] = useState(null);
   const [search, setSearch] = useState("");
@@ -2681,7 +2705,10 @@ function TraditionTab() {
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "list"} onBack={() => { setView("list"); setDoctor(null); setQuoteIdx(0); }} />
+      {view === "list"
+        ? <GlobalTopBar title="The Doctors" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
+        : <TopBar title={title} showBack={true} onBack={() => { setView("list"); setDoctor(null); setQuoteIdx(0); }} />
+      }
       {view === "list" && (
         <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px" }}>
           <div style={{ textAlign: "center", marginBottom: 16 }}>
@@ -3412,8 +3439,8 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
   const [reminders, setReminders] = useState(() => {
     try {
       const stored = localStorage.getItem("custos_reminders");
-      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false };
-    } catch { return { prayer: false, confession: false, stations: false }; }
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" };
+    } catch { return { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" }; }
   });
 
   const saveReminders = (updated) => {
@@ -3533,13 +3560,44 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
 
         {/* ═══ REMINDERS ═══ */}
         <Section title="Daily Reminders">
-          {notifPerm === "denied" && (reminders.prayer || reminders.confession || reminders.stations) && (
+          {notifPerm === "denied" && (reminders.prayer || reminders.confession || reminders.stations || reminders.examen) && (
             <div style={{ padding: "10px 16px", borderBottom: `1px solid ${T.cardBorder}`, background: T.goldFaint }}>
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, fontStyle: "italic" }}>
                 Browser notifications are blocked. Reminders will appear as banners in the Today tab instead.
               </p>
             </div>
           )}
+          {/* Evening Examen — primary new feature */}
+          <div style={{ borderBottom: `1px solid ${T.cardBorder}` }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px" }}>
+              <span style={{ fontSize: 18, width: 24, textAlign: "center", flexShrink: 0 }}>🕯</span>
+              <span style={{ flex: 1, fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark }}>Evening Examen</span>
+              <Toggle on={!!reminders.examen} onToggle={() => toggleReminder("examen")} />
+            </div>
+            {reminders.examen && (
+              <div style={{ padding: "0 16px 14px 56px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic" }}>Remind me at</span>
+                <input
+                  type="time"
+                  value={reminders.examenTime || "21:00"}
+                  onChange={e => {
+                    const updated = { ...reminders, examenTime: e.target.value };
+                    setReminders(updated);
+                    try { localStorage.setItem("custos_reminders", JSON.stringify(updated)); } catch {}
+                    setSaved(true);
+                    setTimeout(() => setSaved(false), 1200);
+                  }}
+                  style={{
+                    fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600,
+                    color: T.navyText, background: T.parchment,
+                    border: `1px solid ${T.cardBorderStrong}`, borderRadius: 8,
+                    padding: "5px 10px", cursor: "pointer",
+                  }}
+                />
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic" }}>each evening</span>
+              </div>
+            )}
+          </div>
           <Row icon="🙏" label="Morning Prayer Reminder" right={<Toggle on={reminders.prayer} onToggle={() => toggleReminder("prayer")} />} />
           <Row icon="⚖" label="Confession Reminder" right={<Toggle on={reminders.confession} onToggle={() => toggleReminder("confession")} />} />
           <Row icon="✝" label="Stations of the Cross" last right={<Toggle on={reminders.stations} onToggle={() => toggleReminder("stations")} />} />
@@ -3711,7 +3769,7 @@ function getDailyTrivia(liturgicalSeason) {
 // ═══════════════════════════════════════════════════════════════════
 // TODAY TAB — Liturgical calendar, readings, saint, reflection
 // ═══════════════════════════════════════════════════════════════════
-function TodayTab() {
+function TodayTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const today = new Date();
   const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -3722,8 +3780,8 @@ function TodayTab() {
   const [reminders] = useState(() => {
     try {
       const stored = localStorage.getItem("custos_reminders");
-      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false };
-    } catch { return { prayer: false, confession: false, stations: false }; }
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" };
+    } catch { return { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" }; }
   });
 
   const lit = getLiturgicalDay(today);
@@ -3755,13 +3813,22 @@ function TodayTab() {
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-      <TopBar title="Today" showBack={false} />
+      <GlobalTopBar title="Today" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
       <div style={{ flex: 1, overflowY: "auto", paddingBottom: 8 }}>
         <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", padding: "18px 20px 0" }}>{dateStr}</div>
 
         {/* Reminder banners */}
-        {(reminders.prayer || reminders.confession || reminders.stations) && (
+        {(reminders.prayer || reminders.confession || reminders.stations || reminders.examen) && (
           <div style={{ margin: "10px 20px 0", display: "flex", flexDirection: "column", gap: 6 }}>
+            {reminders.examen && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(26,39,68,0.06)", border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>🕯</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>Evening Examen</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Reminder set for {reminders.examenTime || "21:00"} · Take time to review your day with God.</div>
+                </div>
+              </div>
+            )}
             {reminders.prayer && (
               <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: T.goldFaint, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10 }}>
                 <span style={{ fontSize: fz(16) }}>🙏</span>
@@ -5381,7 +5448,7 @@ function LiturgyTab({ goHome }) {
   );
 }
 
-function PrayHub({ onTab }) {
+function PrayHub({ onTab, dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const items = [
     { id: "examen", icon: "🕯", title: "Daily Examen", desc: "Ignatian five-movement prayer to review your day with God", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "rosary", icon: "📿", title: "Holy Rosary", desc: "Joyful · Sorrowful · Glorious mysteries, bead by bead", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
@@ -5394,7 +5461,7 @@ function PrayHub({ onTab }) {
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-      <TopBar title="Pray" showBack={false} />
+      <GlobalTopBar title="Pray" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
       <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 20 }}>
           <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>The Devotional Life</h2>
@@ -5433,6 +5500,40 @@ export default function Custos() {
   const FSCALES = [0.88, 1, 1.14];
   const FLABELS = ["A⁻", "A", "A⁺"];
   fontScale = FSCALES[fszGlobal];
+
+  // ── Examen notification scheduler ──
+  useEffect(() => {
+    let timer = null;
+    const schedule = () => {
+      try {
+        const stored = localStorage.getItem("custos_reminders");
+        if (!stored) return;
+        const reminders = JSON.parse(stored);
+        if (!reminders.examen) return;
+        const [hStr, mStr] = (reminders.examenTime || "21:00").split(":");
+        const h = parseInt(hStr, 10);
+        const m = parseInt(mStr, 10);
+        const now = new Date();
+        const target = new Date();
+        target.setHours(h, m, 0, 0);
+        if (target <= now) target.setDate(target.getDate() + 1);
+        const msUntil = target - now;
+        timer = setTimeout(() => {
+          if (Notification.permission === "granted") {
+            new Notification("Evening Examen — Custos", {
+              body: "Take a few minutes to review your day with God. Open the Daily Examen in Custos.",
+              icon: "/favicon.ico",
+              tag: "custos-examen",
+            });
+          }
+          // Re-schedule for next day
+          schedule();
+        }, msUntil);
+      } catch (_) {}
+    };
+    schedule();
+    return () => { if (timer) clearTimeout(timer); };
+  }, []);
 
   // Scroll to top on every tab change
   useEffect(() => {
@@ -5616,14 +5717,14 @@ export default function Custos() {
 
       {tab === "today" && (
         <>
-          <TodayTab />
+          <TodayTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="today" onTab={setTab} />
         </>
       )}
 
       {tab === "pray" && (
         <>
-          <PrayHub onTab={setTab} />
+          <PrayHub onTab={setTab} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
@@ -5680,7 +5781,7 @@ export default function Custos() {
 
       {tab === "tradition" && (
         <>
-          <TraditionTab />
+          <TraditionTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="tradition" onTab={setTab} />
         </>
       )}
