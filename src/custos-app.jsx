@@ -2115,32 +2115,135 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 56 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
-              { label: "Sacred Scripture", items: ["Douay-Rheims Bible (required for all quotations)", "The Vulgate (Latin reference)"] },
-              { label: "Catechisms", items: ["The Baltimore Catechism", "The Catechism of the Council of Trent (Roman Catechism)", "The Catechism of Pope St. Pius X", "Catechism of the Catholic Church (1992) — supplementary only"] },
-              { label: "Papal Encyclicals & CDF Documents (23)", items: ["Mirari Vos (Gregory XVI, 1832)", "Quanta Cura & Syllabus of Errors (Pius IX, 1864)", "Aeterni Patris (Leo XIII, 1879)", "Immortale Dei (Leo XIII, 1885)", "Libertas (Leo XIII, 1888)", "Rerum Novarum (Leo XIII, 1891)", "Pascendi Dominici Gregis (Pius X, 1907)", "Mortalium Animos (Pius XI, 1928)", "Casti Connubii (Pius XI, 1930)", "Quadragesimo Anno (Pius XI, 1931)", "Divini Redemptoris (Pius XI, 1937)", "Mit brennender Sorge (Pius XI, 1937)", "Mystici Corporis Christi (Pius XII, 1943)", "Mediator Dei (Pius XII, 1947)", "Humani Generis (Pius XII, 1950)", "Humanae Vitae (Paul VI, 1968)", "Familiaris Consortio (John Paul II, 1981)", "Veritatis Splendor (John Paul II, 1993)", "Evangelium Vitae (John Paul II, 1995)", "Fides et Ratio (John Paul II, 1998)", "Deus Caritas Est (Benedict XVI, 2005)", "Donum Vitae (CDF, 1987)", "Dignitas Personae (CDF, 2008)"] },
-              { label: "Motu Proprio (4)", items: ["Ecclesia Dei (John Paul II, 1988) — traditional Catholic communities", "Ad Tuendam Fidem (John Paul II, 1998) — grades of theological assent", "Summorum Pontificum (Benedict XVI, 2007) — the Traditional Latin Mass", "Omnium in Mentem (Benedict XVI, 2009) — marriage and canonical form"] },
-              { label: "Church Councils (4)", items: ["Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments", "Council of Florence (1438–1445) — the seven sacraments, extra ecclesiam nulla salus", "Council of Trent — dogmatic canons (highest authority)", "Vatican I — dogmatic definitions"] },
-              { label: "Doctors of the Church (15)", items: ["St. Thomas Aquinas", "St. Augustine of Hippo", "St. Alphonsus Liguori", "St. Francis de Sales", "St. Teresa of Ávila", "St. John of the Cross", "St. Catherine of Siena", "St. Bonaventure", "St. Robert Bellarmine", "St. Jerome", "St. John Chrysostom", "St. Gregory the Great", "St. Bernard of Clairvaux", "St. Ambrose of Milan", "St. Thérèse of Lisieux"] },
-              { label: "Canon Law (both codes, cited side by side)", items: ["1917 Code of Canon Law — the law of the Church from 1917 until 1983", "1983 Code of Canon Law — the current law of the Church", "When both codes address a question, Custos cites both so you can see what changed"] },
+              {
+                label: "Sacred Scripture",
+                count: null,
+                items: [
+                  { text: "Douay-Rheims Bible — required for all quotations" },
+                  { text: "The Vulgate — Latin reference" },
+                ]
+              },
+              {
+                label: "Catechisms",
+                count: "4",
+                items: [
+                  { text: "The Baltimore Catechism" },
+                  { text: "The Catechism of the Council of Trent (Roman Catechism)" },
+                  { text: "The Catechism of Pope St. Pius X" },
+                  { text: "Catechism of the Catholic Church (1992) — supplementary only; may not override the older catechisms" },
+                ]
+              },
+              {
+                label: "Papal Encyclicals & Apostolic Documents",
+                count: "21",
+                items: [
+                  { text: "Mirari Vos — Gregory XVI, 1832" },
+                  { text: "Quanta Cura & Syllabus of Errors — Pius IX, 1864" },
+                  { text: "Aeterni Patris — Leo XIII, 1879" },
+                  { text: "Immortale Dei — Leo XIII, 1885" },
+                  { text: "Libertas — Leo XIII, 1888" },
+                  { text: "Rerum Novarum — Leo XIII, 1891" },
+                  { text: "Pascendi Dominici Gregis — Pius X, 1907" },
+                  { text: "Mortalium Animos — Pius XI, 1928" },
+                  { text: "Casti Connubii — Pius XI, 1930" },
+                  { text: "Quadragesimo Anno — Pius XI, 1931" },
+                  { text: "Divini Redemptoris — Pius XI, 1937" },
+                  { text: "Mit brennender Sorge — Pius XI, 1937" },
+                  { text: "Mystici Corporis Christi — Pius XII, 1943" },
+                  { text: "Mediator Dei — Pius XII, 1947" },
+                  { text: "Humani Generis — Pius XII, 1950" },
+                  { text: "Humanae Vitae — Paul VI, 1968" },
+                  { text: "Familiaris Consortio — John Paul II, 1981" },
+                  { text: "Veritatis Splendor — John Paul II, 1993" },
+                  { text: "Evangelium Vitae — John Paul II, 1995" },
+                  { text: "Fides et Ratio — John Paul II, 1998" },
+                  { text: "Deus Caritas Est — Benedict XVI, 2005" },
+                ]
+              },
+              {
+                label: "Motu Proprio",
+                count: "4",
+                items: [
+                  { text: "Ecclesia Dei — John Paul II, 1988" },
+                  { text: "Ad Tuendam Fidem — John Paul II, 1998" },
+                  { text: "Summorum Pontificum — Benedict XVI, 2007" },
+                  { text: "Omnium in Mentem — Benedict XVI, 2009" },
+                ]
+              },
+              {
+                label: "CDF Instructions — Approved In Forma Specifica",
+                count: "3",
+                note: "The Pope formally ratified each of these, making them his own act. They carry authority equivalent to an encyclical.",
+                items: [
+                  { text: "Persona Humana — CDF, 1975 · approved in forma specifica by Paul VI · on sexual ethics" },
+                  { text: "Inter Insigniores — CDF, 1976 · approved in forma specifica by Paul VI · on the ordination of women" },
+                  { text: "Dominus Iesus — CDF, 2000 · approved in forma specifica by John Paul II · on Christ as the sole Saviour" },
+                ]
+              },
+              {
+                label: "CDF Instructions — Approved In Common Form",
+                count: "2",
+                note: "The Pope gave general approval but did not formally ratify these as his own act. They carry real but delegated authority. Retained because no encyclical addresses these bioethical questions.",
+                items: [
+                  { text: "Donum Vitae — CDF, 1987 · approved in common form by John Paul II · IVF, artificial insemination, embryo research" },
+                  { text: "Dignitas Personae — CDF, 2008 · approved in common form by Benedict XVI · embryo adoption, cloning, stem cells" },
+                ]
+              },
+              {
+                label: "Church Councils",
+                count: "4",
+                items: [
+                  { text: "Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments" },
+                  { text: "Council of Florence (1438–1445) — seven sacraments, extra ecclesiam nulla salus" },
+                  { text: "Council of Trent — dogmatic canons and decrees, highest conciliar authority" },
+                  { text: "Vatican I — Pastor Aeternus on papal infallibility" },
+                ]
+              },
+              {
+                label: "Doctors of the Church",
+                count: "15",
+                items: [
+                  { text: "St. Thomas Aquinas · St. Augustine of Hippo · St. Alphonsus Liguori" },
+                  { text: "St. Francis de Sales · St. Teresa of Ávila · St. John of the Cross" },
+                  { text: "St. Catherine of Siena · St. Bonaventure · St. Robert Bellarmine" },
+                  { text: "St. Jerome · St. John Chrysostom · St. Gregory the Great" },
+                  { text: "St. Bernard of Clairvaux · St. Ambrose of Milan · St. Thérèse of Lisieux" },
+                ]
+              },
+              {
+                label: "Canon Law",
+                count: "2 Codes",
+                note: "When both codes address a question, Custos cites both so you can see exactly what changed and whether it was a tightening, relaxation, or reformulation of the discipline.",
+                items: [
+                  { text: "1917 Code of Canon Law — the law of the Church from 1917 until 1983" },
+                  { text: "1983 Code of Canon Law — the current law of the Church" },
+                ]
+              },
             ].map((section, si) => (
-              <div key={si} style={{ marginBottom: 16 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6, paddingBottom: 4, borderBottom: `1px solid ${T.cardBorder}` }}>{si + 1}. {section.label}</div>
+              <div key={si} style={{ marginBottom: 18 }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", paddingBottom: 5, borderBottom: `1px solid ${T.cardBorder}`, marginBottom: 8 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>{si + 1}. {section.label}</div>
+                  {section.count && <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.04em", flexShrink: 0, marginLeft: 8 }}>{section.count}</div>}
+                </div>
+                {section.note && (
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkMid, lineHeight: 1.5, marginBottom: 8, paddingLeft: 8, borderLeft: `2px solid ${T.goldFaint}` }}>{section.note}</div>
+                )}
                 {section.items.map((item, ii) => (
-                  <div key={ii} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "5px 0 5px 8px" }}>
-                    <span style={{ color: T.gold, fontSize: fz(10), marginTop: 3, flexShrink: 0 }}>•</span>
-                    <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.45 }}>{item}</span>
+                  <div key={ii} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "4px 0 4px 8px" }}>
+                    <span style={{ color: T.gold, fontSize: fz(10), marginTop: 4, flexShrink: 0 }}>•</span>
+                    <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.45 }}>{item.text}</span>
                   </div>
                 ))}
               </div>
             ))}
 
-            <div style={{ marginTop: 12, padding: "14px", background: "rgba(122,28,28,0.04)", borderRadius: 10, border: "1px solid rgba(122,28,28,0.1)" }}>
+            <div style={{ marginTop: 4, padding: "14px", background: "rgba(122,28,28,0.04)", borderRadius: 10, border: "1px solid rgba(122,28,28,0.1)" }}>
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.crimson, fontWeight: 500, margin: "0 0 6px" }}>What we do not cite:</p>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>No Pontifical Academy for Life, no USCCB committee documents, no Catholic news sites, no modern theologians, no unnamed "scholars." If a question exceeds these sources, Custos will tell you honestly and direct you to a confessor.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>No Vatican II documents. No Pontifical Academy for Life. No USCCB committee documents. No Catholic news sites. No modern theologians. No unnamed "scholars." If a question exceeds these sources, Custos will tell you honestly and direct you to a confessor.</p>
             </div>
 
             <div style={{ marginTop: 18, textAlign: "center" }}>
