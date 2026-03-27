@@ -173,11 +173,18 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01',
+        'anthropic-beta': 'prompt-caching-2024-07-31',  // ← enables prompt caching
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1500,
-        system: CUSTOS_SYSTEM,
+        system: [
+          {
+            type: 'text',
+            text: CUSTOS_SYSTEM,
+            cache_control: { type: 'ephemeral' },  // ← cache the system prompt
+          }
+        ],
         messages: messages,
         stream: true,
       }),
