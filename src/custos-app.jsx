@@ -642,7 +642,7 @@ const ROSARY_PRAYERS = {
   closing: "O God, whose Only Begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that while meditating on these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. Amen.",
 };
 const ROSARY_MYSTERIES = {
-  joyful: { label: "Joyful Mysteries", day: "Monday & Saturday", icon: "⭐", color: "#d4a843", mysteries: [
+  joyful: { label: "Joyful Mysteries", day: "Monday & Thursday", icon: "⭐", color: "#d4a843", mysteries: [
     { title: "The Annunciation", scripture: "The angel Gabriel was sent from God to a virgin betrothed to a man named Joseph. The angel said, 'Hail, full of grace, the Lord is with thee.'", ref: "Lk 1:26\u201338", fruit: "Humility",
       img: "/images/joyful-1-annunciation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Visitation", scripture: "Mary arose and went with haste into the hill country. Elizabeth was filled with the Holy Spirit and cried out, 'Blessed art thou among women.'", ref: "Lk 1:39\u201356", fruit: "Love of Neighbor",
@@ -666,7 +666,7 @@ const ROSARY_MYSTERIES = {
     { title: "The Crucifixion", scripture: "Jesus said, 'Father, forgive them, for they know not what they do.' And bowing His head, He gave up His spirit.", ref: "Jn 19:18\u201330", fruit: "Perseverance",
       img: "/images/sorrowful-5-crucifixion.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
-  glorious: { label: "Glorious Mysteries", day: "Wednesday & Sunday", icon: "👑", color: "#d4a843", mysteries: [
+  glorious: { label: "Glorious Mysteries", day: "Wednesday, Saturday & Sunday*", icon: "👑", color: "#d4a843", mysteries: [
     { title: "The Resurrection", scripture: "He is not here; He is risen, as He said. Come, see the place where the Lord was laid.", ref: "Mt 28:1\u201310", fruit: "Faith",
       img: "/images/glorious-1-resurrection.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Ascension", scripture: "He was lifted up, and a cloud took Him out of their sight. 'This Jesus will come in the same way as you saw Him go into heaven.'", ref: "Acts 1:9\u201311", fruit: "Hope",
@@ -3152,13 +3152,21 @@ function RosaryTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
     return { label: "", text: "" };
   };
 
-  // Today's suggested mysteries
+  // Today's suggested mysteries (pre-Luminous traditional assignment)
+  // Mon/Thu/Sat → Joyful; Tue/Fri → Sorrowful; Wed → Glorious
+  // Sun → varies by liturgical season
   const dayMysteries = () => {
     const d = new Date().getDay();
-    if (d === 1 || d === 6) return "joyful";
-    if (d === 2 || d === 5) return "sorrowful";
-    if (d === 0 || d === 3) return "glorious";
-    return "sorrowful"; // Thursday: traditionally Sorrowful
+    if (d === 1 || d === 4) return "joyful";               // Mon, Thu
+    if (d === 2 || d === 5) return "sorrowful";             // Tue, Fri
+    if (d === 3 || d === 6) return "glorious";              // Wed, Sat
+    // Sunday: season-sensitive
+    const season = getLiturgicalDay(new Date()).season;
+    const joyfulSeasons = ["Advent", "Christmastide", "After Epiphany", "Septuagesima \u00b7 Pre-Lent"];
+    const sorrowfulSeasons = ["Lent", "Passiontide"];
+    if (joyfulSeasons.includes(season)) return "joyful";
+    if (sorrowfulSeasons.includes(season)) return "sorrowful";
+    return "glorious"; // Eastertide, Pentecost, After Pentecost, ordinary time
   };
   const suggested = dayMysteries();
 
