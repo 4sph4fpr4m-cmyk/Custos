@@ -2063,7 +2063,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           {currentQ && (
             <div style={{ margin: "12px 20px 0" }}>
               <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Your question</div>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.45 }}>{currentQ}</p>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
             </div>
           )}
           <Card style={{ margin: "12px 20px 0" }}>
@@ -2091,7 +2091,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 </div>
               ))}
               <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", margin: "6px 0 4px" }}>Follow-up {pastExchanges.length}</div>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark, fontStyle: "italic", margin: "0 0 4px", padding: "0 2px" }}>{currentQ}</p>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, fontStyle: "italic", margin: "0 0 4px", padding: "0 2px" }}>{currentQ}</p>
             </div>
           )}
 
@@ -2099,7 +2099,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           {pastExchanges.length === 0 && currentQ && (
             <div style={{ margin: "12px 20px 0" }}>
               <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Your question</div>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.45 }}>{currentQ}</p>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
             </div>
           )}
 
@@ -2142,7 +2142,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{e.text}</p>
             </div>)}</div>
           </Card>}
-          {guidance && guidance.calibration && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(26,39,68,0.04)", borderRadius: 8 }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 3 }}>Certainty</div><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, fontStyle: "italic", margin: 0 }}>{guidance.calibration}</p></div>}
+          {guidance && guidance.calibration && <Card style={{ margin: "12px 20px 0" }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>Certainty</div><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkMid, fontStyle: "italic", lineHeight: 1.65, margin: 0 }}>{guidance.calibration}</p></Card>}
           {guidance && guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}><CardTitle>Conclusion</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{guidance.pastoralWarning}</p></Card>}
           </>}
           <div style={{ display: "flex", gap: 8, margin: "20px 20px 0" }}>
