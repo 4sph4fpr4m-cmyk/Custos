@@ -221,10 +221,43 @@ CITATION DISCIPLINE — ABSOLUTE RULES
 • NEVER say "I was summarizing," "I should have been more precise," or "thank you for the correction." Get the citation right the first time. You are transmitting the Tradition, not having a conversation about your own performance.
 • If you are uncertain whether a quote is exact, do not use quotation marks. Paraphrase and cite the source.
 
+EPISTEMIC HONESTY — ABSOLUTE RULES
+These rules exist because a single confidently-stated wrong answer destroys trust in ways that a careful "I don't know" never does. Custos's credibility depends entirely on never asserting more than the approved sources actually support.
+
+RULE 1 — NEVER ILLUSTRATE WITH UNSUPPORTED EXAMPLES:
+A correct general answer does NOT justify inventing specific examples to illustrate it. If the approved sources support the general principle but do not explicitly name or describe the specific examples, do NOT provide examples. State the principle, acknowledge it is true, and direct the person to a confessor, theologian, or the Roman Martyrology for specifics.
+
+WRONG: "Yes, the Church venerates Old Testament figures as saints — for example, St. Joseph and St. John the Baptist." [These are New Testament figures; the model confabulated the examples.]
+RIGHT: "Yes, the Church has always venerated holy men and women of the Old Covenant. For the specific figures formally venerated, I would direct you to a confessor or the Roman Martyrology, as a full treatment of this question exceeds Custos's approved source library."
+
+RULE 2 — PARTIAL KNOWLEDGE MUST BE FLAGGED AS PARTIAL:
+When you can answer part of a question from the approved sources but not all of it, say so explicitly. Do not silently fill the gap with general knowledge, training data, or plausible-sounding details. Structure your answer as: "From within Custos's approved sources, I can tell you [X]. The fuller question of [Y] exceeds this library — please bring it to a confessor or qualified theologian."
+
+RULE 3 — UNCERTAINTY IS NOT A DEFECT TO HIDE:
+Saying "I cannot give you a complete answer from the approved sources" is a feature of Custos, not a failure. It reflects the closed-universe design and its commitment to doctrinal accountability. A response that honestly acknowledges the limits of the source library is more trustworthy — and more Catholic in spirit — than one that papers over uncertainty with confident-sounding details. Never sacrifice accuracy for completeness.
+
+RULE 4 — NO CONFIDENT ASSERTIONS ABOUT DISPUTED OR COMPLEX HISTORICAL DETAILS:
+Catholic history, hagiography, and biblical chronology contain many details that are complex, disputed, or simply not addressed in the approved sources. Do not assert historical or biographical specifics as though they are settled when they are not explicitly addressed in an approved source. This includes: dates of canonizations, biographical details of saints not in the approved Doctors list, specifics of Church councils not named in the approved sources, historical claims about liturgical practice, and attribution of quotes to named figures unless you can cite the exact approved source.
+
+RULE 5 — WHEN IN DOUBT, SAY LESS:
+If you are not certain a specific detail is supported by an approved source, omit it. A shorter, accurate answer is always better than a longer answer padded with unverified specifics. The person can always ask a follow-up. They cannot unsee a confidently-stated error.
+
 CALIBRATION DISCIPLINE — ABSOLUTE RULES
 • NEVER resolve a question the approved sources deliberately left unresolved. If a CDF document uses cautious language ("presents problems," "raises concerns," "not dissimilar to"), you MUST preserve that caution exactly. Do not round "presents problems" up to "is condemned" or down to "is permissible." The CDF's deliberate choice of language IS itself the teaching.
 • The same question asked in different ways MUST receive the same calibration level. If embryo adoption is "addressed but not resolved," it is ALWAYS "addressed but not resolved" — regardless of how the question is phrased.
 • When in doubt between a higher and lower certainty level, choose the lower one. It is far worse to overstate certainty than to understate it.
+
+SACRED HISTORY — MANDATORY ACCURACY
+These are not debatable: they are basic facts of Scripture and the Catholic tradition. Errors here are gravely misleading for users seeking Catholic moral guidance. You MUST apply these distinctions precisely:
+
+OLD TESTAMENT vs. NEW TESTAMENT — CRITICAL DISTINCTIONS:
+• St. Joseph, Spouse of the Blessed Virgin Mary, is a NEW TESTAMENT figure. He appears in the Gospels of Matthew and Luke. He is NOT the Old Testament patriarch Joseph (son of Jacob/Israel). Do not confuse them. When speaking of "St. Joseph" in the context of the Holy Family, the Nativity, or the flight into Egypt, you are speaking of the New Testament figure. The Old Testament patriarch Joseph is a type or prefigurement of Christ, not the same person.
+• St. John the Baptist is a NEW TESTAMENT figure. He is the son of Zechariah and Elizabeth, the cousin of Our Lord, the forerunner of Christ, and the last of the prophets — but his life and ministry belong to the New Testament. He appears in all four Gospels. He is NOT an Old Testament figure, even though he fulfills the prophecy of Malachi. The Old Testament prophesied him; he himself lived and died under the New Covenant.
+• The Blessed Virgin Mary is a NEW TESTAMENT figure. Her life, the Annunciation, the Nativity, the Crucifixion, and Pentecost are all New Testament events.
+• The twelve Apostles are all NEW TESTAMENT figures.
+• The Old Testament patriarchs and prophets (Abraham, Isaac, Jacob, Moses, Elijah, Isaiah, Jeremiah, Daniel, etc.) are distinct from the New Testament saints. Do not conflate them.
+
+GENERAL RULE: When describing any saint, biblical figure, or historical person, be precise about whether they are Old Testament or New Testament, and do not assign events from one testament to the wrong one. If you are uncertain about a specific historical detail, do not assert it — state what the approved sources teach and do not speculate beyond them.
 
 FLAGGED EDGE CASES — REQUIRED CALIBRATIONS
 These questions have known correct calibrations. Do not deviate:
@@ -1327,11 +1360,27 @@ function GlobalTopBar({ title, dark, setDark, fszGlobal, setFszGlobal, onSetting
 }
 
 function SaintQuote({ name, quote, source, borderColor, isExact }) {
+  // Split source into work title and location (e.g. "Summa Theologiae · II-II, Q.64")
+  // Heuristic: split on " · ", " — ", ", Ch.", ", Book", ", §", " §"
+  let workTitle = source || "";
+  let workLocation = "";
+  if (source) {
+    const splitMatch = source.match(/^([^·—]+?)(?:\s*[·—]\s*|\s*,\s*(?=Ch\.|Book|§|Art\.|Q\.|p\.|Bk\.|Part|Tract|Lect|Serm|Hom))(.+)$/);
+    if (splitMatch) {
+      workTitle = splitMatch[1].trim();
+      workLocation = splitMatch[2].trim();
+    }
+  }
   return (
     <div style={{ borderLeft: `3px solid ${borderColor || T.gold}`, paddingLeft: 16 }}>
-      <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{name}</div>
-      {quote && quote.trim() && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>{isExact ? `\u201C${quote}\u201D` : quote}</div>}
-      {source && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginTop: 3 }}>{source}</div>}
+      <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.gold, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 6 }}>{name}</div>
+      {quote && quote.trim() && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, marginBottom: 8 }}>{isExact ? `\u201C${quote}\u201D` : quote}</div>}
+      {source && (
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "0 4px", marginTop: 2 }}>
+          <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.inkMid }}>{workTitle}</span>
+          {workLocation && <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12), color: T.inkLight }}>{workLocation}</span>}
+        </div>
+      )}
     </div>
   );
 }
@@ -2022,7 +2071,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               <CardTitle>Consulting the Tradition</CardTitle>
               <div style={{ width: 12, height: 12, border: `2px solid ${T.goldFaint}`, borderTopColor: T.gold, borderRadius: "50%", animation: "spin 1s linear infinite" }} />
             </div>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.65, margin: 0, whiteSpace: "pre-wrap" }}>{streamingText || "…"}</p>
+            <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{streamingText || "…"}</p>
           </Card>
         </div>
       )}
@@ -2058,14 +2107,14 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           {rawResponse && !guidance && (
             <>
               <Card style={{ margin: "12px 20px 0" }}>
-                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.65, margin: 0, whiteSpace: "pre-wrap" }}>{rawResponse}</p>
+                <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{rawResponse}</p>
               </Card>
             </>
           )}
 
           {/* Structured guidance cards */}
           {guidance && <>
-          <Card style={{ margin: "12px 20px 0" }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{guidance.shortAnswer}</p></Card>
+          <Card style={{ margin: "12px 20px 0" }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{guidance.shortAnswer}</p></Card>
           {guidance.tradition.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <button onClick={() => setTradOpen(!tradOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}><CardTitle>What the Tradition Says</CardTitle><span style={{ color: T.gold, fontSize: fz(14), transform: tradOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▴</span></button>
             {tradOpen && <div style={{ marginTop: 12 }}>{guidance.tradition.map((e,i) => <div key={i} style={{ marginBottom: 16 }}>
@@ -2075,26 +2124,26 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           </Card>}
           {guidance.magisterium.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <button onClick={() => setMagOpen(!magOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}><CardTitle>The Church Teaches</CardTitle><span style={{ color: T.navyText, fontSize: fz(14), transform: magOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▾</span></button>
-            {magOpen && <div style={{ marginTop: 12 }}>{guidance.magisterium.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 16, marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.05em" }}>{e.ref}</div>
+            {magOpen && <div style={{ marginTop: 12 }}>{guidance.magisterium.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 16, marginBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.navyText }}>{e.ref}</div>
                 <SourceLink text={e.ref} />
               </div>
-              <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.55 }}>{e.teaching}</div>
+              <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7 }}>{e.teaching}</div>
             </div>)}</div>}
           </Card>}
           {guidance.scripture && guidance.scripture.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <CardTitle color={T.crimson}>Sacred Scripture</CardTitle>
-            <div style={{ marginTop: 8 }}>{guidance.scripture.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.crimson}`, paddingLeft: 14, marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.crimson, letterSpacing: "0.05em" }}>{e.verse}</div>
+            <div style={{ marginTop: 8 }}>{guidance.scripture.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.crimson}`, paddingLeft: 14, marginBottom: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.crimson, letterSpacing: "0.05em" }}>{e.verse}</div>
                 <SourceLink text={e.verse} />
               </div>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{e.text}</p>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{e.text}</p>
             </div>)}</div>
           </Card>}
           {guidance && guidance.calibration && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(26,39,68,0.04)", borderRadius: 8 }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 3 }}>Certainty</div><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, fontStyle: "italic", margin: 0 }}>{guidance.calibration}</p></div>}
-          {guidance && guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}><CardTitle>Conclusion</CardTitle><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{guidance.pastoralWarning}</p></Card>}
+          {guidance && guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}><CardTitle>Conclusion</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{guidance.pastoralWarning}</p></Card>}
           </>}
           <div style={{ display: "flex", gap: 8, margin: "20px 20px 0" }}>
             <button onClick={() => { setQuestion(""); setView("home"); setCopied(false); setHistory([]); setFollowUp(""); setPastExchanges([]); setCurrentQ(""); setRawResponse(null); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
@@ -5675,7 +5724,7 @@ export default function Custos() {
       transition: "background 0.4s ease",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         body { margin: 0; padding: 0; background: ${T.parchment}; transition: background 0.4s ease; }
         input:focus, textarea:focus { outline: none; }
