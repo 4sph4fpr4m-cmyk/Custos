@@ -2061,10 +2061,10 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         <div style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
           <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); setPastExchanges([]); setCurrentQ(""); setHistory([]); }} />
           {currentQ && (
-            <div style={{ margin: "12px 20px 0" }}>
-              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Your question</div>
-              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
-            </div>
+            <Card style={{ margin: "12px 20px 0", background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Your Question</div>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+            </Card>
           )}
           <Card style={{ margin: "12px 20px 0" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
@@ -2086,21 +2086,23 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               {pastExchanges.map((ex, i) => (
                 <div key={i} style={{ marginBottom: 10, padding: "12px 14px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Question {i + 1}</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, fontStyle: "italic", margin: "0 0 8px", lineHeight: 1.45 }}>{ex.question}</p>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: 0, lineHeight: 1.45 }}>{(ex.rawResponse || ex.guidance?.shortAnswer || "").substring(0, 200)}{(ex.rawResponse || ex.guidance?.shortAnswer || "").length > 200 ? "…" : ""}</p>
+                  <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkMid, fontStyle: "italic", margin: "0 0 8px", lineHeight: 1.5 }}>{ex.question}</p>
+                  <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), color: T.inkLight, margin: 0, lineHeight: 1.45 }}>{(ex.rawResponse || ex.guidance?.shortAnswer || "").substring(0, 200)}{(ex.rawResponse || ex.guidance?.shortAnswer || "").length > 200 ? "…" : ""}</p>
                 </div>
               ))}
-              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", margin: "6px 0 4px" }}>Follow-up {pastExchanges.length}</div>
-              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, fontStyle: "italic", margin: "0 0 4px", padding: "0 2px" }}>{currentQ}</p>
+              <Card style={{ background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Follow-up {pastExchanges.length}</div>
+                <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+              </Card>
             </div>
           )}
 
           {/* Current question (first question only) */}
           {pastExchanges.length === 0 && currentQ && (
-            <div style={{ margin: "12px 20px 0" }}>
-              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Your question</div>
-              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
-            </div>
+            <Card style={{ margin: "12px 20px 0", background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Your Question</div>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+            </Card>
           )}
 
           {/* Raw text response for follow-ups and Dig Deeper */}
