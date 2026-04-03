@@ -2192,7 +2192,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 56 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 70 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
@@ -2216,26 +2216,39 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               },
               {
                 label: "Papal Encyclicals & Apostolic Documents",
-                count: "21",
+                count: "37",
                 items: [
+                  { text: "Quo Graviora — Leo XII, 1826 · condemnation of Freemasonry and secret societies" },
                   { text: "Mirari Vos — Gregory XVI, 1832" },
+                  { text: "Singulari Nos — Gregory XVI, 1834 · condemning the liberal Catholicism of Lamennais" },
+                  { text: "Qui Pluribus — Pius IX, 1846 · on faith and religion; condemning liberalism, rationalism, Freemasonry, and Communism" },
+                  { text: "Ineffabilis Deus — Pius IX, 1854 · apostolic constitution defining the dogma of the Immaculate Conception" },
                   { text: "Quanta Cura & Syllabus of Errors — Pius IX, 1864" },
+                  { text: "Graves ac Diuturnae — Pius IX, 1875 · on the Old Catholic schism and valid ecclesiastical authority" },
                   { text: "Aeterni Patris — Leo XIII, 1879" },
+                  { text: "Humanum Genus — Leo XIII, 1884 · on Freemasonry" },
                   { text: "Immortale Dei — Leo XIII, 1885" },
                   { text: "Libertas — Leo XIII, 1888" },
                   { text: "Rerum Novarum — Leo XIII, 1891" },
+                  { text: "Providentissimus Deus — Leo XIII, 1893 · on Sacred Scripture, biblical interpretation, inspiration and inerrancy" },
+                  { text: "Apostolicae Curae — Leo XIII, 1896 · apostolic letter on the nullity of Anglican orders" },
+                  { text: "E Supremi Apostolatus — Pius X, 1903 · on restoring all things in Christ" },
+                  { text: "Ad Diem Illum Lætissimum — Pius X, 1904 · on the Immaculate Conception and Marian devotion" },
                   { text: "Pascendi Dominici Gregis — Pius X, 1907" },
+                  { text: "Our Apostolic Mandate — Pius X, 1910 · condemning the Sillon movement and democratic distortions of Catholic social teaching" },
+                  { text: "Quas Primas — Pius XI, 1925 · on the social kingship of Christ" },
                   { text: "Mortalium Animos — Pius XI, 1928" },
                   { text: "Casti Connubii — Pius XI, 1930" },
                   { text: "Quadragesimo Anno — Pius XI, 1931" },
                   { text: "Divini Redemptoris — Pius XI, 1937" },
                   { text: "Mit brennender Sorge — Pius XI, 1937" },
                   { text: "Mystici Corporis Christi — Pius XII, 1943" },
-                  { text: "Mediator Dei — Pius XII, 1947" },
                   { text: "Humani Generis — Pius XII, 1950" },
+                  { text: "Munificentissimus Deus — Pius XII, 1950 · apostolic constitution defining the dogma of the Assumption of Mary" },
                   { text: "Humanae Vitae — Paul VI, 1968" },
                   { text: "Familiaris Consortio — John Paul II, 1981" },
                   { text: "Veritatis Splendor — John Paul II, 1993" },
+                  { text: "Ordinatio Sacerdotalis — John Paul II, 1994 · definitively closing the question of women's ordination" },
                   { text: "Evangelium Vitae — John Paul II, 1995" },
                   { text: "Fides et Ratio — John Paul II, 1998" },
                   { text: "Deus Caritas Est — Benedict XVI, 2005" },
@@ -2249,6 +2262,13 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Ad Tuendam Fidem — John Paul II, 1998" },
                   { text: "Summorum Pontificum — Benedict XVI, 2007" },
                   { text: "Omnium in Mentem — Benedict XVI, 2009" },
+                ]
+              },
+              {
+                label: "Holy Office Decree",
+                count: "1",
+                items: [
+                  { text: "Lamentabili Sane — Holy Office, 1907 · approved by Pius X · syllabus condemning 65 errors of the Modernists; companion to Pascendi" },
                 ]
               },
               {
@@ -2284,11 +2304,21 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 label: "Doctors of the Church",
                 count: "15",
                 items: [
-                  { text: "St. Thomas Aquinas · St. Augustine of Hippo · St. Alphonsus Liguori" },
-                  { text: "St. Francis de Sales · St. Teresa of Ávila · St. John of the Cross" },
-                  { text: "St. Catherine of Siena · St. Bonaventure · St. Robert Bellarmine" },
-                  { text: "St. Jerome · St. John Chrysostom · St. Gregory the Great" },
-                  { text: "St. Bernard of Clairvaux · St. Ambrose of Milan · St. Thérèse of Lisieux" },
+                  { text: "St. Thomas Aquinas" },
+                  { text: "St. Augustine of Hippo" },
+                  { text: "St. Alphonsus Liguori" },
+                  { text: "St. Francis de Sales" },
+                  { text: "St. Teresa of Ávila" },
+                  { text: "St. John of the Cross" },
+                  { text: "St. Catherine of Siena" },
+                  { text: "St. Bonaventure" },
+                  { text: "St. Robert Bellarmine" },
+                  { text: "St. Jerome" },
+                  { text: "St. John Chrysostom" },
+                  { text: "St. Gregory the Great" },
+                  { text: "St. Bernard of Clairvaux" },
+                  { text: "St. Ambrose of Milan" },
+                  { text: "St. Thérèse of Lisieux" },
                 ]
               },
               {
