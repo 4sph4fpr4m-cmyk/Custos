@@ -1315,6 +1315,7 @@ function BottomNav({ active, onTab }) {
     { id: "today", icon: "📅", label: "Today" },
     { id: "pray", icon: "🙏", label: "Pray" },
     { id: "tradition", icon: "🏛", label: "Doctors" },
+    { id: "rupture", icon: "⚖", label: "Rupture" },
   ];
   return (
     <div style={{
@@ -2208,9 +2209,9 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 label: "Catechisms",
                 count: "4",
                 items: [
-                  { text: "The Catechism of the Council of Trent (Roman Catechism) — 1566" },
-                  { text: "The Baltimore Catechism — 1885" },
-                  { text: "The Catechism of Pope St. Pius X — 1908" },
+                  { text: "The Baltimore Catechism" },
+                  { text: "The Catechism of the Council of Trent (Roman Catechism)" },
+                  { text: "The Catechism of Pope St. Pius X" },
                   { text: "Catechism of the Catholic Church (1992) — supplementary only; may not override the older catechisms" },
                 ]
               },
@@ -2304,21 +2305,21 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 label: "Doctors of the Church",
                 count: "15",
                 items: [
-                  { text: "St. Ambrose of Milan (340–397)" },
-                  { text: "St. Jerome (347–420)" },
-                  { text: "St. Augustine of Hippo (354–430)" },
-                  { text: "St. John Chrysostom (349–407)" },
-                  { text: "St. Gregory the Great (540–604)" },
-                  { text: "St. Bernard of Clairvaux (1090–1153)" },
-                  { text: "St. Bonaventure (1221–1274)" },
-                  { text: "St. Thomas Aquinas (1225–1274)" },
-                  { text: "St. Catherine of Siena (1347–1380)" },
-                  { text: "St. Teresa of Ávila (1515–1582)" },
-                  { text: "St. John of the Cross (1542–1591)" },
-                  { text: "St. Robert Bellarmine (1542–1621)" },
-                  { text: "St. Francis de Sales (1567–1622)" },
-                  { text: "St. Alphonsus Liguori (1696–1787)" },
-                  { text: "St. Thérèse of Lisieux (1873–1897)" },
+                  { text: "St. Thomas Aquinas" },
+                  { text: "St. Augustine of Hippo" },
+                  { text: "St. Alphonsus Liguori" },
+                  { text: "St. Francis de Sales" },
+                  { text: "St. Teresa of Ávila" },
+                  { text: "St. John of the Cross" },
+                  { text: "St. Catherine of Siena" },
+                  { text: "St. Bonaventure" },
+                  { text: "St. Robert Bellarmine" },
+                  { text: "St. Jerome" },
+                  { text: "St. John Chrysostom" },
+                  { text: "St. Gregory the Great" },
+                  { text: "St. Bernard of Clairvaux" },
+                  { text: "St. Ambrose of Milan" },
+                  { text: "St. Thérèse of Lisieux" },
                 ]
               },
               {
@@ -2769,6 +2770,569 @@ function ConfessionTab() {
 // ═══════════════════════════════════════════════════════════════════
 // TRADITION BROWSER
 // ═══════════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════════
+// TRADITION & RUPTURE DATA
+// ═══════════════════════════════════════════════════════════════════
+const RUPTURE_PILLARS = [
+  {
+    id: "liturgy",
+    icon: "✝",
+    label: "The Sacred Liturgy",
+    color: "#1a2744",
+    summary: "The traditional Roman Rite, celebrated for over a millennium and codified by Trent, was dismantled between 1965 and 1975 by Pope Paul VI acting through his liturgical architect, Archbishop Annibale Bugnini. Bugnini had been removed from his liturgical post under Pius XII — reportedly on suspicion of Freemasonry — and was personally restored by Paul VI, who gave him the Consilium that designed the New Mass. The questions below examine what was destroyed, what replaced it, and whether any pope had the authority to do what Paul VI did.",
+    topics: [
+      {
+        id: "novus_ordo",
+        title: "The New Mass vs. the Traditional Roman Rite",
+        tension: "The Roman Rite, substantially unchanged since at least Gregory the Great (6th c.) and codified by Trent, was replaced in 1969 by the Novus Ordo Missae — a new rite constructed by a committee under Archbishop Annibale Bugnini, personally appointed and empowered by Paul VI. Paul VI signed and promulgated it, defended it against criticism, and enforced its adoption. Cardinals Ottaviani and Bacci, in their formal Intervention to Paul VI, called it a 'striking departure from the theology of the Mass as defined by Trent' — a document Paul VI received but did not retract the new rite.",
+        questions: [
+          "What did the Council of Trent define about the Mass that cannot be changed?",
+          "What did Quo Primum establish about the permanence of the traditional Roman Rite — and can a pope revoke what a previous pope granted in perpetuity?",
+          "What did Summorum Pontificum say about the traditional Mass — was it ever legally abrogated?",
+        ],
+      },
+      {
+        id: "paul_bugnini",
+        title: "Paul VI & Bugnini — Who Designed the New Mass?",
+        tension: "Many Catholics assume the liturgical changes emerged organically from Vatican II. The historical record shows otherwise. Archbishop Annibale Bugnini was the principal architect of the new rite — but he had been removed from his liturgical post by Pius XII in 1962, reportedly on suspicion of Freemasonry. Paul VI personally restored him, gave him the Consilium charged with implementing liturgical reform, and signed everything Bugnini produced. When Bugnini was finally removed again in 1975 — again reportedly over Masonic connections — Paul VI quietly exiled him to Iran as a nuncio rather than publicly addressing the matter. The new rite bears Bugnini's architectural fingerprints and Paul VI's papal signature.",
+        questions: [
+          "What authority does a pope have over the sacred liturgy — and are there limits the approved sources identify?",
+          "What did Quo Primum establish that speaks directly to whether Paul VI had the authority to replace the traditional rite?",
+          "What does the Church's tradition teach about the danger of Freemasonry infiltrating Church institutions — and what did Leo XIII teach about it?",
+        ],
+      },
+      {
+        id: "communion_hand",
+        title: "Communion in the Hand While Standing",
+        tension: "From the earliest centuries through the 1960s, the universal practice of the Latin Church was reception of Holy Communion on the tongue while kneeling. This practice was explicitly confirmed by Memoriale Domini (1969), which polled bishops worldwide and upheld the traditional discipline — yet granted a reluctant indult to dioceses that petitioned for the change. Today the exception has become the norm.",
+        questions: [
+          "What does the unbroken tradition of the Church teach about reverence in receiving Holy Communion?",
+          "What do the approved sources say about the Real Presence and why it demands bodily reverence?",
+          "What was the traditional canonical discipline governing how Communion must be distributed?",
+        ],
+      },
+      {
+        id: "vernacular",
+        title: "Mass in the Vernacular vs. Latin",
+        tension: "The Council of Trent explicitly condemned the position that the Mass should be celebrated in the vernacular (Session XXII, Canon 9). For over 400 years the Latin Mass was the universal norm. The shift to vernacular after Vatican II reversed this discipline and has raised questions about continuity with Trent's decrees.",
+        questions: [
+          "What did the Council of Trent teach about Latin in the Mass?",
+          "What is the theological significance of a sacred language set apart from ordinary speech?",
+          "What did Summorum Pontificum say about the ongoing right to the traditional Latin Mass?",
+        ],
+      },
+      {
+        id: "ad_orientem",
+        title: "Versus Populum vs. Ad Orientem",
+        tension: "For centuries, priest and faithful together faced East (ad orientem) — priest and people united in the same direction, offering sacrifice to God. The post-conciliar reform introduced the practice of the priest facing the people (versus populum), which critics argue transformed the Mass from a sacrifice offered to God into a communal meal centered on the assembly.",
+        questions: [
+          "What does the traditional theology of the Mass as sacrifice imply about the direction of prayer?",
+          "How does Aquinas describe the priest's role at Mass and his relation to Christ the High Priest?",
+          "What did the pre-conciliar rubrics require regarding the direction of the priest at the altar?",
+        ],
+      },
+      {
+        id: "tlm_suppression",
+        title: "Suppression of the Traditional Latin Mass",
+        tension: "Benedict XVI's Summorum Pontificum (2007) declared that the traditional Mass 'was never abrogated' and freed its celebration. In 2021, Pope Francis issued Traditionis Custodes, severely restricting the traditional Mass and contradicting Benedict's juridical determination. This created open conflict between two papal documents on the same question.",
+        questions: [
+          "What did Summorum Pontificum establish about the legal status of the traditional Mass?",
+          "What does Ecclesia Dei say about the legitimate aspirations of Catholics attached to the traditional rite?",
+          "How should a Catholic understand two papal documents that appear to contradict each other on a disciplinary question?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "doctrine",
+    icon: "📜",
+    label: "Doctrine",
+    color: "#7a1c1c",
+    summary: "Several post-conciliar teachings appear to stand in tension with pre-conciliar papal teaching that was considered settled. These are not questions of development — they are cases where the newer teaching contradicts, not merely develops, the earlier one.",
+    topics: [
+      {
+        id: "religious_liberty",
+        title: "Religious Liberty",
+        tension: "Mirari Vos (Gregory XVI, 1832) and Quanta Cura (Pius IX, 1864) explicitly condemned the proposition that every man has a right to practice whatever religion he chooses. Dignitatis Humanae (Vatican II, 1965) appeared to affirm precisely this right. Critics — including Archbishop Lefebvre — argued this is not development but contradiction.",
+        questions: [
+          "What did Mirari Vos teach about religious indifferentism and the claim that all religions are equally valid paths?",
+          "What did the Syllabus of Errors specifically condemn regarding religious liberty and civil tolerance of false religions?",
+          "How did Immortale Dei describe the duty of the state toward the Catholic religion?",
+        ],
+      },
+      {
+        id: "ecumenism",
+        title: "Ecumenism and False Unity",
+        tension: "Mortalium Animos (Pius XI, 1928) explicitly forbade Catholics from participating in ecumenical gatherings with non-Catholics, stating that Christian unity can only come through return to the one true Church. The post-conciliar Church embraced ecumenical dialogue as a positive good. These positions are difficult to reconcile.",
+        questions: [
+          "What did Mortalium Animos teach about participating in pan-Christian ecumenical movements?",
+          "What does Dominus Iesus teach about the unique salvific role of the Catholic Church — and how does it relate to ecumenical claims?",
+          "What does extra ecclesiam nulla salus mean, and how was it taught in the pre-conciliar catechisms?",
+        ],
+      },
+      {
+        id: "capital_punishment",
+        title: "Capital Punishment",
+        tension: "The constant teaching of the Church, rooted in Scripture (Genesis 9:6, Romans 13), confirmed by Trent, and defended by every major Doctor and moral theologian, held that the state has the God-given right to inflict the death penalty for grave crimes. In 2018, the Catechism was altered to declare capital punishment 'inadmissible' — a term with no precedent in Catholic moral theology.",
+        questions: [
+          "What does Scripture teach about the state's authority to punish grave crimes, even with death?",
+          "How did the Council of Trent and the traditional catechisms treat the question of capital punishment?",
+          "What does Evangelium Vitae actually teach about capital punishment — and how does it differ from the 2018 catechism revision?",
+        ],
+      },
+      {
+        id: "extra_ecclesiam",
+        title: "Extra Ecclesiam Nulla Salus",
+        tension: "The dogma 'Outside the Church there is no salvation' was defined by the Fourth Lateran Council, Council of Florence, and taught consistently through the traditional catechisms. Post-conciliar teaching introduced 'subsists in' language (Lumen Gentium) and wider notions of 'implicit desire' that many argue effectively emptied the dogma of its force.",
+        questions: [
+          "How did the Council of Florence define the necessity of the Catholic Church for salvation?",
+          "What does the Baltimore Catechism teach about who can be saved and what the Church means by 'invincible ignorance'?",
+          "What does Dominus Iesus teach about the uniqueness of Christ's salvific role — and what does it leave open?",
+        ],
+      },
+      {
+        id: "collegiality",
+        title: "Collegiality and Papal Authority",
+        tension: "Vatican I (Pastor Aeternus) defined papal primacy in the clearest terms: the pope has full, supreme, and universal power over the Church. Post-conciliar theology introduced 'collegiality' — the idea that the bishops govern together with the pope — in ways that critics argue obscure the monarchical constitution of the Church defined at Vatican I.",
+        questions: [
+          "What did Vatican I define about the primacy and universal jurisdiction of the Roman Pontiff?",
+          "How did the pre-conciliar understanding of the episcopate differ from the collegial model?",
+          "What does the traditional teaching say about the relationship between a bishop's authority in his diocese and the supreme authority of the pope?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "discipline",
+    icon: "⚖",
+    label: "Discipline & Canon Law",
+    color: "#2a5a2a",
+    summary: "The 1983 Code of Canon Law replaced the 1917 Code and relaxed or abolished numerous disciplines that had governed Catholic life for centuries. The changes below are not matters of opinion — they are documented, measurable changes between the two Codes.",
+    topics: [
+      {
+        id: "eucharistic_fast",
+        title: "The Eucharistic Fast",
+        tension: "The 1917 Code (Can. 858) required a complete fast from midnight before receiving Communion — no food or water from midnight onward. The 1983 Code (Can. 919) reduced this to one hour before receiving. A discipline that demanded genuine sacrifice and preparation was reduced to a technicality.",
+        questions: [
+          "What did the 1917 Code require of Catholics before receiving Holy Communion?",
+          "What does the theology of the Eucharist — the Real Presence of Christ — demand of a Catholic in terms of preparation and reverence?",
+          "How did the traditional catechisms describe the proper disposition for receiving Communion?",
+        ],
+      },
+      {
+        id: "friday_abstinence",
+        title: "Friday Abstinence",
+        tension: "Under the 1917 Code (Can. 1252), abstinence from meat every Friday was obligatory for all Catholics of age — a weekly participation in the penance of Good Friday. The 1983 Code (Can. 1253) delegated this discipline to bishops' conferences, who in most countries replaced it with an undefined 'act of penance.' The universal, visible mark of Catholic identity on Fridays was effectively abolished.",
+        questions: [
+          "What is the theological basis for Friday penance in union with Christ's Passion?",
+          "What did the traditional catechisms teach about the obligation of Friday abstinence?",
+          "What is the difference between a universal discipline binding all Catholics and one left to individual discretion?",
+        ],
+      },
+      {
+        id: "excommunications",
+        title: "Automatic Excommunications Removed",
+        tension: "The 1917 Code contained numerous automatic excommunications (latae sententiae) for grave offenses — including apostasy, heresy, schism, and violations of clerical discipline. The 1983 Code removed many of these, including the automatic excommunication for apostasy by a baptized Catholic. Critics argue this signaled a softening of the Church's sense of the gravity of these offenses.",
+        questions: [
+          "What does the Church's traditional teaching say about the gravity of apostasy, heresy, and schism?",
+          "What was the purpose of automatic excommunication in the traditional discipline of the Church?",
+          "How do the approved sources describe the Church's authority to bind and loose — including through censures?",
+        ],
+      },
+      {
+        id: "confirmation_age",
+        title: "Age of Confirmation",
+        tension: "Under the 1917 Code (Can. 788), Confirmation was to be conferred around the age of reason (7). The 1983 Code (Can. 891) allows bishops' conferences to set a later age — in practice, Confirmation has been delayed to late adolescence in much of the West, depriving children of the sacramental graces of the Holy Ghost during the most formative years of faith development.",
+        questions: [
+          "What is the traditional theological teaching on what Confirmation does and why it was given early?",
+          "What do the traditional catechisms say about the effects of Confirmation and the obligations of the confirmed?",
+          "What was the discipline of the 1917 Code regarding the age for Confirmation?",
+        ],
+      },
+      {
+        id: "mixed_marriages",
+        title: "Mixed Marriage Conditions Loosened",
+        tension: "Under the 1917 Code (Can. 1060–1064), mixed marriages (Catholic with non-Catholic) were strongly discouraged and required formal promises that all children would be raised Catholic, signed by both parties. The 1983 Code (Can. 1124–1129) loosened these requirements significantly — only the Catholic party must promise to raise children Catholic, and the non-Catholic need not sign anything.",
+        questions: [
+          "What did the traditional Church teach about the dangers of mixed marriages for the faith of the Catholic party and children?",
+          "What were the conditions the 1917 Code imposed on mixed marriages and why?",
+          "What do the approved sources say about the obligation to raise children in the Catholic faith?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "francis",
+    icon: "🕊",
+    label: "The Francis Pontificate",
+    color: "#5a3a00",
+    summary: "Where the first rupture under Paul VI was primarily liturgical and disciplinary, the rupture under Pope Francis was doctrinal and personal. His pontificate produced acts and documents that appeared to contradict not only pre-conciliar tradition but the teaching of his immediate predecessors. Custos presents the Tradition, identifies the contradictions, and leaves the judgment to your confessor and your conscience.",
+    topics: [
+      {
+        id: "amoris",
+        title: "Amoris Laetitia & Communion for the Divorced-Remarried",
+        tension: "Amoris Laetitia (2016) — particularly Chapter 8 and footnote 351 — was interpreted by numerous bishops' conferences as permitting divorced and civilly remarried Catholics to receive Communion without living as brother and sister. This directly contradicted Familiaris Consortio §84 (John Paul II) and the constant discipline of the Church, which held that public adulterers may not receive the Eucharist without resolving the irregular situation.",
+        questions: [
+          "What does Familiaris Consortio teach about divorced and civilly remarried Catholics and reception of the sacraments?",
+          "What does Veritatis Splendor teach about the impossibility of a 'pastoral solution' that permits an intrinsically evil act?",
+          "What do Casti Connubii and the traditional catechisms teach about the indissolubility of marriage?",
+        ],
+      },
+      {
+        id: "fiducia",
+        title: "Fiducia Supplicans & Blessing of Same-Sex Couples",
+        tension: "Fiducia Supplicans (2023), approved by Francis, declared that priests may bless same-sex couples in non-liturgical settings. This reversed the 2021 Responsum from the same CDF — then signed by Francis — that declared it impossible to bless unions that 'objectively contradict' God's plan. The African bishops' conferences formally refused to implement it. The contradiction existed within the Francis pontificate itself.",
+        questions: [
+          "What does Persona Humana teach about homosexual acts and why they are disordered?",
+          "What do the traditional catechisms teach about blessing — what can legitimately be blessed, and what cannot?",
+          "What does Humanae Vitae teach about the inseparable connection between the conjugal act and procreation?",
+        ],
+      },
+      {
+        id: "traditionis",
+        title: "Traditionis Custodes & Suppression of the TLM",
+        tension: "In 2021, Francis issued Traditionis Custodes, sharply restricting the traditional Latin Mass and declaring that it was no longer an 'expression of the lex orandi of the Roman Rite.' This directly contradicted Benedict XVI's Summorum Pontificum (2007), which declared the traditional Mass 'never abrogated' and a permanent right of any priest. Francis also contradicted his own earlier statements praising liturgical diversity.",
+        questions: [
+          "What did Summorum Pontificum establish as the permanent right of priests and faithful regarding the traditional Mass?",
+          "What did Ecclesia Dei say about the legitimate attachment of Catholics to the traditional liturgy?",
+          "How should a Catholic understand the conflict between two papal documents on the same disciplinary question?",
+        ],
+      },
+      {
+        id: "dubia",
+        title: "The Five Dubia",
+        tension: "In 2023, five Cardinals (Burke, Brandmüller, Sandoval, Sarah, Zen) submitted formal Dubia to Francis asking for yes/no answers on five contested questions: whether revelation can be reinterpreted contrary to tradition, whether same-sex unions can be blessed, whether the Synod on Synodality has doctrinal authority, whether repentance is required for absolution, and whether women can be ordained deacons. Francis gave non-answers. The Cardinals went public. It stood as an unprecedented modern crisis of magisterial accountability.",
+        questions: [
+          "What does the Church's tradition teach about the immutability of revealed doctrine?",
+          "What does Ad Tuendam Fidem teach about the grades of assent owed to Church teaching and the consequences of denial?",
+          "What do the approved sources teach about the conditions required for a valid sacramental absolution?",
+          "What does the Church's tradition teach about the conditions for a valid papal election — and what has historically led to a pope being declared an antipope?",
+        ],
+      },
+      {
+        id: "amazon",
+        title: "The Amazon Synod & Married Priests",
+        tension: "The 2019 Amazon Synod's final document proposed ordaining married men (viri probati) to the priesthood to address the shortage of priests in the Amazon. Francis's response, Querida Amazonia, did not explicitly endorse this — but did not close the question. The discipline of priestly celibacy, rooted in the Church's tradition of the West, was publicly and officially questioned at the highest level of the Church.",
+        questions: [
+          "What is the theological basis for priestly celibacy in the Latin tradition?",
+          "What did the approved sources teach about the relationship between celibacy and the priesthood?",
+          "What is the difference between a disciplinary norm that could theoretically change and a doctrine that cannot?",
+        ],
+      },
+      {
+        id: "women_deacons",
+        title: "Women Deacons",
+        tension: "Francis established two successive commissions to study the question of women deacons, implying the question was open. Inter Insigniores (CDF, 1976 — approved in forma specifica by Paul VI) explicitly grounded the male-only priesthood in the Church's unbroken tradition and Christ's example. Ordinatio Sacerdotalis (John Paul II, 1994) declared the question of women's ordination 'definitively' closed. Whether the diaconate was included in that closure remained disputed — but the commissions themselves signaled a willingness to question settled tradition.",
+        questions: [
+          "What does Inter Insigniores teach about why the Church cannot ordain women to the priesthood?",
+          "What did Ordinatio Sacerdotalis declare, and at what level of authority?",
+          "Is the permanent diaconate part of the ordained priesthood — and what do the traditional sources say?",
+        ],
+      },
+      {
+        id: "abu_dhabi",
+        title: "The Abu Dhabi Declaration",
+        tension: "In 2019, Francis co-signed the 'Document on Human Fraternity' in Abu Dhabi, which stated that 'the pluralism and diversity of religions... are willed by God in His wisdom.' This appeared to contradict Mortalium Animos, which condemned the idea that God wills religious pluralism, and Dominus Iesus, which affirmed that non-Christian religions do not subsist in the truth willed by God for salvation.",
+        questions: [
+          "What did Mortalium Animos teach about whether God wills religious diversity as a positive good?",
+          "What does Dominus Iesus teach about the unique and salvific truth of the Catholic faith vs. other religions?",
+          "What do the approved sources say about the duty of nations and individuals to acknowledge the true religion?",
+        ],
+      },
+      {
+        id: "lords_prayer",
+        title: "The Lord's Prayer Translation",
+        tension: "Francis changed the Italian translation of the Lord's Prayer from 'lead us not into temptation' to 'do not abandon us in temptation,' claiming the traditional rendering made God appear to lead men into sin. This contradicted the Douay-Rheims text (Matthew 6:13), the traditional theological interpretation of the petition, and the Church's centuries-long liturgical use of the traditional wording.",
+        questions: [
+          "What does the Douay-Rheims text of Matthew 6:13 actually say?",
+          "How did the Doctors of the Church — particularly Augustine — interpret 'lead us not into temptation'?",
+          "What does the traditional theological distinction between God permitting and God causing evil mean for this petition?",
+        ],
+      },
+    ],
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// RUPTURE TAB
+// ═══════════════════════════════════════════════════════════════════
+function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
+  const [view, setView] = useState("home"); // home | pillar | topic | response
+  const [activePillar, setActivePillar] = useState(null);
+  const [activeTopic, setActiveTopic] = useState(null);
+  const [response, setResponse] = useState("");
+  const [streaming, setStreaming] = useState(false);
+  const [activeQuestion, setActiveQuestion] = useState("");
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    try { return !localStorage.getItem("custos_rupture_seen"); } catch { return true; }
+  });
+  const scrollRef = useRef(null);
+
+  // Scroll to top on every view change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [view]);
+
+  const dismissOnboarding = () => {
+    try { localStorage.setItem("custos_rupture_seen", "1"); } catch {}
+    setShowOnboarding(false);
+  };
+
+  const askQuestion = async (question, topic) => {
+    setActiveQuestion(question);
+    setResponse("");
+    setStreaming(true);
+    setView("response");
+
+    const contextPrompt = `TRADITION & RUPTURE CONTEXT: This question comes from the "Tradition & Rupture" section of Custos, which examines specific areas where post-conciliar or recent papal acts appear to depart from the pre-existing Tradition. The topic being examined is: "${topic.title}". Context: ${topic.tension}\n\nUser's question: ${question}`;
+
+    try {
+      const r = await fetch("/api/guidance", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: contextPrompt, domain: "Tradition & Rupture — Historical Catholic Teaching" }),
+      });
+      if (!r.ok) throw new Error("Server error");
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6);
+            if (data === "[DONE]") continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.type === "content_block_delta" && parsed.delta?.text) {
+                fullText += parsed.delta.text;
+                setResponse(fullText);
+              }
+            } catch (e) {}
+          }
+        }
+      }
+    } catch (e) {
+      setResponse("Custos was unable to retrieve a response. Please try again.");
+    }
+    setStreaming(false);
+  };
+
+  // HOME — pillar grid
+  if (view === "home") {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0, position: "relative" }}>
+        <GlobalTopBar title="Tradition & Rupture" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} />
+
+        {/* ONE-TIME ONBOARDING MODAL */}
+        {showOnboarding && (
+          <div style={{
+            position: "absolute", inset: 0, zIndex: 100,
+            background: "rgba(10,14,22,0.78)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: "28px 24px",
+          }}>
+            <div style={{
+              background: T.warmWhite, borderRadius: 18,
+              border: `1px solid ${T.cardBorderStrong}`,
+              padding: "28px 24px 24px",
+              maxWidth: 380, width: "100%",
+            }}>
+              {/* Icon */}
+              <div style={{ textAlign: "center", marginBottom: 16 }}>
+                <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: "rgba(122,28,28,0.08)", border: "1.5px solid rgba(122,28,28,0.2)", marginBottom: 10 }}>
+                  <span style={{ fontSize: 24 }}>⚖</span>
+                </div>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 6 }}>Before You Begin</div>
+                <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, margin: 0 }}>Tradition & Rupture</h2>
+              </div>
+
+              {/* Body */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 22 }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>
+                  This section presents what the Church taught before certain significant changes — from the sources themselves — and lets the Tradition speak.
+                </p>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0 }}>
+                  The goal is to form your conscience and provide you with a historical perspective.
+                </p>
+                <div style={{ background: T.goldFaint, border: `1px solid ${T.cardBorder}`, borderRadius: 10, padding: "12px 14px" }}>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
+                    Bring what you find here to your confessor or spiritual director. The sources point the way — a trusted guide helps you walk it.
+                  </p>
+                </div>
+              </div>
+
+              {/* Button */}
+              <button onClick={dismissOnboarding} style={{
+                display: "block", width: "100%",
+                padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600,
+                letterSpacing: "0.08em", textTransform: "uppercase",
+                color: T.warmWhite,
+                background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`,
+                border: "none", borderRadius: 10, cursor: "pointer",
+                boxShadow: `0 3px 12px ${T.shadowCrimson}`,
+              }}>
+                I Understand — Enter
+              </button>
+            </div>
+          </div>
+        )}
+
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Header */}
+          <div style={{ padding: "22px 0 18px", textAlign: "center" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, borderRadius: "50%", background: "rgba(122,28,28,0.08)", border: `1.5px solid rgba(122,28,28,0.2)`, marginBottom: 10 }}>
+              <span style={{ fontSize: 26 }}>⚖</span>
+            </div>
+            <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, margin: "0 0 8px" }}>Tradition & Rupture</h1>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0, maxWidth: 340, marginLeft: "auto", marginRight: "auto" }}>
+              The Church has weathered rupture before — from the Great Schism to the Protestant Revolution. But the ruptures examined here struck from within. The first dismantled the sacred liturgy and discipline of two thousand years. The second produced acts and documents contradicting Tradition and the teaching of previous popes. Both are examined here against what the Church has always taught — from the sources, not from commentary.
+            </p>
+          </div>
+
+          {/* Pillars */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {RUPTURE_PILLARS.map(pillar => (
+              <button key={pillar.id} onClick={() => { setActivePillar(pillar); setView("pillar"); }}
+                style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 14, padding: "18px 18px", textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 16, boxShadow: `0 2px 8px ${T.shadowNavy}` }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: "50%", background: pillar.color + "18", border: `1.5px solid ${pillar.color}33`, flexShrink: 0 }}>
+                  <span style={{ fontSize: 20 }}>{pillar.icon}</span>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em", marginBottom: 4 }}>{pillar.label}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid }}>{pillar.topics.length} topics</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: fz(18), alignSelf: "center" }}>›</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PILLAR — topic list
+  if (view === "pillar" && activePillar) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title={activePillar.label} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => setView("home")} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Pillar summary */}
+          <div style={{ padding: "20px 0 16px" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: "50%", background: activePillar.color + "18", border: `1.5px solid ${activePillar.color}33`, marginBottom: 12 }}>
+              <span style={{ fontSize: 20 }}>{activePillar.icon}</span>
+            </div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0 }}>{activePillar.summary}</p>
+          </div>
+
+          {/* Topics */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {activePillar.topics.map(topic => (
+              <button key={topic.id} onClick={() => { setActiveTopic(topic); setView("topic"); }}
+                style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 14, padding: "16px 18px", textAlign: "left", cursor: "pointer", boxShadow: `0 1px 6px ${T.shadowNavy}` }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13.5), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em", marginBottom: 8 }}>{topic.title}</div>
+                <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, lineHeight: 1.55 }}>{topic.tension.slice(0, 140)}…</div>
+                <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.crimson, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>Examine →</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // TOPIC — full tension + guided questions
+  if (view === "topic" && activeTopic) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title="The Tension" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => setView("pillar")} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Title */}
+          <div style={{ padding: "20px 0 16px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, marginBottom: 16, lineHeight: 1.3 }}>{activeTopic.title}</div>
+            {/* Tension card */}
+            <div style={{ background: "rgba(122,28,28,0.05)", border: "1px solid rgba(122,28,28,0.18)", borderRadius: 12, padding: "16px 18px", marginBottom: 24 }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>The Departure</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{activeTopic.tension}</p>
+            </div>
+
+            {/* Guided questions */}
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Ask Custos</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, margin: "0 0 14px", lineHeight: 1.55 }}>
+              Tap a question to see what the pre-existing Tradition teaches — grounded in Custos's approved sources.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {activeTopic.questions.map((q, i) => (
+                <button key={i} onClick={() => askQuestion(q, activeTopic)}
+                  style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "14px 16px", textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 26, height: 26, borderRadius: "50%", background: T.goldFaint, border: `1px solid ${T.cardBorder}`, flexShrink: 0, marginTop: 1 }}>
+                    <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold }}>{i + 1}</span>
+                  </div>
+                  <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.55 }}>{q}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // RESPONSE — streaming AI answer
+  if (view === "response") {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title="From the Tradition" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => setView("topic")} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "20px 20px 40px" }}>
+          {/* Question chip */}
+          <div style={{ background: T.goldFaint, border: `1px solid ${T.cardBorder}`, borderRadius: 10, padding: "12px 14px", marginBottom: 20 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Your Question</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>{activeQuestion}</p>
+          </div>
+
+          {/* Streaming / response */}
+          {streaming && !response && (
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "20px 0" }}>
+              <div style={{ width: 8, height: 8, borderRadius: "50%", background: T.gold, animation: "pulse 1.2s infinite" }} />
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic" }}>Searching the Tradition…</span>
+            </div>
+          )}
+
+          {response && (
+            <div style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 14, padding: "20px 18px" }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14 }}>
+                {streaming ? "Retrieving…" : "From the Tradition"}
+              </div>
+              <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, whiteSpace: "pre-wrap" }}>{response}</div>
+              {streaming && <span style={{ color: T.gold, fontFamily: "Cinzel, serif" }}>▋</span>}
+            </div>
+          )}
+
+          {/* Back to questions */}
+          {!streaming && response && (
+            <div style={{ marginTop: 20 }}>
+              <button onClick={() => setView("topic")} style={{ display: "block", width: "100%", padding: "13px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10, cursor: "pointer" }}>
+                ← Ask Another Question
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
 
 function TraditionTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const [view, setView] = useState("list");
@@ -5979,6 +6543,13 @@ export default function Custos() {
         <>
           <TraditionTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="tradition" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "rupture" && (
+        <>
+          <RuptureTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
+          <BottomNav active="rupture" onTab={setTab} />
         </>
       )}
 
