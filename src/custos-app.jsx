@@ -5032,35 +5032,33 @@ function NovenaTab({ goHome }) {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    (async () => {
-      try {
-        const result = await window.storage.get("novena_progress");
-        if (result && result.value) setCompletedDays(JSON.parse(result.value));
-      } catch (_) {}
-      setStorageReady(true);
-    })();
+    try {
+      const stored = localStorage.getItem("custos_novena_progress");
+      if (stored) setCompletedDays(JSON.parse(stored));
+    } catch (_) {}
+    setStorageReady(true);
   }, []);
 
-  const saveProgress = async (updated) => {
-    try { await window.storage.set("novena_progress", JSON.stringify(updated)); } catch (_) {}
+  const saveProgress = (updated) => {
+    try { localStorage.setItem("custos_novena_progress", JSON.stringify(updated)); } catch (_) {}
   };
 
   const getDaysCompleted = (id) => (completedDays[id] || Array(9).fill(false)).filter(Boolean).length;
   const isDayDone = (id, idx) => (completedDays[id] || Array(9).fill(false))[idx] === true;
 
-  const markDayComplete = async (id, idx) => {
+  const markDayComplete = (id, idx) => {
     const days = completedDays[id] ? [...completedDays[id]] : Array(9).fill(false);
     days[idx] = true;
     const updated = { ...completedDays, [id]: days };
     setCompletedDays(updated);
-    await saveProgress(updated);
+    saveProgress(updated);
     return days.every(Boolean);
   };
 
-  const resetNovena = async (id) => {
+  const resetNovena = (id) => {
     const updated = { ...completedDays, [id]: Array(9).fill(false) };
     setCompletedDays(updated);
-    await saveProgress(updated);
+    saveProgress(updated);
   };
 
   const transition = (fn) => {
@@ -5076,8 +5074,8 @@ function NovenaTab({ goHome }) {
     setView("detail");
   };
 
-  const completeDay = async () => {
-    const allDone = await markDayComplete(selected.id, dayIdx);
+  const completeDay = () => {
+    const allDone = markDayComplete(selected.id, dayIdx);
     if (allDone) {
       transition(() => setView("complete"));
     } else {
