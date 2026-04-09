@@ -3052,6 +3052,84 @@ const RUPTURE_PILLARS = [
       },
     ],
   },
+  {
+    id: "marian_warnings",
+    icon: "🌹",
+    label: "Our Lady's Warnings",
+    color: "#2d5a3d",
+    summary: "Across four centuries and five continents, the Blessed Virgin Mary appeared with messages of urgent prophetic weight — warning of apostasy, clerical corruption, wars, and a crisis of faith striking the Church from within. These are not pious legends. Each apparition examined here carries formal ecclesiastical approbation. Read in sequence from 1610 to 1981, they form an escalating arc of maternal warning that converges precisely on the era of rupture. The Church does not bind the faithful to believe even approved private revelation — but she approves it when the message is worthy of belief. These messages are worthy of belief.",
+    topics: [
+      {
+        id: "good_success",
+        title: "Our Lady of Good Success — Quito, Ecuador (1610)",
+        tension: "In the early 17th century, the Blessed Virgin appeared to Venerable Mother Mariana de Jesús Torres at the Conceptionist convent in Quito, Ecuador. The apparitions were approved by the local ordinary and the messages preserved in the convent's archives. Our Lady described — with extraordinary specificity — a future crisis of faith: the corruption of clergy and religious, the near-extinction of the true Mass, widespread apostasy, and the collapse of the family. She identified the 20th century as the period of greatest danger. The apparitions predate the Enlightenment, the French Revolution, Vatican II, and the Sexual Revolution by centuries — yet describe each with prophetic precision.",
+        questions: [
+          "What does the Church teach about the nature and credibility of approved private revelation — and what assent does it require?",
+          "What do the approved sources teach about the prophetic role of Mary as Mediatrix and intercessor for the Church in times of crisis?",
+          "What does the Church's tradition say about the signs by which true private revelation may be distinguished from false?",
+        ],
+        primarySources: [
+          { label: "The Prophecies — TFP compilation", url: "https://www.tfp.org/prophecies-of-our-lady-of-good-success-about-our-times/", note: "Best available English compilation of the approved prophetic messages" },
+          { label: "Apostolate of Our Lady of Good Success", url: "https://www.ourladyofgoodsuccess.com/blogs/news/the-prophectic-words-of-our-lady-of-good-success", note: "The seven apparitions summarized with prophetic excerpts" },
+        ],
+      },
+      {
+        id: "lasalette",
+        title: "Our Lady of La Salette — France (1846)",
+        tension: "On September 19, 1846, the Blessed Virgin appeared to two shepherd children — Mélanie Calvat and Maximin Giraud — on a mountain in the French Alps. The apparition was formally approved by Bishop de Bruillard of Grenoble in 1851, and later popes received and acknowledged the seers. Our Lady wept throughout the apparition. She warned of the clergy 'swimming in impurity,' of priests who had 'become cesspools of impurity,' and of Rome losing the faith and becoming the seat of the Antichrist. The La Salette secret — published with episcopal approval — remains one of the most sobering prophetic texts in Church history. The apparition preceded by two decades the First Vatican Council and by a century the post-conciliar crisis.",
+        questions: [
+          "What does the Church teach about the possibility of chastisement as a consequence of corporate apostasy — and what do the approved sources say about divine justice and mercy?",
+          "What do the Doctors of the Church — particularly Augustine and Gregory the Great — teach about the corruption of shepherds as a sign of divine judgment on a people?",
+          "What did Pius IX teach about the enemies of the Church in his own era — and how does Qui Pluribus describe the forces working against revealed religion?",
+        ],
+        primarySources: [
+          { label: "The Approved Public Message (1851)", url: "https://www.catholicapologetics.info/catholicteaching/privaterevelation/lasalet.html", note: "The authentic approved text submitted to the Pope in 1851 — distinct from the expanded 1879 version later condemned by the Holy Office (1923)" },
+          { label: "La Salette Missionaries — Official Site", url: "https://www.lasalette.org/apparition/message.html", note: "The Missionaries of Our Lady of La Salette present the approved message" },
+        ],
+      },
+      {
+        id: "fatima",
+        title: "Our Lady of Fatima — Portugal (1917)",
+        tension: "From May through October 1917, the Blessed Virgin appeared six times to three shepherd children — Lucia dos Santos, Francisco, and Jacinta Marto — at Cova da Iria, Fatima. The apparitions were approved by the Bishop of Leiria in 1930. The Miracle of the Sun on October 13, 1917 — witnessed by approximately 70,000 people including secular journalists — stands as one of the most documented public miracles in history. Our Lady entrusted three secrets: the vision of hell, the consecration of Russia, and the Third Secret — the latter sealed until 2000 and disputed to this day. The Third Secret's vision of a 'Bishop dressed in White' being killed, and Sister Lucia's reported commentary that the secret concerned apostasy beginning at the top of the Church, has made Fatima the prophetic lens through which many traditional Catholics interpret the post-conciliar crisis. Fatima is also notable for arriving at the precise moment of the Bolshevik Revolution — whose errors Our Lady said would 'spread throughout the world.'",
+        questions: [
+          "What does the Church teach about consecration and reparation to the Immaculate Heart of Mary — and what theological basis do the approved sources provide?",
+          "What does Divini Redemptoris (Pius XI, 1937) teach about the errors of Communism that Our Lady warned would spread from Russia?",
+          "What does the approved tradition teach about the meaning of apostasy — and what do the approved sources say about the possibility of a crisis of faith reaching the highest levels of the Church?",
+        ],
+        primarySources: [
+          { label: "The Message of Fatima — Vatican / CDF (2000)", url: "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_en.html", note: "Official Vatican document releasing the Third Secret, with Cardinal Ratzinger's theological commentary — the authoritative primary source" },
+          { label: "The Three Secrets — Full Text", url: "https://www.fatima.org/essentials/opposed/s3docs.asp", note: "The Fatima Center's compilation of all three secrets with Sister Lucia's original accounts" },
+        ],
+      },
+      {
+        id: "akita",
+        title: "Our Lady of Akita — Japan (1973)",
+        tension: "Beginning in 1973, the Blessed Virgin appeared to Sister Agnes Sasagawa at the convent of the Handmaids of the Eucharist in Akita, Japan. The apparitions were approved by Bishop John Shojiro Ito of Niigata in 1984. Cardinal Joseph Ratzinger — then Prefect of the Congregation for the Doctrine of the Faith — stated in 1988 that the Akita message was 'essentially the same' as the Message of Fatima. The approved message contains one of the most alarming prophetic statements in modern Church history: 'The work of the devil will infiltrate even into the Church in such a way that one will see cardinals opposing cardinals, bishops against bishops... The Church will be full of those who accept compromises.' Akita arrived in 1973 — the precise midpoint of the first rupture, one year after the Ottaviani Intervention, and in the same year as Humanae Vitae's widespread rejection by the clergy.",
+        questions: [
+          "What does the Church's tradition teach about diabolical infiltration of sacred institutions — and what did Leo XIII's vision and prayer to St. Michael acknowledge about this danger?",
+          "What does the approved tradition teach about the duty of bishops and cardinals to maintain unity with the perennial Magisterium — and what happens when they fail?",
+          "What does Humani Generis (Pius XII, 1950) teach about the errors already spreading within the Church before Vatican II — and how does it illuminate what Akita warned was coming?",
+        ],
+        primarySources: [
+          { label: "The Full Message — EWTN", url: "https://www.ewtn.com/catholicism/library/message-from-our-lady--akita-japan-5167", note: "EWTN hosts the full chronological account including Bishop Ito's 1984 pastoral letter of approval and the three approved messages" },
+        ],
+      },
+      {
+        id: "kibeho",
+        title: "Our Lady of Kibeho — Rwanda (1981–1989)",
+        tension: "Beginning on November 28, 1981, the Blessed Virgin appeared to students at a secondary school in Kibeho, Rwanda. The visions of three seers — Alphonsine Mumureke, Nathalie Mukamazimpaka, and Marie Claire Mukangango — were formally approved by Bishop Augustin Misago of Gikongoro in 2001, with the Holy See releasing the declaration. Kibeho is the only Vatican-approved Marian apparition in Africa. Our Lady appeared under the title Nyina wa Jambo — 'Mother of the Word.' The messages emphasized radical penance, unceasing prayer, and the Seven Sorrows of Mary. The visionaries were shown apocalyptic visions — rivers of blood, bodies without heads, a world collapsing into hatred — which many understood as foretelling the 1994 Rwandan genocide, in which over 800,000 people were killed. Marie Claire Mukangango, one of the approved seers, was herself killed in the genocide. Kibeho's message — that a world which rejects prayer and penance descends into fratricidal slaughter — arrives at the close of a century bookended by Fatima's warnings and Akita's.",
+        questions: [
+          "What does the Church's tradition teach about penance and reparation as the response to social sin — and what do the approved sources say about the connection between the sins of a people and the chastisements that follow?",
+          "What does the Rosary of the Seven Sorrows — promoted by Our Lady at Kibeho — have in common with traditional Marian devotion approved by the pre-conciliar Magisterium?",
+          "What does the approved tradition teach about the prophetic role of Mary in salvation history — and how does Munificentissimus Deus (Pius XII, 1950) illuminate her ongoing intercession for the Church?",
+        ],
+        primarySources: [
+          { label: "Bishop Misago's Declaration (2001) — EWTN", url: "https://www.ewtn.com/catholicism/library/declaration-apparitions-of-kibeho-21169", note: "The formal episcopal declaration of authenticity with summary of the approved messages" },
+          { label: "Theological Summary of the Apparitions — EWTN", url: "https://www.ewtn.com/catholicism/library/judgement-on-the-apparitions-of-kibeho-5709", note: "Translation of the 23-page French theological commission report, including the key message themes" },
+        ],
+      },
+    ],
+  },
 ];
 
 // ═══════════════════════════════════════════════════════════════════
@@ -3292,6 +3370,31 @@ function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
                 </button>
               ))}
             </div>
+
+            {/* Primary Sources — shown only for apparition topics */}
+            {activeTopic.primarySources?.length > 0 && (
+              <div style={{ marginTop: 28 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Primary Sources</div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, margin: "0 0 14px", lineHeight: 1.55 }}>
+                  Read the approved messages for yourself. These are the primary documents — not commentary or interpretation.
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {activeTopic.primarySources.map((src, i) => (
+                    <a key={i} href={src.url} target="_blank" rel="noopener noreferrer"
+                      style={{ display: "block", background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "14px 16px", textDecoration: "none" }}>
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                        <span style={{ fontSize: 18, flexShrink: 0, marginTop: 1 }}>📄</span>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, marginBottom: 4, letterSpacing: "0.02em" }}>{src.label}</div>
+                          {src.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, lineHeight: 1.5, fontStyle: "italic" }}>{src.note}</div>}
+                        </div>
+                        <span style={{ color: T.gold, fontSize: fz(16), flexShrink: 0, alignSelf: "center" }}>↗</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
