@@ -3076,14 +3076,14 @@ const RUPTURE_PILLARS = [
       {
         id: "lasalette",
         title: "Our Lady of La Salette — France (1846)",
-        tension: "On September 19, 1846, the Blessed Virgin appeared to two shepherd children — Mélanie Calvat and Maximin Giraud — on a mountain in the French Alps. The apparition was formally approved by Bishop de Bruillard of Grenoble in 1851, and later popes received and acknowledged the seers. Our Lady wept throughout the apparition. She warned of the clergy 'swimming in impurity,' of priests who had 'become cesspools of impurity,' and of Rome losing the faith and becoming the seat of the Antichrist. The La Salette secret — published with episcopal approval — remains one of the most sobering prophetic texts in Church history. The apparition preceded by two decades the First Vatican Council and by a century the post-conciliar crisis.",
+        tension: "On September 19, 1846, the Blessed Virgin appeared to two shepherd children — Mélanie Calvat and Maximin Giraud — on a mountain in the French Alps. The apparition was formally approved by Bishop de Bruillard of Grenoble in 1851. Our Lady wept throughout. The approved public message called for conversion, warned of divine chastisement through famine and crop failure, and rebuked Sabbath-breaking and blasphemy. Our Lady also confided a private secret to each child, to be held until further notice. In 1879 — near the end of her life, and claiming Our Lady's permission — Mélanie published a greatly expanded version of her secret. It included severe prophecies about clerical corruption, the near-destruction of the faith, and Rome becoming the seat of the Antichrist. This text received an imprimatur from Bishop Zola of Lecce, Italy. In 1923, the Holy Office issued a decree — damnatur opusculum, 'condemned publication' — against the 1879 text and its subsequent reprints. The decree condemned the publication itself; it did not declare the contents heretical or issue a doctrinal condemnation of the prophetic claims. The 1879 text continues to circulate widely in traditional Catholic circles. The approved apparition and public message of 1851 stand on their own authority.",
         questions: [
           "What does the Church teach about the possibility of chastisement as a consequence of corporate apostasy — and what do the approved sources say about divine justice and mercy?",
           "What do the Doctors of the Church — particularly Augustine and Gregory the Great — teach about the corruption of shepherds as a sign of divine judgment on a people?",
           "What did Pius IX teach about the enemies of the Church in his own era — and how does Qui Pluribus describe the forces working against revealed religion?",
         ],
         primarySources: [
-          { label: "The Approved Public Message (1851)", url: "https://www.catholicapologetics.info/catholicteaching/privaterevelation/lasalet.html", note: "The authentic approved text submitted to the Pope in 1851 — distinct from the expanded 1879 version later condemned by the Holy Office (1923)" },
+          { label: "The Approved Public Message (1851)", url: "https://www.catholicapologetics.info/catholicteaching/privaterevelation/lasalet.html", note: "The public message approved by Bishop de Bruillard in 1851 — distinct from Mélanie's expanded 1879 secret, which was condemned as a publication by the Holy Office in 1923" },
           { label: "La Salette Missionaries — Official Site", url: "https://www.lasalette.org/apparition/message.html", note: "The Missionaries of Our Lady of La Salette present the approved message" },
         ],
       },
@@ -5032,33 +5032,35 @@ function NovenaTab({ goHome }) {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("custos_novena_progress");
-      if (stored) setCompletedDays(JSON.parse(stored));
-    } catch (_) {}
-    setStorageReady(true);
+    (async () => {
+      try {
+        const result = await window.storage.get("novena_progress");
+        if (result && result.value) setCompletedDays(JSON.parse(result.value));
+      } catch (_) {}
+      setStorageReady(true);
+    })();
   }, []);
 
-  const saveProgress = (updated) => {
-    try { localStorage.setItem("custos_novena_progress", JSON.stringify(updated)); } catch (_) {}
+  const saveProgress = async (updated) => {
+    try { await window.storage.set("novena_progress", JSON.stringify(updated)); } catch (_) {}
   };
 
   const getDaysCompleted = (id) => (completedDays[id] || Array(9).fill(false)).filter(Boolean).length;
   const isDayDone = (id, idx) => (completedDays[id] || Array(9).fill(false))[idx] === true;
 
-  const markDayComplete = (id, idx) => {
+  const markDayComplete = async (id, idx) => {
     const days = completedDays[id] ? [...completedDays[id]] : Array(9).fill(false);
     days[idx] = true;
     const updated = { ...completedDays, [id]: days };
     setCompletedDays(updated);
-    saveProgress(updated);
+    await saveProgress(updated);
     return days.every(Boolean);
   };
 
-  const resetNovena = (id) => {
+  const resetNovena = async (id) => {
     const updated = { ...completedDays, [id]: Array(9).fill(false) };
     setCompletedDays(updated);
-    saveProgress(updated);
+    await saveProgress(updated);
   };
 
   const transition = (fn) => {
@@ -5074,8 +5076,8 @@ function NovenaTab({ goHome }) {
     setView("detail");
   };
 
-  const completeDay = () => {
-    const allDone = markDayComplete(selected.id, dayIdx);
+  const completeDay = async () => {
+    const allDone = await markDayComplete(selected.id, dayIdx);
     if (allDone) {
       transition(() => setView("complete"));
     } else {
