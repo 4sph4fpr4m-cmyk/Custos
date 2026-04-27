@@ -383,8 +383,8 @@ const DOCTORS = [
     topics: ["Scripture","Translation","Asceticism","Monasticism","Polemics"],
     works: [
       { title: "The Vulgate (Latin Bible)", url: null },
-      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/30.htm" },
-      { title: "Letters", url: "https://www.newadvent.org/fathers/30.htm" },
+      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/3000.htm" },
+      { title: "Letters", url: "https://www.newadvent.org/fathers/3001.htm" },
     ],
     quotes: [
       { text: "Ignorance of Scripture is ignorance of Christ.", source: "Commentary on Isaiah" },
@@ -420,7 +420,7 @@ const DOCTORS = [
     topics: ["Pastoral Counsel","The Moral Life","Humility","Leadership","Liturgy","Spiritual Direction"],
     works: [
       { title: "Pastoral Care (Regula Pastoralis)", url: "https://www.newadvent.org/fathers/36011.htm" },
-      { title: "Moralia in Job", url: "https://www.newadvent.org/fathers/36.htm" },
+      { title: "Moralia in Job", url: "https://www.newadvent.org/fathers/3501.htm" },
       { title: "Dialogues", url: "https://www.newadvent.org/fathers/3604.htm" },
     ],
     quotes: [
@@ -431,8 +431,8 @@ const DOCTORS = [
     bio: "The most influential churchman of the 12th century. Bernard founded 68 monasteries, preached the Second Crusade, helped resolve a papal schism, and wrote mystical theology of extraordinary beauty. His sermons on the Song of Songs are the high point of medieval devotional literature. Dante chose him as the final guide in the Paradiso. His devotion to the Blessed Virgin shaped Marian piety for centuries.",
     topics: ["Love of God","Mystical Union","The Blessed Virgin","Monastic Life","Humility","The Song of Songs"],
     works: [
-      { title: "On Loving God", url: "https://www.newadvent.org/fathers/3804.htm" },
-      { title: "Sermons on the Song of Songs", url: "https://www.newadvent.org/fathers/3805.htm" },
+      { title: "On Loving God", url: "https://www.ccel.org/ccel/bernard/loving_god.html" },
+      { title: "Sermons on the Song of Songs", url: "https://www.ccel.org/ccel/bernard/sermons.html" },
       { title: "On Consideration", url: null },
     ],
     quotes: [
@@ -454,9 +454,9 @@ const DOCTORS = [
     bio: "The greatest systematic theologian in the history of the Church. Aquinas synthesized Aristotelian philosophy with Catholic theology, producing the Summa Theologiae — the most comprehensive treatment of faith and reason ever written. His account of natural law, the virtues, the moral act, and conscience remains the foundation of Catholic moral theology. Declared Doctor of the Church by Pius V and patron of Catholic schools by Leo XIII.",
     topics: ["Conscience","Natural Law","Virtue","Justice","Life & Death","Prayer","The Moral Act","Grace"],
     works: [
-      { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/" },
-      { title: "Summa Contra Gentiles", url: "https://www.newadvent.org/summa/" },
-      { title: "De Malo (On Evil)", url: "https://www.newadvent.org/summa/" },
+      { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/1.htm" },
+      { title: "Summa Contra Gentiles", url: "https://isidore.co/aquinas/english/ContraGentiles.htm" },
+      { title: "De Malo (On Evil)", url: "https://isidore.co/aquinas/english/DeVirtutibus.htm" },
     ],
     quotes: [
       { text: "Charity is friendship with God — the form and mother of all virtues, without which faith itself is dead.", source: "Summa II-II, Q.23" },
@@ -502,7 +502,7 @@ const DOCTORS = [
     bio: "The foremost controversialist of the Counter-Reformation. His Disputationes is the most systematic defense of Catholic doctrine against Protestant objections ever written. He served as a cardinal, papal theologian, and spiritual director to St. Aloysius Gonzaga. His Art of Dying Well remains a classic of Catholic spirituality on the last things.",
     topics: ["Apologetics","Papal Authority","The Sacraments","The Last Things","Controversy","The Church"],
     works: [
-      { title: "De Controversiis (Disputations)", url: "https://www.newadvent.org/cathen/02411d.htm" },
+      { title: "De Controversiis (Disputations)", url: "https://archive.org/details/roman-catholicism-cardinal-robert-bellarmine-disputationes-de-controversiis-chri" },
       { title: "The Art of Dying Well", url: "https://www.ewtn.com/catholicism/library/art-of-dying-well-12498" },
     ],
     quotes: [
@@ -1755,6 +1755,259 @@ function parseGuidance(text) {
   return s;
 }
 
+// ═══════════════════════════════════════════════════════════════════
+// CUSTOS LEX — Canon Law Tool (embedded)
+// ═══════════════════════════════════════════════════════════════════
+const LEX_SYSTEM = `You are Custos Lex — a plain-English canon law assistant for everyday Catholic laypeople. Your sole reference is the 1983 Code of Canon Law (Codex Iuris Canonici, 1983). You do not cite the 1917 Code, the Eastern Code (CCEO), or any other legal instrument unless the user specifically requests it.
+
+IDENTITY & TONE
+You are a knowledgeable, pastoral guide — not a canon lawyer. Remind the person when their question requires a qualified canon lawyer or diocesan tribunal. Speak clearly and directly. Translate legal language into plain English. Use "you" and "your" freely. Be direct. Canon law exists to protect the faithful — lead with that framing. On follow-up questions, maintain context. Do not re-introduce yourself.
+
+CITATION RULES — ABSOLUTE
+You MUST cite specific canon numbers for every substantive claim. NEVER cite a canon number you cannot accurately summarize. NEVER render a judgment on whether a specific marriage is valid or invalid — that requires a tribunal. NEVER give legal advice. If a question falls outside the 1983 CIC, say so plainly.
+
+RESPONSE FORMAT — use exactly this structure for every response including follow-ups. No markdown.
+
+PLAIN ANSWER:
+[2-4 sentences directly answering the question in plain English. Lead with the answer.]
+
+WHAT THE CODE SAYS:
+CANON: [e.g. Can. 1247]
+TEXT: [Plain-English summary of what this canon says.]
+APPLIES BECAUSE: [1 sentence connecting this canon to the question.]
+
+CANON: [second canon if applicable]
+TEXT: [summary]
+APPLIES BECAUSE: [connection]
+
+WHAT THIS MEANS FOR YOU:
+[2-3 sentences of practical application. When do they need a priest or canon lawyer?]
+
+CANONICAL STATUS:
+[Exactly one of: "Clearly settled by the Code" / "Settled — but subject to diocesan variation" / "Requires tribunal judgment" / "The Code is silent — consult your diocese"]`;
+
+const LEX_SCENARIOS = [
+  { id: "marriage", icon: "💍", label: "Marriage & Annulment", sub: "Validity · Annulment · Convalidation", prompts: ["What makes a Catholic marriage invalid under canon law?", "Can I get an annulment if my marriage was never consummated?", "My spouse was previously married outside the Church. Is our marriage valid?", "What is a convalidation and when do I need one?"] },
+  { id: "sacraments", icon: "✝", label: "Sacraments & Initiation", sub: "Baptism · Confirmation · Eucharist", prompts: ["Who can be a godparent for baptism?", "Can my non-Catholic friend be a godparent?", "At what age must a child receive First Communion?", "Can I receive Communion at a non-Catholic church?"] },
+  { id: "mass", icon: "⛪", label: "Mass Obligation", sub: "Sunday · Holy Days · Dispensation", prompts: ["Am I required to attend Mass every Sunday?", "What counts as a valid reason to miss Mass?", "Does a Saturday evening Mass fulfill my Sunday obligation?", "Which holy days of obligation apply in the United States?"] },
+  { id: "confession", icon: "🕊", label: "Confession & Penance", sub: "Requirements · Seal · Absolution", prompts: ["How often am I required to go to confession?", "Can a priest ever reveal what is said in confession?", "Can I confess to any Catholic priest, or must I go to my parish?", "What is required for a valid confession?"] },
+  { id: "membership", icon: "📜", label: "Rights & Obligations", sub: "Laity · Excommunication · Parishes", prompts: ["What are the basic obligations of a Catholic layperson?", "What acts result in automatic excommunication?", "Do I have the right to receive the sacraments from my parish?", "Can I be formally excommunicated for leaving the Church?"] },
+  { id: "funerals", icon: "✞", label: "Funerals & Burial", sub: "Rites · Cremation · Denial of Funeral", prompts: ["Can Catholics be cremated?", "Can someone who died by suicide receive a Catholic funeral?", "Who can be denied a Catholic funeral?", "Can a Catholic be buried in a non-Catholic cemetery?"] },
+];
+
+function parseLex(text) {
+  const plainAnswer = text.match(/PLAIN ANSWER[:\s]*\n([\s\S]*?)(?=\nWHAT THE CODE SAYS[:\s]|$)/i)?.[1]?.trim();
+  const codeSection = text.match(/WHAT THE CODE SAYS[:\s]*\n([\s\S]*?)(?=\nWHAT THIS MEANS FOR YOU[:\s]|$)/i)?.[1]?.trim();
+  const meansForYou = text.match(/WHAT THIS MEANS FOR YOU[:\s]*\n([\s\S]*?)(?=\nCANONICAL STATUS[:\s]|$)/i)?.[1]?.trim();
+  const status = text.match(/CANONICAL STATUS[:\s]*\n?([\s\S]*?)$/i)?.[1]?.trim();
+  const canons = [];
+  if (codeSection) {
+    const blocks = codeSection.split(/\nCANON:/i).filter(Boolean);
+    for (const block of blocks) {
+      const num = block.match(/^[:\s]*([^\n]+)/)?.[1]?.trim();
+      const txt = block.match(/TEXT[:\s]*([\s\S]*?)(?=APPLIES BECAUSE|$)/i)?.[1]?.trim();
+      const applies = block.match(/APPLIES BECAUSE[:\s]*([\s\S]*?)(?=\nCANON:|$)/i)?.[1]?.trim();
+      if (num || txt) canons.push({ num, txt, applies });
+    }
+  }
+  return { plainAnswer, canons, meansForYou, status };
+}
+
+function LexStatusPill({ status }) {
+  const isSettled  = status?.includes("Clearly settled");
+  const isDiocesan = status?.includes("diocesan variation");
+  const isTribunal = status?.includes("tribunal");
+  const color  = isSettled ? "#2d6a3f" : isDiocesan ? T.inkMid : isTribunal ? T.crimson : T.inkLight;
+  const bg     = isSettled ? "rgba(45,106,63,0.08)" : isDiocesan ? T.goldFaint : isTribunal ? "rgba(122,28,28,0.08)" : T.subtleBg;
+  const border = isSettled ? "rgba(45,106,63,0.25)" : isDiocesan ? T.cardBorderStrong : isTribunal ? "rgba(122,28,28,0.25)" : T.cardBorder;
+  return (
+    <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: bg, border: `1px solid ${border}`, borderRadius: 20, padding: "6px 16px" }}>
+      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), letterSpacing: "0.08em", textTransform: "uppercase", color: T.inkLight }}>Canonical Status</span>
+      <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontStyle: "italic", color }}>{status}</span>
+    </div>
+  );
+}
+
+function CustosLex({ onBack }) {
+  const [lexView, setLexView] = useState("home"); // home | streaming | response
+  const [question, setQuestion] = useState("");
+  const [currentQ, setCurrentQ] = useState("");
+  const [streamText, setStreamText] = useState("");
+  const [parsed, setParsed] = useState(null);
+  const [followUp, setFollowUp] = useState("");
+  const [history, setHistory] = useState([]);
+  const [openScenario, setOpenScenario] = useState(null);
+  const [canonOpen, setCanonOpen] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  const submit = async (text, isFollowUp = false) => {
+    if (!text.trim()) return;
+    if (!isFollowUp) { setHistory([]); setParsed(null); }
+    setCurrentQ(text.trim());
+    setStreamText("");
+    setLexView("streaming");
+    const userMsg = { role: "user", content: text.trim() };
+    const msgs = isFollowUp ? [...history, userMsg] : [userMsg];
+    try {
+      const r = await fetch("/api/lex", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: text.trim(), history: isFollowUp ? history : [] }),
+      });
+      if (!r.ok) throw new Error("Server error");
+      const reader = r.body.getReader();
+      const dec = new TextDecoder();
+      let full = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        for (const line of dec.decode(value, { stream: true }).split("\n")) {
+          if (!line.startsWith("data: ")) continue;
+          const d = line.slice(6);
+          if (d === "[DONE]") continue;
+          try { const j = JSON.parse(d); if (j.type === "content_block_delta" && j.delta?.text) { full += j.delta.text; setStreamText(full); } } catch {}
+        }
+      }
+      if (!full.trim()) throw new Error("Empty response");
+      setHistory([...msgs, { role: "assistant", content: full }]);
+      setParsed(parseLex(full));
+      setFollowUp(""); setCanonOpen(true); setLexView("response");
+    } catch {
+      setParsed({ plainAnswer: "Unable to retrieve canon law guidance. Please check your connection and try again.", canons: [], meansForYou: null, status: null });
+      setLexView("response");
+    }
+  };
+
+  const handleNew = () => { setQuestion(""); setHistory([]); setParsed(null); setCurrentQ(""); setFollowUp(""); setOpenScenario(null); setLexView("home"); };
+
+  const formatCopy = () => {
+    if (!parsed) return "";
+    let t = "";
+    if (parsed.plainAnswer) t += "PLAIN ANSWER:\n" + parsed.plainAnswer + "\n\n";
+    if (parsed.canons?.length) { t += "WHAT THE CODE SAYS:\n"; parsed.canons.forEach(c => { if (c.num) t += `Can. ${c.num}\n`; if (c.txt) t += c.txt + "\n"; if (c.applies) t += c.applies + "\n"; t += "\n"; }); }
+    if (parsed.meansForYou) t += "WHAT THIS MEANS FOR YOU:\n" + parsed.meansForYou + "\n\n";
+    if (parsed.status) t += "CANONICAL STATUS: " + parsed.status;
+    return t + "\n\n— Custos Lex (askcustos.com)\n  Canon law for everyday Catholics";
+  };
+
+  if (lexView === "home") return (
+    <div style={{ background: T.parchment }}>
+      <TopBar title="Custos Lex" showBack={true} onBack={onBack} />
+      <div style={{ padding: "14px 20px 30px" }}>
+        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, textAlign: "center", lineHeight: 1.55, margin: "0 0 18px", fontStyle: "italic" }}>Plain-English answers citing the 1983 Code of Canon Law</p>
+        <div style={{ marginBottom: 18 }}>
+          <textarea value={question} onChange={e => setQuestion(e.target.value)}
+            placeholder={"Ask a canon law question\u2026 e.g. \u201CCan my Catholic wedding be held outdoors?\u201D"}
+            rows={3} style={{ width: "100%", padding: 16, fontFamily: "EB Garamond, serif", fontSize: fz(17), lineHeight: 1.6, color: T.inkDark, background: T.warmWhite, border: `1.5px solid ${T.cardBorderStrong}`, borderRadius: 12, resize: "none", boxSizing: "border-box" }}
+            onFocus={e => e.target.style.borderColor = T.gold}
+            onBlur={e => e.target.style.borderColor = T.cardBorderStrong}
+            onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey && question.trim()) { e.preventDefault(); submit(question); } }}
+          />
+          <button onClick={() => { if (question.trim()) submit(question); }} style={{ display: "block", width: "100%", padding: "13px 0", marginTop: 10, fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: question.trim() ? T.warmWhite : T.inkLight, background: question.trim() ? `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` : T.parchmentDark, border: question.trim() ? `1px solid ${T.gold}44` : `1px solid ${T.cardBorder}`, borderRadius: 10, cursor: question.trim() ? "pointer" : "default", boxShadow: question.trim() ? `0 3px 12px ${T.shadowNavy}` : "none" }}>Consult the Code</button>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "4px 0 14px" }}>
+          <div style={{ flex: 1, height: 1, background: T.cardBorder }} />
+          <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), letterSpacing: "0.10em", color: T.inkLight, textTransform: "uppercase" }}>Common Questions</span>
+          <div style={{ flex: 1, height: 1, background: T.cardBorder }} />
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          {LEX_SCENARIOS.map(s => (
+            <div key={s.id} style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${openScenario === s.id ? T.cardBorderStrong : T.cardBorder}` }}>
+              <button onClick={() => setOpenScenario(openScenario === s.id ? null : s.id)} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "13px 16px", background: T.warmWhite, border: "none", cursor: "pointer", textAlign: "left" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ fontSize: fz(20), flexShrink: 0 }}>{s.icon}</span>
+                  <div>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.navyText, letterSpacing: "0.04em" }}>{s.label}</div>
+                    <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 1 }}>{s.sub}</div>
+                  </div>
+                </div>
+                <span style={{ color: T.gold, fontSize: fz(13), display: "inline-block", transform: openScenario === s.id ? "rotate(0deg)" : "rotate(180deg)", transition: "transform 0.25s" }}>▴</span>
+              </button>
+              {openScenario === s.id && (
+                <div style={{ background: T.parchmentDark, borderTop: `1px solid ${T.cardBorder}` }}>
+                  {s.prompts.map((p, i) => (
+                    <button key={i} onClick={() => submit(p)} style={{ display: "block", width: "100%", textAlign: "left", padding: "11px 16px 11px 44px", fontFamily: "EB Garamond, serif", fontSize: fz(15), lineHeight: 1.45, color: T.inkDark, background: "none", border: "none", borderTop: i > 0 ? `1px solid ${T.cardBorder}` : "none", cursor: "pointer" }}
+                      onMouseEnter={e => { e.currentTarget.style.color = T.navy; e.currentTarget.style.background = T.parchment; }}
+                      onMouseLeave={e => { e.currentTarget.style.color = T.inkDark; e.currentTarget.style.background = "none"; }}
+                    >{p}</button>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: 22, padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>Canonical guidance only — not legal advice.<br />Complex matters require a qualified canon lawyer or diocesan tribunal.</p>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (lexView === "streaming") return (
+    <div style={{ background: T.parchment }}>
+      <TopBar title="Custos Lex" showBack={false} />
+      <div style={{ padding: "16px 20px" }}>
+        <Card style={{ marginBottom: 12, background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+          <CardTitle color={T.gold}>Your Question</CardTitle>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+        </Card>
+        <Card>
+          <CardTitle>Consulting the Code…</CardTitle>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{streamText || "Searching the 1983 Code of Canon Law\u2026"}</p>
+        </Card>
+      </div>
+    </div>
+  );
+
+  // response view
+  return (
+    <div style={{ background: T.parchment }}>
+      <TopBar title="Custos Lex" showBack={true} onBack={handleNew} />
+      <div style={{ padding: "12px 20px 30px" }}>
+        <Card style={{ background: T.goldFaint, borderColor: T.cardBorderStrong, marginBottom: 12 }}>
+          <CardTitle color={T.gold}>Your Question</CardTitle>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+        </Card>
+        {parsed && <>
+          {parsed.plainAnswer && <Card style={{ marginBottom: 12 }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{parsed.plainAnswer}</p></Card>}
+          {parsed.canons?.length > 0 && (
+            <Card style={{ marginBottom: 12 }}>
+              <button onClick={() => setCanonOpen(!canonOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                <CardTitle style={{ margin: 0 }}>What the Code Says</CardTitle>
+                <span style={{ color: T.gold, fontSize: fz(13), display: "inline-block", transform: canonOpen ? "rotate(0deg)" : "rotate(180deg)", transition: "transform 0.25s" }}>▴</span>
+              </button>
+              {canonOpen && <div style={{ marginTop: 12 }}>{parsed.canons.map((c, i) => (
+                <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 14, marginBottom: i < parsed.canons.length - 1 ? 18 : 0 }}>
+                  {c.num && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.navyText, marginBottom: 6 }}>Can. {c.num}</div>}
+                  {c.txt && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, marginBottom: c.applies ? 6 : 0 }}>{c.txt}</div>}
+                  {c.applies && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkMid, lineHeight: 1.6 }}>{c.applies}</div>}
+                </div>
+              ))}</div>}
+            </Card>
+          )}
+          {parsed.meansForYou && <Card style={{ marginBottom: 12 }}><CardTitle color={T.crimson}>What This Means for You</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{parsed.meansForYou}</p></Card>}
+          {parsed.status && <div style={{ marginBottom: 12, textAlign: "center" }}><LexStatusPill status={parsed.status} /></div>}
+        </>}
+        <div style={{ display: "flex", gap: 8, margin: "16px 0 0" }}>
+          <button onClick={handleNew} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
+          <button onClick={() => { navigator.clipboard.writeText(formatCopy()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
+        </div>
+        <div style={{ margin: "16px 0 0", display: "flex", gap: 8 }}>
+          <input type="text" value={followUp} onChange={e => setFollowUp(e.target.value)}
+            onKeyDown={e => { if (e.key === "Enter" && followUp.trim()) submit(followUp, true); }}
+            placeholder="Ask a follow-up\u2026"
+            style={{ flex: 1, padding: "12px 14px", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, boxSizing: "border-box", outline: "none" }}
+          />
+          <button onClick={() => { if (followUp.trim()) submit(followUp, true); }} disabled={!followUp.trim()} style={{ padding: "12px 18px", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: followUp.trim() ? T.warmWhite : T.inkLight, background: followUp.trim() ? `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` : T.warmWhite, border: followUp.trim() ? "none" : `1px solid ${T.cardBorder}`, borderRadius: 10, cursor: followUp.trim() ? "pointer" : "default", boxShadow: followUp.trim() ? `0 2px 8px ${T.shadowCrimson}` : "none" }}>Ask</button>
+        </div>
+        <div style={{ margin: "16px 0 0", padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0 }}>Canonical guidance only — not legal advice. Complex matters require a qualified canon lawyer or diocesan tribunal.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, seekStartView, clearStartView }) {
   const [view, setView] = useState("home"); // home|loading|response|sources|privacy
   const [domain, setDomain] = useState(null);
@@ -1885,8 +2138,15 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         : { role: "user", content: domain ? "Domain: " + domain.label + ". My question: " + text.trim() : "My question: " + text.trim() };
       setHistory([...history, userMsg, { role: "assistant", content: fullText }]);
       if (isFollowUp) {
-        setRawResponse(fullText);
-        setGuidance(null);
+        const parsed = parseGuidance(fullText);
+        const hasStructure = parsed && (parsed.shortAnswer || parsed.tradition?.length > 0 || parsed.magisterium?.length > 0);
+        if (hasStructure) {
+          setRawResponse(null);
+          setGuidance(parsed);
+        } else {
+          setRawResponse(fullText);
+          setGuidance(null);
+        }
       } else {
         setRawResponse(null);
         setGuidance(parseGuidance(fullText));
@@ -1962,6 +2222,35 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12.5), color: T.inkLight }}>Never stored — sent only to generate guidance</span>
             </div>
           </div>
+
+          {/* Custos Lex card */}
+          <button onClick={() => setView("lex")} style={{
+            display: "flex", alignItems: "center", justifyContent: "space-between",
+            width: "100%", marginTop: 14, padding: "13px 16px",
+            background: T.warmWhite,
+            border: `1px solid ${T.cardBorderStrong}`,
+            borderRadius: 12, cursor: "pointer", textAlign: "left",
+            boxSizing: "border-box",
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", background: T.goldFaint, border: `1px solid ${T.cardBorder}`, flexShrink: 0 }}>
+                <svg width="17" height="17" viewBox="0 0 100 100" fill="none">
+                  <line x1="50" y1="12" x2="50" y2="88" stroke={T.gold} strokeWidth="6" strokeLinecap="round" opacity="0.85"/>
+                  <line x1="18" y1="32" x2="82" y2="32" stroke={T.gold} strokeWidth="6" strokeLinecap="round" opacity="0.85"/>
+                  <line x1="18" y1="32" x2="8"  y2="58" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.7"/>
+                  <line x1="82" y1="32" x2="92" y2="58" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.7"/>
+                  <path d="M3 58 Q8 70 13 58"  stroke={T.gold} strokeWidth="4" fill="none" opacity="0.7"/>
+                  <path d="M87 58 Q92 70 97 58" stroke={T.gold} strokeWidth="4" fill="none" opacity="0.7"/>
+                  <line x1="36" y1="86" x2="64" y2="86" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.6"/>
+                </svg>
+              </div>
+              <div>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.navyText, letterSpacing: "0.05em" }}>Custos Lex</div>
+                <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 1 }}>Canon law for everyday Catholics — 1983 Code</div>
+              </div>
+            </div>
+            <span style={{ color: T.gold, fontSize: fz(16), flexShrink: 0, marginLeft: 8 }}>›</span>
+          </button>
 
           {/* Starter prompts — general or domain-specific */}
           {!question.trim() && !domain && (
@@ -2399,6 +2688,11 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               <button onClick={() => setView("home")} style={{ padding: "14px 40px", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "none", borderRadius: 10, cursor: "pointer" }}>Return to Seek</button>
             </div>
           </div>
+        </div>
+      )}
+      {view === "lex" && (
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          <CustosLex onBack={() => setView("home")} />
         </div>
       )}
     </>
