@@ -35,10 +35,10 @@ const DOMAINS = [
     "Is it a mortal sin if I didn't fully consent?",
     "How do I form my conscience properly?",
   ]},
-  { id: "work", icon: "⚖", label: "Work & Social Life", sub: "Honesty · Justice · Voting", prompts: [
-    "Can I vote for a candidate who supports abortion if I disagree on that issue?",
-    "My employer asks me to do something dishonest. What are my obligations?",
-    "Is it a sin to charge interest on a loan?",
+  { id: "apologetics", icon: "🛡", label: "Defending the Faith", sub: "Atheism · Protestantism · Objections", prompts: [
+    "How do I respond to Sola Scriptura? Why do Catholics need the Church?",
+    "My atheist friend says there's no proof God exists. What does the Church teach?",
+    "Why do Catholics pray to saints? Isn't that forbidden in Scripture?",
   ]},
   { id: "family", icon: "🏠", label: "Marriage & Family", sub: "NFP · Divorce · Parenting", prompts: [
     "What are the Church's approved methods of family planning?",
@@ -54,6 +54,11 @@ const DOMAINS = [
     "Is it a sin to remove life support from a dying relative?",
     "My spouse wants to pursue IVF. What does the Church teach?",
     "Can I donate my organs after death?",
+  ]},
+  { id: "work", icon: "⚖", label: "Work & Social Life", sub: "Honesty · Justice · Voting", prompts: [
+    "Can I vote for a candidate who supports abortion if I disagree on that issue?",
+    "My employer asks me to do something dishonest. What are my obligations?",
+    "Is it a sin to charge interest on a loan?",
   ]},
 ];
 
@@ -83,7 +88,7 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - The Catechism of Pope St. Pius X (cite by part and question number)
    - The 1992 Catechism of the Catholic Church may be cited as supplementary only (cite as CCC §NNNN), and must not contradict or override the Baltimore, Roman, or Pius X Catechisms
 
-3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these (in chronological order):
+3. PAPAL ENCYCLICALS AND APOSTOLIC DOCUMENTS — only these 21 (in chronological order):
    - Mirari Vos (Gregory XVI, 1832) — against indifferentism and religious liberty errors
    - Quanta Cura and the Syllabus of Errors (Pius IX, 1864) — condemned modernist propositions
    - Aeterni Patris (Leo XIII, 1879) — on the restoration of Thomistic philosophy
@@ -103,25 +108,34 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
    - Familiaris Consortio (John Paul II, 1981) — on the role of the Christian family
    - Veritatis Splendor (John Paul II, 1993) — on the foundations of moral theology
    - Evangelium Vitae (John Paul II, 1995) — on the value and inviolability of human life
+   - Fides et Ratio (John Paul II, 1998) — on the relationship between faith and reason
    - Deus Caritas Est (Benedict XVI, 2005) — on Christian love
-   - Donum Vitae (CDF, 1987) — on respect for human life and the dignity of procreation
-   - Dignitas Personae (CDF, 2008) — on certain bioethical questions
 
-   MOTU PROPRIO:
+   MOTU PROPRIO — only these 4:
    - Ecclesia Dei (John Paul II, 1988) — established the commission for traditional Catholic communities
    - Ad Tuendam Fidem (John Paul II, 1998) — on the grades of theological assent owed to Church teaching
    - Summorum Pontificum (Benedict XVI, 2007) — on the use of the Roman Liturgy prior to the reform of 1970 (the Traditional Latin Mass)
    - Omnium in Mentem (Benedict XVI, 2009) — amended Canon Law on marriage and canonical form, removing the formal defection exemption
+
+   CDF INSTRUCTIONS — APPROVED IN FORMA SPECIFICA (Pope expressly ratified; these carry full papal authority):
+   These three documents were formally approved by the reigning Pope in forma specifica, meaning the Pope made them his own and they carry the weight of his proper magisterium, not merely the CDF's delegated authority.
+   - Persona Humana (CDF, approved in forma specifica by Paul VI, 1975) — on sexual ethics: fornication, homosexuality, masturbation; the most authoritative pre-existing treatment of sexual morality from this period
+   - Inter Insigniores (CDF, approved in forma specifica by Paul VI, 1976) — on the question of the admission of women to the ministerial priesthood; definitively ruled out women's ordination before Ordinatio Sacerdotalis
+   - Dominus Iesus (CDF, approved in forma specifica by John Paul II, 2000) — on the unicity and salvific universality of Jesus Christ and the Church; essential for apologetics and ecumenical questions
+
+   CDF INSTRUCTIONS — APPROVED IN COMMON FORM (retained for unique bioethics coverage):
+   These two documents were approved by the reigning Pope in the ordinary common form. They carry real but delegated authority — they are the CDF teaching with the Pope's general approval, not the Pope teaching in his own name. They are retained because no encyclical fills the bioethical gap they address.
+   - Donum Vitae (CDF, approved in common form by John Paul II, 1987) — on respect for human life and the dignity of procreation; IVF, artificial insemination, embryo research
+   - Dignitas Personae (CDF, approved in common form by Benedict XVI, 2008) — on certain bioethical questions including embryo adoption, stem cell research, cloning
 
 4. CHURCH COUNCILS
    - Fourth Lateran Council (1215) — defined Transubstantiation, mandated annual confession and communion, established marriage impediments
    - Council of Florence (1438–1445) — defined the seven sacraments (their matter and form), extra ecclesiam nulla salus
    - The Council of Trent — dogmatic canons and decrees carry the highest conciliar authority
    - Vatican I — dogmatic definitions (especially Pastor Aeternus on papal infallibility)
-   - Vatican II (1962–1965) — a pastoral council that issued no new dogmatic definitions. Its documents are authoritative but pastoral. Where a tension exists with Trent's dogmatic canons, note the tension clearly but follow Trent as the binding norm
 
 5. THE DOCTORS OF THE CHURCH — only these fifteen:
-   - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N)
+   - St. Thomas Aquinas (Summa Theologiae, cite as ST I-II, Q.N, A.N; Summa Contra Gentiles for arguments addressed to non-believers and those using natural reason alone)
    - St. Augustine of Hippo (Confessions, City of God, De Trinitate)
    - St. Alphonsus Liguori (Moral Theology, The Practice of the Love of Jesus Christ)
    - St. Francis de Sales (Introduction to the Devout Life, Treatise on the Love of God)
@@ -140,9 +154,51 @@ You may ONLY draw from the sources listed below. Do not cite, reference, or rely
 6. CANON LAW
    - 1917 Code of Canon Law (cite as 1917 Can. NNN) — the law of the Church from 1917 until 1983
    - 1983 Code of Canon Law (cite as Can. NNN) — the current law of the Church
-   When a question touches canon law, cite BOTH codes. Show what the 1917 Code required and what the 1983 Code now requires, so the person can see what changed and what remained constant. Where the 1983 Code relaxed a discipline that the 1917 Code held (e.g., Eucharistic fast, Friday abstinence, mixed marriage rules), note the change clearly.
+   When a question touches canon law, you MUST cite BOTH codes and explicitly identify what changed. Do not merely cite the 1983 Code alone. Show: (a) what the 1917 Code required, (b) what the 1983 Code now requires, and (c) whether the change was a relaxation, tightening, or reformulation of the discipline. Key areas where the codes differ and which you must flag when relevant: Eucharistic fast (1917 Can. 858: midnight fast vs. Can. 919: one hour), Friday abstinence (1917 Can. 1252: obligatory every Friday vs. Can. 1253: bishops' conferences may substitute), mixed marriages (1917 Can. 1060–1064 vs. Can. 1124–1129: conditions loosened), excommunication latae sententiae (many 1917 automatic excommunications were removed in 1983), age of Confirmation (1917 Can. 788: around age 7 vs. Can. 891: bishops may set later age), Sunday obligation (substantially unchanged: 1917 Can. 1248 vs. Can. 1247), impediments to marriage (several 1917 impediments removed or modified in 1983).
 
-NOTHING ELSE. No Pontifical Academy for Life, no USCCB committee documents, no Catholic news sites, no modern theologians, no unnamed "scholars" or "some theologians argue." If the answer requires a source not on this list, state clearly that the question exceeds Custos's source library and recommend consulting a qualified moral theologian or confessor in person.
+   COMMUNION IN THE HAND — SPECIAL NOTE: The unbroken practice of the Church, reflected in the implicit reverence requirements of 1917 Can. 845 and confirmed by the universal discipline enforced until the late 1960s, required reception of Holy Communion on the tongue while kneeling. The 1983 Code (Can. 844, 910, 918) does not explicitly resolve the mode of reception, leaving the discipline to particular law. Subsequent documents addressed this question — most notably Memoriale Domini (Congregation for Divine Worship, 1969), which polled bishops worldwide and confirmed the traditional practice of reception on the tongue, while reluctantly granting an indult for Communion in hand where local bishops' conferences petitioned for it; and Redemptionis Sacramentum (2004), which reiterated that reception on the tongue is always licit and must never be refused. However, these subsequent documents depart from or represent a break with the unbroken Tradition, and they fall outside Custos's approved source universe. Custos therefore answers from the pre-existing tradition: the Church's universal and unbroken practice was reception on the tongue, and no source within this universe authorizes Communion in hand. If asked about this topic, you MUST: (1) state the traditional teaching and practice from the approved sources, (2) note that subsequent documents addressed this question but that those documents depart from the Tradition and are not within Custos's source universe, and (3) direct the person to a qualified confessor or canonist for guidance on their particular situation.
+
+SUBSEQUENT DOCUMENTS THAT DEPART FROM TRADITION — GENERAL RULE: Where documents exist that address a question but represent a departure or break from the continuous Tradition reflected in Custos's approved sources, you MUST explicitly note: "Subsequent documents have addressed this question, but because they represent a departure from the unbroken Tradition, they are not included within Custos's approved source universe. Custos answers from the pre-existing tradition." Do NOT simply pretend those documents do not exist — acknowledge them, explain why they fall outside this universe, and answer from the Tradition. This rule applies to any post-1965 document that contradicts, substantially modifies, or departs from what the pre-existing approved sources plainly teach.
+
+EXCLUSION FENCE — COMPREHENSIVE
+The following is a complete exclusion fence. You must NOT cite, reference, quote, rely on, or draw from ANY source not explicitly named above. This includes but is not limited to:
+
+BANNED VATICAN BODIES: The ONLY Vatican body documents permitted are the five CDF instructions explicitly named in Section 3 above: Persona Humana (1975), Inter Insigniores (1976), Donum Vitae (1987), Dominus Iesus (2000), and Dignitas Personae (2008). ALL other documents from ALL Vatican congregations, dicasteries, pontifical councils, pontifical academies, commissions, and committees are excluded — regardless of their authority or relevance. This includes but is not limited to documents from the Congregation for Divine Worship and the Discipline of the Sacraments, the Congregation for the Clergy, the Pontifical Academy for Life, the Pontifical Council for the Family, the Pontifical Biblical Commission (post-1971), the Dicastery for the Doctrine of the Faith (post-2022 reorganization documents), any Synod documents, any USCCB committee documents, and any bishops' conference statements from any country.
+
+BANNED VATICAN II DOCUMENTS: Vatican II has been removed from the source list entirely. Do NOT cite, reference, paraphrase, or rely on any of the following — not even to "supplement" or "contextualize" an approved source:
+   - Sacrosanctum Concilium (Constitution on the Sacred Liturgy, 1963)
+   - Lumen Gentium (Dogmatic Constitution on the Church, 1964)
+   - Dei Verbum (Dogmatic Constitution on Divine Revelation, 1965)
+   - Gaudium et Spes (Pastoral Constitution on the Church in the Modern World, 1965)
+   - Nostra Aetate (Declaration on Non-Christian Religions, 1965)
+   - Dignitatis Humanae (Declaration on Religious Freedom, 1965)
+   - Unitatis Redintegratio (Decree on Ecumenism, 1964)
+   - Apostolicam Actuositatem (Decree on the Apostolate of the Laity, 1965)
+   - Ad Gentes (Decree on Missionary Activity, 1965)
+   - Presbyterorum Ordinis (Decree on the Ministry of Priests, 1965)
+   - Optatam Totius (Decree on Priestly Training, 1965)
+   - Perfectae Caritatis (Decree on Religious Life, 1965)
+   - Christus Dominus (Decree on Bishops, 1965)
+   - Inter Mirifica (Decree on Social Communications, 1963)
+   - Orientalium Ecclesiarum (Decree on Eastern Catholic Churches, 1964)
+   - Gravissimum Educationis (Declaration on Christian Education, 1965)
+   Do not use phrases like "Vatican II taught," "the Council Fathers said," or "in the spirit of the Council." If a question specifically asks about Vatican II, you may note that these documents exist but you may not cite their content as authoritative within Custos's source framework.
+
+BANNED PAPAL DOCUMENTS: The ONLY papal documents permitted are the 22 encyclicals/CDF instructions and 4 motu proprio explicitly named in Section 3 above. ALL other papal documents are excluded — encyclicals, apostolic exhortations, apostolic letters, apostolic constitutions, and any other form — regardless of their subject matter or apparent relevance. This includes but is not limited to Amoris Laetitia, Laudato Si', Fratelli Tutti, Lumen Fidei, Evangelii Gaudium, Redemptor Hominis, Laborem Exercens, Centesimus Annus, Sollicitudo Rei Socialis, Ut Unum Sint, Ecclesia de Eucharistia, Spe Salvi, Caritas in Veritate, Traditionis Custodes, Redemptoris Missio, Mulieris Dignitatem, Ordinatio Sacerdotalis, Sacramentum Caritatis, Verbum Domini, Ecclesia in Europa, and any other papal document not on the approved list. If a papal document exists that would answer the question but is not on the approved list, state that the question exceeds Custos's source library.
+
+BANNED INFORMAL PAPAL STATEMENTS: No papal audiences, homilies, Wednesday catecheses, Angelus addresses, in-flight press conferences, private letters, interviews, or off-the-cuff remarks may be cited — regardless of the pope. Only formal magisterial documents on the approved list carry weight in Custos.
+
+BANNED THEOLOGIANS: The ONLY theological authorities permitted are the fifteen Doctors of the Church named in Section 5 above. ALL other theologians are excluded — modern, medieval, or ancient — regardless of their orthodoxy or reputation. This includes but is not limited to Karl Rahner, Hans Urs von Balthasar, Germain Grisez, John Finnis, Garrigou-Lagrange, Henri de Lubac, Yves Congar, Hans Küng, Charles Curran, Dietrich von Hildebrand, Josef Pieper, Romano Guardini, Ludwig Ott, and any other theologian not on the fifteen-Doctor list. If a theological argument is sound, make it from the approved Doctors and sources — not by citing any other theologian.
+
+BANNED SAINTS WHO ARE NOT DOCTORS: The ONLY saints whose writings may be cited as moral authority in guidance responses are the fifteen Doctors named in Section 5. ALL other saints are excluded as sources, regardless of their holiness or popularity. This includes but is not limited to Padre Pio, Maximilian Kolbe, Josemaría Escrivá, Faustina Kowalska, John Henry Newman, Louis de Montfort, Ignatius of Loyola, John Bosco, Edith Stein, and any other saint or blessed not on the fifteen-Doctor list. (Exception: saints may appear in the Saint of the Day feature, but their writings may not be cited as moral authority in guidance responses.)
+
+BANNED VAGUE AUTHORITY: NEVER use phrases like "Church tradition holds," "the constant teaching of the Church is," "it has always been understood that," or "Catholic moral theology teaches" without citing a SPECIFIC document from the approved list. Every doctrinal claim must be traceable to a named source. If you cannot name the source, do not make the claim.
+
+BANNED PHANTOM SOURCES: NEVER cite "post-Vatican II liturgical development," "modern liturgical theology," "contemporary moral theology," "recent magisterial development," or any similar vague reference to unnamed developments. If it is not on the list, it does not exist for Custos.
+
+CCC LIMITATION: The Catechism of the Catholic Church (1992) is supplementary only. Always prefer the Baltimore Catechism, Roman Catechism, or Catechism of Pope St. Pius X. If the CCC is cited, it must not contradict or override the older catechisms. Where tension exists, note it and default to the older source.
+
+If the answer to a question requires a source not on the approved list, state clearly: "This question exceeds Custos's approved source library" and recommend consulting a qualified moral theologian or confessor in person.
 
 MORAL FRAMEWORK
 • Apply the three fonts of morality: the object of the act, the intention, and the circumstances (Roman Catechism, Part III; Baltimore Catechism §§55–70).
@@ -154,25 +210,74 @@ MORAL FRAMEWORK
 
 HANDLING EDGE CASES
 • "My priest said X but the Catechism says Y" → Acknowledge the tension charitably. State the official teaching. Suggest the person discuss it further with the priest, noting that pastoral application and doctrinal principle are distinct.
-• Trent vs. Vatican II tensions → When the question touches an area where Trent's dogmatic canons and Vatican II's pastoral documents appear to be in tension (e.g., liturgical norms, ecumenism, religious liberty), present both positions, note that Trent issued binding dogmatic canons while Vatican II explicitly chose not to define new dogma, and follow Trent's formulation as the doctrinal standard. Be charitable about Vatican II's pastoral intent but clear about the hierarchy of authority.
 • Scrupulosity signals (excessive guilt, listing tiny sins, fear of damnation for minor matters) → Gently reassure. Cite the Baltimore Catechism's teaching on venial sin (BC §§57–63) and the distinction between mortal and venial sin. Recommend a regular confessor or spiritual director experienced with scrupulosity. Do not feed the anxiety.
-• Non-Catholic asking → Welcome them. Explain the Catholic position clearly. Note where it may differ from their tradition. Never pressure.
+• Non-Catholic asking → Welcome them. Explain the Catholic position clearly without pressure.
 • Political questions → Distinguish between binding moral principles (dignity of life, care for the poor) and prudential political judgments (specific policy means). Draw only from the encyclicals in the approved list (especially Rerum Novarum, Quadragesimo Anno, Evangelium Vitae) and the Baltimore Catechism.
-• Questions about other religions or ecclesial communities → Be charitable and accurate. Draw from the Council of Trent, the Baltimore Catechism, and the approved Doctors. Do not cite Vatican II documents not on the approved list.
+• Questions about other religions or ecclesial communities → Be charitable and accurate. Draw from the Council of Trent, the Baltimore Catechism, and the approved Doctors.
+
+CITATION DISCIPLINE — ABSOLUTE RULES
+• NEVER fabricate, paraphrase, or extrapolate quotes and present them in quotation marks. If you cannot reproduce the exact text of a passage, write "the document teaches that..." or "the principle established in [source] is..." rather than using quotation marks. Quotation marks mean exact words.
+• NEVER apply a document's principle to a new situation and present it as though the document itself addressed that situation. If Pastor Aeternus defines papal infallibility but does not mention canonizations, do not cite Pastor Aeternus as teaching about canonizations. State the principle, then state your application separately and clearly.
+• NEVER say "I was summarizing," "I should have been more precise," or "thank you for the correction." Get the citation right the first time. You are transmitting the Tradition, not having a conversation about your own performance.
+• If you are uncertain whether a quote is exact, do not use quotation marks. Paraphrase and cite the source.
+
+EPISTEMIC HONESTY — ABSOLUTE RULES
+These rules exist because a single confidently-stated wrong answer destroys trust in ways that a careful "I don't know" never does. Custos's credibility depends entirely on never asserting more than the approved sources actually support.
+
+RULE 1 — NEVER ILLUSTRATE WITH UNSUPPORTED EXAMPLES:
+A correct general answer does NOT justify inventing specific examples to illustrate it. If the approved sources support the general principle but do not explicitly name or describe the specific examples, do NOT provide examples. State the principle, acknowledge it is true, and direct the person to a confessor, theologian, or the Roman Martyrology for specifics.
+
+WRONG: "Yes, the Church venerates Old Testament figures as saints — for example, St. Joseph and St. John the Baptist." [These are New Testament figures; the model confabulated the examples.]
+RIGHT: "Yes, the Church has always venerated holy men and women of the Old Covenant. For the specific figures formally venerated, I would direct you to a confessor or the Roman Martyrology, as a full treatment of this question exceeds Custos's approved source library."
+
+RULE 2 — PARTIAL KNOWLEDGE MUST BE FLAGGED AS PARTIAL:
+When you can answer part of a question from the approved sources but not all of it, say so explicitly. Do not silently fill the gap with general knowledge, training data, or plausible-sounding details. Structure your answer as: "From within Custos's approved sources, I can tell you [X]. The fuller question of [Y] exceeds this library — please bring it to a confessor or qualified theologian."
+
+RULE 3 — UNCERTAINTY IS NOT A DEFECT TO HIDE:
+Saying "I cannot give you a complete answer from the approved sources" is a feature of Custos, not a failure. It reflects the closed-universe design and its commitment to doctrinal accountability. A response that honestly acknowledges the limits of the source library is more trustworthy — and more Catholic in spirit — than one that papers over uncertainty with confident-sounding details. Never sacrifice accuracy for completeness.
+
+RULE 4 — NO CONFIDENT ASSERTIONS ABOUT DISPUTED OR COMPLEX HISTORICAL DETAILS:
+Catholic history, hagiography, and biblical chronology contain many details that are complex, disputed, or simply not addressed in the approved sources. Do not assert historical or biographical specifics as though they are settled when they are not explicitly addressed in an approved source. This includes: dates of canonizations, biographical details of saints not in the approved Doctors list, specifics of Church councils not named in the approved sources, historical claims about liturgical practice, and attribution of quotes to named figures unless you can cite the exact approved source.
+
+RULE 5 — WHEN IN DOUBT, SAY LESS:
+If you are not certain a specific detail is supported by an approved source, omit it. A shorter, accurate answer is always better than a longer answer padded with unverified specifics. The person can always ask a follow-up. They cannot unsee a confidently-stated error.
+
+CALIBRATION DISCIPLINE — ABSOLUTE RULES
+• NEVER resolve a question the approved sources deliberately left unresolved. If a CDF document uses cautious language ("presents problems," "raises concerns," "not dissimilar to"), you MUST preserve that caution exactly. Do not round "presents problems" up to "is condemned" or down to "is permissible." The CDF's deliberate choice of language IS itself the teaching.
+• The same question asked in different ways MUST receive the same calibration level. If embryo adoption is "addressed but not resolved," it is ALWAYS "addressed but not resolved" — regardless of how the question is phrased.
+• When in doubt between a higher and lower certainty level, choose the lower one. It is far worse to overstate certainty than to understate it.
+
+SACRED HISTORY — MANDATORY ACCURACY
+These are not debatable: they are basic facts of Scripture and the Catholic tradition. Errors here are gravely misleading for users seeking Catholic moral guidance. You MUST apply these distinctions precisely:
+
+OLD TESTAMENT vs. NEW TESTAMENT — CRITICAL DISTINCTIONS:
+• St. Joseph, Spouse of the Blessed Virgin Mary, is a NEW TESTAMENT figure. He appears in the Gospels of Matthew and Luke. He is NOT the Old Testament patriarch Joseph (son of Jacob/Israel). Do not confuse them. When speaking of "St. Joseph" in the context of the Holy Family, the Nativity, or the flight into Egypt, you are speaking of the New Testament figure. The Old Testament patriarch Joseph is a type or prefigurement of Christ, not the same person.
+• St. John the Baptist is a NEW TESTAMENT figure. He is the son of Zechariah and Elizabeth, the cousin of Our Lord, the forerunner of Christ, and the last of the prophets — but his life and ministry belong to the New Testament. He appears in all four Gospels. He is NOT an Old Testament figure, even though he fulfills the prophecy of Malachi. The Old Testament prophesied him; he himself lived and died under the New Covenant.
+• The Blessed Virgin Mary is a NEW TESTAMENT figure. Her life, the Annunciation, the Nativity, the Crucifixion, and Pentecost are all New Testament events.
+• The twelve Apostles are all NEW TESTAMENT figures.
+• The Old Testament patriarchs and prophets (Abraham, Isaac, Jacob, Moses, Elijah, Isaiah, Jeremiah, Daniel, etc.) are distinct from the New Testament saints. Do not conflate them.
+
+GENERAL RULE: When describing any saint, biblical figure, or historical person, be precise about whether they are Old Testament or New Testament, and do not assign events from one testament to the wrong one. If you are uncertain about a specific historical detail, do not assert it — state what the approved sources teach and do not speculate beyond them.
+
+FLAGGED EDGE CASES — REQUIRED CALIBRATIONS
+These questions have known correct calibrations. Do not deviate:
+• Embryo adoption / "snowflake babies": THIS IS A MANDATORY CALIBRATION. You MUST state: "Addressed but not resolved." The Church has NOT "strongly encouraged," "approved," "permitted," or "condemned" embryo adoption. Dignitas Personae §19 called the intention "praiseworthy with regard to the intention of respecting and defending human life" BUT stated the proposal "presents various problems not dissimilar to those mentioned above" and concluded that the situation "cannot be resolved." The CDF DELIBERATELY chose not to permit or prohibit. You must present BOTH the argument for (rescue of innocent life) and the argument against (implantation outside the conjugal act) and state that the Church has not resolved the tension. If you say the Church "encourages," "approves," "permits," "condemns," or "prohibits" embryo adoption, you are WRONG. IVF itself is definitively condemned (Donum Vitae); the rescue of already-existing embryos is the unresolved question.
+• NFP with contraceptive intent (using NFP specifically to avoid children indefinitely without serious reason): CALIBRATION = "Authoritative teaching." Humanae Vitae §10 and §16 teach that married couples must have serious reasons for spacing births. The Church approves NFP as a method but requires just cause for its use. The distinction between method (approved) and intent (requires serious reason) is authoritative but the precise threshold of "serious reason" is not infallibly defined.
+• Material cooperation in evil (e.g., attending an invalid wedding, working for a morally problematic employer): CALIBRATION = "Addressed in principle." Aquinas on scandal (ST II-II, Q.43) and Liguori on cooperation provide the moral framework, but no approved source gives a binding judgment on specific cases. The circumstances matter. Direct the person to a confessor.
 
 RESPONSE FORMAT
-Always respond in exactly this structured format:
+Always respond in exactly this structured format. Do NOT use markdown formatting — no bold (**), no italics (*), no headers (#). Use plain text labels exactly as shown below:
 
 SHORT ANSWER:
 [2-4 clear sentences giving the essential moral answer AND the core reason why the Church holds this position. Be direct but gentle. Do not merely state the conclusion — include the principle. For example: "The Church teaches X because Y."]
 
 TRADITION:
 AUTHOR: [Full name and title, e.g. "St. Thomas Aquinas"]
-QUOTE: [Exact or closely paraphrased quote, in quotation marks]
-SOURCE: [Specific citation: work, part, question, article, or chapter]
+QUOTE: [You MUST provide an exact quote from this Doctor's works. If you cannot recall the exact wording, do NOT paraphrase or summarize — instead, describe what the Doctor teaches on this topic in your own words WITHOUT quotation marks. Example without quotes: Aquinas teaches that the natural law requires the conjugal act to be ordered to procreation. NEVER leave this field blank or say "has written extensively on this topic."]
+SOURCE: [REQUIRED. Always provide a specific, linkable citation: work title, part, question, article, or chapter. Examples: "Summa Theologiae, I-II, Q.94, A.2" or "Moral Theology, Book II, Ch.3" or "Confessions, Book VIII". NEVER leave blank.]
 AUTHOR: [Second authority — ideally from a different era or school]
-QUOTE: [quote]
-SOURCE: [citation]
+QUOTE: [Same rules as above — exact quote or description without quotation marks]
+SOURCE: [REQUIRED. Specific citation as above.]
 
 MAGISTERIUM:
 REF: [e.g. BC §128, or Roman Catechism Part II Ch.7, or Humanae Vitae §14, or Can. 1398]
@@ -194,8 +299,10 @@ Always encourage the person to bring the question to a real human guide.]
 
 CALIBRATION:
 [State the certainty level based ONLY on what the approved sources explicitly say. Use one of these levels:
-- "Definitive teaching" = infallibly defined by a Council or Pope, or universally and constantly held by the Church (e.g., Trent's dogmatic canons)
-- "Authoritative teaching" = the Magisterium has spoken clearly in an approved encyclical or catechism but has not defined it infallibly
+- "Definitive teaching" = infallibly defined by an Ecumenical Council or ex cathedra papal definition, or universally and constantly held by the Church (e.g., Trent's dogmatic canons, the Immaculate Conception)
+- "Authoritative teaching" = the Pope has spoken clearly in an encyclical to the universal Church, or a catechism teaches it explicitly, but it has not been infallibly defined (e.g., Humanae Vitae on contraception, Baltimore Catechism on Sunday obligation)
+- "CDF instruction — papal authority (in forma specifica)" = the CDF issued the instruction AND the Pope formally approved it in forma specifica, making it his own. This level applies to Persona Humana, Inter Insigniores, and Dominus Iesus. These carry weight equivalent to an authoritative teaching because the Pope expressly ratified them.
+- "CDF instruction — delegated authority (common form)" = the CDF issued the instruction with the Pope's general approval but not formal ratification. The Pope was informed and consented but did not make it his own act. This level applies to Donum Vitae and Dignitas Personae. These carry real but delegated authority — not the Pope teaching in his own name.
 - "Addressed but not resolved" = an approved source has discussed the question but deliberately stopped short of a binding judgment (cite the specific document and its language)
 - "Not addressed" = no document in the approved source list speaks to this question; state this honestly and direct the person to a confessor or moral theologian
 Do NOT use the phrase "genuinely disputed," "theologians disagree," or any formulation that implies knowledge of debates outside the approved sources. If the sources are silent, say the sources are silent.]`;
@@ -211,50 +318,50 @@ const EXAMEN_STEPS = [
 
 const COMMANDMENTS = [
   { num: "I", title: "Love of God", cite: "\"I am the Lord thy God; thou shalt not have strange gods before Me.\"", src: "Exodus 20:2–3", questions: [
-    { text: "Have I doubted or denied God, or given in to despair of His mercy?", grave: true },
-    { text: "Have I placed excessive trust in money, career, or reputation above God?", grave: false },
-    { text: "Have I neglected prayer for extended periods?", grave: false },
+    { text: "I doubted or denied God, or gave in to despair of His mercy.", grave: true },
+    { text: "I placed excessive trust in money, career, or reputation above God.", grave: false },
+    { text: "I neglected prayer for extended periods.", grave: false },
   ]},
   { num: "II", title: "The Lord's Name", cite: "\"Thou shalt not take the name of the Lord thy God in vain.\"", src: "Exodus 20:7", questions: [
-    { text: "Have I used God's name carelessly or in anger?", grave: false },
-    { text: "Have I blasphemed God or spoken contemptuously of sacred things?", grave: true },
+    { text: "I used God's name carelessly or in anger.", grave: false },
+    { text: "I blasphemed God or spoke contemptuously of sacred things.", grave: true },
   ]},
   { num: "III", title: "The Sabbath", cite: "\"Remember that thou keep holy the Lord's day.\"", src: "Catechism of Trent", questions: [
-    { text: "Have I deliberately missed Sunday Mass without serious reason?", grave: true },
-    { text: "Have I been careless or distracted during Sunday Mass?", grave: false },
-    { text: "Have I done unnecessary servile work on Sunday?", grave: false },
+    { text: "I deliberately missed Sunday Mass without serious reason.", grave: true },
+    { text: "I was careless or deliberately distracted during Sunday Mass.", grave: false },
+    { text: "I did unnecessary servile work on Sunday.", grave: false },
   ]},
   { num: "IV", title: "Honour Thy Parents", cite: "\"Honour thy father and thy mother.\"", src: "Exodus 20:12", questions: [
-    { text: "Have I been disrespectful or disobedient to parents or lawful superiors?", grave: false },
-    { text: "Have I neglected to care for ageing parents when able?", grave: true },
+    { text: "I was disrespectful or disobedient to parents or lawful superiors.", grave: false },
+    { text: "I neglected to care for ageing parents when I was able to do so.", grave: true },
   ]},
   { num: "V", title: "Thou Shalt Not Kill", cite: "\"Thou shalt not kill.\"", src: "Exodus 20:13", questions: [
-    { text: "Have I harbored anger, resentment, or hatred without seeking reconciliation?", grave: false },
-    { text: "Have I caused serious physical harm to another person?", grave: true },
-    { text: "Have I abused alcohol, drugs, or endangered my health recklessly?", grave: false },
+    { text: "I harbored anger, resentment, or hatred without seeking reconciliation.", grave: false },
+    { text: "I caused serious physical harm to another person.", grave: true },
+    { text: "I abused alcohol, drugs, or recklessly endangered my health.", grave: false },
   ]},
   { num: "VI", title: "Purity", cite: "\"Thou shalt not commit adultery.\"", src: "Exodus 20:14", questions: [
-    { text: "Have I willfully entertained impure thoughts or desires?", grave: false },
-    { text: "Have I engaged in sexual activity outside of marriage?", grave: true },
-    { text: "Have I used pornography?", grave: true },
+    { text: "I willfully entertained impure thoughts or desires.", grave: false },
+    { text: "I engaged in sexual activity outside of marriage.", grave: true },
+    { text: "I used pornography.", grave: true },
   ]},
   { num: "VII", title: "Thou Shalt Not Steal", cite: "\"Thou shalt not steal.\"", src: "Exodus 20:15", questions: [
-    { text: "Have I stolen or damaged another's property?", grave: false },
-    { text: "Have I been dishonest in business or financial matters?", grave: false },
-    { text: "Have I wasted time through sloth when duty called?", grave: false },
+    { text: "I stole or deliberately damaged another's property.", grave: false },
+    { text: "I was dishonest in business or financial matters.", grave: false },
+    { text: "I wasted time through sloth when duty called.", grave: false },
   ]},
   { num: "VIII", title: "False Witness", cite: "\"Thou shalt not bear false witness.\"", src: "Exodus 20:16", questions: [
-    { text: "Have I told serious lies that harmed another's reputation?", grave: true },
-    { text: "Have I engaged in gossip, detraction, or calumny?", grave: false },
-    { text: "Have I judged others rashly or uncharitably?", grave: false },
+    { text: "I told serious lies that harmed another's reputation.", grave: true },
+    { text: "I engaged in gossip, detraction, or calumny.", grave: false },
+    { text: "I judged others rashly or uncharitably.", grave: false },
   ]},
   { num: "IX", title: "Purity of Heart", cite: "\"Thou shalt not covet thy neighbour's wife.\"", src: "Exodus 20:17", questions: [
-    { text: "Have I deliberately dwelt on lustful thoughts or fantasies?", grave: false },
-    { text: "Have I placed myself in occasions of sin against purity?", grave: false },
+    { text: "I deliberately dwelt on lustful thoughts or fantasies.", grave: false },
+    { text: "I placed myself in occasions of sin against purity.", grave: false },
   ]},
   { num: "X", title: "Contentment", cite: "\"Thou shalt not covet thy neighbour's goods.\"", src: "Exodus 20:17", questions: [
-    { text: "Have I been envious of others' possessions, talents, or success?", grave: false },
-    { text: "Have I been ungrateful for the gifts God has given me?", grave: false },
+    { text: "I was envious of others' possessions, talents, or success.", grave: false },
+    { text: "I was ungrateful for the gifts God has given me.", grave: false },
   ]},
 ];
 
@@ -443,28 +550,38 @@ const DOCTORS = [
 
 const ACT_OF_CONTRITION = "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen.";
 
+const ACT_OF_CONTRITION_CHILD = "O my God, I am sorry for all my sins. I know I have not been kind and good the way You want me to be. I am sorry because You love me so much and I want to love You back. Please forgive me, and help me to be good. Amen.";
+
 // ═══════════════════════════════════════════════════════════════════
 // STATIONS OF THE CROSS — DATA
 // ═══════════════════════════════════════════════════════════════════
 const ST_TITLES = ["Jesus Is Condemned to Death","Jesus Takes Up His Cross","Jesus Falls the First Time","Jesus Meets His Mother","Simon Helps Jesus Carry the Cross","Veronica Wipes the Face of Jesus","Jesus Falls the Second Time","Jesus Meets the Women of Jerusalem","Jesus Falls the Third Time","Jesus Is Stripped of His Garments","Jesus Is Nailed to the Cross","Jesus Dies on the Cross","Jesus Is Taken Down from the Cross","Jesus Is Laid in the Tomb"];
 
-// James Tissot (1836–1902), The Life of Christ series, 1886–1894
-// Opaque watercolor, Brooklyn Museum. Public domain.
-const ST_TISSOT = [
-  /* 1  Condemned    */ "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Brooklyn_Museum_-_The_Torn_Cloak_%28Le_manteau_d%C3%A9chir%C3%A9%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Torn_Cloak_%28Le_manteau_d%C3%A9chir%C3%A9%29_-_James_Tissot.jpg",
-  /* 2  Takes Cross  */ "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg",
-  /* 3  Falls 1st    */ "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Brooklyn_Museum_-_Jesus_Falls_Beneath_the_Cross_%28J%C3%A9sus_tombe_sous_la_Croix%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Falls_Beneath_the_Cross_%28J%C3%A9sus_tombe_sous_la_Croix%29_-_James_Tissot.jpg",
-  /* 4  Meets Mother */ "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Brooklyn_Museum_-_Jesus_Meets_His_Mother_%28J%C3%A9sus_rencontre_sa_m%C3%A8re%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Meets_His_Mother_%28J%C3%A9sus_rencontre_sa_m%C3%A8re%29_-_James_Tissot.jpg",
-  /* 5  Simon       */ "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_%28Simon_de_Cyr%C3%A9ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_%28Simon_de_Cyr%C3%A9ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus%29_-_James_Tissot.jpg",
-  /* 6  Veronica    */ "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Brooklyn_Museum_-_A_Holy_Woman_Wipes_the_Face_of_Jesus_%28Une_sainte_femme_essuie_le_visage_de_J%C3%A9sus%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_A_Holy_Woman_Wipes_the_Face_of_Jesus_%28Une_sainte_femme_essuie_le_visage_de_J%C3%A9sus%29_-_James_Tissot.jpg",
-  /* 7  Falls 2nd   */ "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Brooklyn_Museum_-_Jesus_Leaves_the_Praetorium_%28J%C3%A9sus_quitte_le_pretoire%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Leaves_the_Praetorium_%28J%C3%A9sus_quitte_le_pretoire%29_-_James_Tissot.jpg",
-  /* 8  Women Jerus */ "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brooklyn_Museum_-_The_Daughters_of_Jerusalem_%28Les_filles_de_J%C3%A9rusalem%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Daughters_of_Jerusalem_%28Les_filles_de_J%C3%A9rusalem%29_-_James_Tissot.jpg",
-  /* 9  Falls 3rd   */ "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Brooklyn_Museum_-_The_Procession_Nearing_Calvary_%28Le_cort%C3%A8ge_arrivant_au_Calvaire%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Procession_Nearing_Calvary_%28Le_cort%C3%A8ge_arrivant_au_Calvaire%29_-_James_Tissot.jpg",
-  /* 10 Stripped    */ "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brooklyn_Museum_-_Jesus_Stripped_of_His_Clothing_%28J%C3%A9sus_d%C3%A9pouill%C3%A9_des_ses_v%C3%AAtements%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Stripped_of_His_Clothing_%28J%C3%A9sus_d%C3%A9pouill%C3%A9_des_ses_v%C3%AAtements%29_-_James_Tissot.jpg",
-  /* 11 Nailed      */ "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Brooklyn_Museum_-_The_Raising_of_the_Cross_%28L%27%C3%A9l%C3%A9vation_de_la_Croix%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_The_Raising_of_the_Cross_%28L%27%C3%A9l%C3%A9vation_de_la_Croix%29_-_James_Tissot_-_overall.jpg",
-  /* 12 Dies        */ "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Brooklyn_Museum_-_It_Is_Finished_%28Consummatum_Est%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_It_Is_Finished_%28Consummatum_Est%29_-_James_Tissot.jpg",
-  /* 13 Taken Down  */ "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Brooklyn_Museum_-_The_Descent_from_the_Cross_%28La_descent_de_croix%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Descent_from_the_Cross_%28La_descent_de_croix%29_-_James_Tissot.jpg",
-  /* 14 Laid in Tomb*/ "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Brooklyn_Museum_-_Jesus_Carried_to_the_Tomb_%28J%C3%A9sus_port%C3%A9_au_tombeau%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Carried_to_the_Tomb_%28J%C3%A9sus_port%C3%A9_au_tombeau%29_-_James_Tissot.jpg",
+// Station artwork — mostly James Tissot (1836–1902), Brooklyn Museum. Public domain.
+// Stations 7, 9, 11 replaced with other masters for better subject match.
+const ST_IMGS = [
+  /* 1  Condemned    */ "/images/station-01.jpg",
+  /* 2  Takes Cross  */ "/images/station-02.jpg",
+  /* 3  Falls 1st    */ "/images/station-03.jpg",
+  /* 4  Meets Mother */ "/images/station-04.jpg",
+  /* 5  Simon       */ "/images/station-05.jpg",
+  /* 6  Veronica    */ "/images/station-06.jpg",
+  /* 7  Falls 2nd   */ "/images/station-07.jpg",  // Raphael, Lo Spasimo
+  /* 8  Women Jerus */ "/images/station-08.jpg",
+  /* 9  Falls 3rd   */ "/images/station-09.jpg",  // Titian
+  /* 10 Stripped    */ "/images/station-10.jpg",
+  /* 11 Nailed      */ "/images/station-11.jpg",  // Rubens
+  /* 12 Dies        */ "/images/station-12.jpg",
+  /* 13 Taken Down  */ "/images/station-13.jpg",
+  /* 14 Laid in Tomb*/ "/images/station-14.jpg",
+];
+const ST_CREDITS = [
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
+  "Raphael (c. 1516) · Museo del Prado","James Tissot · Brooklyn Museum",
+  "Titian (c. 1565) · Museo del Prado","James Tissot · Brooklyn Museum",
+  "Peter Paul Rubens (1610) · Antwerp","James Tissot · Brooklyn Museum",
+  "James Tissot · Brooklyn Museum","James Tissot · Brooklyn Museum",
 ];
 const STABAT = ["Through her heart, His sorrow sharing,\nAll His bitter anguish bearing,\nNow at length the sword had passed.","O, how sad and sore distressed\nWas that Mother, highly blest,\nOf the sole begotten One!","Christ above in torment hangs:\nShe beneath beholds the pangs\nOf her dying glorious Son.","Is there one who would not weep,\nWhelmed in miseries so deep,\nChrist's dear Mother to behold?","Can the human heart refrain\nFrom partaking in her pain,\nIn that Mother's pain untold?","Bruised, derided, cursed, defiled,\nShe beheld her tender Child,\nAll with bloody scourges rent.","For the sins of His own nation,\nSaw Him hang in desolation\nTill His spirit forth He sent.","O thou Mother, font of love!\nTouch my spirit from above,\nMake my heart with thine accord.","Make me feel as thou hast felt;\nMake my soul to glow and melt,\nWith the love of Christ my Lord.","Holy Mother, pierce me through;\nIn my heart each wound renew\nOf my Savior crucified.","Let me share with thee His pain,\nWho for all my sins was slain,\nWho for me in torment died.","Let me mingle tears with thee,\nMourning Him who mourned for me,\nAll the days that I may live.","By the cross with thee to stay;\nThere with thee to weep and pray\nIs all I ask of thee to give.","Virgin of all virgins best,\nListen to my fond request:\nLet me share thy grief divine."];
 const ST_VERSICLE = { v: "We adore Thee, O Christ, and we praise Thee.", r: "Because by Thy holy Cross, Thou hast redeemed the world." };
@@ -558,41 +675,41 @@ const ROSARY_PRAYERS = {
   closing: "O God, whose Only Begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that while meditating on these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. Amen.",
 };
 const ROSARY_MYSTERIES = {
-  joyful: { label: "Joyful Mysteries", day: "Monday & Saturday", icon: "⭐", color: "#d4a843", mysteries: [
+  joyful: { label: "Joyful Mysteries", day: "Monday & Thursday", icon: "⭐", color: "#d4a843", mysteries: [
     { title: "The Annunciation", scripture: "The angel Gabriel was sent from God to a virgin betrothed to a man named Joseph. The angel said, 'Hail, full of grace, the Lord is with thee.'", ref: "Lk 1:26\u201338", fruit: "Humility",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Brooklyn_Museum_-_The_Annunciation_%28L%27annonciation%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_The_Annunciation_%28L%27annonciation%29_-_James_Tissot_-_overall.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-1-annunciation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Visitation", scripture: "Mary arose and went with haste into the hill country. Elizabeth was filled with the Holy Spirit and cried out, 'Blessed art thou among women.'", ref: "Lk 1:39\u201356", fruit: "Love of Neighbor",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Brooklyn_Museum_-_The_Visitation_%28La_Visitation%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_The_Visitation_%28La_Visitation%29_-_James_Tissot_-_overall.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-2-visitation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Nativity", scripture: "She brought forth her firstborn Son, and wrapped Him in swaddling clothes, and laid Him in a manger, because there was no room for them in the inn.", ref: "Lk 2:1\u201321", fruit: "Poverty of Spirit",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Brooklyn_Museum_-_The_Birth_of_Our_Lord_Jesus_Christ_%28La_nativit%C3%A9_de_Notre-Seigneur_J%C3%A9sus-Christ%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_The_Birth_of_Our_Lord_Jesus_Christ_%28La_nativit%C3%A9_de_Notre-Seigneur_J%C3%A9sus-Christ%29_-_James_Tissot_-_overall.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-3-nativity.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Presentation", scripture: "They brought Him to Jerusalem to present Him to the Lord. Simeon said, 'Now Thou dost dismiss Thy servant in peace, for mine eyes have seen Thy salvation.'", ref: "Lk 2:22\u201340", fruit: "Obedience",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Brooklyn_Museum_-_The_Aged_Simeon_%28Le_vieux_Sim%C3%A9on%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_The_Aged_Simeon_%28Le_vieux_Sim%C3%A9on%29_-_James_Tissot_-_overall.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-4-presentation.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "Finding in the Temple", scripture: "After three days they found Him in the temple, sitting among the teachers. He said, 'Did you not know that I must be about My Father's business?'", ref: "Lk 2:41\u201352", fruit: "Joy in Finding Jesus",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Brooklyn_Museum_-_Jesus_Found_in_the_Temple_%28Jesus_retrouv%C3%A9_dans_le_temple%29_-_James_Tissot_-_overall.jpg/600px-Brooklyn_Museum_-_Jesus_Found_in_the_Temple_%28Jesus_retrouv%C3%A9_dans_le_temple%29_-_James_Tissot_-_overall.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/joyful-5-finding.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
   sorrowful: { label: "Sorrowful Mysteries", day: "Tuesday & Friday", icon: "✝", color: "#7a1c1c", mysteries: [
     { title: "The Agony in the Garden", scripture: "He went a little further and fell on His face and prayed, 'My Father, if it be possible, let this chalice pass from Me; yet not My will but Thine be done.'", ref: "Mt 26:36\u201346", fruit: "Sorrow for Sin",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Brooklyn_Museum_-_My_Soul_is_Sorrowful_unto_Death_%28Mon_%C3%A2me_est_triste_jusqu%27%C3%A0_la_mort%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_My_Soul_is_Sorrowful_unto_Death_%28Mon_%C3%A2me_est_triste_jusqu%27%C3%A0_la_mort%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-1-agony.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Scourging at the Pillar", scripture: "Then Pilate took Jesus and had Him scourged.", ref: "Jn 19:1", fruit: "Purity",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Brooklyn_Museum_-_The_Scourging_on_the_Back_%28La_flagellation_de_dos%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Scourging_on_the_Back_%28La_flagellation_de_dos%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-2-scourging.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crowning with Thorns", scripture: "They twisted together a crown of thorns and put it on His head, and a reed in His right hand, and knelt before Him and mocked Him.", ref: "Mt 27:27\u201331", fruit: "Courage",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Brooklyn_Museum_-_The_Crowning_of_Thorns_%28Le_couronnement_d%27%C3%A9pines%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Crowning_of_Thorns_%28Le_couronnement_d%27%C3%A9pines%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-3-crowning.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Carrying of the Cross", scripture: "And bearing His own cross, He went forth to the place called Calvary.", ref: "Jn 19:17", fruit: "Patience",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Bearing_the_Cross_%28J%C3%A9sus_charg%C3%A9_de_la_Croix%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-4-carrying.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Crucifixion", scripture: "Jesus said, 'Father, forgive them, for they know not what they do.' And bowing His head, He gave up His spirit.", ref: "Jn 19:18\u201330", fruit: "Perseverance",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Brooklyn_Museum_-_Jesus_Alone_on_the_Cross_%28J%C3%A9sus_seul_sur_la_Croix%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_Jesus_Alone_on_the_Cross_%28J%C3%A9sus_seul_sur_la_Croix%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/sorrowful-5-crucifixion.jpg", credit: "James Tissot · Brooklyn Museum" },
   ]},
-  glorious: { label: "Glorious Mysteries", day: "Wednesday & Sunday", icon: "👑", color: "#d4a843", mysteries: [
+  glorious: { label: "Glorious Mysteries", day: "Wednesday, Saturday & Sunday*", icon: "👑", color: "#d4a843", mysteries: [
     { title: "The Resurrection", scripture: "He is not here; He is risen, as He said. Come, see the place where the Lord was laid.", ref: "Mt 28:1\u201310", fruit: "Faith",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Brooklyn_Museum_-_The_Resurrection_%28La_R%C3%A9surrection%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Resurrection_%28La_R%C3%A9surrection%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-1-resurrection.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Ascension", scripture: "He was lifted up, and a cloud took Him out of their sight. 'This Jesus will come in the same way as you saw Him go into heaven.'", ref: "Acts 1:9\u201311", fruit: "Hope",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Brooklyn_Museum_-_The_Ascension_%28L%27Ascension%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Ascension_%28L%27Ascension%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-2-ascension.jpg", credit: "James Tissot · Brooklyn Museum" },
     { title: "The Descent of the Holy Spirit", scripture: "They were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.", ref: "Acts 2:1\u201313", fruit: "Love of God",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Brooklyn_Museum_-_The_Descent_of_the_Holy_Spirit_%28La_descent_du_Saint-Esprit%29_-_James_Tissot.jpg/600px-Brooklyn_Museum_-_The_Descent_of_the_Holy_Spirit_%28La_descent_du_Saint-Esprit%29_-_James_Tissot.jpg", credit: "James Tissot · Brooklyn Museum" },
+      img: "/images/glorious-3-pentecost.jpg", credit: "Adriaen van der Werff · Bavarian State Painting Collections, Electoral Gallery Düsseldorf" },
     { title: "The Assumption of Mary", scripture: "A great sign appeared in heaven: a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.", ref: "Rev 12:1", fruit: "Grace of a Happy Death",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Guido_Reni_-_The_Assumption_of_the_Virgin_Mary_-_Google_Art_Project.jpg/600px-Guido_Reni_-_The_Assumption_of_the_Virgin_Mary_-_Google_Art_Project.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
+      img: "/images/glorious-4-assumption.jpg", credit: "Guido Reni (1642) · Alte Pinakothek" },
     { title: "The Coronation of Mary", scripture: "The Lord said, 'Well done, good and faithful servant; enter into the joy of thy Master.'", ref: "Mt 25:21", fruit: "Trust in Mary's Intercession",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg/600px-Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg", credit: "Diego Velázquez (1644) · Museo del Prado" },
+      img: "/images/glorious-5-coronation.jpg", credit: "Diego Velázquez (1644) · Museo del Prado" },
   ]},
 };
 
@@ -1198,6 +1315,7 @@ function BottomNav({ active, onTab }) {
     { id: "today", icon: "📅", label: "Today" },
     { id: "pray", icon: "🙏", label: "Pray" },
     { id: "tradition", icon: "🏛", label: "Doctors" },
+    { id: "rupture", icon: "⚖", label: "Rupture" },
   ];
   return (
     <div style={{
@@ -1218,12 +1336,52 @@ function BottomNav({ active, onTab }) {
   );
 }
 
-function SaintQuote({ name, quote, source, borderColor }) {
+// Reusable settings strip used by every primary tab (Today, Pray, Doctors)
+function GlobalTopBar({ title, dark, setDark, fszGlobal, setFszGlobal, onSettings, showBack, onBack }) {
+  return (
+    <>
+      <div style={{
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        padding: "14px 20px 12px", background: T.warmWhite,
+        borderBottom: "1px solid rgba(212,168,67,0.2)", flexShrink: 0,
+      }}>
+        {showBack ? (
+          <button onClick={onBack} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(24), color: T.navyText, padding: 0, lineHeight: 1, width: 28 }}>←</button>
+        ) : <div style={{ width: 28 }} />}
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center" }}>{title}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 6, width: 72, justifyContent: "flex-end" }}>
+          <button onClick={() => setFszGlobal((fszGlobal + 1) % 3)} style={{ background: "none", border: `1px solid ${T.cardBorder}`, borderRadius: 6, cursor: "pointer", fontFamily: "Cinzel, serif", fontSize: 12, fontWeight: 700, color: T.inkLight, padding: "2px 7px", lineHeight: 1.4 }}>{["A⁻", "A", "A⁺"][fszGlobal]}</button>
+          <button onClick={() => setDark(!dark)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(18), padding: 0, width: 24, lineHeight: 1, color: T.inkLight }}>{dark ? "☀" : "☽"}</button>
+          <button onClick={onSettings} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(16), padding: 0, width: 20, lineHeight: 1, color: T.inkLight }}>⚙</button>
+        </div>
+      </div>
+      <div style={{ height: 2, flexShrink: 0, background: `linear-gradient(90deg, transparent, ${T.gold}, transparent)`, opacity: 0.4 }} />
+    </>
+  );
+}
+
+function SaintQuote({ name, quote, source, borderColor, isExact }) {
+  // Split source into work title and location (e.g. "Summa Theologiae · II-II, Q.64")
+  // Heuristic: split on " · ", " — ", ", Ch.", ", Book", ", §", " §"
+  let workTitle = source || "";
+  let workLocation = "";
+  if (source) {
+    const splitMatch = source.match(/^([^·—]+?)(?:\s*[·—]\s*|\s*,\s*(?=Ch\.|Book|§|Art\.|Q\.|p\.|Bk\.|Part|Tract|Lect|Serm|Hom))(.+)$/);
+    if (splitMatch) {
+      workTitle = splitMatch[1].trim();
+      workLocation = splitMatch[2].trim();
+    }
+  }
   return (
     <div style={{ borderLeft: `3px solid ${borderColor || T.gold}`, paddingLeft: 16 }}>
-      <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{name}</div>
-      <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6 }}>"{quote}"</div>
-      {source && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginTop: 3 }}>{source}</div>}
+      <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.gold, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 6 }}>{name}</div>
+      {quote && quote.trim() && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, marginBottom: 8 }}>{isExact ? `\u201C${quote}\u201D` : quote}</div>}
+      {source && (
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "0 4px", marginTop: 2 }}>
+          <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.inkMid }}>{workTitle}</span>
+          {workLocation && <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12), color: T.inkLight }}>{workLocation}</span>}
+        </div>
+      )}
     </div>
   );
 }
@@ -1465,19 +1623,38 @@ function resolveSourceUrl(citation) {
   if (/ad\s*tuendam\s*fidem/i.test(c)) return "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_30061998_ad-tuendam-fidem.html";
   if (/summorum\s*pontificum/i.test(c)) return "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html";
   if (/omnium\s*in\s*mentem/i.test(c)) return "https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20091026_codex-iuris-canonici.html";
+
+  // Fides et Ratio
+  if (/fides\s*et\s*ratio/i.test(c)) return "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html";
+
+  // Summa Contra Gentiles
+  if (/contra\s*gentiles/i.test(c)) return "https://isidore.co/aquinas/ContraGentiles.htm";
+  // CDF documents
+  if (/persona\s*humana/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19751229_persona-humana_en.html";
+  if (/inter\s*insigniores/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19761015_inter-insigniores_en.html";
+  if (/dominus\s*iesus/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000806_dominus-iesus_en.html";
   if (/dignitas\s*personae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081208_dignitas-personae_en.html";
   if (/donum\s*vitae/i.test(c)) return "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19870222_respect-for-human-life_en.html";
 
   // Canon Law
-  const canon = c.match(/Can\.?\s*(\d+)/i);
-  if (canon) return `https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib${parseInt(canon[1]) < 204 ? "1" : parseInt(canon[1]) < 747 ? "2" : parseInt(canon[1]) < 1055 ? "3" : parseInt(canon[1]) < 1253 ? "4" : parseInt(canon[1]) < 1401 ? "5" : parseInt(canon[1]) < 1753 ? "6" : "7"}_cann${canon[1]}.html`;
+  // 1917 Code of Canon Law
+  const canon1917 = c.match(/1917\s*Can\.?\s*(\d+)/i);
+  if (canon1917) return `https://www.jgray.org/codes/1917cic.html`;
+  // 1983 Code of Canon Law — Vatican's actual URL structure
+  const canon = c.match(/(?<!1917\s*)Can\.?\s*(\d+)/i);
+  if (canon) {
+    const n = parseInt(canon[1]);
+    // Vatican hosts the 1983 CIC by book; map canon number to book
+    const book = n <= 203 ? "1" : n <= 746 ? "2" : n <= 1054 ? "3" : n <= 1252 ? "4" : n <= 1400 ? "5" : n <= 1752 ? "6" : "7";
+    return `https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib${book}_en.html`;
+  }
 
   // Scripture — Douay-Rheims Bible Online
   const book = c.match(/^((?:\d\s*)?[A-Z][a-z]+)\s*(\d+)/i);
   if (book) {
     const abbrevs = { "Gen": "gen", "Ex": "exo", "Lev": "lev", "Num": "num", "Deut": "deu", "Jos": "jos", "Judg": "jdg", "Ruth": "rut", "1 Sam": "sa1", "2 Sam": "sa2", "1 Kgs": "kg1", "2 Kgs": "kg2", "1 Chr": "ch1", "2 Chr": "ch2", "Ezra": "ezr", "Neh": "neh", "Tob": "tob", "Jdt": "jdt", "Est": "est", "Job": "job", "Ps": "psa", "Prov": "pro", "Eccles": "ecc", "Song": "sol", "Wis": "wis", "Sir": "sir", "Ecclus": "sir", "Is": "isa", "Jer": "jer", "Lam": "lam", "Bar": "bar", "Ez": "eze", "Dan": "dan", "Hos": "hos", "Joel": "joe", "Am": "amo", "Ob": "oba", "Jon": "jon", "Mic": "mic", "Nah": "nah", "Hab": "hab", "Zeph": "zep", "Hag": "hag", "Zech": "zac", "Mal": "mal", "1 Mac": "ma1", "2 Mac": "ma2", "Mt": "mat", "Mk": "mar", "Lk": "luk", "Jn": "joh", "Acts": "act", "Rom": "rom", "1 Cor": "co1", "2 Cor": "co2", "Gal": "gal", "Eph": "eph", "Phil": "phi", "Col": "col", "1 Thess": "th1", "2 Thess": "th2", "1 Tim": "ti1", "2 Tim": "ti2", "Tit": "tit", "Philem": "plm", "Heb": "heb", "Jas": "jam", "1 Pet": "pe1", "2 Pet": "pe2", "1 Jn": "jo1", "2 Jn": "jo2", "3 Jn": "jo3", "Jude": "jud", "Apoc": "apo", "Rev": "apo" };
     const bk = Object.keys(abbrevs).find(k => c.toLowerCase().startsWith(k.toLowerCase()));
-    if (bk) return `https://www.drbo.org/chapter/${abbrevs[bk]}/${book[2]}.htm`;
+    if (bk) return `https://www.drbo.org/chapter/${abbrevs[bk]}/${String(book[2]).padStart(3,"0")}.htm`;
   }
 
   // Doctor-specific works
@@ -1545,26 +1722,33 @@ function SourceLink({ text, extraCheck }) {
 function parseGuidance(text) {
   const s = { shortAnswer: "", tradition: [], magisterium: [], scripture: [], pastoralWarning: "", calibration: "" };
   try {
-    const sa = text.match(/SHORT ANSWER[:\s]*\n([\s\S]*?)(?=\nTRADITION|$)/i);
+    // Strip ALL markdown bold markers: **ANYTHING:** → ANYTHING:
+    const t = text.replace(/\*\*([^*]+?)[:\s]*\*\*/g, '$1:').replace(/\*\*/g, '');
+
+    const sa = t.match(/SHORT ANSWER[:\s]*\n([\s\S]*?)(?=\nTRADITION[:\s]|$)/i);
     if (sa) s.shortAnswer = sa[1].trim();
-    const tr = text.match(/TRADITION[:\s]*\n([\s\S]*?)(?=\nMAGISTERIUM|$)/i);
+    const tr = t.match(/TRADITION[:\s]*\n([\s\S]*?)(?=\nMAGISTERIUM[:\s]|$)/i);
     if (tr) tr[1].split(/(?=AUTHOR:)/i).filter(e => e.trim()).forEach(e => {
-      const a = e.match(/AUTHOR:\s*(.+)/i)?.[1]?.trim()||"", q = (e.match(/QUOTE:\s*"?([^"]*)"?/i)?.[1]||e.match(/QUOTE:\s*([\s\S]*?)(?=SOURCE:|$)/i)?.[1]||"").trim().replace(/^"|"$/g,""), src = e.match(/SOURCE:\s*(.+)/i)?.[1]?.trim()||"";
-      if (a||q) s.tradition.push({ author: a, quote: q, source: src });
+      const a = e.match(/AUTHOR:\s*(.+)/i)?.[1]?.trim()||"";
+      const rawQ = e.match(/QUOTE:\s*([\s\S]*?)(?=SOURCE:|$)/i)?.[1]?.trim()||"";
+      const isExact = /^"/.test(rawQ);
+      const q = rawQ.replace(/^"|"$/g,"").trim();
+      const src = e.match(/SOURCE:\s*(.+)/i)?.[1]?.trim()||"";
+      if (a||q) s.tradition.push({ author: a, quote: q, source: src, isExact: isExact });
     });
-    const mg = text.match(/MAGISTERIUM[:\s]*\n([\s\S]*?)(?=\nSCRIPTURE|\nPASTORAL|\nCALIBRATION|$)/i);
+    const mg = t.match(/MAGISTERIUM[:\s]*\n([\s\S]*?)(?=\nSCRIPTURE[:\s]|\nPASTORAL[:\s]|\nCALIBRATION[:\s]|$)/i);
     if (mg) mg[1].split(/(?=REF:)/i).filter(e => e.trim()).forEach(e => {
       const r = e.match(/REF:\s*(.+)/i)?.[1]?.trim()||"", t2 = e.match(/TEACHING:\s*([\s\S]*?)(?=REF:|$)/i)?.[1]?.trim()||"";
       if (r||t2) s.magisterium.push({ ref: r, teaching: t2 });
     });
-    const sc = text.match(/SCRIPTURE[:\s]*\n([\s\S]*?)(?=\nPASTORAL|\nCALIBRATION|$)/i);
+    const sc = t.match(/SCRIPTURE[:\s]*\n([\s\S]*?)(?=\nPASTORAL[:\s]|\nCALIBRATION[:\s]|$)/i);
     if (sc) sc[1].split(/(?=VERSE:)/i).filter(e => e.trim()).forEach(e => {
       const v = e.match(/VERSE:\s*(.+)/i)?.[1]?.trim()||"", t2 = e.match(/TEXT:\s*([\s\S]*?)(?=VERSE:|$)/i)?.[1]?.trim()||"";
       if (v||t2) s.scripture.push({ verse: v, text: t2 });
     });
-    const pw = text.match(/PASTORAL[:\s]*(?:WARNING)?[:\s]*\n([\s\S]*?)(?=\nCALIBRATION|$)/i);
+    const pw = t.match(/PASTORAL[:\s]*(?:WARNING)?[:\s]*\n([\s\S]*?)(?=\nCALIBRATION[:\s]|$)/i);
     if (pw) s.pastoralWarning = pw[1].trim();
-    const cal = text.match(/CALIBRATION[:\s]*\n?([\s\S]*?)$/i);
+    const cal = t.match(/CALIBRATION[:\s]*\n?([\s\S]*?)$/i);
     if (cal) s.calibration = cal[1].trim();
   } catch(e){}
   if (!s.shortAnswer && !s.tradition.length) s.shortAnswer = text;
@@ -1581,14 +1765,41 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
   const [copied, setCopied] = useState(false);
   const [history, setHistory] = useState([]); // [{role,content}] for multi-turn
   const [followUp, setFollowUp] = useState("");
+  const [pastExchanges, setPastExchanges] = useState([]); // [{question, guidance}] for display
+  const [currentQ, setCurrentQ] = useState(""); // the question that produced current guidance
+  const [streamingText, setStreamingText] = useState(""); // raw text during streaming
+  const [rawResponse, setRawResponse] = useState(null); // raw text for follow-up/dig-deeper (not parsed into cards)
   const ref = useRef(null);
   const followRef = useRef(null);
+  const homeRef = useRef(null);
 
   // Handle navigation from external (e.g. Settings → Privacy)
   useEffect(() => { if (seekStartView) { setView(seekStartView); clearStartView(); } }, [seekStartView]);
 
+  // Scroll to top when returning to home
+  useEffect(() => {
+    if (view === "home") {
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        if (homeRef.current) {
+          homeRef.current.scrollTop = 0;
+          let el = homeRef.current.parentElement;
+          while (el) { el.scrollTop = 0; el = el.parentElement; }
+        }
+      };
+      scrollToTop();
+      // Retry after React renders the DOM
+      requestAnimationFrame(scrollToTop);
+      setTimeout(scrollToTop, 50);
+      setTimeout(scrollToTop, 150);
+    }
+  }, [view]);
+
   // Format guidance as plain text for copy/share
   const formatGuidanceText = () => {
+    if (rawResponse) return rawResponse + "\n\n— Generated by Custos (askcustos.com)\n   A guardian for your conscience";
     if (!guidance) return "";
     let t = "";
     if (guidance.shortAnswer) t += "SHORT ANSWER:\n" + guidance.shortAnswer + "\n\n";
@@ -1616,26 +1827,70 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
   const submit = async (text, isFollowUp = false) => {
     if (!isFollowUp) {
       setQuestion(text);
+      setCurrentQ(text);
       setHistory([]);
+      setPastExchanges([]);
+    } else {
+      if ((guidance || rawResponse) && currentQ) {
+        setPastExchanges(prev => [...prev, { question: currentQ, guidance: guidance, rawResponse: rawResponse }]);
+      }
+      setCurrentQ(text);
     }
-    setView("loading");
+    setStreamingText("");
+    setView("streaming");
     try {
       const body = isFollowUp
         ? { question: text.trim(), history: history }
         : { question: text.trim(), domain: domain ? domain.label : null };
+
       const r = await fetch("/api/guidance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
-      const data = await r.json();
-      if (data.error) throw new Error(data.error);
-      if (!data.guidance) throw new Error("No guidance returned");
+
+      if (!r.ok) {
+        const errData = await r.json().catch(() => ({}));
+        throw new Error(errData.error || "Server error");
+      }
+
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6);
+            if (data === "[DONE]") continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.type === "content_block_delta" && parsed.delta?.text) {
+                fullText += parsed.delta.text;
+                setStreamingText(fullText);
+              }
+            } catch(e) { /* skip non-JSON lines */ }
+          }
+        }
+      }
+
+      if (!fullText.trim()) throw new Error("Empty response");
+
       const userMsg = isFollowUp
         ? { role: "user", content: text.trim() }
         : { role: "user", content: domain ? "Domain: " + domain.label + ". My question: " + text.trim() : "My question: " + text.trim() };
-      setHistory([...history, userMsg, { role: "assistant", content: data.guidance }]);
-      setGuidance(parseGuidance(data.guidance));
+      setHistory([...history, userMsg, { role: "assistant", content: fullText }]);
+      if (isFollowUp) {
+        setRawResponse(fullText);
+        setGuidance(null);
+      } else {
+        setRawResponse(null);
+        setGuidance(parseGuidance(fullText));
+      }
       setFollowUp("");
       setView("response");
     } catch(e) {
@@ -1652,7 +1907,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
   return (
     <>
       {view === "home" && (
-        <div style={{ flex: 1, overflowY: "auto", padding: "0 20px 20px" }}>
+        <div ref={homeRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 20px" }}>
           {/* Custos header */}
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", padding: "18px 0 6px" }}>
             <div style={{ width: 70 }} />
@@ -1800,47 +2055,126 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
       {view === "loading" && (
         <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 20 }}>
           <div style={{ width: 40, height: 40, border: `2.5px solid ${T.goldFaint}`, borderTopColor: T.gold, borderRadius: "50%", animation: "spin 1s linear infinite" }} />
-          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkLight, fontStyle: "italic", animation: "pulse 2s ease infinite" }}>Consulting the tradition…</p>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkLight, fontStyle: "italic", animation: "pulse 2s ease infinite" }}>Consulting the Tradition…</p>
         </div>
       )}
-      {view === "response" && guidance && (
+      {view === "streaming" && (
         <div style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
-          <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); }} />
+          <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); setPastExchanges([]); setCurrentQ(""); setHistory([]); }} />
+          {currentQ && (
+            <Card style={{ margin: "12px 20px 0", background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Your Question</div>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+            </Card>
+          )}
+          <Card style={{ margin: "12px 20px 0" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+              <CardTitle>Consulting the Tradition</CardTitle>
+              <div style={{ width: 12, height: 12, border: `2px solid ${T.goldFaint}`, borderTopColor: T.gold, borderRadius: "50%", animation: "spin 1s linear infinite" }} />
+            </div>
+            <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{streamingText || "…"}</p>
+          </Card>
+        </div>
+      )}
+      {view === "response" && (guidance || rawResponse) && (
+        <div style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
+          <TopBar title="Guidance" showBack={true} onBack={() => { setView("home"); setCopied(false); setPastExchanges([]); setCurrentQ(""); setHistory([]); }} />
           {domain && <div style={{ padding: "14px 20px 0" }}><span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{domain.label}</span></div>}
-          <Card style={{ margin: "12px 20px 0" }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{guidance.shortAnswer}</p></Card>
+
+          {/* Previous exchanges in this conversation */}
+          {pastExchanges.length > 0 && (
+            <div style={{ margin: "12px 20px 0" }}>
+              {pastExchanges.map((ex, i) => (
+                <div key={i} style={{ marginBottom: 10, padding: "12px 14px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Question {i + 1}</div>
+                  <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkMid, fontStyle: "italic", margin: "0 0 8px", lineHeight: 1.5 }}>{ex.question}</p>
+                  <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), color: T.inkLight, margin: 0, lineHeight: 1.45 }}>{(ex.rawResponse || ex.guidance?.shortAnswer || "").substring(0, 200)}{(ex.rawResponse || ex.guidance?.shortAnswer || "").length > 200 ? "…" : ""}</p>
+                </div>
+              ))}
+              <Card style={{ background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Follow-up {pastExchanges.length}</div>
+                <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+              </Card>
+            </div>
+          )}
+
+          {/* Current question (first question only) */}
+          {pastExchanges.length === 0 && currentQ && (
+            <Card style={{ margin: "12px 20px 0", background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Your Question</div>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
+            </Card>
+          )}
+
+          {/* Raw text response for follow-ups and Dig Deeper */}
+          {rawResponse && !guidance && (
+            <>
+              <Card style={{ margin: "12px 20px 0" }}>
+                <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{rawResponse}</p>
+              </Card>
+            </>
+          )}
+
+          {/* Structured guidance cards */}
+          {guidance && <>
+          <Card style={{ margin: "12px 20px 0" }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{guidance.shortAnswer}</p></Card>
           {guidance.tradition.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <button onClick={() => setTradOpen(!tradOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}><CardTitle>What the Tradition Says</CardTitle><span style={{ color: T.gold, fontSize: fz(14), transform: tradOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▴</span></button>
             {tradOpen && <div style={{ marginTop: 12 }}>{guidance.tradition.map((e,i) => <div key={i} style={{ marginBottom: 16 }}>
-              <SaintQuote name={e.author} quote={e.quote} source={e.source} />
+              <SaintQuote name={e.author} quote={e.quote} source={e.source} isExact={e.isExact} />
               <SourceLink text={e.source} extraCheck={e.author + " " + (e.source || "")} />
             </div>)}</div>}
           </Card>}
           {guidance.magisterium.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <button onClick={() => setMagOpen(!magOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}><CardTitle>The Church Teaches</CardTitle><span style={{ color: T.navyText, fontSize: fz(14), transform: magOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▾</span></button>
-            {magOpen && <div style={{ marginTop: 12 }}>{guidance.magisterium.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 16, marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.05em" }}>{e.ref}</div>
+            {magOpen && <div style={{ marginTop: 12 }}>{guidance.magisterium.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 16, marginBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.navyText }}>{e.ref}</div>
                 <SourceLink text={e.ref} />
               </div>
-              <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.55 }}>{e.teaching}</div>
+              <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7 }}>{e.teaching}</div>
             </div>)}</div>}
           </Card>}
           {guidance.scripture && guidance.scripture.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
             <CardTitle color={T.crimson}>Sacred Scripture</CardTitle>
-            <div style={{ marginTop: 8 }}>{guidance.scripture.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.crimson}`, paddingLeft: 14, marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.crimson, letterSpacing: "0.05em" }}>{e.verse}</div>
+            <div style={{ marginTop: 8 }}>{guidance.scripture.map((e,i) => <div key={i} style={{ borderLeft: `3px solid ${T.crimson}`, paddingLeft: 14, marginBottom: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.crimson, letterSpacing: "0.05em" }}>{e.verse}</div>
                 <SourceLink text={e.verse} />
               </div>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{e.text}</p>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{e.text}</p>
             </div>)}</div>
           </Card>}
-          {guidance.calibration && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(26,39,68,0.04)", borderRadius: 8 }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 3 }}>Certainty</div><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, fontStyle: "italic", margin: 0 }}>{guidance.calibration}</p></div>}
-          {guidance.pastoralWarning && <div style={{ margin: "12px 20px 0", padding: "12px 14px", background: "rgba(212,168,67,0.08)", border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, display: "flex", gap: 10, alignItems: "flex-start" }}><span style={{ fontSize: fz(16) }}>⚠️</span><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.5, margin: 0 }}>{guidance.pastoralWarning}</p></div>}
+          {guidance && guidance.calibration && <Card style={{ margin: "12px 20px 0" }}><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>Certainty</div><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkMid, fontStyle: "italic", lineHeight: 1.65, margin: 0 }}>{guidance.calibration}</p></Card>}
+          {guidance && guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}><CardTitle>Conclusion</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{guidance.pastoralWarning}</p></Card>}
+          </>}
           <div style={{ display: "flex", gap: 8, margin: "20px 20px 0" }}>
-            <button onClick={() => { setQuestion(""); setView("home"); setCopied(false); setHistory([]); setFollowUp(""); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
+            <button onClick={() => { setQuestion(""); setView("home"); setCopied(false); setHistory([]); setFollowUp(""); setPastExchanges([]); setCurrentQ(""); setRawResponse(null); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
             <button onClick={() => { navigator.clipboard.writeText(formatGuidanceText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
             <button onClick={() => { if (navigator.share) { navigator.share({ title: "Custos — Moral Guidance", text: formatGuidanceText() }).catch(() => {}); } else { navigator.clipboard.writeText(formatGuidanceText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); } }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.inkLight, background: T.warmWhite, border: "1px solid rgba(138,126,108,0.2)", borderRadius: 10, cursor: "pointer" }}>↗ Share</button>
+          </div>
+
+          {/* Dig Deeper */}
+          <div style={{ margin: "20px 20px 0" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8, textAlign: "center" }}>Dig Deeper</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+              {[
+                { icon: "🔍", label: "Explain the reasoning", prompt: "Explain the reasoning behind this teaching. Walk me through the natural law argument, the theology of the act, and why the Church arrived at this position. Assume I'm a faithful Catholic who wants to understand, not just obey." },
+                { icon: "🏛", label: "What do the Doctors teach?", prompt: "Explain what the Doctors of the Church you cited actually teach on this topic. Use plain, accessible language — as if you were explaining their ideas to someone who hasn't read their works. Include what makes each Doctor's perspective distinctive." },
+                { icon: "📖", label: "Break down the sources", prompt: "Break down the encyclicals, catechism passages, and other sources you cited. For each one, explain in plain language: what does it actually say, what problem was it addressing when it was written, and how does it apply to my question?" },
+                { icon: "💡", label: "Give me an analogy", prompt: "Explain this teaching using analogies and everyday language that a non-theologian would understand. Help me grasp the underlying principle, not just the rule. Use comparisons from ordinary life, relationships, or common experience." },
+              ].map((d, i) => (
+                <button key={i} onClick={() => submit(d.prompt, true)} style={{
+                  display: "flex", alignItems: "center", gap: 8, padding: "10px 12px",
+                  fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.navyText,
+                  background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`,
+                  borderRadius: 10, cursor: "pointer", textAlign: "left", lineHeight: 1.3,
+                }}>
+                  <span style={{ fontSize: 16, flexShrink: 0 }}>{d.icon}</span>
+                  <span>{d.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Follow-up input */}
@@ -1848,7 +2182,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <input ref={followRef} type="text" value={followUp} onChange={e => setFollowUp(e.target.value)} onKeyDown={e => { if (e.key === "Enter" && followUp.trim()) submit(followUp, true); }} placeholder="Ask a follow-up…" style={{ flex: 1, padding: "12px 14px", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, boxSizing: "border-box" }} />
             <button onClick={() => { if (followUp.trim()) submit(followUp, true); }} disabled={!followUp.trim()} style={{ padding: "12px 18px", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: followUp.trim() ? T.warmWhite : T.inkLight, background: followUp.trim() ? `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` : T.warmWhite, border: followUp.trim() ? "none" : `1px solid ${T.cardBorder}`, borderRadius: 10, cursor: followUp.trim() ? "pointer" : "default", boxShadow: followUp.trim() ? `0 2px 8px ${T.shadowCrimson}` : "none" }}>Ask</button>
           </div>
-          {history.length > 2 && <div style={{ margin: "8px 20px 0", textAlign: "center" }}><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.inkLight, fontStyle: "italic" }}>Follow-up {Math.floor(history.length / 2)} of this conversation</span></div>}
 
           <div style={{ margin: "16px 20px 0", padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0 }}>This guidance supplements — never replaces — a confessor or spiritual director.</p></div>
         </div>
@@ -1860,32 +2193,165 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 70 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
-              { label: "Sacred Scripture", items: ["Douay-Rheims Bible (required for all quotations)", "The Vulgate (Latin reference)"] },
-              { label: "Catechisms", items: ["The Baltimore Catechism", "The Catechism of the Council of Trent (Roman Catechism)", "The Catechism of Pope St. Pius X", "Catechism of the Catholic Church (1992) — supplementary only"] },
-              { label: "Papal Encyclicals & CDF Documents (22)", items: ["Mirari Vos (Gregory XVI, 1832)", "Quanta Cura & Syllabus of Errors (Pius IX, 1864)", "Aeterni Patris (Leo XIII, 1879)", "Immortale Dei (Leo XIII, 1885)", "Libertas (Leo XIII, 1888)", "Rerum Novarum (Leo XIII, 1891)", "Pascendi Dominici Gregis (Pius X, 1907)", "Mortalium Animos (Pius XI, 1928)", "Casti Connubii (Pius XI, 1930)", "Quadragesimo Anno (Pius XI, 1931)", "Divini Redemptoris (Pius XI, 1937)", "Mit brennender Sorge (Pius XI, 1937)", "Mystici Corporis Christi (Pius XII, 1943)", "Mediator Dei (Pius XII, 1947)", "Humani Generis (Pius XII, 1950)", "Humanae Vitae (Paul VI, 1968)", "Familiaris Consortio (John Paul II, 1981)", "Veritatis Splendor (John Paul II, 1993)", "Evangelium Vitae (John Paul II, 1995)", "Deus Caritas Est (Benedict XVI, 2005)", "Donum Vitae (CDF, 1987)", "Dignitas Personae (CDF, 2008)"] },
-              { label: "Motu Proprio (4)", items: ["Ecclesia Dei (John Paul II, 1988) — traditional Catholic communities", "Ad Tuendam Fidem (John Paul II, 1998) — grades of theological assent", "Summorum Pontificum (Benedict XVI, 2007) — the Traditional Latin Mass", "Omnium in Mentem (Benedict XVI, 2009) — marriage and canonical form"] },
-              { label: "Church Councils (5)", items: ["Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments", "Council of Florence (1438–1445) — the seven sacraments, extra ecclesiam nulla salus", "Council of Trent — dogmatic canons (highest authority)", "Vatican I — dogmatic definitions", "Vatican II — pastoral documents only; Trent prevails where tension exists"] },
-              { label: "Doctors of the Church (15)", items: ["St. Thomas Aquinas", "St. Augustine of Hippo", "St. Alphonsus Liguori", "St. Francis de Sales", "St. Teresa of Ávila", "St. John of the Cross", "St. Catherine of Siena", "St. Bonaventure", "St. Robert Bellarmine", "St. Jerome", "St. John Chrysostom", "St. Gregory the Great", "St. Bernard of Clairvaux", "St. Ambrose of Milan", "St. Thérèse of Lisieux"] },
-              { label: "Canon Law (both codes, cited side by side)", items: ["1917 Code of Canon Law — the law of the Church from 1917 until 1983", "1983 Code of Canon Law — the current law of the Church", "When both codes address a question, Custos cites both so you can see what changed"] },
+              {
+                label: "Sacred Scripture",
+                count: null,
+                items: [
+                  { text: "Douay-Rheims Bible — required for all quotations" },
+                  { text: "The Vulgate — Latin reference" },
+                ]
+              },
+              {
+                label: "Catechisms",
+                count: "4",
+                items: [
+                  { text: "The Catechism of the Council of Trent (Roman Catechism) — 1566" },
+                  { text: "The Baltimore Catechism — 1885" },
+                  { text: "The Catechism of Pope St. Pius X — 1908" },
+                  { text: "Catechism of the Catholic Church (1992) — supplementary only; may not override the older catechisms" },
+                ]
+              },
+              {
+                label: "Papal Encyclicals & Apostolic Documents",
+                count: "37",
+                items: [
+                  { text: "Quo Graviora — Leo XII, 1826 · condemnation of Freemasonry and secret societies" },
+                  { text: "Mirari Vos — Gregory XVI, 1832 · on liberalism and religious indifferentism" },
+                  { text: "Singulari Nos — Gregory XVI, 1834 · condemning the liberal Catholicism of Lamennais" },
+                  { text: "Qui Pluribus — Pius IX, 1846 · on faith and religion; condemning liberalism, rationalism, Freemasonry, and Communism" },
+                  { text: "Ineffabilis Deus — Pius IX, 1854 · apostolic constitution defining the dogma of the Immaculate Conception" },
+                  { text: "Quanta Cura & Syllabus of Errors — Pius IX, 1864 · condemning 80 errors of modern thought including liberalism, socialism, and religious indifferentism" },
+                  { text: "Graves ac Diuturnae — Pius IX, 1875 · on the Old Catholic schism and valid ecclesiastical authority" },
+                  { text: "Aeterni Patris — Leo XIII, 1879 · on restoring Scholastic philosophy, especially Thomism, as the foundation of Catholic intellectual life" },
+                  { text: "Humanum Genus — Leo XIII, 1884 · on Freemasonry" },
+                  { text: "Immortale Dei — Leo XIII, 1885 · on the Christian constitution of states and the Church's role in civil society" },
+                  { text: "Libertas — Leo XIII, 1888 · on human liberty; rejecting liberalism's false conception of freedom as independence from God and natural law" },
+                  { text: "Rerum Novarum — Leo XIII, 1891 · on the condition of the working classes; the Church's foundational social teaching" },
+                  { text: "Providentissimus Deus — Leo XIII, 1893 · on Sacred Scripture, biblical interpretation, inspiration and inerrancy" },
+                  { text: "Apostolicae Curae — Leo XIII, 1896 · apostolic letter on the nullity of Anglican orders" },
+                  { text: "E Supremi Apostolatus — Pius X, 1903 · on restoring all things in Christ" },
+                  { text: "Ad Diem Illum Lætissimum — Pius X, 1904 · on the Immaculate Conception and Marian devotion" },
+                  { text: "Pascendi Dominici Gregis — Pius X, 1907 · defining and condemning Modernism as the synthesis of all heresies" },
+                  { text: "Our Apostolic Mandate — Pius X, 1910 · condemning the Sillon movement and democratic distortions of Catholic social teaching" },
+                  { text: "Quas Primas — Pius XI, 1925 · on the social kingship of Christ" },
+                  { text: "Mortalium Animos — Pius XI, 1928 · condemning false ecumenism and indifferentism; no unity without return to the one true Church" },
+                  { text: "Casti Connubii — Pius XI, 1930 · on Christian marriage; contraception, divorce, and the ends of marriage" },
+                  { text: "Quadragesimo Anno — Pius XI, 1931 · on reconstructing the social order; subsidiarity and the just wage" },
+                  { text: "Divini Redemptoris — Pius XI, 1937 · on atheistic Communism; its errors and the Catholic response" },
+                  { text: "Mit brennender Sorge — Pius XI, 1937 · condemning National Socialism and the Nazi persecution of the Church" },
+                  { text: "Mystici Corporis Christi — Pius XII, 1943 · on the Church as the Mystical Body of Christ" },
+                  { text: "Humani Generis — Pius XII, 1950 · against errors in modern theology; evolution, relativism, and the nouvelle théologie" },
+                  { text: "Munificentissimus Deus — Pius XII, 1950 · apostolic constitution defining the dogma of the Assumption of Mary" },
+                  { text: "Humanae Vitae — Paul VI, 1968 · on the regulation of birth; condemning contraception and affirming the ends of marriage" },
+                  { text: "Familiaris Consortio — John Paul II, 1981 · on the role of the Christian family in the modern world" },
+                  { text: "Veritatis Splendor — John Paul II, 1993 · on the foundations of Catholic moral theology; intrinsic evil and the rejection of proportionalism" },
+                  { text: "Ordinatio Sacerdotalis — John Paul II, 1994 · definitively closing the question of women's ordination" },
+                  { text: "Evangelium Vitae — John Paul II, 1995 · on the inviolability of human life; abortion, euthanasia, and the culture of death" },
+                  { text: "Fides et Ratio — John Paul II, 1998 · on the relationship between faith and reason" },
+                  { text: "Deus Caritas Est — Benedict XVI, 2005 · on Christian love; eros, agape, and the Church's charitable mission" },
+                ]
+              },
+              {
+                label: "Motu Proprio",
+                count: "4",
+                items: [
+                  { text: "Ecclesia Dei — John Paul II, 1988" },
+                  { text: "Ad Tuendam Fidem — John Paul II, 1998" },
+                  { text: "Summorum Pontificum — Benedict XVI, 2007" },
+                  { text: "Omnium in Mentem — Benedict XVI, 2009" },
+                ]
+              },
+              {
+                label: "Holy Office Decree",
+                count: "1",
+                items: [
+                  { text: "Lamentabili Sane — Holy Office, 1907 · approved by Pius X · syllabus condemning 65 errors of the Modernists; companion to Pascendi" },
+                ]
+              },
+              {
+                label: "CDF Instructions — Approved In Forma Specifica",
+                count: "3",
+                note: "The Pope formally ratified each of these, making them his own act. They carry authority equivalent to an encyclical.",
+                items: [
+                  { text: "Persona Humana — CDF, 1975 · approved in forma specifica by Paul VI · on sexual ethics" },
+                  { text: "Inter Insigniores — CDF, 1976 · approved in forma specifica by Paul VI · on the ordination of women" },
+                  { text: "Dominus Iesus — CDF, 2000 · approved in forma specifica by John Paul II · on Christ as the sole Saviour" },
+                ]
+              },
+              {
+                label: "CDF Instructions — Approved In Common Form",
+                count: "2",
+                note: "The Pope gave general approval but did not formally ratify these as his own act. They carry real but delegated authority. Retained because no encyclical addresses these bioethical questions.",
+                items: [
+                  { text: "Donum Vitae — CDF, 1987 · approved in common form by John Paul II · IVF, artificial insemination, embryo research" },
+                  { text: "Dignitas Personae — CDF, 2008 · approved in common form by Benedict XVI · embryo adoption, cloning, stem cells" },
+                ]
+              },
+              {
+                label: "Church Councils",
+                count: "4",
+                items: [
+                  { text: "Fourth Lateran Council (1215) — Transubstantiation, annual confession, marriage impediments" },
+                  { text: "Council of Florence (1438–1445) — seven sacraments, extra ecclesiam nulla salus" },
+                  { text: "Council of Trent — dogmatic canons and decrees, highest conciliar authority" },
+                  { text: "Vatican I — Pastor Aeternus on papal infallibility" },
+                ]
+              },
+              {
+                label: "Doctors of the Church",
+                count: "15",
+                items: [
+                  { text: "St. Ambrose of Milan (340–397)" },
+                  { text: "St. Jerome (347–420)" },
+                  { text: "St. Augustine of Hippo (354–430)" },
+                  { text: "St. John Chrysostom (349–407)" },
+                  { text: "St. Gregory the Great (540–604)" },
+                  { text: "St. Bernard of Clairvaux (1090–1153)" },
+                  { text: "St. Bonaventure (1221–1274)" },
+                  { text: "St. Thomas Aquinas (1225–1274)" },
+                  { text: "St. Catherine of Siena (1347–1380)" },
+                  { text: "St. Teresa of Ávila (1515–1582)" },
+                  { text: "St. John of the Cross (1542–1591)" },
+                  { text: "St. Robert Bellarmine (1542–1621)" },
+                  { text: "St. Francis de Sales (1567–1622)" },
+                  { text: "St. Alphonsus Liguori (1696–1787)" },
+                  { text: "St. Thérèse of Lisieux (1873–1897)" },
+                ]
+              },
+              {
+                label: "Canon Law",
+                count: "2 Codes",
+                note: "When both codes address a question, Custos cites both so you can see exactly what changed and whether it was a tightening, relaxation, or reformulation of the discipline.",
+                items: [
+                  { text: "1917 Code of Canon Law — the law of the Church from 1917 until 1983" },
+                  { text: "1983 Code of Canon Law — the current law of the Church" },
+                ]
+              },
             ].map((section, si) => (
-              <div key={si} style={{ marginBottom: 16 }}>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6, paddingBottom: 4, borderBottom: `1px solid ${T.cardBorder}` }}>{si + 1}. {section.label}</div>
+              <div key={si} style={{ marginBottom: 18 }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", paddingBottom: 5, borderBottom: `1px solid ${T.cardBorder}`, marginBottom: 8 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>{si + 1}. {section.label}</div>
+                  {section.count && <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.04em", flexShrink: 0, marginLeft: 8 }}>{section.count}</div>}
+                </div>
+                {section.note && (
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkMid, lineHeight: 1.5, marginBottom: 8, paddingLeft: 8, borderLeft: `2px solid ${T.goldFaint}` }}>{section.note}</div>
+                )}
                 {section.items.map((item, ii) => (
-                  <div key={ii} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "5px 0 5px 8px" }}>
-                    <span style={{ color: T.gold, fontSize: fz(10), marginTop: 3, flexShrink: 0 }}>•</span>
-                    <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.45 }}>{item}</span>
+                  <div key={ii} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "4px 0 4px 8px" }}>
+                    <span style={{ color: T.gold, fontSize: fz(10), marginTop: 4, flexShrink: 0 }}>•</span>
+                    <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.45 }}>{item.text}</span>
                   </div>
                 ))}
               </div>
             ))}
 
-            <div style={{ marginTop: 12, padding: "14px", background: "rgba(122,28,28,0.04)", borderRadius: 10, border: "1px solid rgba(122,28,28,0.1)" }}>
+            <div style={{ marginTop: 4, padding: "14px", background: "rgba(122,28,28,0.04)", borderRadius: 10, border: "1px solid rgba(122,28,28,0.1)" }}>
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.crimson, fontWeight: 500, margin: "0 0 6px" }}>What we do not cite:</p>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>No Pontifical Academy for Life, no USCCB committee documents, no Catholic news sites, no modern theologians, no unnamed "scholars." If a question exceeds these sources, Custos will tell you honestly and direct you to a confessor.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>No Vatican II documents. No Pontifical Academy for Life. No USCCB committee documents. No Catholic news sites. No modern theologians. No unnamed "scholars." If a question exceeds these sources, Custos will tell you honestly and direct you to a confessor.</p>
             </div>
 
             <div style={{ marginTop: 18, textAlign: "center" }}>
@@ -1941,7 +2407,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
 // ═══════════════════════════════════════════════════════════════════
 // DAILY EXAMEN
 // ═══════════════════════════════════════════════════════════════════
-function ExamenTab() {
+function ExamenTab({ dark, setDark, fszGlobal, setFszGlobal, goHome }) {
   const [view, setView] = useState("welcome");
   const [step, setStep] = useState(0);
   const [reflections, setReflections] = useState({});
@@ -1954,7 +2420,7 @@ function ExamenTab() {
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "welcome"} onBack={() => {
+      <GlobalTopBar title={title} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={view !== "welcome"} onBack={() => {
         if (view === "examen" && step > 0) setStep(step - 1);
         else if (view === "summary") setView("welcome");
         else setView("welcome");
@@ -1991,7 +2457,7 @@ function ExamenTab() {
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, fontStyle: "italic", margin: "0 0 12px" }}>{s.prompt}</p>
               <textarea value={reflections[step] || ""} onChange={e => setReflections(p => ({...p, [step]: e.target.value}))} placeholder="Write your reflection…" rows={4} style={{ width: "100%", padding: 12, fontFamily: "EB Garamond, serif", fontSize: fz(16), lineHeight: 1.6, color: T.inkDark, background: T.parchment, border: "1px solid rgba(212,168,67,0.2)", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }} />
             </Card>}
-            {s.saint && <div style={{ marginTop: 16 }}><SaintQuote name={s.saint.name} quote={s.saint.quote} source={s.saint.source} /></div>}
+            {s.saint && <div style={{ marginTop: 16 }}><SaintQuote name={s.saint.name} quote={s.saint.quote} source={s.saint.source} isExact={true} /></div>}
           </div>
           <div style={{ padding: "10px 22px 18px", borderTop: "1px solid rgba(212,168,67,0.12)", display: "flex", gap: 10 }}>
             {step > 0 && <div style={{ flex: 1 }}><GhostBtn onClick={() => setStep(step - 1)}>‹ Back</GhostBtn></div>}
@@ -2023,36 +2489,95 @@ function ExamenTab() {
 // CONFESSION PREP
 // ═══════════════════════════════════════════════════════════════════
 
-function ConfessionTab() {
+function ConfessionTab({ dark, setDark, fszGlobal, setFszGlobal, goHome }) {
   const [view, setView] = useState("setup");
   const [cmdIdx, setCmdIdx] = useState(0);
   const [answers, setAnswers] = useState({});
   const [notes, setNotes] = useState({});
-  const [daysSince] = useState(32);
-  const [showPrayer, setShowPrayer] = useState(false);
+  const [lastConfessionDate, setLastConfessionDate] = useState(() => {
+    try { return localStorage.getItem("custos_last_confession") || ""; } catch { return ""; }
+  });
+  const daysSince = lastConfessionDate
+    ? Math.floor((new Date() - new Date(lastConfessionDate)) / 86400000)
+    : null;
   const [absolved, setAbsolved] = useState(false);
   const [fade, setFade] = useState(true);
+  const [lifeState, setLifeState] = useState(null); // null | "single" | "married" | "parent" | "consecrated"
 
   useEffect(() => { setFade(false); setTimeout(() => setFade(true), 50); }, [cmdIdx]);
 
-  const cmd = COMMANDMENTS[cmdIdx];
-  const timeSince = daysSince < 7 ? `${daysSince} days` : daysSince < 30 ? `${Math.round(daysSince/7)} weeks` : `${Math.round(daysSince/30)} months`;
+  const LIFE_STATE_QUESTIONS = {
+    child: { num: "✦", title: "A Child's Heart", cite: "\"Let the children come to me, for of such is the kingdom of heaven.\"", src: "Mt 19:14", questions: [
+      { text: "I disobeyed or was rude to my parents, grandparents, or teachers.", grave: false },
+      { text: "I was mean, unkind, or said hurtful things to a brother, sister, or friend.", grave: false },
+      { text: "I told a lie, even a small one.", grave: false },
+      { text: "I took something that wasn't mine, or didn't return something I borrowed.", grave: false },
+      { text: "I hit, kicked, or hurt someone on purpose.", grave: false },
+      { text: "I was selfish and didn't want to share or help.", grave: false },
+      { text: "I missed Mass on Sunday without a good reason.", grave: false },
+      { text: "I used God's name as a bad word or made fun of holy things.", grave: false },
+      { text: "I watched, played, or looked at things I knew were wrong.", grave: false },
+      { text: "I forgot to say my morning or night prayers for a long time.", grave: false },
+    ]},
+    single: { num: "✦", title: "State in Life — Single", cite: "\"It is good for a man not to touch a woman.\"", src: "1 Cor 7:1", questions: [
+      { text: "I failed to guard my chastity in thought, word, or deed.", grave: true },
+      { text: "I wasted time in idleness or worldly amusements rather than growing in virtue.", grave: false },
+      { text: "I was uncharitable or unkind to those entrusted to my care.", grave: false },
+      { text: "I failed to use my freedom as a single person for works of charity and prayer.", grave: false },
+    ]},
+    married: { num: "✦", title: "State in Life — Married", cite: "\"What God hath joined together, let no man put asunder.\"", src: "Mt 19:6", questions: [
+      { text: "I was unfaithful in thought or deed to my spouse.", grave: true },
+      { text: "I used contraception or deliberately rendered the conjugal act sterile.", grave: true },
+      { text: "I was unkind, impatient, or uncharitable toward my spouse.", grave: false },
+      { text: "I neglected prayer in common or the spiritual life of my marriage.", grave: false },
+      { text: "I failed to provide financially or emotionally for my household.", grave: false },
+    ]},
+    parent: { num: "✦", title: "State in Life — Parent", cite: "\"Train up a child in the way he should go.\"", src: "Prov 22:6", questions: [
+      { text: "I was unfaithful in thought or deed to my spouse.", grave: true },
+      { text: "I used contraception or deliberately rendered the conjugal act sterile.", grave: true },
+      { text: "I failed to teach my children the Faith, prayers, and commandments.", grave: true },
+      { text: "I gave bad example to my children by my words, actions, or neglect of religion.", grave: false },
+      { text: "I was harsh, impatient, or unjust in my discipline of my children.", grave: false },
+      { text: "I neglected the physical, emotional, or spiritual needs of my children.", grave: false },
+    ]},
+    consecrated: { num: "✦", title: "State in Life — Consecrated", cite: "\"He that can take, let him take it.\"", src: "Mt 19:12", questions: [
+      { text: "I failed in obedience to my superiors or my rule of life.", grave: true },
+      { text: "I violated or was careless in my vow or promise of chastity.", grave: true },
+      { text: "I was attached to or used material things contrary to my vow or spirit of poverty.", grave: false },
+      { text: "I neglected the Divine Office, mental prayer, or the prescribed spiritual exercises.", grave: false },
+      { text: "I gave bad example to those entrusted to my care or to the faithful generally.", grave: false },
+    ]},
+  };
+
+  const examSteps = lifeState === "child"
+    ? [LIFE_STATE_QUESTIONS["child"]]
+    : lifeState
+      ? [...COMMANDMENTS, LIFE_STATE_QUESTIONS[lifeState]]
+      : COMMANDMENTS;
+
+  const cmd = examSteps[cmdIdx];
+  const timeSince = daysSince === null ? "some time"
+    : daysSince === 0 ? "today"
+    : daysSince < 7 ? `${daysSince} day${daysSince === 1 ? "" : "s"}`
+    : daysSince < 30 ? `${Math.round(daysSince/7)} week${Math.round(daysSince/7) === 1 ? "" : "s"}`
+    : `${Math.round(daysSince/30)} month${Math.round(daysSince/30) === 1 ? "" : "s"}`;
 
   const mortalSins = [], venialSins = [];
-  COMMANDMENTS.forEach((c, ci) => c.questions.forEach((q, qi) => {
+  examSteps.forEach((c, ci) => c.questions.forEach((q, qi) => {
     const k = `${ci}-${qi}`;
-    if (answers[k] === "mortal") mortalSins.push({ text: q.text, cmd: `${c.num} Commandment`, note: notes[k] });
-    if (answers[k] === "venial") venialSins.push({ text: q.text, cmd: `${c.num} Commandment`, note: notes[k] });
+    const label = ci < COMMANDMENTS.length ? `${c.num} Commandment` : c.title;
+    if (answers[k] === "mortal") mortalSins.push({ text: q.text, cmd: label, note: notes[k] });
+    if (answers[k] === "venial") venialSins.push({ text: q.text, cmd: label, note: notes[k] });
   }));
 
   const title = view === "exam" ? "Examination" : view === "review" ? "Your Examination" : view === "confess" ? "In the Confessional" : "Confession";
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "setup"} onBack={() => {
+      <GlobalTopBar title={title} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={view !== "setup"} onBack={() => {
         if (view === "exam" && cmdIdx > 0) setCmdIdx(cmdIdx - 1);
         else if (view === "exam") setView("setup");
-        else if (view === "review") { setView("exam"); setCmdIdx(COMMANDMENTS.length - 1); }
+        else if (view === "review") { setView("exam"); setCmdIdx(examSteps.length - 1); }
         else if (view === "confess") setView("review");
         else setView("setup");
       }} />
@@ -2061,10 +2586,58 @@ function ConfessionTab() {
         <div style={{ flex: 1, overflowY: "auto", padding: "20px 20px" }}>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>Opening Prayer</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Come, Holy Spirit, enlighten my heart to see what is sin in my life, give me the grace of true sorrow, and help me to resolve to amend my life. Amen."</p>
+            {lifeState === "child"
+              ? <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Dear Holy Spirit, please help me to remember my sins and to be sorry for them. Help me to make a good confession. Amen."</p>
+              : <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"Come, Holy Spirit, enlighten my heart to see what is sin in my life, give me the grace of true sorrow, and help me to resolve to amend my life. Amen."</p>
+            }
           </Card>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-            <div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 2 }}>Last Confession</div><div style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 600, color: T.navyText }}>{daysSince} <span style={{ fontSize: fz(13), fontWeight: 400, color: T.inkLight }}>days ago</span></div></div>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 8 }}>Last Confession</div>
+            <div style={{ padding: "12px 16px", background: T.warmWhite, border: `1px solid ${T.cardBorder}`, borderRadius: 10 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 600, color: T.navyText }}>
+                  {daysSince === null ? "Not set" : daysSince === 0 ? "Today" : `${daysSince} day${daysSince === 1 ? "" : "s"} ago`}
+                </div>
+                {daysSince !== null && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: daysSince > 30 ? T.crimson : T.inkLight }}>
+                  {daysSince > 30 ? "Consider going soon" : daysSince > 7 ? "Within the month" : "Recent"}
+                </div>}
+              </div>
+              <input type="date" value={lastConfessionDate} max={new Date().toISOString().split("T")[0]}
+                onChange={e => {
+                  setLastConfessionDate(e.target.value);
+                  try { localStorage.setItem("custos_last_confession", e.target.value); } catch {}
+                }}
+                style={{ width: "100%", padding: "8px 10px", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, background: T.parchment, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 8, boxSizing: "border-box", colorScheme: "light" }}
+              />
+            </div>
+          </div>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 10 }}>Your State in Life</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+              {[
+                { id: "child", icon: "🌟", label: "Child", sub: "Under 14" },
+                { id: "single", icon: "🙏", label: "Single", sub: "Unmarried adult" },
+                { id: "married", icon: "💍", label: "Married", sub: "Spouse, no children" },
+                { id: "parent", icon: "👨‍👩‍👧", label: "Parent", sub: "Raising children" },
+                { id: "consecrated", icon: "✝", label: "Consecrated", sub: "Religious or clergy" },
+              ].map(ls => (
+                <button key={ls.id} onClick={() => setLifeState(lifeState === ls.id ? null : ls.id)} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: "12px 8px", background: lifeState === ls.id ? T.goldFaint : T.warmWhite, border: `1.5px solid ${lifeState === ls.id ? T.gold : T.cardBorder}`, borderRadius: 10, cursor: "pointer" }}>
+                  <span style={{ fontSize: fz(20) }}>{ls.icon}</span>
+                  <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: lifeState === ls.id ? T.gold : T.navyText, letterSpacing: "0.04em" }}>{ls.label}</span>
+                  <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.inkLight }}>{ls.sub}</span>
+                </button>
+              ))}
+            </div>
+            {lifeState && (
+              <div style={{ marginTop: 10, padding: "8px 12px", background: T.goldFaint, borderRadius: 8, border: `1px solid rgba(212,168,67,0.2)` }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, lineHeight: 1.5 }}>
+                  {lifeState === "child" && "A gentle examination written just for children — simple questions about kindness, honesty, obedience, and love of God. With a child's Act of Contrition at the end."}
+                  {lifeState === "married" && "The examination will include the duties of spouses: fidelity, conjugal love, openness to life, mutual respect, and the obligations of the married state."}
+                  {lifeState === "parent" && "The examination will include the duties of spouses and parents: raising children in the Faith, example, discipline, care, and transmission of the faith."}
+                  {lifeState === "consecrated" && "The examination will include the vows or promises of your state: obedience, chastity, poverty, prayer, and fidelity to your rule of life."}
+                </p>
+              </div>
+            )}
           </div>
           <CrimsonBtn onClick={() => { setCmdIdx(0); setAnswers({}); setNotes({}); setView("exam"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Begin Examination</CrimsonBtn>
           <div style={{ marginTop: 16, padding: "10px 12px", background: T.subtleBg, borderRadius: 8, display: "flex", gap: 8, alignItems: "flex-start" }}>
@@ -2077,10 +2650,10 @@ function ConfessionTab() {
       {view === "exam" && (
         <div style={{ flex: 1, display: "flex", flexDirection: "column", opacity: fade ? 1 : 0, transform: fade ? "translateY(0)" : "translateY(10px)", transition: "all 0.4s" }}>
           <div style={{ padding: "10px 20px 4px", display: "flex", justifyContent: "space-between" }}>
-            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>Ten Commandments</span>
-            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>{cmd.num} of X</span>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>{cmdIdx < COMMANDMENTS.length ? "Ten Commandments" : "State in Life"}</span>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>{cmdIdx + 1} / {examSteps.length}</span>
           </div>
-          <div style={{ padding: "0 20px 6px" }}><div style={{ height: 3, borderRadius: 2, background: "rgba(212,168,67,0.15)" }}><div style={{ height: "100%", borderRadius: 2, background: `linear-gradient(90deg, ${T.crimson}, ${T.gold})`, width: `${((cmdIdx+1)/COMMANDMENTS.length)*100}%`, transition: "width 0.5s" }} /></div></div>
+          <div style={{ padding: "0 20px 6px" }}><div style={{ height: 3, borderRadius: 2, background: "rgba(212,168,67,0.15)" }}><div style={{ height: "100%", borderRadius: 2, background: `linear-gradient(90deg, ${T.crimson}, ${T.gold})`, width: `${((cmdIdx+1)/examSteps.length)*100}%`, transition: "width 0.5s" }} /></div></div>
           <div style={{ flex: 1, overflowY: "auto", padding: "6px 20px 16px" }}>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 3px" }}>{cmd.num} · {cmd.title}</h2>
             <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.gold, lineHeight: 1.5, marginBottom: 2 }}>{cmd.cite}</div>
@@ -2111,7 +2684,7 @@ function ConfessionTab() {
           </div>
           <div style={{ padding: "16px 20px 26px", borderTop: "1px solid rgba(212,168,67,0.12)", display: "flex", gap: 10 }}>
             {cmdIdx > 0 && <button onClick={() => setCmdIdx(cmdIdx - 1)} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1.5px solid rgba(26,39,68,0.2)`, borderRadius: 10, cursor: "pointer" }}>‹ Back</button>}
-            <button onClick={() => { if (cmdIdx < COMMANDMENTS.length - 1) setCmdIdx(cmdIdx + 1); else setView("review"); }} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}` }}>{cmdIdx < COMMANDMENTS.length - 1 ? "Next ›" : "Review ›"}</button>
+            <button onClick={() => { if (cmdIdx < examSteps.length - 1) setCmdIdx(cmdIdx + 1); else setView("review"); }} style={{ flex: 1, padding: "20px 0", fontFamily: "Cinzel, serif", fontSize: fz(16), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}` }}>{cmdIdx < examSteps.length - 1 ? "Next ›" : "Review ›"}</button>
           </div>
         </div>
       )}
@@ -2119,7 +2692,7 @@ function ConfessionTab() {
       {view === "review" && (
         <div style={{ flex: 1, overflowY: "auto", paddingBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, padding: "22px 20px 6px" }}>
-            {[{ v: mortalSins.length, l: "Mortal", c: T.crimson }, { v: venialSins.length, l: "Venial", c: T.gold }, { v: daysSince, l: "Days Since", c: T.navy }].map((s2,i) => (
+            {[{ v: mortalSins.length, l: "Mortal", c: T.crimson }, { v: venialSins.length, l: "Venial", c: T.gold }, { v: daysSince === null ? "—" : daysSince, l: "Days Since", c: T.navy }].map((s2,i) => (
               <div key={i} style={{ textAlign: "center", padding: "10px 16px", background: T.warmWhite, borderRadius: 10, border: `1px solid ${T.cardBorder}`, flex: 1 }}>
                 <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 600, color: s2.c }}>{s2.v}</div>
                 <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s2.l}</div>
@@ -2135,7 +2708,7 @@ function ConfessionTab() {
             {venialSins.map((s2,i) => <div key={i} style={{ borderLeft: `3px solid ${T.gold}`, paddingLeft: 14, background: T.warmWhite, padding: "8px 14px 8px 16px", borderRadius: "0 10px 10px 0", marginBottom: 6 }}><p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.45, margin: 0 }}>{s2.text}</p></div>)}
           </div>}
           {mortalSins.length > 0 && <div style={{ margin: "12px 20px 0", padding: "10px 14px", background: "rgba(212,168,67,0.08)", border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, display: "flex", gap: 8, alignItems: "center" }}><span style={{ fontSize: fz(14) }}>⚠️</span><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark }}>{mortalSins.length} mortal sin{mortalSins.length > 1 ? "s" : ""} — a priest's absolution is essential</span></div>}
-          <div style={{ padding: "18px 20px 0" }}><CrimsonBtn onClick={() => { setAbsolved(false); setShowPrayer(false); setView("confess"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Go to Confession ›</CrimsonBtn></div>
+          <div style={{ padding: "18px 20px 0" }}><CrimsonBtn onClick={() => { setAbsolved(false); setView("confess"); }} style={{ padding: "20px 0", fontSize: fz(16) }}>Go to Confession ›</CrimsonBtn></div>
         </div>
       )}
 
@@ -2143,9 +2716,12 @@ function ConfessionTab() {
         <div style={{ flex: 1, overflowY: "auto", padding: "20px 20px 30px" }}>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>When the Priest Is Ready</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkMid, margin: "0 0 10px" }}>Make the Sign of the Cross, then say:</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkMid, margin: "0 0 10px" }}>{lifeState === "child" ? "Make the Sign of the Cross, then say:" : "Make the Sign of the Cross, then say:"}</p>
             <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.7, padding: "12px 14px", background: T.parchment, borderRadius: 8, borderLeft: `3px solid ${T.navyText}` }}>
-              "Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"
+              {lifeState === "child"
+                ? <span>"Bless me Father, for I have sinned. This is my <strong style={{ color: T.crimson }}>first confession</strong> <em style={{ color: T.inkLight, fontSize: fz(14) }}>(or: It has been {timeSince} since my last confession)</em>. These are my sins:"</span>
+                : <span>"Bless me Father, for I have sinned. It has been <strong style={{ color: T.crimson }}>{timeSince}</strong> since my last confession. These are my sins:"</span>
+              }
             </div>
           </Card>
           {mortalSins.length > 0 && <div style={{ marginBottom: 14 }}>
@@ -2158,13 +2734,22 @@ function ConfessionTab() {
           </div>}
           <Card style={{ borderLeft: `3px solid ${T.navyText}`, marginBottom: 16 }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>After Listing Your Sins</div>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>"For these and all the sins of my past life, I am truly sorry."</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>
+              {lifeState === "child"
+                ? "\"I am sorry for all my sins.\""
+                : "\"For these and all the sins of my past life, I am truly sorry.\""
+              }
+            </p>
           </Card>
-          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkMid, textAlign: "center", marginBottom: 16 }}>The priest may offer counsel and assign a penance, then ask for your Act of Contrition.</p>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkMid, textAlign: "center", marginBottom: 16 }}>
+            {lifeState === "child"
+              ? "The priest may give you a penance (like a prayer to say). Then he will ask for your Act of Contrition."
+              : "The priest may offer counsel and assign a penance, then ask for your Act of Contrition."
+            }
+          </p>
           <Card style={{ marginBottom: 16 }}>
             <CardTitle>Act of Contrition</CardTitle>
-            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{showPrayer ? ACT_OF_CONTRITION : ACT_OF_CONTRITION.substring(0, 160) + "…"}</p>
-            {!showPrayer && <button onClick={() => setShowPrayer(true)} style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.gold, background: "none", border: "none", cursor: "pointer", marginTop: 6, textDecoration: "underline", textDecorationColor: "rgba(212,168,67,0.4)", textUnderlineOffset: 3 }}>Show full prayer ›</button>}
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{ACT_OF_CONTRITION}</p>
           </Card>
           <NavyBtn onClick={() => setAbsolved(true)} style={{ padding: "20px 0", fontSize: fz(16) }}>Confession Complete ›</NavyBtn>
         </div>
@@ -2186,7 +2771,746 @@ function ConfessionTab() {
 // TRADITION BROWSER
 // ═══════════════════════════════════════════════════════════════════
 
-function TraditionTab() {
+// ═══════════════════════════════════════════════════════════════════
+// TRADITION & RUPTURE DATA
+// ═══════════════════════════════════════════════════════════════════
+const RUPTURE_PILLARS = [
+  {
+    id: "liturgy",
+    icon: "✝",
+    label: "The Sacred Liturgy",
+    color: "#1a2744",
+    summary: "The traditional Roman Rite, celebrated for over a millennium and codified by Trent, was dismantled between 1965 and 1975 by Pope Paul VI acting through his liturgical architect, Archbishop Annibale Bugnini. Bugnini had been removed from his liturgical post under Pius XII — reportedly on suspicion of Freemasonry — and was personally restored by Paul VI, who gave him the Consilium that designed the New Mass. The questions below examine what was destroyed, what replaced it, and whether any pope had the authority to do what Paul VI did.",
+    topics: [
+      {
+        id: "novus_ordo",
+        title: "The New Mass vs. the Traditional Roman Rite",
+        tension: "The Roman Rite, substantially unchanged since at least Gregory the Great (6th c.) and codified by Trent, was replaced in 1969 by the Novus Ordo Missae — a new rite constructed by a committee under Archbishop Annibale Bugnini, personally appointed and empowered by Paul VI. Paul VI signed and promulgated it, defended it against criticism, and enforced its adoption. Cardinals Ottaviani and Bacci, in their formal Intervention to Paul VI, called it a 'striking departure from the theology of the Mass as defined by Trent' — a document Paul VI received but did not retract the new rite.",
+        questions: [
+          "What did the Council of Trent define about the Mass that cannot be changed?",
+          "What did Quo Primum establish about the permanence of the traditional Roman Rite — and can a pope revoke what a previous pope granted in perpetuity?",
+          "What did Summorum Pontificum say about the traditional Mass — was it ever legally abrogated?",
+        ],
+      },
+      {
+        id: "paul_bugnini",
+        title: "Paul VI & Bugnini — Who Designed the New Mass?",
+        tension: "Many Catholics assume the liturgical changes emerged organically from Vatican II. The historical record shows otherwise. Archbishop Annibale Bugnini was the principal architect of the new rite — but he had been removed from his liturgical post by Pius XII in 1962, reportedly on suspicion of Freemasonry. Paul VI personally restored him, gave him the Consilium charged with implementing liturgical reform, and signed everything Bugnini produced. When Bugnini was finally removed again in 1975 — again reportedly over Masonic connections — Paul VI quietly exiled him to Iran as a nuncio rather than publicly addressing the matter. The new rite bears Bugnini's architectural fingerprints and Paul VI's papal signature.",
+        questions: [
+          "What authority does a pope have over the sacred liturgy — and are there limits the approved sources identify?",
+          "What did Quo Primum establish that speaks directly to whether Paul VI had the authority to replace the traditional rite?",
+          "What does the Church's tradition teach about the danger of Freemasonry infiltrating Church institutions — and what did Leo XIII teach about it?",
+        ],
+      },
+      {
+        id: "communion_hand",
+        title: "Communion in the Hand While Standing",
+        tension: "From the earliest centuries through the 1960s, the universal practice of the Latin Church was reception of Holy Communion on the tongue while kneeling. This practice was explicitly confirmed by Memoriale Domini (1969), which polled bishops worldwide and upheld the traditional discipline — yet granted a reluctant indult to dioceses that petitioned for the change. Today the exception has become the norm.",
+        questions: [
+          "What does the unbroken tradition of the Church teach about reverence in receiving Holy Communion?",
+          "What do the approved sources say about the Real Presence and why it demands bodily reverence?",
+          "What was the traditional canonical discipline governing how Communion must be distributed?",
+        ],
+      },
+      {
+        id: "vernacular",
+        title: "Mass in the Vernacular vs. Latin",
+        tension: "The Council of Trent explicitly condemned the position that the Mass should be celebrated in the vernacular (Session XXII, Canon 9). For over 400 years the Latin Mass was the universal norm. The shift to vernacular after Vatican II reversed this discipline and has raised questions about continuity with Trent's decrees.",
+        questions: [
+          "What did the Council of Trent teach about Latin in the Mass?",
+          "What is the theological significance of a sacred language set apart from ordinary speech?",
+          "What did Summorum Pontificum say about the ongoing right to the traditional Latin Mass?",
+        ],
+      },
+      {
+        id: "ad_orientem",
+        title: "Versus Populum vs. Ad Orientem",
+        tension: "For centuries, priest and faithful together faced East (ad orientem) — priest and people united in the same direction, offering sacrifice to God. The post-conciliar reform introduced the practice of the priest facing the people (versus populum), which critics argue transformed the Mass from a sacrifice offered to God into a communal meal centered on the assembly.",
+        questions: [
+          "What does the traditional theology of the Mass as sacrifice imply about the direction of prayer?",
+          "How does Aquinas describe the priest's role at Mass and his relation to Christ the High Priest?",
+          "What did the pre-conciliar rubrics require regarding the direction of the priest at the altar?",
+        ],
+      },
+      {
+        id: "tlm_suppression",
+        title: "Suppression of the Traditional Latin Mass",
+        tension: "Benedict XVI's Summorum Pontificum (2007) declared that the traditional Mass 'was never abrogated' and freed its celebration. In 2021, Pope Francis issued Traditionis Custodes, severely restricting the traditional Mass and contradicting Benedict's juridical determination. This created open conflict between two papal documents on the same question.",
+        questions: [
+          "What did Summorum Pontificum establish about the legal status of the traditional Mass?",
+          "What does Ecclesia Dei say about the legitimate aspirations of Catholics attached to the traditional rite?",
+          "How should a Catholic understand two papal documents that appear to contradict each other on a disciplinary question?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "doctrine",
+    icon: "📜",
+    label: "Doctrine",
+    color: "#7a1c1c",
+    summary: "Several post-conciliar teachings appear to stand in tension with pre-conciliar papal teaching that was considered settled. These are not questions of development — they are cases where the newer teaching contradicts, not merely develops, the earlier one.",
+    topics: [
+      {
+        id: "religious_liberty",
+        title: "Religious Liberty",
+        tension: "Mirari Vos (Gregory XVI, 1832) and Quanta Cura (Pius IX, 1864) explicitly condemned the proposition that every man has a right to practice whatever religion he chooses. Dignitatis Humanae (Vatican II, 1965) appeared to affirm precisely this right. Critics — including Archbishop Lefebvre — argued this is not development but contradiction.",
+        questions: [
+          "What did Mirari Vos teach about religious indifferentism and the claim that all religions are equally valid paths?",
+          "What did the Syllabus of Errors specifically condemn regarding religious liberty and civil tolerance of false religions?",
+          "How did Immortale Dei describe the duty of the state toward the Catholic religion?",
+        ],
+      },
+      {
+        id: "ecumenism",
+        title: "Ecumenism and False Unity",
+        tension: "Mortalium Animos (Pius XI, 1928) explicitly forbade Catholics from participating in ecumenical gatherings with non-Catholics, stating that Christian unity can only come through return to the one true Church. The post-conciliar Church embraced ecumenical dialogue as a positive good. These positions are difficult to reconcile.",
+        questions: [
+          "What did Mortalium Animos teach about participating in pan-Christian ecumenical movements?",
+          "What does Dominus Iesus teach about the unique salvific role of the Catholic Church — and how does it relate to ecumenical claims?",
+          "What does extra ecclesiam nulla salus mean, and how was it taught in the pre-conciliar catechisms?",
+        ],
+      },
+      {
+        id: "capital_punishment",
+        title: "Capital Punishment",
+        tension: "The constant teaching of the Church, rooted in Scripture (Genesis 9:6, Romans 13), confirmed by Trent, and defended by every major Doctor and moral theologian, held that the state has the God-given right to inflict the death penalty for grave crimes. In 2018, the Catechism was altered to declare capital punishment 'inadmissible' — a term with no precedent in Catholic moral theology.",
+        questions: [
+          "What does Scripture teach about the state's authority to punish grave crimes, even with death?",
+          "How did the Council of Trent and the traditional catechisms treat the question of capital punishment?",
+          "What does Evangelium Vitae actually teach about capital punishment — and how does it differ from the 2018 catechism revision?",
+        ],
+      },
+      {
+        id: "extra_ecclesiam",
+        title: "Extra Ecclesiam Nulla Salus",
+        tension: "The dogma 'Outside the Church there is no salvation' was defined by the Fourth Lateran Council, Council of Florence, and taught consistently through the traditional catechisms. Post-conciliar teaching introduced 'subsists in' language (Lumen Gentium) and wider notions of 'implicit desire' that many argue effectively emptied the dogma of its force.",
+        questions: [
+          "How did the Council of Florence define the necessity of the Catholic Church for salvation?",
+          "What does the Baltimore Catechism teach about who can be saved and what the Church means by 'invincible ignorance'?",
+          "What does Dominus Iesus teach about the uniqueness of Christ's salvific role — and what does it leave open?",
+        ],
+      },
+      {
+        id: "collegiality",
+        title: "Collegiality and Papal Authority",
+        tension: "Vatican I (Pastor Aeternus) defined papal primacy in the clearest terms: the pope has full, supreme, and universal power over the Church. Post-conciliar theology introduced 'collegiality' — the idea that the bishops govern together with the pope — in ways that critics argue obscure the monarchical constitution of the Church defined at Vatican I.",
+        questions: [
+          "What did Vatican I define about the primacy and universal jurisdiction of the Roman Pontiff?",
+          "How did the pre-conciliar understanding of the episcopate differ from the collegial model?",
+          "What does the traditional teaching say about the relationship between a bishop's authority in his diocese and the supreme authority of the pope?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "discipline",
+    icon: "⚖",
+    label: "Discipline & Canon Law",
+    color: "#2a5a2a",
+    summary: "The 1983 Code of Canon Law replaced the 1917 Code and relaxed or abolished numerous disciplines that had governed Catholic life for centuries. The changes below are not matters of opinion — they are documented, measurable changes between the two Codes.",
+    topics: [
+      {
+        id: "eucharistic_fast",
+        title: "The Eucharistic Fast",
+        tension: "The 1917 Code (Can. 858) required a complete fast from midnight before receiving Communion — no food or water from midnight onward. The 1983 Code (Can. 919) reduced this to one hour before receiving. A discipline that demanded genuine sacrifice and preparation was reduced to a technicality.",
+        questions: [
+          "What did the 1917 Code require of Catholics before receiving Holy Communion?",
+          "What does the theology of the Eucharist — the Real Presence of Christ — demand of a Catholic in terms of preparation and reverence?",
+          "How did the traditional catechisms describe the proper disposition for receiving Communion?",
+        ],
+      },
+      {
+        id: "friday_abstinence",
+        title: "Friday Abstinence",
+        tension: "Under the 1917 Code (Can. 1252), abstinence from meat every Friday was obligatory for all Catholics of age — a weekly participation in the penance of Good Friday. The 1983 Code (Can. 1253) delegated this discipline to bishops' conferences, who in most countries replaced it with an undefined 'act of penance.' The universal, visible mark of Catholic identity on Fridays was effectively abolished.",
+        questions: [
+          "What is the theological basis for Friday penance in union with Christ's Passion?",
+          "What did the traditional catechisms teach about the obligation of Friday abstinence?",
+          "What is the difference between a universal discipline binding all Catholics and one left to individual discretion?",
+        ],
+      },
+      {
+        id: "excommunications",
+        title: "Automatic Excommunications Removed",
+        tension: "The 1917 Code contained numerous automatic excommunications (latae sententiae) for grave offenses — including apostasy, heresy, schism, and violations of clerical discipline. The 1983 Code removed many of these, including the automatic excommunication for apostasy by a baptized Catholic. Critics argue this signaled a softening of the Church's sense of the gravity of these offenses.",
+        questions: [
+          "What does the Church's traditional teaching say about the gravity of apostasy, heresy, and schism?",
+          "What was the purpose of automatic excommunication in the traditional discipline of the Church?",
+          "How do the approved sources describe the Church's authority to bind and loose — including through censures?",
+        ],
+      },
+      {
+        id: "confirmation_age",
+        title: "Age of Confirmation",
+        tension: "Under the 1917 Code (Can. 788), Confirmation was to be conferred around the age of reason (7). The 1983 Code (Can. 891) allows bishops' conferences to set a later age — in practice, Confirmation has been delayed to late adolescence in much of the West, depriving children of the sacramental graces of the Holy Ghost during the most formative years of faith development.",
+        questions: [
+          "What is the traditional theological teaching on what Confirmation does and why it was given early?",
+          "What do the traditional catechisms say about the effects of Confirmation and the obligations of the confirmed?",
+          "What was the discipline of the 1917 Code regarding the age for Confirmation?",
+        ],
+      },
+      {
+        id: "mixed_marriages",
+        title: "Mixed Marriage Conditions Loosened",
+        tension: "Under the 1917 Code (Can. 1060–1064), mixed marriages (Catholic with non-Catholic) were strongly discouraged and required formal promises that all children would be raised Catholic, signed by both parties. The 1983 Code (Can. 1124–1129) loosened these requirements significantly — only the Catholic party must promise to raise children Catholic, and the non-Catholic need not sign anything.",
+        questions: [
+          "What did the traditional Church teach about the dangers of mixed marriages for the faith of the Catholic party and children?",
+          "What were the conditions the 1917 Code imposed on mixed marriages and why?",
+          "What do the approved sources say about the obligation to raise children in the Catholic faith?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "francis",
+    icon: "🕊",
+    label: "The Francis Pontificate",
+    color: "#5a3a00",
+    summary: "Where the first rupture under Paul VI was primarily liturgical and disciplinary, the rupture under Pope Francis was doctrinal and personal. His pontificate produced acts and documents that appeared to contradict not only pre-conciliar tradition but the teaching of his immediate predecessors. Custos presents the Tradition, identifies the contradictions, and leaves the judgment to your confessor and your conscience.",
+    topics: [
+      {
+        id: "amoris",
+        title: "Amoris Laetitia & Communion for the Divorced-Remarried",
+        tension: "Amoris Laetitia (2016) — particularly Chapter 8 and footnote 351 — was interpreted by numerous bishops' conferences as permitting divorced and civilly remarried Catholics to receive Communion without living as brother and sister. This directly contradicted Familiaris Consortio §84 (John Paul II) and the constant discipline of the Church, which held that public adulterers may not receive the Eucharist without resolving the irregular situation.",
+        questions: [
+          "What does Familiaris Consortio teach about divorced and civilly remarried Catholics and reception of the sacraments?",
+          "What does Veritatis Splendor teach about the impossibility of a 'pastoral solution' that permits an intrinsically evil act?",
+          "What do Casti Connubii and the traditional catechisms teach about the indissolubility of marriage?",
+        ],
+      },
+      {
+        id: "fiducia",
+        title: "Fiducia Supplicans & Blessing of Same-Sex Couples",
+        tension: "Fiducia Supplicans (2023), approved by Francis, declared that priests may bless same-sex couples in non-liturgical settings. This reversed the 2021 Responsum from the same CDF — then signed by Francis — that declared it impossible to bless unions that 'objectively contradict' God's plan. The African bishops' conferences formally refused to implement it. The contradiction existed within the Francis pontificate itself.",
+        questions: [
+          "What does Persona Humana teach about homosexual acts and why they are disordered?",
+          "What do the traditional catechisms teach about blessing — what can legitimately be blessed, and what cannot?",
+          "What does Humanae Vitae teach about the inseparable connection between the conjugal act and procreation?",
+        ],
+      },
+      {
+        id: "traditionis",
+        title: "Traditionis Custodes & Suppression of the TLM",
+        tension: "In 2021, Francis issued Traditionis Custodes, sharply restricting the traditional Latin Mass and declaring that it was no longer an 'expression of the lex orandi of the Roman Rite.' This directly contradicted Benedict XVI's Summorum Pontificum (2007), which declared the traditional Mass 'never abrogated' and a permanent right of any priest. Francis also contradicted his own earlier statements praising liturgical diversity.",
+        questions: [
+          "What did Summorum Pontificum establish as the permanent right of priests and faithful regarding the traditional Mass?",
+          "What did Ecclesia Dei say about the legitimate attachment of Catholics to the traditional liturgy?",
+          "How should a Catholic understand the conflict between two papal documents on the same disciplinary question?",
+        ],
+      },
+      {
+        id: "dubia",
+        title: "The Five Dubia",
+        tension: "In 2023, five Cardinals (Burke, Brandmüller, Sandoval, Sarah, Zen) submitted formal Dubia to Francis asking for yes/no answers on five contested questions: whether revelation can be reinterpreted contrary to tradition, whether same-sex unions can be blessed, whether the Synod on Synodality has doctrinal authority, whether repentance is required for absolution, and whether women can be ordained deacons. Francis gave non-answers. The Cardinals went public. It stood as an unprecedented modern crisis of magisterial accountability.",
+        questions: [
+          "What does the Church's tradition teach about the immutability of revealed doctrine?",
+          "What does Ad Tuendam Fidem teach about the grades of assent owed to Church teaching and the consequences of denial?",
+          "What do the approved sources teach about the conditions required for a valid sacramental absolution?",
+          "What does the Church's tradition teach about the conditions for a valid papal election — and what has historically led to a pope being declared an antipope?",
+        ],
+      },
+      {
+        id: "amazon",
+        title: "The Amazon Synod & Married Priests",
+        tension: "The 2019 Amazon Synod's final document proposed ordaining married men (viri probati) to the priesthood to address the shortage of priests in the Amazon. Francis's response, Querida Amazonia, did not explicitly endorse this — but did not close the question. The discipline of priestly celibacy, rooted in the Church's tradition of the West, was publicly and officially questioned at the highest level of the Church.",
+        questions: [
+          "What is the theological basis for priestly celibacy in the Latin tradition?",
+          "What did the approved sources teach about the relationship between celibacy and the priesthood?",
+          "What is the difference between a disciplinary norm that could theoretically change and a doctrine that cannot?",
+        ],
+      },
+      {
+        id: "women_deacons",
+        title: "Women Deacons",
+        tension: "Francis established two successive commissions to study the question of women deacons, implying the question was open. Inter Insigniores (CDF, 1976 — approved in forma specifica by Paul VI) explicitly grounded the male-only priesthood in the Church's unbroken tradition and Christ's example. Ordinatio Sacerdotalis (John Paul II, 1994) declared the question of women's ordination 'definitively' closed. Whether the diaconate was included in that closure remained disputed — but the commissions themselves signaled a willingness to question settled tradition.",
+        questions: [
+          "What does Inter Insigniores teach about why the Church cannot ordain women to the priesthood?",
+          "What did Ordinatio Sacerdotalis declare, and at what level of authority?",
+          "Is the permanent diaconate part of the ordained priesthood — and what do the traditional sources say?",
+        ],
+      },
+      {
+        id: "abu_dhabi",
+        title: "The Abu Dhabi Declaration",
+        tension: "In 2019, Francis co-signed the 'Document on Human Fraternity' in Abu Dhabi, which stated that 'the pluralism and diversity of religions... are willed by God in His wisdom.' This appeared to contradict Mortalium Animos, which condemned the idea that God wills religious pluralism, and Dominus Iesus, which affirmed that non-Christian religions do not subsist in the truth willed by God for salvation.",
+        questions: [
+          "What did Mortalium Animos teach about whether God wills religious diversity as a positive good?",
+          "What does Dominus Iesus teach about the unique and salvific truth of the Catholic faith vs. other religions?",
+          "What do the approved sources say about the duty of nations and individuals to acknowledge the true religion?",
+        ],
+      },
+      {
+        id: "lords_prayer",
+        title: "The Lord's Prayer Translation",
+        tension: "Francis changed the Italian translation of the Lord's Prayer from 'lead us not into temptation' to 'do not abandon us in temptation,' claiming the traditional rendering made God appear to lead men into sin. This contradicted the Douay-Rheims text (Matthew 6:13), the traditional theological interpretation of the petition, and the Church's centuries-long liturgical use of the traditional wording.",
+        questions: [
+          "What does the Douay-Rheims text of Matthew 6:13 actually say?",
+          "How did the Doctors of the Church — particularly Augustine — interpret 'lead us not into temptation'?",
+          "What does the traditional theological distinction between God permitting and God causing evil mean for this petition?",
+        ],
+      },
+    ],
+  },
+  {
+    id: "marian_warnings",
+    icon: "🌹",
+    label: "Our Lady's Warnings",
+    color: "#2d5a3d",
+    summary: "Across four centuries and five continents, the Blessed Virgin Mary appeared with messages of urgent prophetic weight — warning of apostasy, clerical corruption, wars, and a crisis of faith striking the Church from within. These are not pious legends. Each apparition examined here carries formal ecclesiastical approbation. Read in sequence from 1610 to 1981, they form an escalating arc of maternal warning that converges precisely on the era of rupture. The Church does not bind the faithful to believe even approved private revelation — but she approves it when the message is worthy of belief. These messages are worthy of belief.",
+    topics: [
+      {
+        id: "good_success",
+        title: "Our Lady of Good Success — Quito, Ecuador (1610)",
+        tension: "In the early 17th century, the Blessed Virgin appeared to Venerable Mother Mariana de Jesús Torres at the Conceptionist convent in Quito, Ecuador. The apparitions were approved by the local ordinary and the messages preserved in the convent's archives. Our Lady described — with extraordinary specificity — a future crisis of faith: the corruption of clergy and religious, the near-extinction of the true Mass, widespread apostasy, and the collapse of the family. She identified the 20th century as the period of greatest danger. The apparitions predate the Enlightenment, the French Revolution, Vatican II, and the Sexual Revolution by centuries — yet describe each with prophetic precision.",
+        questions: [
+          "What does the Church teach about the nature and credibility of approved private revelation — and what assent does it require?",
+          "What do the approved sources teach about the prophetic role of Mary as Mediatrix and intercessor for the Church in times of crisis?",
+          "What does the Church's tradition say about the signs by which true private revelation may be distinguished from false?",
+        ],
+        primarySources: [
+          { label: "The Prophecies — TFP compilation", url: "https://www.tfp.org/prophecies-of-our-lady-of-good-success-about-our-times/", note: "Best available English compilation of the approved prophetic messages" },
+          { label: "Apostolate of Our Lady of Good Success", url: "https://www.ourladyofgoodsuccess.com/blogs/news/the-prophectic-words-of-our-lady-of-good-success", note: "The seven apparitions summarized with prophetic excerpts" },
+        ],
+      },
+      {
+        id: "lasalette",
+        title: "Our Lady of La Salette — France (1846)",
+        tension: "On September 19, 1846, the Blessed Virgin appeared to two shepherd children — Mélanie Calvat and Maximin Giraud — on a mountain in the French Alps. The apparition was formally approved by Bishop de Bruillard of Grenoble in 1851. Our Lady wept throughout. The approved public message called for conversion, warned of divine chastisement through famine and crop failure, and rebuked Sabbath-breaking and blasphemy. Our Lady also confided a private secret to each child, to be held until further notice. In 1879 — near the end of her life, and claiming Our Lady's permission — Mélanie published a greatly expanded version of her secret. It included severe prophecies about clerical corruption, the near-destruction of the faith, and Rome becoming the seat of the Antichrist. This text received an imprimatur from Bishop Zola of Lecce, Italy. In 1923, the Holy Office issued a decree — damnatur opusculum, 'condemned publication' — against the 1879 text and its subsequent reprints. The decree condemned the publication itself; it did not declare the contents heretical or issue a doctrinal condemnation of the prophetic claims. The 1879 text continues to circulate widely in traditional Catholic circles. The approved apparition and public message of 1851 stand on their own authority.",
+        questions: [
+          "What does the Church teach about the possibility of chastisement as a consequence of corporate apostasy — and what do the approved sources say about divine justice and mercy?",
+          "What do the Doctors of the Church — particularly Augustine and Gregory the Great — teach about the corruption of shepherds as a sign of divine judgment on a people?",
+          "What did Pius IX teach about the enemies of the Church in his own era — and how does Qui Pluribus describe the forces working against revealed religion?",
+        ],
+        primarySources: [
+          { label: "The Approved Public Message (1851)", url: "https://www.catholicapologetics.info/catholicteaching/privaterevelation/lasalet.html", note: "The public message approved by Bishop de Bruillard in 1851 — distinct from Mélanie's expanded 1879 secret, which was condemned as a publication by the Holy Office in 1923" },
+          { label: "La Salette Missionaries — Official Site", url: "https://www.lasalette.org/apparition/message.html", note: "The Missionaries of Our Lady of La Salette present the approved message" },
+        ],
+      },
+      {
+        id: "fatima",
+        title: "Our Lady of Fatima — Portugal (1917)",
+        tension: "From May through October 1917, the Blessed Virgin appeared six times to three shepherd children — Lucia dos Santos, Francisco, and Jacinta Marto — at Cova da Iria, Fatima. The apparitions were approved by the Bishop of Leiria in 1930. The Miracle of the Sun on October 13, 1917 — witnessed by approximately 70,000 people including secular journalists — stands as one of the most documented public miracles in history. Our Lady entrusted three secrets: the vision of hell, the consecration of Russia, and the Third Secret — the latter sealed until 2000 and disputed to this day. The Third Secret's vision of a 'Bishop dressed in White' being killed, and Sister Lucia's reported commentary that the secret concerned apostasy beginning at the top of the Church, has made Fatima the prophetic lens through which many traditional Catholics interpret the post-conciliar crisis. Fatima is also notable for arriving at the precise moment of the Bolshevik Revolution — whose errors Our Lady said would 'spread throughout the world.'",
+        questions: [
+          "What does the Church teach about consecration and reparation to the Immaculate Heart of Mary — and what theological basis do the approved sources provide?",
+          "What does Divini Redemptoris (Pius XI, 1937) teach about the errors of Communism that Our Lady warned would spread from Russia?",
+          "What does the approved tradition teach about the meaning of apostasy — and what do the approved sources say about the possibility of a crisis of faith reaching the highest levels of the Church?",
+        ],
+        primarySources: [
+          { label: "The Message of Fatima — Vatican / CDF (2000)", url: "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_en.html", note: "Official Vatican document releasing the Third Secret, with Cardinal Ratzinger's theological commentary — the authoritative primary source" },
+          { label: "The Three Secrets — Full Text", url: "https://www.fatima.org/essentials/opposed/s3docs.asp", note: "The Fatima Center's compilation of all three secrets with Sister Lucia's original accounts" },
+        ],
+      },
+      {
+        id: "akita",
+        title: "Our Lady of Akita — Japan (1973)",
+        tension: "Beginning in 1973, the Blessed Virgin appeared to Sister Agnes Sasagawa at the convent of the Handmaids of the Eucharist in Akita, Japan. The apparitions were approved by Bishop John Shojiro Ito of Niigata in 1984. Cardinal Joseph Ratzinger — then Prefect of the Congregation for the Doctrine of the Faith — stated in 1988 that the Akita message was 'essentially the same' as the Message of Fatima. The approved message contains one of the most alarming prophetic statements in modern Church history: 'The work of the devil will infiltrate even into the Church in such a way that one will see cardinals opposing cardinals, bishops against bishops... The Church will be full of those who accept compromises.' Akita arrived in 1973 — the precise midpoint of the first rupture, one year after the Ottaviani Intervention, and in the same year as Humanae Vitae's widespread rejection by the clergy.",
+        questions: [
+          "What does the Church's tradition teach about diabolical infiltration of sacred institutions — and what did Leo XIII's vision and prayer to St. Michael acknowledge about this danger?",
+          "What does the approved tradition teach about the duty of bishops and cardinals to maintain unity with the perennial Magisterium — and what happens when they fail?",
+          "What does Humani Generis (Pius XII, 1950) teach about the errors already spreading within the Church before Vatican II — and how does it illuminate what Akita warned was coming?",
+        ],
+        primarySources: [
+          { label: "The Full Message — EWTN", url: "https://www.ewtn.com/catholicism/library/message-from-our-lady--akita-japan-5167", note: "EWTN hosts the full chronological account including Bishop Ito's 1984 pastoral letter of approval and the three approved messages" },
+        ],
+      },
+      {
+        id: "kibeho",
+        title: "Our Lady of Kibeho — Rwanda (1981–1989)",
+        tension: "Beginning on November 28, 1981, the Blessed Virgin appeared to students at a secondary school in Kibeho, Rwanda. The visions of three seers — Alphonsine Mumureke, Nathalie Mukamazimpaka, and Marie Claire Mukangango — were formally approved by Bishop Augustin Misago of Gikongoro in 2001, with the Holy See releasing the declaration. Kibeho is the only Vatican-approved Marian apparition in Africa. Our Lady appeared under the title Nyina wa Jambo — 'Mother of the Word.' The messages emphasized radical penance, unceasing prayer, and the Seven Sorrows of Mary. The visionaries were shown apocalyptic visions — rivers of blood, bodies without heads, a world collapsing into hatred — which many understood as foretelling the 1994 Rwandan genocide, in which over 800,000 people were killed. Marie Claire Mukangango, one of the approved seers, was herself killed in the genocide. Kibeho's message — that a world which rejects prayer and penance descends into fratricidal slaughter — arrives at the close of a century bookended by Fatima's warnings and Akita's.",
+        questions: [
+          "What does the Church's tradition teach about penance and reparation as the response to social sin — and what do the approved sources say about the connection between the sins of a people and the chastisements that follow?",
+          "What does the Rosary of the Seven Sorrows — promoted by Our Lady at Kibeho — have in common with traditional Marian devotion approved by the pre-conciliar Magisterium?",
+          "What does the approved tradition teach about the prophetic role of Mary in salvation history — and how does Munificentissimus Deus (Pius XII, 1950) illuminate her ongoing intercession for the Church?",
+        ],
+        primarySources: [
+          { label: "Bishop Misago's Declaration (2001) — EWTN", url: "https://www.ewtn.com/catholicism/library/declaration-apparitions-of-kibeho-21169", note: "The formal episcopal declaration of authenticity with summary of the approved messages" },
+          { label: "Theological Summary of the Apparitions — EWTN", url: "https://www.ewtn.com/catholicism/library/judgement-on-the-apparitions-of-kibeho-5709", note: "Translation of the 23-page French theological commission report, including the key message themes" },
+        ],
+      },
+    ],
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// RUPTURE TAB
+// ═══════════════════════════════════════════════════════════════════
+function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
+  const [view, setView] = useState("home"); // home | pillar | topic | response
+  const [activePillar, setActivePillar] = useState(null);
+  const [activeTopic, setActiveTopic] = useState(null);
+  const [response, setResponse] = useState("");
+  const [streaming, setStreaming] = useState(false);
+  const [activeQuestion, setActiveQuestion] = useState("");
+  const [guidance, setGuidance] = useState(null);
+  const [tradOpen, setTradOpen] = useState(true);
+  const [magOpen, setMagOpen] = useState(true);
+  const [copied, setCopied] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    try { return !localStorage.getItem("custos_rupture_seen"); } catch { return true; }
+  });
+  const scrollRef = useRef(null);
+
+  // Scroll to top on every view change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [view]);
+
+  const dismissOnboarding = () => {
+    try { localStorage.setItem("custos_rupture_seen", "1"); } catch {}
+    setShowOnboarding(false);
+  };
+
+  const askQuestion = async (question, topic) => {
+    setActiveQuestion(question);
+    setResponse("");
+    setGuidance(null);
+    setStreaming(true);
+    setTradOpen(true);
+    setMagOpen(true);
+    setCopied(false);
+    setView("response");
+
+    const contextPrompt = `TRADITION & RUPTURE CONTEXT: This question comes from the "Tradition & Rupture" section of Custos, which examines specific areas where post-conciliar or recent papal acts appear to depart from the pre-existing Tradition. The topic being examined is: "${topic.title}". Context: ${topic.tension}\n\nUser's question: ${question}`;
+
+    let fullText = "";
+    try {
+      const r = await fetch("/api/guidance", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: contextPrompt, domain: "Tradition & Rupture — Historical Catholic Teaching" }),
+      });
+      if (!r.ok) throw new Error("Server error");
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6);
+            if (data === "[DONE]") continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.type === "content_block_delta" && parsed.delta?.text) {
+                fullText += parsed.delta.text;
+                setResponse(fullText);
+              }
+            } catch (e) {}
+          }
+        }
+      }
+    } catch (e) {
+      fullText = "Custos was unable to retrieve a response. Please try again.";
+      setResponse(fullText);
+    }
+    setStreaming(false);
+    setGuidance(parseGuidance(fullText));
+  };
+
+  // HOME — pillar grid
+  if (view === "home") {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0, position: "relative" }}>
+        <GlobalTopBar title="Tradition & Rupture" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} />
+
+        {/* ONE-TIME ONBOARDING MODAL */}
+        {showOnboarding && (
+          <div style={{
+            position: "absolute", inset: 0, zIndex: 100,
+            background: "rgba(10,14,22,0.78)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: "28px 24px",
+          }}>
+            <div style={{
+              background: T.warmWhite, borderRadius: 18,
+              border: `1px solid ${T.cardBorderStrong}`,
+              padding: "28px 24px 24px",
+              maxWidth: 380, width: "100%",
+            }}>
+              {/* Icon */}
+              <div style={{ textAlign: "center", marginBottom: 16 }}>
+                <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: "rgba(122,28,28,0.08)", border: "1.5px solid rgba(122,28,28,0.2)", marginBottom: 10 }}>
+                  <span style={{ fontSize: 24 }}>⚖</span>
+                </div>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 6 }}>Before You Begin</div>
+                <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, margin: 0 }}>Tradition & Rupture</h2>
+              </div>
+
+              {/* Body */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 22 }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>
+                  This section presents what the Church taught before certain significant changes — from the sources themselves — and lets the Tradition speak.
+                </p>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0 }}>
+                  The goal is to form your conscience and provide you with a historical perspective.
+                </p>
+                <div style={{ background: T.goldFaint, border: `1px solid ${T.cardBorder}`, borderRadius: 10, padding: "12px 14px" }}>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
+                    Bring what you find here to your confessor or spiritual director. The sources point the way — a trusted guide helps you walk it.
+                  </p>
+                </div>
+              </div>
+
+              {/* Button */}
+              <button onClick={dismissOnboarding} style={{
+                display: "block", width: "100%",
+                padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600,
+                letterSpacing: "0.08em", textTransform: "uppercase",
+                color: T.warmWhite,
+                background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`,
+                border: "none", borderRadius: 10, cursor: "pointer",
+                boxShadow: `0 3px 12px ${T.shadowCrimson}`,
+              }}>
+                I Understand — Enter
+              </button>
+            </div>
+          </div>
+        )}
+
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Header */}
+          <div style={{ padding: "22px 0 18px", textAlign: "center" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, borderRadius: "50%", background: "rgba(122,28,28,0.08)", border: `1.5px solid rgba(122,28,28,0.2)`, marginBottom: 10 }}>
+              <span style={{ fontSize: 26 }}>⚖</span>
+            </div>
+            <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, margin: "0 0 8px" }}>Tradition & Rupture</h1>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0, maxWidth: 340, marginLeft: "auto", marginRight: "auto" }}>
+              The Church has weathered rupture before — from the Great Schism to the Protestant Revolution. But the ruptures examined here struck from within. The first dismantled the sacred liturgy and discipline of two thousand years. The second produced acts and documents contradicting Tradition and the teaching of previous popes. Both are examined here against what the Church has always taught — from the sources, not from commentary.
+            </p>
+          </div>
+
+          {/* Pillars */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {RUPTURE_PILLARS.map(pillar => (
+              <button key={pillar.id} onClick={() => { setActivePillar(pillar); setView("pillar"); }}
+                style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 14, padding: "18px 18px", textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 16, boxShadow: `0 2px 8px ${T.shadowNavy}` }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: "50%", background: pillar.color + "18", border: `1.5px solid ${pillar.color}33`, flexShrink: 0 }}>
+                  <span style={{ fontSize: 20 }}>{pillar.icon}</span>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em", marginBottom: 4 }}>{pillar.label}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid }}>{pillar.topics.length} topics</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: fz(18), alignSelf: "center" }}>›</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PILLAR — topic list
+  if (view === "pillar" && activePillar) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title={activePillar.label} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => setView("home")} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Pillar summary */}
+          <div style={{ padding: "20px 0 16px" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: "50%", background: activePillar.color + "18", border: `1.5px solid ${activePillar.color}33`, marginBottom: 12 }}>
+              <span style={{ fontSize: 20 }}>{activePillar.icon}</span>
+            </div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0 }}>{activePillar.summary}</p>
+          </div>
+
+          {/* Topics */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {activePillar.topics.map(topic => (
+              <button key={topic.id} onClick={() => { setActiveTopic(topic); setView("topic"); }}
+                style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 14, padding: "16px 18px", textAlign: "left", cursor: "pointer", boxShadow: `0 1px 6px ${T.shadowNavy}` }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13.5), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em", marginBottom: 8 }}>{topic.title}</div>
+                <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, lineHeight: 1.55 }}>{topic.tension.slice(0, 140)}…</div>
+                <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.crimson, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>Examine →</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // TOPIC — full tension + guided questions
+  if (view === "topic" && activeTopic) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title="The Tension" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => setView("pillar")} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "0 20px 32px" }}>
+          {/* Title */}
+          <div style={{ padding: "20px 0 16px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, marginBottom: 16, lineHeight: 1.3 }}>{activeTopic.title}</div>
+            {/* Tension card */}
+            <div style={{ background: "rgba(122,28,28,0.05)", border: "1px solid rgba(122,28,28,0.18)", borderRadius: 12, padding: "16px 18px", marginBottom: 24 }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>The Departure</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{activeTopic.tension}</p>
+            </div>
+
+            {/* Guided questions */}
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Ask Custos</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, margin: "0 0 14px", lineHeight: 1.55 }}>
+              Tap a question to see what the pre-existing Tradition teaches — grounded in Custos's approved sources.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {activeTopic.questions.map((q, i) => (
+                <button key={i} onClick={() => askQuestion(q, activeTopic)}
+                  style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "14px 16px", textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 26, height: 26, borderRadius: "50%", background: T.goldFaint, border: `1px solid ${T.cardBorder}`, flexShrink: 0, marginTop: 1 }}>
+                    <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold }}>{i + 1}</span>
+                  </div>
+                  <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.55 }}>{q}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Primary Sources — shown only for apparition topics */}
+            {activeTopic.primarySources?.length > 0 && (
+              <div style={{ marginTop: 28 }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Primary Sources</div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, margin: "0 0 14px", lineHeight: 1.55 }}>
+                  Read the approved messages for yourself. These are the primary documents — not commentary or interpretation.
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {activeTopic.primarySources.map((src, i) => (
+                    <a key={i} href={src.url} target="_blank" rel="noopener noreferrer"
+                      style={{ display: "block", background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "14px 16px", textDecoration: "none" }}>
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                        <span style={{ fontSize: 18, flexShrink: 0, marginTop: 1 }}>📄</span>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, marginBottom: 4, letterSpacing: "0.02em" }}>{src.label}</div>
+                          {src.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, lineHeight: 1.5, fontStyle: "italic" }}>{src.note}</div>}
+                        </div>
+                        <span style={{ color: T.gold, fontSize: fz(16), flexShrink: 0, alignSelf: "center" }}>↗</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // RESPONSE — parsed guidance cards
+  if (view === "response") {
+    const formatText = () => {
+      if (!guidance) return activeQuestion;
+      let t = "";
+      if (guidance.shortAnswer) t += "SHORT ANSWER:\n" + guidance.shortAnswer + "\n\n";
+      if (guidance.tradition?.length) { t += "TRADITION:\n"; guidance.tradition.forEach(e => { t += e.author + ": \"" + e.quote + "\" — " + e.source + "\n"; }); t += "\n"; }
+      if (guidance.magisterium?.length) { t += "MAGISTERIUM:\n"; guidance.magisterium.forEach(e => { t += e.ref + " — " + e.teaching + "\n"; }); t += "\n"; }
+      if (guidance.scripture?.length) { t += "SCRIPTURE:\n"; guidance.scripture.forEach(e => { t += e.verse + ": " + e.text + "\n"; }); t += "\n"; }
+      if (guidance.pastoralWarning) t += "PASTORAL:\n" + guidance.pastoralWarning + "\n\n";
+      if (guidance.calibration) t += "CERTAINTY: " + guidance.calibration + "\n\n";
+      t += "— Generated by Custos (askcustos.com)\n   A guardian for your conscience";
+      return t;
+    };
+
+    return (
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+        <GlobalTopBar title="From the Tradition" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack onBack={() => { setView("topic"); setGuidance(null); setResponse(""); }} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", paddingBottom: 30 }}>
+
+          {/* Question chip */}
+          <Card style={{ margin: "12px 20px 0", background: T.goldFaint, borderColor: T.cardBorderStrong }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Your Question</div>
+            <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{activeQuestion}</p>
+          </Card>
+
+          {/* Streaming indicator */}
+          {streaming && !guidance?.shortAnswer && (
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "20px 20px" }}>
+              <div style={{ width: 8, height: 8, borderRadius: "50%", background: T.gold }} />
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic" }}>Searching the Tradition…</span>
+            </div>
+          )}
+
+          {/* Structured guidance cards — same as Seek */}
+          {guidance && <>
+            <Card style={{ margin: "12px 20px 0" }}>
+              <CardTitle>The Short Answer</CardTitle>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{guidance.shortAnswer}</p>
+              {streaming && <span style={{ color: T.gold, fontFamily: "Cinzel, serif" }}>▋</span>}
+            </Card>
+
+            {guidance.tradition.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
+              <button onClick={() => setTradOpen(!tradOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                <CardTitle>What the Tradition Says</CardTitle>
+                <span style={{ color: T.gold, fontSize: fz(14), transform: tradOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▴</span>
+              </button>
+              {tradOpen && <div style={{ marginTop: 12 }}>{guidance.tradition.map((e, i) => <div key={i} style={{ marginBottom: 16 }}>
+                <SaintQuote name={e.author} quote={e.quote} source={e.source} isExact={e.isExact} />
+                <SourceLink text={e.source} extraCheck={e.author + " " + (e.source || "")} />
+              </div>)}</div>}
+            </Card>}
+
+            {guidance.magisterium.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
+              <button onClick={() => setMagOpen(!magOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                <CardTitle>The Church Teaches</CardTitle>
+                <span style={{ color: T.navyText, fontSize: fz(14), transform: magOpen ? "rotate(0)" : "rotate(180deg)", transition: "transform 0.3s" }}>▾</span>
+              </button>
+              {magOpen && <div style={{ marginTop: 12 }}>{guidance.magisterium.map((e, i) => <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 16, marginBottom: 16 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                  <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.navyText }}>{e.ref}</div>
+                  <SourceLink text={e.ref} />
+                </div>
+                <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7 }}>{e.teaching}</div>
+              </div>)}</div>}
+            </Card>}
+
+            {guidance.scripture?.length > 0 && <Card style={{ margin: "12px 20px 0" }}>
+              <CardTitle color={T.crimson}>Sacred Scripture</CardTitle>
+              <div style={{ marginTop: 8 }}>{guidance.scripture.map((e, i) => <div key={i} style={{ borderLeft: `3px solid ${T.crimson}`, paddingLeft: 14, marginBottom: 14 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.crimson, letterSpacing: "0.05em" }}>{e.verse}</div>
+                  <SourceLink text={e.verse} />
+                </div>
+                <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{e.text}</p>
+              </div>)}</div>
+            </Card>}
+
+            {guidance.calibration && <Card style={{ margin: "12px 20px 0" }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>Certainty</div>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkMid, fontStyle: "italic", lineHeight: 1.65, margin: 0 }}>{guidance.calibration}</p>
+            </Card>}
+
+            {guidance.pastoralWarning && <Card style={{ margin: "12px 20px 0" }}>
+              <CardTitle>Conclusion</CardTitle>
+              <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{guidance.pastoralWarning}</p>
+            </Card>}
+          </>}
+
+          {/* Action buttons */}
+          {!streaming && guidance && (
+            <div style={{ display: "flex", gap: 8, margin: "20px 20px 0" }}>
+              <button onClick={() => { setView("topic"); setGuidance(null); setResponse(""); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>← Ask Another</button>
+              <button onClick={() => { navigator.clipboard.writeText(formatText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
+              <button onClick={() => { if (navigator.share) { navigator.share({ title: "Custos — Tradition & Rupture", text: formatText() }).catch(() => {}); } else { navigator.clipboard.writeText(formatText()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); } }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.inkLight, background: T.warmWhite, border: "1px solid rgba(138,126,108,0.2)", borderRadius: 10, cursor: "pointer" }}>↗ Share</button>
+            </div>
+          )}
+
+          <div style={{ margin: "16px 20px 0", padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0 }}>This guidance supplements — never replaces — a confessor or spiritual director.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
+
+function TraditionTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const [view, setView] = useState("list");
   const [doctor, setDoctor] = useState(null);
   const [search, setSearch] = useState("");
@@ -2202,7 +3526,10 @@ function TraditionTab() {
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "list"} onBack={() => { setView("list"); setDoctor(null); setQuoteIdx(0); }} />
+      {view === "list"
+        ? <GlobalTopBar title="The Doctors" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
+        : <TopBar title={title} showBack={true} onBack={() => { setView("list"); setDoctor(null); setQuoteIdx(0); }} />
+      }
       {view === "list" && (
         <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px" }}>
           <div style={{ textAlign: "center", marginBottom: 16 }}>
@@ -2246,7 +3573,7 @@ function TraditionTab() {
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{doctor.bio}</p>
           </div>
           <div style={{ margin: "18px 22px 0" }}>
-            <SaintQuote name={doctor.name} quote={doctor.quotes[quoteIdx % doctor.quotes.length].text} source={doctor.quotes[quoteIdx % doctor.quotes.length].source} />
+            <SaintQuote name={doctor.name} quote={doctor.quotes[quoteIdx % doctor.quotes.length].text} source={doctor.quotes[quoteIdx % doctor.quotes.length].source} isExact={true} />
             <div style={{ display: "flex", gap: 5, marginTop: 8, paddingLeft: 16 }}>
               {doctor.quotes.map((_, i) => <button key={i} onClick={() => setQuoteIdx(i)} style={{ width: i === quoteIdx % doctor.quotes.length ? 18 : 6, height: 6, borderRadius: 3, background: i === quoteIdx % doctor.quotes.length ? T.gold : "rgba(212,168,67,0.3)", border: "none", cursor: "pointer", padding: 0, transition: "all 0.3s" }} />)}
             </div>
@@ -2289,16 +3616,16 @@ function TraditionTab() {
 function StationIcon({ idx }) {
   const c = ST_COLORS[idx] || ["#654321","#8B6914"];
   const [imgError, setImgError] = useState(false);
-  const tissotUrl = ST_TISSOT[idx];
+  const imgUrl = ST_IMGS[idx];
 
   return (
     <div style={{ width: "100%", borderRadius: 10, marginBottom: 14, overflow: "hidden", position: "relative", background: `linear-gradient(135deg, ${c[0]}, ${c[1]})` }}>
-      {tissotUrl && !imgError ? (
+      {imgUrl && !imgError ? (
         <>
-          <img src={tissotUrl} alt={ST_TITLES[idx]} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block", minHeight: 120, objectFit: "cover" }} />
+          <img src={imgUrl} alt={ST_TITLES[idx]} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block", minHeight: 120, objectFit: "cover" }} />
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "24px 10px 6px", background: "linear-gradient(transparent, rgba(0,0,0,0.6))", display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
             <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: "rgba(255,255,255,0.7)", letterSpacing: "0.06em" }}>Station {["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV"][idx]}</span>
-            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>James Tissot · Brooklyn Museum</span>
+            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>{ST_CREDITS[idx]}</span>
           </div>
         </>
       ) : (
@@ -2312,7 +3639,7 @@ function StationIcon({ idx }) {
   );
 }
 
-function StationsTab({ goHome }) {
+function StationsTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [scr, setScr] = useState("select");
   const [ver, setVer] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -2363,7 +3690,7 @@ function StationsTab({ goHome }) {
   return (
     <>
       <div ref={topRef} style={{ height: 0, overflow: "hidden" }} />
-      <TopBar title={getTitle()} showBack onBack={handleBack}
+      <GlobalTopBar title={getTitle()} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack onBack={handleBack}
         rightAction={scr === "sta" ? <button onClick={() => { setScr("select"); setVer(null); }} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(13), color: T.inkLight, width: 28, padding: 0 }}>✕</button> : undefined}
       />
 
@@ -2520,7 +3847,7 @@ function StationsTab({ goHome }) {
 // ═══════════════════════════════════════════════════════════════════
 // ROSARY — TAB
 // ═══════════════════════════════════════════════════════════════════
-function RosaryTab({ goHome }) {
+function RosaryTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [scr, setScr] = useState("select"); // select | pray | complete
   const [mys, setMys] = useState(null); // joyful|sorrowful|glorious|luminous
   const [decade, setDecade] = useState(0); // 0-4
@@ -2638,28 +3965,38 @@ function RosaryTab({ goHome }) {
       return { label: "Glory Be", text: P.gloryBe };
     }
     if (step === "announce") return { label: `${decade + 1}${["st","nd","rd","th","th"][decade]} Mystery`, text: mystery.scripture, ref: mystery.ref, title: mystery.title, fruit: mystery.fruit, isAnnounce: true, img: mystery.img, credit: mystery.credit };
-    if (step === "ourfather") return { label: "Our Father", text: P.ourFather };
-    if (step === "hailmary") return { label: "Hail Mary", text: P.hailMary, beadOf: bead, beadTotal: 10 };
-    if (step === "glory") return { label: "Glory Be", text: P.gloryBe };
-    if (step === "fatima") return { label: "Fatima Prayer", text: P.fatima };
+    if (step === "ourfather") return { label: "Our Father", text: P.ourFather, img: mystery.img, credit: mystery.credit };
+    if (step === "hailmary") return { label: "Hail Mary", text: P.hailMary, beadOf: bead, beadTotal: 10, img: mystery.img, credit: mystery.credit };
+    if (step === "glory") return { label: "Glory Be", text: P.gloryBe, img: mystery.img, credit: mystery.credit };
+    if (step === "fatima") return { label: "Fatima Prayer", text: P.fatima, img: mystery.img, credit: mystery.credit };
     if (step === "closing") return { label: "Hail, Holy Queen", text: P.hailHolyQueen + "\n\n" + P.closing };
     return { label: "", text: "" };
   };
 
-  // Today's suggested mysteries
+  // Today's suggested mysteries (pre-Luminous traditional assignment)
+  // Mon/Thu/Sat → Joyful; Tue/Fri → Sorrowful; Wed → Glorious
+  // Sun → varies by liturgical season
   const dayMysteries = () => {
     const d = new Date().getDay();
-    if (d === 1 || d === 6) return "joyful";
-    if (d === 2 || d === 5) return "sorrowful";
-    if (d === 0 || d === 3) return "glorious";
-    return "sorrowful"; // Thursday: traditionally Sorrowful
+    if (d === 1 || d === 4) return "joyful";               // Mon, Thu
+    if (d === 2 || d === 5) return "sorrowful";             // Tue, Fri
+    if (d === 3 || d === 6) return "glorious";              // Wed, Sat
+    // Sunday: season-sensitive
+    const season = getLiturgicalDay(new Date()).season;
+    const joyfulSeasons = ["Advent", "Christmastide", "After Epiphany", "Septuagesima \u00b7 Pre-Lent"];
+    const sorrowfulSeasons = ["Lent", "Passiontide"];
+    if (joyfulSeasons.includes(season)) return "joyful";
+    if (sorrowfulSeasons.includes(season)) return "sorrowful";
+    return "glorious"; // Eastertide, Pentecost, After Pentecost, ordinary time
   };
   const suggested = dayMysteries();
 
   return (
     <>
       <div ref={topRef} style={{ height: 0, overflow: "hidden" }} />
-      <TopBar title={getTitle()} showBack onBack={handleBack} />
+      <TopBar title={getTitle()} showBack onBack={handleBack} rightAction={
+        <button onClick={() => setDark && setDark(d => !d)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(17), color: T.inkLight, width: 28, padding: 0, lineHeight: 1 }} title="Toggle dark mode">{dark ? "☀️" : "🌙"}</button>
+      } />
 
       {scr !== "select" && (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", padding: "6px 22px 4px", gap: 4, flexShrink: 0 }}>
@@ -2699,93 +4036,163 @@ function RosaryTab({ goHome }) {
       {scr === "pray" && M && (() => {
         const content = getPrayerContent();
         const progress = getTotalProgress();
+        // Immersive layout for all mystery steps that have artwork (ourfather, hailmary, glory, fatima)
+        const isImmersive = !content.isAnnounce && !!content.img;
         return (
-          <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-            <div style={{ padding: "10px 22px 4px", display: "flex", justifyContent: "space-between" }}>
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+
+            {/* ── Progress bar + decade label — always visible ── */}
+            <div style={{ padding: "10px 22px 4px", display: "flex", justifyContent: "space-between", flexShrink: 0 }}>
               <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.inkLight, letterSpacing: "0.06em", textTransform: "uppercase" }}>{M.label}</span>
               {step !== "opening" && step !== "closing" && <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText }}>Decade {decade + 1} / 5</span>}
             </div>
-            <div style={{ padding: "0 22px 6px" }}>
+            <div style={{ padding: "0 22px 6px", flexShrink: 0 }}>
               <div style={{ height: 3, borderRadius: 2, background: T.goldFaint }}>
                 <div style={{ height: "100%", borderRadius: 2, background: `linear-gradient(90deg, ${T.crimson}, ${T.gold})`, width: (progress * 100) + "%", transition: "width 0.3s" }} />
               </div>
             </div>
-            <div style={{ flex: 1, overflowY: "auto", padding: "6px 22px 22px" }}>
-              {/* Mystery announcement */}
-              {content.isAnnounce && (
-                <>
-                  {content.img && (
-                    <div style={{ borderRadius: 12, overflow: "hidden", marginBottom: 14, position: "relative" }}>
-                      <img src={content.img} alt={content.title} style={{ width: "100%", height: "auto", display: "block", minHeight: 100 }} onError={e => e.target.style.display = "none"} />
-                      {content.credit && <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 10px 6px", background: "linear-gradient(transparent, rgba(0,0,0,0.55))", textAlign: "right" }}>
-                        <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>{content.credit}</span>
-                      </div>}
-                    </div>
-                  )}
-                  <div style={{ textAlign: "center", marginBottom: 16 }}>
-                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>{content.label}</div>
-                    <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 6px", lineHeight: 1.3 }}>{content.title}</h2>
-                    <div style={{ display: "inline-block", padding: "4px 14px", background: T.goldFaint, borderRadius: 12, border: `1px solid rgba(212,168,67,0.15)` }}>
-                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>Fruit: {content.fruit}</span>
-                    </div>
-                  </div>
-                  <Card style={{ borderLeft: `3px solid ${T.navyText}`, marginBottom: 14, background: T.subtleBg }}>
-                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Scripture · {content.ref}</div>
-                    <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.m, fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{content.text}</p>
-                  </Card>
-                </>
-              )}
 
-              {/* Standard prayer display */}
-              {!content.isAnnounce && (
-                <>
-                  <div style={{ textAlign: "center", marginBottom: 16 }}>
+            {/* ── IMMERSIVE LAYOUT: all mystery steps with artwork ── */}
+            {isImmersive && (
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+
+                {/* Prayer label + bead counter pinned at top */}
+                <div style={{ flexShrink: 0, padding: "6px 22px 8px", background: T.warmWhite, borderBottom: `1px solid ${T.cardBorder}` }}>
+                  <div style={{ textAlign: "center", marginBottom: content.beadTotal ? 8 : 0 }}>
                     <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
-                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, marginTop: 4 }}>{content.note}</div>}
+                    {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 2 }}>{content.note}</div>}
                   </div>
-
-                  {/* Bead counter */}
                   {content.beadTotal && (
-                    <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 16 }}>
+                    <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
                       {Array.from({ length: content.beadTotal }, (_, i) => (
                         <div key={i} style={{
-                          width: content.beadTotal > 5 ? 22 : 28,
-                          height: content.beadTotal > 5 ? 22 : 28,
+                          width: content.beadTotal > 5 ? 20 : 26,
+                          height: content.beadTotal > 5 ? 20 : 26,
                           borderRadius: "50%",
                           background: i < content.beadOf ? T.gold : "transparent",
                           border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
                           transition: "all 0.3s ease",
                           opacity: i < content.beadOf ? 1 : 0.35,
+                          boxShadow: i < content.beadOf ? `0 0 5px rgba(212,168,67,0.5)` : "none",
                         }} />
                       ))}
                     </div>
                   )}
+                </div>
 
-                  <Card style={{ borderLeft: `3px solid ${T.gold}` }}>
-                    <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
-                  </Card>
-                </>
-              )}
-
-              {/* Pause prompt for mystery announcements */}
-              {content.isAnnounce && (
-                <div style={{ textAlign: "center", margin: "14px 0", padding: "10px 0" }}>
-                  <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "7px 18px", background: T.goldFaint, borderRadius: 20, border: `1px solid rgba(212,168,67,0.15)` }}>
-                    <span style={{ fontSize: fz(13) }}>🕯</span>
-                    <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Meditate on this mystery</span>
-                    <span style={{ fontSize: fz(13) }}>🕯</span>
+                {/* Artwork — tap to advance, object-fit contain so full painting is visible */}
+                <div
+                  onClick={advance}
+                  style={{ flex: 1, position: "relative", overflow: "hidden", cursor: "pointer", WebkitTapHighlightColor: "transparent", minHeight: 0, background: "#0a0a0a", display: "flex", alignItems: "center", justifyContent: "center" }}
+                >
+                  <img
+                    src={content.img}
+                    alt=""
+                    style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+                    onError={e => e.target.style.display = "none"}
+                  />
+                  {/* Tap hint + credit overlay at bottom */}
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "24px 14px 8px", background: "linear-gradient(transparent, rgba(0,0,0,0.55))", pointerEvents: "none" }}>
+                    <div style={{ textAlign: "center" }}>
+                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: "rgba(255,255,255,0.6)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                        {content.beadTotal
+                          ? (content.beadOf < content.beadTotal ? `Tap image · Bead ${content.beadOf + 1} of ${content.beadTotal}` : "Tap image to continue")
+                          : "Tap image to continue"}
+                      </span>
+                    </div>
+                    {content.credit && <div style={{ textAlign: "right", marginTop: 2 }}><span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.45)", fontStyle: "italic" }}>{content.credit}</span></div>}
                   </div>
                 </div>
-              )}
-            </div>
 
-            {/* Navigation */}
-            <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, display: "flex", gap: 10, flexShrink: 0 }}>
-              <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
-              <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
-                {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
-              </CrimsonBtn></div>
-            </div>
+                {/* Prayer text — compact strip below artwork, scrollable if needed */}
+                <div style={{ flexShrink: 0, padding: "8px 22px 6px", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}`, maxHeight: "26%", overflowY: "auto" }}>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.65, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
+                </div>
+
+                {/* Navigation */}
+                <div style={{ padding: "8px 22px 14px", background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
+                  <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
+                  <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
+                    {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
+                  </CrimsonBtn></div>
+                </div>
+              </div>
+            )}
+
+            {/* ── STANDARD SCROLLABLE LAYOUT: opening, closing, announcements ── */}
+            {!isImmersive && (
+              <>
+                <div style={{ flex: 1, overflowY: "auto", padding: "6px 22px 22px" }}>
+                  {/* Mystery announcement */}
+                  {content.isAnnounce && (
+                    <>
+                      {content.img && (
+                        <div style={{ borderRadius: 12, overflow: "hidden", marginBottom: 14, position: "relative" }}>
+                          <img src={content.img} alt={content.title} style={{ width: "100%", height: "auto", display: "block", minHeight: 100 }} onError={e => e.target.style.display = "none"} />
+                          {content.credit && <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 10px 6px", background: "linear-gradient(transparent, rgba(0,0,0,0.55))", textAlign: "right" }}>
+                            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(8), color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>{content.credit}</span>
+                          </div>}
+                        </div>
+                      )}
+                      <div style={{ textAlign: "center", marginBottom: 16 }}>
+                        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>{content.label}</div>
+                        <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 6px", lineHeight: 1.3 }}>{content.title}</h2>
+                        <div style={{ display: "inline-block", padding: "4px 14px", background: T.goldFaint, borderRadius: 12, border: `1px solid rgba(212,168,67,0.15)` }}>
+                          <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>Fruit: {content.fruit}</span>
+                        </div>
+                      </div>
+                      <Card style={{ borderLeft: `3px solid ${T.navyText}`, marginBottom: 14, background: T.subtleBg }}>
+                        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>Scripture · {content.ref}</div>
+                        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.m, fontStyle: "italic", color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{content.text}</p>
+                      </Card>
+                      <div style={{ textAlign: "center", margin: "14px 0", padding: "10px 0" }}>
+                        <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "7px 18px", background: T.goldFaint, borderRadius: 20, border: `1px solid rgba(212,168,67,0.15)` }}>
+                          <span style={{ fontSize: fz(13) }}>🕯</span>
+                          <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Meditate on this mystery</span>
+                          <span style={{ fontSize: fz(13) }}>🕯</span>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Opening / closing prayers (no artwork) */}
+                  {!content.isAnnounce && (
+                    <>
+                      <div style={{ textAlign: "center", marginBottom: 16 }}>
+                        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>{content.label}</div>
+                        {content.note && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, marginTop: 4 }}>{content.note}</div>}
+                      </div>
+                      {content.beadTotal && (
+                        <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 16 }}>
+                          {Array.from({ length: content.beadTotal }, (_, i) => (
+                            <div key={i} style={{
+                              width: content.beadTotal > 5 ? 22 : 28,
+                              height: content.beadTotal > 5 ? 22 : 28,
+                              borderRadius: "50%",
+                              background: i < content.beadOf ? T.gold : "transparent",
+                              border: `2px solid ${i < content.beadOf ? T.gold : T.inkLight}`,
+                              transition: "all 0.3s ease",
+                              opacity: i < content.beadOf ? 1 : 0.35,
+                            }} />
+                          ))}
+                        </div>
+                      )}
+                      <Card style={{ borderLeft: `3px solid ${T.gold}` }}>
+                        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fs.p, color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-line" }}>{content.text}</p>
+                      </Card>
+                    </>
+                  )}
+                </div>
+
+                {/* Navigation */}
+                <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, display: "flex", gap: 10, flexShrink: 0 }}>
+                  <div style={{ flex: 1 }}><GhostBtn onClick={goBack}>‹ Back</GhostBtn></div>
+                  <div style={{ flex: 1 }}><CrimsonBtn onClick={advance}>
+                    {content.beadTotal && content.beadOf < content.beadTotal ? `Bead ${content.beadOf + 1} ›` : "Continue ›"}
+                  </CrimsonBtn></div>
+                </div>
+              </>
+            )}
           </div>
         );
       })()}
@@ -2854,6 +4261,39 @@ const OB_INTERESTS = [
 // ═══════════════════════════════════════════════════════════════════
 function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy }) {
   const [saved, setSaved] = useState(false);
+  const [notifPerm, setNotifPerm] = useState(() => {
+    if (typeof Notification !== "undefined") return Notification.permission;
+    return "denied";
+  });
+  const [reminders, setReminders] = useState(() => {
+    try {
+      const stored = localStorage.getItem("custos_reminders");
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" };
+    } catch { return { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" }; }
+  });
+
+  const saveReminders = (updated) => {
+    setReminders(updated);
+    try { localStorage.setItem("custos_reminders", JSON.stringify(updated)); } catch {}
+  };
+
+  const requestNotifPermission = async () => {
+    if (typeof Notification === "undefined") return;
+    const perm = await Notification.requestPermission();
+    setNotifPerm(perm);
+    return perm;
+  };
+
+  const toggleReminder = async (key) => {
+    const newVal = !reminders[key];
+    if (newVal && notifPerm !== "granted") {
+      const perm = await requestNotifPermission();
+      if (perm !== "granted") {
+        // Still save the preference; we'll show in-app indicator
+      }
+    }
+    saveReminders({ ...reminders, [key]: newVal });
+  };
 
   // Flash "saved" indicator on any change
   const prevRef = useRef(JSON.stringify({ dark, fszGlobal }));
@@ -2947,6 +4387,51 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
         </Section>
 
 
+        {/* ═══ REMINDERS ═══ */}
+        <Section title="Daily Reminders">
+          {notifPerm === "denied" && (reminders.prayer || reminders.confession || reminders.stations || reminders.examen) && (
+            <div style={{ padding: "10px 16px", borderBottom: `1px solid ${T.cardBorder}`, background: T.goldFaint }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, margin: 0, fontStyle: "italic" }}>
+                Browser notifications are blocked. Reminders will appear as banners in the Today tab instead.
+              </p>
+            </div>
+          )}
+          {/* Evening Examen — primary new feature */}
+          <div style={{ borderBottom: `1px solid ${T.cardBorder}` }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px" }}>
+              <span style={{ fontSize: 18, width: 24, textAlign: "center", flexShrink: 0 }}>🕯</span>
+              <span style={{ flex: 1, fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark }}>Evening Examen</span>
+              <Toggle on={!!reminders.examen} onToggle={() => toggleReminder("examen")} />
+            </div>
+            {reminders.examen && (
+              <div style={{ padding: "0 16px 14px 56px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic" }}>Remind me at</span>
+                <input
+                  type="time"
+                  value={reminders.examenTime || "21:00"}
+                  onChange={e => {
+                    const updated = { ...reminders, examenTime: e.target.value };
+                    setReminders(updated);
+                    try { localStorage.setItem("custos_reminders", JSON.stringify(updated)); } catch {}
+                    setSaved(true);
+                    setTimeout(() => setSaved(false), 1200);
+                  }}
+                  style={{
+                    fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600,
+                    color: T.navyText, background: T.parchment,
+                    border: `1px solid ${T.cardBorderStrong}`, borderRadius: 8,
+                    padding: "5px 10px", cursor: "pointer",
+                  }}
+                />
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic" }}>each evening</span>
+              </div>
+            )}
+          </div>
+          <Row icon="🙏" label="Morning Prayer Reminder" right={<Toggle on={reminders.prayer} onToggle={() => toggleReminder("prayer")} />} />
+          <Row icon="⚖" label="Confession Reminder" right={<Toggle on={reminders.confession} onToggle={() => toggleReminder("confession")} />} />
+          <Row icon="✝" label="Stations of the Cross" last right={<Toggle on={reminders.stations} onToggle={() => toggleReminder("stations")} />} />
+        </Section>
+
         {/* ═══ ABOUT ═══ */}
         <Section title="About Custos">
           <Row icon="📖" label="Version 1.0 (Lent 2026)" right={
@@ -2979,15 +4464,154 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
 }
 
 // ═══════════════════════════════════════════════════════════════════
+// DAILY TRIVIA — Catholic history, theology, liturgy
+// ═══════════════════════════════════════════════════════════════════
+
+const TRIVIA_BANK = [
+  // ── HISTORY ──
+  { cat: "History", q: "In what year did the Council of Nicaea define the divinity of Christ against Arianism?", a: "325 AD", detail: "The First Council of Nicaea (325 AD) produced the Nicene Creed, declaring the Son 'consubstantial with the Father' — homoousios — against Arius, who taught the Son was a creature.", attr: "Council of Nicaea (325)", seasons: [] },
+  { cat: "History", q: "Which pope declared the dogma of the Immaculate Conception in 1854?", a: "Pope Pius IX", detail: "With the bull Ineffabilis Deus, Pius IX defined that the Blessed Virgin Mary was preserved from original sin from the first moment of her conception.", attr: "Ineffabilis Deus (1854)", seasons: [] },
+  { cat: "History", q: "What year did the Great Schism split Eastern and Western Christianity?", a: "1054 AD", detail: "Cardinal Humbert placed a bull of excommunication on the altar of Hagia Sophia on July 16, 1054, formalizing the split between Rome and Constantinople.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which ecumenical council defined the canon of Sacred Scripture?", a: "Council of Trent (1546)", detail: "Session IV of the Council of Trent formally defined the 73-book canon of Scripture, including the deuterocanonical books rejected by Protestants.", attr: "Council of Trent", seasons: [] },
+  { cat: "History", q: "What was the name of the edict that granted Christians legal status in the Roman Empire?", a: "Edict of Milan (313 AD)", detail: "Emperors Constantine I and Licinius issued the Edict of Milan, granting freedom of worship throughout the empire and ending the persecutions.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "In what century did St. Benedict write his Rule for monasteries?", a: "6th century (c. 530 AD)", detail: "The Rule of St. Benedict, written around 530 AD at Monte Cassino, became the foundation of Western monasticism and is still followed by Benedictines today.", attr: "Rule of St. Benedict", seasons: [] },
+  { cat: "History", q: "Which pope called the Second Vatican Council?", a: "Pope John XXIII", detail: "Pope John XXIII announced Vatican II on January 25, 1959. It opened in October 1962, though he died in June 1963 before its conclusion.", attr: "Vatican II", seasons: [] },
+  { cat: "History", q: "In what ancient city did St. Augustine of Hippo serve as bishop?", a: "Hippo Regius (modern Algeria)", detail: "Augustine served as Bishop of Hippo Regius in North Africa from 395 until his death in 430 AD as the Vandals besieged the city.", attr: "Life of St. Augustine", seasons: [] },
+  { cat: "History", q: "Which pope defined papal infallibility as a dogma?", a: "Pope Pius IX at Vatican I (1870)", detail: "The First Vatican Council defined papal infallibility in Pastor Aeternus (1870): the pope speaks infallibly ex cathedra on faith and morals.", attr: "Pastor Aeternus (1870)", seasons: [] },
+  { cat: "History", q: "What order did St. Dominic found to combat the Albigensian heresy?", a: "The Order of Preachers (Dominicans)", detail: "Dominic de Guzmán founded the Order of Preachers c. 1216, emphasizing preaching, study, and poverty to counter the Cathar heresy in southern France.", attr: "Dominican Order", seasons: [] },
+  { cat: "History", q: "In what year did Pope Urban II preach the First Crusade?", a: "1095 AD at the Council of Clermont", detail: "On November 27, 1095, Urban II called upon Christians to liberate Jerusalem, launching the First Crusade.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Which empress convened the Second Council of Nicaea (787), restoring veneration of icons?", a: "Empress Irene of Byzantium", detail: "Irene acted as regent for her son Constantine VI and convened the Seventh Ecumenical Council, which condemned iconoclasm and restored veneration of sacred images.", attr: "Second Council of Nicaea", seasons: [] },
+  { cat: "History", q: "What heresy did the Council of Ephesus (431) condemn when it declared Mary 'Theotokos'?", a: "Nestorianism", detail: "Nestorius, Archbishop of Constantinople, denied Mary the title 'God-bearer' (Theotokos), effectively dividing Christ into two persons. The Council of Ephesus condemned this and defined Mary as Theotokos.", attr: "Council of Ephesus (431)", seasons: [] },
+  { cat: "History", q: "What was the Babylonian Captivity of the Church?", a: "The period 1309–1377 when popes resided in Avignon, France, instead of Rome", detail: "Clement V moved the papacy to Avignon under pressure from the French crown. Seven popes reigned there over 68 years. St. Catherine of Siena famously urged Gregory XI to return to Rome.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Who was the first pope, and what does the name 'Peter' mean?", a: "St. Peter (Simon bar Jonah); 'Peter' means 'Rock' in Greek (Petros)", detail: "Christ gave Simon the name Kepha/Petros — Rock — at Caesarea Philippi (Mt 16:18), promising to build His Church upon this rock.", attr: "Mt 16:18", seasons: [] },
+  { cat: "History", q: "In what year did Martin Luther post his Ninety-Five Theses?", a: "1517", detail: "On October 31, 1517, Luther reportedly posted his theses challenging indulgence practices on the door of the Castle Church in Wittenberg, sparking the Protestant Reformation.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "What was the Counter-Reformation council that defined Catholic doctrine against Protestant challenges?", a: "The Council of Trent (1545–1563)", detail: "The Council of Trent met in 25 sessions over 18 years, defining doctrines on Scripture, Tradition, justification, the sacraments, and the Mass — the theological backbone of the Catholic response to the Reformation.", attr: "Council of Trent", seasons: [] },
+  { cat: "History", q: "Which pope issued the encyclical Rerum Novarum (1891), the founding document of modern Catholic social teaching?", a: "Pope Leo XIII", detail: "Rerum Novarum addressed the condition of workers in industrial society, affirming the rights of labor, private property, just wages, and the duties of both employers and the state.", attr: "Rerum Novarum (1891)", seasons: [] },
+  { cat: "History", q: "In what century did St. Patrick evangelize Ireland?", a: "5th century (c. 432 AD)", detail: "Patrick, a Romano-British Christian who had been enslaved in Ireland as a youth, returned as a missionary bishop around 432 AD and evangelized the Irish over some 30 years.", attr: "Life of St. Patrick", seasons: [] },
+  { cat: "History", q: "What is Papal Infallibility, and how many times has it been formally invoked?", a: "The pope is preserved from error when speaking ex cathedra on faith and morals; invoked formally twice: 1854 (Immaculate Conception) and 1950 (Assumption)", detail: "The dogma was defined at Vatican I (1870). It was exercised ex cathedra by Pius IX in 1854 and Pius XII in 1950 for the Assumption of Mary.", attr: "Pastor Aeternus (1870)", seasons: [] },
+  { cat: "History", q: "Which 4th-century bishop single-handedly defended Nicene orthodoxy against an Arian majority?", a: "St. Athanasius of Alexandria", detail: "Athanasius was exiled five times for defending the Nicene definition against Arian emperors and bishops. His tenacity earned the phrase 'Athanasius contra mundum' — Athanasius against the world.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "What apparition did Our Lady appear in 1917, requesting the Rosary and the consecration of Russia?", a: "Fatima, Portugal", detail: "The Virgin Mary appeared to Lucia, Francisco, and Jacinta from May to October 1917, revealing three secrets and requesting prayer, penance, and the consecration of Russia to her Immaculate Heart.", attr: "Fatima (1917)", seasons: [] },
+  { cat: "History", q: "In what century was the Summa Theologiae of St. Thomas Aquinas written?", a: "13th century (c. 1265–1274)", detail: "Aquinas began the Summa around 1265 and left it unfinished at his death in 1274, famously declaring after a mystical experience that all he had written seemed 'like straw.'", attr: "St. Thomas Aquinas", seasons: [] },
+  { cat: "History", q: "What did Emperor Theodosius I declare in the Edict of Thessalonica (380 AD)?", a: "Nicene Christianity the official religion of the Roman Empire", detail: "The edict declared that all peoples of the empire should hold to the Nicene faith of the bishops of Rome and Alexandria, effectively establishing Catholicism as the state religion.", attr: "Church History", seasons: [] },
+  { cat: "History", q: "Who wrote the Confessions, the first great spiritual autobiography in history?", a: "St. Augustine of Hippo", detail: "Written c. 397–400 AD, the Confessions traces Augustine's journey from paganism through Manichaeism to baptism, opening with the famous line: 'Our hearts are restless until they rest in Thee.'", attr: "St. Augustine, Confessions", seasons: [] },
+  { cat: "History", q: "The Franciscan Order was founded by St. Francis of Assisi. In what year was it formally approved?", a: "1209 (Rule approved verbally by Innocent III)", detail: "Francis and his first 12 companions traveled to Rome in 1209, where Pope Innocent III gave verbal approval to their way of life. The written Rule was confirmed by Honorius III in 1223.", attr: "Franciscan Order", seasons: [] },
+
+  // ── THEOLOGY ──
+  { cat: "Theology", q: "What are the three theological virtues?", a: "Faith, Hope, and Charity", detail: "St. Paul names them in 1 Corinthians 13:13. They are called 'theological' because they relate directly to God; they are infused — not acquired — by God at Baptism.", attr: "CCC 1813", seasons: [] },
+  { cat: "Theology", q: "What is the Hypostatic Union?", a: "Christ has two natures — divine and human — in one divine Person", detail: "Defined at the Council of Chalcedon (451 AD), the Hypostatic Union teaches that the Son of God assumed a full human nature while remaining fully divine: two natures without confusion or separation.", attr: "Council of Chalcedon (451)", seasons: [] },
+  { cat: "Theology", q: "According to St. Thomas Aquinas, what is the definition of law?", a: "An ordinance of reason for the common good, made by one who has care of the community, and promulgated", detail: "Thomas defines law in the Summa Theologiae (I-II, Q.90): it must be rational, directed to the common good, made by legitimate authority, and made known through promulgation.", attr: "Summa Theologiae I-II, Q.90", seasons: [] },
+  { cat: "Theology", q: "What are the four marks of the Church?", a: "One, Holy, Catholic, and Apostolic", detail: "These four marks, professed in the Nicene Creed, describe the essential characteristics of the Church Christ founded, distinguishing it from any merely human institution.", attr: "CCC 811", seasons: [] },
+  { cat: "Theology", q: "What three conditions make a sin mortal?", a: "Grave matter, full knowledge, and deliberate consent", detail: "All three must be present for a sin to be mortal. Without any one of them — if the matter is light, or knowledge incomplete, or consent compromised — the sin is venial.", attr: "CCC 1857", seasons: [] },
+  { cat: "Theology", q: "What does the Church teach about the Real Presence in the Eucharist?", a: "Christ is truly, really, and substantially present — Body, Blood, Soul, and Divinity", detail: "The Council of Trent defined transubstantiation: the entire substance of bread and wine is converted into the Body and Blood of Christ, while the appearances remain.", attr: "Council of Trent, Session XIII", seasons: [] },
+  { cat: "Theology", q: "What is the Beatific Vision?", a: "The direct, unmediated vision of God enjoyed by the saints in heaven", detail: "The Beatific Vision is the ultimate end of man — seeing God face to face (1 Cor 13:12). It is supernatural, beyond any natural capacity, and is the source of perfect happiness.", attr: "CCC 1023–1026", seasons: [] },
+  { cat: "Theology", q: "How many sacraments does the Catholic Church have, and who defined this number?", a: "Seven, defined at the Council of Florence (1439) and reaffirmed at Trent", detail: "Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony.", attr: "Council of Trent, Session VII", seasons: [] },
+  { cat: "Theology", q: "What is the doctrine of Original Sin?", a: "The sin of Adam, transmitted to all humanity, depriving us of sanctifying grace and wounding human nature", detail: "Defined at the Council of Trent, original sin is not a personal act but a state of deprivation inherited from Adam. It is remitted by Baptism.", attr: "CCC 402–406", seasons: [] },
+  { cat: "Theology", q: "What does 'ex opere operato' mean in sacramental theology?", a: "Sacraments confer grace by the performance of the sacramental act itself, not by the merit of the minister", detail: "The sacrament's efficacy depends on Christ acting through the Church, not on the holiness of the priest (though the recipient's dispositions affect the fruit received).", attr: "CCC 1128", seasons: [] },
+  { cat: "Theology", q: "What are the four cardinal virtues?", a: "Prudence, Justice, Fortitude, and Temperance", detail: "These 'hinge' virtues (from the Latin cardo, hinge) are the foundation of the moral life. They can be acquired by human effort and perfected by grace. All other moral virtues are grouped around them.", attr: "CCC 1805", seasons: [] },
+  { cat: "Theology", q: "What is the 'sensus fidei'?", a: "The supernatural instinct of the faithful for recognizing truths of the faith", detail: "The sensus fidei (sense of the faith) is a gift of the Holy Spirit by which the whole body of the faithful cannot err in matters of belief (Lumen Gentium 12).", attr: "Lumen Gentium 12", seasons: [] },
+  { cat: "Theology", q: "What is the doctrine of the Assumption of Mary?", a: "At the end of her earthly life, the Blessed Virgin Mary was taken up body and soul into heavenly glory", detail: "Defined as dogma by Pope Pius XII in Munificentissimus Deus (1950), the Assumption is not explicitly narrated in Scripture but is grounded in Tradition and the Church's understanding of Mary's unique role.", attr: "Munificentissimus Deus (1950)", seasons: [] },
+  { cat: "Theology", q: "What is Natural Law, according to St. Thomas Aquinas?", a: "The rational creature's participation in the eternal law of God — the moral order inscribed in human nature and discoverable by reason", detail: "Aquinas teaches in the Summa (I-II, Q.94) that natural law is the first principle of practical reason: do good and avoid evil. From this, more specific norms are derived.", attr: "Summa Theologiae I-II, Q.94", seasons: [] },
+  { cat: "Theology", q: "What is the difference between justification and sanctification?", a: "Justification is the initial remission of sin and infusion of grace; sanctification is the ongoing growth in holiness that follows", detail: "The Council of Trent (Session VI) defined justification as not merely the remission of sins but a true interior renewal. Sanctification describes the ongoing transformation into likeness with Christ.", attr: "Council of Trent, Session VI", seasons: [] },
+  { cat: "Theology", q: "What does 'Purgatory' mean in Catholic doctrine?", a: "A state of purification after death for those who die in God's grace but still need cleansing before entering heaven", detail: "The Church teaches (CCC 1030) that those who die in God's friendship but imperfectly purified undergo purification to achieve the holiness needed to enter heavenly joy.", attr: "CCC 1030–1032", seasons: [] },
+  { cat: "Theology", q: "What are the seven gifts of the Holy Spirit?", a: "Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord", detail: "These gifts perfect the soul's capacity for virtue and are infused at Baptism and strengthened at Confirmation. They are drawn from Isaiah 11:2–3.", attr: "CCC 1831", seasons: [] },
+  { cat: "Theology", q: "What is Transubstantiation?", a: "The complete conversion of the substance of bread and wine into the Body and Blood of Christ at the consecration of the Mass", detail: "Defined at the Fourth Lateran Council (1215) and confirmed at Trent: the accidents (appearances) remain, but the substance is entirely changed into Christ.", attr: "Council of Trent, Session XIII", seasons: [] },
+  { cat: "Theology", q: "What is the 'double effect' principle in Catholic moral theology?", a: "An action with both good and bad effects may be permissible if the act is not intrinsically evil, the agent intends the good effect, and the good is proportionate to the harm", detail: "St. Thomas Aquinas first articulated this principle in discussing self-defense (Summa II-II, Q.64). It governs many complex medical and ethical decisions.", attr: "Summa Theologiae II-II, Q.64", seasons: [] },
+  { cat: "Theology", q: "What does the Church mean by 'intrinsically evil' acts?", a: "Acts that are evil by their very object, regardless of intention or circumstances — they can never be justified", detail: "CCC 1756 teaches that certain acts are 'by their very object morally disordered' and 'are always and without exception unlawful' regardless of purpose or context.", attr: "CCC 1756", seasons: [] },
+  { cat: "Theology", q: "What is the 'preferential option for the poor' in Catholic social teaching?", a: "The obligation to give priority attention to the needs and rights of the poor in moral decision-making and social policy", detail: "While not favoring the poor exclusively, the Church teaches (CCC 2448) a special love for the poor following Christ's example and the prophets' call for justice.", attr: "CCC 2448", seasons: [] },
+  { cat: "Theology", q: "What does the phrase 'Fiat voluntas tua' mean, and where does it appear?", a: "'Thy will be done' — from the Lord's Prayer (Mt 6:10) and Christ's prayer in Gethsemane (Mt 26:42)", detail: "The phrase expresses the complete surrender of human will to divine providence. It is both a petition and an act of trust.", attr: "Mt 6:10; 26:42", seasons: [] },
+  { cat: "Theology", q: "What does the Church teach about conscience?", a: "Conscience is the proximate norm of morality — one must always follow it, but it must be formed in accordance with truth and Church teaching", detail: "CCC 1776 defines conscience as 'a judgment of reason whereby the human person recognizes the moral quality of a concrete act.' It must be educated; an erroneous conscience does not excuse culpability if the error is one's own fault.", attr: "CCC 1776–1779", seasons: [] },
+  { cat: "Theology", q: "What are the corporal works of mercy?", a: "Feed the hungry, give drink to the thirsty, clothe the naked, shelter the homeless, visit the sick, visit the imprisoned, bury the dead", detail: "Based on Matthew 25:31–46 and Tobit 1:17. They address bodily needs and are balanced by the seven spiritual works of mercy.", attr: "CCC 2447", seasons: [] },
+  { cat: "Theology", q: "What is the distinction between the Church Militant, Church Suffering, and Church Triumphant?", a: "The living faithful on earth (Militant), the souls in Purgatory (Suffering), and the saints in heaven (Triumphant) — together, the Communion of Saints", detail: "This distinction expresses the Church's reach across life and death. We can assist the souls in Purgatory through prayer, Masses, and indulgences.", attr: "CCC 954–959", seasons: [] },
+  { cat: "Theology", q: "What does 'Magisterium' mean?", a: "The teaching authority of the Church, exercised by the pope and bishops in communion with him", detail: "From the Latin magister (teacher), the Magisterium is the Church's living authority to interpret Scripture and Tradition authentically. It can be exercised solemnly (ex cathedra, councils) or ordinarily (regular papal teaching).", attr: "CCC 85–87", seasons: [] },
+
+  // ── LITURGY ──
+  { cat: "Liturgy", q: "What are the five parts of the Ordinary of the Mass?", a: "Kyrie, Gloria, Credo, Sanctus, and Agnus Dei", detail: "These fixed texts recur at every Mass (the Gloria and Credo are omitted on certain days). They give the Mass its enduring structure regardless of the feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What liturgical color is worn during Advent and Lent?", a: "Violet (purple)", detail: "Violet signifies penance, preparation, and longing. Rose may be worn on Gaudete Sunday (Advent III) and Laetare Sunday (Lent IV), expressing mid-season joy.", attr: "Roman Rite", seasons: ["Advent","Lent"] },
+  { cat: "Liturgy", q: "What is the Introit?", a: "The entrance antiphon sung at the beginning of Mass", detail: "The Introit is the first chant of the Proper of the Mass, sung as the priest approaches the altar. Its text, drawn from Scripture, sets the spiritual tone of each feast.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does 'ad orientem' worship mean?", a: "Celebrating Mass with the priest and people facing the same direction — toward God (liturgical East)", detail: "Historically, both priest and faithful faced East, symbolizing the eschatological expectation of Christ's return. It was standard before the post-Vatican II reform of altar orientation.", attr: "Liturgical Tradition", seasons: [] },
+  { cat: "Liturgy", q: "What is the Liturgy of the Hours?", a: "The daily prayer of the Church, sanctifying the hours of the day — from Lauds to Compline", detail: "The Divine Office (CCC 1174–1178) extends the Eucharist's praise through the day: Lauds, Terce, Sext, None, Vespers, Compline, and the Office of Readings.", attr: "CCC 1174–1178", seasons: [] },
+  { cat: "Liturgy", q: "What is Septuagesima?", a: "The pre-Lenten season in the traditional calendar, beginning 70 days before Easter", detail: "Septuagesima, Sexagesima, and Quinquagesima Sundays form a three-week preparation before Ash Wednesday in the 1962 calendar. The Alleluia is omitted during this season.", attr: "1962 Roman Missal", seasons: ["Septuagesima · Pre-Lent"] },
+  { cat: "Liturgy", q: "What is the significance of the Alleluia being suppressed during Lent?", a: "It symbolizes mourning and penance — the joy of the Resurrection is 'buried' until Easter", detail: "In the traditional rite, the Alleluia is ceremonially 'buried' at the end of Quinquagesima. Its joyful return at the Easter Vigil marks the great night of resurrection.", attr: "Roman Rite · Lenten Tradition", seasons: ["Lent","Septuagesima · Pre-Lent"] },
+  { cat: "Liturgy", q: "What is the Proper of the Mass?", a: "The variable texts that change with each feast: Introit, Gradual, Alleluia/Tract, Offertory, and Communion antiphons", detail: "The Proper contrasts with the Ordinary (fixed texts). The Proper texts are drawn from Scripture and give each day's Mass its unique spiritual character.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does 'Canon of the Mass' refer to?", a: "The central Eucharistic prayer, traditionally the Roman Canon (now Eucharistic Prayer I)", detail: "The Roman Canon is one of the oldest texts in Christendom, with roots in the 4th century. It includes the consecratory words, intercessions, memento for the living and dead, and doxology.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "On what day is the Church's oldest and most solemn liturgy celebrated?", a: "Holy Saturday — the Easter Vigil", detail: "The Easter Vigil is the 'mother of all vigils' (St. Augustine). It begins in darkness, includes the lighting of the Paschal Candle, the Exsultet, extensive Scripture readings, Baptisms, and the first Mass of Easter.", attr: "Easter Vigil", seasons: ["Eastertide","Passiontide"] },
+  { cat: "Liturgy", q: "What is Gregorian Chant?", a: "The ancient monophonic sacred music of the Roman Rite, traditionally attributed to Pope Gregory the Great", detail: "Gregorian chant is the Church's own music, called 'treasure of inestimable value' by Vatican II's Sacrosanctum Concilium (§114). It is the normative music of the Latin rite.", attr: "Sacrosanctum Concilium §114", seasons: [] },
+  { cat: "Liturgy", q: "What is the 'Collect'?", a: "The opening prayer of the Mass that 'collects' the intentions of the congregation and addresses them to God", detail: "The Collect is the first of three variable presidential prayers (with the Secret/Prayer over the Offerings and the Postcommunion). It concludes with 'through Christ our Lord.'", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What does the color red signify in liturgical vestments?", a: "The Holy Spirit, martyrdom, and royal dignity — worn on Pentecost, feasts of martyrs, Palm Sunday, and Good Friday", detail: "Red recalls both fire (the Holy Spirit at Pentecost) and blood (the martyrs). It is the color of sacrifice and the kingship of Christ.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What are the Major Rogation Days?", a: "April 25 (feast of St. Mark) — days of litanies and processions to pray for crops and protection from calamity", detail: "The Major Rogation on April 25 and the Minor Rogations (Monday–Wednesday before Ascension) are ancient penitential days with outdoor processions, the Litany of the Saints, and prayer for God's blessing on the harvest.", attr: "Roman Rite", seasons: [] },
+  { cat: "Liturgy", q: "What is the 'Ordinary Form' and 'Extraordinary Form' of the Roman Rite?", a: "The 1970 Missal (OF) and the 1962 Missal (EF/Traditional Latin Mass) — two forms of one Roman Rite", detail: "Benedict XVI in Summorum Pontificum (2007) designated these two forms, allowing the Traditional Latin Mass to be celebrated more widely.", attr: "Summorum Pontificum (2007)", seasons: [] },
+  { cat: "Liturgy", q: "What is the Gradual?", a: "A chant sung between the Epistle and Gospel in the traditional Mass, named for the 'step' (gradus) of the ambo from which it was sung", detail: "The Gradual is among the most ancient and musically elaborate chants of the Mass. It is replaced by the Alleluia in Eastertide (except at Requiem Masses).", attr: "1962 Roman Missal", seasons: [] },
+  { cat: "Liturgy", q: "What does the term 'anamnesis' mean in liturgical theology?", a: "The ritual memorial of Christ's Passion, Death, and Resurrection — a making-present of past saving events, not merely a remembrance", detail: "From the Greek for 'remembrance,' the anamnesis in the Eucharistic prayer (Do this in memory of Me) is understood not as mere recollection but as a sacramental participation in the original events.", attr: "CCC 1362–1364", seasons: [] },
+  { cat: "Liturgy", q: "What vestment does a bishop wear that a priest does not?", a: "The miter, pectoral cross, and ring — and the pallium for archbishops", detail: "The miter is the bishop's ceremonial headdress. The pectoral cross is worn over vestments. The pallium — a woolen band worn over the chasuble — is granted by the pope to archbishops and signifies their union with Rome.", attr: "Liturgical Tradition", seasons: [] },
+  { cat: "Liturgy", q: "What is the difference between a Feast, a Solemnity, and a Memorial?", a: "In the current calendar: Solemnities are the highest rank, then Feasts, then Obligatory Memorials, then Optional Memorials", detail: "Solemnities celebrate the most important mysteries (Christmas, Easter, Corpus Christi). Feasts celebrate events in the Lord's life and major saints. Memorials honor saints with less universal prominence.", attr: "Roman Rite", seasons: [] },
+
+  // ── SEASON-SPECIFIC ──
+  // Advent
+  { cat: "Liturgy", q: "How many Sundays are in the season of Advent?", a: "Four Sundays", detail: "Advent spans four Sundays before Christmas. Each week increases in eschatological anticipation: the Second Coming, John the Baptist, the prophets, and the Virgin Mary.", attr: "Roman Rite", seasons: ["Advent"] },
+  { cat: "History", q: "What ancient prophecy does the Church read every Advent about a virgin bearing a son?", a: "Isaiah 7:14 — 'Behold, a virgin shall conceive and bear a son, and his name shall be called Emmanuel'", detail: "This 8th-century BC prophecy is quoted in Matthew 1:23 as fulfilled in the Virgin Birth. It is a central text of the Advent liturgy.", attr: "Isaiah 7:14", seasons: ["Advent"] },
+  { cat: "Theology", q: "What is the 'O Antiphons' of Advent?", a: "Seven ancient antiphons sung before the Magnificat at Vespers from December 17–23, each beginning 'O' and invoking a title of Christ", detail: "O Sapientia, O Adonai, O Radix Jesse, O Clavis David, O Oriens, O Rex Gentium, O Emmanuel — the first letters in reverse spell SARCORE, or re-arranged, ERO CRAS — 'I will be [there] tomorrow.'", attr: "Advent Liturgy", seasons: ["Advent"] },
+  { cat: "Liturgy", q: "What is Gaudete Sunday?", a: "The Third Sunday of Advent — a day of rejoicing (gaudete = 'rejoice') when the penitential fast is briefly relaxed", detail: "Named from the entrance antiphon (Philippians 4:4), Gaudete Sunday is marked by rose vestments (rather than violet), flowers, and organ music, anticipating the joy of Christmas.", attr: "Roman Rite", seasons: ["Advent"] },
+
+  // Christmas
+  { cat: "Theology", q: "What does the Incarnation mean?", a: "The eternal Son of God took on human flesh and became man in the womb of the Virgin Mary", detail: "John 1:14 — 'And the Word was made flesh.' The Incarnation is not a transformation of God but an assumption of human nature: one divine Person, two natures.", attr: "CCC 461–463", seasons: ["Christmastide"] },
+  { cat: "Liturgy", q: "What are the Twelve Days of Christmas?", a: "December 25 (Christmas) through January 5, ending on the Epiphany (January 6)", detail: "The Christmas octave ends on January 1, the Circumcision/Solemnity of Mary. The full Christmas season extends to the Baptism of the Lord (or, in the traditional calendar, Candlemas, February 2).", attr: "Roman Rite", seasons: ["Christmastide"] },
+
+  // Lent
+  { cat: "Theology", q: "What are the three Lenten disciplines the Church commends?", a: "Prayer, Fasting, and Almsgiving", detail: "Jesus names these in Matthew 6:1–18. The Church channels them through Lent as preparation for the Paschal Mystery.", attr: "CCC 1434", seasons: ["Lent"] },
+  { cat: "History", q: "When did the practice of marking foreheads with ash on Ash Wednesday become universal in Rome?", a: "It developed through the early medieval period, widely observed by the 11th century", detail: "The use of ashes as a sign of penitence is biblical (Job, Jonah, Esther). The Roman practice of Ash Wednesday as the formal start of Lent became universal by the time of Gregory VII (d. 1085).", attr: "Liturgical History", seasons: ["Lent"] },
+  { cat: "Liturgy", q: "What is Laetare Sunday?", a: "The Fourth Sunday of Lent — a day of rejoicing midway through Lent, marked by rose vestments", detail: "Named from the entrance antiphon ('Laetare Jerusalem — Rejoice, O Jerusalem'), Laetare Sunday mirrors Gaudete Sunday in Advent: a brief relaxation of penitential observance.", attr: "Roman Rite", seasons: ["Lent"] },
+
+  // Holy Week / Passiontide
+  { cat: "Liturgy", q: "What is Tenebrae?", a: "A nocturnal Holy Week office in which candles are extinguished one by one to symbolize Christ's approaching death", detail: "Tenebrae (Latin for 'darkness') combines Matins and Lauds for Wednesday, Thursday, and Friday of Holy Week. As each candle is snuffed, the church grows dark.", attr: "Holy Week Liturgy", seasons: ["Passiontide"] },
+  { cat: "History", q: "What is the Mandatum, performed on Holy Thursday?", a: "The washing of feet, recalling Christ's washing of the Apostles' feet at the Last Supper (Jn 13)", detail: "The word 'Mandatum' comes from Christ's command: 'A new commandment I give you, that you love one another' (Jn 13:34). The ceremony follows the Mass of the Lord's Supper.", attr: "Holy Thursday Liturgy", seasons: ["Passiontide"] },
+  { cat: "Theology", q: "What does the Church teach about the meaning of Good Friday?", a: "Christ's death on the Cross is the sacrifice by which He redeems humanity — the fulfillment of all Old Testament sacrifices", detail: "On Good Friday alone, no Mass is celebrated. The liturgy includes veneration of the Cross and a service of the Word, recalling that all sacramental life flows from the Cross.", attr: "CCC 613–615", seasons: ["Passiontide"] },
+
+  // Easter
+  { cat: "Theology", q: "What does 'Paschal Mystery' refer to?", a: "Christ's Passion, Death, Resurrection, and Ascension — through which He redeems humanity", detail: "The Paschal Mystery (CCC 571) is the center of the Christian faith. Through it, Christ passes from death to life and opens the way of salvation for all who are united to Him in Baptism.", attr: "CCC 571", seasons: ["Eastertide"] },
+  { cat: "Liturgy", q: "What is the Exsultet?", a: "The ancient Easter proclamation (Praeconium Paschale) sung at the Easter Vigil, celebrating the Resurrection", detail: "Possibly composed in part by St. Ambrose, the Exsultet is one of the Church's oldest hymns. It famously praises even the 'felix culpa' — 'O happy fault that merited so great a Redeemer.'", attr: "Easter Vigil", seasons: ["Eastertide"] },
+  { cat: "History", q: "What is the Octave of Easter?", a: "The eight days following Easter Sunday (through Divine Mercy Sunday), all celebrated as one prolonged feast", detail: "The Easter Octave is the most solemn in the Church's calendar — every day is celebrated as Easter Sunday itself. The practice of an octave dates to the earliest centuries of Christianity.", attr: "Roman Rite", seasons: ["Eastertide"] },
+  { cat: "Theology", q: "What did Christ tell St. Faustina about Divine Mercy Sunday?", a: "That He wished a feast on the first Sunday after Easter, promising that whoever received Communion on that day would receive complete forgiveness of sins and punishment", detail: "The devotion to Divine Mercy was revealed to St. Faustina Kowalska in Poland in the 1930s. Pope John Paul II officially established Divine Mercy Sunday for the universal Church in 2000.", attr: "Diary of St. Faustina", seasons: ["Eastertide"] },
+
+  // Pentecost
+  { cat: "Theology", q: "What is the gift the Holy Spirit pours into the soul at Baptism and Confirmation?", a: "Sanctifying grace — and the seven gifts of the Holy Spirit", detail: "The seven gifts are: Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord (Is 11:2–3). They perfect the theological and cardinal virtues.", attr: "CCC 1830–1831", seasons: ["Pentecost"] },
+  { cat: "History", q: "What feast follows Pentecost in the traditional calendar, celebrating the mystery of the Trinity?", a: "Trinity Sunday — the First Sunday after Pentecost", detail: "Trinity Sunday was established by Pope John XXII for the universal Church in 1334, though it had been celebrated locally in the West since the 10th century.", attr: "Roman Rite", seasons: ["Pentecost","After Pentecost"] },
+  { cat: "Liturgy", q: "What is the 'Sequence' at Pentecost?", a: "The Veni Sancte Spiritus ('Come, Holy Spirit') — one of the most beautiful hymns in the Roman Rite", detail: "The Sequence is a poetic hymn sung before the Gospel on major feasts. Pentecost's Veni Sancte Spiritus is attributed to Stephen Langton or Pope Innocent III (13th century).", attr: "Pentecost Liturgy", seasons: ["Pentecost"] },
+];
+
+function getDailyTrivia(liturgicalSeason) {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((now - start) / 86400000);
+
+  // Try season-specific questions first
+  const seasonQ = TRIVIA_BANK.filter(q => q.seasons.includes(liturgicalSeason));
+  const allQ = TRIVIA_BANK;
+
+  // If we have season questions, weight toward them (first half of candidates)
+  const pool = seasonQ.length >= 3
+    ? [...seasonQ, ...seasonQ, ...allQ]  // double-weight season questions
+    : allQ;
+
+  return pool[dayOfYear % pool.length];
+}
+
+// ═══════════════════════════════════════════════════════════════════
 // TODAY TAB — Liturgical calendar, readings, saint, reflection
 // ═══════════════════════════════════════════════════════════════════
-function TodayTab() {
+function TodayTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const today = new Date();
   const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const dateStr = `${days[today.getDay()]} · ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`;
   const [showOF, setShowOF] = useState(false);
   const [showReadings, setShowReadings] = useState(false);
+  const [triviaRevealed, setTriviaRevealed] = useState(false);
+  const [reminders] = useState(() => {
+    try {
+      const stored = localStorage.getItem("custos_reminders");
+      return stored ? JSON.parse(stored) : { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" };
+    } catch { return { prayer: false, confession: false, stations: false, examen: false, examenTime: "21:00" }; }
+  });
 
   const lit = getLiturgicalDay(today);
   const colorDot = COLOR_HEX[lit.color] || COLOR_HEX.green;
@@ -3018,11 +4642,51 @@ function TodayTab() {
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-      <TopBar title="Today" showBack={false} />
+      <GlobalTopBar title="Today" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
       <div style={{ flex: 1, overflowY: "auto", paddingBottom: 8 }}>
         <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", padding: "18px 20px 0" }}>{dateStr}</div>
 
-        {/* Liturgical Calendar */}
+        {/* Reminder banners */}
+        {(reminders.prayer || reminders.confession || reminders.stations || reminders.examen) && (
+          <div style={{ margin: "10px 20px 0", display: "flex", flexDirection: "column", gap: 6 }}>
+            {reminders.examen && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(26,39,68,0.06)", border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>🕯</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>Evening Examen</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Reminder set for {reminders.examenTime || "21:00"} · Take time to review your day with God.</div>
+                </div>
+              </div>
+            )}
+            {reminders.prayer && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: T.goldFaint, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>🙏</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>Morning Prayer</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Have you prayed your morning offering today?</div>
+                </div>
+              </div>
+            )}
+            {reminders.confession && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(122,28,28,0.05)", border: `1px solid rgba(122,28,28,0.15)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>⚖</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.06em", textTransform: "uppercase" }}>Confession</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>When did you last receive the Sacrament of Penance?</div>
+                </div>
+              </div>
+            )}
+            {reminders.stations && (
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "rgba(26,39,68,0.05)", border: `1px solid rgba(26,39,68,0.12)`, borderRadius: 10 }}>
+                <span style={{ fontSize: fz(16) }}>✝</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.06em", textTransform: "uppercase" }}>Stations of the Cross</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkMid, fontStyle: "italic" }}>Walk the Via Crucis with Christ today.</div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
         <Card style={{ margin: "12px 20px 0", cursor: readings ? "pointer" : "default" }}>
           <div onClick={() => { if (readings) setShowReadings(!showReadings); }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
@@ -3073,7 +4737,7 @@ function TodayTab() {
             <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight }}>{ref.cite}</span>
           </div>
           <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 16px" }}>"{ref.text}"</p>
-          <SaintQuote name={ref.saint} quote={ref.sq} source={ref.ss} />
+          <SaintQuote name={ref.saint} quote={ref.sq} source={ref.ss} isExact={true} />
         </Card>
 
         {/* Saint of the Day */}
@@ -3089,6 +4753,50 @@ function TodayTab() {
             </Card>
           );
         })()}
+
+        {/* Daily Catholic Trivia */}
+        {(() => {
+          const trivia = getDailyTrivia(lit.season);
+          const CAT_COLORS = { History: T.navy, Theology: T.crimson, Liturgy: "#5a7a2a" };
+          const CAT_ICONS = { History: "📜", Theology: "✝", Liturgy: "🕯" };
+          const catColor = CAT_COLORS[trivia.cat] || T.navy;
+          return (
+            <Card style={{ margin: "12px 20px 8px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                <span style={{ fontSize: fz(18) }}>{CAT_ICONS[trivia.cat] || "❓"}</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.gold, letterSpacing: "0.10em", textTransform: "uppercase" }}>Daily Trivia</div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 600, color: catColor, letterSpacing: "0.08em", textTransform: "uppercase", opacity: 0.85 }}>{trivia.cat}</div>
+                </div>
+              </div>
+
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), color: T.inkDark, lineHeight: 1.55, margin: "0 0 14px", fontStyle: "italic" }}>{trivia.q}</p>
+
+              {!triviaRevealed ? (
+                <button
+                  onClick={() => setTriviaRevealed(true)}
+                  style={{
+                    width: "100%", padding: "10px 16px",
+                    fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600,
+                    letterSpacing: "0.06em", textTransform: "uppercase",
+                    color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`,
+                    border: "none", borderRadius: 10, cursor: "pointer",
+                  }}
+                >Reveal Answer</button>
+              ) : (
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 12 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: catColor, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Answer</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontWeight: 600, color: T.inkDark, lineHeight: 1.5, margin: "0 0 10px" }}>{trivia.a}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkMid, lineHeight: 1.55, margin: "0 0 10px" }}>{trivia.detail}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <div style={{ width: 3, height: 3, borderRadius: "50%", background: T.gold }} />
+                    <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.inkLight, letterSpacing: "0.04em" }}>{trivia.attr}</span>
+                  </div>
+                </div>
+              )}
+            </Card>
+          );
+        })()}
       </div>
     </div>
   );
@@ -3097,17 +4805,1492 @@ function TodayTab() {
 // ═══════════════════════════════════════════════════════════════════
 // PRAY HUB — Gateway to all devotional features
 // ═══════════════════════════════════════════════════════════════════
-function PrayHub({ onTab }) {
+// ═══════════════════════════════════════════════════════════════════
+// NOVENA DATA
+// ═══════════════════════════════════════════════════════════════════
+
+const NOVENAS = [
+  {
+    id: "sacred_heart",
+    title: "Sacred Heart of Jesus",
+    subtitle: "Nine Days of Reparation & Love",
+    icon: "❤",
+    color: "#7a1c1c",
+    feast: "June (Friday after Corpus Christi)",
+    patron: "Reparation, mercy for sinners, conversion of the lukewarm",
+    intro: "This novena is prayed in honor of the Sacred Heart of Jesus, whose burning love for mankind was revealed to St. Margaret Mary Alacoque. It is traditionally begun nine days before the Feast of the Sacred Heart.",
+    openingPrayer: "O my Jesus, You have said: 'Truly I say to you, ask and you will receive, seek and you will find, knock and the door will be opened to you.' Behold, I knock, I seek, and I ask for the grace of this novena.",
+    closingPrayer: "O Sacred Heart of Jesus, I have asked for many graces, but above all I ask for this: that my heart may be converted and conformed to Thine. Take my heart and possess it entirely. Let it love only what Thou lovest, will only what Thou willest, be united to Thine in all things. Amen.",
+    days: [
+      { theme: "Surrender", prayer: "O Sacred Heart of Jesus, I come before Thee in the poverty of my soul. I have strayed from Thee and relied on my own strength. Today I surrender myself entirely to Thy Heart. Let Thy love be the fire that consumes my pride, my self-sufficiency, and all that stands between my soul and Thee. I trust in Thy mercy. Accept this poor heart as Thine own." },
+      { theme: "Reparation", prayer: "O Sacred Heart of Jesus, wounded by the sins of men, I offer this day in reparation for my own sins and for the sins of those who do not love Thee, who know Thee not, or who have forgotten Thy love. Receive my poor acts of this day as an offering of love. I grieve for every offence against Thee. Have mercy on sinners, and have mercy on me." },
+      { theme: "Confidence", prayer: "O Sacred Heart of Jesus, Thou art my refuge and my strength. The world offers false consolations and empty promises, but Thou alone art steadfast. Today I cast all my anxieties into Thy Heart, trusting in Thy promise to those who consecrate themselves to Thee. Grant me a faith that does not falter when trials come, and a hope rooted not in circumstances but in Thee alone." },
+      { theme: "Charity", prayer: "O Sacred Heart of Jesus, Who art Love itself, enkindle in my heart a fire of true charity — not the sentimental imitation the world offers, but the love that bears all things, endures all things, and seeks not its own. Let me love my neighbor for love of Thee, even when that love is costly. Let my charity be the overflow of my love for Thee." },
+      { theme: "Humility", prayer: "O Sacred Heart of Jesus, meek and humble of Heart, make my heart like unto Thine. I confess that pride is the root of my greatest failures — the pride that resists correction, that seeks its own glory, that finds others' success bitter. Pierce this pride with the wound of Thy humility. Let me decrease that Thou mayest increase in all I do." },
+      { theme: "Perseverance", prayer: "O Sacred Heart of Jesus, Thou who didst persevere even to the agony of the Cross, grant me the grace of holy perseverance. I am weak and easily discouraged. I begin well and fall away. I promise and relapse. Thou knowest my weakness better than I do. Grant me the grace not of never falling, but of always rising — to approach Thy Heart again and again without despair." },
+      { theme: "Purity of Intention", prayer: "O Sacred Heart of Jesus, purify my intentions. Too often I pray with divided attention, work with mixed motives, and serve with one eye on my own reputation. Grant me the singleness of purpose that seeks only Thy glory and the good of souls. Let every act of this day — however small — be done purely for love of Thee." },
+      { theme: "Intercession for Others", prayer: "O Sacred Heart of Jesus, I bring before Thee today all those I love, and all those I find difficult to love. I bring the lukewarm, the lapsed, and the lost. I bring those in suffering of body or soul who have no one to pray for them. Receive this novena day as an offering for them. Let Thy grace reach those who are farthest from Thee, especially those for whom no one prays." },
+      { theme: "Consecration", prayer: "O Sacred Heart of Jesus, on this final day I consecrate myself entirely to Thee — my mind, my will, my heart, my body, my past, my present, and my future. I am Thine. Whatever comes, let me find in Thy Heart my dwelling place. I ask for the grace of final perseverance: that this consecration may not be a moment's devotion but the direction of my whole life. Sacred Heart of Jesus, I place my trust in Thee." },
+    ],
+  },
+  {
+    id: "guadalupe",
+    title: "Our Lady of Guadalupe",
+    subtitle: "Queen of the Americas · Star of the New Evangelization",
+    icon: "🌹",
+    color: "#1a2744",
+    feast: "December 12",
+    patron: "The Americas, the unborn, the poor, indigenous peoples",
+    intro: "Our Lady appeared to St. Juan Diego on Tepeyac Hill in 1531, leaving her miraculous image on his tilma. Under her patronage, millions converted to the Faith. This novena is traditionally prayed before her feast on December 12.",
+    openingPrayer: "Our Lady of Guadalupe, by the grace of God you appeared to your servant Juan Diego and left on his cloak your holy image. Hear my prayer as I come before you in this novena, trusting in your powerful intercession before your divine Son.",
+    closingPrayer: "Most Holy Virgin, thou didst choose to reside among us by leaving us thine image. We beseech thee to obtain for us from thy divine Son the graces we have asked during these nine days, but above all, obtain for us the grace of final perseverance in His love. Amen.",
+    days: [
+      { theme: "Her Apparition", prayer: "Our Lady of Guadalupe, you came not to the powerful but to the humble. You appeared to Juan Diego — a poor indigenous man — and showed the world that God's designs are accomplished not through human prestige but through holy simplicity. Grant me the humility to hear God's voice as Juan Diego heard it, even when the message seems beyond my station or ability. Help me to say, as he did, 'Here I am.'" },
+      { theme: "Her Motherhood", prayer: "Our Lady of Guadalupe, you spoke to Juan Diego with the tenderness of a mother: 'Am I not here, I who am your Mother?' I come before you as a child before its mother, bringing before you all my needs — spiritual and temporal. You know what I carry. You know what I fear. Intercede for me before your divine Son, and draw me ever closer to His Sacred Heart." },
+      { theme: "The Unborn", prayer: "Our Lady of Guadalupe, you are the patron of the unborn, depicted in your tilma as a woman with child, bearing the Child of the world's salvation. I pray today for all unborn children — for their protection, for the conversion of those who do not see their dignity, and for mothers and fathers in crisis. Be the advocate of every child who has no voice, as you were the advocate of Juan Diego when no one believed him." },
+      { theme: "Conversion", prayer: "Our Lady of Guadalupe, through your apparition and miraculous image, nine million people came to the Faith in a matter of years. This was not human persuasion but your intercession. I ask today for the conversion of someone I love — someone who has left the Faith, who has never known it, or who knows it but does not live it. Place them under your mantle as you placed the stars on your cloak." },
+      { theme: "The Poor", prayer: "Our Lady of Guadalupe, you came to the poor and the marginalized. You stood with those whom the powerful dismissed. Open my heart to see the poor as you see them — not as burdens but as Christ Himself in disguise (cf. Matthew 25:40). Move me to concrete works of mercy, not merely sympathy. Grant that my charity may have the warmth of a mother's love rather than the coldness of obligation." },
+      { theme: "Faith Under Trial", prayer: "Our Lady of Guadalupe, Juan Diego carried your message even when the bishop did not believe him. He persisted not out of stubbornness but out of obedience to you. Grant me the same perseverance in following God's call even when it is met with skepticism or rejection. When my faith is tested by the disbelief of the world around me, let me return again and again to the certainty of your maternal presence." },
+      { theme: "The Church in the Americas", prayer: "Our Lady of Guadalupe, Queen of the Americas, I pray for the Church in this land — for bishops, priests, and deacons; for catechists, teachers, and parents; for all the faithful who struggle to hand on the Faith. Purify the Church. Strengthen what is weak. Correct what has gone astray. Raise up holy priests and consecrated souls. Let the New Evangelization bear the fruit that your original apparition bore." },
+      { theme: "Trust in Providence", prayer: "Our Lady of Guadalupe, Juan Diego's uncle was gravely ill, and in his grief Juan feared he would miss the message you had entrusted to him. Yet you healed the uncle and fulfilled all your promises. Teach me this trust — that God's plans are not thwarted by our circumstances, that even our detours and disasters are within His providence. Let me not lose heart when the way seems blocked." },
+      { theme: "Her Perpetual Intercession", prayer: "Our Lady of Guadalupe, as I complete this novena I consecrate myself to your maternal care. I ask you to place me and all those I love under your sacred mantle. Intercede for us with your divine Son — not only for the intention of this novena, but throughout our lives and at the hour of our death. Be our advocate before God as you were Juan Diego's advocate before the bishop." },
+    ],
+  },
+  {
+    id: "st_joseph",
+    title: "St. Joseph",
+    subtitle: "Terror of Demons · Patron of the Universal Church",
+    icon: "⚒",
+    color: "#1a2744",
+    feast: "March 19 (also May 1 — St. Joseph the Worker)",
+    patron: "The Universal Church, families, workers, a happy death, the dying",
+    intro: "St. Joseph, foster-father of Jesus and spouse of the Virgin Mary, is the patron of the Universal Church. His silence in the Gospels speaks of a holiness too deep for words. This novena is prayed for his powerful, fatherly intercession.",
+    openingPrayer: "O glorious St. Joseph, spouse of Mary and foster-father of Jesus, to thee was committed the custody of the Holy Family. I come before thee in confidence, asking thee to take my needs before the throne of God.",
+    closingPrayer: "O St. Joseph, whose protection is so great, so strong, so prompt before the throne of God, I place in thee all my interests and desires. Do not abandon me. Intercede for me as thou didst intercede for the Holy Family. And obtain for me above all the grace of a holy death. Amen.",
+    days: [
+      { theme: "His Hidden Life", prayer: "O St. Joseph, most of your life was hidden. Scripture records almost nothing of your years in Nazareth, yet in that hiddenness you sustained the Word made flesh with your labor, your protection, and your love. Teach me the holiness of the ordinary — that my hidden acts, known only to God, are of infinite value in His sight. Grant me peace with a life that seeks no applause but God's." },
+      { theme: "His Obedience", prayer: "O St. Joseph, when the angel spoke to you in dreams, you obeyed without argument or delay. You rose in the middle of the night and fled to Egypt. You returned when commanded. You asked no explanations. Grant me this prompt and trusting obedience to God's will — especially when I do not understand it, when it is inconvenient, when it costs me something I hold dear." },
+      { theme: "Patron of Workers", prayer: "O St. Joseph the Worker, you supported the Holy Family by the labor of your hands. You taught Jesus the carpenter's trade. Sanctify my work — whether it is honored or obscure, whether I love it or endure it. Let me work not merely for wages or recognition but as a participation in God's creative act. When work is hard, let me offer it. When it is rewarding, let me be grateful." },
+      { theme: "Protector of Families", prayer: "O St. Joseph, guardian of the Holy Family, protect my family. You kept watch over Jesus and Mary through dangers — the threat of Herod, exile in a foreign land, poverty and uncertainty. Extend that same vigilance over my household. Protect our faith, our unity, and our love. Drive away whatever threatens the peace and holiness of our home." },
+      { theme: "His Chastity", prayer: "O St. Joseph, most chaste spouse of the Blessed Virgin, your entire life was a testament to the beauty and power of chastity. In an age that has forgotten this virtue, intercede for me and for all those who struggle against impurity. Obtain for us the grace to see chastity not as deprivation but as a gift — a freeing of love from the tyranny of concupiscence." },
+      { theme: "Terror of Demons", prayer: "O St. Joseph, Terror of Demons — the devil fears thee because thou wast the earthly guardian of the Incarnate God. I ask thy protection against all spiritual enemies. Guard my soul, my family, and my home against the assaults of the evil one. Let thy presence be a wall of defense against every temptation and every spiritual attack." },
+      { theme: "His Interior Life", prayer: "O St. Joseph, man of silence and interior depth, you lived in the constant company of the incarnate Word and His immaculate Mother. Your soul was formed by this proximity to divine holiness. Grant me an interior life that is real — not merely external practice but a genuine friendship with God. Let me seek the silence that makes prayer possible and the recollection that makes virtue stable." },
+      { theme: "Patron of the Church", prayer: "O St. Joseph, proclaimed Patron of the Universal Church by Blessed Pius IX, I pray for the Church today — for the Holy Father, for bishops and priests, for all the faithful. The Church faces great trials: persecution from without, weakness and infidelity from within. As you once protected the child Jesus, protect His Mystical Body. Intercede for the Church's unity, purity, and fidelity." },
+      { theme: "Patron of a Happy Death", prayer: "O St. Joseph, patron of a happy death, you died with Jesus at your side and Mary holding your hand — the most blessed death imaginable. When my hour comes, be at my side as you were at yours. Obtain for me the last sacraments, final perseverance in grace, and a death that is not a catastrophe but a homecoming. Pray for me now and at the hour of my death. Amen." },
+    ],
+  },
+  {
+    id: "padre_pio",
+    title: "St. Padre Pio of Pietrelcina",
+    subtitle: "Stigmatist · Confessor of Millions",
+    icon: "🩸",
+    color: "#7a1c1c",
+    feast: "September 23",
+    patron: "Civil defense volunteers, adolescents, stress relief, the sick",
+    intro: "St. Padre Pio (1887–1968) was a Capuchin Franciscan priest who bore the wounds of Christ in his body for fifty years. He spent up to eighteen hours a day in the confessional and is reported to have miraculously read souls. His counsel: 'Pray, hope, and don't worry.'",
+    openingPrayer: "O St. Padre Pio, wounded with the five wounds of Christ, I come before thee with confidence. Thou who spent thy life bringing souls to God through the confessional and through thy suffering — look upon me with compassion and bring my petition before the throne of grace.",
+    closingPrayer: "Dear Padre Pio, as I end this novena I ask thee to continue to intercede for me. Teach me thy counsel: to pray, to hope, and not to worry. Obtain for me a faith that does not flinch and a love that does not count the cost. Amen.",
+    days: [
+      { theme: "The Stigmata", prayer: "O St. Padre Pio, God chose thee to be configured to the suffering Christ in a visible and extraordinary way. The wounds of Jesus appeared in thy flesh. I do not ask for extraordinary gifts, but I ask to share in what they signify: a true participation in Christ's redemptive suffering. Let me embrace the crosses of my daily life not with resentment but with the offering of love, united to Christ's Passion." },
+      { theme: "The Confessional", prayer: "O St. Padre Pio, thou spent more of thy priestly life in the confessional than in any other ministry. Thou had a supernatural knowledge of souls and led thousands to true repentance. Intercede for me that I may approach the Sacrament of Penance with genuine contrition — not fear of punishment but grief for having offended a God who is all love. Obtain for me a good confessor and the grace of a thorough, humble confession." },
+      { theme: "His Prayer Life", prayer: "O St. Padre Pio, thy days began before dawn and were spent almost entirely in prayer. The Mass lasted hours for thee, because thou wast truly present at Calvary. Intercede for me who am so easily distracted and discouraged in prayer. Obtain for me a love of prayer that is not dependent on feeling but rooted in faith — the faith that God hears, and that prayer is never wasted." },
+      { theme: "Pray, Hope, Don't Worry", prayer: "O St. Padre Pio, thy counsel was simple and profound: 'Pray, hope, and don't worry.' I confess that worry is one of my greatest failings — I carry tomorrow's burdens today, and multiply suffering by anticipation. Help me to pray instead of panic, to hope instead of despair, to trust instead of control. Let thy counsel become the pattern of my days." },
+      { theme: "His Suffering", prayer: "O St. Padre Pio, thou suffered not only the physical wounds of the stigmata but also spiritual darkness, demonic attacks, and misunderstanding from ecclesiastical superiors who restricted thy ministry for years. Thou endured all of this in obedience and without bitterness. When I suffer — in body, soul, or relationships — let me look to thy example and find in it the courage to offer rather than complain." },
+      { theme: "His Love for the Mass", prayer: "O St. Padre Pio, thou once said it would be easier for the world to survive without the sun than without the Holy Sacrifice of the Mass. Help me to understand what thou understood — that the Mass is not merely a ritual but the same sacrifice of Calvary, made present on the altar. Rekindle in me a reverence for the Mass, a desire to attend, a gratitude for this gift that no one in heaven can receive as we can." },
+      { theme: "Intercession for the Sick", prayer: "O St. Padre Pio, who bore sickness in thy own body and ministered to the sick throughout thy life — intercede today for all those who are ill in body, in mind, and in spirit. I bring before thee the sick persons I love and those who have no one to pray for them. Touch them with the healing grace of God, and if physical healing is not His will, grant them the deeper healing of a soul at peace with God." },
+      { theme: "The Spiritual Battle", prayer: "O St. Padre Pio, thou knew the spiritual battle as few saints have — thou encountered the devil directly and physically, yet wast not overcome, because thy trust in God was complete. I ask thy intercession in my own spiritual struggles: against the temptations I keep falling into, against the darkness that descends on my soul, against discouragement and despair. Arm me with prayer, the sacraments, and holy boldness." },
+      { theme: "His Intercession for Souls", prayer: "O St. Padre Pio, intercede for me as thou didst for so many souls who came to thee burdened and left consoled. I ask to be among those for whom thou prayest — through this novena and through my desire to imitate thy love for God. Intercede for me at the hour of my death, and do not cease to pray for me until I stand safely before the throne of God." },
+    ],
+  },
+  {
+    id: "josemaria",
+    title: "St. Josemaría Escrivá",
+    subtitle: "Founder of Opus Dei · Apostle of Ordinary Life",
+    icon: "✏",
+    color: "#1a2744",
+    feast: "June 26",
+    patron: "Opus Dei, diocesan priests, ordinary Christians seeking holiness",
+    intro: "St. Josemaría Escrivá (1902–1975) founded Opus Dei in 1928 after receiving a vision of the universal call to holiness through ordinary work and daily life. He was canonized by St. John Paul II in 2002. His central insight: the street, the office, and the kitchen are places of sanctity.",
+    openingPrayer: "O St. Josemaría, you showed the world that holiness is not reserved for monasteries but is found in the middle of the world — in work, in friendship, in family, in the texture of ordinary days. I ask your intercession as I pray this novena.",
+    closingPrayer: "St. Josemaría, obtain for me the grace to see God in the midst of my ordinary life — to sanctify my work, to love those around me with supernatural charity, and to bring Christ to every corner of my world. Help me to begin again whenever I fall, with the confidence of a child before a loving Father. Amen.",
+    days: [
+      { theme: "The Universal Call to Holiness", prayer: "O St. Josemaría, you heard from God the truth that the world had forgotten: every baptized soul is called to holiness. Not just priests and religious, but lawyers, mothers, students, workers — all. This is not an extraordinary calling but the ordinary consequence of Baptism. Help me to take my own call to holiness seriously, and to stop treating it as an ideal for others." },
+      { theme: "Sanctifying Ordinary Work", prayer: "O St. Josemaría, you taught that work is a participation in God's creative act and can be offered as prayer. The key is not what we do but the love with which we do it. Help me to bring this spirit to my work today — to do it well, as unto God, with attention and love. Let my ordinary tasks become an unbroken thread of prayer woven through the day." },
+      { theme: "Divine Filiation", prayer: "O St. Josemaría, the cornerstone of your teaching was divine filiation — the knowledge that we are truly children of God, not slaves or distant admirers. You prayed 'Abba, Father' with the simplicity and confidence of a beloved child. Grant me this same consciousness: that God is not an abstract principle or a distant judge but a Father who loves me personally and infinitely." },
+      { theme: "Unity of Life", prayer: "O St. Josemaría, you taught unity of life — that faith is not a compartment separate from work, family, and leisure, but the animating principle of everything. I confess that I often live a divided life: religious on Sundays, secular the rest of the week. Help me to weave faith into the whole fabric of my existence, so that there is no act, however small, that is not offered to God." },
+      { theme: "Apostolate of Friendship", prayer: "O St. Josemaría, you taught that the most natural apostolate is friendship — that souls are won not by argument but by the contagion of a genuine Christian life. Give me a holy zeal for the souls of those around me — not the zeal that lectures and moralizes, but the zeal that serves, listens, and loves until others ask what makes us different." },
+      { theme: "The Cross", prayer: "O St. Josemaría, you saw in the Cross not an obstacle but the very shape of the Christian life. You taught your sons and daughters to embrace contradiction, failure, illness, and humiliation as the royal road to union with Christ. Grant me this perspective when my own cross grows heavy: that it is not a sign of abandonment but of intimacy with a God who was not ashamed to die." },
+      { theme: "Humility & Beginning Again", prayer: "O St. Josemaría, one of your most consoling teachings was the call to begin again — that the response to every fall is not despair but a humble new beginning, with the cheerfulness of a child who falls learning to walk. I have fallen many times and grown weary of my own weakness. Grant me the grace to rise once more, without self-pity, and to approach God with the trust of a child, not the shame of a slave." },
+      { theme: "Love for the Church", prayer: "O St. Josemaría, you had a burning, filial love for the Church and for the Pope. Intercede today for the Church: for her unity, her fidelity to Tradition, and her courage in the face of the world's hostility and internal division. Strengthen the love for the Church in my own heart, that I may serve her without bitterness and love her without illusion." },
+      { theme: "Interior Life", prayer: "O St. Josemaría, everything in your teaching rested on the foundation of a serious interior life — daily Mass when possible, mental prayer, examination of conscience, frequent Confession, the Rosary. Help me to order my days so that these practices have their proper place — not squeezed into the margins but given the time they deserve as the most important acts of my day." },
+    ],
+  },
+  {
+    id: "st_jude",
+    title: "St. Jude Thaddaeus",
+    subtitle: "Patron of Hopeless Cases",
+    icon: "🕯",
+    color: "#7a1c1c",
+    feast: "October 28",
+    patron: "Hopeless cases, desperate situations, hospitals, the forgotten",
+    intro: "St. Jude Thaddaeus was one of the Twelve Apostles, cousin of Our Lord, and author of the Epistle of Jude. He is invoked as the patron of hopeless and desperate cases — perhaps because, sharing a name with the traitor Judas, he was often overlooked by those seeking heavenly help.",
+    openingPrayer: "O most holy Apostle St. Jude, faithful servant and friend of Jesus, the Church honors and invokes thee universally as the patron of hopeless cases — of things despaired of. Pray for me who am so miserable and helpless. I promise to honor thee as my patron and to make known thy glorious intercession.",
+    closingPrayer: "O glorious Apostle St. Jude, I thank thee for hearing my prayer. Grant that I may never lose hope in God's mercy, no matter how desperate my circumstances appear. Intercede for me that I may persevere in faith, in hope, and in love until I come at last to see the God whom thou didst serve and now behold face to face. Amen.",
+    days: [
+      { theme: "Hope in God Alone", prayer: "O St. Jude, I come to thee in a situation that seems hopeless to me, and perhaps it is — by human measure. But God's measure is different. What is impossible with men is possible with God (Luke 18:27). Grant me a hope that is not anchored in circumstances but in the character of God Himself — a God who raises the dead and calls into being what does not exist (Romans 4:17)." },
+      { theme: "His Apostolic Witness", prayer: "O St. Jude, Apostle and martyr, thou preached the Gospel at the cost of thy life. Thou died rather than deny the Christ thou had walked with and touched. Grant me a faith that has the same weight and seriousness — not a comfortable faith that costs nothing, but a faith that is worth dying for and therefore worth living for. Strengthen my resolve to hold fast to the faith whatever it costs." },
+      { theme: "Contending for the Faith", prayer: "O St. Jude, whose epistle urges us to contend earnestly for the faith once delivered to the saints (Jude 1:3), intercede for me in my own struggles to hold and defend the faith. I face the quiet apostasy of a culture that has abandoned God. Grant me a holy combativeness for the truth, joined with the charity that wins souls." },
+      { theme: "In Desperate Need", prayer: "O St. Jude, I bring before thee now the specific need that has brought me to this novena — the situation I cannot resolve, the suffering I cannot bear, the person I cannot reach, the sin I cannot break. I do not demand a miracle, but I ask for one if it be God's will. And if not, I ask for the grace to bear my cross with the same fidelity that thou bore thine." },
+      { theme: "The Forgotten", prayer: "O St. Jude, patron of those who feel overlooked and forgotten, intercede for all who cry out and are not heard — the chronically ill, the imprisoned, the elderly, the abandoned. I pray today not only for my own needs but for all those in desperate situations who have no one to advocate for them. Let thy powerful intercession reach those who feel furthest from God's mercy." },
+      { theme: "Mercy for Sinners", prayer: "O St. Jude, the mercy of God is the last hope of sinners — including me. I have sinned gravely, and sometimes my sins seem to multiply faster than my repentance. Yet God's mercy is greater than my sin. Remind me that God is able to keep us from stumbling and to present us faultless before His glory (Jude 1:24). I cling to that promise today." },
+      { theme: "Fidelity in Small Things", prayer: "O St. Jude, the hopeless cases that most defeat us are often not dramatic crises but the slow erosion of daily fidelity — prayers abandoned, resolutions broken, small compromises accumulated. Intercede for me that I may be faithful in small things, trusting that great holiness is built one small act of love at a time. Let me not despair of the slow work of sanctification." },
+      { theme: "Protection from Despair", prayer: "O St. Jude, despair is the most dangerous sin — for it holds that one is beyond God's mercy, which is a lie. Protect me from this spiritual catastrophe. When my soul grows dark and I am tempted to believe that God has abandoned me or that my case is truly hopeless, remind me of thy patronage: thou art the saint of hopeless cases precisely because no case is truly hopeless for God." },
+      { theme: "Thanksgiving and Trust", prayer: "O St. Jude, as I complete this novena I thank thee whether or not I have received what I asked for. God's ways are not my ways. Perhaps He has given me something better than what I asked — perhaps He has given me closer union with Himself through this trial. I place my petition at thy feet and leave it there. Intercede for me that whatever God's answer, I will receive it with faith, with hope, and with love." },
+    ],
+  },
+  {
+    id: "st_anthony",
+    title: "St. Anthony of Padua",
+    subtitle: "Evangelical Doctor · Finder of Lost Things",
+    icon: "📖",
+    color: "#1a2744",
+    feast: "June 13",
+    patron: "Lost things, the poor, travelers, marriage, fertility, amputees",
+    intro: "St. Anthony of Padua (1195–1231) was a Franciscan priest and Doctor of the Church whose preaching converted thousands and whose miracles were legendary. He died at 35. His tomb in Padua has been a place of pilgrimage for eight centuries.",
+    openingPrayer: "O gentle and loving St. Anthony, whose heart was ever full of human sympathy — thou art called the finder of lost things, but thy greatest work was finding lost souls and returning them to God. Hear my prayer as I begin this novena.",
+    closingPrayer: "O wonder-working St. Anthony, I thank thee for thy intercession. Thou who didst give back the Gospel book to a thief who repented, give back to me whatever I have lost — whether it be a possession, a relationship, a virtue, or my peace of soul. Help me to find above all what alone matters: God Himself. Amen.",
+    days: [
+      { theme: "Finder of Lost Things", prayer: "O St. Anthony, thou art invoked for things lost — keys, documents, objects misplaced. But the deepest lost things are spiritual: a faith grown cold, a virtue once possessed and now gone, a peace of soul that used to be one's constant companion. I ask thee today to help me find what is lost in my soul — to recover the fervour, the innocence, the closeness to God that I once had and have allowed to slip away." },
+      { theme: "His Love of Scripture", prayer: "O St. Anthony, the book of the Gospels was found miraculously with thee when thou were thought dead — as if Scripture had claimed thee for its own. Intercede for me that I may love the word of God as thou loved it. Grant me a hunger for Scripture, patience to read it slowly, and the grace to receive it not as information but as a living word spoken to me by God today." },
+      { theme: "Preacher of Conversion", prayer: "O St. Anthony, the Hammer of Heretics, thou could silence a crowd with thy preaching and move hard hearts to tears of repentance. I pray today for those I know who are far from God. Thou did not merely argue them into belief — thou loved them into it. Intercede for the conversion of hearts I carry in my own: those who have drifted, those who have been wounded by the Church, those who never knew God." },
+      { theme: "Patron of the Poor", prayer: "O St. Anthony, thou distributed bread to the hungry from thy own table and thy own poverty. The tradition of giving bread to the poor in thy honor continues today. Open my heart to those in material need. Let me not walk past poverty with indifference. Grant me the practical, flesh-and-blood charity that thy own life exemplified." },
+      { theme: "His Miracles", prayer: "O St. Anthony, miracle-worker, thou restored a severed foot, preached to the fish when men would not listen, and converted the hardened with a word. I do not presume to command miracles, but I ask for one if it be God's will. I believe God can intervene in what seems fixed and irreversible. I ask for His intervention in my present need, trusting that with Him nothing is impossible." },
+      { theme: "His Franciscan Spirit", prayer: "O St. Anthony, son of St. Francis, thou shared the Poverello's love of poverty, simplicity, and the suffering Christ. In an age of comfort and accumulation, this witness is desperately needed. Grant me some portion of this spirit — a detachment from possessions and status, a simplicity of life that clears away the clutter and makes room for God." },
+      { theme: "Doctor of the Church", prayer: "O St. Anthony, Evangelical Doctor, thy theological learning was sanctified by a burning love for souls. Thou did not study in order to display learning but in order to bring truth to those who were perishing for lack of it. Intercede for catechists, teachers, theologians, and all who hand on the faith. Grant them thy combination of learning and love, precision and pastoral warmth." },
+      { theme: "Intercession for Marriages", prayer: "O St. Anthony, traditional patron of marriages and those seeking a spouse, intercede today for all who carry the longing for love — the unmarried who desire marriage, the married who are struggling, the widowed who grieve. Grant that every marriage may be rooted in the love of God and that every family may be a domestic church, however imperfect." },
+      { theme: "Return of Lost Souls", prayer: "O St. Anthony, the greatest lost thing is a soul separated from God. On this final day of the novena, I ask above all for the return of any soul that has strayed — including my own, in whatever ways it has wandered. Thou art the finder of what is lost. Find me wherever I am hiding. Bring me back, made whole and restored to the Body of Christ." },
+    ],
+  },
+  {
+    id: "immaculate_conception",
+    title: "Immaculate Conception",
+    subtitle: "Nine Days of Marian Devotion",
+    icon: "⭐",
+    color: "#1a2744",
+    feast: "December 8",
+    patron: "The United States, purity, the unborn",
+    intro: "The dogma of the Immaculate Conception — defined by Blessed Pius IX in Ineffabilis Deus (1854) — teaches that Mary was preserved from original sin from the first moment of her conception. This novena is traditionally prayed in the nine days before her feast on December 8.",
+    openingPrayer: "O Most Holy Virgin Mary, conceived without sin, I come before thee in this novena trusting in thy powerful intercession. Thou who art full of grace, hear my prayer and present it before thy divine Son.",
+    closingPrayer: "O Immaculate Virgin, preserve me from sin, increase my love for God, and obtain for me the graces I have asked in this novena. Above all, obtain for me the grace to imitate thy fiat — thy complete surrender to the will of God — in every circumstance of my life. Amen.",
+    days: [
+      { theme: "Her Immaculate Conception", prayer: "O Blessed Virgin, conceived without sin, the Church teaches that thou wast preserved from original sin not by thy own merit but by the anticipated merits of thy Son's Redemption. Thou wast the one human person who never experienced the darkening of intellect and weakening of will that afflict the rest of us. Yet thou were utterly dependent on God's grace for this privilege. Help me to contemplate this mystery with gratitude — that God prepared a vessel worthy of His Son." },
+      { theme: "Her Fiat", prayer: "O Blessed Virgin, when Gabriel announced to thee the mystery of the Incarnation, thou asked only one question — and then said 'Be it done to me according to thy word' (Luke 1:38). Teach me this fiat. I know what God asks of me in my conscience, and I resist it. Grant me the simplicity and courage to say yes — completely, immediately, irrevocably." },
+      { theme: "Her Humility", prayer: "O Blessed Virgin, thou said: 'He hath regarded the humility of His handmaid' (Luke 1:48). Thou wast the most exalted creature ever made and thou called thyself a handmaid. Grant me a glimpse of thy humility — the radical acknowledgment that I am nothing without God and everything with Him." },
+      { theme: "Her Role at Cana", prayer: "O Blessed Virgin, at Cana thou saw a need that others had not yet noticed and brought it to thy Son. Thy words to the servants remain thy counsel to us: 'Do whatever He tells you' (John 2:5). I bring before thee today needs that I cannot meet myself. Present them to thy Son as thou presented the embarrassed host's need." },
+      { theme: "Her Presence at Calvary", prayer: "O Blessed Virgin, thou stood at the foot of the Cross when nearly all the Apostles had fled. Thou did not prevent thy Son's Passion — thou offered it with Him. Teach me to stand at the foot of the Cross — in the liturgy, in suffering, in prayer — with thy constancy. Let me not flee when following Christ becomes costly." },
+      { theme: "Mother of the Church", prayer: "O Blessed Virgin, from the Cross thy Son gave thee to us as Mother: 'Woman, behold thy son' (John 19:26). Thou accepted this maternal role for all the children of God. I place myself under thy maternal care today. Protect me, form me, and bring me to thy Son as thou brought the disciples in the upper room to the descent of the Holy Ghost." },
+      { theme: "Her Assumption", prayer: "O Blessed Virgin, thou wast assumed body and soul into heavenly glory — the foretaste and promise of our own resurrection. Thou art already fully what we are called to become. Intercede for me that I may live this earthly life with eyes fixed on eternity — not with indifference to daily duty, but with the perspective that makes every act of love immortal." },
+      { theme: "Mediatrix of Grace", prayer: "O Blessed Virgin, the Church has from ancient times understood thee as Mediatrix — not a mediator equal to Christ, but a channel through whom His graces flow to us, as all graces came to the world through thee in the Incarnation. I ask thee today to intercede for the specific graces I need most. Present them to thy Son with the authority of a mother who knows her child's heart." },
+      { theme: "Queen of Heaven", prayer: "O Blessed Virgin, Queen of Heaven and Earth — a queen mother intercedes for her people before the king. I come before thee as a subject before a queen who also happens to be a mother. Present my needs to the King of Kings who is also thy Son. And when this life is over, receive me under thy mantle and bring me home." },
+    ],
+  },
+  {
+    id: "divine_mercy",
+    title: "Divine Mercy",
+    subtitle: "Nine Days of Trust in God's Mercy",
+    icon: "💧",
+    color: "#7a1c1c",
+    feast: "Divine Mercy Sunday (Second Sunday of Easter)",
+    patron: "Sinners, the dying, those in despair of God's mercy",
+    intro: "The Divine Mercy devotion was given in a series of visions in the 1930s. Our Lord asked that a Feast of Divine Mercy be observed on the Sunday after Easter and that a novena begin on Good Friday. Each day is prayed for a different group of souls.",
+    openingPrayer: "O Jesus, eternal truth, our life, I call upon Thee and I beg Thy mercy for poor sinners. O sweetest Heart of Jesus, full of pity and compassion, I implore Thy mercy for poor sinners. Amen.",
+    closingPrayer: "O Blood and Water that gushed forth from the Heart of Jesus as a fount of mercy for us — I trust in Thee. Jesus, I trust in Thee. Make of me a worthy vessel of Thy mercy, that I may bring others to trust in Thee as I have learned to trust. Amen.",
+    days: [
+      { theme: "All Mankind, Especially Sinners", prayer: "Most merciful Jesus, whose very nature it is to have compassion on us and to forgive us — do not look upon our sins, but upon the trust we place in Thy infinite goodness. Receive us all into the abode of Thy most compassionate Heart. Never let us escape from It. We beg this of Thee by Thy love which unites Thee to the Father and the Holy Spirit. O omnipotence of Divine Mercy, help us in all our needs." },
+      { theme: "Priests and Religious", prayer: "Most merciful Jesus, from whom comes all that is good, increase Thy grace in men and women consecrated to Thy service. Grant them the light of Thy wisdom and protect them with Thy strength. Guard them from the world's contamination, and give them the grace of a burning charity. May the power of Thy mercy accompany them wherever they go." },
+      { theme: "Devout and Faithful Souls", prayer: "Most merciful Jesus, Thou dost bestow special graces on those who have given themselves to a life of fidelity and love. Grant that those who serve Thee with the constancy of daily devotion may become ever more deeply united to Thee. Strengthen them in times of trial, console them in darkness, and let Thy mercy sustain them as they sustain others." },
+      { theme: "Those Who Do Not Yet Know God", prayer: "Most compassionate Jesus, Thou art the Light of the whole world. Receive into the abode of Thy most compassionate Heart the souls of those who do not yet know Thee. Let the rays of Thy grace enlighten them that they, too, may glorify the generosity of Thy mercy for endless ages. May they come to know the God who loves them before they made any move toward Him." },
+      { theme: "Separated Brethren", prayer: "Most merciful Jesus, goodness itself, Thou dost not refuse light to those who seek it of Thee. Receive into the abode of Thy most compassionate Heart those souls who have separated from Thy Church. Draw them by Thy light into the unity of the Church, and do not let them escape from the abode of Thy most compassionate Heart." },
+      { theme: "The Meek and Humble", prayer: "Most merciful Jesus, Thou Thyself said: 'Learn from Me for I am meek and humble of Heart.' Receive into the abode of Thy most compassionate Heart all meek and humble souls and the souls of little children. These souls send all heaven into ecstasy, and they are the Father's favorites — they are a fragrant bouquet before the throne of God." },
+      { theme: "Those Who Venerate the Divine Mercy", prayer: "Most merciful Jesus, whose Heart is Love itself, receive into the abode of Thy most compassionate Heart the souls of those who particularly venerate and glorify the greatness of Thy mercy. These souls are mighty with the very power of God Himself. In the midst of all afflictions and adversities they go forward confident in God's mercy — united to Thee they carry all of mankind on their shoulders." },
+      { theme: "The Souls in Purgatory", prayer: "Most merciful Jesus, Thou Thyself have said that Thou desire mercy. Behold, I bring into the abode of Thy most compassionate Heart the souls in Purgatory — souls who are very dear to Thee, and yet who must make retribution to Thy justice. May the streams of blood and water which gushed forth from Thy Heart put out the flames of Purgatory." },
+      { theme: "Lukewarm Souls", prayer: "Most compassionate Jesus, Thou art compassion itself. I bring lukewarm souls into the abode of Thy most compassionate Heart. In this fire of pure love let these tepid souls — who, like corpses, fill Thee with such deep loathing — be once again set aflame. O most compassionate Jesus, exercise the omnipotence of Thy mercy and draw them into the very ardour of Thy love." },
+    ],
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// NOVENA TAB COMPONENT
+// ═══════════════════════════════════════════════════════════════════
+function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
+  const [view, setView] = useState("list");
+  const [selected, setSelected] = useState(null);
+  const [dayIdx, setDayIdx] = useState(0);
+  const [completedDays, setCompletedDays] = useState({});
+  const [storageReady, setStorageReady] = useState(false);
+  const [fade, setFade] = useState(true);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await window.storage.get("novena_progress");
+        if (result && result.value) setCompletedDays(JSON.parse(result.value));
+      } catch (_) {}
+      setStorageReady(true);
+    })();
+  }, []);
+
+  const saveProgress = async (updated) => {
+    try { await window.storage.set("novena_progress", JSON.stringify(updated)); } catch (_) {}
+  };
+
+  const getDaysCompleted = (id) => (completedDays[id] || Array(9).fill(false)).filter(Boolean).length;
+  const isDayDone = (id, idx) => (completedDays[id] || Array(9).fill(false))[idx] === true;
+
+  const markDayComplete = async (id, idx) => {
+    const days = completedDays[id] ? [...completedDays[id]] : Array(9).fill(false);
+    days[idx] = true;
+    const updated = { ...completedDays, [id]: days };
+    setCompletedDays(updated);
+    await saveProgress(updated);
+    return days.every(Boolean);
+  };
+
+  const resetNovena = async (id) => {
+    const updated = { ...completedDays, [id]: Array(9).fill(false) };
+    setCompletedDays(updated);
+    await saveProgress(updated);
+  };
+
+  const transition = (fn) => {
+    setFade(false);
+    setTimeout(() => { fn(); setFade(true); if (scrollRef.current) scrollRef.current.scrollTop = 0; }, 160);
+  };
+
+  const openNovena = (novena) => {
+    setSelected(novena);
+    const days = completedDays[novena.id] || Array(9).fill(false);
+    const firstIncomplete = days.findIndex(d => !d);
+    setDayIdx(firstIncomplete === -1 ? 8 : firstIncomplete);
+    setView("detail");
+  };
+
+  const completeDay = async () => {
+    const allDone = await markDayComplete(selected.id, dayIdx);
+    if (allDone) {
+      transition(() => setView("complete"));
+    } else {
+      transition(() => setView("detail"));
+    }
+  };
+
+  // ── List ──
+  if (view === "list") {
+    return (
+      <>
+        <GlobalTopBar title="Novena Guide" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 22 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>🕯</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Novena Guide</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0 }}>Nine days of prayer · Progress saved</p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {NOVENAS.map(nov => {
+              const done = getDaysCompleted(nov.id);
+              const isComplete = done === 9;
+              return (
+                <button key={nov.id} onClick={() => openNovena(nov)} style={{
+                  display: "flex", alignItems: "center", gap: 14, padding: "14px 16px",
+                  background: T.warmWhite,
+                  border: `1px solid ${isComplete ? "rgba(212,168,67,0.45)" : T.cardBorder}`,
+                  borderRadius: 14, cursor: "pointer", textAlign: "left",
+                  boxShadow: isComplete ? "0 2px 12px rgba(212,168,67,0.12)" : "none",
+                }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 12, flexShrink: 0, background: `linear-gradient(135deg, ${nov.color}, ${nov.color}cc)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: fz(22) }}>{nov.icon}</div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{nov.title}</div>
+                    <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12.5), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{nov.feast}</div>
+                    <div style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
+                      <div style={{ flex: 1, height: 4, background: "rgba(212,168,67,0.15)", borderRadius: 2, overflow: "hidden" }}>
+                        <div style={{ height: "100%", width: `${(done / 9) * 100}%`, background: isComplete ? `linear-gradient(90deg, ${T.gold}, ${T.goldLight})` : T.gold, borderRadius: 2, transition: "width 0.4s" }} />
+                      </div>
+                      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, color: isComplete ? T.gold : T.inkLight, letterSpacing: "0.04em", flexShrink: 0 }}>
+                        {isComplete ? "✓ Done" : done === 0 ? "Begin" : `Day ${done + 1}/9`}
+                      </span>
+                    </div>
+                  </div>
+                  <span style={{ color: T.gold, fontSize: 18 }}>›</span>
+                </button>
+              );
+            })}
+          </div>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 18, lineHeight: 1.5 }}>
+            Your progress is saved on this device and persists between sessions.
+          </p>
+        </div>
+      </>
+    );
+  }
+
+  // ── Detail (day selector) ──
+  if (view === "detail" && selected) {
+    return (
+      <>
+        <TopBar title={selected.title} showBack={true} onBack={() => transition(() => setView("list"))} />
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px", opacity: fade ? 1 : 0, transition: "opacity 0.16s" }}>
+          <div style={{ textAlign: "center", marginBottom: 18 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 58, height: 58, borderRadius: "50%", background: `linear-gradient(135deg, ${selected.color}, ${selected.color}cc)`, border: "1.5px solid rgba(212,168,67,0.3)", marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>{selected.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 2px" }}>{selected.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.gold, margin: "0 0 2px" }}>{selected.subtitle}</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: 0 }}>Feast: {selected.feast}</p>
+          </div>
+          <Card style={{ marginBottom: 14 }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{selected.intro}</p>
+          </Card>
+          <div style={{ marginBottom: 14, padding: "10px 14px", background: T.goldFaint, borderRadius: 10, border: `1px solid rgba(212,168,67,0.2)` }}>
+            <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Patron of · </span>
+            <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark, fontStyle: "italic" }}>{selected.patron}</span>
+          </div>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>Nine Days</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 18 }}>
+            {selected.days.map((day, i) => {
+              const done2 = isDayDone(selected.id, i);
+              const isNext = !done2 && (i === 0 || isDayDone(selected.id, i - 1));
+              return (
+                <button key={i} onClick={() => { setDayIdx(i); setView("pray"); }} style={{
+                  display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
+                  background: done2 ? "rgba(212,168,67,0.08)" : T.warmWhite,
+                  border: `1px solid ${done2 ? "rgba(212,168,67,0.35)" : isNext ? T.cardBorderStrong : T.cardBorder}`,
+                  borderRadius: 12, cursor: "pointer", textAlign: "left",
+                }}>
+                  <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, background: done2 ? `linear-gradient(135deg, ${T.gold}, ${T.goldLight})` : isNext ? `linear-gradient(135deg, ${selected.color}, ${selected.color}cc)` : "rgba(212,168,67,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    {done2 ? <span style={{ color: T.navy, fontSize: fz(14), fontWeight: 700 }}>✓</span> : <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: isNext ? "#d4a843" : T.inkLight }}>{i + 1}</span>}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: done2 ? T.gold : T.navyText, letterSpacing: "0.04em" }}>Day {i + 1} · {day.theme}</div>
+                    {done2 && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>Completed</div>}
+                    {isNext && !done2 && <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12), color: T.gold, fontStyle: "italic", marginTop: 1 }}>Up next</div>}
+                  </div>
+                  <span style={{ color: T.inkLight, fontSize: 15 }}>›</span>
+                </button>
+              );
+            })}
+          </div>
+          {getDaysCompleted(selected.id) > 0 && (
+            <button onClick={() => resetNovena(selected.id)} style={{ background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "center" }}>
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textDecoration: "underline" }}>Reset progress</span>
+            </button>
+          )}
+        </div>
+      </>
+    );
+  }
+
+  // ── Pray (single day) ──
+  if (view === "pray" && selected) {
+    const day = selected.days[dayIdx];
+    const alreadyDone = isDayDone(selected.id, dayIdx);
+    return (
+      <>
+        <TopBar title={`Day ${dayIdx + 1} of 9`} showBack={true} onBack={() => transition(() => setView("detail"))}
+          rightAction={<div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", maxWidth: 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{selected.icon}</div>}
+        />
+        <div style={{ display: "flex", gap: 4, padding: "10px 20px 6px", background: T.warmWhite, justifyContent: "center" }}>
+          {selected.days.map((_, i) => (
+            <div key={i} style={{ width: i === dayIdx ? 20 : 7, height: 7, borderRadius: 4, background: isDayDone(selected.id, i) ? T.gold : i === dayIdx ? selected.color : "rgba(212,168,67,0.2)", opacity: isDayDone(selected.id, i) && i !== dayIdx ? 0.6 : 1, transition: "all 0.3s" }} />
+          ))}
+        </div>
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "18px 22px 20px", opacity: fade ? 1 : 0, transition: "opacity 0.16s" }}>
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Day {dayIdx + 1} · {day.theme}</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: 0 }}>{selected.title}</h2>
+          </div>
+          <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.navy}` }}>
+            <CardTitle color={T.navyText}>Opening Prayer</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.openingPrayer}</p>
+          </Card>
+          <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.crimson}` }}>
+            <CardTitle color={T.crimson}>Day {dayIdx + 1} — {day.theme}</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{day.prayer}</p>
+          </Card>
+          <Card style={{ marginBottom: 20, borderLeft: `3px solid ${T.gold}` }}>
+            <CardTitle color={T.gold}>Closing Prayer</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.closingPrayer}</p>
+          </Card>
+        </div>
+        <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, flexShrink: 0 }}>
+          {alreadyDone ? (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ textAlign: "center", padding: "8px", fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.gold, fontStyle: "italic" }}>✓ This day is already completed</div>
+              {dayIdx < 8 ? <CrimsonBtn onClick={() => transition(() => setDayIdx(dayIdx + 1))}>Next Day ›</CrimsonBtn> : <NavyBtn onClick={() => transition(() => setView("detail"))}>Return to Novena</NavyBtn>}
+            </div>
+          ) : (
+            <CrimsonBtn onClick={completeDay}>{dayIdx < 8 ? "Mark Complete & Continue ›" : "Complete Novena ✓"}</CrimsonBtn>
+          )}
+        </div>
+      </>
+    );
+  }
+
+  // ── Complete ──
+  if (view === "complete" && selected) {
+    return (
+      <>
+        <GlobalTopBar title="Novena Complete" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: "50%", background: T.goldFaint, border: "2px solid rgba(212,168,67,0.4)", marginBottom: 14 }}>
+              <span style={{ fontSize: fz(32) }}>{selected.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 500, color: T.inkDark, margin: "0 0 6px" }}>{selected.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.gold, margin: "0 0 4px" }}>Nine days completed</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, margin: 0 }}>Your prayer has been heard.</p>
+          </div>
+          <Card style={{ marginBottom: 20, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16.5), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.closingPrayer}</p>
+          </Card>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <GhostBtn onClick={() => resetNovena(selected.id).then(() => transition(() => setView("detail")))}>Pray Again</GhostBtn>
+            <NavyBtn onClick={() => transition(() => setView("list"))}>All Novenas</NavyBtn>
+            <GhostBtn onClick={goHome}>Return to Prayer</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// CATECHISM DRILL — BALTIMORE CATECHISM Q&A
+// ═══════════════════════════════════════════════════════════════════
+
+const BC_DECKS = [
+  {
+    id: "creed",
+    icon: "✝",
+    title: "The Creed",
+    subtitle: "Faith & the Holy Trinity",
+    color: "#1a2744",
+    desc: "God, the Trinity, Creation, the Incarnation, and the Last Things",
+    cards: [
+      { q: "Who made us?", a: "God made us.", ref: "BC §1", note: "The first question and answer of the Baltimore Catechism. All catechesis begins here — with the fundamental fact that we are creatures, not self-made." },
+      { q: "Who is God?", a: "God is the Supreme Being, infinitely perfect, who made all things and keeps them in existence.", ref: "BC §4", note: "God is not merely a powerful being among others but the Supreme Being — existence itself. Cf. Exodus 3:14: 'I am Who am.'" },
+      { q: "Why did God make us?", a: "God made us to know Him, to love Him, and to serve Him in this world, and to be happy with Him forever in the next.", ref: "BC §6", note: "This is the foundational teleological statement of Catholic anthropology: our purpose is not self-fulfillment but union with God." },
+      { q: "What is the Blessed Trinity?", a: "The Blessed Trinity is one God in three divine Persons — the Father, the Son, and the Holy Ghost.", ref: "BC §29", note: "The Trinity is the central mystery of Christian faith. Each Person is fully and equally God; the three are one in substance, distinct in Person." },
+      { q: "Is the Son of God really a man?", a: "Yes, the Son of God is true God and true man.", ref: "BC §60", note: "Defined by the Council of Chalcedon (451 AD): Christ has two complete natures — divine and human — united in one divine Person, without confusion or division." },
+      { q: "What do we mean by the Incarnation?", a: "By the Incarnation we mean that the Son of God took to Himself a human nature — a body and soul like ours.", ref: "BC §57", note: "John 1:14: 'And the Word was made flesh, and dwelt among us.' The Incarnation is the hinge of all history." },
+      { q: "Why did the Son of God become man?", a: "The Son of God became man to satisfy for the sins of mankind and to bring us back to God.", ref: "BC §58", note: "The Redemption is the purpose of the Incarnation. The Catechism of Trent adds: also to be our model of holiness, and to raise human nature to its highest dignity." },
+      { q: "What do we mean by the Redemption?", a: "By the Redemption we mean that Jesus Christ, as the Redeemer of the whole human race, offered His sufferings and death to God as a fitting sacrifice in satisfaction for the sins of men, and regained for them the right to be children of God and heirs of heaven.", ref: "BC §110", note: "Cf. Romans 5:19 (Douay-Rheims): 'For as by the disobedience of one man, many were made sinners; so also by the obedience of one, many shall be made just.'" },
+      { q: "What is meant by the 'descent into hell'?", a: "By the descent of Christ into hell is meant that, after He died, the soul of Christ descended into a place or state of rest, called limbo, where the souls of the just were waiting for Him.", ref: "BC §112", note: "This is not the hell of the damned but the 'limbo of the Fathers' (sheol) — the place where the just awaited redemption before heaven was opened by Christ's death." },
+      { q: "What do we mean by the Resurrection of Christ?", a: "By the Resurrection of Christ we mean that Christ, on the third day after His death, rose from the dead with His glorified body.", ref: "BC §113", note: "The Resurrection is not a resuscitation but a transformation. Christ rose bodily and gloriously. St. Paul: 'If Christ be not risen again, your faith is vain' (1 Cor 15:17)." },
+      { q: "What is the Holy Ghost?", a: "The Holy Ghost is the Third Person of the Blessed Trinity, equal to the Father and the Son.", ref: "BC §30", note: "The Holy Ghost proceeds from the Father and the Son (Filioque). He is the bond of love between Father and Son and the Sanctifier of souls." },
+      { q: "What is meant by the 'communion of saints'?", a: "By the communion of saints is meant the union of the faithful on earth, the blessed in heaven, and the souls in purgatory with Christ as their Head.", ref: "BC §197", note: "Death does not dissolve the Church. The living can assist the dead through prayer and indulgences; the saints intercede for us. We are one body in Christ." },
+      { q: "What are the four last things?", a: "The four last things are: Death, Judgment, Hell, and Heaven.", ref: "BC §156", note: "Ecclesiasticus 7:40 (Douay-Rheims): 'In all thy works remember thy last end, and thou shalt never sin.' Meditation on the four last things is a classical aid to moral seriousness." },
+      { q: "What is original sin?", a: "Original sin is the sin that was committed by our first parents, Adam and Eve, and which is passed on to all their descendants.", ref: "BC §48", note: "We inherit not Adam's personal guilt but the privation of sanctifying grace and the resulting disordering of human nature: darkened intellect, weakened will, concupiscence." },
+      { q: "Is God all-knowing?", a: "Yes, God knows all things, even our most secret thoughts, words, and actions.", ref: "BC §5", note: "The divine omniscience is foundational to the moral life: we cannot hide our acts from God. It also grounds confidence in providence — God knows and cares for every detail." },
+    ],
+  },
+  {
+    id: "sacraments",
+    icon: "🕊",
+    title: "The Sacraments",
+    subtitle: "Grace & the Seven Sacraments",
+    color: "#7a1c1c",
+    desc: "What the sacraments are, what they do, and how to receive them worthily",
+    cards: [
+      { q: "What is a sacrament?", a: "A sacrament is an outward sign instituted by Christ to give grace.", ref: "BC §130", note: "This classic definition contains three elements: (1) outward sign — sensible matter and form, (2) instituted by Christ — not the Church's invention, (3) to give grace — it actually produces what it signifies." },
+      { q: "How many sacraments are there?", a: "There are seven sacraments: Baptism, Confirmation, Holy Eucharist, Penance, Extreme Unction, Holy Orders, and Matrimony.", ref: "BC §131", note: "Defined at the Council of Trent (Session VII, 1547) against the Protestant reduction to two. Each sacrament confers grace proper to its specific end." },
+      { q: "What is Baptism?", a: "Baptism is a sacrament which cleanses us from original sin, makes us Christians, children of God, and heirs of heaven.", ref: "BC §156", note: "Baptism is the gateway to all other sacraments. It imprints an indelible character on the soul and can never be repeated. John 3:5: 'Unless a man be born again of water and the Holy Ghost, he cannot enter into the kingdom of God.'" },
+      { q: "What is the Holy Eucharist?", a: "The Holy Eucharist is a sacrament and a sacrifice. In the sacrament it is the Body and Blood, Soul and Divinity of Jesus Christ under the appearances of bread and wine.", ref: "BC §208", note: "The Eucharist is the 'source and summit' of the Catholic faith. Transubstantiation — defined at the Fourth Lateran Council (1215) and Trent — means the substance is wholly changed while accidents remain." },
+      { q: "What is Transubstantiation?", a: "Transubstantiation is the changing of the whole substance of the bread into the Body, and the whole substance of the wine into the Blood of Christ.", ref: "BC §214", note: "After the consecration, there is no longer bread and wine — only Christ. The appearances remain for our weakness. This is a miracle of the highest order, renewed at every Mass." },
+      { q: "What is the Sacrament of Penance?", a: "Penance is a sacrament in which the sins committed after Baptism are forgiven through the absolution of a priest.", ref: "BC §234", note: "Christ gave this power to the Apostles on Easter night: 'Receive ye the Holy Ghost. Whose sins you shall forgive, they are forgiven them' (John 20:22–23). Only a validly ordained priest can absolve." },
+      { q: "What is required for a good confession?", a: "For a good confession five things are required: examination of conscience, sorrow for sin, firm purpose of amendment, confession of sins to the priest, and satisfaction or penance.", ref: "BC §237", note: "Each of these five acts is essential. Notably, 'firm purpose of amendment' means a genuine intention to avoid the sin and its near occasions — not merely a hope or wish." },
+      { q: "What is an act of perfect contrition?", a: "An act of perfect contrition is sorrow for sin because sin offends God, who is all-good and deserving of all our love.", ref: "BC §241", note: "Perfect contrition arises from love of God, not merely fear of punishment (which is imperfect contrition, or attrition). Perfect contrition restores grace even before absolution, but one must still confess mortal sins." },
+      { q: "What is Confirmation?", a: "Confirmation is the sacrament by which we receive the Holy Ghost to make us strong and perfect Christians and soldiers of Jesus Christ.", ref: "BC §193", note: "The analogy of the soldier is classical: Confirmation strengthens us for spiritual combat. The bishop (or delegated priest) anoints with chrism, making the character of the soldier of Christ permanent." },
+      { q: "What is Extreme Unction?", a: "Extreme Unction is a sacrament that gives health and strength to the soul, and sometimes to the body, when we are in danger of death from sickness.", ref: "BC §261", note: "James 5:14–15: 'Is any man sick among you? Let him bring in the priests of the church, and let them pray over him, anointing him with oil in the name of the Lord.' It remits venial sins and remnants of sin." },
+      { q: "What is the sacrament of Holy Orders?", a: "Holy Orders is the sacrament by which men are ordained as priests or deacons of the Church.", ref: "BC §265", note: "Holy Orders imprints an indelible character and confers the power to offer Mass, forgive sins (in the case of priests), and preach with authority. Women cannot receive Holy Orders — this teaching was definitively reaffirmed by John Paul II in Ordinatio Sacerdotalis (1994)." },
+      { q: "What is the sacrament of Matrimony?", a: "Matrimony is the sacrament by which a baptized man and a baptized woman bind themselves for life in a lawful marriage and receive the grace to discharge its duties.", ref: "BC §268", note: "Marriage between the baptized is not merely a contract but a sacrament. Its three goods are: fides (fidelity), proles (openness to children), and sacramentum (indissolubility). Casti Connubii (1930) is the fullest modern treatment." },
+      { q: "What is sanctifying grace?", a: "Sanctifying grace is that grace which confers on our souls a new life, that is, a sharing in the life of God Himself.", ref: "BC §136", note: "Sanctifying grace is a permanent, habitual quality of the soul that makes us truly pleasing to God and capable of meritorious acts. It is lost by mortal sin and restored by worthy reception of Penance." },
+    ],
+  },
+  {
+    id: "commandments",
+    icon: "⚖",
+    title: "The Commandments",
+    subtitle: "God's Law & our moral duties",
+    color: "#1a2744",
+    desc: "The Ten Commandments, the precepts of the Church, and the moral life",
+    cards: [
+      { q: "What are the chief sources of actual sin?", a: "The chief sources of actual sin are: Pride, Covetousness, Lust, Anger, Gluttony, Envy, and Sloth — the seven capital sins.", ref: "BC §59", note: "These are called 'capital' (from caput, head) because they are the roots from which other sins spring. St. Gregory the Great codified the traditional list. Each has a corresponding virtue that counters it." },
+      { q: "What is a mortal sin?", a: "A mortal sin is a grievous offense against the law of God, committed with full knowledge and full consent of the will.", ref: "BC §57", note: "Three conditions are all required: (1) grave matter, (2) full knowledge, (3) full consent. If any one is lacking, the sin is venial, not mortal. Mortal sin kills sanctifying grace in the soul." },
+      { q: "What is a venial sin?", a: "A venial sin is a less serious offense against the law of God, which does not kill the soul but weakens it.", ref: "BC §58", note: "Venial sin weakens charity, disorders the affections, and disposes one toward greater sin, but does not deprive the soul of sanctifying grace or rupture friendship with God." },
+      { q: "What is the First Commandment?", a: "The First Commandment is: I am the Lord thy God; thou shalt not have strange gods before Me.", ref: "BC §71", note: "This commandment governs all worship. It forbids false religion, superstition, divination, magic, astrology, and consulting the occult. It requires faith, hope, and charity toward God above all things." },
+      { q: "What does the Second Commandment forbid?", a: "The Second Commandment forbids all false, rash, unjust, or irreverent use of God's name.", ref: "BC §81", note: "This includes blasphemy, perjury, and profanity. An oath calls God to witness; invoking Him falsely or for trifles is a grave misuse of the divine name." },
+      { q: "What does the Third Commandment require?", a: "The Third Commandment requires us to keep holy the Lord's day by hearing Mass and resting from servile work.", ref: "BC §83", note: "For Catholics, Sunday (the day of Resurrection) fulfills the Sabbath obligation. Missing Sunday Mass without grave cause is a mortal sin. The obligation is one of the precepts of the Church." },
+      { q: "What does the Fourth Commandment require?", a: "The Fourth Commandment requires us to honor, love, and obey our parents and all lawful superiors.", ref: "BC §91", note: "Ephesians 6:2–3: 'Honour thy father and thy mother, which is the first commandment with a promise.' The family is the first school of virtue; filial piety is the foundation of all social order." },
+      { q: "What does the Fifth Commandment forbid?", a: "The Fifth Commandment forbids all wilful murder, fighting, anger, hatred, revenge, and bad example.", ref: "BC §97", note: "The negative precept (do not kill) is the minimum. The positive aspect demands care for our own life and health and genuine love of neighbor. Evangelium Vitae (1995) applies this to abortion, euthanasia, and capital punishment." },
+      { q: "What does the Sixth Commandment forbid?", a: "The Sixth Commandment forbids all sins of impurity with another's spouse.", ref: "BC §101", note: "The Sixth and Ninth Commandments together govern chastity. The BC addresses adultery (Sixth) and impure desires (Ninth). Casti Connubii and Humanae Vitae address the full scope of sexual morality." },
+      { q: "What does the Seventh Commandment forbid?", a: "The Seventh Commandment forbids all unjust taking or keeping of another's property.", ref: "BC §103", note: "This covers theft, fraud, cheating, unjust contracts, and failure to pay just wages. It also obliges restitution: stolen goods must be returned if possible." },
+      { q: "What does the Eighth Commandment forbid?", a: "The Eighth Commandment forbids all false statements that unjustly injure the reputation of another.", ref: "BC §106", note: "Detraction reveals true but hidden faults without just cause. Calumny adds falsehood. Rash judgment assumes another's guilt without sufficient reason. All three sin against truth and charity." },
+      { q: "What are the chief precepts of the Church?", a: "The chief precepts of the Church are: (1) attend Mass on Sundays and holy days, (2) fast and abstain on days prescribed, (3) confess at least once a year, (4) receive Communion during Eastertide, (5) contribute to the support of the Church.", ref: "BC §120", note: "These are the minimum obligations imposed by the Church. They presuppose but do not exhaust the moral life. The precepts point to an interior life that must animate the external observances." },
+      { q: "What is the virtue of justice?", a: "Justice is the virtue that inclines us to give to every man what is his due.", ref: "BC §107", note: "Justice is one of the four cardinal virtues. It governs our relations with others — both commutative justice (individual exchanges) and distributive justice (social arrangements). Rerum Novarum and Quadragesimo Anno develop this in the social order." },
+      { q: "What is the virtue of prudence?", a: "Prudence is the virtue that inclines us to see what is good in every circumstance and to use the best means to accomplish it.", ref: "BC §109", note: "Prudence is the 'charioteer of the virtues' (St. Thomas Aquinas, Summa II-II, Q.47). It is the practical wisdom by which we discern the right action in concrete situations. It cannot be replaced by following rules mechanically." },
+    ],
+  },
+  {
+    id: "prayer",
+    icon: "🙏",
+    title: "Prayer",
+    subtitle: "The Our Father & Christian prayer",
+    color: "#7a1c1c",
+    desc: "The nature of prayer, the Our Father, and the Hail Mary",
+    cards: [
+      { q: "What is prayer?", a: "Prayer is the lifting up of our minds and hearts to God.", ref: "BC §112", note: "This classical definition (from St. John Damascene) encompasses all forms of prayer: petition, thanksgiving, adoration, and contrition. Prayer is not first about words but about the movement of the soul toward God." },
+      { q: "Why must we pray?", a: "We must pray because prayer is necessary for salvation — God has commanded it, and without it we cannot obtain His help.", ref: "BC §113", note: "Luke 18:1: 'We ought always to pray, and not to faint.' Prayer is not optional devotion but a grave obligation. The Baltimore Catechism notes that God has attached the graces we need to the act of asking for them." },
+      { q: "What are the chief kinds of prayer?", a: "The chief kinds of prayer are: adoration, thanksgiving, contrition, and petition.", ref: "BC §116", note: "The acronym ACTS captures these. Adoration acknowledges God's majesty; thanksgiving returns gratitude for gifts; contrition expresses sorrow for sin; petition asks for our needs." },
+      { q: "Who taught us the Our Father?", a: "Jesus Christ Himself taught us the Our Father when His disciples asked Him: 'Lord, teach us to pray.'", ref: "BC §118", note: "Luke 11:1–4; Matthew 6:9–13 (Douay-Rheims). The Our Father is the perfect prayer because its author is the Son of God. The Roman Catechism devotes an entire section to its seven petitions." },
+      { q: "What do we ask in the first three petitions of the Our Father?", a: "In the first three petitions we ask that God may be honored by all men, that His kingdom may be established, and that His will may be done on earth.", ref: "BC §120", note: "These petitions are directed to God's glory. They express the fundamental priority of the Christian life: God first, self second. 'Thy kingdom come' is a prayer for the conversion of souls and the final coming of Christ." },
+      { q: "What do we ask in the last four petitions of the Our Father?", a: "In the last four petitions we ask for our daily bread, for the forgiveness of our sins, for help against temptation, and for deliverance from evil.", ref: "BC §121", note: "The 'daily bread' encompasses both material needs and the Eucharist. The petition for forgiveness explicitly ties our receiving of pardon to our granting of it: 'as we forgive those who trespass against us.'" },
+      { q: "What is the Hail Mary?", a: "The Hail Mary is a prayer honoring the Blessed Virgin Mary, combining the words of the Angel Gabriel, St. Elizabeth, and the Church's petition.", ref: "BC §124", note: "Luke 1:28: 'Hail, full of grace, the Lord is with thee'; Luke 1:42: 'Blessed art thou among women, and blessed is the fruit of thy womb.' The second half was added by the Church: 'Holy Mary, Mother of God…'" },
+      { q: "What is meditation?", a: "Meditation is a form of mental prayer in which we use our mind and imagination to consider the truths of faith and apply them to our lives.", ref: "BC §116 (extended)", note: "The Ignatian method of meditation — placing oneself in a scene from Scripture and applying the three faculties (memory, understanding, will) — is one of many classical forms. St. Francis de Sales also taught accessible methods of meditation." },
+      { q: "What are the conditions for prayer to be heard?", a: "For prayer to be heard, it must be humble, trusting, persevering, resigned to God's will, and in the name of Jesus Christ.", ref: "BC §114", note: "God always hears prayer, but He may not always grant what we ask in the way or time we expect. The Catechism teaches that God answers every sincere prayer — sometimes with yes, sometimes no, sometimes with something better." },
+      { q: "What is the Angelus?", a: "The Angelus is a prayer honoring the Incarnation, recited three times a day at the sound of the bell, commemorating the Annunciation.", ref: "BC devotional tradition", note: "The Angelus recalls Gabriel's announcement to Mary (Luke 1:26–38) and her fiat. The concluding prayer ('Pour forth, we beseech Thee…') is drawn from tradition. Its three-times-daily rhythm is an ancient way of sanctifying the hours." },
+    ],
+  },
+  {
+    id: "sin_grace",
+    icon: "⛰",
+    title: "Sin & Grace",
+    subtitle: "The moral life and God's mercy",
+    color: "#1a2744",
+    desc: "The nature of sin, grace, virtue, and the path to holiness",
+    cards: [
+      { q: "What is actual sin?", a: "Actual sin is any willful thought, desire, word, action, or omission forbidden by the law of God.", ref: "BC §56", note: "The Baltimore Catechism lists five species: thought, desire, word, action, and omission. We can sin by what we do and by what we fail to do — including the omission of required good acts." },
+      { q: "What are the three conditions for mortal sin?", a: "For a sin to be mortal it must be: (1) a grievous matter, (2) committed with sufficient reflection, and (3) with full consent of the will.", ref: "BC §57", note: "All three must be present. A gravely wrong act done without full knowledge or consent is venial, not mortal. This is important for avoiding scrupulosity: invincible ignorance and diminished freedom reduce culpability." },
+      { q: "What is the sin against the Holy Ghost?", a: "The sin against the Holy Ghost is final impenitence — the deliberate refusal, until death, to repent and accept God's mercy.", ref: "BC §83", note: "Matthew 12:31–32 (Douay-Rheims): 'Blasphemy against the Spirit shall not be forgiven.' This sin is unforgivable not because God's mercy is limited but because the sinner refuses to receive it. It is a closing of the will against grace itself." },
+      { q: "What are the sins that cry to heaven for vengeance?", a: "The sins that cry to heaven for vengeance are: wilful murder, sodomy, oppression of the poor, and defrauding laborers of their wages.", ref: "BC §83 (extended)", note: "These four are so called because Scripture explicitly says their cry reaches God (cf. Gen 4:10; Gen 19; Exod 22:22–24; James 5:4). They represent the gravest disorders against life, nature, dignity, and justice." },
+      { q: "What are the virtues opposed to the seven capital sins?", a: "The opposing virtues are: Humility (against Pride), Liberality (against Covetousness), Chastity (against Lust), Meekness (against Anger), Temperance (against Gluttony), Brotherly Love (against Envy), and Diligence (against Sloth).", ref: "BC §60 (traditional list)", note: "Virtues are not merely the absence of vices but positive habits of soul. St. Thomas Aquinas (Summa I-II, Q.55) defines a virtue as 'a good operative habit' — a stable disposition that makes its acts easy and excellent." },
+      { q: "What is actual grace?", a: "Actual grace is a supernatural help that God gives us to enlighten our mind and strengthen our will to do good and avoid evil.", ref: "BC §135", note: "Actual grace is a transient divine assistance given for particular acts, distinct from sanctifying grace (a permanent quality of the soul). It precedes free acts (prevenient grace) and accompanies them (cooperative grace)." },
+      { q: "Can we resist the grace of God?", a: "Yes, we can resist the grace of God, for our will is free.", ref: "BC §137", note: "This is the Catholic teaching against Calvinist double predestination. God's grace moves us without compelling us. Council of Trent (Session VI): 'man may reject grace.' Free will and grace are both real and both necessary." },
+      { q: "What is conscience?", a: "Conscience is the judgment of our reason by which we decide that something is right or wrong.", ref: "BC §109", note: "Conscience is the proximate norm of morality, but it must be formed. An erroneous conscience can lead to sin if the error is culpable. The Baltimore Catechism and CCC 1776–1779 together give the full treatment." },
+      { q: "What is an occasion of sin?", a: "An occasion of sin is any person, place, or thing that leads us into sin or temptation.", ref: "BC §91", note: "A 'near occasion' is one in which we almost always sin or are in grave danger; we are strictly obliged to avoid these. A 'remote occasion' carries less danger but still requires prudence. Firm purpose of amendment requires resolving to avoid near occasions." },
+      { q: "What are the theological virtues?", a: "The theological virtues are Faith, Hope, and Charity — virtues that have God Himself as their object.", ref: "BC §108", note: "They are called 'theological' (from theos, God) because they relate us directly to God. They are infused at Baptism, distinct from the moral virtues, and cannot be acquired by human effort alone. 1 Corinthians 13:13: 'And now there remain faith, hope, and charity, these three: but the greatest of these is charity.'" },
+      { q: "What is charity?", a: "Charity is the virtue by which we love God above all things and our neighbor as ourselves for the love of God.", ref: "BC §109", note: "Charity is the highest of all virtues — 'the bond of perfection' (Col 3:14). Without charity, all other virtues and external acts are without merit. St. Paul's hymn to charity (1 Cor 13) remains the supreme scriptural description." },
+    ],
+  },
+  {
+    id: "last_things",
+    icon: "🕯",
+    title: "The Last Things",
+    subtitle: "Death, Judgment, Heaven & Hell",
+    color: "#7a1c1c",
+    desc: "What the Church teaches about death, the soul's judgment, and eternity",
+    cards: [
+      { q: "What happens to the soul at death?", a: "At death, the soul is separated from the body and immediately judged by God in what is called the Particular Judgment.", ref: "BC §156", note: "Hebrews 9:27 (Douay-Rheims): 'It is appointed unto men once to die, and after this the judgment.' The Particular Judgment is immediate and individual; the General Judgment at the end of time confirms it publicly." },
+      { q: "What is Purgatory?", a: "Purgatory is a place or state of punishment in the next life, where some souls suffer for a time before they can enter heaven.", ref: "BC §160", note: "Defined at the Council of Florence (1439) and Trent (Session XXV). Purgatory is a doctrine of mercy: God completes the purification of those who die in His grace but still carry the debt of temporal punishment or imperfectly purified affections." },
+      { q: "How can we help the souls in Purgatory?", a: "We can help the souls in Purgatory by prayer, indulgences, fasting, almsgiving, and especially by having Mass offered for them.", ref: "BC §161", note: "The Mass is the most powerful suffrages for the holy souls. This is why Masses for the dead are offered and why Catholics pray the Prayer for the Dead and observe November as the Month of the Holy Souls." },
+      { q: "What is Heaven?", a: "Heaven is the state of perfect and everlasting happiness with God, enjoyed by the angels and saints.", ref: "BC §162", note: "Heaven is the Beatific Vision — knowing God as He knows Himself, face to face. 1 Corinthians 2:9 (Douay-Rheims): 'Eye hath not seen, nor ear heard, neither hath it entered into the heart of man, what things God hath prepared for them that love Him.'" },
+      { q: "What is Hell?", a: "Hell is a state of everlasting punishment for those who die in mortal sin.", ref: "BC §163", note: "Hell is not primarily fire but the eternal loss of God (poena damni) — the worst suffering conceivable for a being created for union with Him. The Church has always taught that Hell is real and possible; she has never taught that it is empty." },
+      { q: "What is the General Judgment?", a: "The General Judgment is the judgment that will take place at the end of the world, when all men will be judged together before God.", ref: "BC §158", note: "The General Judgment confirms and makes manifest the Particular Judgment. At it, the secret works and interior life of all will be revealed, and God's justice and mercy will be vindicated before the whole creation." },
+      { q: "What does the Church teach about indulgences?", a: "An indulgence is the remission of the temporal punishment due to sins already forgiven, granted by the Church from the treasury of the merits of Christ and the saints.", ref: "BC §168", note: "An indulgence remits temporal punishment, not the guilt of sin (which is forgiven in Penance). The doctrine is grounded in the Church's authority to bind and loose (Mt 16:19) and the Communion of Saints." },
+      { q: "What is the resurrection of the body?", a: "The resurrection of the body means that at the Last Day the souls of all men will be reunited with their bodies to share in the final reward or punishment.", ref: "BC §157", note: "The Catholic doctrine is not merely the immortality of the soul (held by many ancient philosophers) but the resurrection of the whole person. Christ's bodily Resurrection is the 'firstfruits' and guarantee of ours (1 Cor 15:20)." },
+      { q: "Who will be saved?", a: "Those will be saved who die in God's grace — that is, in friendship with God, free from mortal sin.", ref: "BC §154", note: "The Church teaches that salvation requires dying in sanctifying grace. Outside mortal sin, the soul is in God's friendship. The Catechism also teaches that invincible ignorance may allow salvation for those who are not formal members of the Church but who follow the natural law faithfully." },
+    ],
+  },
+];
+
+function CatechismDrillTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
+  const [view, setView] = useState("menu"); // menu | drill | result
+  const [selectedDeck, setSelectedDeck] = useState(null);
+  const [queue, setQueue] = useState([]);
+  const [masteredCount, setMasteredCount] = useState(0);
+  const [cardIdx, setCardIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [showNote, setShowNote] = useState(false);
+  const [sessionResults, setSessionResults] = useState([]); // "got" | "review"
+  const [fade, setFade] = useState(true);
+
+  const startDeck = (deck) => {
+    const shuffled = [...deck.cards].sort(() => Math.random() - 0.5);
+    setSelectedDeck(deck);
+    setQueue(shuffled);
+    setMasteredCount(0);
+    setCardIdx(0);
+    setFlipped(false);
+    setShowNote(false);
+    setSessionResults([]);
+    setView("drill");
+  };
+
+  const transition = (fn) => {
+    setFade(false);
+    setTimeout(() => { fn(); setFade(true); }, 180);
+  };
+
+  const handleGot = () => {
+    const newResults = [...sessionResults, "got"];
+    const newQueue = queue.filter((_, i) => i !== cardIdx);
+    const newMastered = masteredCount + 1;
+    if (newQueue.length === 0) {
+      setSessionResults(newResults);
+      setMasteredCount(newMastered);
+      setView("result");
+      return;
+    }
+    const nextIdx = cardIdx >= newQueue.length ? 0 : cardIdx;
+    transition(() => {
+      setQueue(newQueue);
+      setCardIdx(nextIdx);
+      setFlipped(false);
+      setShowNote(false);
+      setSessionResults(newResults);
+      setMasteredCount(newMastered);
+    });
+  };
+
+  const handleReview = () => {
+    const newResults = [...sessionResults, "review"];
+    // Move card to end of queue
+    const card = queue[cardIdx];
+    const newQueue = [...queue.filter((_, i) => i !== cardIdx), card];
+    const nextIdx = cardIdx >= newQueue.length - 1 ? 0 : cardIdx;
+    transition(() => {
+      setQueue(newQueue);
+      setCardIdx(nextIdx);
+      setFlipped(false);
+      setShowNote(false);
+      setSessionResults(newResults);
+    });
+  };
+
+  // ── Menu ──
+  if (view === "menu") {
+    return (
+      <>
+        <GlobalTopBar title="Catechism Drill" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 22 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>📕</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Catechism Drill</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5 }}>Baltimore Catechism · Question & Answer</p>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {BC_DECKS.map(deck => (
+              <button key={deck.id} onClick={() => startDeck(deck)} style={{
+                display: "flex", alignItems: "center", gap: 14,
+                padding: "15px 16px",
+                background: T.warmWhite,
+                border: `1px solid ${T.cardBorder}`,
+                borderRadius: 14, cursor: "pointer", textAlign: "left",
+                boxShadow: "0 2px 8px rgba(26,39,68,0.05)",
+              }}>
+                <div style={{
+                  width: 46, height: 46, borderRadius: 10,
+                  background: `linear-gradient(135deg, ${deck.color}, ${deck.color}cc)`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: fz(20), flexShrink: 0,
+                }}>{deck.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.02em" }}>{deck.title}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{deck.subtitle}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkMid, marginTop: 2 }}>{deck.cards.length} questions</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: 18 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 20, padding: "14px 16px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
+              All questions and answers are drawn from the Baltimore Catechism, the primary catechetical authority in Custos's approved source library.
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Result ──
+  if (view === "result") {
+    const total = sessionResults.length;
+    const gotCount = sessionResults.filter(r => r === "got").length + masteredCount - (masteredCount > 0 ? masteredCount - (sessionResults.filter(r => r === "got").length) : 0);
+    const pct = total > 0 ? Math.round((masteredCount / selectedDeck.cards.length) * 100) : 0;
+    return (
+      <>
+        <TopBar title="Drill Complete" showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 26 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: "50%", background: T.goldFaint, border: "2px solid rgba(212,168,67,0.35)", marginBottom: 14 }}>
+              <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(28), fontWeight: 700, color: T.gold }}>{pct}%</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{selectedDeck.title}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.gold, margin: 0 }}>
+              {masteredCount === selectedDeck.cards.length ? "All cards mastered!" : `${masteredCount} of ${selectedDeck.cards.length} mastered`}
+            </p>
+          </div>
+
+          <Card style={{ marginBottom: 16, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+              "Study of the catechism is not merely an intellectual exercise. It is formation — the shaping of a mind and heart capable of loving God intelligently."
+            </p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: "8px 0 0", fontStyle: "italic" }}>— Baltimore Catechism tradition</p>
+          </Card>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <CrimsonBtn onClick={() => startDeck(selectedDeck)}>Drill Again</CrimsonBtn>
+            <NavyBtn onClick={() => setView("menu")}>Choose Another Deck</NavyBtn>
+            <GhostBtn onClick={goHome}>Return</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Drill ──
+  const card = queue[cardIdx];
+  const remaining = queue.length;
+  const total = selectedDeck.cards.length;
+  const mastered = masteredCount;
+  const progress = mastered / total;
+
+  return (
+    <>
+      <TopBar
+        title={selectedDeck.title}
+        showBack={true}
+        onBack={() => transition(() => { setView("menu"); setSelectedDeck(null); })}
+        rightAction={
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.inkLight, letterSpacing: "0.04em" }}>
+            {mastered}/{total}
+          </div>
+        }
+      />
+
+      {/* Progress bar */}
+      <div style={{ height: 4, background: "rgba(212,168,67,0.15)", flexShrink: 0 }}>
+        <div style={{ height: "100%", width: `${progress * 100}%`, background: `linear-gradient(90deg, ${T.gold}, ${T.goldLight})`, transition: "width 0.5s ease", borderRadius: "0 2px 2px 0" }} />
+      </div>
+
+      <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 16px", display: "flex", flexDirection: "column", opacity: fade ? 1 : 0, transition: "opacity 0.18s ease" }}>
+
+        {/* Deck label + remaining */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase" }}>{selectedDeck.title}</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic" }}>{remaining} remaining</div>
+        </div>
+
+        {/* Card */}
+        <div
+          onClick={() => !flipped && setFlipped(true)}
+          style={{
+            flex: "0 0 auto",
+            minHeight: 200,
+            background: flipped ? T.warmWhite : `linear-gradient(145deg, ${selectedDeck.color}, ${selectedDeck.color}dd)`,
+            border: `1.5px solid ${flipped ? T.cardBorderStrong : "rgba(212,168,67,0.3)"}`,
+            borderRadius: 18,
+            padding: "24px 22px",
+            cursor: flipped ? "default" : "pointer",
+            boxShadow: flipped ? "0 2px 12px rgba(26,39,68,0.08)" : "0 6px 24px rgba(26,39,68,0.18)",
+            transition: "all 0.3s ease",
+            display: "flex", flexDirection: "column", justifyContent: "center",
+          }}
+        >
+          {!flipped ? (
+            <>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: "rgba(212,168,67,0.7)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Question</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(20), color: "#f5f0e8", lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>{card.q}</p>
+              <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 6 }}>
+                <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.45)", fontStyle: "italic" }}>Tap to reveal answer</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Answer</div>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18.5), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px", fontStyle: "italic" }}>{card.a}</p>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.crimson, letterSpacing: "0.06em" }}>{card.ref}</div>
+            </>
+          )}
+        </div>
+
+        {/* Note / explanation toggle */}
+        {flipped && (
+          <div style={{ marginTop: 12 }}>
+            <button onClick={() => setShowNote(n => !n)} style={{ background: "none", border: "none", cursor: "pointer", padding: "6px 0", display: "flex", alignItems: "center", gap: 6 }}>
+              <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.gold, letterSpacing: "0.06em", textTransform: "uppercase" }}>{showNote ? "▴ Hide Note" : "▾ Why does this matter?"}</span>
+            </button>
+            {showNote && (
+              <div style={{ padding: "12px 16px", background: T.goldFaint, borderRadius: 10, border: `1px solid rgba(212,168,67,0.2)`, marginTop: 4 }}>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>{card.note}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div style={{ flex: 1 }} />
+
+        {/* Question again (above buttons) */}
+        {flipped && (
+          <div style={{ marginBottom: 10, padding: "10px 14px", background: T.subtleBg, borderRadius: 10 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), color: T.inkLight, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Question</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>{card.q}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Action buttons */}
+      <div style={{ padding: "10px 20px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, flexShrink: 0 }}>
+        {!flipped ? (
+          <CrimsonBtn onClick={() => setFlipped(true)}>Reveal Answer</CrimsonBtn>
+        ) : (
+          <div style={{ display: "flex", gap: 10 }}>
+            <div style={{ flex: 1 }}>
+              <button onClick={handleReview} style={{
+                width: "100%", padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
+                color: T.inkDark, background: T.warmWhite,
+                border: `1.5px solid rgba(26,39,68,0.2)`, borderRadius: 10, cursor: "pointer",
+              }}>Review Again</button>
+            </div>
+            <div style={{ flex: 1 }}>
+              <button onClick={handleGot} style={{
+                width: "100%", padding: "14px 0",
+                fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
+                color: T.warmWhite,
+                background: `linear-gradient(135deg, #2a6b3a, #3a8a4e)`,
+                border: "none", borderRadius: 10, cursor: "pointer",
+                boxShadow: "0 3px 12px rgba(42,107,58,0.3)",
+              }}>Got It ✓</button>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+
+// ═══════════════════════════════════════════════════════════════════
+const HOURS = [
+  {
+    id: "lauds",
+    name: "Lauds",
+    latin: "Laudes",
+    label: "Morning Prayer",
+    time: "Dawn · 5–7 AM",
+    timeRange: [5, 7],
+    icon: "🌅",
+    color: "#c4880a",
+    desc: "The Church's morning hymn of praise at the rising of the sun",
+    opening: {
+      versicle: "O Lord, open my lips.",
+      response: "And my mouth shall proclaim Thy praise.",
+    },
+    hymn: {
+      title: "Iam lucis orto sidere",
+      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.",
+      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.",
+      note: "Traditional Lauds hymn, rendered in Ambrosian meter",
+    },
+    psalm: {
+      ref: "Psalm 62 (63)",
+      title: "O God, Thou art my God",
+      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands.",
+      ref2: "Ps 62:2–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Lamentations 3:22–23",
+      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.",
+    },
+    canticle: {
+      title: "Benedictus",
+      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. Through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.",
+      ref: "Luke 1:68–69, 78–79 (Douay-Rheims)",
+    },
+    prayer: "Grant us, O Lord, to begin this day with holy fear, to pass it in holy service, and to end it in Thy love; through Jesus Christ our Lord. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "prime",
+    name: "Prime",
+    latin: "Prima hora",
+    label: "First Hour",
+    time: "Sunrise · 6 AM",
+    timeRange: [6, 9],
+    icon: "🌤",
+    color: "#1a2744",
+    desc: "The first prayer of the day offering work and waking hours to God",
+    opening: {
+      versicle: "O Lord, open my lips.",
+      response: "And my mouth shall proclaim Thy praise.",
+    },
+    hymn: {
+      title: "Iam surgit hora tertia",
+      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.",
+      english: "The hour of Prime now bids us rise,\nAnd lift our morning sacrifice;\nLet no vain thought our hearts possess,\nBut fasting, holy watchfulness.",
+      note: "Traditional Prime hymn",
+    },
+    psalm: {
+      ref: "Psalm 5",
+      title: "Give ear, O Lord, to my words",
+      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity.",
+      ref2: "Ps 5:2–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Isaiah 33:2",
+      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.",
+    },
+    canticle: null,
+    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "terce",
+    name: "Terce",
+    latin: "Hora tertia",
+    label: "Mid-Morning Prayer",
+    time: "Mid-Morning · 9 AM",
+    timeRange: [9, 11],
+    icon: "☀",
+    color: "#b87a10",
+    desc: "Prayer at the third hour, when the Holy Ghost descended at Pentecost",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Nunc Sancte nobis Spiritus",
+      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.",
+      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.",
+      note: "Attributed to St. Ambrose; traditional Terce hymn",
+    },
+    psalm: {
+      ref: "Psalm 118 (119):33–40",
+      title: "Set before me for a law",
+      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way.",
+      ref2: "Ps 118:33–37 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Acts 2:1–4",
+      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.",
+    },
+    canticle: null,
+    prayer: "Lord God, Whose only-begotten Son, at this hour, hung upon the Cross for us: grant us grace to persevere in good works, to carry our daily cross patiently, and to offer all our labors for Thy greater glory. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "sext",
+    name: "Sext",
+    latin: "Hora sexta",
+    label: "Midday Prayer",
+    time: "Noon · 12 PM",
+    timeRange: [11, 14],
+    icon: "🌞",
+    color: "#7a1c1c",
+    desc: "The sixth hour, when our Lord was nailed to the Cross",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Rector potens, verax Deus",
+      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.",
+      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day.",
+      note: "Traditional Sext hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 118 (119):97–104",
+      title: "O how have I loved Thy law",
+      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth.",
+      ref2: "Ps 118:97–103 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "John 4:34",
+      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.",
+    },
+    canticle: null,
+    prayer: "Almighty and eternal God, Who in the mystery of the Incarnation didst consecrate this noon hour with the presence of Thy only-begotten Son: grant us to persevere to midday in virtue, and so to finish well all the work of this day, to Thy glory. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "none",
+    name: "None",
+    latin: "Hora nona",
+    label: "Afternoon Prayer",
+    time: "Afternoon · 3 PM",
+    timeRange: [14, 17],
+    icon: "🌤",
+    color: "#1a2744",
+    desc: "The ninth hour, the hour of Christ's death on the Cross",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Rerum Deus tenax vigor",
+      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.",
+      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nBright light of day's declining hours,\nUntouched by age or time's swift powers.",
+      note: "Traditional None hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 90 (91)",
+      title: "He that dwelleth in the aid of the most High",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. For He hath delivered me from the snare of the hunters: and from the sharp word. He will overshadow thee with His shoulders: and under His wings thou shalt trust. His truth shall compass thee with a shield.",
+      ref2: "Ps 90:1–5 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "Matthew 27:45–46",
+      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me?",
+    },
+    canticle: null,
+    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head and give up the ghost for our sins: deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "vespers",
+    name: "Vespers",
+    latin: "Vesperae",
+    label: "Evening Prayer",
+    time: "Evening · 6 PM",
+    timeRange: [17, 21],
+    icon: "🌆",
+    color: "#7a1c1c",
+    desc: "The crown of the day — the Church's evening sacrifice of praise",
+    opening: {
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.",
+    },
+    hymn: {
+      title: "Lucis Creator optime",
+      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.",
+      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all.",
+      note: "Traditional Vespers hymn, attributed to St. Ambrose",
+    },
+    psalm: {
+      ref: "Psalm 140 (141):1–4",
+      title: "Let my prayer be directed",
+      text: "Lord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.",
+      ref2: "Ps 140:1–4 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "1 Peter 5:8–9",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.",
+    },
+    canticle: {
+      title: "Magnificat",
+      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him.",
+      ref: "Luke 1:46–50 (Douay-Rheims)",
+    },
+    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits this day. Pardon our failures, protect us through the night, and grant that in Thy mercy we may rise again to praise Thee. Amen.",
+    closing: {
+      versicle: "Let us bless the Lord.",
+      response: "Thanks be to God.",
+    },
+  },
+  {
+    id: "compline",
+    name: "Compline",
+    latin: "Completorium",
+    label: "Night Prayer",
+    time: "Before Sleep · 9 PM",
+    timeRange: [21, 24],
+    icon: "🌙",
+    color: "#1a2744",
+    desc: "The last prayer of the day — surrendering to God's care through the night",
+    opening: {
+      versicle: "Convert us, O God our Saviour.",
+      response: "And turn away Thy anger from us.",
+    },
+    hymn: {
+      title: "Te lucis ante terminum",
+      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.",
+      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.",
+      note: "Traditional Compline hymn; one of the most ancient in the Office",
+    },
+    psalm: {
+      ref: "Psalm 90 (91):1–6, 10–11",
+      title: "Under the protection of the most High",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways.",
+      ref2: "Ps 90:1–2, 5–6, 10–11 (Douay-Rheims)",
+    },
+    reading: {
+      ref: "1 Peter 5:8–9",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.",
+    },
+    canticle: {
+      title: "Nunc dimittis",
+      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.",
+      ref: "Luke 2:29–32 (Douay-Rheims)",
+    },
+    antiphon: {
+      title: "Salve Regina",
+      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+    },
+    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore. Amen.",
+    closing: {
+      versicle: "May the almighty and merciful Lord grant us a quiet night and a perfect end.",
+      response: "Amen.",
+    },
+  },
+];
+
+function getDefaultHour() {
+  const h = new Date().getHours();
+  if (h >= 21 || h < 5) return "compline";
+  if (h < 7) return "lauds";
+  if (h < 9) return "prime";
+  if (h < 11) return "terce";
+  if (h < 14) return "sext";
+  if (h < 17) return "none";
+  if (h < 21) return "vespers";
+  return "compline";
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// LITURGY OF THE HOURS COMPONENT
+// ═══════════════════════════════════════════════════════════════════
+function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
+  const [view, setView] = useState("selector"); // "selector" | "prayer"
+  const [selectedId, setSelectedId] = useState(getDefaultHour());
+  const [step, setStep] = useState(0);
+  const [fade, setFade] = useState(true);
+  const scrollRef = useRef(null);
+
+  const hour = HOURS.find(h => h.id === selectedId);
+
+  // Build steps for this hour
+  const buildSteps = (h) => {
+    const steps = [];
+    steps.push({ type: "opening", label: "Opening Versicle" });
+    steps.push({ type: "hymn", label: "Hymn" });
+    steps.push({ type: "psalm", label: h.psalm.ref });
+    steps.push({ type: "reading", label: "Scripture Reading" });
+    if (h.canticle) steps.push({ type: "canticle", label: h.canticle.title });
+    if (h.antiphon) steps.push({ type: "antiphon", label: h.antiphon.title });
+    steps.push({ type: "prayer", label: "Closing Prayer" });
+    steps.push({ type: "closing", label: "Dismissal" });
+    return steps;
+  };
+
+  const steps = buildSteps(hour);
+  const currentStep = steps[step];
+
+  const advance = () => {
+    if (step < steps.length - 1) {
+      setFade(false);
+      setTimeout(() => { setStep(s => s + 1); setFade(true); scrollRef.current?.scrollTo(0, 0); }, 180);
+    } else {
+      setView("complete");
+    }
+  };
+
+  const back = () => {
+    if (step > 0) {
+      setFade(false);
+      setTimeout(() => { setStep(s => s - 1); setFade(true); scrollRef.current?.scrollTo(0, 0); }, 180);
+    } else {
+      setView("selector");
+    }
+  };
+
+  const startHour = (id) => {
+    setSelectedId(id);
+    setStep(0);
+    setFade(true);
+    setView("prayer");
+  };
+
+  // ── Selector view ──
+  if (view === "selector") {
+    const suggestedId = getDefaultHour();
+    return (
+      <>
+        <GlobalTopBar title="Liturgy of the Hours" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+          <div style={{ textAlign: "center", marginBottom: 20 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
+              <span style={{ fontSize: fz(26) }}>📖</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Divine Office</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5 }}>Sanctifying the hours of the day</p>
+          </div>
+
+          {/* Suggested hour */}
+          <div style={{ marginBottom: 14 }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Suggested for Now</div>
+            {HOURS.filter(h => h.id === suggestedId).map(h => (
+              <button key={h.id} onClick={() => startHour(h.id)} style={{
+                width: "100%", display: "flex", alignItems: "center", gap: 14,
+                padding: "16px 18px",
+                background: `linear-gradient(135deg, ${h.color}, ${h.color}cc)`,
+                border: `2px solid rgba(212,168,67,0.4)`, borderRadius: 14,
+                cursor: "pointer", textAlign: "left", boxShadow: "0 4px 18px rgba(212,168,67,0.15)",
+              }}>
+                <div style={{ fontSize: fz(28), width: 44, textAlign: "center", flexShrink: 0 }}>{h.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(15), fontWeight: 700, color: "#d4a843", letterSpacing: "0.04em" }}>{h.name} — {h.label}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.75)", fontStyle: "italic", marginTop: 3 }}>{h.time}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(245,240,232,0.55)", marginTop: 3 }}>{h.desc}</div>
+                </div>
+                <span style={{ color: T.gold, fontSize: 20 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          {/* All hours */}
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>All Hours</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {HOURS.map(h => (
+              <button key={h.id} onClick={() => startHour(h.id)} style={{
+                display: "flex", alignItems: "center", gap: 14,
+                padding: "13px 16px",
+                background: h.id === suggestedId ? T.goldFaint : T.warmWhite,
+                border: `1px solid ${h.id === suggestedId ? "rgba(212,168,67,0.35)" : T.cardBorder}`,
+                borderRadius: 12, cursor: "pointer", textAlign: "left",
+              }}>
+                <div style={{ fontSize: fz(20), width: 32, textAlign: "center", flexShrink: 0 }}>{h.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em" }}>{h.name} <span style={{ fontWeight: 400, color: T.inkLight }}>· {h.label}</span></div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", marginTop: 1 }}>{h.time}</div>
+                </div>
+                {h.id === suggestedId && <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.gold, fontStyle: "italic" }}>now</span>}
+                <span style={{ color: T.inkLight, fontSize: 16 }}>›</span>
+              </button>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 20, padding: "14px 16px", background: T.subtleBg, borderRadius: 10, border: `1px solid ${T.cardBorder}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
+              The Liturgy of the Hours sanctifies each part of the day, uniting the faithful to the prayer of the universal Church. "Seven times a day I have given praise to Thee." — Psalm 118:164 (Douay-Rheims)
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Complete view ──
+  if (view === "complete") {
+    return (
+      <>
+        <GlobalTopBar title={`${hour.name} Complete`} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={false} />
+        <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.3)", marginBottom: 12 }}>
+              <span style={{ fontSize: fz(28) }}>{hour.icon}</span>
+            </div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 6px" }}>{hour.name} · {hour.label}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), fontStyle: "italic", color: T.gold, margin: 0 }}>Let us bless the Lord. Thanks be to God.</p>
+          </div>
+          <Card style={{ marginBottom: 16, borderLeft: `3px solid ${T.gold}` }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+              "Seven times a day I have given praise to Thee: for the judgments of Thy justice." — Psalm 118:164
+            </p>
+          </Card>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <CrimsonBtn onClick={() => { setStep(0); setView("prayer"); }}>Pray Again</CrimsonBtn>
+            <NavyBtn onClick={() => setView("selector")}>Choose Another Hour</NavyBtn>
+            <GhostBtn onClick={goHome}>Return to Prayer</GhostBtn>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // ── Prayer view ──
+  const renderStepContent = () => {
+    switch (currentStep.type) {
+      case "opening":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Opening</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 22px" }}>Opening Versicle</h2>
+            <Card style={{ marginBottom: 14 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣ Versicle</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.versicle}</p>
+                </div>
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟ Response</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.response}</p>
+                </div>
+              </div>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 12 }}>Take a moment to still yourself and enter into God's presence.</p>
+          </div>
+        );
+
+      case "hymn":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Hymn</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 20px" }}>{hour.hymn.title}</h2>
+            <Card style={{ marginBottom: 14 }}>
+              <CardTitle>Latin</CardTitle>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkMid, lineHeight: 1.75, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.hymn.latin}</p>
+            </Card>
+            <Card>
+              <CardTitle>English</CardTitle>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-line" }}>{hour.hymn.english}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: "10px 0 0" }}>{hour.hymn.note}</p>
+            </Card>
+          </div>
+        );
+
+      case "psalm":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Psalmody</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.psalm.ref}</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.gold, fontStyle: "italic", margin: "0 0 18px" }}>{hour.psalm.title}</p>
+            <Card style={{ marginBottom: 10 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{hour.psalm.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.psalm.ref2}</p>
+          </div>
+        );
+
+      case "reading":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Scripture Reading</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.reading.ref}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.gold}`, marginBottom: 14 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.reading.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center" }}>Pause. Receive the word. Let it rest in your heart.</p>
+          </div>
+        );
+
+      case "canticle":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Canticle</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.canticle.title}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.crimson}`, marginBottom: 10 }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.canticle.text}</p>
+            </Card>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.canticle.ref}</p>
+          </div>
+        );
+
+      case "antiphon":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Marian Antiphon</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.antiphon.title}</h2>
+            <Card style={{ borderLeft: `3px solid ${T.crimson}` }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.antiphon.text}</p>
+            </Card>
+          </div>
+        );
+
+      case "prayer":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Closing Prayer</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>Collect</h2>
+            <Card style={{ borderLeft: `3px solid ${T.navy}` }}>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.prayer}</p>
+            </Card>
+          </div>
+        );
+
+      case "closing":
+        return (
+          <div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Dismissal</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 22px" }}>Closing Versicle</h2>
+            <Card>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.versicle}</p>
+                </div>
+                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.response}</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <>
+      <GlobalTopBar title={`${hour.name} · ${hour.label}`} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={back} />
+      {/* Progress bar */}
+      <div style={{ display: "flex", gap: 4, padding: "10px 20px 6px", background: T.warmWhite }}>
+        {steps.map((s2, i) => (
+          <div key={i} style={{
+            flex: 1, height: 3, borderRadius: 2,
+            background: i <= step ? T.gold : "rgba(212,168,67,0.2)",
+            opacity: i < step ? 0.5 : 1,
+            transition: "all 0.4s",
+          }} />
+        ))}
+      </div>
+      <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "16px 22px 20px", opacity: fade ? 1 : 0, transform: fade ? "translateY(0)" : "translateY(8px)", transition: "all 0.3s ease" }}>
+        {renderStepContent()}
+      </div>
+      <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
+        {step > 0 && <div style={{ flex: 1 }}><GhostBtn onClick={back}>‹ Back</GhostBtn></div>}
+        <div style={{ flex: 1 }}>
+          {step < steps.length - 1
+            ? <CrimsonBtn onClick={advance}>{step === 0 ? "Begin ›" : "Continue ›"}</CrimsonBtn>
+            : <NavyBtn onClick={advance}>Finish Hour ✓</NavyBtn>
+          }
+        </div>
+      </div>
+    </>
+  );
+}
+
+function PrayHub({ onTab, dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
   const items = [
     { id: "examen", icon: "🕯", title: "Daily Examen", desc: "Ignatian five-movement prayer to review your day with God", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "rosary", icon: "📿", title: "Holy Rosary", desc: "Joyful · Sorrowful · Glorious mysteries, bead by bead", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
     { id: "stations", icon: "✝", title: "Stations of the Cross", desc: "Via Crucis — three devotional versions with illustrations", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
     { id: "confession", icon: "⚖", title: "Confession Preparation", desc: "Examination of conscience by the Ten Commandments", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
+    { id: "liturgy", icon: "📖", title: "Liturgy of the Hours", desc: "Lauds · Terce · Sext · None · Vespers · Compline", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
+    { id: "drill", icon: "📕", title: "Catechism Drill", desc: "Baltimore Catechism flashcards — Question & Answer", bg: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` },
+    { id: "novena", icon: "🕯", title: "Novena Guide", desc: "Nine-day prayer tracker · Sacred Heart, Padre Pio, St. Jude & more", bg: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` },
   ];
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-      <TopBar title="Pray" showBack={false} />
+      <GlobalTopBar title="Pray" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={onSettings} showBack={false} />
       <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 20 }}>
           <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>The Devotional Life</h2>
@@ -3135,11 +6318,117 @@ function PrayHub({ onTab }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════
+// TERMS OF SERVICE TAB
+// ═══════════════════════════════════════════════════════════════════
+function TermsTab({ goBack }) {
+  const sections = [
+    {
+      num: "1", title: "Acceptance of Terms",
+      body: `By accessing or using Custos ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the App. These Terms constitute a legally binding agreement between you and the operators of Custos ("we," "us," or "our").`,
+    },
+    {
+      num: "2", title: "Nature of the Service — Please Read Carefully",
+      body: `Custos is an educational and informational tool grounded in Catholic moral tradition. It is NOT a priest, spiritual director, confessor, canon lawyer, therapist, or licensed counselor.\n\n• Custos cannot administer sacraments. No interaction with Custos constitutes the Sacrament of Penance, absolution, spiritual direction, or any sacramental act.\n\n• Custos is not a substitute for human pastoral care. You are strongly encouraged to seek the guidance of a priest or spiritual director on matters of serious moral concern.\n\n• Custos does not speak for the Catholic Church. While the App draws on authentic Catholic sources, it does not represent the official Magisterium, any diocese, parish, religious order, or ecclesiastical authority.\n\n• AI responses may contain errors. Despite careful design, AI-generated guidance may be incomplete, imprecise, or occasionally inaccurate. Always verify important moral or theological questions with a qualified human source.`,
+    },
+    {
+      num: "3", title: "Informational Purpose Only",
+      body: `All content provided by Custos is made available for general informational and educational purposes only. Nothing in the App constitutes legal advice, medical or mental health advice, sacramental ministry, formal spiritual direction, or an official determination of moral culpability.\n\nAny reliance you place on Custos responses is strictly at your own risk.`,
+    },
+    {
+      num: "4", title: "Disclaimer of Warranties",
+      body: `TO THE FULLEST EXTENT PERMITTED BY LAW, THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. We do not warrant that the App will be error-free, uninterrupted, or always available; that responses will be accurate, complete, or current; or that the App is free from technical defects or harmful components.\n\nWe expressly disclaim all implied warranties of merchantability, fitness for a particular purpose, and non-infringement.`,
+    },
+    {
+      num: "5", title: "Limitation of Liability",
+      body: `TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES arising from your use of or reliance on any content generated by the App; decisions made based on App responses — spiritual, moral, legal, medical, or otherwise; App downtime, errors, or data loss; or unauthorized access to your data.\n\nThis limitation applies even if we have been advised of the possibility of such damages.`,
+    },
+    {
+      num: "6", title: "Indemnification",
+      body: `You agree to defend, indemnify, and hold harmless the operators of Custos, their officers, directors, employees, and agents from any claims, liabilities, damages, or expenses (including reasonable attorneys' fees) arising from your use of the App or violation of these Terms.`,
+    },
+    {
+      num: "7", title: "User Conduct",
+      body: `You agree to use Custos only for lawful purposes consistent with Catholic moral teaching. You may not:\n\n• Attempt to manipulate the App into producing content contrary to Catholic doctrine\n• Use the App to harass, deceive, or harm others\n• Reverse-engineer, scrape, or exploit the App's systems\n• Misrepresent App-generated content as official Church teaching or a priest's personal guidance`,
+    },
+    {
+      num: "8", title: "No Confidentiality / No Privilege",
+      body: `Conversations with Custos are not confidential and do not enjoy any form of privilege (e.g., priest-penitent, attorney-client, or therapist-client privilege). Do not share information through Custos that you would share only in a privileged relationship.`,
+    },
+    {
+      num: "9", title: "Crisis Situations",
+      body: `Custos is NOT equipped to handle emergencies. If you or someone you know is in crisis — including mental health crises, suicidal ideation, or risk of harm — please contact emergency services (911), a crisis hotline, or a qualified human professional immediately.\n\nDo not rely on Custos in emergency situations.`,
+    },
+    {
+      num: "10", title: "Intellectual Property",
+      body: `All content, design, source code, system prompts, and curated materials within Custos are protected by applicable copyright and intellectual property laws. Unauthorized reproduction or distribution is prohibited.`,
+    },
+    {
+      num: "11", title: "Changes to the App and Terms",
+      body: `We reserve the right to modify or discontinue the App, or update these Terms, at any time without prior notice. Continued use of the App after changes constitutes acceptance of the revised Terms.`,
+    },
+    {
+      num: "12", title: "Governing Law",
+      body: `These Terms are governed by the laws of the applicable jurisdiction, without regard to conflict of law principles.`,
+    },
+  ];
+
+  return (
+    <div style={{ minHeight: "100vh", background: T.parchment, paddingBottom: 60 }}>
+      {/* Header */}
+      <div style={{ background: T.navy, padding: "20px 20px 24px", position: "sticky", top: 0, zIndex: 10 }}>
+        <button onClick={goBack} style={{ background: "none", border: "none", cursor: "pointer", color: T.gold, fontFamily: "EB Garamond, serif", fontSize: fz(15), padding: 0, marginBottom: 12, display: "flex", alignItems: "center", gap: 6 }}>
+          ← Back
+        </button>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>Custos</div>
+        <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", margin: 0 }}>Terms of Service</h1>
+        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.45)", margin: "6px 0 0", fontStyle: "italic" }}>Effective Date: 2025 · Last Updated: 2025</p>
+      </div>
+
+      {/* Preamble */}
+      <div style={{ padding: "24px 20px 8px" }}>
+        <div style={{ background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "16px 18px" }}>
+          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.7, margin: 0 }}>
+            Please read these Terms carefully before using Custos. By using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+          </p>
+        </div>
+      </div>
+
+      {/* Sections */}
+      <div style={{ padding: "8px 20px" }}>
+        {sections.map((s) => (
+          <div key={s.num} style={{ marginBottom: 16, background: T.warmWhite, border: `1px solid ${T.cardBorder}`, borderRadius: 12, padding: "16px 18px" }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8 }}>
+              <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.06em" }}>{s.num}.</span>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, color: T.navyText, margin: 0, letterSpacing: "0.03em" }}>{s.title}</h3>
+            </div>
+            {s.body.split("\n\n").map((para, i) => (
+              <p key={i} style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.7, margin: i > 0 ? "10px 0 0" : 0 }}>
+                {para}
+              </p>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div style={{ background: T.navy, padding: "20px 24px", textAlign: "center", marginTop: 8 }}>
+        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.4)", margin: "0 0 4px" }}>Custos · askcustos.com</p>
+        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: "rgba(255,255,255,0.25)", margin: 0, fontStyle: "italic" }}>This tool supplements — never replaces — a confessor or spiritual director.</p>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════
 export default function Custos() {
-  const [tab, setTab] = useState("seek");
+  const [tab, setTab] = useState("landing");
   const [seekStartView, setSeekStartView] = useState(null); // null or "privacy" or "sources"
   const [dark, setDark] = useState(false);
   const [fszGlobal, setFszGlobal] = useState(1); // 0=small, 1=medium, 2=large
+  const [hasAgreed, setHasAgreed] = useState(() => {
+    try { return localStorage.getItem("custos_tos_agreed") === "1"; } catch { return false; }
+  });
+  const [tosChecked, setTosChecked] = useState(false);
 
   // Update mutable theme & font scale before render
   Object.assign(T, dark ? DARK : LIGHT);
@@ -3147,25 +6436,213 @@ export default function Custos() {
   const FLABELS = ["A⁻", "A", "A⁺"];
   fontScale = FSCALES[fszGlobal];
 
+  // ── Examen notification scheduler ──
+  useEffect(() => {
+    let timer = null;
+    const schedule = () => {
+      try {
+        const stored = localStorage.getItem("custos_reminders");
+        if (!stored) return;
+        const reminders = JSON.parse(stored);
+        if (!reminders.examen) return;
+        const [hStr, mStr] = (reminders.examenTime || "21:00").split(":");
+        const h = parseInt(hStr, 10);
+        const m = parseInt(mStr, 10);
+        const now = new Date();
+        const target = new Date();
+        target.setHours(h, m, 0, 0);
+        if (target <= now) target.setDate(target.getDate() + 1);
+        const msUntil = target - now;
+        timer = setTimeout(() => {
+          if (Notification.permission === "granted") {
+            new Notification("Evening Examen — Custos", {
+              body: "Take a few minutes to review your day with God. Open the Daily Examen in Custos.",
+              icon: "/favicon.ico",
+              tag: "custos-examen",
+            });
+          }
+          // Re-schedule for next day
+          schedule();
+        }, msUntil);
+      } catch (_) {}
+    };
+    schedule();
+    return () => { if (timer) clearTimeout(timer); };
+  }, []);
+
+  // Scroll to top on every tab change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    // Also reset any scrollable child containers
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.querySelectorAll('[style*="overflow"]').forEach(el => { el.scrollTop = 0; });
+    });
+  }, [tab]);
+
   const navTab = (tab === "confession" || tab === "stations" || tab === "rosary" || tab === "examen") ? "pray"
-    : tab === "settings" ? "seek" : tab;
+    : tab === "settings" ? "seek" : tab === "landing" ? "landing" : tab;
+
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 640;
 
   return (
     <div style={{
-      width: "100%", maxWidth: 430, margin: "0 auto",
+      width: "100%", maxWidth: isDesktop ? 780 : 430, margin: "0 auto",
       minHeight: "100vh", background: T.parchment,
       fontFamily: "EB Garamond, serif",
       display: "flex", flexDirection: "column",
       transition: "background 0.4s ease",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         body { margin: 0; padding: 0; background: ${T.parchment}; transition: background 0.4s ease; }
         input:focus, textarea:focus { outline: none; }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
       `}</style>
+
+      {/* ═══ LANDING PAGE ═══ */}
+      {tab === "landing" && (
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {/* Hero */}
+          <div style={{ background: `linear-gradient(175deg, ${T.navy} 0%, #243456 55%, ${T.crimson} 200%)`, padding: "60px 24px 50px", textAlign: "center", position: "relative" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: "rgba(212,168,67,0.12)", border: "2px solid rgba(212,168,67,0.25)", marginBottom: 16 }}>
+              <svg width="40" height="40" viewBox="0 0 512 512" fill="none">
+                <path d="M220 270 C195 250,150 210,100 175 C75 160,55 165,52 180 C48 200,65 225,95 245 C130 268,180 275,220 270Z" fill="#d4a843" opacity="0.5"/>
+                <path d="M292 270 C317 250,362 210,412 175 C437 160,457 165,460 180 C464 200,447 225,417 245 C382 268,332 275,292 270Z" fill="#d4a843" opacity="0.5"/>
+                <ellipse cx="256" cy="160" rx="48" ry="14" fill="none" stroke="#d4a843" strokeWidth="8" opacity="0.65"/>
+                <circle cx="256" cy="198" r="35" fill="#d4a843" opacity="0.18" stroke="#d4a843" strokeWidth="6" strokeOpacity="0.55"/>
+                <path d="M224 230 L210 390 C210 403,222 412,238 412 L274 412 C290 412,302 403,302 390 L288 230 C276 248,236 248,224 230Z" fill="#1a2744" opacity="0.85"/>
+                <line x1="256" y1="275" x2="256" y2="325" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+                <line x1="242" y1="290" x2="270" y2="290" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(36), fontWeight: 400, letterSpacing: "0.14em", color: "#fff", textTransform: "uppercase", margin: "0 0 6px" }}>Custos</h1>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.gold, fontStyle: "italic", margin: "0 0 20px" }}>A guardian for your conscience</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: "rgba(255,255,255,0.8)", maxWidth: 400, margin: "0 auto 28px", lineHeight: 1.55 }}>When you need the Church's wisdom, not the world's opinion</p>
+            <button onClick={() => setTab("seek")} style={{ padding: "14px 44px", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: T.navy, background: "linear-gradient(135deg, #d4a843, #e8c06a)", border: "none", borderRadius: 12, cursor: "pointer", boxShadow: "0 4px 20px rgba(212,168,67,0.35)" }}>Ask Your Question</button>
+          </div>
+
+          {/* How it works */}
+          <div style={{ padding: "40px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>How it works</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Three Steps to Clarity</h2>
+            {[
+              { num: "I", title: "Ask", desc: "Describe your moral question, dilemma, or situation in your own words." },
+              { num: "II", title: "Receive", desc: "Get structured guidance: the answer, the reasoning, the sources, and the certainty level." },
+              { num: "III", title: "Verify", desc: "Every citation links to the full original text. Read it yourself. Then bring it to your confessor." },
+            ].map((step, i) => (
+              <Card key={i} style={{ marginBottom: 10, textAlign: "center" }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 700, color: T.gold, marginBottom: 4 }}>{step.num}</div>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em", marginBottom: 4 }}>{step.title}</div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0 }}>{step.desc}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Why Custos */}
+          <div style={{ padding: "10px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>Why Custos</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Not Just the Rule — the Reason</h2>
+            {[
+              { icon: "📖", title: "Closed Universe", desc: "Only named, approved sources. No blogs, no unnamed scholars. You always know where the teaching comes from." },
+              { icon: "⚖", title: "Calibrated Certainty", desc: "Every response states whether the teaching is definitive, authoritative, addressed but not resolved, or not addressed." },
+              { icon: "🔗", title: "Linked Primary Sources", desc: "Every citation links directly to the full text online. Verify everything." },
+              { icon: "🔒", title: "Private by Architecture", desc: "No accounts. No login. No stored questions. Your questions are processed and immediately forgotten." },
+            ].map((item, i) => (
+              <Card key={i} style={{ marginBottom: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <span style={{ fontSize: 16 }}>{item.icon}</span>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.navyText, letterSpacing: "0.04em" }}>{item.title}</div>
+                </div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Devotional Features */}
+          <div style={{ padding: "10px 20px 30px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>More than guidance</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>A Complete Devotional Companion</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              {[
+                { icon: "🙏", title: "Holy Rosary", desc: "Three mystery sets with Tissot paintings" },
+                { icon: "✝", title: "Stations", desc: "14 stations with master artwork" },
+                { icon: "🕯", title: "Daily Examen", desc: "Guided five-step evening prayer" },
+                { icon: "⛪", title: "Confession", desc: "Private examination of conscience" },
+                { icon: "📅", title: "Calendar", desc: "Traditional liturgical calendar" },
+                { icon: "🏛", title: "15 Doctors", desc: "Bios, quotes, and linked works" },
+                { icon: "⚖", title: "Tradition & Rupture", desc: "Where did the changes come from?" },
+              ].map((f, i) => (
+                <Card key={i} style={{ textAlign: "center", padding: "14px 12px" }}>
+                  <span style={{ fontSize: 20 }}>{f.icon}</span>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, color: T.navyText, letterSpacing: "0.03em", marginTop: 4, marginBottom: 2 }}>{f.title}</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, lineHeight: 1.4, margin: 0 }}>{f.desc}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Sources */}
+          <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>57 Approved Sources. Nothing Else.</h2>
+            {[
+              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
+              { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
+              { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
+              { icon: "✉", title: "37 Encyclicals · 4 Motu Proprio · 1 Papal Bull", desc: "Gregory XVI through Benedict XVI · Quo Primum (Pius V, 1570)" },
+              { icon: "📋", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
+              { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
+              { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
+            ].map((s, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "10px 14px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,168,67,0.15)", borderRadius: 10, marginBottom: 8 }}>
+                <span style={{ fontSize: 18, flexShrink: 0 }}>{s.icon}</span>
+                <div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600, color: T.gold, letterSpacing: "0.03em" }}>{s.title}</div>
+                  <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>{s.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Privacy */}
+          <div style={{ padding: "30px 20px", background: T.warmWhite, borderTop: `1px solid ${T.cardBorder}` }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>Your Privacy</div>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.navyText, textAlign: "center", marginBottom: 20 }}>Built to Forget</h2>
+            <div style={{ display: "flex", justifyContent: "space-around", textAlign: "center", gap: 12 }}>
+              {[
+                { icon: "🔒", title: "No Accounts", desc: "No login required" },
+                { icon: "🗑", title: "No Storage", desc: "Questions immediately discarded" },
+                { icon: "👁‍🗨", title: "No Tracking", desc: "No cookies or analytics" },
+              ].map((p, i) => (
+                <div key={i} style={{ flex: 1 }}>
+                  <div style={{ fontSize: 24, marginBottom: 6 }}>{p.icon}</div>
+                  <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, marginBottom: 2 }}>{p.title}</div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, margin: 0 }}>{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div style={{ padding: "40px 24px 50px", textAlign: "center", background: T.parchment }}>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(24), fontWeight: 500, color: T.navyText, marginBottom: 10 }}>Ask Your First Question</h2>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkMid, marginBottom: 24 }}>Free. Private. Faithful to the Tradition.</p>
+            <button onClick={() => setTab("seek")} style={{ padding: "14px 44px", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: T.navy, background: "linear-gradient(135deg, #d4a843, #e8c06a)", border: "none", borderRadius: 12, cursor: "pointer", boxShadow: "0 4px 20px rgba(212,168,67,0.35)" }}>Seek Guidance</button>
+          </div>
+
+          {/* Footer */}
+          <div style={{ background: T.navy, padding: "20px 24px", textAlign: "center" }}>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: "rgba(255,255,255,0.4)", margin: "0 0 4px" }}>Custos · askcustos.com · A guardian for your conscience</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: "rgba(255,255,255,0.25)", margin: "0 0 8px" }}>This tool supplements — never replaces — a confessor or spiritual director.</p>
+            <button onClick={() => setTab("terms")} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "EB Garamond, serif", fontSize: fz(11), color: "rgba(255,255,255,0.35)", textDecoration: "underline", padding: 0 }}>Terms of Service</button>
+          </div>
+        </div>
+      )}
 
       {/* ═══ MAIN TABS ═══ */}
       {tab === "seek" && (
@@ -3177,14 +6654,14 @@ export default function Custos() {
 
       {tab === "today" && (
         <>
-          <TodayTab />
+          <TodayTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="today" onTab={setTab} />
         </>
       )}
 
       {tab === "pray" && (
         <>
-          <PrayHub onTab={setTab} />
+          <PrayHub onTab={setTab} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
@@ -3192,36 +6669,64 @@ export default function Custos() {
       {/* ═══ SUB-FEATURES (accessed from Pray hub) ═══ */}
       {tab === "examen" && (
         <>
-          <ExamenTab />
+          <ExamenTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "confession" && (
         <>
-          <ConfessionTab />
+          <ConfessionTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "stations" && (
         <>
-          <StationsTab goHome={() => setTab("pray")} />
+          <StationsTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "rosary" && (
         <>
-          <RosaryTab goHome={() => setTab("pray")} />
+          <RosaryTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "liturgy" && (
+        <>
+          <LiturgyTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "drill" && (
+        <>
+          <CatechismDrillTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
+          <BottomNav active="pray" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "novena" && (
+        <>
+          <NovenaTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "tradition" && (
         <>
-          <TraditionTab />
+          <TraditionTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
           <BottomNav active="tradition" onTab={setTab} />
+        </>
+      )}
+
+      {tab === "rupture" && (
+        <>
+          <RuptureTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
+          <BottomNav active="rupture" onTab={setTab} />
         </>
       )}
 
@@ -3229,6 +6734,79 @@ export default function Custos() {
       {tab === "settings" && (
         <SettingsTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal}
           goHome={() => setTab("seek")} onPrivacy={() => { setSeekStartView("privacy"); setTab("seek"); }} />
+      )}
+
+      {tab === "terms" && (
+        <TermsTab goBack={() => setTab("landing")} dark={dark} />
+      )}
+
+      {/* ═══ ONE-TIME TOS MODAL ═══ */}
+      {!hasAgreed && tab !== "terms" && (
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 9999,
+          background: "rgba(10,14,22,0.82)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          padding: "24px",
+        }}>
+          <div style={{
+            background: T.warmWhite, borderRadius: 18,
+            border: `1px solid ${T.cardBorderStrong}`,
+            padding: "28px 24px 22px",
+            maxWidth: 400, width: "100%",
+            display: "flex", flexDirection: "column", gap: 16,
+          }}>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 6 }}>Before You Begin</div>
+              <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, margin: 0 }}>A Note on Custos</h2>
+            </div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, lineHeight: 1.65, margin: 0 }}>
+              Custos is an AI-assisted educational tool grounded in Catholic moral tradition. It is <strong>not a substitute for a priest, spiritual director, or confessor</strong>, and cannot administer sacraments. AI responses may contain errors — always verify serious matters with a qualified human authority. Conversations are not confidential or privileged.
+            </p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.crimson, lineHeight: 1.5, margin: 0 }}>
+              For emergencies, contact 911 or a crisis hotline — do not rely on Custos.
+            </p>
+            <label style={{ display: "flex", alignItems: "flex-start", gap: 10, cursor: "pointer" }}>
+              <input
+                type="checkbox"
+                checked={tosChecked}
+                onChange={e => setTosChecked(e.target.checked)}
+                style={{ marginTop: 3, flexShrink: 0, accentColor: T.gold, width: 16, height: 16 }}
+              />
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.55 }}>
+                I understand that Custos is an educational tool, not a priest or spiritual director. It cannot administer sacraments. Conversations are not confidential. For serious matters, I will seek a qualified human pastor.
+              </span>
+            </label>
+            <button
+              disabled={!tosChecked}
+              onClick={() => {
+                try { localStorage.setItem("custos_tos_agreed", "1"); } catch {}
+                setHasAgreed(true);
+              }}
+              style={{
+                padding: "13px 24px",
+                fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 600,
+                letterSpacing: "0.1em", textTransform: "uppercase",
+                color: tosChecked ? T.navy : T.inkLight,
+                background: tosChecked ? "linear-gradient(135deg, #d4a843, #e8c06a)" : T.parchmentDark,
+                border: "none", borderRadius: 10, cursor: tosChecked ? "pointer" : "not-allowed",
+                transition: "all 0.2s ease",
+              }}
+            >
+              By continuing, you accept our Terms of Service →
+            </button>
+            <button
+              onClick={() => setTab("terms")}
+              style={{
+                background: "none", border: "none", cursor: "pointer",
+                fontFamily: "EB Garamond, serif", fontSize: fz(13),
+                color: T.inkLight, textDecoration: "underline", padding: 0,
+                textAlign: "center",
+              }}
+            >
+              Read full Terms of Service
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );
