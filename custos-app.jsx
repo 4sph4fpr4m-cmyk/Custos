@@ -1395,15 +1395,15 @@ function CardTitle({ children, color }) {
 }
 
 function CrimsonBtn({ children, onClick, style: s }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}`, ...s }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "1px solid transparent", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}`, boxSizing: "border-box", ...s }}>{children}</button>;
 }
 
 function NavyBtn({ children, onClick, style: s }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowNavy}`, ...s }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "1px solid transparent", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowNavy}`, boxSizing: "border-box", ...s }}>{children}</button>;
 }
 
 function GhostBtn({ children, onClick }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "13px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10, cursor: "pointer" }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10, cursor: "pointer", boxSizing: "border-box" }}>{children}</button>;
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -5693,34 +5693,35 @@ const HOURS = [
     color: "#c4880a",
     desc: "The Church's morning hymn of praise at the rising of the sun",
     opening: {
-      versicle: "O Lord, open my lips.",
-      response: "And my mouth shall proclaim Thy praise.",
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Iam lucis orto sidere",
-      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.",
-      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.",
+      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.\n\nLinguam refrenet temperet,\nne litis horror insonet;\nvisum fovendo contegat,\nne vanitates hauriat.",
+      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.\n\nWould guard our hearts and tongues from strife,\nFrom anger's din would shield our life,\nWould keep our inmost conscience pure,\nOur souls from folly's lust secure.",
       note: "Traditional Lauds hymn, rendered in Ambrosian meter",
     },
     psalm: {
       ref: "Psalm 62 (63)",
       title: "O God, Thou art my God",
-      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands.",
-      ref2: "Ps 62:2–5 (Douay-Rheims)",
+      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands. Let my soul be filled as with marrow and fatness: and my mouth shall praise Thee with joyful lips. If I have remembered Thee upon my bed, I will meditate on Thee in the morning: because Thou hast been my helper.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 62 (Douay-Rheims)",
     },
     reading: {
       ref: "Lamentations 3:22–23",
-      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.",
+      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.\n\n℟. Thanks be to God.",
     },
     canticle: {
       title: "Benedictus",
-      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. Through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.",
-      ref: "Luke 1:68–69, 78–79 (Douay-Rheims)",
+      subtitle: "Canticle of Zachary · Luke 1:68–79",
+      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. As He spoke by the mouth of His holy prophets, who are from the beginning: salvation from our enemies, and from the hand of all that hate us. To perform mercy to our fathers, and to remember His holy testament. The oath which He swore to Abraham our father, that He would grant to us, that being delivered from the hand of our enemies, we may serve Him without fear, in holiness and justice before Him, all our days.\n\nAnd thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare His ways: to give knowledge of salvation to His people, unto the remission of their sins: through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref: "Luke 1:68–79 (Douay-Rheims)",
     },
     prayer: "Grant us, O Lord, to begin this day with holy fear, to pass it in holy service, and to end it in Thy love; through Jesus Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5732,32 +5733,37 @@ const HOURS = [
     timeRange: [6, 9],
     icon: "🌤",
     color: "#1a2744",
-    desc: "The first prayer of the day offering work and waking hours to God",
+    desc: "The first prayer of the day — consecrating the morning hours to God",
     opening: {
-      versicle: "O Lord, open my lips.",
-      response: "And my mouth shall proclaim Thy praise.",
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Iam surgit hora tertia",
-      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.",
-      english: "The hour of Prime now bids us rise,\nAnd lift our morning sacrifice;\nLet no vain thought our hearts possess,\nBut fasting, holy watchfulness.",
-      note: "Traditional Prime hymn",
+      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.\n\nAgens diebus prosperos\nadjuvet labor quaesumus,\nne nos quietis tempore\nlassescat aut socordia.",
+      english: "Now riseth our third hour of prayer,\nThe hour when Christ was lifted there\nUpon the Cross: no thought of pride\nBe ours — but fasting, fortified.\n\nIn all our toil throughout this day\nLet labour not through sloth give way,\nNor easy rest in peaceful time\nBreed sluggish hearts unfit to climb.",
+      note: "Traditional Prime hymn; Prime is the first of the Little Hours",
     },
     psalm: {
       ref: "Psalm 5",
       title: "Give ear, O Lord, to my words",
-      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity.",
-      ref2: "Ps 5:2–5 (Douay-Rheims)",
+      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity. Neither shall the wicked dwell near Thee: nor shall the unjust abide before Thy eyes. Thou hatest all the workers of iniquity: Thou wilt destroy all that speak a lie. But as for me in the multitude of Thy mercy, I will come into Thy house; I will worship towards Thy holy temple, in Thy fear.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 5 (Douay-Rheims)",
     },
     reading: {
       ref: "Isaiah 33:2",
-      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.",
+      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.\n\n℟. Thanks be to God.",
     },
-    canticle: null,
-    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Amen.",
+    canticle: {
+      title: "Apostles' Creed",
+      subtitle: "Symbolum Apostolorum — prayed at Prime in the traditional Roman Rite",
+      text: "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord; Who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell; the third day He arose again from the dead; He ascended into heaven, and sitteth at the right hand of God, the Father Almighty; from thence He shall come to judge the living and the dead.\n\nI believe in the Holy Ghost, the Holy Catholic Church, the Communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
+      ref: "Symbolum Apostolorum",
+    },
+    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Defend us this day from all sin, that we may come to the evening holy and undefiled; through Jesus Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5769,32 +5775,32 @@ const HOURS = [
     timeRange: [9, 11],
     icon: "☀",
     color: "#b87a10",
-    desc: "Prayer at the third hour, when the Holy Ghost descended at Pentecost",
+    desc: "The third hour — when the Holy Ghost descended at Pentecost",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Nunc Sancte nobis Spiritus",
-      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.",
-      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.",
-      note: "Attributed to St. Ambrose; traditional Terce hymn",
+      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.\n\nOs, lingua, mens, sensus, vigor,\nconfessionem personent,\nflamescat igne caritas,\naccendat ardor proximos.",
+      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.\n\nMouth, tongue, and mind, and all our powers,\nBear witness to this faith of ours;\nLet love with every feeling glow,\nKindle our neighbours, let it flow.",
+      note: "Attributed to St. Ambrose; the traditional Terce hymn",
     },
     psalm: {
-      ref: "Psalm 118 (119):33–40",
-      title: "Set before me for a law",
-      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way.",
-      ref2: "Ps 118:33–37 (Douay-Rheims)",
+      ref: "Psalm 118 (119):33–48",
+      title: "The way of Thy justifications",
+      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way. Establish Thy word to Thy servant, in Thy fear. Turn away my reproach, which I have apprehended: for Thy judgments are delightful. Behold I have longed after Thy precepts: quicken me in Thy justice.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:33–40 (Douay-Rheims)",
     },
     reading: {
       ref: "Acts 2:1–4",
-      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.",
+      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Lord God, Whose only-begotten Son, at this hour, hung upon the Cross for us: grant us grace to persevere in good works, to carry our daily cross patiently, and to offer all our labors for Thy greater glory. Amen.",
+    prayer: "Lord God, Whose only-begotten Son, at this third hour, sent down the Holy Ghost upon the Apostles: take not that same Holy Ghost from us, O Lord, but grant that we may always seek for it and obtain it, that we may so persevere in all holiness that we may merit to receive Him. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5806,32 +5812,32 @@ const HOURS = [
     timeRange: [11, 14],
     icon: "🌞",
     color: "#7a1c1c",
-    desc: "The sixth hour, when our Lord was nailed to the Cross",
+    desc: "The sixth hour — when our Lord was nailed to the Cross",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Rector potens, verax Deus",
-      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.",
-      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day.",
+      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.\n\nExtingue flammis litium,\naufer calorem noxium,\nconfer salutem corporum\nveramque pacem cordium.",
+      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day:\n\nExtinguish now each sinful fire,\nAnd banish every ill desire;\nAnd while Thou keep'st the body whole,\nShower healing peace upon the soul.",
       note: "Traditional Sext hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 118 (119):97–104",
+      ref: "Psalm 118 (119):97–112",
       title: "O how have I loved Thy law",
-      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth.",
-      ref2: "Ps 118:97–103 (Douay-Rheims)",
+      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth. Through Thy commandments I have had understanding: therefore have I hated every way of iniquity. Thy word is a lamp to my feet, and a light to my paths. I have sworn and am determined to keep the judgments of Thy justice.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:97–106 (Douay-Rheims)",
     },
     reading: {
       ref: "John 4:34",
-      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.",
+      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Almighty and eternal God, Who in the mystery of the Incarnation didst consecrate this noon hour with the presence of Thy only-begotten Son: grant us to persevere to midday in virtue, and so to finish well all the work of this day, to Thy glory. Amen.",
+    prayer: "Almighty and eternal God, Who at the sixth hour didst suffer Thy only-begotten Son to be nailed to the Cross for our sins: grant us so to keep midday holy that, united to His sacrifice, we may this day accomplish all things to Thy glory. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5843,32 +5849,32 @@ const HOURS = [
     timeRange: [14, 17],
     icon: "🌤",
     color: "#1a2744",
-    desc: "The ninth hour, the hour of Christ's death on the Cross",
+    desc: "The ninth hour — the hour of Christ's death upon the Cross",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Rerum Deus tenax vigor",
-      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.",
-      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nBright light of day's declining hours,\nUntouched by age or time's swift powers.",
+      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.\n\nLargire clarum vespere,\nquo vita nusquam decidat,\nsed praemium mortis sacrae\nperennis instet gloria.",
+      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nWho dost the light of day ordain\nAnd mark its changes and its wane:\n\nGrant us at last Thy light serene,\nThat life may never lack its sheen,\nAnd death, made holy by Thy grace,\nMay open into endless days.",
       note: "Traditional None hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 90 (91)",
-      title: "He that dwelleth in the aid of the most High",
-      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. For He hath delivered me from the snare of the hunters: and from the sharp word. He will overshadow thee with His shoulders: and under His wings thou shalt trust. His truth shall compass thee with a shield.",
-      ref2: "Ps 90:1–5 (Douay-Rheims)",
+      ref: "Psalm 118 (119):129–144",
+      title: "Thy testimonies are wonderful",
+      text: "Thy testimonies are wonderful: therefore my soul hath sought them. The declaration of Thy words giveth light: and giveth understanding to little ones. I opened my mouth and panted: because I longed for Thy commandments. Look Thou upon me, and have mercy on me, according to the judgment of them that love Thy name. Direct my steps according to Thy word: and let no iniquity have dominion over me. Redeem me from the calumnies of men: that I may keep Thy commandments. Make Thy face to shine upon Thy servant: and teach me Thy justifications. My eyes have sent forth springs of water: because they have not kept Thy law.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:129–136 (Douay-Rheims)",
     },
     reading: {
-      ref: "Matthew 27:45–46",
-      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me?",
+      ref: "Matthew 27:45–50",
+      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me? And Jesus again crying with a loud voice, yielded up the ghost.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head and give up the ghost for our sins: deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
+    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head upon the Cross and give up the ghost for our redemption: we beseech Thee, that through the merits of Thy most holy Passion and Death, Thou wouldst deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5883,33 +5889,34 @@ const HOURS = [
     desc: "The crown of the day — the Church's evening sacrifice of praise",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Lucis Creator optime",
-      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.",
-      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all.",
+      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.\n\nQui mane junctus prosperas\ndie, dierum omnium,\nhymni canendo ducitur,\nPerenne concinentibus.",
+      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all:\n\nAs daylight fades and darkness falls,\nBefore Thy throne Thy servant calls;\nDrive far from us the shades of night,\nAnd crown our souls with heavenly light.",
       note: "Traditional Vespers hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 140 (141):1–4",
-      title: "Let my prayer be directed",
-      text: "Lord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.",
-      ref2: "Ps 140:1–4 (Douay-Rheims)",
+      ref: "Psalm 109 (110) & Psalm 140 (141):1–4",
+      title: "The Lord said to my Lord · Let my prayer be directed",
+      text: "The Lord said to my Lord: Sit Thou at My right hand: until I make Thy enemies Thy footstool. The Lord will send forth the sceptre of Thy power out of Sion: rule Thou in the midst of Thy enemies. With Thee is the principality in the day of Thy strength: in the brightness of the saints: from the womb before the day star I begot Thee. The Lord hath sworn, and He will not repent: Thou art a priest for ever according to the order of Melchisedech.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nLord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 109 & Ps 140:1–4 (Douay-Rheims)",
     },
     reading: {
       ref: "1 Peter 5:8–9",
-      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.\n\n℟. Thanks be to God.",
     },
     canticle: {
       title: "Magnificat",
-      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him.",
-      ref: "Luke 1:46–50 (Douay-Rheims)",
+      subtitle: "Canticle of Our Lady · Luke 1:46–55",
+      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him. He hath shewed might in His arm: He hath scattered the proud in the conceit of their heart. He hath put down the mighty from their seat, and hath exalted the humble. He hath filled the hungry with good things: and the rich He hath sent empty away. He hath received Israel His servant, being mindful of His mercy: as He spoke to our fathers, to Abraham and to his seed for ever.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref: "Luke 1:46–55 (Douay-Rheims)",
     },
-    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits this day. Pardon our failures, protect us through the night, and grant that in Thy mercy we may rise again to praise Thee. Amen.",
+    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits, Who livest and reignest world without end. And may the souls of the faithful departed, through the mercy of God, rest in peace. Amen.\n\nGrant, we beseech Thee, O Lord, that the course of this world may be peaceably ordered by Thy governance, and that Thy Church may rejoice in tranquil devotion; through Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -5923,35 +5930,37 @@ const HOURS = [
     color: "#1a2744",
     desc: "The last prayer of the day — surrendering to God's care through the night",
     opening: {
-      versicle: "Convert us, O God our Saviour.",
-      response: "And turn away Thy anger from us.",
+      versicle: "Convert us, O God our Saviour.\n\n℟. And turn away Thy anger from us.\n\n℣. Incline unto my aid, O God.\n℟. O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nConfiteor Deo omnipotenti — I confess to Almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the saints, that I have sinned exceedingly in thought, word, and deed, through my fault, through my fault, through my most grievous fault. Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the saints, to pray to the Lord our God for me.\n\nMay Almighty God have mercy upon us, forgive us our sins, and bring us to life everlasting. Amen.\nMay the Almighty and merciful Lord grant us pardon, absolution, and remission of our sins. Amen.",
+      response: "",
     },
     hymn: {
       title: "Te lucis ante terminum",
-      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.",
-      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.",
-      note: "Traditional Compline hymn; one of the most ancient in the Office",
+      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.\n\nProcul recedant somnia\net noctium phantasmata;\nhostemque nostrum comprime,\nne polluantur corpora.",
+      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.\n\nFrom all ill dreams defend our eyes,\nFrom nightly fears and fantasies;\nTread under foot our ghostly foe,\nThat no pollution we may know.",
+      note: "Te lucis ante terminum — one of the most ancient hymns in the Roman Office",
     },
     psalm: {
-      ref: "Psalm 90 (91):1–6, 10–11",
-      title: "Under the protection of the most High",
-      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways.",
-      ref2: "Ps 90:1–2, 5–6, 10–11 (Douay-Rheims)",
+      ref: "Psalm 90 (91) & Psalm 133 (134)",
+      title: "Under the protection of the most High · Praise the Lord by night",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways. They shall bear thee in their hands: lest thou dash thy foot against a stone.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nBehold now bless ye the Lord, all ye servants of the Lord: who stand in the house of the Lord, in the courts of the house of our God. In the nights lift up your hands to the holy places, and bless ye the Lord. May the Lord out of Sion bless thee, He that made heaven and earth.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 90 & Ps 133 (Douay-Rheims)",
     },
     reading: {
       ref: "1 Peter 5:8–9",
-      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.\n\n℟. Thanks be to God.\n\n℣. Keep us, O Lord, as the apple of Thine eye.\n℟. Protect us under the shadow of Thy wings.",
     },
     canticle: {
       title: "Nunc dimittis",
-      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.",
+      subtitle: "Canticle of Simeon · Luke 2:29–32",
+      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
       ref: "Luke 2:29–32 (Douay-Rheims)",
     },
     antiphon: {
       title: "Salve Regina",
-      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+      subtitle: "Antiphon of Our Lady — sung kneeling after Compline",
+      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.\n\n℣. Pray for us, O holy Mother of God.\n℟. That we may be made worthy of the promises of Christ.\n\nLet us pray. O God, our refuge and our strength, look down with favour on Thy people who cry to Thee; and through the intercession of the glorious and Immaculate Virgin Mary, Mother of God, of blessed Joseph her spouse, of Thy blessed Apostles Peter and Paul, and of all the saints, in mercy and goodness hear the prayers we pour forth to Thee for the conversion of sinners, and for the liberty and exaltation of Holy Mother Church. Amen.",
     },
-    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore. Amen.",
+    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore; through Christ our Lord. Amen.",
     closing: {
       versicle: "May the almighty and merciful Lord grant us a quiet night and a perfect end.",
       response: "Amen.",
@@ -6134,12 +6143,12 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <div>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣ Versicle</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.versicle}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.opening.versicle}</p>
                 </div>
-                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                {hour.opening.response ? <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟ Response</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.response}</p>
-                </div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.opening.response}</p>
+                </div> : null}
               </div>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 12 }}>Take a moment to still yourself and enter into God's presence.</p>
@@ -6170,7 +6179,7 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.psalm.ref}</h2>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.gold, fontStyle: "italic", margin: "0 0 18px" }}>{hour.psalm.title}</p>
             <Card style={{ marginBottom: 10 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{hour.psalm.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0, whiteSpace: "pre-line" }}>{hour.psalm.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.psalm.ref2}</p>
           </div>
@@ -6182,7 +6191,7 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Scripture Reading</div>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.reading.ref}</h2>
             <Card style={{ borderLeft: `3px solid ${T.gold}`, marginBottom: 14 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.reading.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.reading.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center" }}>Pause. Receive the word. Let it rest in your heart.</p>
           </div>
@@ -6192,9 +6201,10 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
         return (
           <div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Canticle</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.canticle.title}</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.canticle.title}</h2>
+            {hour.canticle.subtitle && <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, margin: "0 0 16px" }}>{hour.canticle.subtitle}</p>}
             <Card style={{ borderLeft: `3px solid ${T.crimson}`, marginBottom: 10 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.canticle.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.canticle.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.canticle.ref}</p>
           </div>
@@ -6204,9 +6214,10 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
         return (
           <div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Marian Antiphon</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.antiphon.title}</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.antiphon.title}</h2>
+            {hour.antiphon.subtitle && <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, margin: "0 0 16px" }}>{hour.antiphon.subtitle}</p>}
             <Card style={{ borderLeft: `3px solid ${T.crimson}` }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.antiphon.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.antiphon.text}</p>
             </Card>
           </div>
         );
@@ -6217,7 +6228,7 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Closing Prayer</div>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>Collect</h2>
             <Card style={{ borderLeft: `3px solid ${T.navy}` }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.prayer}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.prayer}</p>
             </Card>
           </div>
         );
@@ -6231,12 +6242,12 @@ function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <div>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.versicle}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.closing.versicle}</p>
                 </div>
-                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                {hour.closing.response ? <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.response}</p>
-                </div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.closing.response}</p>
+                </div> : null}
               </div>
             </Card>
           </div>
