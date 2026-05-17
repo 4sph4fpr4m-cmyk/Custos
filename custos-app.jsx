@@ -382,9 +382,9 @@ const DOCTORS = [
     bio: "The foremost Scripture scholar of the early Church. Mastering Hebrew, Greek, and Latin, Jerome produced the Vulgate — the Latin translation of the Bible that served as the Church's standard text for over a millennium. His commentaries on the prophets and his fierce polemical letters made him the most formidable intellect of the patristic age. Known for his sharp temper and sharper pen.",
     topics: ["Scripture","Translation","Asceticism","Monasticism","Polemics"],
     works: [
-      { title: "The Vulgate (Latin Bible)", url: null },
-      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/30.htm" },
-      { title: "Letters", url: "https://www.newadvent.org/fathers/30.htm" },
+      { title: "The Vulgate (Latin Bible)", url: "https://www.sacred-texts.com/bib/vul/index.htm" },
+      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/3002.htm" },
+      { title: "Letters", url: "https://www.newadvent.org/fathers/3001.htm" },
     ],
     quotes: [
       { text: "Ignorance of Scripture is ignorance of Christ.", source: "Commentary on Isaiah" },
@@ -396,7 +396,7 @@ const DOCTORS = [
     works: [
       { title: "Homilies on Matthew", url: "https://www.newadvent.org/fathers/200101.htm" },
       { title: "On the Priesthood", url: "https://www.newadvent.org/fathers/1901.htm" },
-      { title: "On Marriage and Family Life", url: "https://www.newadvent.org/fathers/2002.htm" },
+      { title: "On Marriage and Family Life", url: "https://www.newadvent.org/fathers/200120.htm" },
     ],
     quotes: [
       { text: "Not to share our own wealth with the poor is theft from the poor and deprivation of their means of life.", source: "Homily on Lazarus" },
@@ -433,7 +433,7 @@ const DOCTORS = [
     works: [
       { title: "On Loving God", url: "https://www.newadvent.org/fathers/3804.htm" },
       { title: "Sermons on the Song of Songs", url: "https://www.newadvent.org/fathers/3805.htm" },
-      { title: "On Consideration", url: null },
+      { title: "On Consideration", url: "https://www.ewtn.com/catholicism/library/five-books-on-consideration-11tried" },
     ],
     quotes: [
       { text: "You wish to see; listen. Hearing is a step toward vision.", source: "Sermons on the Song of Songs" },
@@ -455,8 +455,8 @@ const DOCTORS = [
     topics: ["Conscience","Natural Law","Virtue","Justice","Life & Death","Prayer","The Moral Act","Grace"],
     works: [
       { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/" },
-      { title: "Summa Contra Gentiles", url: "https://www.newadvent.org/summa/" },
-      { title: "De Malo (On Evil)", url: "https://www.newadvent.org/summa/" },
+      { title: "Summa Contra Gentiles", url: "https://isidore.co/aquinas/ContraGentiles.htm" },
+      { title: "De Malo (On Evil)", url: "https://isidore.co/aquinas/QDdeMalo.htm" },
     ],
     quotes: [
       { text: "Charity is friendship with God — the form and mother of all virtues, without which faith itself is dead.", source: "Summa II-II, Q.23" },
@@ -467,8 +467,8 @@ const DOCTORS = [
     bio: "An illiterate laywoman who became one of the most influential figures in Church history. She persuaded Pope Gregory XI to return from Avignon to Rome, ending the Babylonian Captivity. Her Dialogue, dictated in ecstasy, is a masterpiece of mystical theology. She is one of only four women declared a Doctor of the Church and a patron saint of Europe.",
     topics: ["Obedience","The Papacy","The Blood of Christ","Suffering","Mystical Union","Reform"],
     works: [
-      { title: "Dialogue of Divine Providence", url: null },
-      { title: "Letters", url: null },
+      { title: "Dialogue of Divine Providence", url: "https://www.ewtn.com/catholicism/library/dialogue-of-saint-catherine-of-siena-6334" },
+      { title: "Letters", url: "https://www.newadvent.org/cathen/03447a.htm" },
     ],
     quotes: [
       { text: "Nails were not enough to hold God-and-man nailed and fastened on the Cross, had not love held Him there.", source: "Dialogue" },
@@ -479,8 +479,8 @@ const DOCTORS = [
     topics: ["Prayer","Contemplation","Interior Life","Reform","Obedience","Humility"],
     works: [
       { title: "Interior Castle", url: "https://www.ccel.org/ccel/teresa/castle2.html" },
-      { title: "Way of Perfection", url: null },
-      { title: "The Life of Teresa of Jesus (Autobiography)", url: null },
+      { title: "Way of Perfection", url: "https://www.ccel.org/ccel/teresa/way.html" },
+      { title: "The Life of Teresa of Jesus (Autobiography)", url: "https://www.ccel.org/ccel/teresa/life.html" },
     ],
     quotes: [
       { text: "Let nothing disturb you, let nothing frighten you. All things are passing; God never changes. Patience obtains all things.", source: "Bookmark prayer" },
@@ -491,8 +491,8 @@ const DOCTORS = [
     topics: ["Dark Night","Purification","Union with God","Detachment","Contemplation","Suffering"],
     works: [
       { title: "Dark Night of the Soul", url: "https://www.ccel.org/ccel/john_cross/dark_night.html" },
-      { title: "Ascent of Mount Carmel", url: null },
-      { title: "Spiritual Canticle", url: null },
+      { title: "Ascent of Mount Carmel", url: "https://www.ccel.org/ccel/john_cross/ascent.html" },
+      { title: "Spiritual Canticle", url: "https://www.ccel.org/ccel/john_cross/canticle.html" },
     ],
     quotes: [
       { text: "In the evening of life, we will be judged on love alone.", source: "Sayings of Light and Love" },
@@ -513,8 +513,8 @@ const DOCTORS = [
     topics: ["Devout Life","Spiritual Direction","Gentleness","Love of God","Marriage","Patience"],
     works: [
       { title: "Introduction to the Devout Life", url: "https://www.ccel.org/ccel/desales/devout_life.html" },
-      { title: "Treatise on the Love of God", url: null },
-      { title: "Letters of Spiritual Direction", url: null },
+      { title: "Treatise on the Love of God", url: "https://www.ccel.org/ccel/desales/love_of_god.html" },
+      { title: "Letters of Spiritual Direction", url: "https://www.ewtn.com/catholicism/library/letters-of-st-francis-de-sales-5773" },
     ],
     quotes: [
       { text: "Nothing is so strong as gentleness, nothing so gentle as real strength.", source: "Letters of Spiritual Direction" },
@@ -525,9 +525,9 @@ const DOCTORS = [
     bio: "A Neapolitan nobleman who became a priest, bishop, and founder of the Redemptorist order. He developed a moral theology that charted a middle course between rigorism and laxism, earning him the title Patron of Moral Theologians and Confessors. His probabilist approach — that in doubtful cases the opinion favorable to liberty may be followed if solidly probable — transformed the practice of confession and pastoral care across the Catholic world.",
     topics: ["Moral Theology","Confession","Prayer","Mercy","The Blessed Virgin","Probabilism"],
     works: [
-      { title: "Moral Theology", url: null },
-      { title: "The Glories of Mary", url: null },
-      { title: "The Practice of the Love of Jesus Christ", url: null },
+      { title: "Moral Theology", url: "https://www.newadvent.org/cathen/01329a.htm" },
+      { title: "The Glories of Mary", url: "https://www.ewtn.com/catholicism/library/glories-of-mary-5504" },
+      { title: "The Practice of the Love of Jesus Christ", url: "https://www.ewtn.com/catholicism/library/practice-of-the-love-of-jesus-christ-5412" },
     ],
     quotes: [
       { text: "He who trusts himself is lost. He who trusts in God can do all things.", source: "The Practice of the Love of Jesus Christ" },
@@ -537,9 +537,9 @@ const DOCTORS = [
     bio: "The youngest Doctor of the Church, who died at 24 and yet articulated one of the most profound spiritual insights in Catholic history: the 'Little Way.' Rather than heroic penances or mystical visions, Thérèse taught that sanctity consists in doing small things with great love and total trust in God's mercy. Her autobiography Story of a Soul has been translated into over 60 languages and has guided countless souls — including missionaries, soldiers, and popes — toward confidence in God's fatherly love. Patron of the missions.",
     topics: ["The Little Way","Trust","Suffering","Love","Humility","Confidence in God's Mercy","Spiritual Childhood"],
     works: [
-      { title: "Story of a Soul (Autobiography)", url: null },
-      { title: "Letters", url: null },
-      { title: "Last Conversations", url: null },
+      { title: "Story of a Soul (Autobiography)", url: "https://www.ccel.org/ccel/therese/autobiography.html" },
+      { title: "Letters", url: "https://www.ewtn.com/catholicism/library/letters-of-st-therese-of-lisieux-5902" },
+      { title: "Last Conversations", url: "https://www.ewtn.com/catholicism/library/last-conversations-of-st-therese-of-lisieux-5760" },
     ],
     quotes: [
       { text: "My vocation is love! In the heart of the Church, my Mother, I will be love.", source: "Manuscript B" },
