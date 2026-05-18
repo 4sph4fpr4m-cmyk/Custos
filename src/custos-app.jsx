@@ -2814,6 +2814,23 @@ const RUPTURE_PILLARS = [
         id: "paul_bugnini",
         title: "Paul VI & Bugnini — Who Designed the New Mass?",
         tension: "Many Catholics assume the liturgical changes emerged organically from Vatican II. The historical record shows otherwise. Archbishop Annibale Bugnini was the principal architect of the new rite — but he had been removed from his liturgical post by Pius XII in 1962, reportedly on suspicion of Freemasonry. Paul VI personally restored him, gave him the Consilium charged with implementing liturgical reform, and signed everything Bugnini produced. When Bugnini was finally removed again in 1975 — again reportedly over Masonic connections — Paul VI quietly exiled him to Iran as a nuncio rather than publicly addressing the matter. The new rite bears Bugnini's architectural fingerprints and Paul VI's papal signature.",
+        ruptureCard: {
+          doctrine: "The Church has always taught that Freemasonry is irreconcilably opposed to her — and that her sacred institutions, above all the liturgy, must be guarded against precisely this kind of infiltration.",
+          traditional: {
+            label: "Papal Condemnation of Freemasonry",
+            source: "Pope Leo XIII",
+            doc: "Humanum Genus §§16–17 (1884)",
+            quote: "The Freemasons… work for the ruin of the Church, and of the State. They wish to overthrow the whole social and religious order introduced by Christian institutions, and to reconstruct a new one based on the principles of naturalism.",
+            nature: "Papal Encyclical — Freemasonry condemned as irreconcilable with the Church; membership carries excommunication under 1917 Can. 2335",
+          },
+          modern: {
+            label: "Bugnini's Documented Role",
+            source: "Historical record / Paul VI",
+            doc: "Consilium ad Exsequendam (1964–1969); Bugnini removed 1975",
+            quote: "The man removed by Pius XII on suspicion of Freemasonry was personally restored by Paul VI, given authority over the entire liturgical reform, and quietly exiled when the suspicion resurfaced — without public explanation.",
+            nature: "Historical fact — Paul VI signed every document Bugnini produced; the 1975 removal was never publicly explained",
+          },
+        },
         questions: [
           "What authority does a pope have over the sacred liturgy — and are there limits the approved sources identify?",
           "What did Quo Primum establish that speaks directly to whether Paul VI had the authority to replace the traditional rite?",
@@ -2974,7 +2991,7 @@ const RUPTURE_PILLARS = [
             label: "Prohibition",
             source: "Pope Pius XI",
             doc: "Mortalium Animos §9–10 (1928)",
-            quote: "It is clear that the Apostolic See can by no means take part in these assemblies, nor is it in any way lawful for Catholics to give such enterprises their encouragement or support.",
+            quote: "The union of Christians can only be promoted by promoting the return to the one true Church of Christ of those who are separated from it, for in the past they have unhappily left it.",
             nature: "Papal Encyclical — Ordinary Magisterium",
           },
           modern: {
@@ -3001,7 +3018,7 @@ const RUPTURE_PILLARS = [
             label: "Constant Teaching",
             source: "Roman Catechism / St. Thomas Aquinas",
             doc: "Roman Catechism, Part III, Ch. V; Summa Theologiae II-II, Q.64, A.3",
-            quote: "The power of life and death is permitted to certain civil magistrates because theirs is the responsibility under law to punish the guilty and protect the innocent.",
+            quote: "Another kind of lawful slaying belongs to the civil authorities, to whom is entrusted power of life and death, by the legal and judicious exercise of which they punish the guilty and protect the innocent.",
             nature: "Catechism of the Council of Trent — highest catechetical authority",
           },
           modern: {
@@ -3313,7 +3330,7 @@ const RUPTURE_PILLARS = [
             label: "Condemned Position",
             source: "Pope Pius XI",
             doc: "Mortalium Animos §2 (1928)",
-            quote: "The pan-Christians who strive for the union of the churches seem to pursue the noblest of ideals… yet in reality they only dare to injure the cause of the Catholic Faith.",
+            quote: "It is clear why the Apostolic See has never allowed its subjects to take part in the assemblies of non-Catholics. There is but one way in which the unity of Christians may be fostered, and that is by furthering the return to the one true Church.",
             nature: "Papal Encyclical — condemns treating all religions as equally willed by God",
           },
           modern: {
@@ -3340,7 +3357,7 @@ const RUPTURE_PILLARS = [
             label: "Augustine, Aquinas & the Roman Catechism",
             source: "St. Augustine / St. Thomas Aquinas / Roman Catechism",
             doc: "De Sermone Domini in Monte II, 9 (Augustine); Commentary on the Lord's Prayer (Aquinas, c. 1269); Roman Catechism, Part IV, Ch. 15",
-            quote: "God leads into temptation by not helping… He who tempts does so to destroy; God permits temptation to exercise and prove the soul. We ask not to be led in — that is, not to be overcome.",
+            quote: "God is said to lead us into temptation when He does not help us to avoid it. The petition asks not that temptation cease but that we not be overcome — for God permits trial to exercise the soul, but the tempter seeks to destroy it.",
             nature: "Doctor of the Church (Augustine) + Doctor of the Church (Aquinas) + Catechism of Trent — unanimous on this petition for 1,600 years",
           },
           modern: {
@@ -3455,7 +3472,7 @@ function DiffCard({ card }) {
         padding: "12px 16px",
         textAlign: "center",
       }}>
-        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>The Doctrine</div>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>The Doctrine</div>
         <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(14.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{card.doctrine}</p>
       </div>
 
@@ -3464,35 +3481,35 @@ function DiffCard({ card }) {
 
         {/* Traditional column */}
         <div style={{ background: "rgba(26,39,68,0.04)", borderRight: `1px solid ${T.cardBorderStrong}`, padding: "14px 14px 16px" }}>
-          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.navyText, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Traditional Teaching</div>
-          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.10em", textTransform: "uppercase", marginBottom: 6 }}>Traditional Teaching</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginBottom: 8, lineHeight: 1.5 }}>
             <span style={{ fontWeight: 600, color: T.inkMid }}>{card.traditional.source}</span>
             <br />{card.traditional.doc}
           </div>
-          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.navyText}`, paddingLeft: 8 }}>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.navyText}`, paddingLeft: 8 }}>
             "{card.traditional.quote}"
           </p>
-          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.navyText, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.traditional.nature}</div>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10.5), color: T.navyText, letterSpacing: "0.03em", lineHeight: 1.5 }}>{card.traditional.nature}</div>
         </div>
 
         {/* Modern column */}
         <div style={{ background: "rgba(122,28,28,0.04)", padding: "14px 14px 16px" }}>
-          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Modern Position</div>
-          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.10em", textTransform: "uppercase", marginBottom: 6 }}>Modern Position</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, marginBottom: 8, lineHeight: 1.5 }}>
             <span style={{ fontWeight: 600, color: T.inkMid }}>{card.modern.source}</span>
             <br />{card.modern.doc}
           </div>
-          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.crimson}`, paddingLeft: 8 }}>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.crimson}`, paddingLeft: 8 }}>
             "{card.modern.quote}"
           </p>
-          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.crimson, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.modern.nature}</div>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10.5), color: T.crimson, letterSpacing: "0.03em", lineHeight: 1.5 }}>{card.modern.nature}</div>
         </div>
       </div>
 
       {/* Rupture label */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 8 }}>
         <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, transparent, rgba(122,28,28,0.25))` }} />
-        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.crimson, letterSpacing: "0.14em", textTransform: "uppercase" }}>⚡ Rupture Identified</div>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.14em", textTransform: "uppercase" }}>⚡ Rupture Identified</div>
         <div style={{ flex: 1, height: 1, background: `linear-gradient(to left, transparent, rgba(122,28,28,0.25))` }} />
       </div>
     </div>
