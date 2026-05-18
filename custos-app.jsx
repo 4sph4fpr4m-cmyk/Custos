@@ -382,9 +382,9 @@ const DOCTORS = [
     bio: "The foremost Scripture scholar of the early Church. Mastering Hebrew, Greek, and Latin, Jerome produced the Vulgate — the Latin translation of the Bible that served as the Church's standard text for over a millennium. His commentaries on the prophets and his fierce polemical letters made him the most formidable intellect of the patristic age. Known for his sharp temper and sharper pen.",
     topics: ["Scripture","Translation","Asceticism","Monasticism","Polemics"],
     works: [
-      { title: "The Vulgate (Latin Bible)", url: "https://www.sacred-texts.com/bib/vul/index.htm" },
-      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/3002.htm" },
-      { title: "Letters", url: "https://www.newadvent.org/fathers/3001.htm" },
+      { title: "The Vulgate (Latin Bible)", url: null },
+      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/30.htm" },
+      { title: "Letters", url: "https://www.newadvent.org/fathers/30.htm" },
     ],
     quotes: [
       { text: "Ignorance of Scripture is ignorance of Christ.", source: "Commentary on Isaiah" },
@@ -396,7 +396,7 @@ const DOCTORS = [
     works: [
       { title: "Homilies on Matthew", url: "https://www.newadvent.org/fathers/200101.htm" },
       { title: "On the Priesthood", url: "https://www.newadvent.org/fathers/1901.htm" },
-      { title: "On Marriage and Family Life", url: "https://www.newadvent.org/fathers/200120.htm" },
+      { title: "On Marriage and Family Life", url: "https://www.newadvent.org/fathers/2002.htm" },
     ],
     quotes: [
       { text: "Not to share our own wealth with the poor is theft from the poor and deprivation of their means of life.", source: "Homily on Lazarus" },
@@ -433,7 +433,7 @@ const DOCTORS = [
     works: [
       { title: "On Loving God", url: "https://www.newadvent.org/fathers/3804.htm" },
       { title: "Sermons on the Song of Songs", url: "https://www.newadvent.org/fathers/3805.htm" },
-      { title: "On Consideration", url: "https://www.ewtn.com/catholicism/library/five-books-on-consideration-11tried" },
+      { title: "On Consideration", url: null },
     ],
     quotes: [
       { text: "You wish to see; listen. Hearing is a step toward vision.", source: "Sermons on the Song of Songs" },
@@ -455,8 +455,8 @@ const DOCTORS = [
     topics: ["Conscience","Natural Law","Virtue","Justice","Life & Death","Prayer","The Moral Act","Grace"],
     works: [
       { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/" },
-      { title: "Summa Contra Gentiles", url: "https://isidore.co/aquinas/ContraGentiles.htm" },
-      { title: "De Malo (On Evil)", url: "https://isidore.co/aquinas/QDdeMalo.htm" },
+      { title: "Summa Contra Gentiles", url: "https://www.newadvent.org/summa/" },
+      { title: "De Malo (On Evil)", url: "https://www.newadvent.org/summa/" },
     ],
     quotes: [
       { text: "Charity is friendship with God — the form and mother of all virtues, without which faith itself is dead.", source: "Summa II-II, Q.23" },
@@ -467,8 +467,8 @@ const DOCTORS = [
     bio: "An illiterate laywoman who became one of the most influential figures in Church history. She persuaded Pope Gregory XI to return from Avignon to Rome, ending the Babylonian Captivity. Her Dialogue, dictated in ecstasy, is a masterpiece of mystical theology. She is one of only four women declared a Doctor of the Church and a patron saint of Europe.",
     topics: ["Obedience","The Papacy","The Blood of Christ","Suffering","Mystical Union","Reform"],
     works: [
-      { title: "Dialogue of Divine Providence", url: "https://www.ewtn.com/catholicism/library/dialogue-of-saint-catherine-of-siena-6334" },
-      { title: "Letters", url: "https://www.newadvent.org/cathen/03447a.htm" },
+      { title: "Dialogue of Divine Providence", url: null },
+      { title: "Letters", url: null },
     ],
     quotes: [
       { text: "Nails were not enough to hold God-and-man nailed and fastened on the Cross, had not love held Him there.", source: "Dialogue" },
@@ -479,8 +479,8 @@ const DOCTORS = [
     topics: ["Prayer","Contemplation","Interior Life","Reform","Obedience","Humility"],
     works: [
       { title: "Interior Castle", url: "https://www.ccel.org/ccel/teresa/castle2.html" },
-      { title: "Way of Perfection", url: "https://www.ccel.org/ccel/teresa/way.html" },
-      { title: "The Life of Teresa of Jesus (Autobiography)", url: "https://www.ccel.org/ccel/teresa/life.html" },
+      { title: "Way of Perfection", url: null },
+      { title: "The Life of Teresa of Jesus (Autobiography)", url: null },
     ],
     quotes: [
       { text: "Let nothing disturb you, let nothing frighten you. All things are passing; God never changes. Patience obtains all things.", source: "Bookmark prayer" },
@@ -491,8 +491,8 @@ const DOCTORS = [
     topics: ["Dark Night","Purification","Union with God","Detachment","Contemplation","Suffering"],
     works: [
       { title: "Dark Night of the Soul", url: "https://www.ccel.org/ccel/john_cross/dark_night.html" },
-      { title: "Ascent of Mount Carmel", url: "https://www.ccel.org/ccel/john_cross/ascent.html" },
-      { title: "Spiritual Canticle", url: "https://www.ccel.org/ccel/john_cross/canticle.html" },
+      { title: "Ascent of Mount Carmel", url: null },
+      { title: "Spiritual Canticle", url: null },
     ],
     quotes: [
       { text: "In the evening of life, we will be judged on love alone.", source: "Sayings of Light and Love" },
@@ -513,8 +513,8 @@ const DOCTORS = [
     topics: ["Devout Life","Spiritual Direction","Gentleness","Love of God","Marriage","Patience"],
     works: [
       { title: "Introduction to the Devout Life", url: "https://www.ccel.org/ccel/desales/devout_life.html" },
-      { title: "Treatise on the Love of God", url: "https://www.ccel.org/ccel/desales/love_of_god.html" },
-      { title: "Letters of Spiritual Direction", url: "https://www.ewtn.com/catholicism/library/letters-of-st-francis-de-sales-5773" },
+      { title: "Treatise on the Love of God", url: null },
+      { title: "Letters of Spiritual Direction", url: null },
     ],
     quotes: [
       { text: "Nothing is so strong as gentleness, nothing so gentle as real strength.", source: "Letters of Spiritual Direction" },
@@ -525,9 +525,9 @@ const DOCTORS = [
     bio: "A Neapolitan nobleman who became a priest, bishop, and founder of the Redemptorist order. He developed a moral theology that charted a middle course between rigorism and laxism, earning him the title Patron of Moral Theologians and Confessors. His probabilist approach — that in doubtful cases the opinion favorable to liberty may be followed if solidly probable — transformed the practice of confession and pastoral care across the Catholic world.",
     topics: ["Moral Theology","Confession","Prayer","Mercy","The Blessed Virgin","Probabilism"],
     works: [
-      { title: "Moral Theology", url: "https://www.newadvent.org/cathen/01329a.htm" },
-      { title: "The Glories of Mary", url: "https://www.ewtn.com/catholicism/library/glories-of-mary-5504" },
-      { title: "The Practice of the Love of Jesus Christ", url: "https://www.ewtn.com/catholicism/library/practice-of-the-love-of-jesus-christ-5412" },
+      { title: "Moral Theology", url: null },
+      { title: "The Glories of Mary", url: null },
+      { title: "The Practice of the Love of Jesus Christ", url: null },
     ],
     quotes: [
       { text: "He who trusts himself is lost. He who trusts in God can do all things.", source: "The Practice of the Love of Jesus Christ" },
@@ -537,9 +537,9 @@ const DOCTORS = [
     bio: "The youngest Doctor of the Church, who died at 24 and yet articulated one of the most profound spiritual insights in Catholic history: the 'Little Way.' Rather than heroic penances or mystical visions, Thérèse taught that sanctity consists in doing small things with great love and total trust in God's mercy. Her autobiography Story of a Soul has been translated into over 60 languages and has guided countless souls — including missionaries, soldiers, and popes — toward confidence in God's fatherly love. Patron of the missions.",
     topics: ["The Little Way","Trust","Suffering","Love","Humility","Confidence in God's Mercy","Spiritual Childhood"],
     works: [
-      { title: "Story of a Soul (Autobiography)", url: "https://www.ccel.org/ccel/therese/autobiography.html" },
-      { title: "Letters", url: "https://www.ewtn.com/catholicism/library/letters-of-st-therese-of-lisieux-5902" },
-      { title: "Last Conversations", url: "https://www.ewtn.com/catholicism/library/last-conversations-of-st-therese-of-lisieux-5760" },
+      { title: "Story of a Soul (Autobiography)", url: null },
+      { title: "Letters", url: null },
+      { title: "Last Conversations", url: null },
     ],
     quotes: [
       { text: "My vocation is love! In the heart of the Church, my Mother, I will be love.", source: "Manuscript B" },
@@ -2786,6 +2786,23 @@ const RUPTURE_PILLARS = [
         id: "novus_ordo",
         title: "The New Mass vs. the Traditional Roman Rite",
         tension: "The Roman Rite, substantially unchanged since at least Gregory the Great (6th c.) and codified by Trent, was replaced in 1969 by the Novus Ordo Missae — a new rite constructed by a committee under Archbishop Annibale Bugnini, personally appointed and empowered by Paul VI. Paul VI signed and promulgated it, defended it against criticism, and enforced its adoption. Cardinals Ottaviani and Bacci, in their formal Intervention to Paul VI, called it a 'striking departure from the theology of the Mass as defined by Trent' — a document Paul VI received but did not retract the new rite.",
+        ruptureCard: {
+          doctrine: "The Mass is the unbloody sacrifice of the Body and Blood of Christ, offered by the priest to God — not a communal meal assembled around the people.",
+          traditional: {
+            label: "Perpetual Grant & Prohibition",
+            source: "Pope St. Pius V / Council of Trent",
+            doc: "Quo Primum (1570); Trent, Session XXII, Canon 7",
+            quote: "If anyone says that the ceremonies, vestments, and outward signs which the Catholic Church makes use of in the celebration of Masses are incentives to impiety rather than offices of piety: let him be anathema.",
+            nature: "Papal Bull + Ecumenical Council — Trent's Canon 7 anathematizes contempt of the received rite",
+          },
+          modern: {
+            label: "New Rite Promulgated",
+            source: "Pope Paul VI",
+            doc: "Missale Romanum (Apostolic Constitution, 1969)",
+            quote: "We order that the prescriptions of this Constitution go into effect November 30th of this year. We wish that these Our decrees and prescriptions be firm and effective now and in the future, notwithstanding any constitutions or apostolic ordinances issued by Our predecessors.",
+            nature: "Apostolic Constitution — superseded Quo Primum; new rite imposed by papal authority",
+          },
+        },
         questions: [
           "What did the Council of Trent define about the Mass that cannot be changed?",
           "What did Quo Primum establish about the permanence of the traditional Roman Rite — and can a pope revoke what a previous pope granted in perpetuity?",
@@ -2806,6 +2823,23 @@ const RUPTURE_PILLARS = [
         id: "communion_hand",
         title: "Communion in the Hand While Standing",
         tension: "From the earliest centuries through the 1960s, the universal practice of the Latin Church was reception of Holy Communion on the tongue while kneeling. This practice was explicitly confirmed by Memoriale Domini (1969), which polled bishops worldwide and upheld the traditional discipline — yet granted a reluctant indult to dioceses that petitioned for the change. Today the exception has become the norm.",
+        ruptureCard: {
+          doctrine: "The Real Presence of Christ in the Eucharist demands the utmost bodily reverence; the faithful receive on the tongue, kneeling, from the hands of an ordained minister.",
+          traditional: {
+            label: "Universal Discipline Confirmed",
+            source: "Congregation for Divine Worship / Pope Paul VI",
+            doc: "Memoriale Domini (1969) — result of worldwide episcopal consultation",
+            quote: "The Apostolic See therefore emphatically urges bishops, priests and faithful to observe zealously this law… The method of placing Holy Communion on the tongue of the communicants must be retained.",
+            nature: "Instruction approved by Paul VI — traditional practice upheld by majority of bishops polled",
+          },
+          modern: {
+            label: "Exception Became the Norm",
+            source: "Post-conciliar practice",
+            doc: "Indult granted 1969; universal in most Western countries by 1980s",
+            quote: "Where the contrary practice already prevails… each bishop may… allow the new rite to continue.",
+            nature: "Reluctant indult — bishops who defied the norm were rewarded with the exception",
+          },
+        },
         questions: [
           "What does the unbroken tradition of the Church teach about reverence in receiving Holy Communion?",
           "What do the approved sources say about the Real Presence and why it demands bodily reverence?",
@@ -2816,6 +2850,23 @@ const RUPTURE_PILLARS = [
         id: "vernacular",
         title: "Mass in the Vernacular vs. Latin",
         tension: "The Council of Trent explicitly condemned the position that the Mass should be celebrated in the vernacular (Session XXII, Canon 9). For over 400 years the Latin Mass was the universal norm. The shift to vernacular after Vatican II reversed this discipline and has raised questions about continuity with Trent's decrees.",
+        ruptureCard: {
+          doctrine: "Latin is the sacred language of the Roman Rite, set apart from common speech to signify the transcendence of the sacrifice offered to God.",
+          traditional: {
+            label: "Canon & Perpetual Norm",
+            source: "Council of Trent / Pope St. Pius V",
+            doc: "Trent, Session XXII, Canon 9 (1562); Quo Primum (1570)",
+            quote: "If anyone says that the rite of the Roman Church, according to which a part of the canon and the words of consecration are pronounced in a low voice, is to be condemned… or that the Mass ought to be celebrated in the vernacular tongue only: let him be anathema.",
+            nature: "Ecumenical Council — solemn canon with anathema; binding on all successors",
+          },
+          modern: {
+            label: "Vernacular Introduced",
+            source: "Pope Paul VI",
+            doc: "Missale Romanum (1969); implemented from 1964 onward",
+            quote: "The use of the Latin language is to be preserved in the Latin rites. But since the use of the mother tongue… may frequently be of great advantage to the people, the limits of its employment may be extended.",
+            nature: "Post-conciliar reform — Mass effectively moved to vernacular universally",
+          },
+        },
         questions: [
           "What did the Council of Trent teach about Latin in the Mass?",
           "What is the theological significance of a sacred language set apart from ordinary speech?",
@@ -2826,6 +2877,23 @@ const RUPTURE_PILLARS = [
         id: "ad_orientem",
         title: "Versus Populum vs. Ad Orientem",
         tension: "For centuries, priest and faithful together faced East (ad orientem) — priest and people united in the same direction, offering sacrifice to God. The post-conciliar reform introduced the practice of the priest facing the people (versus populum), which critics argue transformed the Mass from a sacrifice offered to God into a communal meal centered on the assembly.",
+        ruptureCard: {
+          doctrine: "The priest at Mass acts in persona Christi, offering the sacrifice to God on behalf of the people — not facing them as a presider of a communal gathering.",
+          traditional: {
+            label: "Universal Immemorial Praxis",
+            source: "Council of Trent / St. Thomas Aquinas",
+            doc: "Trent, Session XXII (1562); Summa Theologiae III, Q.83, A.1",
+            quote: "The celebration of Mass is an image representing Christ's Passion… The priest… bears Christ's image by reason of his order.",
+            nature: "Ecumenical Council + Doctor of the Church — priest faces East with the people, offering to God",
+          },
+          modern: {
+            label: "Versus Populum Introduced",
+            source: "General Instruction of the Roman Missal",
+            doc: "GIRM §299 (1969, revised 2002)",
+            quote: "The altar should be built apart from the wall, in such a way that it is possible to walk around it easily and that Mass can be celebrated at it facing the people, which is desirable wherever possible.",
+            nature: "Post-conciliar rubric — facing the people made normative; ad orientem demoted",
+          },
+        },
         questions: [
           "What does the traditional theology of the Mass as sacrifice imply about the direction of prayer?",
           "How does Aquinas describe the priest's role at Mass and his relation to Christ the High Priest?",
@@ -2836,6 +2904,23 @@ const RUPTURE_PILLARS = [
         id: "tlm_suppression",
         title: "Suppression of the Traditional Latin Mass",
         tension: "Benedict XVI's Summorum Pontificum (2007) declared that the traditional Mass 'was never abrogated' and freed its celebration. In 2021, Pope Francis issued Traditionis Custodes, severely restricting the traditional Mass and contradicting Benedict's juridical determination. This created open conflict between two papal documents on the same question.",
+        ruptureCard: {
+          doctrine: "The ancient Roman Rite, never lawfully abrogated, remains a permanent right of every priest of the Roman Church.",
+          traditional: {
+            label: "Papal Determination",
+            source: "Pope Benedict XVI",
+            doc: "Summorum Pontificum, Art. 1 (2007)",
+            quote: "The Roman Missal promulgated by Paul VI is the ordinary expression of the lex orandi of the Catholic Church of the Latin rite. Nonetheless, the Roman Missal promulgated by St. Pius V and reissued by Bl. John XXIII is to be considered as an extraordinary expression of that same lex orandi, and must be given due honour for its venerable and ancient usage.",
+            nature: "Motu Proprio — papal determination; the TLM was never abrogated",
+          },
+          modern: {
+            label: "2021 Reversal",
+            source: "Pope Francis",
+            doc: "Traditionis Custodes, Art. 1 (2021)",
+            quote: "The liturgical books promulgated by Saint Paul VI and Saint John Paul II, in conformity with the decrees of Vatican Council II, are the unique expression of the lex orandi of the Roman Rite.",
+            nature: "Motu Proprio — directly contradicts Benedict XVI's determination",
+          },
+        },
         questions: [
           "What did Summorum Pontificum establish about the legal status of the traditional Mass?",
           "What does Ecclesia Dei say about the legitimate aspirations of Catholics attached to the traditional rite?",
@@ -2855,6 +2940,23 @@ const RUPTURE_PILLARS = [
         id: "religious_liberty",
         title: "Religious Liberty",
         tension: "Mirari Vos (Gregory XVI, 1832) and Quanta Cura (Pius IX, 1864) explicitly condemned the proposition that every man has a right to practice whatever religion he chooses. Dignitatis Humanae (Vatican II, 1965) appeared to affirm precisely this right. Critics — including Archbishop Lefebvre — argued this is not development but contradiction.",
+        ruptureCard: {
+          doctrine: "Civil governments have no duty to tolerate false religions; the right to worship publicly belongs to the true religion.",
+          traditional: {
+            label: "Condemned Proposition",
+            source: "Pope Gregory XVI",
+            doc: "Mirari Vos (1832) & Syllabus of Errors §77–80 (Pius IX, 1864)",
+            quote: "From this completely rotten source of indifferentism flows that absurd and erroneous proposition which claims that liberty of conscience must be maintained for everyone.",
+            nature: "Papal Encyclical — Ordinary Magisterium",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Dignitatis Humanae §2 (1965)",
+            quote: "This Vatican Council declares that the human person has a right to religious freedom… immune from coercion on the part of individuals, social groups, and every human power.",
+            nature: "Pastoral Declaration — authority disputed",
+          },
+        },
         questions: [
           "What did Mirari Vos teach about religious indifferentism and the claim that all religions are equally valid paths?",
           "What did the Syllabus of Errors specifically condemn regarding religious liberty and civil tolerance of false religions?",
@@ -2865,6 +2967,23 @@ const RUPTURE_PILLARS = [
         id: "ecumenism",
         title: "Ecumenism and False Unity",
         tension: "Mortalium Animos (Pius XI, 1928) explicitly forbade Catholics from participating in ecumenical gatherings with non-Catholics, stating that Christian unity can only come through return to the one true Church. The post-conciliar Church embraced ecumenical dialogue as a positive good. These positions are difficult to reconcile.",
+        ruptureCard: {
+          doctrine: "Christian unity can only be achieved through the return of all separated brethren to the one true Church of Christ.",
+          traditional: {
+            label: "Prohibition",
+            source: "Pope Pius XI",
+            doc: "Mortalium Animos §9–10 (1928)",
+            quote: "It is clear that the Apostolic See can by no means take part in these assemblies, nor is it in any way lawful for Catholics to give such enterprises their encouragement or support.",
+            nature: "Papal Encyclical — Ordinary Magisterium",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Unitatis Redintegratio §4 (1964)",
+            quote: "Catholics must joyfully acknowledge and esteem the truly Christian endowments from our common heritage which are to be found among our separated brethren.",
+            nature: "Decree on Ecumenism — authority disputed",
+          },
+        },
         questions: [
           "What did Mortalium Animos teach about participating in pan-Christian ecumenical movements?",
           "What does Dominus Iesus teach about the unique salvific role of the Catholic Church — and how does it relate to ecumenical claims?",
@@ -2875,6 +2994,23 @@ const RUPTURE_PILLARS = [
         id: "capital_punishment",
         title: "Capital Punishment",
         tension: "The constant teaching of the Church, rooted in Scripture (Genesis 9:6, Romans 13), confirmed by Trent, and defended by every major Doctor and moral theologian, held that the state has the God-given right to inflict the death penalty for grave crimes. In 2018, the Catechism was altered to declare capital punishment 'inadmissible' — a term with no precedent in Catholic moral theology.",
+        ruptureCard: {
+          doctrine: "The state has the God-given right and duty to inflict the death penalty for the gravest crimes.",
+          traditional: {
+            label: "Constant Teaching",
+            source: "Roman Catechism / St. Thomas Aquinas",
+            doc: "Roman Catechism, Part III, Ch. V; Summa Theologiae II-II, Q.64, A.3",
+            quote: "The power of life and death is permitted to certain civil magistrates because theirs is the responsibility under law to punish the guilty and protect the innocent.",
+            nature: "Catechism of the Council of Trent — highest catechetical authority",
+          },
+          modern: {
+            label: "2018 Revision",
+            source: "Pope Francis",
+            doc: "Catechism of the Catholic Church §2267 (revised 2018)",
+            quote: "The Church teaches, in the light of the Gospel, that the death penalty is inadmissible because it is an attack on the inviolability and dignity of the person.",
+            nature: "Catechism revision — reverses prior constant teaching",
+          },
+        },
         questions: [
           "What does Scripture teach about the state's authority to punish grave crimes, even with death?",
           "How did the Council of Trent and the traditional catechisms treat the question of capital punishment?",
@@ -2885,6 +3021,23 @@ const RUPTURE_PILLARS = [
         id: "extra_ecclesiam",
         title: "Extra Ecclesiam Nulla Salus",
         tension: "The dogma 'Outside the Church there is no salvation' was defined by the Fourth Lateran Council, Council of Florence, and taught consistently through the traditional catechisms. Post-conciliar teaching introduced 'subsists in' language (Lumen Gentium) and wider notions of 'implicit desire' that many argue effectively emptied the dogma of its force.",
+        ruptureCard: {
+          doctrine: "There is only one Church, and outside of her there is no salvation and no remission of sins.",
+          traditional: {
+            label: "Defined Dogma",
+            source: "Pope Boniface VIII / Council of Florence",
+            doc: "Unam Sanctam (1302); Council of Florence, Cantate Domino (1442)",
+            quote: "We are compelled in virtue of our faith to believe and maintain that there is only one holy Catholic and apostolic Church. Outside this Church there is no salvation and no remission of sins.",
+            nature: "Papal Bull + Ecumenical Council — solemn definition",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Lumen Gentium §8 (1964)",
+            quote: "This Church… subsists in the Catholic Church… although many elements of sanctification and of truth are found outside of its visible structure.",
+            nature: "Dogmatic Constitution — 'subsists in' replaces 'is'",
+          },
+        },
         questions: [
           "How did the Council of Florence define the necessity of the Catholic Church for salvation?",
           "What does the Baltimore Catechism teach about who can be saved and what the Church means by 'invincible ignorance'?",
@@ -2895,6 +3048,23 @@ const RUPTURE_PILLARS = [
         id: "collegiality",
         title: "Collegiality and Papal Authority",
         tension: "Vatican I (Pastor Aeternus) defined papal primacy in the clearest terms: the pope has full, supreme, and universal power over the Church. Post-conciliar theology introduced 'collegiality' — the idea that the bishops govern together with the pope — in ways that critics argue obscure the monarchical constitution of the Church defined at Vatican I.",
+        ruptureCard: {
+          doctrine: "The Roman Pontiff has full, supreme, and universal power over the whole Church — ordinary, immediate, and truly episcopal.",
+          traditional: {
+            label: "Solemn Definition",
+            source: "Vatican I",
+            doc: "Pastor Aeternus, Ch. 3 (1870)",
+            quote: "The Roman Pontiff has full and supreme power of jurisdiction over the universal Church not only in matters of faith and morals, but also in those which concern the discipline and government of the Church.",
+            nature: "Dogmatic Constitution — ex cathedra definition",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Lumen Gentium §22 (1964)",
+            quote: "The order of bishops… is also the subject of supreme and full power over the universal Church, provided we understand this body together with its head the Roman Pontiff.",
+            nature: "Dogmatic Constitution — introduces collegial co-subject of supreme power",
+          },
+        },
         questions: [
           "What did Vatican I define about the primacy and universal jurisdiction of the Roman Pontiff?",
           "How did the pre-conciliar understanding of the episcopate differ from the collegial model?",
@@ -2914,6 +3084,23 @@ const RUPTURE_PILLARS = [
         id: "eucharistic_fast",
         title: "The Eucharistic Fast",
         tension: "The 1917 Code (Can. 858) required a complete fast from midnight before receiving Communion — no food or water from midnight onward. The 1983 Code (Can. 919) reduced this to one hour before receiving. A discipline that demanded genuine sacrifice and preparation was reduced to a technicality.",
+        ruptureCard: {
+          doctrine: "Those who would receive the Body and Blood of Christ must prepare themselves by fasting as a mark of reverence for the Most Blessed Sacrament.",
+          traditional: {
+            label: "Traditional Discipline",
+            source: "1917 Code of Canon Law",
+            doc: "1917 Can. 858 §1",
+            quote: "One who is not fasting, with natural fast from midnight, cannot licitly receive Holy Communion.",
+            nature: "Universal law of the Church — centuries-long discipline",
+          },
+          modern: {
+            label: "1983 Revision",
+            source: "1983 Code of Canon Law",
+            doc: "Can. 919 §1",
+            quote: "A person who is to receive the Most Holy Eucharist is to abstain from any food or drink, with the exception only of water and medicine, for at least the period of one hour before Holy Communion.",
+            nature: "Current universal law — fast reduced to one hour",
+          },
+        },
         questions: [
           "What did the 1917 Code require of Catholics before receiving Holy Communion?",
           "What does the theology of the Eucharist — the Real Presence of Christ — demand of a Catholic in terms of preparation and reverence?",
@@ -2924,6 +3111,23 @@ const RUPTURE_PILLARS = [
         id: "friday_abstinence",
         title: "Friday Abstinence",
         tension: "Under the 1917 Code (Can. 1252), abstinence from meat every Friday was obligatory for all Catholics of age — a weekly participation in the penance of Good Friday. The 1983 Code (Can. 1253) delegated this discipline to bishops' conferences, who in most countries replaced it with an undefined 'act of penance.' The universal, visible mark of Catholic identity on Fridays was effectively abolished.",
+        ruptureCard: {
+          doctrine: "Catholics are bound to do penance on Fridays in union with Christ's Passion — abstinence from meat being the universal penitential form.",
+          traditional: {
+            label: "Universal Obligation",
+            source: "1917 Code of Canon Law",
+            doc: "1917 Can. 1252 §2",
+            quote: "The law of abstinence forbids the use of meat and broth made from meat, but not of eggs, dairy products, nor condiments made from animal fat.",
+            nature: "Universal law — every Friday, entire Catholic world",
+          },
+          modern: {
+            label: "1983 Revision",
+            source: "1983 Code of Canon Law",
+            doc: "Can. 1253",
+            quote: "The conference of bishops can determine more precisely the observance of fast and abstinence as well as substitute other forms of penance, especially works of charity and exercises of piety.",
+            nature: "Universal law — obligation delegated to bishops' conferences",
+          },
+        },
         questions: [
           "What is the theological basis for Friday penance in union with Christ's Passion?",
           "What did the traditional catechisms teach about the obligation of Friday abstinence?",
@@ -2973,6 +3177,23 @@ const RUPTURE_PILLARS = [
         id: "amoris",
         title: "Amoris Laetitia & Communion for the Divorced-Remarried",
         tension: "Amoris Laetitia (2016) — particularly Chapter 8 and footnote 351 — was interpreted by numerous bishops' conferences as permitting divorced and civilly remarried Catholics to receive Communion without living as brother and sister. This directly contradicted Familiaris Consortio §84 (John Paul II) and the constant discipline of the Church, which held that public adulterers may not receive the Eucharist without resolving the irregular situation.",
+        ruptureCard: {
+          doctrine: "Those living in public adultery may not receive Holy Communion without first resolving the irregular situation.",
+          traditional: {
+            label: "Prior Papal Teaching",
+            source: "Pope John Paul II",
+            doc: "Familiaris Consortio §84 (1981)",
+            quote: "The Church reaffirms her practice, which is based upon Sacred Scripture, of not admitting to Eucharistic Communion divorced persons who have remarried.",
+            nature: "Apostolic Exhortation — settled discipline confirmed by JPII",
+          },
+          modern: {
+            label: "Post-2016 Ambiguity",
+            source: "Pope Francis",
+            doc: "Amoris Laetitia §305, fn. 351 (2016)",
+            quote: "Because of forms of conditioning and mitigating factors, it is possible that in an objective situation of sin… a person can be living in God's grace, can love and can also grow in the life of grace.",
+            nature: "Apostolic Exhortation — footnote 351 opened door to Communion for remarried",
+          },
+        },
         questions: [
           "What does Familiaris Consortio teach about divorced and civilly remarried Catholics and reception of the sacraments?",
           "What does Veritatis Splendor teach about the impossibility of a 'pastoral solution' that permits an intrinsically evil act?",
@@ -2983,6 +3204,23 @@ const RUPTURE_PILLARS = [
         id: "fiducia",
         title: "Fiducia Supplicans & Blessing of Same-Sex Couples",
         tension: "Fiducia Supplicans (2023), approved by Francis, declared that priests may bless same-sex couples in non-liturgical settings. This reversed the 2021 Responsum from the same CDF — then signed by Francis — that declared it impossible to bless unions that 'objectively contradict' God's plan. The African bishops' conferences formally refused to implement it. The contradiction existed within the Francis pontificate itself.",
+        ruptureCard: {
+          doctrine: "Blessings may only be imparted on persons or things ordered toward God; what objectively contradicts His law cannot be blessed.",
+          traditional: {
+            label: "2021 Responsum (Francis approved)",
+            source: "CDF / Pope Francis",
+            doc: "Responsum ad Dubium (CDF, March 2021)",
+            quote: "It is not licit to impart a blessing on relationships or partnerships… that involve sexual activity outside of marriage… as in the case of the unions of persons of the same sex.",
+            nature: "CDF Responsum — approved and signed off by Francis himself",
+          },
+          modern: {
+            label: "2023 Reversal",
+            source: "Pope Francis",
+            doc: "Fiducia Supplicans §31 (2023)",
+            quote: "Within the context of the above, it becomes possible to bless couples in irregular situations and same-sex couples without officially validating their status.",
+            nature: "DDF Declaration — contradicts the 2021 Responsum Francis approved",
+          },
+        },
         questions: [
           "What does Persona Humana teach about homosexual acts and why they are disordered?",
           "What do the traditional catechisms teach about blessing — what can legitimately be blessed, and what cannot?",
@@ -3014,6 +3252,23 @@ const RUPTURE_PILLARS = [
         id: "amazon",
         title: "The Amazon Synod & Married Priests",
         tension: "The 2019 Amazon Synod's final document proposed ordaining married men (viri probati) to the priesthood to address the shortage of priests in the Amazon. Francis's response, Querida Amazonia, did not explicitly endorse this — but did not close the question. The discipline of priestly celibacy, rooted in the Church's tradition of the West, was publicly and officially questioned at the highest level of the Church.",
+        ruptureCard: {
+          doctrine: "Celibacy is not a mere discipline of convenience but is ordered to the priesthood by its nature — the priest is espoused to the Church as Christ is espoused to her.",
+          traditional: {
+            label: "Perpetual Western Discipline",
+            source: "Council of Trent / 1917 Code of Canon Law",
+            doc: "Trent, Session XXIV, Canon 9 (1563); 1917 Can. 132 §1",
+            quote: "If anyone says that clerics constituted in holy orders… can contract marriage, and that being contracted it is valid… let him be anathema.",
+            nature: "Ecumenical Council canon + universal law — celibacy inseparable from Latin priesthood",
+          },
+          modern: {
+            label: "Amazon Synod Proposal",
+            source: "Amazon Synod / Pope Francis (silence)",
+            doc: "Synod Final Document §111 (2019); Querida Amazonia (2020)",
+            quote: "We propose that criteria and dispositions for the ordination to the priesthood be established for men of good standing, with a legitimate and stable family, who are leaders of their communities.",
+            nature: "Synod proposal — Francis's response neither endorsed nor definitively closed it",
+          },
+        },
         questions: [
           "What is the theological basis for priestly celibacy in the Latin tradition?",
           "What did the approved sources teach about the relationship between celibacy and the priesthood?",
@@ -3024,6 +3279,23 @@ const RUPTURE_PILLARS = [
         id: "women_deacons",
         title: "Women Deacons",
         tension: "Francis established two successive commissions to study the question of women deacons, implying the question was open. Inter Insigniores (CDF, 1976 — approved in forma specifica by Paul VI) explicitly grounded the male-only priesthood in the Church's unbroken tradition and Christ's example. Ordinatio Sacerdotalis (John Paul II, 1994) declared the question of women's ordination 'definitively' closed. Whether the diaconate was included in that closure remained disputed — but the commissions themselves signaled a willingness to question settled tradition.",
+        ruptureCard: {
+          doctrine: "The Church has no authority whatsoever to confer priestly ordination on women — this judgment is to be definitively held by all the faithful.",
+          traditional: {
+            label: "Definitive Papal Declaration",
+            source: "Pope John Paul II",
+            doc: "Ordinatio Sacerdotalis §4 (1994)",
+            quote: "I declare that the Church has no authority whatsoever to confer priestly ordination on women and that this judgment is to be definitively held by all the Church's faithful.",
+            nature: "Apostolic Letter — JPII invoked his supreme teaching authority; CDF confirmed it is infallible ordinary Magisterium",
+          },
+          modern: {
+            label: "Question Re-Opened",
+            source: "Pope Francis",
+            doc: "Two successive Commissions on Women Deacons (2016, 2020); Synodality discussions (2023–2024)",
+            quote: "I have decided to form an official Commission that will study the question… The question remains open.",
+            nature: "Papal commissions — implicitly treating as open what JPII declared definitively closed",
+          },
+        },
         questions: [
           "What does Inter Insigniores teach about why the Church cannot ordain women to the priesthood?",
           "What did Ordinatio Sacerdotalis declare, and at what level of authority?",
@@ -3034,6 +3306,23 @@ const RUPTURE_PILLARS = [
         id: "abu_dhabi",
         title: "The Abu Dhabi Declaration",
         tension: "In 2019, Francis co-signed the 'Document on Human Fraternity' in Abu Dhabi, which stated that 'the pluralism and diversity of religions... are willed by God in His wisdom.' This appeared to contradict Mortalium Animos, which condemned the idea that God wills religious pluralism, and Dominus Iesus, which affirmed that non-Christian religions do not subsist in the truth willed by God for salvation.",
+        ruptureCard: {
+          doctrine: "God wills that all men come to knowledge of the one true faith; religious diversity is the consequence of human error and sin, not divine design.",
+          traditional: {
+            label: "Condemned Position",
+            source: "Pope Pius XI",
+            doc: "Mortalium Animos §2 (1928)",
+            quote: "The pan-Christians who strive for the union of the churches seem to pursue the noblest of ideals… yet in reality they only dare to injure the cause of the Catholic Faith.",
+            nature: "Papal Encyclical — condemns treating all religions as equally willed by God",
+          },
+          modern: {
+            label: "Abu Dhabi Declaration",
+            source: "Pope Francis (co-signatory)",
+            doc: "Document on Human Fraternity (Abu Dhabi, 2019)",
+            quote: "The pluralism and the diversity of religions, colour, sex, race and language are willed by God in His wisdom, through which He created human beings.",
+            nature: "Joint Declaration — co-signed by Francis; affirms divine will for religious diversity",
+          },
+        },
         questions: [
           "What did Mortalium Animos teach about whether God wills religious diversity as a positive good?",
           "What does Dominus Iesus teach about the unique and salvific truth of the Catholic faith vs. other religions?",
@@ -3044,6 +3333,23 @@ const RUPTURE_PILLARS = [
         id: "lords_prayer",
         title: "The Lord's Prayer Translation",
         tension: "Francis changed the Italian translation of the Lord's Prayer from 'lead us not into temptation' to 'do not abandon us in temptation,' claiming the traditional rendering made God appear to lead men into sin. This contradicted the Douay-Rheims text (Matthew 6:13), the traditional theological interpretation of the petition, and the Church's centuries-long liturgical use of the traditional wording.",
+        ruptureCard: {
+          doctrine: "\"Lead us not into temptation\" does not imply God authors sin — it asks that He not withdraw His grace and permit us to be overcome. Every Doctor who addressed it said so.",
+          traditional: {
+            label: "Augustine, Aquinas & the Roman Catechism",
+            source: "St. Augustine / St. Thomas Aquinas / Roman Catechism",
+            doc: "De Sermone Domini in Monte II, 9 (Augustine); Commentary on the Lord's Prayer (Aquinas, c. 1269); Roman Catechism, Part IV, Ch. 15",
+            quote: "God leads into temptation by not helping… He who tempts does so to destroy; God permits temptation to exercise and prove the soul. We ask not to be led in — that is, not to be overcome.",
+            nature: "Doctor of the Church (Augustine) + Doctor of the Church (Aquinas) + Catechism of Trent — unanimous on this petition for 1,600 years",
+          },
+          modern: {
+            label: "Francis's Objection",
+            source: "Pope Francis",
+            doc: "Interview, TV2000 (December 2017); Italian Missal revised 2020",
+            quote: "A father does not do that. A father helps you to get up immediately. It is not a good translation… I am the one who falls. It is not He who pushes me into temptation.",
+            nature: "Papal interview + liturgical revision — rejects the traditional wording as theologically misleading",
+          },
+        },
         questions: [
           "What does the Douay-Rheims text of Matthew 6:13 actually say?",
           "How did the Doctors of the Church — particularly Augustine — interpret 'lead us not into temptation'?",
@@ -3131,6 +3437,66 @@ const RUPTURE_PILLARS = [
     ],
   },
 ];
+
+// ═══════════════════════════════════════════════════════════════════
+// RUPTURE DIFF CARD
+// ═══════════════════════════════════════════════════════════════════
+function DiffCard({ card }) {
+  const [expanded, setExpanded] = useState(false);
+  if (!card) return null;
+  return (
+    <div style={{ marginBottom: 24 }}>
+      {/* Doctrine statement */}
+      <div style={{
+        background: T.goldFaint,
+        border: `1px solid ${T.cardBorderStrong}`,
+        borderRadius: "12px 12px 0 0",
+        padding: "12px 16px",
+        textAlign: "center",
+      }}>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>The Doctrine</div>
+        <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(14.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{card.doctrine}</p>
+      </div>
+
+      {/* Two-column diff */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: `1px solid ${T.cardBorderStrong}`, borderTop: "none", borderRadius: "0 0 12px 12px", overflow: "hidden" }}>
+
+        {/* Traditional column */}
+        <div style={{ background: "rgba(26,39,68,0.04)", borderRight: `1px solid ${T.cardBorderStrong}`, padding: "14px 14px 16px" }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.navyText, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Traditional Teaching</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+            <span style={{ fontWeight: 600, color: T.inkMid }}>{card.traditional.source}</span>
+            <br />{card.traditional.doc}
+          </div>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.navyText}`, paddingLeft: 8 }}>
+            "{card.traditional.quote}"
+          </p>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.navyText, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.traditional.nature}</div>
+        </div>
+
+        {/* Modern column */}
+        <div style={{ background: "rgba(122,28,28,0.04)", padding: "14px 14px 16px" }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Modern Position</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+            <span style={{ fontWeight: 600, color: T.inkMid }}>{card.modern.source}</span>
+            <br />{card.modern.doc}
+          </div>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.crimson}`, paddingLeft: 8 }}>
+            "{card.modern.quote}"
+          </p>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.crimson, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.modern.nature}</div>
+        </div>
+      </div>
+
+      {/* Rupture label */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 8 }}>
+        <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, transparent, rgba(122,28,28,0.25))` }} />
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.crimson, letterSpacing: "0.14em", textTransform: "uppercase" }}>⚡ Rupture Identified</div>
+        <div style={{ flex: 1, height: 1, background: `linear-gradient(to left, transparent, rgba(122,28,28,0.25))` }} />
+      </div>
+    </div>
+  );
+}
 
 // ═══════════════════════════════════════════════════════════════════
 // RUPTURE TAB
@@ -3348,6 +3714,10 @@ function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
           {/* Title */}
           <div style={{ padding: "20px 0 16px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, marginBottom: 16, lineHeight: 1.3 }}>{activeTopic.title}</div>
+
+            {/* Diff card — shown when ruptureCard data is present */}
+            {activeTopic.ruptureCard && <DiffCard card={activeTopic.ruptureCard} />}
+
             {/* Tension card */}
             <div style={{ background: "rgba(122,28,28,0.05)", border: "1px solid rgba(122,28,28,0.18)", borderRadius: 12, padding: "16px 18px", marginBottom: 24 }}>
               <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>The Departure</div>
