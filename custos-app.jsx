@@ -1,3 +1,4 @@
+// Custos v2 — DiffCard build (18 ruptureCards)
 import { useState, useEffect, useRef, useCallback } from "react";
 
 // ═══════════════════════════════════════════════════════════════════
