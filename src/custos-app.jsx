@@ -1,3 +1,4 @@
+// Custos v2 — DiffCard build (18 ruptureCards)
 import { useState, useEffect, useRef, useCallback } from "react";
 
 // ═══════════════════════════════════════════════════════════════════
@@ -383,8 +384,8 @@ const DOCTORS = [
     topics: ["Scripture","Translation","Asceticism","Monasticism","Polemics"],
     works: [
       { title: "The Vulgate (Latin Bible)", url: null },
-      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/3000.htm" },
-      { title: "Letters", url: "https://www.newadvent.org/fathers/3001.htm" },
+      { title: "Commentaries on Scripture", url: "https://www.newadvent.org/fathers/30.htm" },
+      { title: "Letters", url: "https://www.newadvent.org/fathers/30.htm" },
     ],
     quotes: [
       { text: "Ignorance of Scripture is ignorance of Christ.", source: "Commentary on Isaiah" },
@@ -420,7 +421,7 @@ const DOCTORS = [
     topics: ["Pastoral Counsel","The Moral Life","Humility","Leadership","Liturgy","Spiritual Direction"],
     works: [
       { title: "Pastoral Care (Regula Pastoralis)", url: "https://www.newadvent.org/fathers/36011.htm" },
-      { title: "Moralia in Job", url: "https://www.newadvent.org/fathers/3501.htm" },
+      { title: "Moralia in Job", url: "https://www.newadvent.org/fathers/36.htm" },
       { title: "Dialogues", url: "https://www.newadvent.org/fathers/3604.htm" },
     ],
     quotes: [
@@ -431,8 +432,8 @@ const DOCTORS = [
     bio: "The most influential churchman of the 12th century. Bernard founded 68 monasteries, preached the Second Crusade, helped resolve a papal schism, and wrote mystical theology of extraordinary beauty. His sermons on the Song of Songs are the high point of medieval devotional literature. Dante chose him as the final guide in the Paradiso. His devotion to the Blessed Virgin shaped Marian piety for centuries.",
     topics: ["Love of God","Mystical Union","The Blessed Virgin","Monastic Life","Humility","The Song of Songs"],
     works: [
-      { title: "On Loving God", url: "https://www.ccel.org/ccel/bernard/loving_god.html" },
-      { title: "Sermons on the Song of Songs", url: "https://www.ccel.org/ccel/bernard/sermons.html" },
+      { title: "On Loving God", url: "https://www.newadvent.org/fathers/3804.htm" },
+      { title: "Sermons on the Song of Songs", url: "https://www.newadvent.org/fathers/3805.htm" },
       { title: "On Consideration", url: null },
     ],
     quotes: [
@@ -454,9 +455,9 @@ const DOCTORS = [
     bio: "The greatest systematic theologian in the history of the Church. Aquinas synthesized Aristotelian philosophy with Catholic theology, producing the Summa Theologiae — the most comprehensive treatment of faith and reason ever written. His account of natural law, the virtues, the moral act, and conscience remains the foundation of Catholic moral theology. Declared Doctor of the Church by Pius V and patron of Catholic schools by Leo XIII.",
     topics: ["Conscience","Natural Law","Virtue","Justice","Life & Death","Prayer","The Moral Act","Grace"],
     works: [
-      { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/1.htm" },
-      { title: "Summa Contra Gentiles", url: "https://isidore.co/aquinas/english/ContraGentiles.htm" },
-      { title: "De Malo (On Evil)", url: "https://isidore.co/aquinas/english/DeVirtutibus.htm" },
+      { title: "Summa Theologiae", url: "https://www.newadvent.org/summa/" },
+      { title: "Summa Contra Gentiles", url: "https://www.newadvent.org/summa/" },
+      { title: "De Malo (On Evil)", url: "https://www.newadvent.org/summa/" },
     ],
     quotes: [
       { text: "Charity is friendship with God — the form and mother of all virtues, without which faith itself is dead.", source: "Summa II-II, Q.23" },
@@ -502,7 +503,7 @@ const DOCTORS = [
     bio: "The foremost controversialist of the Counter-Reformation. His Disputationes is the most systematic defense of Catholic doctrine against Protestant objections ever written. He served as a cardinal, papal theologian, and spiritual director to St. Aloysius Gonzaga. His Art of Dying Well remains a classic of Catholic spirituality on the last things.",
     topics: ["Apologetics","Papal Authority","The Sacraments","The Last Things","Controversy","The Church"],
     works: [
-      { title: "De Controversiis (Disputations)", url: "https://archive.org/details/roman-catholicism-cardinal-robert-bellarmine-disputationes-de-controversiis-chri" },
+      { title: "De Controversiis (Disputations)", url: "https://www.newadvent.org/cathen/02411d.htm" },
       { title: "The Art of Dying Well", url: "https://www.ewtn.com/catholicism/library/art-of-dying-well-12498" },
     ],
     quotes: [
@@ -1395,15 +1396,15 @@ function CardTitle({ children, color }) {
 }
 
 function CrimsonBtn({ children, onClick, style: s }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}`, ...s }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})`, border: "1px solid transparent", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowCrimson}`, boxSizing: "border-box", ...s }}>{children}</button>;
 }
 
 function NavyBtn({ children, onClick, style: s }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "none", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowNavy}`, ...s }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "1px solid transparent", borderRadius: 10, cursor: "pointer", boxShadow: `0 3px 12px ${T.shadowNavy}`, boxSizing: "border-box", ...s }}>{children}</button>;
 }
 
 function GhostBtn({ children, onClick }) {
-  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "13px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10, cursor: "pointer" }}>{children}</button>;
+  return <button onClick={onClick} style={{ display: "block", width: "100%", padding: "14px 0", fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: `1px solid rgba(26,39,68,0.15)`, borderRadius: 10, cursor: "pointer", boxSizing: "border-box" }}>{children}</button>;
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -1654,7 +1655,7 @@ function resolveSourceUrl(citation) {
   if (book) {
     const abbrevs = { "Gen": "gen", "Ex": "exo", "Lev": "lev", "Num": "num", "Deut": "deu", "Jos": "jos", "Judg": "jdg", "Ruth": "rut", "1 Sam": "sa1", "2 Sam": "sa2", "1 Kgs": "kg1", "2 Kgs": "kg2", "1 Chr": "ch1", "2 Chr": "ch2", "Ezra": "ezr", "Neh": "neh", "Tob": "tob", "Jdt": "jdt", "Est": "est", "Job": "job", "Ps": "psa", "Prov": "pro", "Eccles": "ecc", "Song": "sol", "Wis": "wis", "Sir": "sir", "Ecclus": "sir", "Is": "isa", "Jer": "jer", "Lam": "lam", "Bar": "bar", "Ez": "eze", "Dan": "dan", "Hos": "hos", "Joel": "joe", "Am": "amo", "Ob": "oba", "Jon": "jon", "Mic": "mic", "Nah": "nah", "Hab": "hab", "Zeph": "zep", "Hag": "hag", "Zech": "zac", "Mal": "mal", "1 Mac": "ma1", "2 Mac": "ma2", "Mt": "mat", "Mk": "mar", "Lk": "luk", "Jn": "joh", "Acts": "act", "Rom": "rom", "1 Cor": "co1", "2 Cor": "co2", "Gal": "gal", "Eph": "eph", "Phil": "phi", "Col": "col", "1 Thess": "th1", "2 Thess": "th2", "1 Tim": "ti1", "2 Tim": "ti2", "Tit": "tit", "Philem": "plm", "Heb": "heb", "Jas": "jam", "1 Pet": "pe1", "2 Pet": "pe2", "1 Jn": "jo1", "2 Jn": "jo2", "3 Jn": "jo3", "Jude": "jud", "Apoc": "apo", "Rev": "apo" };
     const bk = Object.keys(abbrevs).find(k => c.toLowerCase().startsWith(k.toLowerCase()));
-    if (bk) return `https://www.drbo.org/chapter/${abbrevs[bk]}/${book[2]}.htm`;
+    if (bk) return `https://www.drbo.org/chapter/${abbrevs[bk]}/${String(book[2]).padStart(3,"0")}.htm`;
   }
 
   // Doctor-specific works
@@ -1753,259 +1754,6 @@ function parseGuidance(text) {
   } catch(e){}
   if (!s.shortAnswer && !s.tradition.length) s.shortAnswer = text;
   return s;
-}
-
-// ═══════════════════════════════════════════════════════════════════
-// CUSTOS LEX — Canon Law Tool (embedded)
-// ═══════════════════════════════════════════════════════════════════
-const LEX_SYSTEM = `You are Custos Lex — a plain-English canon law assistant for everyday Catholic laypeople. Your sole reference is the 1983 Code of Canon Law (Codex Iuris Canonici, 1983). You do not cite the 1917 Code, the Eastern Code (CCEO), or any other legal instrument unless the user specifically requests it.
-
-IDENTITY & TONE
-You are a knowledgeable, pastoral guide — not a canon lawyer. Remind the person when their question requires a qualified canon lawyer or diocesan tribunal. Speak clearly and directly. Translate legal language into plain English. Use "you" and "your" freely. Be direct. Canon law exists to protect the faithful — lead with that framing. On follow-up questions, maintain context. Do not re-introduce yourself.
-
-CITATION RULES — ABSOLUTE
-You MUST cite specific canon numbers for every substantive claim. NEVER cite a canon number you cannot accurately summarize. NEVER render a judgment on whether a specific marriage is valid or invalid — that requires a tribunal. NEVER give legal advice. If a question falls outside the 1983 CIC, say so plainly.
-
-RESPONSE FORMAT — use exactly this structure for every response including follow-ups. No markdown.
-
-PLAIN ANSWER:
-[2-4 sentences directly answering the question in plain English. Lead with the answer.]
-
-WHAT THE CODE SAYS:
-CANON: [e.g. Can. 1247]
-TEXT: [Plain-English summary of what this canon says.]
-APPLIES BECAUSE: [1 sentence connecting this canon to the question.]
-
-CANON: [second canon if applicable]
-TEXT: [summary]
-APPLIES BECAUSE: [connection]
-
-WHAT THIS MEANS FOR YOU:
-[2-3 sentences of practical application. When do they need a priest or canon lawyer?]
-
-CANONICAL STATUS:
-[Exactly one of: "Clearly settled by the Code" / "Settled — but subject to diocesan variation" / "Requires tribunal judgment" / "The Code is silent — consult your diocese"]`;
-
-const LEX_SCENARIOS = [
-  { id: "marriage", icon: "💍", label: "Marriage & Annulment", sub: "Validity · Annulment · Convalidation", prompts: ["What makes a Catholic marriage invalid under canon law?", "Can I get an annulment if my marriage was never consummated?", "My spouse was previously married outside the Church. Is our marriage valid?", "What is a convalidation and when do I need one?"] },
-  { id: "sacraments", icon: "✝", label: "Sacraments & Initiation", sub: "Baptism · Confirmation · Eucharist", prompts: ["Who can be a godparent for baptism?", "Can my non-Catholic friend be a godparent?", "At what age must a child receive First Communion?", "Can I receive Communion at a non-Catholic church?"] },
-  { id: "mass", icon: "⛪", label: "Mass Obligation", sub: "Sunday · Holy Days · Dispensation", prompts: ["Am I required to attend Mass every Sunday?", "What counts as a valid reason to miss Mass?", "Does a Saturday evening Mass fulfill my Sunday obligation?", "Which holy days of obligation apply in the United States?"] },
-  { id: "confession", icon: "🕊", label: "Confession & Penance", sub: "Requirements · Seal · Absolution", prompts: ["How often am I required to go to confession?", "Can a priest ever reveal what is said in confession?", "Can I confess to any Catholic priest, or must I go to my parish?", "What is required for a valid confession?"] },
-  { id: "membership", icon: "📜", label: "Rights & Obligations", sub: "Laity · Excommunication · Parishes", prompts: ["What are the basic obligations of a Catholic layperson?", "What acts result in automatic excommunication?", "Do I have the right to receive the sacraments from my parish?", "Can I be formally excommunicated for leaving the Church?"] },
-  { id: "funerals", icon: "✞", label: "Funerals & Burial", sub: "Rites · Cremation · Denial of Funeral", prompts: ["Can Catholics be cremated?", "Can someone who died by suicide receive a Catholic funeral?", "Who can be denied a Catholic funeral?", "Can a Catholic be buried in a non-Catholic cemetery?"] },
-];
-
-function parseLex(text) {
-  const plainAnswer = text.match(/PLAIN ANSWER[:\s]*\n([\s\S]*?)(?=\nWHAT THE CODE SAYS[:\s]|$)/i)?.[1]?.trim();
-  const codeSection = text.match(/WHAT THE CODE SAYS[:\s]*\n([\s\S]*?)(?=\nWHAT THIS MEANS FOR YOU[:\s]|$)/i)?.[1]?.trim();
-  const meansForYou = text.match(/WHAT THIS MEANS FOR YOU[:\s]*\n([\s\S]*?)(?=\nCANONICAL STATUS[:\s]|$)/i)?.[1]?.trim();
-  const status = text.match(/CANONICAL STATUS[:\s]*\n?([\s\S]*?)$/i)?.[1]?.trim();
-  const canons = [];
-  if (codeSection) {
-    const blocks = codeSection.split(/\nCANON:/i).filter(Boolean);
-    for (const block of blocks) {
-      const num = block.match(/^[:\s]*([^\n]+)/)?.[1]?.trim();
-      const txt = block.match(/TEXT[:\s]*([\s\S]*?)(?=APPLIES BECAUSE|$)/i)?.[1]?.trim();
-      const applies = block.match(/APPLIES BECAUSE[:\s]*([\s\S]*?)(?=\nCANON:|$)/i)?.[1]?.trim();
-      if (num || txt) canons.push({ num, txt, applies });
-    }
-  }
-  return { plainAnswer, canons, meansForYou, status };
-}
-
-function LexStatusPill({ status }) {
-  const isSettled  = status?.includes("Clearly settled");
-  const isDiocesan = status?.includes("diocesan variation");
-  const isTribunal = status?.includes("tribunal");
-  const color  = isSettled ? "#2d6a3f" : isDiocesan ? T.inkMid : isTribunal ? T.crimson : T.inkLight;
-  const bg     = isSettled ? "rgba(45,106,63,0.08)" : isDiocesan ? T.goldFaint : isTribunal ? "rgba(122,28,28,0.08)" : T.subtleBg;
-  const border = isSettled ? "rgba(45,106,63,0.25)" : isDiocesan ? T.cardBorderStrong : isTribunal ? "rgba(122,28,28,0.25)" : T.cardBorder;
-  return (
-    <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: bg, border: `1px solid ${border}`, borderRadius: 20, padding: "6px 16px" }}>
-      <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), letterSpacing: "0.08em", textTransform: "uppercase", color: T.inkLight }}>Canonical Status</span>
-      <span style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontStyle: "italic", color }}>{status}</span>
-    </div>
-  );
-}
-
-function CustosLex({ onBack }) {
-  const [lexView, setLexView] = useState("home"); // home | streaming | response
-  const [question, setQuestion] = useState("");
-  const [currentQ, setCurrentQ] = useState("");
-  const [streamText, setStreamText] = useState("");
-  const [parsed, setParsed] = useState(null);
-  const [followUp, setFollowUp] = useState("");
-  const [history, setHistory] = useState([]);
-  const [openScenario, setOpenScenario] = useState(null);
-  const [canonOpen, setCanonOpen] = useState(true);
-  const [copied, setCopied] = useState(false);
-
-  const submit = async (text, isFollowUp = false) => {
-    if (!text.trim()) return;
-    if (!isFollowUp) { setHistory([]); setParsed(null); }
-    setCurrentQ(text.trim());
-    setStreamText("");
-    setLexView("streaming");
-    const userMsg = { role: "user", content: text.trim() };
-    const msgs = isFollowUp ? [...history, userMsg] : [userMsg];
-    try {
-      const r = await fetch("/api/lex", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: text.trim(), history: isFollowUp ? history : [] }),
-      });
-      if (!r.ok) throw new Error("Server error");
-      const reader = r.body.getReader();
-      const dec = new TextDecoder();
-      let full = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        for (const line of dec.decode(value, { stream: true }).split("\n")) {
-          if (!line.startsWith("data: ")) continue;
-          const d = line.slice(6);
-          if (d === "[DONE]") continue;
-          try { const j = JSON.parse(d); if (j.type === "content_block_delta" && j.delta?.text) { full += j.delta.text; setStreamText(full); } } catch {}
-        }
-      }
-      if (!full.trim()) throw new Error("Empty response");
-      setHistory([...msgs, { role: "assistant", content: full }]);
-      setParsed(parseLex(full));
-      setFollowUp(""); setCanonOpen(true); setLexView("response");
-    } catch {
-      setParsed({ plainAnswer: "Unable to retrieve canon law guidance. Please check your connection and try again.", canons: [], meansForYou: null, status: null });
-      setLexView("response");
-    }
-  };
-
-  const handleNew = () => { setQuestion(""); setHistory([]); setParsed(null); setCurrentQ(""); setFollowUp(""); setOpenScenario(null); setLexView("home"); };
-
-  const formatCopy = () => {
-    if (!parsed) return "";
-    let t = "";
-    if (parsed.plainAnswer) t += "PLAIN ANSWER:\n" + parsed.plainAnswer + "\n\n";
-    if (parsed.canons?.length) { t += "WHAT THE CODE SAYS:\n"; parsed.canons.forEach(c => { if (c.num) t += `Can. ${c.num}\n`; if (c.txt) t += c.txt + "\n"; if (c.applies) t += c.applies + "\n"; t += "\n"; }); }
-    if (parsed.meansForYou) t += "WHAT THIS MEANS FOR YOU:\n" + parsed.meansForYou + "\n\n";
-    if (parsed.status) t += "CANONICAL STATUS: " + parsed.status;
-    return t + "\n\n— Custos Lex (askcustos.com)\n  Canon law for everyday Catholics";
-  };
-
-  if (lexView === "home") return (
-    <div style={{ background: T.parchment }}>
-      <TopBar title="Custos Lex" showBack={true} onBack={onBack} />
-      <div style={{ padding: "14px 20px 30px" }}>
-        <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkMid, textAlign: "center", lineHeight: 1.55, margin: "0 0 18px", fontStyle: "italic" }}>Plain-English answers citing the 1983 Code of Canon Law</p>
-        <div style={{ marginBottom: 18 }}>
-          <textarea value={question} onChange={e => setQuestion(e.target.value)}
-            placeholder={"Ask a canon law question\u2026 e.g. \u201CCan my Catholic wedding be held outdoors?\u201D"}
-            rows={3} style={{ width: "100%", padding: 16, fontFamily: "EB Garamond, serif", fontSize: fz(17), lineHeight: 1.6, color: T.inkDark, background: T.warmWhite, border: `1.5px solid ${T.cardBorderStrong}`, borderRadius: 12, resize: "none", boxSizing: "border-box" }}
-            onFocus={e => e.target.style.borderColor = T.gold}
-            onBlur={e => e.target.style.borderColor = T.cardBorderStrong}
-            onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey && question.trim()) { e.preventDefault(); submit(question); } }}
-          />
-          <button onClick={() => { if (question.trim()) submit(question); }} style={{ display: "block", width: "100%", padding: "13px 0", marginTop: 10, fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: question.trim() ? T.warmWhite : T.inkLight, background: question.trim() ? `linear-gradient(135deg, ${T.navy}, ${T.navyLight})` : T.parchmentDark, border: question.trim() ? `1px solid ${T.gold}44` : `1px solid ${T.cardBorder}`, borderRadius: 10, cursor: question.trim() ? "pointer" : "default", boxShadow: question.trim() ? `0 3px 12px ${T.shadowNavy}` : "none" }}>Consult the Code</button>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "4px 0 14px" }}>
-          <div style={{ flex: 1, height: 1, background: T.cardBorder }} />
-          <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), letterSpacing: "0.10em", color: T.inkLight, textTransform: "uppercase" }}>Common Questions</span>
-          <div style={{ flex: 1, height: 1, background: T.cardBorder }} />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {LEX_SCENARIOS.map(s => (
-            <div key={s.id} style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${openScenario === s.id ? T.cardBorderStrong : T.cardBorder}` }}>
-              <button onClick={() => setOpenScenario(openScenario === s.id ? null : s.id)} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "13px 16px", background: T.warmWhite, border: "none", cursor: "pointer", textAlign: "left" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <span style={{ fontSize: fz(20), flexShrink: 0 }}>{s.icon}</span>
-                  <div>
-                    <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(13), fontWeight: 700, color: T.navyText, letterSpacing: "0.04em" }}>{s.label}</div>
-                    <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 1 }}>{s.sub}</div>
-                  </div>
-                </div>
-                <span style={{ color: T.gold, fontSize: fz(13), display: "inline-block", transform: openScenario === s.id ? "rotate(0deg)" : "rotate(180deg)", transition: "transform 0.25s" }}>▴</span>
-              </button>
-              {openScenario === s.id && (
-                <div style={{ background: T.parchmentDark, borderTop: `1px solid ${T.cardBorder}` }}>
-                  {s.prompts.map((p, i) => (
-                    <button key={i} onClick={() => submit(p)} style={{ display: "block", width: "100%", textAlign: "left", padding: "11px 16px 11px 44px", fontFamily: "EB Garamond, serif", fontSize: fz(15), lineHeight: 1.45, color: T.inkDark, background: "none", border: "none", borderTop: i > 0 ? `1px solid ${T.cardBorder}` : "none", cursor: "pointer" }}
-                      onMouseEnter={e => { e.currentTarget.style.color = T.navy; e.currentTarget.style.background = T.parchment; }}
-                      onMouseLeave={e => { e.currentTarget.style.color = T.inkDark; e.currentTarget.style.background = "none"; }}
-                    >{p}</button>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: 22, padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}>
-          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>Canonical guidance only — not legal advice.<br />Complex matters require a qualified canon lawyer or diocesan tribunal.</p>
-        </div>
-      </div>
-    </div>
-  );
-
-  if (lexView === "streaming") return (
-    <div style={{ background: T.parchment }}>
-      <TopBar title="Custos Lex" showBack={false} />
-      <div style={{ padding: "16px 20px" }}>
-        <Card style={{ marginBottom: 12, background: T.goldFaint, borderColor: T.cardBorderStrong }}>
-          <CardTitle color={T.gold}>Your Question</CardTitle>
-          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
-        </Card>
-        <Card>
-          <CardTitle>Consulting the Code…</CardTitle>
-          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{streamText || "Searching the 1983 Code of Canon Law\u2026"}</p>
-        </Card>
-      </div>
-    </div>
-  );
-
-  // response view
-  return (
-    <div style={{ background: T.parchment }}>
-      <TopBar title="Custos Lex" showBack={true} onBack={handleNew} />
-      <div style={{ padding: "12px 20px 30px" }}>
-        <Card style={{ background: T.goldFaint, borderColor: T.cardBorderStrong, marginBottom: 12 }}>
-          <CardTitle color={T.gold}>Your Question</CardTitle>
-          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>{currentQ}</p>
-        </Card>
-        {parsed && <>
-          {parsed.plainAnswer && <Card style={{ marginBottom: 12 }}><CardTitle>The Short Answer</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{parsed.plainAnswer}</p></Card>}
-          {parsed.canons?.length > 0 && (
-            <Card style={{ marginBottom: 12 }}>
-              <button onClick={() => setCanonOpen(!canonOpen)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
-                <CardTitle style={{ margin: 0 }}>What the Code Says</CardTitle>
-                <span style={{ color: T.gold, fontSize: fz(13), display: "inline-block", transform: canonOpen ? "rotate(0deg)" : "rotate(180deg)", transition: "transform 0.25s" }}>▴</span>
-              </button>
-              {canonOpen && <div style={{ marginTop: 12 }}>{parsed.canons.map((c, i) => (
-                <div key={i} style={{ borderLeft: `3px solid ${T.navyText}`, paddingLeft: 14, marginBottom: i < parsed.canons.length - 1 ? 18 : 0 }}>
-                  {c.num && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontWeight: 700, fontStyle: "italic", color: T.navyText, marginBottom: 6 }}>Can. {c.num}</div>}
-                  {c.txt && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, marginBottom: c.applies ? 6 : 0 }}>{c.txt}</div>}
-                  {c.applies && <div style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkMid, lineHeight: 1.6 }}>{c.applies}</div>}
-                </div>
-              ))}</div>}
-            </Card>
-          )}
-          {parsed.meansForYou && <Card style={{ marginBottom: 12 }}><CardTitle color={T.crimson}>What This Means for You</CardTitle><p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.75, margin: 0 }}>{parsed.meansForYou}</p></Card>}
-          {parsed.status && <div style={{ marginBottom: 12, textAlign: "center" }}><LexStatusPill status={parsed.status} /></div>}
-        </>}
-        <div style={{ display: "flex", gap: 8, margin: "16px 0 0" }}>
-          <button onClick={handleNew} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.navyText, background: T.warmWhite, border: "1px solid rgba(26,39,68,0.2)", borderRadius: 10, cursor: "pointer" }}>💬 New question</button>
-          <button onClick={() => { navigator.clipboard.writeText(formatCopy()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }).catch(() => {}); }} style={{ flex: 1, padding: "11px 0", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: copied ? T.gold : T.inkLight, background: copied ? T.goldFaint : T.warmWhite, border: `1px solid ${copied ? T.gold : "rgba(138,126,108,0.2)"}`, borderRadius: 10, cursor: "pointer" }}>{copied ? "✓ Copied" : "📋 Copy"}</button>
-        </div>
-        <div style={{ margin: "16px 0 0", display: "flex", gap: 8 }}>
-          <input type="text" value={followUp} onChange={e => setFollowUp(e.target.value)}
-            onKeyDown={e => { if (e.key === "Enter" && followUp.trim()) submit(followUp, true); }}
-            placeholder="Ask a follow-up\u2026"
-            style={{ flex: 1, padding: "12px 14px", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, background: T.warmWhite, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 10, boxSizing: "border-box", outline: "none" }}
-          />
-          <button onClick={() => { if (followUp.trim()) submit(followUp, true); }} disabled={!followUp.trim()} style={{ padding: "12px 18px", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: followUp.trim() ? T.warmWhite : T.inkLight, background: followUp.trim() ? `linear-gradient(135deg, ${T.crimson}, ${T.crimsonLight})` : T.warmWhite, border: followUp.trim() ? "none" : `1px solid ${T.cardBorder}`, borderRadius: 10, cursor: followUp.trim() ? "pointer" : "default", boxShadow: followUp.trim() ? `0 2px 8px ${T.shadowCrimson}` : "none" }}>Ask</button>
-        </div>
-        <div style={{ margin: "16px 0 0", padding: "10px 0", borderTop: `1px solid ${T.cardBorder}`, textAlign: "center" }}>
-          <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", margin: 0 }}>Canonical guidance only — not legal advice. Complex matters require a qualified canon lawyer or diocesan tribunal.</p>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, seekStartView, clearStartView }) {
@@ -2138,15 +1886,8 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
         : { role: "user", content: domain ? "Domain: " + domain.label + ". My question: " + text.trim() : "My question: " + text.trim() };
       setHistory([...history, userMsg, { role: "assistant", content: fullText }]);
       if (isFollowUp) {
-        const parsed = parseGuidance(fullText);
-        const hasStructure = parsed && (parsed.shortAnswer || parsed.tradition?.length > 0 || parsed.magisterium?.length > 0);
-        if (hasStructure) {
-          setRawResponse(null);
-          setGuidance(parsed);
-        } else {
-          setRawResponse(fullText);
-          setGuidance(null);
-        }
+        setRawResponse(fullText);
+        setGuidance(null);
       } else {
         setRawResponse(null);
         setGuidance(parseGuidance(fullText));
@@ -2222,35 +1963,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(12.5), color: T.inkLight }}>Never stored — sent only to generate guidance</span>
             </div>
           </div>
-
-          {/* Custos Lex card */}
-          <button onClick={() => setView("lex")} style={{
-            display: "flex", alignItems: "center", justifyContent: "space-between",
-            width: "100%", marginTop: 14, padding: "13px 16px",
-            background: T.warmWhite,
-            border: `1px solid ${T.cardBorderStrong}`,
-            borderRadius: 12, cursor: "pointer", textAlign: "left",
-            boxSizing: "border-box",
-          }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", background: T.goldFaint, border: `1px solid ${T.cardBorder}`, flexShrink: 0 }}>
-                <svg width="17" height="17" viewBox="0 0 100 100" fill="none">
-                  <line x1="50" y1="12" x2="50" y2="88" stroke={T.gold} strokeWidth="6" strokeLinecap="round" opacity="0.85"/>
-                  <line x1="18" y1="32" x2="82" y2="32" stroke={T.gold} strokeWidth="6" strokeLinecap="round" opacity="0.85"/>
-                  <line x1="18" y1="32" x2="8"  y2="58" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.7"/>
-                  <line x1="82" y1="32" x2="92" y2="58" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.7"/>
-                  <path d="M3 58 Q8 70 13 58"  stroke={T.gold} strokeWidth="4" fill="none" opacity="0.7"/>
-                  <path d="M87 58 Q92 70 97 58" stroke={T.gold} strokeWidth="4" fill="none" opacity="0.7"/>
-                  <line x1="36" y1="86" x2="64" y2="86" stroke={T.gold} strokeWidth="5" strokeLinecap="round" opacity="0.6"/>
-                </svg>
-              </div>
-              <div>
-                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(12), fontWeight: 700, color: T.navyText, letterSpacing: "0.05em" }}>Custos Lex</div>
-                <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, marginTop: 1 }}>Canon law for everyday Catholics — 1983 Code</div>
-              </div>
-            </div>
-            <span style={{ color: T.gold, fontSize: fz(16), flexShrink: 0, marginLeft: 8 }}>›</span>
-          </button>
 
           {/* Starter prompts — general or domain-specific */}
           {!question.trim() && !domain && (
@@ -2690,18 +2402,13 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           </div>
         </div>
       )}
-      {view === "lex" && (
-        <div style={{ flex: 1, overflowY: "auto" }}>
-          <CustosLex onBack={() => setView("home")} />
-        </div>
-      )}
     </>
   );
 }
 // ═══════════════════════════════════════════════════════════════════
 // DAILY EXAMEN
 // ═══════════════════════════════════════════════════════════════════
-function ExamenTab() {
+function ExamenTab({ dark, setDark, fszGlobal, setFszGlobal, goHome }) {
   const [view, setView] = useState("welcome");
   const [step, setStep] = useState(0);
   const [reflections, setReflections] = useState({});
@@ -2714,7 +2421,7 @@ function ExamenTab() {
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "welcome"} onBack={() => {
+      <GlobalTopBar title={title} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={view !== "welcome"} onBack={() => {
         if (view === "examen" && step > 0) setStep(step - 1);
         else if (view === "summary") setView("welcome");
         else setView("welcome");
@@ -2783,7 +2490,7 @@ function ExamenTab() {
 // CONFESSION PREP
 // ═══════════════════════════════════════════════════════════════════
 
-function ConfessionTab() {
+function ConfessionTab({ dark, setDark, fszGlobal, setFszGlobal, goHome }) {
   const [view, setView] = useState("setup");
   const [cmdIdx, setCmdIdx] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -2868,7 +2575,7 @@ function ConfessionTab() {
 
   return (
     <>
-      <TopBar title={title} showBack={view !== "setup"} onBack={() => {
+      <GlobalTopBar title={title} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={view !== "setup"} onBack={() => {
         if (view === "exam" && cmdIdx > 0) setCmdIdx(cmdIdx - 1);
         else if (view === "exam") setView("setup");
         else if (view === "review") { setView("exam"); setCmdIdx(examSteps.length - 1); }
@@ -3080,6 +2787,23 @@ const RUPTURE_PILLARS = [
         id: "novus_ordo",
         title: "The New Mass vs. the Traditional Roman Rite",
         tension: "The Roman Rite, substantially unchanged since at least Gregory the Great (6th c.) and codified by Trent, was replaced in 1969 by the Novus Ordo Missae — a new rite constructed by a committee under Archbishop Annibale Bugnini, personally appointed and empowered by Paul VI. Paul VI signed and promulgated it, defended it against criticism, and enforced its adoption. Cardinals Ottaviani and Bacci, in their formal Intervention to Paul VI, called it a 'striking departure from the theology of the Mass as defined by Trent' — a document Paul VI received but did not retract the new rite.",
+        ruptureCard: {
+          doctrine: "The Mass is the unbloody sacrifice of the Body and Blood of Christ, offered by the priest to God — not a communal meal assembled around the people.",
+          traditional: {
+            label: "Perpetual Grant & Prohibition",
+            source: "Pope St. Pius V / Council of Trent",
+            doc: "Quo Primum (1570); Trent, Session XXII, Canon 7",
+            quote: "If anyone says that the ceremonies, vestments, and outward signs which the Catholic Church makes use of in the celebration of Masses are incentives to impiety rather than offices of piety: let him be anathema.",
+            nature: "Papal Bull + Ecumenical Council — Trent's Canon 7 anathematizes contempt of the received rite",
+          },
+          modern: {
+            label: "New Rite Promulgated",
+            source: "Pope Paul VI",
+            doc: "Missale Romanum (Apostolic Constitution, 1969)",
+            quote: "We order that the prescriptions of this Constitution go into effect November 30th of this year. We wish that these Our decrees and prescriptions be firm and effective now and in the future, notwithstanding any constitutions or apostolic ordinances issued by Our predecessors.",
+            nature: "Apostolic Constitution — superseded Quo Primum; new rite imposed by papal authority",
+          },
+        },
         questions: [
           "What did the Council of Trent define about the Mass that cannot be changed?",
           "What did Quo Primum establish about the permanence of the traditional Roman Rite — and can a pope revoke what a previous pope granted in perpetuity?",
@@ -3100,6 +2824,23 @@ const RUPTURE_PILLARS = [
         id: "communion_hand",
         title: "Communion in the Hand While Standing",
         tension: "From the earliest centuries through the 1960s, the universal practice of the Latin Church was reception of Holy Communion on the tongue while kneeling. This practice was explicitly confirmed by Memoriale Domini (1969), which polled bishops worldwide and upheld the traditional discipline — yet granted a reluctant indult to dioceses that petitioned for the change. Today the exception has become the norm.",
+        ruptureCard: {
+          doctrine: "The Real Presence of Christ in the Eucharist demands the utmost bodily reverence; the faithful receive on the tongue, kneeling, from the hands of an ordained minister.",
+          traditional: {
+            label: "Universal Discipline Confirmed",
+            source: "Congregation for Divine Worship / Pope Paul VI",
+            doc: "Memoriale Domini (1969) — result of worldwide episcopal consultation",
+            quote: "The Apostolic See therefore emphatically urges bishops, priests and faithful to observe zealously this law… The method of placing Holy Communion on the tongue of the communicants must be retained.",
+            nature: "Instruction approved by Paul VI — traditional practice upheld by majority of bishops polled",
+          },
+          modern: {
+            label: "Exception Became the Norm",
+            source: "Post-conciliar practice",
+            doc: "Indult granted 1969; universal in most Western countries by 1980s",
+            quote: "Where the contrary practice already prevails… each bishop may… allow the new rite to continue.",
+            nature: "Reluctant indult — bishops who defied the norm were rewarded with the exception",
+          },
+        },
         questions: [
           "What does the unbroken tradition of the Church teach about reverence in receiving Holy Communion?",
           "What do the approved sources say about the Real Presence and why it demands bodily reverence?",
@@ -3110,6 +2851,23 @@ const RUPTURE_PILLARS = [
         id: "vernacular",
         title: "Mass in the Vernacular vs. Latin",
         tension: "The Council of Trent explicitly condemned the position that the Mass should be celebrated in the vernacular (Session XXII, Canon 9). For over 400 years the Latin Mass was the universal norm. The shift to vernacular after Vatican II reversed this discipline and has raised questions about continuity with Trent's decrees.",
+        ruptureCard: {
+          doctrine: "Latin is the sacred language of the Roman Rite, set apart from common speech to signify the transcendence of the sacrifice offered to God.",
+          traditional: {
+            label: "Canon & Perpetual Norm",
+            source: "Council of Trent / Pope St. Pius V",
+            doc: "Trent, Session XXII, Canon 9 (1562); Quo Primum (1570)",
+            quote: "If anyone says that the rite of the Roman Church, according to which a part of the canon and the words of consecration are pronounced in a low voice, is to be condemned… or that the Mass ought to be celebrated in the vernacular tongue only: let him be anathema.",
+            nature: "Ecumenical Council — solemn canon with anathema; binding on all successors",
+          },
+          modern: {
+            label: "Vernacular Introduced",
+            source: "Pope Paul VI",
+            doc: "Missale Romanum (1969); implemented from 1964 onward",
+            quote: "The use of the Latin language is to be preserved in the Latin rites. But since the use of the mother tongue… may frequently be of great advantage to the people, the limits of its employment may be extended.",
+            nature: "Post-conciliar reform — Mass effectively moved to vernacular universally",
+          },
+        },
         questions: [
           "What did the Council of Trent teach about Latin in the Mass?",
           "What is the theological significance of a sacred language set apart from ordinary speech?",
@@ -3120,6 +2878,23 @@ const RUPTURE_PILLARS = [
         id: "ad_orientem",
         title: "Versus Populum vs. Ad Orientem",
         tension: "For centuries, priest and faithful together faced East (ad orientem) — priest and people united in the same direction, offering sacrifice to God. The post-conciliar reform introduced the practice of the priest facing the people (versus populum), which critics argue transformed the Mass from a sacrifice offered to God into a communal meal centered on the assembly.",
+        ruptureCard: {
+          doctrine: "The priest at Mass acts in persona Christi, offering the sacrifice to God on behalf of the people — not facing them as a presider of a communal gathering.",
+          traditional: {
+            label: "Universal Immemorial Praxis",
+            source: "Council of Trent / St. Thomas Aquinas",
+            doc: "Trent, Session XXII (1562); Summa Theologiae III, Q.83, A.1",
+            quote: "The celebration of Mass is an image representing Christ's Passion… The priest… bears Christ's image by reason of his order.",
+            nature: "Ecumenical Council + Doctor of the Church — priest faces East with the people, offering to God",
+          },
+          modern: {
+            label: "Versus Populum Introduced",
+            source: "General Instruction of the Roman Missal",
+            doc: "GIRM §299 (1969, revised 2002)",
+            quote: "The altar should be built apart from the wall, in such a way that it is possible to walk around it easily and that Mass can be celebrated at it facing the people, which is desirable wherever possible.",
+            nature: "Post-conciliar rubric — facing the people made normative; ad orientem demoted",
+          },
+        },
         questions: [
           "What does the traditional theology of the Mass as sacrifice imply about the direction of prayer?",
           "How does Aquinas describe the priest's role at Mass and his relation to Christ the High Priest?",
@@ -3130,6 +2905,23 @@ const RUPTURE_PILLARS = [
         id: "tlm_suppression",
         title: "Suppression of the Traditional Latin Mass",
         tension: "Benedict XVI's Summorum Pontificum (2007) declared that the traditional Mass 'was never abrogated' and freed its celebration. In 2021, Pope Francis issued Traditionis Custodes, severely restricting the traditional Mass and contradicting Benedict's juridical determination. This created open conflict between two papal documents on the same question.",
+        ruptureCard: {
+          doctrine: "The ancient Roman Rite, never lawfully abrogated, remains a permanent right of every priest of the Roman Church.",
+          traditional: {
+            label: "Papal Determination",
+            source: "Pope Benedict XVI",
+            doc: "Summorum Pontificum, Art. 1 (2007)",
+            quote: "The Roman Missal promulgated by Paul VI is the ordinary expression of the lex orandi of the Catholic Church of the Latin rite. Nonetheless, the Roman Missal promulgated by St. Pius V and reissued by Bl. John XXIII is to be considered as an extraordinary expression of that same lex orandi, and must be given due honour for its venerable and ancient usage.",
+            nature: "Motu Proprio — papal determination; the TLM was never abrogated",
+          },
+          modern: {
+            label: "2021 Reversal",
+            source: "Pope Francis",
+            doc: "Traditionis Custodes, Art. 1 (2021)",
+            quote: "The liturgical books promulgated by Saint Paul VI and Saint John Paul II, in conformity with the decrees of Vatican Council II, are the unique expression of the lex orandi of the Roman Rite.",
+            nature: "Motu Proprio — directly contradicts Benedict XVI's determination",
+          },
+        },
         questions: [
           "What did Summorum Pontificum establish about the legal status of the traditional Mass?",
           "What does Ecclesia Dei say about the legitimate aspirations of Catholics attached to the traditional rite?",
@@ -3149,6 +2941,23 @@ const RUPTURE_PILLARS = [
         id: "religious_liberty",
         title: "Religious Liberty",
         tension: "Mirari Vos (Gregory XVI, 1832) and Quanta Cura (Pius IX, 1864) explicitly condemned the proposition that every man has a right to practice whatever religion he chooses. Dignitatis Humanae (Vatican II, 1965) appeared to affirm precisely this right. Critics — including Archbishop Lefebvre — argued this is not development but contradiction.",
+        ruptureCard: {
+          doctrine: "Civil governments have no duty to tolerate false religions; the right to worship publicly belongs to the true religion.",
+          traditional: {
+            label: "Condemned Proposition",
+            source: "Pope Gregory XVI",
+            doc: "Mirari Vos (1832) & Syllabus of Errors §77–80 (Pius IX, 1864)",
+            quote: "From this completely rotten source of indifferentism flows that absurd and erroneous proposition which claims that liberty of conscience must be maintained for everyone.",
+            nature: "Papal Encyclical — Ordinary Magisterium",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Dignitatis Humanae §2 (1965)",
+            quote: "This Vatican Council declares that the human person has a right to religious freedom… immune from coercion on the part of individuals, social groups, and every human power.",
+            nature: "Pastoral Declaration — authority disputed",
+          },
+        },
         questions: [
           "What did Mirari Vos teach about religious indifferentism and the claim that all religions are equally valid paths?",
           "What did the Syllabus of Errors specifically condemn regarding religious liberty and civil tolerance of false religions?",
@@ -3159,6 +2968,23 @@ const RUPTURE_PILLARS = [
         id: "ecumenism",
         title: "Ecumenism and False Unity",
         tension: "Mortalium Animos (Pius XI, 1928) explicitly forbade Catholics from participating in ecumenical gatherings with non-Catholics, stating that Christian unity can only come through return to the one true Church. The post-conciliar Church embraced ecumenical dialogue as a positive good. These positions are difficult to reconcile.",
+        ruptureCard: {
+          doctrine: "Christian unity can only be achieved through the return of all separated brethren to the one true Church of Christ.",
+          traditional: {
+            label: "Prohibition",
+            source: "Pope Pius XI",
+            doc: "Mortalium Animos §9–10 (1928)",
+            quote: "It is clear that the Apostolic See can by no means take part in these assemblies, nor is it in any way lawful for Catholics to give such enterprises their encouragement or support.",
+            nature: "Papal Encyclical — Ordinary Magisterium",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Unitatis Redintegratio §4 (1964)",
+            quote: "Catholics must joyfully acknowledge and esteem the truly Christian endowments from our common heritage which are to be found among our separated brethren.",
+            nature: "Decree on Ecumenism — authority disputed",
+          },
+        },
         questions: [
           "What did Mortalium Animos teach about participating in pan-Christian ecumenical movements?",
           "What does Dominus Iesus teach about the unique salvific role of the Catholic Church — and how does it relate to ecumenical claims?",
@@ -3169,6 +2995,23 @@ const RUPTURE_PILLARS = [
         id: "capital_punishment",
         title: "Capital Punishment",
         tension: "The constant teaching of the Church, rooted in Scripture (Genesis 9:6, Romans 13), confirmed by Trent, and defended by every major Doctor and moral theologian, held that the state has the God-given right to inflict the death penalty for grave crimes. In 2018, the Catechism was altered to declare capital punishment 'inadmissible' — a term with no precedent in Catholic moral theology.",
+        ruptureCard: {
+          doctrine: "The state has the God-given right and duty to inflict the death penalty for the gravest crimes.",
+          traditional: {
+            label: "Constant Teaching",
+            source: "Roman Catechism / St. Thomas Aquinas",
+            doc: "Roman Catechism, Part III, Ch. V; Summa Theologiae II-II, Q.64, A.3",
+            quote: "The power of life and death is permitted to certain civil magistrates because theirs is the responsibility under law to punish the guilty and protect the innocent.",
+            nature: "Catechism of the Council of Trent — highest catechetical authority",
+          },
+          modern: {
+            label: "2018 Revision",
+            source: "Pope Francis",
+            doc: "Catechism of the Catholic Church §2267 (revised 2018)",
+            quote: "The Church teaches, in the light of the Gospel, that the death penalty is inadmissible because it is an attack on the inviolability and dignity of the person.",
+            nature: "Catechism revision — reverses prior constant teaching",
+          },
+        },
         questions: [
           "What does Scripture teach about the state's authority to punish grave crimes, even with death?",
           "How did the Council of Trent and the traditional catechisms treat the question of capital punishment?",
@@ -3179,6 +3022,23 @@ const RUPTURE_PILLARS = [
         id: "extra_ecclesiam",
         title: "Extra Ecclesiam Nulla Salus",
         tension: "The dogma 'Outside the Church there is no salvation' was defined by the Fourth Lateran Council, Council of Florence, and taught consistently through the traditional catechisms. Post-conciliar teaching introduced 'subsists in' language (Lumen Gentium) and wider notions of 'implicit desire' that many argue effectively emptied the dogma of its force.",
+        ruptureCard: {
+          doctrine: "There is only one Church, and outside of her there is no salvation and no remission of sins.",
+          traditional: {
+            label: "Defined Dogma",
+            source: "Pope Boniface VIII / Council of Florence",
+            doc: "Unam Sanctam (1302); Council of Florence, Cantate Domino (1442)",
+            quote: "We are compelled in virtue of our faith to believe and maintain that there is only one holy Catholic and apostolic Church. Outside this Church there is no salvation and no remission of sins.",
+            nature: "Papal Bull + Ecumenical Council — solemn definition",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Lumen Gentium §8 (1964)",
+            quote: "This Church… subsists in the Catholic Church… although many elements of sanctification and of truth are found outside of its visible structure.",
+            nature: "Dogmatic Constitution — 'subsists in' replaces 'is'",
+          },
+        },
         questions: [
           "How did the Council of Florence define the necessity of the Catholic Church for salvation?",
           "What does the Baltimore Catechism teach about who can be saved and what the Church means by 'invincible ignorance'?",
@@ -3189,6 +3049,23 @@ const RUPTURE_PILLARS = [
         id: "collegiality",
         title: "Collegiality and Papal Authority",
         tension: "Vatican I (Pastor Aeternus) defined papal primacy in the clearest terms: the pope has full, supreme, and universal power over the Church. Post-conciliar theology introduced 'collegiality' — the idea that the bishops govern together with the pope — in ways that critics argue obscure the monarchical constitution of the Church defined at Vatican I.",
+        ruptureCard: {
+          doctrine: "The Roman Pontiff has full, supreme, and universal power over the whole Church — ordinary, immediate, and truly episcopal.",
+          traditional: {
+            label: "Solemn Definition",
+            source: "Vatican I",
+            doc: "Pastor Aeternus, Ch. 3 (1870)",
+            quote: "The Roman Pontiff has full and supreme power of jurisdiction over the universal Church not only in matters of faith and morals, but also in those which concern the discipline and government of the Church.",
+            nature: "Dogmatic Constitution — ex cathedra definition",
+          },
+          modern: {
+            label: "Post-Conciliar Shift",
+            source: "Vatican II",
+            doc: "Lumen Gentium §22 (1964)",
+            quote: "The order of bishops… is also the subject of supreme and full power over the universal Church, provided we understand this body together with its head the Roman Pontiff.",
+            nature: "Dogmatic Constitution — introduces collegial co-subject of supreme power",
+          },
+        },
         questions: [
           "What did Vatican I define about the primacy and universal jurisdiction of the Roman Pontiff?",
           "How did the pre-conciliar understanding of the episcopate differ from the collegial model?",
@@ -3208,6 +3085,23 @@ const RUPTURE_PILLARS = [
         id: "eucharistic_fast",
         title: "The Eucharistic Fast",
         tension: "The 1917 Code (Can. 858) required a complete fast from midnight before receiving Communion — no food or water from midnight onward. The 1983 Code (Can. 919) reduced this to one hour before receiving. A discipline that demanded genuine sacrifice and preparation was reduced to a technicality.",
+        ruptureCard: {
+          doctrine: "Those who would receive the Body and Blood of Christ must prepare themselves by fasting as a mark of reverence for the Most Blessed Sacrament.",
+          traditional: {
+            label: "Traditional Discipline",
+            source: "1917 Code of Canon Law",
+            doc: "1917 Can. 858 §1",
+            quote: "One who is not fasting, with natural fast from midnight, cannot licitly receive Holy Communion.",
+            nature: "Universal law of the Church — centuries-long discipline",
+          },
+          modern: {
+            label: "1983 Revision",
+            source: "1983 Code of Canon Law",
+            doc: "Can. 919 §1",
+            quote: "A person who is to receive the Most Holy Eucharist is to abstain from any food or drink, with the exception only of water and medicine, for at least the period of one hour before Holy Communion.",
+            nature: "Current universal law — fast reduced to one hour",
+          },
+        },
         questions: [
           "What did the 1917 Code require of Catholics before receiving Holy Communion?",
           "What does the theology of the Eucharist — the Real Presence of Christ — demand of a Catholic in terms of preparation and reverence?",
@@ -3218,6 +3112,23 @@ const RUPTURE_PILLARS = [
         id: "friday_abstinence",
         title: "Friday Abstinence",
         tension: "Under the 1917 Code (Can. 1252), abstinence from meat every Friday was obligatory for all Catholics of age — a weekly participation in the penance of Good Friday. The 1983 Code (Can. 1253) delegated this discipline to bishops' conferences, who in most countries replaced it with an undefined 'act of penance.' The universal, visible mark of Catholic identity on Fridays was effectively abolished.",
+        ruptureCard: {
+          doctrine: "Catholics are bound to do penance on Fridays in union with Christ's Passion — abstinence from meat being the universal penitential form.",
+          traditional: {
+            label: "Universal Obligation",
+            source: "1917 Code of Canon Law",
+            doc: "1917 Can. 1252 §2",
+            quote: "The law of abstinence forbids the use of meat and broth made from meat, but not of eggs, dairy products, nor condiments made from animal fat.",
+            nature: "Universal law — every Friday, entire Catholic world",
+          },
+          modern: {
+            label: "1983 Revision",
+            source: "1983 Code of Canon Law",
+            doc: "Can. 1253",
+            quote: "The conference of bishops can determine more precisely the observance of fast and abstinence as well as substitute other forms of penance, especially works of charity and exercises of piety.",
+            nature: "Universal law — obligation delegated to bishops' conferences",
+          },
+        },
         questions: [
           "What is the theological basis for Friday penance in union with Christ's Passion?",
           "What did the traditional catechisms teach about the obligation of Friday abstinence?",
@@ -3267,6 +3178,23 @@ const RUPTURE_PILLARS = [
         id: "amoris",
         title: "Amoris Laetitia & Communion for the Divorced-Remarried",
         tension: "Amoris Laetitia (2016) — particularly Chapter 8 and footnote 351 — was interpreted by numerous bishops' conferences as permitting divorced and civilly remarried Catholics to receive Communion without living as brother and sister. This directly contradicted Familiaris Consortio §84 (John Paul II) and the constant discipline of the Church, which held that public adulterers may not receive the Eucharist without resolving the irregular situation.",
+        ruptureCard: {
+          doctrine: "Those living in public adultery may not receive Holy Communion without first resolving the irregular situation.",
+          traditional: {
+            label: "Prior Papal Teaching",
+            source: "Pope John Paul II",
+            doc: "Familiaris Consortio §84 (1981)",
+            quote: "The Church reaffirms her practice, which is based upon Sacred Scripture, of not admitting to Eucharistic Communion divorced persons who have remarried.",
+            nature: "Apostolic Exhortation — settled discipline confirmed by JPII",
+          },
+          modern: {
+            label: "Post-2016 Ambiguity",
+            source: "Pope Francis",
+            doc: "Amoris Laetitia §305, fn. 351 (2016)",
+            quote: "Because of forms of conditioning and mitigating factors, it is possible that in an objective situation of sin… a person can be living in God's grace, can love and can also grow in the life of grace.",
+            nature: "Apostolic Exhortation — footnote 351 opened door to Communion for remarried",
+          },
+        },
         questions: [
           "What does Familiaris Consortio teach about divorced and civilly remarried Catholics and reception of the sacraments?",
           "What does Veritatis Splendor teach about the impossibility of a 'pastoral solution' that permits an intrinsically evil act?",
@@ -3277,6 +3205,23 @@ const RUPTURE_PILLARS = [
         id: "fiducia",
         title: "Fiducia Supplicans & Blessing of Same-Sex Couples",
         tension: "Fiducia Supplicans (2023), approved by Francis, declared that priests may bless same-sex couples in non-liturgical settings. This reversed the 2021 Responsum from the same CDF — then signed by Francis — that declared it impossible to bless unions that 'objectively contradict' God's plan. The African bishops' conferences formally refused to implement it. The contradiction existed within the Francis pontificate itself.",
+        ruptureCard: {
+          doctrine: "Blessings may only be imparted on persons or things ordered toward God; what objectively contradicts His law cannot be blessed.",
+          traditional: {
+            label: "2021 Responsum (Francis approved)",
+            source: "CDF / Pope Francis",
+            doc: "Responsum ad Dubium (CDF, March 2021)",
+            quote: "It is not licit to impart a blessing on relationships or partnerships… that involve sexual activity outside of marriage… as in the case of the unions of persons of the same sex.",
+            nature: "CDF Responsum — approved and signed off by Francis himself",
+          },
+          modern: {
+            label: "2023 Reversal",
+            source: "Pope Francis",
+            doc: "Fiducia Supplicans §31 (2023)",
+            quote: "Within the context of the above, it becomes possible to bless couples in irregular situations and same-sex couples without officially validating their status.",
+            nature: "DDF Declaration — contradicts the 2021 Responsum Francis approved",
+          },
+        },
         questions: [
           "What does Persona Humana teach about homosexual acts and why they are disordered?",
           "What do the traditional catechisms teach about blessing — what can legitimately be blessed, and what cannot?",
@@ -3308,6 +3253,23 @@ const RUPTURE_PILLARS = [
         id: "amazon",
         title: "The Amazon Synod & Married Priests",
         tension: "The 2019 Amazon Synod's final document proposed ordaining married men (viri probati) to the priesthood to address the shortage of priests in the Amazon. Francis's response, Querida Amazonia, did not explicitly endorse this — but did not close the question. The discipline of priestly celibacy, rooted in the Church's tradition of the West, was publicly and officially questioned at the highest level of the Church.",
+        ruptureCard: {
+          doctrine: "Celibacy is not a mere discipline of convenience but is ordered to the priesthood by its nature — the priest is espoused to the Church as Christ is espoused to her.",
+          traditional: {
+            label: "Perpetual Western Discipline",
+            source: "Council of Trent / 1917 Code of Canon Law",
+            doc: "Trent, Session XXIV, Canon 9 (1563); 1917 Can. 132 §1",
+            quote: "If anyone says that clerics constituted in holy orders… can contract marriage, and that being contracted it is valid… let him be anathema.",
+            nature: "Ecumenical Council canon + universal law — celibacy inseparable from Latin priesthood",
+          },
+          modern: {
+            label: "Amazon Synod Proposal",
+            source: "Amazon Synod / Pope Francis (silence)",
+            doc: "Synod Final Document §111 (2019); Querida Amazonia (2020)",
+            quote: "We propose that criteria and dispositions for the ordination to the priesthood be established for men of good standing, with a legitimate and stable family, who are leaders of their communities.",
+            nature: "Synod proposal — Francis's response neither endorsed nor definitively closed it",
+          },
+        },
         questions: [
           "What is the theological basis for priestly celibacy in the Latin tradition?",
           "What did the approved sources teach about the relationship between celibacy and the priesthood?",
@@ -3318,6 +3280,23 @@ const RUPTURE_PILLARS = [
         id: "women_deacons",
         title: "Women Deacons",
         tension: "Francis established two successive commissions to study the question of women deacons, implying the question was open. Inter Insigniores (CDF, 1976 — approved in forma specifica by Paul VI) explicitly grounded the male-only priesthood in the Church's unbroken tradition and Christ's example. Ordinatio Sacerdotalis (John Paul II, 1994) declared the question of women's ordination 'definitively' closed. Whether the diaconate was included in that closure remained disputed — but the commissions themselves signaled a willingness to question settled tradition.",
+        ruptureCard: {
+          doctrine: "The Church has no authority whatsoever to confer priestly ordination on women — this judgment is to be definitively held by all the faithful.",
+          traditional: {
+            label: "Definitive Papal Declaration",
+            source: "Pope John Paul II",
+            doc: "Ordinatio Sacerdotalis §4 (1994)",
+            quote: "I declare that the Church has no authority whatsoever to confer priestly ordination on women and that this judgment is to be definitively held by all the Church's faithful.",
+            nature: "Apostolic Letter — JPII invoked his supreme teaching authority; CDF confirmed it is infallible ordinary Magisterium",
+          },
+          modern: {
+            label: "Question Re-Opened",
+            source: "Pope Francis",
+            doc: "Two successive Commissions on Women Deacons (2016, 2020); Synodality discussions (2023–2024)",
+            quote: "I have decided to form an official Commission that will study the question… The question remains open.",
+            nature: "Papal commissions — implicitly treating as open what JPII declared definitively closed",
+          },
+        },
         questions: [
           "What does Inter Insigniores teach about why the Church cannot ordain women to the priesthood?",
           "What did Ordinatio Sacerdotalis declare, and at what level of authority?",
@@ -3328,6 +3307,23 @@ const RUPTURE_PILLARS = [
         id: "abu_dhabi",
         title: "The Abu Dhabi Declaration",
         tension: "In 2019, Francis co-signed the 'Document on Human Fraternity' in Abu Dhabi, which stated that 'the pluralism and diversity of religions... are willed by God in His wisdom.' This appeared to contradict Mortalium Animos, which condemned the idea that God wills religious pluralism, and Dominus Iesus, which affirmed that non-Christian religions do not subsist in the truth willed by God for salvation.",
+        ruptureCard: {
+          doctrine: "God wills that all men come to knowledge of the one true faith; religious diversity is the consequence of human error and sin, not divine design.",
+          traditional: {
+            label: "Condemned Position",
+            source: "Pope Pius XI",
+            doc: "Mortalium Animos §2 (1928)",
+            quote: "The pan-Christians who strive for the union of the churches seem to pursue the noblest of ideals… yet in reality they only dare to injure the cause of the Catholic Faith.",
+            nature: "Papal Encyclical — condemns treating all religions as equally willed by God",
+          },
+          modern: {
+            label: "Abu Dhabi Declaration",
+            source: "Pope Francis (co-signatory)",
+            doc: "Document on Human Fraternity (Abu Dhabi, 2019)",
+            quote: "The pluralism and the diversity of religions, colour, sex, race and language are willed by God in His wisdom, through which He created human beings.",
+            nature: "Joint Declaration — co-signed by Francis; affirms divine will for religious diversity",
+          },
+        },
         questions: [
           "What did Mortalium Animos teach about whether God wills religious diversity as a positive good?",
           "What does Dominus Iesus teach about the unique and salvific truth of the Catholic faith vs. other religions?",
@@ -3338,6 +3334,23 @@ const RUPTURE_PILLARS = [
         id: "lords_prayer",
         title: "The Lord's Prayer Translation",
         tension: "Francis changed the Italian translation of the Lord's Prayer from 'lead us not into temptation' to 'do not abandon us in temptation,' claiming the traditional rendering made God appear to lead men into sin. This contradicted the Douay-Rheims text (Matthew 6:13), the traditional theological interpretation of the petition, and the Church's centuries-long liturgical use of the traditional wording.",
+        ruptureCard: {
+          doctrine: "\"Lead us not into temptation\" does not imply God authors sin — it asks that He not withdraw His grace and permit us to be overcome. Every Doctor who addressed it said so.",
+          traditional: {
+            label: "Augustine, Aquinas & the Roman Catechism",
+            source: "St. Augustine / St. Thomas Aquinas / Roman Catechism",
+            doc: "De Sermone Domini in Monte II, 9 (Augustine); Commentary on the Lord's Prayer (Aquinas, c. 1269); Roman Catechism, Part IV, Ch. 15",
+            quote: "God leads into temptation by not helping… He who tempts does so to destroy; God permits temptation to exercise and prove the soul. We ask not to be led in — that is, not to be overcome.",
+            nature: "Doctor of the Church (Augustine) + Doctor of the Church (Aquinas) + Catechism of Trent — unanimous on this petition for 1,600 years",
+          },
+          modern: {
+            label: "Francis's Objection",
+            source: "Pope Francis",
+            doc: "Interview, TV2000 (December 2017); Italian Missal revised 2020",
+            quote: "A father does not do that. A father helps you to get up immediately. It is not a good translation… I am the one who falls. It is not He who pushes me into temptation.",
+            nature: "Papal interview + liturgical revision — rejects the traditional wording as theologically misleading",
+          },
+        },
         questions: [
           "What does the Douay-Rheims text of Matthew 6:13 actually say?",
           "How did the Doctors of the Church — particularly Augustine — interpret 'lead us not into temptation'?",
@@ -3425,6 +3438,66 @@ const RUPTURE_PILLARS = [
     ],
   },
 ];
+
+// ═══════════════════════════════════════════════════════════════════
+// RUPTURE DIFF CARD
+// ═══════════════════════════════════════════════════════════════════
+function DiffCard({ card }) {
+  const [expanded, setExpanded] = useState(false);
+  if (!card) return null;
+  return (
+    <div style={{ marginBottom: 24 }}>
+      {/* Doctrine statement */}
+      <div style={{
+        background: T.goldFaint,
+        border: `1px solid ${T.cardBorderStrong}`,
+        borderRadius: "12px 12px 0 0",
+        padding: "12px 16px",
+        textAlign: "center",
+      }}>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.gold, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>The Doctrine</div>
+        <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(14.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: 0 }}>{card.doctrine}</p>
+      </div>
+
+      {/* Two-column diff */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: `1px solid ${T.cardBorderStrong}`, borderTop: "none", borderRadius: "0 0 12px 12px", overflow: "hidden" }}>
+
+        {/* Traditional column */}
+        <div style={{ background: "rgba(26,39,68,0.04)", borderRight: `1px solid ${T.cardBorderStrong}`, padding: "14px 14px 16px" }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.navyText, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Traditional Teaching</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+            <span style={{ fontWeight: 600, color: T.inkMid }}>{card.traditional.source}</span>
+            <br />{card.traditional.doc}
+          </div>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.navyText}`, paddingLeft: 8 }}>
+            "{card.traditional.quote}"
+          </p>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.navyText, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.traditional.nature}</div>
+        </div>
+
+        {/* Modern column */}
+        <div style={{ background: "rgba(122,28,28,0.04)", padding: "14px 14px 16px" }}>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(8.5), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4 }}>Modern Position</div>
+          <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(11), color: T.inkLight, marginBottom: 8, lineHeight: 1.4 }}>
+            <span style={{ fontWeight: 600, color: T.inkMid }}>{card.modern.source}</span>
+            <br />{card.modern.doc}
+          </div>
+          <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: fz(12.5), fontStyle: "italic", color: T.inkDark, lineHeight: 1.6, margin: "0 0 8px", borderLeft: `3px solid ${T.crimson}`, paddingLeft: 8 }}>
+            "{card.modern.quote}"
+          </p>
+          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.crimson, letterSpacing: "0.04em", lineHeight: 1.4 }}>{card.modern.nature}</div>
+        </div>
+      </div>
+
+      {/* Rupture label */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 8 }}>
+        <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, transparent, rgba(122,28,28,0.25))` }} />
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(9), fontWeight: 700, color: T.crimson, letterSpacing: "0.14em", textTransform: "uppercase" }}>⚡ Rupture Identified</div>
+        <div style={{ flex: 1, height: 1, background: `linear-gradient(to left, transparent, rgba(122,28,28,0.25))` }} />
+      </div>
+    </div>
+  );
+}
 
 // ═══════════════════════════════════════════════════════════════════
 // RUPTURE TAB
@@ -3642,6 +3715,10 @@ function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
           {/* Title */}
           <div style={{ padding: "20px 0 16px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(18), fontWeight: 500, color: T.navyText, marginBottom: 16, lineHeight: 1.3 }}>{activeTopic.title}</div>
+
+            {/* Diff card — shown when ruptureCard data is present */}
+            {activeTopic.ruptureCard && <DiffCard card={activeTopic.ruptureCard} />}
+
             {/* Tension card */}
             <div style={{ background: "rgba(122,28,28,0.05)", border: "1px solid rgba(122,28,28,0.18)", borderRadius: 12, padding: "16px 18px", marginBottom: 24 }}>
               <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>The Departure</div>
@@ -3933,7 +4010,7 @@ function StationIcon({ idx }) {
   );
 }
 
-function StationsTab({ goHome }) {
+function StationsTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [scr, setScr] = useState("select");
   const [ver, setVer] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -3984,7 +4061,7 @@ function StationsTab({ goHome }) {
   return (
     <>
       <div ref={topRef} style={{ height: 0, overflow: "hidden" }} />
-      <TopBar title={getTitle()} showBack onBack={handleBack}
+      <GlobalTopBar title={getTitle()} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack onBack={handleBack}
         rightAction={scr === "sta" ? <button onClick={() => { setScr("select"); setVer(null); }} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(13), color: T.inkLight, width: 28, padding: 0 }}>✕</button> : undefined}
       />
 
@@ -5316,7 +5393,7 @@ const NOVENAS = [
 // ═══════════════════════════════════════════════════════════════════
 // NOVENA TAB COMPONENT
 // ═══════════════════════════════════════════════════════════════════
-function NovenaTab({ goHome }) {
+function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [view, setView] = useState("list");
   const [selected, setSelected] = useState(null);
   const [dayIdx, setDayIdx] = useState(0);
@@ -5383,7 +5460,7 @@ function NovenaTab({ goHome }) {
   if (view === "list") {
     return (
       <>
-        <TopBar title="Novena Guide" showBack={true} onBack={goHome} />
+        <GlobalTopBar title="Novena Guide" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
         <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
           <div style={{ textAlign: "center", marginBottom: 22 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
@@ -5536,7 +5613,7 @@ function NovenaTab({ goHome }) {
   if (view === "complete" && selected) {
     return (
       <>
-        <TopBar title="Novena Complete" showBack={false} />
+        <GlobalTopBar title="Novena Complete" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={false} />
         <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
           <div style={{ textAlign: "center", marginBottom: 24 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: "50%", background: T.goldFaint, border: "2px solid rgba(212,168,67,0.4)", marginBottom: 14 }}>
@@ -5701,7 +5778,7 @@ const BC_DECKS = [
   },
 ];
 
-function CatechismDrillTab({ goHome }) {
+function CatechismDrillTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [view, setView] = useState("menu"); // menu | drill | result
   const [selectedDeck, setSelectedDeck] = useState(null);
   const [queue, setQueue] = useState([]);
@@ -5769,7 +5846,7 @@ function CatechismDrillTab({ goHome }) {
   if (view === "menu") {
     return (
       <>
-        <TopBar title="Catechism Drill" showBack={true} onBack={goHome} />
+        <GlobalTopBar title="Catechism Drill" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
         <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
           <div style={{ textAlign: "center", marginBottom: 22 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
@@ -5987,34 +6064,35 @@ const HOURS = [
     color: "#c4880a",
     desc: "The Church's morning hymn of praise at the rising of the sun",
     opening: {
-      versicle: "O Lord, open my lips.",
-      response: "And my mouth shall proclaim Thy praise.",
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Iam lucis orto sidere",
-      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.",
-      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.",
+      latin: "Iam lucis orto sidere\nDeum precemur supplices,\nut in diurnis actibus\nnos servet a nocentibus.\n\nLinguam refrenet temperet,\nne litis horror insonet;\nvisum fovendo contegat,\nne vanitates hauriat.",
+      english: "Now that the daylight fills the sky,\nWe lift our hearts to God on high,\nThat He, in all we do or say,\nWould keep us free from harm today.\n\nWould guard our hearts and tongues from strife,\nFrom anger's din would shield our life,\nWould keep our inmost conscience pure,\nOur souls from folly's lust secure.",
       note: "Traditional Lauds hymn, rendered in Ambrosian meter",
     },
     psalm: {
       ref: "Psalm 62 (63)",
       title: "O God, Thou art my God",
-      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands.",
-      ref2: "Ps 62:2–5 (Douay-Rheims)",
+      text: "O God, Thou art my God: early will I seek Thee. My soul hath thirsted for Thee: how many ways doth my flesh, in a desert land, and where there is no way, and no water! So in the sanctuary have I come before Thee, to see Thy power and Thy glory. For Thy mercy is better than lives: Thee my lips shall praise. Thus will I bless Thee all my life long: and in Thy name I will lift up my hands. Let my soul be filled as with marrow and fatness: and my mouth shall praise Thee with joyful lips. If I have remembered Thee upon my bed, I will meditate on Thee in the morning: because Thou hast been my helper.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 62 (Douay-Rheims)",
     },
     reading: {
       ref: "Lamentations 3:22–23",
-      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.",
+      text: "The mercies of the Lord that we are not consumed: because His commiserations have not failed. They are new every morning: great is Thy faithfulness.\n\n℟. Thanks be to God.",
     },
     canticle: {
       title: "Benedictus",
-      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. Through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.",
-      ref: "Luke 1:68–69, 78–79 (Douay-Rheims)",
+      subtitle: "Canticle of Zachary · Luke 1:68–79",
+      text: "Blessed be the Lord God of Israel: because He hath visited and wrought the redemption of His people. And hath raised up a horn of salvation to us, in the house of David His servant. As He spoke by the mouth of His holy prophets, who are from the beginning: salvation from our enemies, and from the hand of all that hate us. To perform mercy to our fathers, and to remember His holy testament. The oath which He swore to Abraham our father, that He would grant to us, that being delivered from the hand of our enemies, we may serve Him without fear, in holiness and justice before Him, all our days.\n\nAnd thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare His ways: to give knowledge of salvation to His people, unto the remission of their sins: through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref: "Luke 1:68–79 (Douay-Rheims)",
     },
     prayer: "Grant us, O Lord, to begin this day with holy fear, to pass it in holy service, and to end it in Thy love; through Jesus Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6026,32 +6104,37 @@ const HOURS = [
     timeRange: [6, 9],
     icon: "🌤",
     color: "#1a2744",
-    desc: "The first prayer of the day offering work and waking hours to God",
+    desc: "The first prayer of the day — consecrating the morning hours to God",
     opening: {
-      versicle: "O Lord, open my lips.",
-      response: "And my mouth shall proclaim Thy praise.",
+      versicle: "O God, come to my assistance.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Iam surgit hora tertia",
-      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.",
-      english: "The hour of Prime now bids us rise,\nAnd lift our morning sacrifice;\nLet no vain thought our hearts possess,\nBut fasting, holy watchfulness.",
-      note: "Traditional Prime hymn",
+      latin: "Iam surgit hora tertia,\nqua Christus ascendit crucem;\nnil insolens mens cogitet,\nieiuna sit, serpens timet.\n\nAgens diebus prosperos\nadjuvet labor quaesumus,\nne nos quietis tempore\nlassescat aut socordia.",
+      english: "Now riseth our third hour of prayer,\nThe hour when Christ was lifted there\nUpon the Cross: no thought of pride\nBe ours — but fasting, fortified.\n\nIn all our toil throughout this day\nLet labour not through sloth give way,\nNor easy rest in peaceful time\nBreed sluggish hearts unfit to climb.",
+      note: "Traditional Prime hymn; Prime is the first of the Little Hours",
     },
     psalm: {
       ref: "Psalm 5",
       title: "Give ear, O Lord, to my words",
-      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity.",
-      ref2: "Ps 5:2–5 (Douay-Rheims)",
+      text: "Give ear, O Lord, to my words, understand my cry. Hearken to the voice of my prayer, O my King and my God. For to Thee will I pray: O Lord, in the morning Thou shalt hear my voice. In the morning I will stand before Thee, and will see: because Thou art not a God that willest iniquity. Neither shall the wicked dwell near Thee: nor shall the unjust abide before Thy eyes. Thou hatest all the workers of iniquity: Thou wilt destroy all that speak a lie. But as for me in the multitude of Thy mercy, I will come into Thy house; I will worship towards Thy holy temple, in Thy fear.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 5 (Douay-Rheims)",
     },
     reading: {
       ref: "Isaiah 33:2",
-      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.",
+      text: "O Lord, have mercy on us: for we have waited for Thee, be Thou the arm in the morning, and our salvation in the time of trouble.\n\n℟. Thanks be to God.",
     },
-    canticle: null,
-    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Amen.",
+    canticle: {
+      title: "Apostles' Creed",
+      subtitle: "Symbolum Apostolorum — prayed at Prime in the traditional Roman Rite",
+      text: "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord; Who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell; the third day He arose again from the dead; He ascended into heaven, and sitteth at the right hand of God, the Father Almighty; from thence He shall come to judge the living and the dead.\n\nI believe in the Holy Ghost, the Holy Catholic Church, the Communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
+      ref: "Symbolum Apostolorum",
+    },
+    prayer: "Lord God, Almighty Father, Who dost bring us to the beginning of this day: grant that we who are made in Thine image may, by Thy grace, be delivered from the darkness of sin and walk in the light of justice. Defend us this day from all sin, that we may come to the evening holy and undefiled; through Jesus Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6063,32 +6146,32 @@ const HOURS = [
     timeRange: [9, 11],
     icon: "☀",
     color: "#b87a10",
-    desc: "Prayer at the third hour, when the Holy Ghost descended at Pentecost",
+    desc: "The third hour — when the Holy Ghost descended at Pentecost",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Nunc Sancte nobis Spiritus",
-      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.",
-      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.",
-      note: "Attributed to St. Ambrose; traditional Terce hymn",
+      latin: "Nunc Sancte nobis Spiritus,\nunum Patri cum Filio,\ndigneris promptus ingeri\nnostro refusus pectori.\n\nOs, lingua, mens, sensus, vigor,\nconfessionem personent,\nflamescat igne caritas,\naccendat ardor proximos.",
+      english: "Come, Holy Ghost, with God the Son\nAnd God the Father, ever One;\nShed forth Thy grace within our breast\nAnd dwell with us a ready Guest.\n\nMouth, tongue, and mind, and all our powers,\nBear witness to this faith of ours;\nLet love with every feeling glow,\nKindle our neighbours, let it flow.",
+      note: "Attributed to St. Ambrose; the traditional Terce hymn",
     },
     psalm: {
-      ref: "Psalm 118 (119):33–40",
-      title: "Set before me for a law",
-      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way.",
-      ref2: "Ps 118:33–37 (Douay-Rheims)",
+      ref: "Psalm 118 (119):33–48",
+      title: "The way of Thy justifications",
+      text: "Set before me for a law the way of Thy justifications, O Lord: and I will always seek after it. Give me understanding, and I will search Thy law; and I will keep it with my whole heart. Lead me in the path of Thy commandments; for this same I have desired. Incline my heart into Thy testimonies and not to covetousness. Turn away my eyes that they may not behold vanity: quicken me in Thy way. Establish Thy word to Thy servant, in Thy fear. Turn away my reproach, which I have apprehended: for Thy judgments are delightful. Behold I have longed after Thy precepts: quicken me in Thy justice.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:33–40 (Douay-Rheims)",
     },
     reading: {
       ref: "Acts 2:1–4",
-      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.",
+      text: "And when the days of the Pentecost were accomplished, they were all together in one place: and suddenly there came a sound from heaven, as of a mighty wind coming, and it filled the whole house where they were sitting. And there appeared to them parted tongues as it were of fire, and it sat upon every one of them: and they were all filled with the Holy Ghost.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Lord God, Whose only-begotten Son, at this hour, hung upon the Cross for us: grant us grace to persevere in good works, to carry our daily cross patiently, and to offer all our labors for Thy greater glory. Amen.",
+    prayer: "Lord God, Whose only-begotten Son, at this third hour, sent down the Holy Ghost upon the Apostles: take not that same Holy Ghost from us, O Lord, but grant that we may always seek for it and obtain it, that we may so persevere in all holiness that we may merit to receive Him. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6100,32 +6183,32 @@ const HOURS = [
     timeRange: [11, 14],
     icon: "🌞",
     color: "#7a1c1c",
-    desc: "The sixth hour, when our Lord was nailed to the Cross",
+    desc: "The sixth hour — when our Lord was nailed to the Cross",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Rector potens, verax Deus",
-      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.",
-      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day.",
+      latin: "Rector potens, verax Deus,\nqui temperas rerum vices,\nsplendore mane instruis\net ignibus meridiem.\n\nExtingue flammis litium,\naufer calorem noxium,\nconfer salutem corporum\nveramque pacem cordium.",
+      english: "O God of truth, O Lord of might,\nWho orderest time and change aright,\nWho send'st the early morning ray\nAnd light'st with noon the blaze of day:\n\nExtinguish now each sinful fire,\nAnd banish every ill desire;\nAnd while Thou keep'st the body whole,\nShower healing peace upon the soul.",
       note: "Traditional Sext hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 118 (119):97–104",
+      ref: "Psalm 118 (119):97–112",
       title: "O how have I loved Thy law",
-      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth.",
-      ref2: "Ps 118:97–103 (Douay-Rheims)",
+      text: "O how have I loved Thy law, O Lord! it is my meditation all the day. Through Thy commandment, Thou hast made me wiser than my enemies: for it is ever with me. I have understood more than all my teachers: because Thy testimonies are my meditation. I have restrained my feet from every evil way: that I may keep Thy words. How sweet are Thy words to my palate! more than honey to my mouth. Through Thy commandments I have had understanding: therefore have I hated every way of iniquity. Thy word is a lamp to my feet, and a light to my paths. I have sworn and am determined to keep the judgments of Thy justice.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:97–106 (Douay-Rheims)",
     },
     reading: {
       ref: "John 4:34",
-      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.",
+      text: "Jesus saith to them: My meat is to do the will of Him that sent Me, that I may perfect His work.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Almighty and eternal God, Who in the mystery of the Incarnation didst consecrate this noon hour with the presence of Thy only-begotten Son: grant us to persevere to midday in virtue, and so to finish well all the work of this day, to Thy glory. Amen.",
+    prayer: "Almighty and eternal God, Who at the sixth hour didst suffer Thy only-begotten Son to be nailed to the Cross for our sins: grant us so to keep midday holy that, united to His sacrifice, we may this day accomplish all things to Thy glory. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6137,32 +6220,32 @@ const HOURS = [
     timeRange: [14, 17],
     icon: "🌤",
     color: "#1a2744",
-    desc: "The ninth hour, the hour of Christ's death on the Cross",
+    desc: "The ninth hour — the hour of Christ's death upon the Cross",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Rerum Deus tenax vigor",
-      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.",
-      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nBright light of day's declining hours,\nUntouched by age or time's swift powers.",
+      latin: "Rerum Deus tenax vigor,\nimmotus in te permanens,\nlucis diurnae tempora\nsuccessibus determinans.\n\nLargire clarum vespere,\nquo vita nusquam decidat,\nsed praemium mortis sacrae\nperennis instet gloria.",
+      english: "O God, the world's sustaining force,\nImmutable in all Thy course,\nWho dost the light of day ordain\nAnd mark its changes and its wane:\n\nGrant us at last Thy light serene,\nThat life may never lack its sheen,\nAnd death, made holy by Thy grace,\nMay open into endless days.",
       note: "Traditional None hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 90 (91)",
-      title: "He that dwelleth in the aid of the most High",
-      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. For He hath delivered me from the snare of the hunters: and from the sharp word. He will overshadow thee with His shoulders: and under His wings thou shalt trust. His truth shall compass thee with a shield.",
-      ref2: "Ps 90:1–5 (Douay-Rheims)",
+      ref: "Psalm 118 (119):129–144",
+      title: "Thy testimonies are wonderful",
+      text: "Thy testimonies are wonderful: therefore my soul hath sought them. The declaration of Thy words giveth light: and giveth understanding to little ones. I opened my mouth and panted: because I longed for Thy commandments. Look Thou upon me, and have mercy on me, according to the judgment of them that love Thy name. Direct my steps according to Thy word: and let no iniquity have dominion over me. Redeem me from the calumnies of men: that I may keep Thy commandments. Make Thy face to shine upon Thy servant: and teach me Thy justifications. My eyes have sent forth springs of water: because they have not kept Thy law.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 118:129–136 (Douay-Rheims)",
     },
     reading: {
-      ref: "Matthew 27:45–46",
-      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me?",
+      ref: "Matthew 27:45–50",
+      text: "Now from the sixth hour there was darkness over the whole earth, until the ninth hour. And about the ninth hour Jesus cried with a loud voice, saying: Eli, Eli, lamma sabacthani? that is: My God, My God, why hast Thou forsaken Me? And Jesus again crying with a loud voice, yielded up the ghost.\n\n℟. Thanks be to God.",
     },
     canticle: null,
-    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head and give up the ghost for our sins: deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
+    prayer: "Lord Jesus Christ, Who at the ninth hour didst bow Thy head upon the Cross and give up the ghost for our redemption: we beseech Thee, that through the merits of Thy most holy Passion and Death, Thou wouldst deliver us from all evil, grant us perseverance in Thy service, and bring us at last to the peace of Thy kingdom. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6177,33 +6260,34 @@ const HOURS = [
     desc: "The crown of the day — the Church's evening sacrifice of praise",
     opening: {
       versicle: "O God, come to my assistance.",
-      response: "O Lord, make haste to help me.",
+      response: "O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
     },
     hymn: {
       title: "Lucis Creator optime",
-      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.",
-      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all.",
+      latin: "Lucis Creator optime,\nlucem dierum proferens,\nprimordiis lucis novae\nmundi parans originem.\n\nQui mane junctus prosperas\ndie, dierum omnium,\nhymni canendo ducitur,\nPerenne concinentibus.",
+      english: "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all:\n\nAs daylight fades and darkness falls,\nBefore Thy throne Thy servant calls;\nDrive far from us the shades of night,\nAnd crown our souls with heavenly light.",
       note: "Traditional Vespers hymn, attributed to St. Ambrose",
     },
     psalm: {
-      ref: "Psalm 140 (141):1–4",
-      title: "Let my prayer be directed",
-      text: "Lord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.",
-      ref2: "Ps 140:1–4 (Douay-Rheims)",
+      ref: "Psalm 109 (110) & Psalm 140 (141):1–4",
+      title: "The Lord said to my Lord · Let my prayer be directed",
+      text: "The Lord said to my Lord: Sit Thou at My right hand: until I make Thy enemies Thy footstool. The Lord will send forth the sceptre of Thy power out of Sion: rule Thou in the midst of Thy enemies. With Thee is the principality in the day of Thy strength: in the brightness of the saints: from the womb before the day star I begot Thee. The Lord hath sworn, and He will not repent: Thou art a priest for ever according to the order of Melchisedech.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nLord, I have cried to Thee, hear me: hearken to my voice, when I cry to Thee. Let my prayer be directed as incense in Thy sight: the lifting up of my hands, as evening sacrifice. Set a watch, O Lord, before my mouth: and a door round about my lips. Incline not my heart to evil words; to make excuses in sins.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 109 & Ps 140:1–4 (Douay-Rheims)",
     },
     reading: {
       ref: "1 Peter 5:8–9",
-      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith: knowing that the same affliction befalleth your brethren who are in the world.\n\n℟. Thanks be to God.",
     },
     canticle: {
       title: "Magnificat",
-      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him.",
-      ref: "Luke 1:46–50 (Douay-Rheims)",
+      subtitle: "Canticle of Our Lady · Luke 1:46–55",
+      text: "My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed. Because He that is mighty hath done great things to me; and holy is His name. And His mercy is from generation unto generations, to them that fear Him. He hath shewed might in His arm: He hath scattered the proud in the conceit of their heart. He hath put down the mighty from their seat, and hath exalted the humble. He hath filled the hungry with good things: and the rich He hath sent empty away. He hath received Israel His servant, being mindful of His mercy: as He spoke to our fathers, to Abraham and to his seed for ever.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref: "Luke 1:46–55 (Douay-Rheims)",
     },
-    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits this day. Pardon our failures, protect us through the night, and grant that in Thy mercy we may rise again to praise Thee. Amen.",
+    prayer: "We give Thee thanks, O Lord our God, for all Thy benefits, Who livest and reignest world without end. And may the souls of the faithful departed, through the mercy of God, rest in peace. Amen.\n\nGrant, we beseech Thee, O Lord, that the course of this world may be peaceably ordered by Thy governance, and that Thy Church may rejoice in tranquil devotion; through Christ our Lord. Amen.",
     closing: {
       versicle: "Let us bless the Lord.",
-      response: "Thanks be to God.",
+      response: "Thanks be to God.\n\nMay the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
     },
   },
   {
@@ -6217,35 +6301,37 @@ const HOURS = [
     color: "#1a2744",
     desc: "The last prayer of the day — surrendering to God's care through the night",
     opening: {
-      versicle: "Convert us, O God our Saviour.",
-      response: "And turn away Thy anger from us.",
+      versicle: "Convert us, O God our Saviour.\n\n℟. And turn away Thy anger from us.\n\n℣. Incline unto my aid, O God.\n℟. O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nConfiteor Deo omnipotenti — I confess to Almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the saints, that I have sinned exceedingly in thought, word, and deed, through my fault, through my fault, through my most grievous fault. Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the saints, to pray to the Lord our God for me.\n\nMay Almighty God have mercy upon us, forgive us our sins, and bring us to life everlasting. Amen.\nMay the Almighty and merciful Lord grant us pardon, absolution, and remission of our sins. Amen.",
+      response: "",
     },
     hymn: {
       title: "Te lucis ante terminum",
-      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.",
-      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.",
-      note: "Traditional Compline hymn; one of the most ancient in the Office",
+      latin: "Te lucis ante terminum,\nrerum Creator, poscimus,\nut pro tua clementia\nsis praesul et custos.\n\nProcul recedant somnia\net noctium phantasmata;\nhostemque nostrum comprime,\nne polluantur corpora.",
+      english: "Before the ending of the day,\nCreator of the world, we pray\nThat with Thy wonted favour Thou\nWouldst be our Guard and Keeper now.\n\nFrom all ill dreams defend our eyes,\nFrom nightly fears and fantasies;\nTread under foot our ghostly foe,\nThat no pollution we may know.",
+      note: "Te lucis ante terminum — one of the most ancient hymns in the Roman Office",
     },
     psalm: {
-      ref: "Psalm 90 (91):1–6, 10–11",
-      title: "Under the protection of the most High",
-      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways.",
-      ref2: "Ps 90:1–2, 5–6, 10–11 (Douay-Rheims)",
+      ref: "Psalm 90 (91) & Psalm 133 (134)",
+      title: "Under the protection of the most High · Praise the Lord by night",
+      text: "He that dwelleth in the aid of the most High, shall abide under the protection of the God of Jacob. He shall say to the Lord: Thou art my protector, and my refuge: my God, in Him will I trust. Thou shalt not be afraid of the terror of the night. Of the arrow that flieth in the day, of the business that walketh about in the dark: of invasion, or of the noonday devil. There shall no evil come to thee: nor shall the scourge come near thy dwelling. For He hath given His angels charge over thee; to keep thee in all thy ways. They shall bear thee in their hands: lest thou dash thy foot against a stone.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nBehold now bless ye the Lord, all ye servants of the Lord: who stand in the house of the Lord, in the courts of the house of our God. In the nights lift up your hands to the holy places, and bless ye the Lord. May the Lord out of Sion bless thee, He that made heaven and earth.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      ref2: "Ps 90 & Ps 133 (Douay-Rheims)",
     },
     reading: {
       ref: "1 Peter 5:8–9",
-      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.",
+      text: "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Whom resist ye, strong in faith.\n\n℟. Thanks be to God.\n\n℣. Keep us, O Lord, as the apple of Thine eye.\n℟. Protect us under the shadow of Thy wings.",
     },
     canticle: {
       title: "Nunc dimittis",
-      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.",
+      subtitle: "Canticle of Simeon · Luke 2:29–32",
+      text: "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace; because my eyes have seen Thy salvation, which Thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of Thy people Israel.\n\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
       ref: "Luke 2:29–32 (Douay-Rheims)",
     },
     antiphon: {
       title: "Salve Regina",
-      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+      subtitle: "Antiphon of Our Lady — sung kneeling after Compline",
+      text: "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.\n\n℣. Pray for us, O holy Mother of God.\n℟. That we may be made worthy of the promises of Christ.\n\nLet us pray. O God, our refuge and our strength, look down with favour on Thy people who cry to Thee; and through the intercession of the glorious and Immaculate Virgin Mary, Mother of God, of blessed Joseph her spouse, of Thy blessed Apostles Peter and Paul, and of all the saints, in mercy and goodness hear the prayers we pour forth to Thee for the conversion of sinners, and for the liberty and exaltation of Holy Mother Church. Amen.",
     },
-    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore. Amen.",
+    prayer: "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy; let Thy holy angels dwell herein to preserve us in peace; and may Thy blessing be upon us evermore; through Christ our Lord. Amen.",
     closing: {
       versicle: "May the almighty and merciful Lord grant us a quiet night and a perfect end.",
       response: "Amen.",
@@ -6268,7 +6354,7 @@ function getDefaultHour() {
 // ═══════════════════════════════════════════════════════════════════
 // LITURGY OF THE HOURS COMPONENT
 // ═══════════════════════════════════════════════════════════════════
-function LiturgyTab({ goHome }) {
+function LiturgyTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [view, setView] = useState("selector"); // "selector" | "prayer"
   const [selectedId, setSelectedId] = useState(getDefaultHour());
   const [step, setStep] = useState(0);
@@ -6324,7 +6410,7 @@ function LiturgyTab({ goHome }) {
     const suggestedId = getDefaultHour();
     return (
       <>
-        <TopBar title="Liturgy of the Hours" showBack={true} onBack={goHome} />
+        <GlobalTopBar title="Liturgy of the Hours" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
         <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
           <div style={{ textAlign: "center", marginBottom: 20 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
@@ -6392,7 +6478,7 @@ function LiturgyTab({ goHome }) {
   if (view === "complete") {
     return (
       <>
-        <TopBar title={`${hour.name} Complete`} showBack={false} />
+        <GlobalTopBar title={`${hour.name} Complete`} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={false} />
         <div style={{ flex: 1, overflowY: "auto", padding: "32px 22px" }}>
           <div style={{ textAlign: "center", marginBottom: 24 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.3)", marginBottom: 12 }}>
@@ -6428,12 +6514,12 @@ function LiturgyTab({ goHome }) {
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <div>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣ Versicle</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.versicle}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.opening.versicle}</p>
                 </div>
-                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                {hour.opening.response ? <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟ Response</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.opening.response}</p>
-                </div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.opening.response}</p>
+                </div> : null}
               </div>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center", marginTop: 12 }}>Take a moment to still yourself and enter into God's presence.</p>
@@ -6464,7 +6550,7 @@ function LiturgyTab({ goHome }) {
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(21), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.psalm.ref}</h2>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.gold, fontStyle: "italic", margin: "0 0 18px" }}>{hour.psalm.title}</p>
             <Card style={{ marginBottom: 10 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{hour.psalm.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0, whiteSpace: "pre-line" }}>{hour.psalm.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.psalm.ref2}</p>
           </div>
@@ -6476,7 +6562,7 @@ function LiturgyTab({ goHome }) {
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Scripture Reading</div>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.reading.ref}</h2>
             <Card style={{ borderLeft: `3px solid ${T.gold}`, marginBottom: 14 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.reading.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.reading.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkLight, fontStyle: "italic", textAlign: "center" }}>Pause. Receive the word. Let it rest in your heart.</p>
           </div>
@@ -6486,9 +6572,10 @@ function LiturgyTab({ goHome }) {
         return (
           <div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Canticle</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.canticle.title}</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.canticle.title}</h2>
+            {hour.canticle.subtitle && <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, margin: "0 0 16px" }}>{hour.canticle.subtitle}</p>}
             <Card style={{ borderLeft: `3px solid ${T.crimson}`, marginBottom: 10 }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.canticle.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.canticle.text}</p>
             </Card>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", textAlign: "right" }}>{hour.canticle.ref}</p>
           </div>
@@ -6498,9 +6585,10 @@ function LiturgyTab({ goHome }) {
         return (
           <div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Marian Antiphon</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>{hour.antiphon.title}</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>{hour.antiphon.title}</h2>
+            {hour.antiphon.subtitle && <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13), fontStyle: "italic", color: T.inkLight, margin: "0 0 16px" }}>{hour.antiphon.subtitle}</p>}
             <Card style={{ borderLeft: `3px solid ${T.crimson}` }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.antiphon.text}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17.5), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.antiphon.text}</p>
             </Card>
           </div>
         );
@@ -6511,7 +6599,7 @@ function LiturgyTab({ goHome }) {
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Closing Prayer</div>
             <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: T.inkDark, margin: "0 0 18px" }}>Collect</h2>
             <Card style={{ borderLeft: `3px solid ${T.navy}` }}>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>{hour.prayer}</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.8, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.prayer}</p>
             </Card>
           </div>
         );
@@ -6525,12 +6613,12 @@ function LiturgyTab({ goHome }) {
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <div>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℣</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.versicle}</p>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.closing.versicle}</p>
                 </div>
-                <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
+                {hour.closing.response ? <div style={{ borderTop: `1px solid ${T.cardBorder}`, paddingTop: 14 }}>
                   <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>℟</div>
-                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{hour.closing.response}</p>
-                </div>
+                  <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic", whiteSpace: "pre-line" }}>{hour.closing.response}</p>
+                </div> : null}
               </div>
             </Card>
           </div>
@@ -6543,7 +6631,7 @@ function LiturgyTab({ goHome }) {
 
   return (
     <>
-      <TopBar title={`${hour.name} · ${hour.label}`} showBack={true} onBack={back} />
+      <GlobalTopBar title={`${hour.name} · ${hour.label}`} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={back} />
       {/* Progress bar */}
       <div style={{ display: "flex", gap: 4, padding: "10px 20px 6px", background: T.warmWhite }}>
         {steps.map((s2, i) => (
@@ -6560,7 +6648,7 @@ function LiturgyTab({ goHome }) {
       </div>
       <div style={{ padding: "10px 22px 18px", borderTop: `1px solid ${T.cardBorder}`, background: T.warmWhite, display: "flex", gap: 10, flexShrink: 0 }}>
         {step > 0 && <div style={{ flex: 1 }}><GhostBtn onClick={back}>‹ Back</GhostBtn></div>}
-        <div style={{ flex: step > 0 ? 2 : 1 }}>
+        <div style={{ flex: 1 }}>
           {step < steps.length - 1
             ? <CrimsonBtn onClick={advance}>{step === 0 ? "Begin ›" : "Continue ›"}</CrimsonBtn>
             : <NavyBtn onClick={advance}>Finish Hour ✓</NavyBtn>
@@ -6963,21 +7051,21 @@ export default function Custos() {
       {/* ═══ SUB-FEATURES (accessed from Pray hub) ═══ */}
       {tab === "examen" && (
         <>
-          <ExamenTab />
+          <ExamenTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "confession" && (
         <>
-          <ConfessionTab />
+          <ConfessionTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} goHome={() => setTab("pray")} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "stations" && (
         <>
-          <StationsTab goHome={() => setTab("pray")} />
+          <StationsTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
@@ -6991,21 +7079,21 @@ export default function Custos() {
 
       {tab === "liturgy" && (
         <>
-          <LiturgyTab goHome={() => setTab("pray")} />
+          <LiturgyTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "drill" && (
         <>
-          <CatechismDrillTab goHome={() => setTab("pray")} />
+          <CatechismDrillTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
 
       {tab === "novena" && (
         <>
-          <NovenaTab goHome={() => setTab("pray")} />
+          <NovenaTab goHome={() => setTab("pray")} dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} />
           <BottomNav active="pray" onTab={setTab} />
         </>
       )}
