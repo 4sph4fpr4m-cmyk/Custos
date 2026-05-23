@@ -3112,8 +3112,8 @@ const RUPTURE_PILLARS = [
           "Is the permanent diaconate part of the ordained priesthood — and what do the traditional sources say?",
         ],
         primarySources: [
-          { label: "Ordinatio Sacerdotalis — Full Text (Vatican)", url: "https://www.vatican.va/content/john-paul-ii/en/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html", note: "John Paul II's definitive declaration that the Church has no authority to ordain women — read the four brief paragraphs that closed the question" },
-          { label: "CDF Responsum on Ordinatio Sacerdotalis (1995) — EWTN", url: "https://www.ewtn.com/catholicism/library/presentation-of-ordinatio-sacerdotalis-2600", note: "The CDF's confirmation that JPII's declaration belongs to the infallible ordinary Magisterium — making it not merely disciplinary but doctrinally binding" },
+          { label: "Ordinatio Sacerdotalis — Vatican (Full Text)", url: "https://www.vatican.va/content/john-paul-ii/en/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html", note: "John Paul II's definitive declaration in his own words — four brief paragraphs closing the question permanently" },
+          { label: "CDF Responsum on Ordinatio Sacerdotalis — Vatican (Full Text)", url: "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19951028_dubium-ordinatio-sac_en.html", note: "The CDF's 1995 reply, approved by JPII, confirming the teaching 'has been set forth infallibly by the ordinary and universal Magisterium… to be held always, everywhere, and by all, as belonging to the deposit of the faith'" },
         ],
       },
       {
@@ -3171,7 +3171,7 @@ const RUPTURE_PILLARS = [
         ],
         primarySources: [
           { label: "Francis's General Audience on 'Lead Us Not Into Temptation' — EWTN", url: "https://www.ewtn.com/catholicism/library/god-tempts-no-one-7495", note: "Francis's May 2019 catechesis arguing God cannot be the protagonist of temptation — the theological objection that drove the Italian translation change" },
-          { label: "EWTN Catholic Encyclopedia: Temptation — Traditional Interpretation", url: "https://www.ewtn.com/catholicism/library/temptation-of-christ-1308", note: "The traditional Catholic understanding: 'Lead us not into temptation' is a petition for God's help to overcome temptation when His Fatherly Providence allows us to experience it — not an implication that God causes sin" },
+          { label: "Roman Catechism on the Sixth Petition — Catholic Family News", url: "https://catholicfamilynews.com/blog/2018/01/09/2018-1-2-and-lead-us-not-into-temptation-a-truly-catholic-explanation/", note: "Full text of the Roman Catechism (Catechism of the Council of Trent) on 'Lead us not into temptation' — the primary source establishing the traditional interpretation that Francis's translation rejects" },
         ],
       },
     ],
