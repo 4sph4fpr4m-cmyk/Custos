@@ -3047,6 +3047,23 @@ const RUPTURE_PILLARS = [
         id: "dubia",
         title: "The Five Dubia",
         tension: "In 2023, five Cardinals (Burke, Brandmüller, Sandoval, Sarah, Zen) submitted formal Dubia to Francis asking for yes/no answers on five contested questions: whether revelation can be reinterpreted contrary to tradition, whether same-sex unions can be blessed, whether the Synod on Synodality has doctrinal authority, whether repentance is required for absolution, and whether women can be ordained deacons. Francis gave non-answers. The Cardinals went public. It stood as an unprecedented modern crisis of magisterial accountability.",
+        ruptureCard: {
+          doctrine: "Revealed doctrine is immutable — no new understanding of history or culture can overturn what has been defined. Doctrinal development explicates; it does not contradict.",
+          traditional: {
+            label: "Immutability of Defined Doctrine",
+            source: "Pope St. Pius X / Pope John Paul II",
+            doc: "Lamentabili Sane §58 (1907); Ad Tuendam Fidem (1998)",
+            quote: "Truth is not immutable any more than man himself, inasmuch as it is evolved with him, in him, and through him — this proposition is condemned. The assent of faith is not required for those things decreed by the Roman Pontiff acting formally as such.",
+            nature: "Holy Office Decree + Apostolic Letter — both condemned reinterpretation of defined doctrine; JPII added these propositions to Canon Law as binding",
+          },
+          modern: {
+            label: "Questions Left Open",
+            source: "Pope Francis",
+            doc: "Response to Five Dubia (July 2023); Synod on Synodality (2023–2024)",
+            quote: "It is not opportune for me to enter into debates about these questions… the Synod is a process of discernment… the Holy Spirit guides the Church into all truth gradually.",
+            nature: "Papal non-response — five yes/no questions on defined doctrine received no yes/no answer; the synodal process implicitly treated them as open",
+          },
+        },
         questions: [
           "What does the Church's tradition teach about the immutability of revealed doctrine?",
           "What does Ad Tuendam Fidem teach about the grades of assent owed to Church teaching and the consequences of denial?",
@@ -3192,8 +3209,8 @@ const RUPTURE_PILLARS = [
           "What do the approved sources teach about the prophetic role of Mary as Mediatrix and intercessor for the Church in times of crisis?",
           "What does the Church's tradition say about the signs by which true private revelation may be distinguished from false?",
         ],
+        ruptureLink: { label: "The Liturgical Rupture", desc: "Our Lady described the near-extinction of the true Mass — examine what changed and why in the Tradition & Rupture tab.", pillar: "liturgy" },
         primarySources: [
-          { label: "The Prophecies — TFP compilation", url: "https://www.tfp.org/prophecies-of-our-lady-of-good-success-about-our-times/", note: "Best available English compilation of the approved prophetic messages" },
           { label: "Apostolate of Our Lady of Good Success", url: "https://www.ourladyofgoodsuccess.com/blogs/news/the-prophectic-words-of-our-lady-of-good-success", note: "The seven apparitions summarized with prophetic excerpts" },
         ],
       },
@@ -3206,6 +3223,7 @@ const RUPTURE_PILLARS = [
           "What do the Doctors of the Church — particularly Augustine and Gregory the Great — teach about the corruption of shepherds as a sign of divine judgment on a people?",
           "What did Pius IX teach about the enemies of the Church in his own era — and how does Qui Pluribus describe the forces working against revealed religion?",
         ],
+        ruptureLink: { label: "The Francis Pontificate", desc: "Our Lady warned of clerical corruption reaching the highest levels — examine the doctrinal ruptures of the Francis era in Tradition & Rupture.", pillar: "francis" },
         primarySources: [
           { label: "The Approved Public Message (1851)", url: "https://www.catholicapologetics.info/catholicteaching/privaterevelation/lasalet.html", note: "The public message approved by Bishop de Bruillard in 1851 — distinct from Mélanie's expanded 1879 secret, which was condemned as a publication by the Holy Office in 1923" },
           { label: "La Salette Missionaries — Official Site", url: "https://www.lasalette.org/apparition/message.html", note: "The Missionaries of Our Lady of La Salette present the approved message" },
@@ -3220,6 +3238,7 @@ const RUPTURE_PILLARS = [
           "What does Divini Redemptoris (Pius XI, 1937) teach about the errors of Communism that Our Lady warned would spread from Russia?",
           "What does the approved tradition teach about the meaning of apostasy — and what do the approved sources say about the possibility of a crisis of faith reaching the highest levels of the Church?",
         ],
+        ruptureLink: { label: "Extra Ecclesiam & Religious Liberty", desc: "Fatima's warnings about Russia's errors spreading and apostasy from above connect directly to the doctrinal ruptures — see the Doctrine & Dogma pillar.", pillar: "doctrine" },
         primarySources: [
           { label: "The Message of Fatima — Vatican / CDF (2000)", url: "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_en.html", note: "Official Vatican document releasing the Third Secret, with Cardinal Ratzinger's theological commentary — the authoritative primary source" },
           { label: "The Three Secrets — Full Text", url: "https://www.fatima.org/essentials/opposed/s3docs.asp", note: "The Fatima Center's compilation of all three secrets with Sister Lucia's original accounts" },
@@ -3234,6 +3253,7 @@ const RUPTURE_PILLARS = [
           "What does the approved tradition teach about the duty of bishops and cardinals to maintain unity with the perennial Magisterium — and what happens when they fail?",
           "What does Humani Generis (Pius XII, 1950) teach about the errors already spreading within the Church before Vatican II — and how does it illuminate what Akita warned was coming?",
         ],
+        ruptureLink: { label: "The Francis Pontificate", desc: "Akita warned of cardinals opposing cardinals — examine the Five Dubia, Amoris Laetitia, and Fiducia Supplicans in Tradition & Rupture.", pillar: "francis" },
         primarySources: [
           { label: "The Full Message — EWTN", url: "https://www.ewtn.com/catholicism/library/message-from-our-lady--akita-japan-5167", note: "EWTN hosts the full chronological account including Bishop Ito's 1984 pastoral letter of approval and the three approved messages" },
         ],
@@ -3247,6 +3267,7 @@ const RUPTURE_PILLARS = [
           "What does the Rosary of the Seven Sorrows — promoted by Our Lady at Kibeho — have in common with traditional Marian devotion approved by the pre-conciliar Magisterium?",
           "What does the approved tradition teach about the prophetic role of Mary in salvation history — and how does Munificentissimus Deus (Pius XII, 1950) illuminate her ongoing intercession for the Church?",
         ],
+        ruptureLink: { label: "Discipline & Canon Law", desc: "Kibeho's call to radical penance connects to the erosion of Friday abstinence and the Eucharistic fast — examine what was lost in Tradition & Rupture.", pillar: "discipline" },
         primarySources: [
           { label: "Bishop Misago's Declaration (2001) — EWTN", url: "https://www.ewtn.com/catholicism/library/declaration-apparitions-of-kibeho-21169", note: "The formal episcopal declaration of authenticity with summary of the approved messages" },
           { label: "Theological Summary of the Apparitions — EWTN", url: "https://www.ewtn.com/catholicism/library/judgement-on-the-apparitions-of-kibeho-5709", note: "Translation of the 23-page French theological commission report, including the key message themes" },
@@ -3306,11 +3327,26 @@ function DiffCard({ card }) {
         </div>
       </div>
 
-      {/* Rupture label */}
+      {/* Rupture label + share */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 8 }}>
         <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, transparent, rgba(122,28,28,0.25))` }} />
         <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.crimson, letterSpacing: "0.14em", textTransform: "uppercase" }}>⚡ Rupture Identified</div>
         <div style={{ flex: 1, height: 1, background: `linear-gradient(to left, transparent, rgba(122,28,28,0.25))` }} />
+        <button onClick={() => {
+          const text = `THE DOCTRINE:\n${card.doctrine}\n\nTRADITIONAL TEACHING (${card.traditional.source}):\n${card.traditional.doc}\n"${card.traditional.quote}"\n${card.traditional.nature}\n\nMODERN POSITION (${card.modern.source}):\n${card.modern.doc}\n"${card.modern.quote}"\n${card.modern.nature}\n\n⚡ Rupture Identified\n\nvia Custos — askcustos.com`;
+          if (navigator.share) {
+            navigator.share({ title: "Tradition & Rupture — Custos", text }).catch(() => {});
+          } else {
+            navigator.clipboard?.writeText(text).then(() => {
+              // brief feedback handled by button state below
+            }).catch(() => {});
+          }
+        }} style={{
+          background: "none", border: `1px solid rgba(122,28,28,0.25)`,
+          borderRadius: 6, cursor: "pointer", padding: "3px 8px",
+          fontFamily: "Cinzel, serif", fontSize: fz(9), color: T.crimson,
+          letterSpacing: "0.06em", flexShrink: 0,
+        }}>Share</button>
       </div>
     </div>
   );
@@ -3319,7 +3355,7 @@ function DiffCard({ card }) {
 // ═══════════════════════════════════════════════════════════════════
 // RUPTURE TAB
 // ═══════════════════════════════════════════════════════════════════
-function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
+function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings, onTab }) {
   const [view, setView] = useState("home"); // home | pillar | topic | response
   const [activePillar, setActivePillar] = useState(null);
   const [activeTopic, setActiveTopic] = useState(null);
@@ -3581,6 +3617,19 @@ function RuptureTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
                     </a>
                   ))}
                 </div>
+              </div>
+            )}
+            {/* Marian cross-reference — links to Rupture tab */}
+            {activeTopic.ruptureLink && (
+              <div style={{ marginTop: 20, background: T.goldFaint, border: `1px solid ${T.cardBorderStrong}`, borderRadius: 12, padding: "14px 16px" }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>See Also — Tradition & Rupture</div>
+                <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14.5), color: T.inkDark, lineHeight: 1.6, margin: "0 0 10px" }}>{activeTopic.ruptureLink.desc}</p>
+                <button onClick={() => onTab && onTab("rupture")} style={{
+                  fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700,
+                  color: T.warmWhite, background: T.navyText,
+                  border: "none", borderRadius: 8, padding: "8px 16px",
+                  cursor: "pointer", letterSpacing: "0.06em",
+                }}>Go to {activeTopic.ruptureLink.label} →</button>
               </div>
             )}
           </div>
@@ -6971,7 +7020,7 @@ export default function Custos() {
 
       {tab === "rupture" && (
         <>
-          <RuptureTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} />
+          <RuptureTab dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} onSettings={() => setTab("settings")} onTab={setTab} />
           <BottomNav active="rupture" onTab={setTab} />
         </>
       )}
