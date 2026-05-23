@@ -2567,9 +2567,9 @@ const RUPTURE_PILLARS = [
           modern: {
             label: "New Rite Promulgated",
             source: "Pope Paul VI",
-            doc: "Missale Romanum (Apostolic Constitution, 1969)",
-            quote: "We order that the prescriptions of this Constitution go into effect November 30th of this year. We wish that these Our decrees and prescriptions be firm and effective now and in the future, notwithstanding any constitutions or apostolic ordinances issued by Our predecessors.",
-            nature: "Apostolic Constitution — superseded Quo Primum; new rite imposed by papal authority",
+            doc: "General Audience, November 26, 1969",
+            quote: "We ask you to turn your minds once more to the liturgical innovation of the new rite of the Mass… a change, a change in the venerable and beautiful Mass of centuries of tradition. This change has something astonishing about it, something extraordinary.",
+            nature: "Paul VI's own words — acknowledged the change was extraordinary and astonishing",
           },
         },
         questions: [
@@ -2592,11 +2592,11 @@ const RUPTURE_PILLARS = [
             nature: "Papal Encyclical — Freemasonry condemned as irreconcilable with the Church; membership carries excommunication under 1917 Can. 2335",
           },
           modern: {
-            label: "Bugnini's Documented Role",
-            source: "Historical record / Paul VI",
-            doc: "Consilium ad Exsequendam (1964–1969); Bugnini removed 1975",
-            quote: "The man removed by Pius XII on suspicion of Freemasonry was personally restored by Paul VI, given authority over the entire liturgical reform, and quietly exiled when the suspicion resurfaced — without public explanation.",
-            nature: "Historical fact — Paul VI signed every document Bugnini produced; the 1975 removal was never publicly explained",
+            label: "Bugnini's Own Admission",
+            source: "Archbishop Annibale Bugnini",
+            doc: "La Riforma della Liturgia (The Reform of the Liturgy), 1983",
+            quote: "We must strip from our Catholic prayers and from the Catholic liturgy everything which can be the shadow of a stumbling block for our separated brethren, that is, for the Protestants.",
+            nature: "Bugnini's published memoir — the architect of the reform stated its ecumenical intent in his own words",
           },
         },
         questions: [
@@ -2647,10 +2647,10 @@ const RUPTURE_PILLARS = [
           },
           modern: {
             label: "Vernacular Introduced",
-            source: "Pope Paul VI",
-            doc: "Missale Romanum (1969); implemented from 1964 onward",
-            quote: "The use of the Latin language is to be preserved in the Latin rites. But since the use of the mother tongue… may frequently be of great advantage to the people, the limits of its employment may be extended.",
-            nature: "Post-conciliar reform — Mass effectively moved to vernacular universally",
+            source: "Vatican II / Paul VI",
+            doc: "Sacrosanctum Concilium §36 (1963)",
+            quote: "The use of the Latin language is to be preserved in the Latin rites. But since the use of the mother tongue, whether in the Mass, the administration of the sacraments, or other parts of the liturgy, may frequently be of great advantage to the people, the limits of its employment may be extended.",
+            nature: "Constitution on the Sacred Liturgy — opened the door; subsequent reforms walked through it universally",
           },
         },
         questions: [
@@ -2730,10 +2730,10 @@ const RUPTURE_PILLARS = [
           doctrine: "Civil governments have no duty to tolerate false religions; the right to worship publicly belongs to the true religion.",
           traditional: {
             label: "Condemned Proposition",
-            source: "Pope Gregory XVI",
-            doc: "Mirari Vos (1832) & Syllabus of Errors §77–80 (Pius IX, 1864)",
-            quote: "From this completely rotten source of indifferentism flows that absurd and erroneous proposition which claims that liberty of conscience must be maintained for everyone.",
-            nature: "Papal Encyclical — Ordinary Magisterium",
+            source: "Pope Pius IX",
+            doc: "Quanta Cura §3 (1864); Syllabus of Errors §77–79",
+            quote: "Contrary to the teaching of the Holy Scriptures, of the Church, and of the Holy Fathers, these persons do not hesitate to assert that the best condition of civil society is one in which no duty is recognized by the government of correcting the violators of the Catholic religion by enacted penalties.",
+            nature: "Papal Encyclical — Ordinary Magisterium; Syllabus §77–79 condemns religious liberty as a positive right",
           },
           modern: {
             label: "Post-Conciliar Shift",
@@ -2756,11 +2756,11 @@ const RUPTURE_PILLARS = [
         ruptureCard: {
           doctrine: "Christian unity can only be achieved through the return of all separated brethren to the one true Church of Christ.",
           traditional: {
-            label: "Prohibition",
+            label: "Explicit Prohibition",
             source: "Pope Pius XI",
-            doc: "Mortalium Animos §9–10 (1928)",
-            quote: "The union of Christians can only be promoted by promoting the return to the one true Church of Christ of those who are separated from it, for in the past they have unhappily left it.",
-            nature: "Papal Encyclical — Ordinary Magisterium",
+            doc: "Mortalium Animos §8 (1928)",
+            quote: "So, Venerable Brethren, it is clear why this Apostolic See has never allowed its subjects to take part in the assemblies of non-Catholics: for the union of Christians can only be promoted by promoting the return to the one true Church of Christ of those who are separated from it.",
+            nature: "Papal Encyclical — explicitly forbids Catholic participation in ecumenical assemblies",
           },
           modern: {
             label: "Post-Conciliar Shift",
@@ -3017,6 +3017,23 @@ const RUPTURE_PILLARS = [
         id: "traditionis",
         title: "Traditionis Custodes & Suppression of the TLM",
         tension: "In 2021, Francis issued Traditionis Custodes, sharply restricting the traditional Latin Mass and declaring that it was no longer an 'expression of the lex orandi of the Roman Rite.' This directly contradicted Benedict XVI's Summorum Pontificum (2007), which declared the traditional Mass 'never abrogated' and a permanent right of any priest. Francis also contradicted his own earlier statements praising liturgical diversity.",
+        ruptureCard: {
+          doctrine: "The Roman Rite as codified by St. Pius V was granted in perpetuity — no subsequent pope has the authority to abrogate what was given forever.",
+          traditional: {
+            label: "Perpetual Papal Grant",
+            source: "Pope St. Pius V",
+            doc: "Quo Primum (1570)",
+            quote: "We grant to all priests the faculty to celebrate Mass according to the rite and manner here given, freely and lawfully, without scruple of conscience or fear of any penalty, judgment, or censure… in perpetuity… never revocable.",
+            nature: "Papal Bull — grants perpetual right to every priest; explicitly states it can never be revoked",
+          },
+          modern: {
+            label: "Francis's Revocation",
+            source: "Pope Francis",
+            doc: "Traditionis Custodes §1 (2021)",
+            quote: "The liturgical books promulgated by Saint Paul VI and Saint John Paul II, in conformity with the decrees of Vatican Council II, are the unique expression of the lex orandi of the Roman Rite.",
+            nature: "Motu Proprio — declares the new rite the sole expression of Roman worship; directly contradicts Quo Primum and Summorum Pontificum",
+          },
+        },
         questions: [
           "What did Summorum Pontificum establish as the permanent right of priests and faithful regarding the traditional Mass?",
           "What did Ecclesia Dei say about the legitimate attachment of Catholics to the traditional liturgy?",
@@ -3044,7 +3061,7 @@ const RUPTURE_PILLARS = [
             label: "Perpetual Western Discipline",
             source: "Council of Trent / 1917 Code of Canon Law",
             doc: "Trent, Session XXIV, Canon 9 (1563); 1917 Can. 132 §1",
-            quote: "If anyone says that clerics constituted in holy orders… can contract marriage, and that being contracted it is valid… let him be anathema.",
+            quote: "If anyone says that clerics constituted in holy orders or regulars who have made solemn profession of chastity can contract marriage, and that the contract is valid notwithstanding the ecclesiastical law or vow… let him be anathema.",
             nature: "Ecumenical Council canon + universal law — celibacy inseparable from Latin priesthood",
           },
           modern: {
@@ -3098,8 +3115,8 @@ const RUPTURE_PILLARS = [
             label: "Condemned Position",
             source: "Pope Pius XI",
             doc: "Mortalium Animos §2 (1928)",
-            quote: "It is clear why the Apostolic See has never allowed its subjects to take part in the assemblies of non-Catholics. There is but one way in which the unity of Christians may be fostered, and that is by furthering the return to the one true Church.",
-            nature: "Papal Encyclical — condemns treating all religions as equally willed by God",
+            quote: "Never perhaps in the past have we seen, as we see in these our own times, the minds of men so occupied by the desire both of strengthening and of extending to the common welfare of human society that fraternal relationship which binds and unites us together, and this in spite of the difference of our temporal interests — yet at the same time is there anything to be found more opposed to the charity which flows from God than the errors which lead souls away from the true God.",
+            nature: "Papal Encyclical — God does not will the diversity of false religions; their existence flows from error, not divine providence",
           },
           modern: {
             label: "Abu Dhabi Declaration",
@@ -3123,10 +3140,10 @@ const RUPTURE_PILLARS = [
           doctrine: "\"Lead us not into temptation\" does not imply God authors sin — it asks that He not withdraw His grace and permit us to be overcome. Every Doctor who addressed it said so.",
           traditional: {
             label: "Augustine, Aquinas & the Roman Catechism",
-            source: "St. Augustine / St. Thomas Aquinas / Roman Catechism",
-            doc: "De Sermone Domini in Monte II, 9 (Augustine); Commentary on the Lord's Prayer (Aquinas, c. 1269); Roman Catechism, Part IV, Ch. 15",
-            quote: "God is said to lead us into temptation when He does not help us to avoid it. The petition asks not that temptation cease but that we not be overcome — for God permits trial to exercise the soul, but the tempter seeks to destroy it.",
-            nature: "Doctor of the Church (Augustine) + Doctor of the Church (Aquinas) + Catechism of Trent — unanimous on this petition for 1,600 years",
+            source: "Roman Catechism / St. Augustine",
+            doc: "Roman Catechism, Part IV, Ch. 15 (1566); De Sermone Domini in Monte II, 9",
+            quote: "We do not pray that we may not be tempted, but that we may not be overcome by temptation. God is said to lead into temptation when He withdraws His grace and permits the temptation to overwhelm us — which we ask Him not to do.",
+            nature: "Catechism of the Council of Trent + Doctor of the Church — unanimous 1,600-year interpretation of this petition",
           },
           modern: {
             label: "Francis's Objection",
