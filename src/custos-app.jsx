@@ -2577,6 +2577,9 @@ const RUPTURE_PILLARS = [
           "What did Quo Primum establish about the permanence of the traditional Roman Rite — and can a pope revoke what a previous pope granted in perpetuity?",
           "What did Summorum Pontificum say about the traditional Mass — was it ever legally abrogated?",
         ],
+        primarySources: [
+          { label: "The Ottaviani Intervention (1969) — EWTN", url: "https://www.ewtn.com/catholicism/library/ottaviani-intervention-9360", note: "Cardinals Ottaviani and Bacci's formal letter to Paul VI calling the new Mass a 'striking departure from the theology of the Mass as defined by Trent' — signed by a group of theologians including Fr. Caldecott; Paul VI received it but did not retract the new rite" },
+        ],
       },
       {
         id: "paul_bugnini",
@@ -3018,20 +3021,20 @@ const RUPTURE_PILLARS = [
         title: "Traditionis Custodes & Suppression of the TLM",
         tension: "In 2021, Francis issued Traditionis Custodes, sharply restricting the traditional Latin Mass and declaring that it was no longer an 'expression of the lex orandi of the Roman Rite.' This directly contradicted Benedict XVI's Summorum Pontificum (2007), which declared the traditional Mass 'never abrogated' and a permanent right of any priest. Francis also contradicted his own earlier statements praising liturgical diversity.",
         ruptureCard: {
-          doctrine: "The Roman Rite as codified by St. Pius V was granted in perpetuity — no subsequent pope has the authority to abrogate what was given forever.",
+          doctrine: "The Roman Rite, approved and confirmed by the Church across centuries, cannot be condemned or abolished — those who do so strike at the Church's own liturgical tradition.",
           traditional: {
-            label: "Perpetual Papal Grant",
-            source: "Pope St. Pius V",
-            doc: "Quo Primum (1570)",
-            quote: "We grant to all priests the faculty to celebrate Mass according to the rite and manner here given, freely and lawfully, without scruple of conscience or fear of any penalty, judgment, or censure… in perpetuity… never revocable.",
-            nature: "Papal Bull — grants perpetual right to every priest; explicitly states it can never be revoked",
+            label: "The Rite Approved by the Church",
+            source: "Council of Trent",
+            doc: "Session XXII, Decree on the Mass, Ch. 8 & Canon 7 (1562)",
+            quote: "If anyone says that the received and approved rites of the Catholic Church, accustomed to be used in the solemn administration of the sacraments, may be contemned or omitted by the minister without sin… let him be anathema.",
+            nature: "Ecumenical Council — the received Roman Rite carries conciliar protection; contempt of it is anathematized",
           },
           modern: {
-            label: "Francis's Revocation",
+            label: "Francis's Suppression",
             source: "Pope Francis",
             doc: "Traditionis Custodes §1 (2021)",
             quote: "The liturgical books promulgated by Saint Paul VI and Saint John Paul II, in conformity with the decrees of Vatican Council II, are the unique expression of the lex orandi of the Roman Rite.",
-            nature: "Motu Proprio — declares the new rite the sole expression of Roman worship; directly contradicts Quo Primum and Summorum Pontificum",
+            nature: "Motu Proprio — declares the new rite the sole expression of Roman worship; the traditional rite is suppressed, not merely restricted",
           },
         },
         questions: [
@@ -3112,11 +3115,11 @@ const RUPTURE_PILLARS = [
         ruptureCard: {
           doctrine: "God wills that all men come to knowledge of the one true faith; religious diversity is the consequence of human error and sin, not divine design.",
           traditional: {
-            label: "Condemned Position",
-            source: "Pope Pius XI",
-            doc: "Mortalium Animos §2 (1928)",
-            quote: "Never perhaps in the past have we seen, as we see in these our own times, the minds of men so occupied by the desire both of strengthening and of extending to the common welfare of human society that fraternal relationship which binds and unites us together, and this in spite of the difference of our temporal interests — yet at the same time is there anything to be found more opposed to the charity which flows from God than the errors which lead souls away from the true God.",
-            nature: "Papal Encyclical — God does not will the diversity of false religions; their existence flows from error, not divine providence",
+            label: "Duty to the One True Religion",
+            source: "Pope Leo XIII",
+            doc: "Immortale Dei §36 (1885)",
+            quote: "It is a public crime to act as though there were no God. So, too, is it a sin in the State not to have care for religion, as a something beyond its scope, or as of no practical benefit; or out of many forms of religion to adopt that one which chimes in with the fancy; for we are bound absolutely to worship God in that way which He has shown to be His will.",
+            nature: "Papal Encyclical — the state and individual are bound to worship God as He has revealed, not through a self-chosen religion",
           },
           modern: {
             label: "Abu Dhabi Declaration",
