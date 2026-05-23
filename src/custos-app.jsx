@@ -3053,6 +3053,10 @@ const RUPTURE_PILLARS = [
           "What do the approved sources teach about the conditions required for a valid sacramental absolution?",
           "What does the Church's tradition teach about the conditions for a valid papal election — and what has historically led to a pope being declared an antipope?",
         ],
+        primarySources: [
+          { label: "Full Text of the Five Dubia (2023) — National Catholic Register", url: "https://www.ncregister.com/news/cardinals-send-dubia-to-pope-ahead-of-synod-on-synodality", note: "The five cardinals' formal questions to Francis on doctrinal development, same-sex blessings, synodal authority, women's ordination, and sacramental absolution — submitted August 21, 2023" },
+          { label: "Pope Francis's Responses to the Dubia — National Catholic Register", url: "https://www.ncregister.com/cna/pope-francis-response-to-the-dubia", note: "Francis's July 2023 responses, which the cardinals found insufficiently clear — prompting them to resubmit in August and go public when no further response came" },
+        ],
       },
       {
         id: "amazon",
@@ -3107,6 +3111,10 @@ const RUPTURE_PILLARS = [
           "What did Ordinatio Sacerdotalis declare, and at what level of authority?",
           "Is the permanent diaconate part of the ordained priesthood — and what do the traditional sources say?",
         ],
+        primarySources: [
+          { label: "Ordinatio Sacerdotalis — Full Text (Vatican)", url: "https://www.vatican.va/content/john-paul-ii/en/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html", note: "John Paul II's definitive declaration that the Church has no authority to ordain women — read the four brief paragraphs that closed the question" },
+          { label: "CDF Responsum on Ordinatio Sacerdotalis (1995) — EWTN", url: "https://www.ewtn.com/catholicism/library/presentation-of-ordinatio-sacerdotalis-2600", note: "The CDF's confirmation that JPII's declaration belongs to the infallible ordinary Magisterium — making it not merely disciplinary but doctrinally binding" },
+        ],
       },
       {
         id: "abu_dhabi",
@@ -3160,6 +3168,10 @@ const RUPTURE_PILLARS = [
           "What does the Douay-Rheims text of Matthew 6:13 actually say?",
           "How did the Doctors of the Church — particularly Augustine — interpret 'lead us not into temptation'?",
           "What does the traditional theological distinction between God permitting and God causing evil mean for this petition?",
+        ],
+        primarySources: [
+          { label: "Francis's General Audience on 'Lead Us Not Into Temptation' — EWTN", url: "https://www.ewtn.com/catholicism/library/god-tempts-no-one-7495", note: "Francis's May 2019 catechesis arguing God cannot be the protagonist of temptation — the theological objection that drove the Italian translation change" },
+          { label: "EWTN Catholic Encyclopedia: Temptation — Traditional Interpretation", url: "https://www.ewtn.com/catholicism/library/temptation-of-christ-1308", note: "The traditional Catholic understanding: 'Lead us not into temptation' is a petition for God's help to overcome temptation when His Fatherly Providence allows us to experience it — not an implication that God causes sin" },
         ],
       },
     ],
