@@ -4630,6 +4630,53 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
           } onClick={onPrivacy} />
         </Section>
 
+        {/* What is Custos */}
+        <div style={{ background: T.warmWhite, border: `1px solid ${T.cardBorder}`, borderRadius: 14, overflow: "hidden", marginBottom: 22 }}>
+          <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>What is Custos?</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
+              Custos is a Catholic moral guidance app rooted in the perennial tradition of the Church. The name means <span style={{ fontStyle: "italic" }}>guardian</span> in Latin — reflecting the app's purpose: to guard the conscience with the teachings of Scripture, Sacred Tradition, and the pre-conciliar Magisterium.
+            </p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
+              Custos is not general-purpose AI. It answers from a closed universe of 74 approved Catholic sources — encyclicals, councils, catechisms, canon law, the Doctors of the Church, and approved Marian apparition documents — and it will tell you when a question exceeds that library rather than speculate.
+            </p>
+          </div>
+
+          <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 74-Document Universe</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
+              Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 34 papal encyclicals and apostolic constitutions from Gregory XVI through Benedict XVI, 5 CDF instructions, 2 codes of canon law, 15 Doctors of the Church, and 5 sets of approved Marian apparition documents.
+            </p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
+              Post-conciliar documents that depart from this tradition are excluded by design. When they are relevant to a question, Custos names them, explains why they fall outside the source universe, and answers from the Tradition.
+            </p>
+          </div>
+
+          <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>How It Differs from General AI</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
+              General AI answers Catholic questions from whatever it absorbed during training — a mixture of orthodox and heterodox sources, popular opinion, and contemporary theology. Custos answers only from named, authoritative sources. It cites what it cites. It says when it doesn't know. It never invents a quote, resolves a question the tradition left open, or gives a confident answer where the approved sources were deliberately cautious.
+            </p>
+          </div>
+
+          <div style={{ padding: "16px 18px" }}>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>Calibration Levels</div>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 12px" }}>Every Custos response carries an explicit certainty level:</p>
+            {[
+              { level: "Defined Dogma", desc: "Solemnly defined — de fide. Denial is heresy." },
+              { level: "Authoritative Teaching", desc: "Ordinary Magisterium. Requires religious assent." },
+              { level: "Common Teaching", desc: "Held by moral consensus of approved theologians." },
+              { level: "Probable Opinion", desc: "Supported but not settled. Legitimate dissent exists." },
+              { level: "Disputed", desc: "Genuinely contested within the tradition." },
+            ].map((c, i, arr) => (
+              <div key={c.level} style={{ display: "flex", gap: 10, paddingBottom: i < arr.length - 1 ? 8 : 0, marginBottom: i < arr.length - 1 ? 8 : 0, borderBottom: i < arr.length - 1 ? `1px solid ${T.cardBorder}` : "none" }}>
+                <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, minWidth: 120, lineHeight: 1.5 }}>{c.level}</div>
+                <div style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkMid, lineHeight: 1.5, fontStyle: "italic" }}>{c.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Disclaimer */}
         <div style={{
           padding: "16px 14px", background: T.subtleBg,
@@ -6793,7 +6840,7 @@ export default function Custos() {
               { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
               { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
               { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
-              { icon: "✉", title: "37 Encyclicals · 4 Motu Proprio · 1 Papal Bull", desc: "Gregory XVI through Benedict XVI · Quo Primum (Pius V, 1570)" },
+              { icon: "✉", title: "34 Encyclicals & Apostolic Docs · 1 Papal Bull", desc: "Gregory XVI through Benedict XVI · Quo Primum (Pius V, 1570)" },
               { icon: "📋", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
               { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
               { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
