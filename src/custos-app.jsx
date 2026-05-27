@@ -6804,17 +6804,7 @@ export default function Custos() {
         <div style={{ flex: 1, overflowY: "auto" }}>
           {/* Hero */}
           <div style={{ background: `linear-gradient(175deg, ${T.navy} 0%, #243456 55%, ${T.crimson} 200%)`, padding: "60px 24px 50px", textAlign: "center", position: "relative" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: "50%", background: "rgba(212,168,67,0.12)", border: "2px solid rgba(212,168,67,0.25)", marginBottom: 16 }}>
-              <svg width="40" height="40" viewBox="0 0 512 512" fill="none">
-                <path d="M220 270 C195 250,150 210,100 175 C75 160,55 165,52 180 C48 200,65 225,95 245 C130 268,180 275,220 270Z" fill="#d4a843" opacity="0.5"/>
-                <path d="M292 270 C317 250,362 210,412 175 C437 160,457 165,460 180 C464 200,447 225,417 245 C382 268,332 275,292 270Z" fill="#d4a843" opacity="0.5"/>
-                <ellipse cx="256" cy="160" rx="48" ry="14" fill="none" stroke="#d4a843" strokeWidth="8" opacity="0.65"/>
-                <circle cx="256" cy="198" r="35" fill="#d4a843" opacity="0.18" stroke="#d4a843" strokeWidth="6" strokeOpacity="0.55"/>
-                <path d="M224 230 L210 390 C210 403,222 412,238 412 L274 412 C290 412,302 403,302 390 L288 230 C276 248,236 248,224 230Z" fill="#1a2744" opacity="0.85"/>
-                <line x1="256" y1="275" x2="256" y2="325" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
-                <line x1="242" y1="290" x2="270" y2="290" stroke="#d4a843" strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
-              </svg>
-            </div>
+            <img src="/custos-icon.png" alt="Custos" style={{ width: 80, height: 80, borderRadius: 18, marginBottom: 16, boxShadow: "0 4px 24px rgba(0,0,0,0.35)" }} />
             <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(36), fontWeight: 400, letterSpacing: "0.14em", color: "#fff", textTransform: "uppercase", margin: "0 0 6px" }}>Custos</h1>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.gold, fontStyle: "italic", margin: "0 0 20px" }}>A guardian for your conscience</p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(18), color: "rgba(255,255,255,0.8)", maxWidth: 400, margin: "0 auto 28px", lineHeight: 1.55 }}>When you need the Church's wisdom, not the world's opinion</p>
