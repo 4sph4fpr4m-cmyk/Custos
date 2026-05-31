@@ -1117,10 +1117,7 @@ function GlobalTopBar({ title, dark, setDark, fszGlobal, setFszGlobal, onSetting
         {showBack ? (
           <button onClick={onBack} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(24), color: T.navyText, padding: 0, lineHeight: 1, width: 28 }}>←</button>
         ) : <div style={{ width: 28 }} />}
-        <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center" }}>
-          <img src="/custos-icon.png" alt="Custos" style={{ width: 28, height: 28, borderRadius: 6 }} />
-          <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center" }}>{title}</div>
-        </div>
+        <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(14), fontWeight: 600, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center" }}>{title}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 6, width: 72, justifyContent: "flex-end" }}>
           <button onClick={() => setFszGlobal((fszGlobal + 1) % 3)} style={{ background: "none", border: `1px solid ${T.cardBorder}`, borderRadius: 6, cursor: "pointer", fontFamily: "Cinzel, serif", fontSize: 12, fontWeight: 700, color: T.inkLight, padding: "2px 7px", lineHeight: 1.4 }}>{["A⁻", "A", "A⁺"][fszGlobal]}</button>
           <button onClick={() => setDark(!dark)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: fz(18), padding: 0, width: 24, lineHeight: 1, color: T.inkLight }}>{dark ? "☀" : "☽"}</button>
@@ -1684,7 +1681,18 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", padding: "18px 0 6px" }}>
             <div style={{ width: 70 }} />
             <div style={{ textAlign: "center", flex: 1 }}>
-              <img src="/custos-icon.png" alt="Custos" style={{ width: 64, height: 64, borderRadius: 14, marginBottom: 6, boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }} />
+              <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 6 }}>
+                <svg width="32" height="32" viewBox="0 0 512 512" fill="none">
+                  <path d="M220 270 C195 250,150 210,100 175 C75 160,55 165,52 180 C48 200,65 225,95 245 C130 268,180 275,220 270Z" fill={T.gold} opacity="0.5"/>
+                  <path d="M292 270 C317 250,362 210,412 175 C437 160,457 165,460 180 C464 200,447 225,417 245 C382 268,332 275,292 270Z" fill={T.gold} opacity="0.5"/>
+                  <ellipse cx="256" cy="160" rx="48" ry="14" fill="none" stroke={T.gold} strokeWidth="8" opacity="0.65"/>
+                  <circle cx="256" cy="198" r="35" fill={T.gold} opacity="0.18" stroke={T.gold} strokeWidth="6" strokeOpacity="0.55"/>
+                  <path d="M224 230 L210 390 C210 403,222 412,238 412 L274 412 C290 412,302 403,302 390 L288 230 C276 248,236 248,224 230Z" fill={T.navy} opacity="0.85"/>
+                  <path d="M224 230 L210 390 C210 403,222 412,238 412 L274 412 C290 412,302 403,302 390 L288 230 C276 248,236 248,224 230Z" fill={T.gold} opacity="0.15" stroke={T.gold} strokeWidth="5" strokeOpacity="0.45"/>
+                  <line x1="256" y1="275" x2="256" y2="325" stroke={T.gold} strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+                  <line x1="242" y1="290" x2="270" y2="290" stroke={T.gold} strokeWidth="7" opacity="0.7" strokeLinecap="round"/>
+                </svg>
+              </div>
               <h1 style={{ fontFamily: "Cinzel, serif", fontSize: fz(28), fontWeight: 400, color: T.navyText, letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>Custos</h1>
               <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), fontStyle: "italic", color: T.inkLight, margin: 0 }}>A guardian for your conscience</p>
             </div>
@@ -1954,7 +1962,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 70 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 75 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
@@ -4679,12 +4687,12 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
               Custos is a Catholic moral guidance app rooted in the perennial tradition of the Church. The name means <span style={{ fontStyle: "italic" }}>guardian</span> in Latin — reflecting the app's purpose: to guard the conscience with the teachings of Scripture, Sacred Tradition, and the pre-conciliar Magisterium.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
-              Custos is not general-purpose AI. It answers from a closed universe of 74 approved Catholic sources — encyclicals, councils, catechisms, canon law, the Doctors of the Church, and approved Marian apparition documents — and it will tell you when a question exceeds that library rather than speculate.
+              Custos is not general-purpose AI. It answers from a closed universe of 75 approved Catholic sources — encyclicals, councils, catechisms, canon law, the Doctors of the Church, and approved Marian apparition documents — and it will tell you when a question exceeds that library rather than speculate.
             </p>
           </div>
 
           <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 74-Document Universe</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 75-Document Universe</div>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
               Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 34 papal encyclicals and apostolic constitutions from Gregory XVI through Benedict XVI, 5 CDF instructions, 2 codes of canon law, 15 Doctors of the Church, and 5 sets of approved Marian apparition documents.
             </p>
