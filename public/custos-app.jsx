@@ -1962,7 +1962,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 70 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 75 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
@@ -4687,14 +4687,14 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
               Custos is a Catholic moral guidance app rooted in the perennial tradition of the Church. The name means <span style={{ fontStyle: "italic" }}>guardian</span> in Latin — reflecting the app's purpose: to guard the conscience with the teachings of Scripture, Sacred Tradition, and the pre-conciliar Magisterium.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
-              Custos is not general-purpose AI. It answers from a closed universe of 74 approved Catholic sources — encyclicals, councils, catechisms, canon law, the Doctors of the Church, and approved Marian apparition documents — and it will tell you when a question exceeds that library rather than speculate.
+              Custos is not general-purpose AI. It answers from a closed universe of 75 approved Catholic sources — Sacred Scripture, catechisms, councils, papal encyclicals, canon law, and the Doctors of the Church — and it will tell you when a question exceeds that library rather than speculate.
             </p>
           </div>
 
           <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 74-Document Universe</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 75-Document Universe</div>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
-              Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 34 papal encyclicals and apostolic constitutions from Gregory XVI through Benedict XVI, 5 CDF instructions, 2 codes of canon law, 15 Doctors of the Church, and 5 sets of approved Marian apparition documents.
+              Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 37 papal encyclicals and apostolic constitutions from Leo XII (1826) through Benedict XVI (2005), 4 motu proprio, 1 papal bull (Quo Primum), 1 apostolic letter (Apostolicae Curae), 1 Holy Office decree (Lamentabili Sane), 5 CDF instructions, 2 codes of canon law, and 15 Doctors of the Church. The Tradition & Rupture pillar additionally engages 5 approved Marian apparitions as scoped private revelation.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
               Post-conciliar documents that depart from this tradition are excluded by design. When they are relevant to a question, Custos names them, explains why they fall outside the source universe, and answers from the Tradition.
@@ -6874,15 +6874,16 @@ export default function Custos() {
           {/* Sources */}
           <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>57 Approved Sources. Nothing Else.</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>75 Approved Sources. Nothing Else.</h2>
             {[
-              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
-              { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
+              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims Bible — required for all quotations" },
+              { icon: "📕", title: "4 Catechisms", desc: "Roman, Baltimore, Pius X · CCC supplementary only" },
               { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
-              { icon: "✉", title: "34 Encyclicals & Apostolic Docs · 1 Papal Bull", desc: "Gregory XVI through Benedict XVI · Quo Primum (Pius V, 1570)" },
-              { icon: "📋", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
-              { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
-              { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
+              { icon: "✉", title: "37 Encyclicals & Apostolic Constitutions", desc: "Leo XII (1826) through Benedict XVI (2005)" },
+              { icon: "📋", title: "7 Other Papal Documents", desc: "4 Motu Proprio · Quo Primum · Apostolicae Curae · Lamentabili Sane" },
+              { icon: "📃", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
+              { icon: "🏛", title: "15 Doctors of the Church", desc: "Aquinas, Augustine, Bellarmine, and more" },
+              { icon: "⚖", title: "2 Codes of Canon Law", desc: "1917 and 1983 Codes, side by side" },
             ].map((s, i) => (
               <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "10px 14px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,168,67,0.15)", borderRadius: 10, marginBottom: 8 }}>
                 <span style={{ fontSize: 18, flexShrink: 0 }}>{s.icon}</span>
