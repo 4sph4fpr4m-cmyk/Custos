@@ -301,6 +301,65 @@ PASTORAL:
 CALIBRATION:
 [State certainty based ONLY on the approved sources. Use: "Definitive teaching" (infallibly defined by Council or ex cathedra), "Authoritative teaching" (Pope has spoken clearly in an encyclical or a catechism teaches it explicitly), "CDF instruction — forma specifica" (Persona Humana, Inter Insigniores, Dominus Iesus — Pope formally ratified as his own act; authority equivalent to an encyclical), "CDF instruction — common form" (Donum Vitae, Dignitas Personae — real but delegated authority; approved in common form only), "Addressed but not resolved" (an approved source discussed it but stopped short of binding judgment — cite the document), or "Not addressed" (no approved source speaks to it — say so honestly). Do NOT say "genuinely disputed" or "theologians disagree" — if the sources are silent, say the sources are silent.]`;
 
+// ═══════════════════════════════════════════════════════════════════════════
+// MODEL RESILIENCE — FALLBACK CHAIN
+// ═══════════════════════════════════════════════════════════════════════════
+// Anthropic periodically retires model identifiers. To prevent user-facing
+// outages when this happens, Custos uses a fallback chain:
+//
+//   1. PRIMARY: ANTHROPIC_MODEL env var (settable in Vercel dashboard,
+//      no redeploy required). Defaults to the current recommended Sonnet.
+//   2. FALLBACK 1 & 2: Hardcoded known-good models. If the primary returns
+//      a model-not-found error, the next model in the chain is tried.
+//
+// Fallback only triggers on model-specific errors (not_found_error or
+// invalid_request_error mentioning the model). Auth errors, rate limits,
+// and other failures are surfaced immediately — no point retrying those.
+//
+// When a fallback fires, it is logged loudly so the operator can update
+// ANTHROPIC_MODEL in Vercel and restore the preferred model.
+// ═══════════════════════════════════════════════════════════════════════════
+
+const MODEL_CHAIN = [
+  process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-6',
+  'claude-opus-4-7',
+  'claude-haiku-4-5',
+].filter((m, i, arr) => arr.indexOf(m) === i); // dedupe in case env var matches a fallback
+
+function isModelError(errData) {
+  const type = errData?.error?.type;
+  const msg = (errData?.error?.message || '').toLowerCase();
+  if (type === 'not_found_error') return true;
+  if (type === 'invalid_request_error' && msg.includes('model')) return true;
+  return false;
+}
+
+async function callAnthropic(model, apiKey, messages) {
+  return fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-beta': 'prompt-caching-2024-07-31',
+    },
+    body: JSON.stringify({
+      model,
+      max_tokens: 1500,
+      temperature: 0,  // ← deterministic output; required for doctrinal consistency
+      system: [
+        {
+          type: 'text',
+          text: CUSTOS_SYSTEM,
+          cache_control: { type: 'ephemeral' },
+        }
+      ],
+      messages,
+      stream: true,
+    }),
+  });
+}
+
 export default async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -338,37 +397,56 @@ export default async function handler(req, res) {
       messages = [{ role: 'user', content: userMessage }];
     }
 
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-beta': 'prompt-caching-2024-07-31',  // ← enables prompt caching
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1500,
-        temperature: 0,  // ← deterministic output; required for doctrinal consistency
-        system: [
-          {
-            type: 'text',
-            text: CUSTOS_SYSTEM,
-            cache_control: { type: 'ephemeral' },  // ← cache the system prompt
-          }
-        ],
-        messages: messages,
-        stream: true,
-      }),
-    });
+    // ── Try each model in the fallback chain ──────────────────────────────
+    let response = null;
+    let lastErr = null;
+    let modelUsed = null;
 
-    if (!response.ok) {
-      const errData = await response.json();
-      console.error('Anthropic API error:', errData);
-      return res.status(502).json({ error: 'Guidance engine error', detail: errData?.error?.message || 'Unknown error' });
+    for (let i = 0; i < MODEL_CHAIN.length; i++) {
+      const model = MODEL_CHAIN[i];
+      const attempt = await callAnthropic(model, apiKey, messages);
+
+      if (attempt.ok) {
+        response = attempt;
+        modelUsed = model;
+        if (i > 0) {
+          // Loud log: primary model is dead. Operator needs to update ANTHROPIC_MODEL.
+          console.error(
+            `[CUSTOS MODEL FALLBACK] Primary model "${MODEL_CHAIN[0]}" failed. ` +
+            `Now serving with "${model}". Update ANTHROPIC_MODEL env var in Vercel ` +
+            `to a current model to restore primary behavior.`
+          );
+        }
+        break;
+      }
+
+      // Read error body once
+      const errData = await attempt.json().catch(() => ({}));
+      lastErr = { model, status: attempt.status, errData };
+      console.error(`[CUSTOS] Model "${model}" returned ${attempt.status}:`, errData?.error || errData);
+
+      // Only fall through to next model on model-specific errors
+      if (!isModelError(errData)) {
+        // Real error (auth, rate limit, server error, etc.) — don't waste fallbacks
+        return res.status(502).json({
+          error: 'Guidance engine error',
+          detail: errData?.error?.message || 'Unknown error',
+        });
+      }
+      // else: loop to next model in chain
     }
 
-    // Stream SSE events to client
+    if (!response) {
+      // Every model in the chain failed with a model error.
+      // This means the entire chain is stale — operator must update code or env var.
+      console.error('[CUSTOS CRITICAL] All models in fallback chain failed:', MODEL_CHAIN, 'Last error:', lastErr);
+      return res.status(502).json({
+        error: 'Guidance engine unavailable',
+        detail: 'All configured models are unavailable. Please contact support.',
+      });
+    }
+
+    // ── Stream SSE events to client ───────────────────────────────────────
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
@@ -385,7 +463,7 @@ export default async function handler(req, res) {
 
     res.end();
   } catch (err) {
-    console.error('Proxy error:', err);
+    console.error('[CUSTOS] Proxy error:', err);
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
