@@ -1962,7 +1962,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 75 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 72 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
@@ -1971,7 +1971,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 count: null,
                 items: [
                   { text: "Douay-Rheims Bible — required for all quotations" },
-                  { text: "The Vulgate — Latin reference" },
                 ]
               },
               {
@@ -1986,7 +1985,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               },
               {
                 label: "Papal Encyclicals & Apostolic Documents",
-                count: "37",
+                count: "34",
                 items: [
                   { text: "Quo Graviora — Leo XII, 1826 · condemnation of Freemasonry and secret societies" },
                   { text: "Mirari Vos — Gregory XVI, 1832 · on liberalism and religious indifferentism" },
@@ -2001,7 +2000,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Libertas — Leo XIII, 1888 · on human liberty; rejecting liberalism's false conception of freedom as independence from God and natural law" },
                   { text: "Rerum Novarum — Leo XIII, 1891 · on the condition of the working classes; the Church's foundational social teaching" },
                   { text: "Providentissimus Deus — Leo XIII, 1893 · on Sacred Scripture, biblical interpretation, inspiration and inerrancy" },
-                  { text: "Apostolicae Curae — Leo XIII, 1896 · apostolic letter on the nullity of Anglican orders" },
                   { text: "E Supremi Apostolatus — Pius X, 1903 · on restoring all things in Christ" },
                   { text: "Ad Diem Illum Lætissimum — Pius X, 1904 · on the Immaculate Conception and Marian devotion" },
                   { text: "Pascendi Dominici Gregis — Pius X, 1907 · defining and condemning Modernism as the synthesis of all heresies" },
@@ -2013,6 +2011,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Divini Redemptoris — Pius XI, 1937 · on atheistic Communism; its errors and the Catholic response" },
                   { text: "Mit brennender Sorge — Pius XI, 1937 · condemning National Socialism and the Nazi persecution of the Church" },
                   { text: "Mystici Corporis Christi — Pius XII, 1943 · on the Church as the Mystical Body of Christ" },
+                  { text: "Mediator Dei — Pius XII, 1947 · on the sacred liturgy, the Mass as sacrifice, and the proper understanding of active participation" },
                   { text: "Humani Generis — Pius XII, 1950 · against errors in modern theology; evolution, relativism, and the nouvelle théologie" },
                   { text: "Munificentissimus Deus — Pius XII, 1950 · apostolic constitution defining the dogma of the Assumption of Mary" },
                   { text: "Humanae Vitae — Paul VI, 1968 · on the regulation of birth; condemning contraception and affirming the ends of marriage" },
@@ -2022,6 +2021,21 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Evangelium Vitae — John Paul II, 1995 · on the inviolability of human life; abortion, euthanasia, and the culture of death" },
                   { text: "Fides et Ratio — John Paul II, 1998 · on the relationship between faith and reason" },
                   { text: "Deus Caritas Est — Benedict XVI, 2005 · on Christian love; eros, agape, and the Church's charitable mission" },
+                ]
+              },
+              {
+                label: "Apostolic Letter",
+                count: "1",
+                items: [
+                  { text: "Apostolicae Curae — Leo XIII, 1896 · on the nullity of Anglican orders" },
+                ]
+              },
+              {
+                label: "Papal Bull",
+                count: "1",
+                note: "Promulgated the Traditional Latin Mass in perpetuity and remains central to questions about the liceity of the Novus Ordo and the scope of Summorum Pontificum.",
+                items: [
+                  { text: "Quo Primum — Pius V, 1570 · promulgating the Roman Missal and codifying the Traditional Latin Mass" },
                 ]
               },
               {
@@ -4687,12 +4701,12 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
               Custos is a Catholic moral guidance app rooted in the perennial tradition of the Church. The name means <span style={{ fontStyle: "italic" }}>guardian</span> in Latin — reflecting the app's purpose: to guard the conscience with the teachings of Scripture, Sacred Tradition, and the pre-conciliar Magisterium.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
-              Custos is not general-purpose AI. It answers from a closed universe of 75 approved Catholic sources — Sacred Scripture, catechisms, councils, papal encyclicals, canon law, and the Doctors of the Church — and it will tell you when a question exceeds that library rather than speculate.
+              Custos is not general-purpose AI. It answers from a closed universe of 72 approved Catholic sources — Sacred Scripture, catechisms, councils, papal encyclicals, canon law, and the Doctors of the Church — and it will tell you when a question exceeds that library rather than speculate.
             </p>
           </div>
 
           <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 75-Document Universe</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 72-Document Universe</div>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
               Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 37 papal encyclicals and apostolic constitutions from Leo XII (1826) through Benedict XVI (2005), 4 motu proprio, 1 papal bull (Quo Primum), 1 apostolic letter (Apostolicae Curae), 1 Holy Office decree (Lamentabili Sane), 5 CDF instructions, 2 codes of canon law, and 15 Doctors of the Church. The Tradition & Rupture pillar additionally engages 5 approved Marian apparitions as scoped private revelation.
             </p>
@@ -6874,7 +6888,7 @@ export default function Custos() {
           {/* Sources */}
           <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>75 Approved Sources. Nothing Else.</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>72 Approved Sources. Nothing Else.</h2>
             {[
               { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims Bible — required for all quotations" },
               { icon: "📕", title: "4 Catechisms", desc: "Roman, Baltimore, Pius X · CCC supplementary only" },
