@@ -1179,126 +1179,127 @@ function GhostBtn({ children, onClick }) {
 // SAINT OF THE DAY
 // ═══════════════════════════════════════════════════════════════════
 const SAINTS_BY_DATE = {
-  "1-1": { n: "Solemnity of Mary, Mother of God", bio: "The Church begins each year honoring the Blessed Virgin under her greatest title. The Council of Ephesus (431) proclaimed Mary Theotokos — God-bearer — defending the unity of Christ's divine and human natures.", icon: "👑" },
-  "1-2": { n: "Sts. Basil the Great & Gregory Nazianzen", bio: "Two Cappadocian Fathers and Doctors of the Church who defended Trinitarian orthodoxy against Arianism. Basil organized monastic life in the East; Gregory's theological orations earned him the title 'The Theologian.'", icon: "📜" },
-  "1-4": { n: "St. Elizabeth Ann Seton", bio: "First native-born American saint. A convert from Episcopalianism, she founded the Sisters of Charity and established the first Catholic school system in the United States.", icon: "🏫" },
-  "1-5": { n: "St. John Neumann", bio: "Bohemian-born Bishop of Philadelphia, first male American saint. Built over 80 churches and nearly 100 schools, establishing the first diocesan Catholic school system.", icon: "⛪" },
-  "1-13": { n: "St. Hilary of Poitiers", bio: "The 'Athanasius of the West,' exiled for opposing Arianism. His theological writings on the Trinity laid groundwork for Western Trinitarian doctrine. Doctor of the Church.", icon: "🛡" },
+  "1-1": { n: "Octave Day of the Nativity of the Lord", bio: "The traditional calendar's title for January 1st — historically the Circumcision of Our Lord. The Church closes the Christmas octave honoring Mary's divine maternity, through which the Word was made flesh.", icon: "👑" },
+  "1-4": { n: "St. Elizabeth Ann Seton", bio: "First native-born American saint, canonized by Paul VI in 1975. A convert from Episcopalianism, she founded the Sisters of Charity and established the first Catholic school system in the United States. A modern canonization observed on its Novus Ordo date; not part of the historic 1962 calendar.", icon: "🏫" },
+  "1-5": { n: "St. John Neumann", bio: "Bohemian-born Bishop of Philadelphia, first male American saint, canonized by Paul VI in 1977. Built over 80 churches and nearly 100 schools, establishing the first diocesan Catholic school system. A modern canonization observed on its Novus Ordo date; not part of the historic 1962 calendar.", icon: "⛪" },
+  "1-14": { n: "St. Hilary of Poitiers", bio: "The 'Athanasius of the West,' exiled for opposing Arianism. His theological writings on the Trinity laid groundwork for Western Trinitarian doctrine. Doctor of the Church.", icon: "🛡" },
   "1-17": { n: "St. Anthony of Egypt", bio: "Father of monasticism. At 20 he sold everything and withdrew to the desert, where he battled demons and attracted followers. His example inspired the entire monastic movement.", icon: "🏜" },
   "1-21": { n: "St. Agnes", bio: "Roman virgin martyr, killed at age 12 or 13 during the persecution of Diocletian. Her courage made her one of the most celebrated saints of antiquity. Patron of girls and purity.", icon: "🐑" },
-  "1-24": { n: "St. Francis de Sales", bio: "Bishop of Geneva and Doctor of the Church. His Introduction to the Devout Life revolutionized spirituality by teaching that holiness is for everyone, not just monks and nuns.", icon: "💜" },
   "1-25": { n: "Conversion of St. Paul", bio: "Saul of Tarsus, zealous persecutor of Christians, was struck down on the road to Damascus by a blinding light. 'Saul, Saul, why do you persecute Me?' He became the Apostle to the Gentiles.", icon: "⚡" },
-  "1-28": { n: "St. Thomas Aquinas", bio: "The Angelic Doctor, greatest theologian of the Catholic Church. His Summa Theologiae synthesized faith and reason into a masterwork that remains the foundation of Catholic moral and dogmatic theology.", icon: "🏛" },
+  "1-26": { n: "St. Polycarp of Smyrna", bio: "Disciple of St. John the Apostle and Bishop of Smyrna. Martyred at 86, he told the proconsul: 'Eighty-six years I have served Him, and He has done me no wrong. How can I blaspheme my King who saved me?'", icon: "🔥" },
+  "1-27": { n: "St. John Chrysostom", bio: "Archbishop of Constantinople, Doctor of the Church, the greatest preacher in Eastern Christianity. 'Chrysostom' means 'Golden Mouth.' Exiled twice for denouncing imperial corruption.", icon: "🗣" },
+  "1-29": { n: "St. Francis de Sales", bio: "Bishop of Geneva and Doctor of the Church. His Introduction to the Devout Life revolutionized spirituality by teaching that holiness is for everyone, not just monks and nuns.", icon: "💜" },
   "1-31": { n: "St. John Bosco", bio: "Patron of youth. Founded the Salesians to educate poor and abandoned boys in Turin. His 'preventive system' of education — based on reason, religion, and loving-kindness — transformed countless lives.", icon: "👦" },
-  "2-1": { n: "St. Brigid of Kildare", bio: "One of Ireland's three patron saints. Founded a double monastery at Kildare that became a center of learning and art. Her generosity was legendary — she once gave away her father's sword to a leper.", icon: "🇮🇪" },
+  "2-1": { n: "St. Brigid of Kildare", bio: "One of Ireland's three patron saints. Founded a double monastery at Kildare that became a center of learning and art. Her generosity was legendary — she once gave away her father's sword to a leper. A feast of Ireland's proper calendar (II class).", icon: "🇮🇪" },
   "2-2": { n: "Purification of the B.V.M.", bio: "Candlemas: forty days after Christmas, Mary presented Jesus in the Temple. Simeon recognized the Christ child and prophesied: 'A sword shall pierce thy own soul also.'", icon: "🕯" },
   "2-3": { n: "St. Blaise", bio: "Bishop and martyr. According to tradition, he miraculously saved a boy choking on a fishbone. His intercession is invoked for throat ailments; the blessing of throats is given on his feast.", icon: "✋" },
   "2-5": { n: "St. Agatha", bio: "Sicilian virgin martyr under the Decian persecution. Her courage under torture made her one of the most venerated early saints. Patron of breast cancer patients and against fire.", icon: "🔥" },
-  "2-6": { n: "St. Paul Miki & Companions", bio: "Twenty-six Catholics — Jesuits, Franciscans, and laypeople — crucified at Nagasaki in 1597. From his cross, Paul Miki preached his final sermon, forgiving his executioners.", icon: "🇯🇵" },
-  "2-8": { n: "St. Jerome Emiliani", bio: "Venetian soldier who, after imprisonment, devoted his life to orphans and the abandoned. Founded the Somaschi Fathers. Patron of orphans and abandoned children.", icon: "🏠" },
   "2-10": { n: "St. Scholastica", bio: "Twin sister of St. Benedict and foundress of women's Benedictine monasticism. When Benedict tried to leave after their last visit, her prayers brought a storm that kept him — she died three days later.", icon: "🕊" },
   "2-11": { n: "Our Lady of Lourdes", bio: "In 1858, the Blessed Virgin appeared eighteen times to Bernadette Soubirous in a grotto at Lourdes, France, identifying herself as 'the Immaculate Conception.' The spring has been a site of miraculous healings.", icon: "💧" },
-  "2-14": { n: "Sts. Cyril & Methodius", bio: "Brothers from Thessalonica, apostles to the Slavs. They created the Glagolitic alphabet to translate Scripture and liturgy into Slavonic, laying the foundation for Slavic Christianity and culture.", icon: "📖" },
-  "2-22": { n: "Chair of St. Peter", bio: "This feast celebrates Peter's authority as head of the Church, given by Christ: 'Thou art Peter, and upon this rock I will build My Church.' The ancient wooden chair symbolizes papal teaching authority.", icon: "🪑" },
-  "2-23": { n: "St. Polycarp of Smyrna", bio: "Disciple of St. John the Apostle and Bishop of Smyrna. Martyred at 86, he told the proconsul: 'Eighty-six years I have served Him, and He has done me no wrong. How can I blaspheme my King who saved me?'", icon: "🔥" },
+  "2-22": { n: "Chair of St. Peter", bio: "This feast celebrates Peter's authority as head of the Church, given by Christ: 'Thou art Peter, and upon this rock I will build My Church.' The 1960 calendar reform merged the historic Roman (Jan 18) and Antiochene (Feb 22) feasts into this single date.", icon: "🪑" },
   "2-24": { n: "St. Matthias", bio: "Chosen by lot to replace Judas as the twelfth apostle. He had followed Christ from His baptism through the Ascension. Tradition holds he preached in Judea and Ethiopia before being martyred.", icon: "🎲" },
-  "3-4": { n: "St. Casimir", bio: "Prince of Poland who chose a life of prayer, penance, and charity over royal ambition. Died at 25 of tuberculosis. His devotion to the Blessed Virgin was expressed in his favorite hymn, Omni die dic Mariae.", icon: "👑" },
-  "3-7": { n: "Sts. Perpetua & Felicity", bio: "A young noblewoman and her slave, martyred together at Carthage in 203. Perpetua's prison diary — one of the earliest Christian autobiographies — records her visions and her fearless faith.", icon: "⚔" },
+  "3-6": { n: "Sts. Perpetua & Felicity", bio: "A young noblewoman and her slave, martyred together at Carthage in 203. Perpetua's prison diary — one of the earliest Christian autobiographies — records her visions and her fearless faith.", icon: "⚔" },
+  "3-7": { n: "St. Thomas Aquinas", bio: "The Angelic Doctor, greatest theologian of the Catholic Church. His Summa Theologiae synthesized faith and reason into a masterwork that remains the foundation of Catholic moral and dogmatic theology.", icon: "🏛" },
   "3-8": { n: "St. John of God", bio: "Portuguese soldier turned bookseller who, after a conversion experience, devoted himself to the sick and homeless. Founded the Brothers Hospitallers. Patron of hospitals and the sick.", icon: "🏥" },
   "3-9": { n: "St. Frances of Rome", bio: "Married at 13, she fulfilled her duties as wife and mother while living an interior life of extraordinary mysticism. Founded the Oblates of Tor de' Specchi. Patron of automobile drivers.", icon: "🚗" },
+  "3-12": { n: "St. Gregory the Great", bio: "Pope and Doctor of the Church who sent Augustine to evangelize England, reformed the liturgy, and wrote the Pastoral Rule, a handbook for bishops still used today.", icon: "🎵" },
   "3-17": { n: "St. Patrick", bio: "Apostle of Ireland. Kidnapped from Britain at 16 and enslaved for six years. After escaping, he returned as a missionary bishop and converted the island. His Confessio reveals deep humility.", icon: "☘" },
   "3-19": { n: "St. Joseph", bio: "Spouse of the Blessed Virgin Mary and foster-father of Jesus. A just man who protected the Holy Family in silence and faithfulness. Patron of the universal Church, workers, and a happy death.", icon: "🪻" },
+  "3-21": { n: "St. Benedict of Nursia", bio: "Father of Western monasticism. His Rule — 'Ora et Labora' — balanced prayer, work, and community life, shaping Western civilization. His monks preserved learning through the Dark Ages.", icon: "📕" },
+  "3-22": { n: "St. Isidore the Farmer", bio: "Spanish laborer of Madrid whose piety was so deep that, according to legend, angels plowed his fields while he prayed. Patron of farmers and laborers. Observed on this date in some traditional calendars.", icon: "🌾" },
+  "3-24": { n: "St. Gabriel the Archangel", bio: "The messenger who announced to Mary that she would conceive the Son of God. His name means 'God is my strength.' On the traditional calendar he is honored on his own day, distinct from Michael and Raphael.", icon: "🕊" },
   "3-25": { n: "The Annunciation", bio: "The angel Gabriel announced to Mary that she would conceive the Son of God. Her 'Fiat' — 'Be it done unto me according to thy word' — is the moment of the Incarnation, when God became man.", icon: "🕊" },
+  "3-27": { n: "St. John Damascene", bio: "Last of the Greek Fathers and Doctor of the Church. His Fount of Knowledge systematized Eastern theology. He defended the veneration of icons against the iconoclasts.", icon: "🖼" },
   "4-2": { n: "St. Francis of Paola", bio: "Calabrian hermit and founder of the Minim Friars, the strictest of all mendicant orders. His life of extreme penance and miraculous deeds drew the attention of kings. Patron of seafarers.", icon: "⛵" },
   "4-4": { n: "St. Isidore of Seville", bio: "Last of the Latin Fathers and a Doctor of the Church. His Etymologies was the first encyclopedia, preserving classical learning for the medieval world. Patron of the internet.", icon: "💻" },
   "4-5": { n: "St. Vincent Ferrer", bio: "Dominican friar and one of the greatest preachers in Church history. Traveled across Europe converting thousands through his preaching and miracles.", icon: "🔔" },
-  "4-7": { n: "St. John Baptist de la Salle", bio: "French priest who revolutionized education. Founded the Brothers of the Christian Schools and pioneered teaching in the vernacular and schools for the poor.", icon: "📚" },
-  "4-11": { n: "St. Stanislaus", bio: "Bishop of Kraków, martyred by King Bolesław II for denouncing the king's tyranny. Patron of Poland and of moral order in public life.", icon: "🇵🇱" },
-  "4-23": { n: "St. George", bio: "Roman soldier and martyr, one of the most venerated saints in both East and West. The legend of his slaying a dragon symbolizes the victory of faith over evil. Patron of England and soldiers.", icon: "🐉" },
+  "4-14": { n: "St. Justin Martyr", bio: "Philosopher who converted after studying Christianity. His First and Second Apologies are the earliest systematic defenses of the faith. Martyred in Rome c. 165.", icon: "📜" },
+  "4-17": { n: "St. Kateri Tekakwitha", bio: "First Native American saint, canonized by Benedict XVI in 2012. An Algonquin-Mohawk convert who endured persecution from her tribe for her faith. Called the 'Lily of the Mohawks.' A modern canonization observed here on her Canadian feast date, since her U.S. date (July 14) coincides with St. Bonaventure on the historic calendar.", icon: "🌸" },
+  "4-23": { n: "St. George", bio: "Roman soldier and martyr, one of the most venerated saints in both East and West. The legend of his slaying a dragon symbolizes the victory of faith over evil. A commemoration on the general calendar; a full first-class feast in England, whose principal patron he is.", icon: "🐉" },
   "4-25": { n: "St. Mark the Evangelist", bio: "Author of the second Gospel, companion of Peter and Paul. His Gospel is the shortest and most vivid, likely preserving Peter's eyewitness preaching. Patron of Venice.", icon: "🦁" },
-  "4-28": { n: "St. Louis de Montfort", bio: "French priest whose True Devotion to the Blessed Virgin Mary is one of the most influential Marian works ever written. His total consecration spirituality was adopted by St. John Paul II.", icon: "📿" },
-  "4-29": { n: "St. Catherine of Siena", bio: "Dominican tertiary, mystic, and Doctor of the Church. She persuaded Pope Gregory XI to return from Avignon to Rome. Her Dialogue is a masterpiece of mystical theology.", icon: "🔥" },
-  "4-30": { n: "St. Pius V", bio: "Dominican pope who implemented the reforms of the Council of Trent, codified the Roman Missal and Breviary, and organized the Christian fleet that won the Battle of Lepanto.", icon: "⚓" },
+  "4-28": { n: "St. Louis de Montfort", bio: "French priest whose True Devotion to the Blessed Virgin Mary is one of the most influential Marian works ever written. His total consecration spirituality was adopted by St. John Paul II. Observed from the traditional local-use supplement, alongside St. Paul of the Cross.", icon: "📿" },
+  "4-30": { n: "St. Catherine of Siena", bio: "Dominican tertiary, mystic, and Doctor of the Church. She persuaded Pope Gregory XI to return from Avignon to Rome. Her Dialogue is a masterpiece of mystical theology.", icon: "🔥" },
   "5-1": { n: "St. Joseph the Worker", bio: "Established by Pius XII in 1955, this feast honors the dignity of human labor through the example of Joseph, who worked as a carpenter to support the Holy Family.", icon: "🔨" },
   "5-2": { n: "St. Athanasius", bio: "Bishop of Alexandria, exiled five times for defending the divinity of Christ against Arianism. 'Athanasius contra mundum' — Athanasius against the world. Doctor of the Church.", icon: "🛡" },
-  "5-3": { n: "Sts. Philip & James, Apostles", bio: "Philip brought Nathanael to Jesus; at the Last Supper he asked 'Lord, show us the Father.' James 'the Less' led the Church in Jerusalem and wrote the epistle bearing his name.", icon: "✝" },
-  "5-13": { n: "Our Lady of Fatima", bio: "In 1917, the Blessed Virgin appeared six times to three shepherd children in Fatima, Portugal, calling for prayer, penance, and devotion to her Immaculate Heart.", icon: "☀" },
-  "5-14": { n: "St. Matthias", bio: "Chosen by lot to replace Judas as the twelfth apostle. He had followed Christ from His baptism through the Ascension. Tradition holds he preached in Judea and was martyred.", icon: "🎲" },
-  "5-15": { n: "St. Isidore the Farmer", bio: "Spanish laborer of Madrid whose piety was so deep that, according to legend, angels plowed his fields while he prayed. Patron of farmers and laborers.", icon: "🌾" },
+  "5-4": { n: "St. Monica", bio: "Mother of St. Augustine. For 17 years she wept and prayed for her brilliant, wayward son. Her perseverance was rewarded when Augustine converted and became one of the Church's greatest Doctors.", icon: "💧" },
+  "5-5": { n: "St. Pius V", bio: "Dominican pope who implemented the reforms of the Council of Trent, codified the Roman Missal and Breviary, and organized the Christian fleet that won the Battle of Lepanto.", icon: "⚓" },
+  "5-7": { n: "St. Stanislaus", bio: "Bishop of Kraków, martyred by King Bolesław II for denouncing the king's tyranny. Patron of Poland and of moral order in public life.", icon: "🇵🇱" },
+  "5-9": { n: "St. Gregory Nazianzen", bio: "Cappadocian Father and Doctor of the Church who defended Trinitarian orthodoxy against Arianism. His theological orations earned him the title 'The Theologian.'", icon: "📜" },
+  "5-11": { n: "Sts. Philip & James, Apostles", bio: "Philip brought Nathanael to Jesus; at the Last Supper he asked 'Lord, show us the Father.' James 'the Less' led the Church in Jerusalem and wrote the epistle bearing his name.", icon: "✝" },
+  "5-13": { n: "Our Lady of Fatima", bio: "In 1917, the Blessed Virgin appeared six times to three shepherd children in Fatima, Portugal, calling for prayer, penance, and devotion to her Immaculate Heart. Kept on Portugal's proper calendar for this date; the general 1962 calendar has St. Robert Bellarmine.", icon: "☀" },
+  "5-15": { n: "St. John Baptist de la Salle", bio: "French priest who revolutionized education. Founded the Brothers of the Christian Schools and pioneered teaching in the vernacular and schools for the poor.", icon: "📚" },
   "5-22": { n: "St. Rita of Cascia", bio: "Married against her will to a violent man, she endured 18 years of abuse before his conversion and murder. After her sons died, she entered an Augustinian convent. Patron of impossible causes.", icon: "🌹" },
-  "5-25": { n: "St. Bede the Venerable", bio: "English Benedictine monk, historian, and Doctor of the Church. His Ecclesiastical History of the English People is the primary source for early English history.", icon: "📜" },
   "5-26": { n: "St. Philip Neri", bio: "The 'Apostle of Rome' and founder of the Oratory. His joyful, humorous personality and gift for spiritual direction transformed Renaissance Rome.", icon: "😄" },
+  "5-27": { n: "St. Bede the Venerable", bio: "English Benedictine monk, historian, and Doctor of the Church. His Ecclesiastical History of the English People is the primary source for early English history.", icon: "📜" },
   "5-30": { n: "St. Joan of Arc", bio: "French peasant girl who, guided by heavenly voices, led the French army to victory at Orléans at age 17. Captured, tried for heresy, and burned at the stake at 19. Later rehabilitated and canonized.", icon: "⚔" },
-  "6-1": { n: "St. Justin Martyr", bio: "Philosopher who converted after studying Christianity. His First and Second Apologies are the earliest systematic defenses of the faith. Martyred in Rome c. 165.", icon: "📜" },
-  "6-3": { n: "St. Charles Lwanga & Companions", bio: "Twenty-two Ugandan martyrs, pages in the court of King Mwanga II, killed between 1885-1887 for refusing the king's advances and for their Catholic faith. The youngest was 13.", icon: "🇺🇬" },
+  "6-3": { n: "St. Charles Lwanga & Companions", bio: "Twenty-two Ugandan martyrs, pages in the court of King Mwanga II, killed between 1885-1887 for refusing the king's advances and for their Catholic faith. The youngest was 13. Canonized by Paul VI in 1964; a modern addition observed on this date.", icon: "🇺🇬" },
   "6-5": { n: "St. Boniface", bio: "English Benedictine who became the Apostle of Germany. He felled the sacred oak of Thor at Geismar, organized the German church, and was martyred at 80.", icon: "🌳" },
   "6-11": { n: "St. Barnabas", bio: "Apostle and companion of Paul on his first missionary journey. A Levite from Cyprus, he sold his property and gave the proceeds to the apostles. His name means 'son of encouragement.'", icon: "🤝" },
   "6-13": { n: "St. Anthony of Padua", bio: "Portuguese Franciscan, Doctor of the Church, and the greatest preacher of his age. His sermons drew tens of thousands. Patron of lost things — invoked more than almost any other saint.", icon: "🔍" },
+  "6-14": { n: "St. Basil the Great", bio: "Cappadocian Father and Doctor of the Church who defended Trinitarian orthodoxy against Arianism and organized monastic life in the East.", icon: "📜" },
   "6-21": { n: "St. Aloysius Gonzaga", bio: "Italian Jesuit who renounced his family's marquisate to enter religious life. Died at 23 nursing plague victims in Rome. Patron of youth and students.", icon: "🎓" },
-  "6-22": { n: "St. Thomas More", bio: "Lord Chancellor of England, beheaded for refusing to acknowledge Henry VIII as head of the Church. On the scaffold: 'I die the King's good servant, but God's first.' Patron of lawyers.", icon: "⚖" },
   "6-24": { n: "Nativity of St. John the Baptist", bio: "The only saint besides the Blessed Virgin whose birth is celebrated liturgically. The last prophet, he prepared the way for Christ: 'He must increase, but I must decrease.'", icon: "🏜" },
   "6-29": { n: "Sts. Peter & Paul", bio: "The two pillars of the Church. Peter, the fisherman chosen as the Rock; Paul, the persecutor transformed into the Apostle to the Gentiles. Both martyred in Rome under Nero.", icon: "🗝" },
-  "7-3": { n: "St. Thomas the Apostle", bio: "Called 'Doubting Thomas,' his honest questioning led to one of Scripture's greatest professions of faith: 'My Lord and my God!' Tradition holds he evangelized India.", icon: "🇮🇳" },
-  "7-4": { n: "St. Elizabeth of Portugal", bio: "Queen of Portugal, renowned for her charity and peacemaking between warring Christian kings. After her husband's death she became a Franciscan tertiary and served the poor.", icon: "👑" },
-  "7-11": { n: "St. Benedict of Nursia", bio: "Father of Western monasticism. His Rule — 'Ora et Labora' — balanced prayer, work, and community life, shaping Western civilization. His monks preserved learning through the Dark Ages.", icon: "📕" },
-  "7-14": { n: "St. Kateri Tekakwitha", bio: "First Native American saint. An Algonquin-Mohawk convert who endured persecution from her tribe for her faith. Called the 'Lily of the Mohawks' for her purity and devotion.", icon: "🌸" },
-  "7-15": { n: "St. Bonaventure", bio: "Franciscan Doctor of the Church, called the 'Seraphic Doctor.' His mystical theology, especially The Journey of the Mind to God, complements Aquinas's rationalism with the way of love.", icon: "🔥" },
+  "7-3": { n: "St. Irenaeus", bio: "Bishop of Lyons and Doctor of the Church, disciple of St. Polycarp who had himself known the Apostle John. His Against Heresies is the great early refutation of Gnosticism.", icon: "📜" },
+  "7-7": { n: "Sts. Cyril & Methodius", bio: "Brothers from Thessalonica, apostles to the Slavs. They created the Glagolitic alphabet to translate Scripture and liturgy into Slavonic, laying the foundation for Slavic Christianity and culture.", icon: "📖" },
+  "7-8": { n: "St. Elizabeth of Portugal", bio: "Queen of Portugal, renowned for her charity and peacemaking between warring Christian kings. After her husband's death she became a Franciscan tertiary and served the poor.", icon: "👑" },
+  "7-9": { n: "St. Thomas More", bio: "Lord Chancellor of England, beheaded for refusing to acknowledge Henry VIII as head of the Church. On the scaffold: 'I die the King's good servant, but God's first.' Patron of lawyers. Observed with St. John Fisher on England's proper calendar.", icon: "⚖" },
+  "7-14": { n: "St. Bonaventure", bio: "Franciscan Doctor of the Church, called the 'Seraphic Doctor.' His mystical theology, especially The Journey of the Mind to God, complements Aquinas's rationalism with the way of love.", icon: "🔥" },
+  "7-19": { n: "St. Vincent de Paul", bio: "Patron of all charitable works. Once enslaved in North Africa, he devoted his life to the poor, founding the Congregation of the Mission and co-founding the Daughters of Charity.", icon: "🤲" },
+  "7-20": { n: "St. Jerome Emiliani", bio: "Venetian soldier who, after imprisonment, devoted his life to orphans and the abandoned. Founded the Somaschi Fathers. Patron of orphans and abandoned children.", icon: "🏠" },
   "7-22": { n: "St. Mary Magdalene", bio: "First witness of the Resurrection. Jesus appeared to her at the tomb and sent her to tell the apostles — making her the 'Apostle to the Apostles.' Patron of penitents.", icon: "🏺" },
   "7-25": { n: "St. James the Greater", bio: "Son of Zebedee, brother of John, first apostle to be martyred. Tradition holds his relics rest at Santiago de Compostela, one of Christianity's greatest pilgrimage sites.", icon: "🐚" },
-  "7-26": { n: "Sts. Joachim & Anne", bio: "Parents of the Blessed Virgin Mary, grandparents of Jesus. Though not mentioned in Scripture, ancient tradition honors their faithful marriage and the gift of their daughter to the world.", icon: "👴" },
+  "7-26": { n: "St. Anne", bio: "Mother of the Blessed Virgin Mary, grandmother of Jesus. Though not mentioned in Scripture, ancient tradition honors her faithful life and the gift of her daughter to the world. Her husband St. Joachim is honored separately, on August 16.", icon: "👵" },
   "7-29": { n: "St. Martha", bio: "Sister of Mary and Lazarus, who welcomed Jesus into her home at Bethany. When she complained that Mary wasn't helping, Jesus gently taught her about the 'better part.' Patron of cooks.", icon: "🏠" },
   "7-31": { n: "St. Ignatius of Loyola", bio: "Basque soldier whose conversion during convalescence led him to found the Society of Jesus. His Spiritual Exercises remain one of the most powerful tools for discernment in the Church.", icon: "⚔" },
-  "8-1": { n: "St. Alphonsus Liguori", bio: "Founder of the Redemptorists and Doctor of the Church. His moral theology balanced rigorism and laxism, becoming the standard for confessors. Patron of moral theologians.", icon: "✝" },
-  "8-4": { n: "St. John Vianney", bio: "The Curé of Ars, patron of parish priests. Barely passing seminary, he transformed his parish through holiness and spent 16 hours daily hearing confessions.", icon: "⛪" },
-  "8-8": { n: "St. Dominic", bio: "Founder of the Order of Preachers (Dominicans). Combated the Albigensian heresy through preaching and learning rather than force. Tradition credits him with receiving the Rosary from Our Lady.", icon: "📿" },
+  "8-2": { n: "St. Alphonsus Liguori", bio: "Founder of the Redemptorists and Doctor of the Church. His moral theology balanced rigorism and laxism, becoming the standard for confessors. Patron of moral theologians.", icon: "✝" },
+  "8-4": { n: "St. Dominic", bio: "Founder of the Order of Preachers (Dominicans). Combated the Albigensian heresy through preaching and learning rather than force. Tradition credits him with receiving the Rosary from Our Lady.", icon: "📿" },
+  "8-8": { n: "St. John Vianney", bio: "The Curé of Ars, patron of parish priests. Barely passing seminary, he transformed his parish through holiness and spent 16 hours daily hearing confessions.", icon: "⛪" },
   "8-10": { n: "St. Lawrence", bio: "Roman deacon martyred under Valerian in 258. When ordered to produce the Church's treasures, he gathered the poor: 'These are the treasures of the Church.' Roasted on a gridiron.", icon: "🔥" },
-  "8-11": { n: "St. Clare of Assisi", bio: "Founder of the Poor Clares, inspired by St. Francis to embrace radical poverty. When Saracens besieged her convent, she held up the Blessed Sacrament and they fled.", icon: "☀" },
-  "8-14": { n: "St. Maximilian Kolbe", bio: "Polish Franciscan who volunteered to die in place of a stranger at Auschwitz. After two weeks in a starvation bunker, he was killed by lethal injection. The Martyr of Charity.", icon: "🇵🇱" },
+  "8-12": { n: "St. Clare of Assisi", bio: "Founder of the Poor Clares, inspired by St. Francis to embrace radical poverty. When Saracens besieged her convent, she held up the Blessed Sacrament and they fled.", icon: "☀" },
+  "8-14": { n: "St. Maximilian Kolbe", bio: "Polish Franciscan who volunteered to die in place of a stranger at Auschwitz. After two weeks in a starvation bunker, he was killed by lethal injection. The Martyr of Charity. Canonized by John Paul II in 1982; a modern addition observed on this date, which is also the Vigil of the Assumption.", icon: "🇵🇱" },
   "8-15": { n: "The Assumption of the B.V.M.", bio: "Dogma proclaimed by Pius XII in 1950: at the end of her earthly life, Mary was assumed body and soul into heavenly glory. The greatest of all Marian feasts.", icon: "👑" },
+  "8-16": { n: "St. Joachim", bio: "Father of the Blessed Virgin Mary, grandfather of Jesus. Though not mentioned in Scripture, ancient tradition honors his faithful marriage to St. Anne and the gift of their daughter to the world.", icon: "👴" },
   "8-20": { n: "St. Bernard of Clairvaux", bio: "Cistercian abbot, Doctor of the Church, and the most influential churchman of the 12th century. His mystical writings on the Song of Songs shaped Western spirituality.", icon: "🏔" },
-  "8-23": { n: "St. Rose of Lima", bio: "First saint of the Americas. A Dominican tertiary in Lima, Peru, she lived a life of extreme penance and mystical prayer while caring for the poor. Patron of Latin America.", icon: "🌹" },
-  "8-27": { n: "St. Monica", bio: "Mother of St. Augustine. For 17 years she wept and prayed for her brilliant, wayward son. Her perseverance was rewarded when Augustine converted and became one of the Church's greatest Doctors.", icon: "💧" },
   "8-28": { n: "St. Augustine of Hippo", bio: "The Doctor of Grace. His restless search through Manichaeism and philosophy ended at the baptismal font. His Confessions and City of God shaped Western thought for 1,600 years.", icon: "🔥" },
   "8-29": { n: "Beheading of St. John the Baptist", bio: "Herod Antipas imprisoned John for condemning his adulterous marriage. At a banquet, Salome's dance pleased Herod, and Herodias demanded John's head on a platter.", icon: "⚔" },
-  "9-3": { n: "St. Gregory the Great", bio: "Pope and Doctor of the Church who sent Augustine to evangelize England, reformed the liturgy, and wrote the Pastoral Rule, a handbook for bishops still used today.", icon: "🎵" },
+  "8-30": { n: "St. Rose of Lima", bio: "First saint of the Americas. A Dominican tertiary in Lima, Peru, she lived a life of extreme penance and mystical prayer while caring for the poor. Patron of Latin America.", icon: "🌹" },
+  "9-3": { n: "St. Pius X", bio: "Pope who condemned Modernism, promoted frequent Communion, and lowered the age of First Communion. Patron of catechists, known for the motto 'Restore all things in Christ.'", icon: "⛪" },
   "9-8": { n: "Nativity of the B.V.M.", bio: "The Church celebrates Mary's birth as the dawn before the Sun of Justice. Through her, God prepared a worthy dwelling for His Son. One of the oldest Marian feasts.", icon: "⭐" },
-  "9-13": { n: "St. John Chrysostom", bio: "Archbishop of Constantinople, Doctor of the Church, the greatest preacher in Eastern Christianity. 'Chrysostom' means 'Golden Mouth.' Exiled twice for denouncing imperial corruption.", icon: "🗣" },
   "9-14": { n: "Exaltation of the Holy Cross", bio: "Celebrates the finding of the True Cross by St. Helena in Jerusalem (c. 326) and its recovery from the Persians by Emperor Heraclius in 628.", icon: "✝" },
   "9-15": { n: "Our Lady of Sorrows", bio: "The Church meditates on the seven sorrows of Mary: from Simeon's prophecy to the burial of Christ. A sword pierced her Immaculate Heart at each station of her Son's Passion.", icon: "🗡" },
   "9-16": { n: "Sts. Cornelius & Cyprian", bio: "Pope Cornelius and Bishop Cyprian of Carthage, united in defending the Church's authority to forgive sins of apostasy. Both martyred — companions in death as in ministry.", icon: "🤝" },
   "9-21": { n: "St. Matthew", bio: "Tax collector called by Jesus with two words: 'Follow Me.' He left everything and followed. His Gospel presents Jesus as the fulfillment of Old Testament prophecy.", icon: "📖" },
-  "9-23": { n: "St. Padre Pio", bio: "Capuchin friar who bore the stigmata for 50 years. He could read souls in confession, bilocate, and heal the sick. Founded a major hospital in southern Italy.", icon: "🩸" },
-  "9-27": { n: "St. Vincent de Paul", bio: "Patron of all charitable works. Once enslaved in North Africa, he devoted his life to the poor, founding the Congregation of the Mission and co-founding the Daughters of Charity.", icon: "🤲" },
-  "9-29": { n: "Sts. Michael, Gabriel & Raphael", bio: "The three archangels: Michael the warrior against Satan, Gabriel the messenger of the Annunciation, Raphael the healer and guide of Tobias. 'Who is like God?' is Michael's battle cry.", icon: "⚔" },
+  "9-23": { n: "St. Padre Pio", bio: "Capuchin friar who bore the stigmata for 50 years. He could read souls in confession, bilocate, and heal the sick. Founded a major hospital in southern Italy. Canonized by John Paul II in 2002; a modern addition observed on this date.", icon: "🩸" },
+  "9-26": { n: "North American Martyrs", bio: "Eight Jesuit missionaries — including Sts. Jean de Brébeuf and Isaac Jogues — martyred in New France (1642-1649) while evangelizing the Huron and Iroquois peoples. Secondary patrons of Canada, observed on the U.S. and Canadian proper calendars.", icon: "🇨🇦" },
+  "9-29": { n: "St. Michael the Archangel", bio: "The Prince of the Heavenly Host, 'Who is like God?' is his battle cry against Satan. This Dedication feast is his alone on the traditional calendar — Gabriel and Raphael are honored on their own separate days.", icon: "⚔" },
   "9-30": { n: "St. Jerome", bio: "Greatest Scripture scholar of the early Church. His Latin Vulgate translation shaped Christianity for a millennium. Fiery and brilliant: 'Ignorance of Scripture is ignorance of Christ.'", icon: "📜" },
-  "10-1": { n: "St. Thérèse of Lisieux", bio: "The Little Flower, Doctor of the Church. Her 'Little Way' of spiritual childhood — trust and small acts of love — has guided millions. She died at 24 promising to do good on earth from heaven.", icon: "🌹" },
   "10-2": { n: "Holy Guardian Angels", bio: "The Church teaches each person has a guardian angel from birth. 'See that you do not despise one of these little ones; for their angels in heaven always see the face of My Father.' (Mt 18:10)", icon: "👼" },
+  "10-3": { n: "St. Thérèse of Lisieux", bio: "The Little Flower, Doctor of the Church. Her 'Little Way' of spiritual childhood — trust and small acts of love — has guided millions. She died at 24 promising to do good on earth from heaven.", icon: "🌹" },
   "10-4": { n: "St. Francis of Assisi", bio: "The Poor Man of Assisi who rebuilt the Church by embracing radical poverty and joy. He received the stigmata, preached to the birds, and composed the Canticle of the Sun.", icon: "🐦" },
   "10-7": { n: "Our Lady of the Rosary", bio: "Commemorates the Christian victory at Lepanto (1571), attributed to the Rosary. Pope St. Pius V asked all Christendom to pray the Rosary, and the Ottoman fleet was defeated.", icon: "📿" },
   "10-15": { n: "St. Teresa of Ávila", bio: "Carmelite reformer, mystic, and Doctor of the Church. Her Interior Castle maps the soul's journey to God in seven mansions. 'Let nothing disturb you; God alone suffices.'", icon: "🏰" },
   "10-18": { n: "St. Luke the Evangelist", bio: "Physician, painter, and author of the third Gospel and Acts. His Gospel uniquely emphasizes mercy, women, the poor, and the joy of salvation. Patron of artists and physicians.", icon: "🎨" },
-  "10-19": { n: "North American Martyrs", bio: "Eight Jesuit missionaries — including Sts. Jean de Brébeuf and Isaac Jogues — martyred in New France (1642-1649) while evangelizing the Huron and Iroquois peoples.", icon: "🇨🇦" },
-  "10-22": { n: "St. John Paul II", bio: "Karol Wojtyła, Pope from 1978-2005. Helped bring down Communism, traveled to 129 countries, wrote 14 encyclicals, and canonized more saints than all his predecessors combined.", icon: "🇻🇦" },
+  "10-24": { n: "St. Raphael the Archangel", bio: "'God has healed' — the archangel who guided young Tobias and healed his father's blindness. Honored on his own day on the traditional calendar, distinct from Michael and Gabriel.", icon: "🐟" },
   "10-28": { n: "Sts. Simon & Jude", bio: "Simon the Zealot and Jude Thaddaeus, apostles traditionally martyred together in Persia. Jude is patron of desperate and hopeless causes.", icon: "✝" },
   "11-1": { n: "All Saints", bio: "The Church rejoices in all the blessed in heaven — known and unknown, canonized and hidden. Their intercession surrounds us; their example encourages us. We are called to join their company.", icon: "✨" },
   "11-2": { n: "All Souls", bio: "The Church prays for all the faithful departed being purified in Purgatory. Our prayers, Masses, and sacrifices can hasten their entry into heaven. An act of charity reaching beyond death.", icon: "🕯" },
-  "11-3": { n: "St. Martin de Porres", bio: "Dominican lay brother in Lima, the illegitimate son of a Spanish knight and a freed slave. His humility, charity, and miraculous gifts astonished all who knew him.", icon: "🐕" },
+  "11-3": { n: "St. Martin de Porres", bio: "Dominican lay brother in Lima, the illegitimate son of a Spanish knight and a freed slave. His humility, charity, and miraculous gifts astonished all who knew him. Canonized by John XXIII in May 1962 — right at the close of the traditional calendar's formation.", icon: "🐕" },
   "11-4": { n: "St. Charles Borromeo", bio: "Archbishop of Milan and leader of the Counter-Reformation. He implemented Trent's reforms, founded seminaries, and personally nursed plague victims. Model of episcopal duty.", icon: "⛪" },
   "11-11": { n: "St. Martin of Tours", bio: "Roman soldier who cut his cloak in half to share with a beggar — then saw Christ wearing it in a dream. Became Bishop of Tours. One of the first non-martyrs venerated as a saint.", icon: "🧥" },
   "11-13": { n: "St. Frances Xavier Cabrini", bio: "First American citizen canonized. Italian-born foundress of the Missionary Sisters of the Sacred Heart, she opened 67 institutions across the Americas. Patron of immigrants.", icon: "🗽" },
-  "11-16": { n: "St. Margaret of Scotland", bio: "English-born Queen of Scotland whose reign brought civilization, education, and reform to the Scottish Church. Known for her personal holiness and devotion to justice.", icon: "🏴" },
-  "11-17": { n: "St. Elizabeth of Hungary", bio: "Princess who married at 14 and was widowed at 20. She gave away her fortune to the poor, built hospitals, and joined the Third Order of St. Francis. Died at 24.", icon: "🍞" },
+  "11-16": { n: "St. Margaret of Scotland", bio: "English-born Queen of Scotland whose reign brought civilization, education, and reform to the Scottish Church. Known for her personal holiness and devotion to justice. Observed on Scotland's proper calendar.", icon: "🏴" },
+  "11-19": { n: "St. Elizabeth of Hungary", bio: "Princess who married at 14 and was widowed at 20. She gave away her fortune to the poor, built hospitals, and joined the Third Order of St. Francis. Died at 24.", icon: "🍞" },
   "11-22": { n: "St. Cecilia", bio: "Roman virgin martyr, one of the most famous early saints. According to tradition, she sang to God in her heart during her wedding. Patron of musicians and church music.", icon: "🎵" },
-  "11-24": { n: "St. Andrew Dung-Lac & Companions", bio: "117 Vietnamese martyrs killed between 1625 and 1886 — priests, catechists, and laypeople. Their witness built one of Asia's most vibrant Catholic communities.", icon: "🇻🇳" },
+  "11-24": { n: "St. John of the Cross", bio: "Carmelite mystic, poet, and Doctor of the Church. His Dark Night of the Soul charts the soul's purification on its way to divine union. Co-reformer with St. Teresa of Ávila.", icon: "🌙" },
   "11-30": { n: "St. Andrew the Apostle", bio: "Brother of Peter, first called by Jesus. He brought his brother to Christ: 'We have found the Messiah.' Tradition holds he was crucified on an X-shaped cross in Greece.", icon: "🏴" },
   "12-3": { n: "St. Francis Xavier", bio: "Jesuit co-founder and the greatest missionary since St. Paul. He baptized tens of thousands across India, Southeast Asia, and Japan. Died within sight of China, his ultimate goal.", icon: "🌏" },
-  "12-4": { n: "St. John Damascene", bio: "Last of the Greek Fathers and Doctor of the Church. His Fount of Knowledge systematized Eastern theology. He defended the veneration of icons against the iconoclasts.", icon: "🖼" },
   "12-6": { n: "St. Nicholas", bio: "Bishop of Myra in the 4th century, famous for his generosity. He secretly provided dowries for three impoverished sisters and was renowned for miraculous deeds. The original Santa Claus.", icon: "🎅" },
   "12-7": { n: "St. Ambrose", bio: "Governor of Milan elected bishop by popular acclaim before he was even baptized. Doctor of the Church, he mentored St. Augustine, composed hymns, and fearlessly rebuked Emperor Theodosius.", icon: "🐝" },
   "12-8": { n: "Immaculate Conception", bio: "Dogma defined by Pius IX in 1854: Mary was preserved from all stain of original sin from the first moment of her conception, by the singular grace of God, in view of the merits of Christ.", icon: "💙" },
-  "12-12": { n: "Our Lady of Guadalupe", bio: "In 1531, the Blessed Virgin appeared to Juan Diego on Tepeyac Hill near Mexico City. Her miraculous image on his tilma converted millions of indigenous people. Patroness of the Americas.", icon: "🇲🇽" },
+  "12-12": { n: "Our Lady of Guadalupe", bio: "In 1531, the Blessed Virgin appeared to Juan Diego on Tepeyac Hill near Mexico City. Her miraculous image on his tilma converted millions of indigenous people. Patroness of the Americas. Observed on the proper calendars of the Americas.", icon: "🇲🇽" },
   "12-13": { n: "St. Lucy", bio: "Sicilian virgin martyr whose name means 'light.' She is invoked for eye problems and her feast near the winter solstice symbolizes Christ, the Light of the World, coming into darkness.", icon: "👁" },
-  "12-14": { n: "St. John of the Cross", bio: "Carmelite mystic, poet, and Doctor of the Church. His Dark Night of the Soul charts the soul's purification on its way to divine union. Co-reformer with St. Teresa of Ávila.", icon: "🌙" },
+  "12-21": { n: "St. Thomas the Apostle", bio: "Called 'Doubting Thomas,' his honest questioning led to one of Scripture's greatest professions of faith: 'My Lord and my God!' Tradition holds he evangelized India.", icon: "🇮🇳" },
   "12-25": { n: "The Nativity of Our Lord", bio: "Christmas: 'And the Word was made flesh and dwelt among us.' The eternal Son of God, through whom all things were made, is born of the Virgin Mary in a stable at Bethlehem.", icon: "⭐" },
   "12-26": { n: "St. Stephen", bio: "The first Christian martyr, one of the seven deacons. Filled with the Holy Spirit, he saw heaven opened as he was stoned to death, praying: 'Lord, do not hold this sin against them.'", icon: "🪨" },
   "12-27": { n: "St. John the Evangelist", bio: "The beloved disciple who leaned on Jesus' breast at the Last Supper and stood at the foot of the Cross. Author of the fourth Gospel, three epistles, and the Apocalypse.", icon: "🦅" },
@@ -1962,7 +1963,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
             <div style={{ textAlign: "center", marginBottom: 18 }}>
               <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 52, height: 52, borderRadius: "50%", background: T.goldFaint, border: "1.5px solid rgba(212,168,67,0.2)", marginBottom: 8 }}><span style={{ fontSize: fz(22) }}>📖</span></div>
               <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(20), fontWeight: 500, color: T.inkDark, margin: "0 0 4px" }}>Closed Universe</h2>
-              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 75 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), fontStyle: "italic", color: T.inkLight, margin: 0, lineHeight: 1.5, maxWidth: 300, marginLeft: "auto", marginRight: "auto" }}>Custos draws exclusively from these 72 approved sources — nothing else. No blogs, no modern theologians, no unnamed scholars.</p>
             </div>
 
             {[
@@ -1971,7 +1972,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                 count: null,
                 items: [
                   { text: "Douay-Rheims Bible — required for all quotations" },
-                  { text: "The Vulgate — Latin reference" },
                 ]
               },
               {
@@ -1986,7 +1986,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
               },
               {
                 label: "Papal Encyclicals & Apostolic Documents",
-                count: "37",
+                count: "34",
                 items: [
                   { text: "Quo Graviora — Leo XII, 1826 · condemnation of Freemasonry and secret societies" },
                   { text: "Mirari Vos — Gregory XVI, 1832 · on liberalism and religious indifferentism" },
@@ -2001,7 +2001,6 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Libertas — Leo XIII, 1888 · on human liberty; rejecting liberalism's false conception of freedom as independence from God and natural law" },
                   { text: "Rerum Novarum — Leo XIII, 1891 · on the condition of the working classes; the Church's foundational social teaching" },
                   { text: "Providentissimus Deus — Leo XIII, 1893 · on Sacred Scripture, biblical interpretation, inspiration and inerrancy" },
-                  { text: "Apostolicae Curae — Leo XIII, 1896 · apostolic letter on the nullity of Anglican orders" },
                   { text: "E Supremi Apostolatus — Pius X, 1903 · on restoring all things in Christ" },
                   { text: "Ad Diem Illum Lætissimum — Pius X, 1904 · on the Immaculate Conception and Marian devotion" },
                   { text: "Pascendi Dominici Gregis — Pius X, 1907 · defining and condemning Modernism as the synthesis of all heresies" },
@@ -2013,6 +2012,7 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Divini Redemptoris — Pius XI, 1937 · on atheistic Communism; its errors and the Catholic response" },
                   { text: "Mit brennender Sorge — Pius XI, 1937 · condemning National Socialism and the Nazi persecution of the Church" },
                   { text: "Mystici Corporis Christi — Pius XII, 1943 · on the Church as the Mystical Body of Christ" },
+                  { text: "Mediator Dei — Pius XII, 1947 · on the sacred liturgy, the Mass as sacrifice, and the proper understanding of active participation" },
                   { text: "Humani Generis — Pius XII, 1950 · against errors in modern theology; evolution, relativism, and the nouvelle théologie" },
                   { text: "Munificentissimus Deus — Pius XII, 1950 · apostolic constitution defining the dogma of the Assumption of Mary" },
                   { text: "Humanae Vitae — Paul VI, 1968 · on the regulation of birth; condemning contraception and affirming the ends of marriage" },
@@ -2022,6 +2022,21 @@ function SeekTab({ goHome, dark, setDark, fszGlobal, setFszGlobal, onSettings, s
                   { text: "Evangelium Vitae — John Paul II, 1995 · on the inviolability of human life; abortion, euthanasia, and the culture of death" },
                   { text: "Fides et Ratio — John Paul II, 1998 · on the relationship between faith and reason" },
                   { text: "Deus Caritas Est — Benedict XVI, 2005 · on Christian love; eros, agape, and the Church's charitable mission" },
+                ]
+              },
+              {
+                label: "Apostolic Letter",
+                count: "1",
+                items: [
+                  { text: "Apostolicae Curae — Leo XIII, 1896 · on the nullity of Anglican orders" },
+                ]
+              },
+              {
+                label: "Papal Bull",
+                count: "1",
+                note: "Promulgated the Traditional Latin Mass in perpetuity and remains central to questions about the liceity of the Novus Ordo and the scope of Summorum Pontificum.",
+                items: [
+                  { text: "Quo Primum — Pius V, 1570 · promulgating the Roman Missal and codifying the Traditional Latin Mass" },
                 ]
               },
               {
@@ -4687,14 +4702,14 @@ function SettingsTab({ dark, setDark, fszGlobal, setFszGlobal, goHome, onPrivacy
               Custos is a Catholic moral guidance app rooted in the perennial tradition of the Church. The name means <span style={{ fontStyle: "italic" }}>guardian</span> in Latin — reflecting the app's purpose: to guard the conscience with the teachings of Scripture, Sacred Tradition, and the pre-conciliar Magisterium.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
-              Custos is not general-purpose AI. It answers from a closed universe of 75 approved Catholic sources — encyclicals, councils, catechisms, canon law, the Doctors of the Church, and approved Marian apparition documents — and it will tell you when a question exceeds that library rather than speculate.
+              Custos is not general-purpose AI. It answers from a closed universe of 72 approved Catholic sources — Sacred Scripture, catechisms, councils, papal encyclicals, canon law, and the Doctors of the Church — and it will tell you when a question exceeds that library rather than speculate.
             </p>
           </div>
 
           <div style={{ padding: "16px 18px", borderBottom: `1px solid ${T.cardBorder}` }}>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 75-Document Universe</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>The 72-Document Universe</div>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: "0 0 10px" }}>
-              Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 34 papal encyclicals and apostolic constitutions from Gregory XVI through Benedict XVI, 5 CDF instructions, 2 codes of canon law, 15 Doctors of the Church, and 5 sets of approved Marian apparition documents.
+              Every response is drawn from a fixed, named set of sources: Sacred Scripture (Douay-Rheims), 4 catechisms, 4 ecumenical councils including Trent and Vatican I, 37 papal encyclicals and apostolic constitutions from Leo XII (1826) through Benedict XVI (2005), 4 motu proprio, 1 papal bull (Quo Primum), 1 apostolic letter (Apostolicae Curae), 1 Holy Office decree (Lamentabili Sane), 5 CDF instructions, 2 codes of canon law, and 15 Doctors of the Church. The Tradition & Rupture pillar additionally engages 5 approved Marian apparitions as scoped private revelation.
             </p>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.65, margin: 0 }}>
               Post-conciliar documents that depart from this tradition are excluded by design. When they are relevant to a question, Custos names them, explains why they fall outside the source universe, and answers from the Tradition.
@@ -5095,49 +5110,49 @@ function TodayTab({ dark, setDark, fszGlobal, setFszGlobal, onSettings }) {
 
 const NOVENAS = [
   {
-    id: "sacred_heart",
-    title: "Sacred Heart of Jesus",
-    subtitle: "Nine Days of Reparation & Love",
-    icon: "❤",
+    id: "conversion_st_paul",
+    title: "Conversion of St. Paul",
+    subtitle: "Apostle to the Gentiles · Patron of Converts",
+    icon: "⚡",
     color: "#7a1c1c",
-    feast: "June (Friday after Corpus Christi)",
-    patron: "Reparation, mercy for sinners, conversion of the lukewarm",
-    intro: "This novena is prayed in honor of the Sacred Heart of Jesus, whose burning love for mankind was revealed to St. Margaret Mary Alacoque. It is traditionally begun nine days before the Feast of the Sacred Heart.",
-    openingPrayer: "O my Jesus, You have said: 'Truly I say to you, ask and you will receive, seek and you will find, knock and the door will be opened to you.' Behold, I knock, I seek, and I ask for the grace of this novena.",
-    closingPrayer: "O Sacred Heart of Jesus, I have asked for many graces, but above all I ask for this: that my heart may be converted and conformed to Thine. Take my heart and possess it entirely. Let it love only what Thou lovest, will only what Thou willest, be united to Thine in all things. Amen.",
+    feast: "January 25",
+    patron: "Converts, missionaries, evangelists, journalists",
+    intro: "Saul of Tarsus was a zealous persecutor of the Church until he was struck down by a light from heaven on the road to Damascus and heard the voice of Christ: 'Saul, Saul, why do you persecute Me?' Blinded for three days, he was baptized by Ananias and became St. Paul, the greatest missionary in the Church's history. His feast commemorates not his death but this sudden, total conversion — making him the natural patron for anyone praying for the conversion of a soul, including their own.",
+    openingPrayer: "O God, who through the preaching of the blessed Apostle Paul didst cause the light of the Gospel to shine upon the whole world, grant, we beseech Thee, that we, who today keep in memory his wonderful conversion, may follow in his footsteps and be made witnesses of Thy truth before all men. Hear my prayer as I begin this novena.",
+    closingPrayer: "O St. Paul, thou who didst persecute Christ before becoming His most zealous servant, I thank thee for thy intercession throughout this novena. Obtain for me, and for those I carry in prayer, the grace of a true and lasting conversion of heart. May no soul for whom I pray be beyond the reach of the grace that reached thee on the road to Damascus. Amen.",
     days: [
-      { theme: "Surrender", prayer: "O Sacred Heart of Jesus, I come before Thee in the poverty of my soul. I have strayed from Thee and relied on my own strength. Today I surrender myself entirely to Thy Heart. Let Thy love be the fire that consumes my pride, my self-sufficiency, and all that stands between my soul and Thee. I trust in Thy mercy. Accept this poor heart as Thine own." },
-      { theme: "Reparation", prayer: "O Sacred Heart of Jesus, wounded by the sins of men, I offer this day in reparation for my own sins and for the sins of those who do not love Thee, who know Thee not, or who have forgotten Thy love. Receive my poor acts of this day as an offering of love. I grieve for every offence against Thee. Have mercy on sinners, and have mercy on me." },
-      { theme: "Confidence", prayer: "O Sacred Heart of Jesus, Thou art my refuge and my strength. The world offers false consolations and empty promises, but Thou alone art steadfast. Today I cast all my anxieties into Thy Heart, trusting in Thy promise to those who consecrate themselves to Thee. Grant me a faith that does not falter when trials come, and a hope rooted not in circumstances but in Thee alone." },
-      { theme: "Charity", prayer: "O Sacred Heart of Jesus, Who art Love itself, enkindle in my heart a fire of true charity — not the sentimental imitation the world offers, but the love that bears all things, endures all things, and seeks not its own. Let me love my neighbor for love of Thee, even when that love is costly. Let my charity be the overflow of my love for Thee." },
-      { theme: "Humility", prayer: "O Sacred Heart of Jesus, meek and humble of Heart, make my heart like unto Thine. I confess that pride is the root of my greatest failures — the pride that resists correction, that seeks its own glory, that finds others' success bitter. Pierce this pride with the wound of Thy humility. Let me decrease that Thou mayest increase in all I do." },
-      { theme: "Perseverance", prayer: "O Sacred Heart of Jesus, Thou who didst persevere even to the agony of the Cross, grant me the grace of holy perseverance. I am weak and easily discouraged. I begin well and fall away. I promise and relapse. Thou knowest my weakness better than I do. Grant me the grace not of never falling, but of always rising — to approach Thy Heart again and again without despair." },
-      { theme: "Purity of Intention", prayer: "O Sacred Heart of Jesus, purify my intentions. Too often I pray with divided attention, work with mixed motives, and serve with one eye on my own reputation. Grant me the singleness of purpose that seeks only Thy glory and the good of souls. Let every act of this day — however small — be done purely for love of Thee." },
-      { theme: "Intercession for Others", prayer: "O Sacred Heart of Jesus, I bring before Thee today all those I love, and all those I find difficult to love. I bring the lukewarm, the lapsed, and the lost. I bring those in suffering of body or soul who have no one to pray for them. Receive this novena day as an offering for them. Let Thy grace reach those who are farthest from Thee, especially those for whom no one prays." },
-      { theme: "Consecration", prayer: "O Sacred Heart of Jesus, on this final day I consecrate myself entirely to Thee — my mind, my will, my heart, my body, my past, my present, and my future. I am Thine. Whatever comes, let me find in Thy Heart my dwelling place. I ask for the grace of final perseverance: that this consecration may not be a moment's devotion but the direction of my whole life. Sacred Heart of Jesus, I place my trust in Thee." },
+      { theme: "Zeal Misdirected", prayer: "O St. Paul, before thy conversion thou wert Saul the persecutor, sincere in thy zeal but blind to the truth, consenting to the stoning of Stephen and dragging Christians to prison. I think today of souls whose energy and conviction are turned against the very faith that could save them. Do not let their sincerity be mistaken for a closed door — thou, too, wert sincere, and thou wert not lost." },
+      { theme: "The Light on the Road", prayer: "O St. Paul, as thou journeyed to Damascus breathing threats against the Church, a light from heaven suddenly shone around thee, and thou wert struck to the ground. Grace does not always come gently. I ask thee to intercede for [name the person you carry in this novena] — that if gentler means have failed, God would send whatever grace is needed, however sudden, however unexpected, to bring them home." },
+      { theme: "Saul, Saul, Why Do You Persecute Me?", prayer: "O St. Paul, Christ did not ask thee why thou persecuted the Church, but why thou persecuted Him — for what is done against His own is done against Him. Help me to see that every soul far from the Faith is a soul Christ Himself loves and calls by name. Let me pray for them not as a project but as souls dear to the Heart of Jesus." },
+      { theme: "Three Days of Blindness", prayer: "O St. Paul, thou wert blind for three days after the vision, neither eating nor drinking, before Ananias came to restore thy sight. Conversion is rarely instantaneous in its effects, even when the grace that begins it is sudden. Grant me patience for the blindness that often follows a first encounter with grace — the confusion, the searching, the slow adjustment to a world now seen differently." },
+      { theme: "Ananias's Obedience", prayer: "O St. Paul, Ananias was afraid to go to thee, knowing thy reputation, yet he obeyed the Lord's command and laid hands on thee, calling thee 'brother.' I pray for the grace to be an Ananias to those I know who are far from the Faith — to overcome my own fear or resentment and extend welcome rather than suspicion when grace begins its work in them." },
+      { theme: "A Complete Reversal", prayer: "O St. Paul, thou who once imprisoned Christians didst thyself become willing to be imprisoned for Christ, and the one who breathed threats against the Church became the one who built her up across the known world. Let me never despair of anyone's conversion as impossible. The same grace that reversed thee entirely can reverse anyone." },
+      { theme: "Tireless Missionary Labor", prayer: "O St. Paul, once converted thou didst not rest — travelling by land and sea, founding churches, writing letters that still form the Church today, enduring shipwreck, imprisonment, and scourging for the sake of souls. Grant me something of thy tirelessness in prayer for those far from the Faith. Let me not grow weary of interceding for a conversion that has not yet come." },
+      { theme: "My Own Petition", prayer: "O St. Paul, I bring before thee now by name the soul whose conversion I seek: [here silently name the person]. Thou knowest better than any saint what it is to be utterly resistant to grace and then utterly transformed by it. Intercede for them before the throne of God, that in His time, and by whatever means He chooses, they may come to know Christ as thou didst come to know Him." },
+      { theme: "I Have Fought the Good Fight", prayer: "O St. Paul, at the end of thy life thou couldst say, 'I have fought the good fight, I have finished the race, I have kept the faith.' On this final day of the novena, I ask for perseverance — both for the soul I pray for, that they may not merely begin but complete the journey to God, and for myself, that I may never cease to hope and pray for them, however long the road." },
     ],
   },
   {
-    id: "guadalupe",
-    title: "Our Lady of Guadalupe",
-    subtitle: "Queen of the Americas · Star of the New Evangelization",
-    icon: "🌹",
+    id: "our_lady_of_lourdes",
+    title: "Our Lady of Lourdes",
+    subtitle: "Immaculate Conception · Patroness of the Sick",
+    icon: "💧",
     color: "#1a2744",
-    feast: "December 12",
-    patron: "The Americas, the unborn, the poor, indigenous peoples",
-    intro: "Our Lady appeared to St. Juan Diego on Tepeyac Hill in 1531, leaving her miraculous image on his tilma. Under her patronage, millions converted to the Faith. This novena is traditionally prayed before her feast on December 12.",
-    openingPrayer: "Our Lady of Guadalupe, by the grace of God you appeared to your servant Juan Diego and left on his cloak your holy image. Hear my prayer as I come before you in this novena, trusting in your powerful intercession before your divine Son.",
-    closingPrayer: "Most Holy Virgin, thou didst choose to reside among us by leaving us thine image. We beseech thee to obtain for us from thy divine Son the graces we have asked during these nine days, but above all, obtain for us the grace of final perseverance in His love. Amen.",
+    feast: "February 11",
+    patron: "The sick, bodily healing, France, World Day of the Sick",
+    intro: "In 1858, the Blessed Virgin Mary appeared eighteen times to a poor and illiterate fourteen-year-old girl, Bernadette Soubirous, in a grotto near Lourdes, France. She identified herself with the words 'I am the Immaculate Conception' and directed Bernadette to a spring whose waters have since been associated with countless physical and spiritual healings. February 11, the anniversary of the first apparition, is kept by the Church as the World Day of the Sick.",
+    openingPrayer: "O Immaculate Virgin Mary, Mother of Mercy, Health of the Sick, Refuge of Sinners, Comfortress of the Afflicted, thou knowest my wants, my troubles, my sufferings. Deign to cast upon me a look of mercy. By appearing at the Grotto of Lourdes thou didst wish it to become a privileged sanctuary where many find comfort in their sorrows and health in their infirmities. Hear my prayer as I begin this novena.",
+    closingPrayer: "O Our Lady of Lourdes, I thank thee for thy maternal care throughout this novena. Obtain for me, if it be God's holy will, the healing of body or soul that I seek, and above all obtain for me the grace to unite whatever suffering remains to the Passion of thy Son. Health of the Sick, pray for us. Amen.",
     days: [
-      { theme: "Her Apparition", prayer: "Our Lady of Guadalupe, you came not to the powerful but to the humble. You appeared to Juan Diego — a poor indigenous man — and showed the world that God's designs are accomplished not through human prestige but through holy simplicity. Grant me the humility to hear God's voice as Juan Diego heard it, even when the message seems beyond my station or ability. Help me to say, as he did, 'Here I am.'" },
-      { theme: "Her Motherhood", prayer: "Our Lady of Guadalupe, you spoke to Juan Diego with the tenderness of a mother: 'Am I not here, I who am your Mother?' I come before you as a child before its mother, bringing before you all my needs — spiritual and temporal. You know what I carry. You know what I fear. Intercede for me before your divine Son, and draw me ever closer to His Sacred Heart." },
-      { theme: "The Unborn", prayer: "Our Lady of Guadalupe, you are the patron of the unborn, depicted in your tilma as a woman with child, bearing the Child of the world's salvation. I pray today for all unborn children — for their protection, for the conversion of those who do not see their dignity, and for mothers and fathers in crisis. Be the advocate of every child who has no voice, as you were the advocate of Juan Diego when no one believed him." },
-      { theme: "Conversion", prayer: "Our Lady of Guadalupe, through your apparition and miraculous image, nine million people came to the Faith in a matter of years. This was not human persuasion but your intercession. I ask today for the conversion of someone I love — someone who has left the Faith, who has never known it, or who knows it but does not live it. Place them under your mantle as you placed the stars on your cloak." },
-      { theme: "The Poor", prayer: "Our Lady of Guadalupe, you came to the poor and the marginalized. You stood with those whom the powerful dismissed. Open my heart to see the poor as you see them — not as burdens but as Christ Himself in disguise (cf. Matthew 25:40). Move me to concrete works of mercy, not merely sympathy. Grant that my charity may have the warmth of a mother's love rather than the coldness of obligation." },
-      { theme: "Faith Under Trial", prayer: "Our Lady of Guadalupe, Juan Diego carried your message even when the bishop did not believe him. He persisted not out of stubbornness but out of obedience to you. Grant me the same perseverance in following God's call even when it is met with skepticism or rejection. When my faith is tested by the disbelief of the world around me, let me return again and again to the certainty of your maternal presence." },
-      { theme: "The Church in the Americas", prayer: "Our Lady of Guadalupe, Queen of the Americas, I pray for the Church in this land — for bishops, priests, and deacons; for catechists, teachers, and parents; for all the faithful who struggle to hand on the Faith. Purify the Church. Strengthen what is weak. Correct what has gone astray. Raise up holy priests and consecrated souls. Let the New Evangelization bear the fruit that your original apparition bore." },
-      { theme: "Trust in Providence", prayer: "Our Lady of Guadalupe, Juan Diego's uncle was gravely ill, and in his grief Juan feared he would miss the message you had entrusted to him. Yet you healed the uncle and fulfilled all your promises. Teach me this trust — that God's plans are not thwarted by our circumstances, that even our detours and disasters are within His providence. Let me not lose heart when the way seems blocked." },
-      { theme: "Her Perpetual Intercession", prayer: "Our Lady of Guadalupe, as I complete this novena I consecrate myself to your maternal care. I ask you to place me and all those I love under your sacred mantle. Intercede for us with your divine Son — not only for the intention of this novena, but throughout our lives and at the hour of our death. Be our advocate before God as you were Juan Diego's advocate before the bishop." },
+      { theme: "The Poor and the Overlooked", prayer: "Our Lady of Lourdes, thou didst choose to appear not to the powerful or the learned but to Bernadette, a poor, sickly, and uneducated child whom the world overlooked. In a world that prizes strength and achievement, teach me that God's favor rests especially on the weak, the sick, and the small. Let me never doubt that my own weakness is a place, not an obstacle, for grace." },
+      { theme: "I Am the Immaculate Conception", prayer: "Our Lady of Lourdes, when Bernadette asked thy name, thou didst answer, 'I am the Immaculate Conception' — proclaiming, four years after the Church had defined this dogma, that heaven had confirmed what Rome had taught. Strengthen my confidence in the teaching authority of the Church, and let this novena deepen my devotion to thy sinless conception." },
+      { theme: "The Hidden Spring", prayer: "Our Lady of Lourdes, thou didst direct Bernadette to scratch at dry ground, from which a spring soon flowed that has brought healing to countless pilgrims since. Show me the hidden springs of grace in my own life — the sources of healing I have not yet uncovered because I have not yet knelt down and dug, in prayer, sacrament, or patient trust." },
+      { theme: "Penance and Conversion", prayer: "Our Lady of Lourdes, thy message to Bernadette was above all a call to prayer and penance for the conversion of sinners. Before I ask for the healing of my body, let me first ask for the healing of my soul. Grant me true sorrow for my sins and the resolve to do penance, that whatever grace I receive may bear fruit in a converted life." },
+      { theme: "For the Sick", prayer: "Our Lady of Lourdes, Health of the Sick, I bring before thee today all who suffer in body — those with illnesses that have no cure, those awaiting diagnosis, those exhausted by chronic pain, those caring for the sick at great cost to themselves. Obtain for them, according to God's will, either the healing of their bodies or the grace to carry their cross with patience and hope." },
+      { theme: "My Own Petition", prayer: "Our Lady of Lourdes, I bring before thee now my own particular need [here silently name the person or intention]. Thou who art called upon by millions who make the pilgrimage to thy grotto each year, hear also this quiet prayer offered far from Lourdes but no less trusting in thy powerful intercession before thy Son." },
+      { theme: "Bernadette's Simplicity", prayer: "Our Lady of Lourdes, Bernadette never claimed to understand fully what she had seen; she simply repeated faithfully what she was told, even under harsh interrogation by priests and officials who doubted her. Grant me her simplicity — a faith that does not need every question answered before it trusts, and the courage to hold to what I have received even when others are skeptical." },
+      { theme: "Water and the Sacraments", prayer: "Our Lady of Lourdes, the water of thy spring points beyond itself to the living water of grace found above all in the sacraments — Baptism, Confession, the Eucharist, and Anointing of the Sick. Let my devotion to Lourdes never become a substitute for the sacramental life of the Church, but always a doorway that leads more deeply into it." },
+      { theme: "Comfortress of the Afflicted", prayer: "Our Lady of Lourdes, on this final day I entrust to thee not only my own petition but every soul who suffers without hope, without comfort, or without anyone to pray for them. Be, as thou art titled, the Comfortress of the Afflicted to each one. Health of the Sick, pray for us now and at the hour of our death." },
     ],
   },
   {
@@ -5164,72 +5179,49 @@ const NOVENAS = [
     ],
   },
   {
-    id: "padre_pio",
-    title: "St. Padre Pio of Pietrelcina",
-    subtitle: "Stigmatist · Confessor of Millions",
-    icon: "🩸",
+    id: "divine_mercy",
+    title: "Divine Mercy",
+    subtitle: "Nine Days of Trust in God's Mercy",
+    icon: "💧",
     color: "#7a1c1c",
-    feast: "September 23",
-    patron: "Civil defense volunteers, adolescents, stress relief, the sick",
-    intro: "St. Padre Pio (1887–1968) was a Capuchin Franciscan priest who bore the wounds of Christ in his body for fifty years. He spent up to eighteen hours a day in the confessional and is reported to have miraculously read souls. His counsel: 'Pray, hope, and don't worry.'",
-    openingPrayer: "O St. Padre Pio, wounded with the five wounds of Christ, I come before thee with confidence. Thou who spent thy life bringing souls to God through the confessional and through thy suffering — look upon me with compassion and bring my petition before the throne of grace.",
-    closingPrayer: "Dear Padre Pio, as I end this novena I ask thee to continue to intercede for me. Teach me thy counsel: to pray, to hope, and not to worry. Obtain for me a faith that does not flinch and a love that does not count the cost. Amen.",
+    feast: "Divine Mercy Sunday (Second Sunday of Easter)",
+    patron: "Sinners, the dying, those in despair of God's mercy",
+    intro: "The Divine Mercy devotion was given in a series of visions in the 1930s. Our Lord asked that a Feast of Divine Mercy be observed on the Sunday after Easter and that a novena begin on Good Friday. Each day is prayed for a different group of souls.",
+    openingPrayer: "O Jesus, eternal truth, our life, I call upon Thee and I beg Thy mercy for poor sinners. O sweetest Heart of Jesus, full of pity and compassion, I implore Thy mercy for poor sinners. Amen.",
+    closingPrayer: "O Blood and Water that gushed forth from the Heart of Jesus as a fount of mercy for us — I trust in Thee. Jesus, I trust in Thee. Make of me a worthy vessel of Thy mercy, that I may bring others to trust in Thee as I have learned to trust. Amen.",
     days: [
-      { theme: "The Stigmata", prayer: "O St. Padre Pio, God chose thee to be configured to the suffering Christ in a visible and extraordinary way. The wounds of Jesus appeared in thy flesh. I do not ask for extraordinary gifts, but I ask to share in what they signify: a true participation in Christ's redemptive suffering. Let me embrace the crosses of my daily life not with resentment but with the offering of love, united to Christ's Passion." },
-      { theme: "The Confessional", prayer: "O St. Padre Pio, thou spent more of thy priestly life in the confessional than in any other ministry. Thou had a supernatural knowledge of souls and led thousands to true repentance. Intercede for me that I may approach the Sacrament of Penance with genuine contrition — not fear of punishment but grief for having offended a God who is all love. Obtain for me a good confessor and the grace of a thorough, humble confession." },
-      { theme: "His Prayer Life", prayer: "O St. Padre Pio, thy days began before dawn and were spent almost entirely in prayer. The Mass lasted hours for thee, because thou wast truly present at Calvary. Intercede for me who am so easily distracted and discouraged in prayer. Obtain for me a love of prayer that is not dependent on feeling but rooted in faith — the faith that God hears, and that prayer is never wasted." },
-      { theme: "Pray, Hope, Don't Worry", prayer: "O St. Padre Pio, thy counsel was simple and profound: 'Pray, hope, and don't worry.' I confess that worry is one of my greatest failings — I carry tomorrow's burdens today, and multiply suffering by anticipation. Help me to pray instead of panic, to hope instead of despair, to trust instead of control. Let thy counsel become the pattern of my days." },
-      { theme: "His Suffering", prayer: "O St. Padre Pio, thou suffered not only the physical wounds of the stigmata but also spiritual darkness, demonic attacks, and misunderstanding from ecclesiastical superiors who restricted thy ministry for years. Thou endured all of this in obedience and without bitterness. When I suffer — in body, soul, or relationships — let me look to thy example and find in it the courage to offer rather than complain." },
-      { theme: "His Love for the Mass", prayer: "O St. Padre Pio, thou once said it would be easier for the world to survive without the sun than without the Holy Sacrifice of the Mass. Help me to understand what thou understood — that the Mass is not merely a ritual but the same sacrifice of Calvary, made present on the altar. Rekindle in me a reverence for the Mass, a desire to attend, a gratitude for this gift that no one in heaven can receive as we can." },
-      { theme: "Intercession for the Sick", prayer: "O St. Padre Pio, who bore sickness in thy own body and ministered to the sick throughout thy life — intercede today for all those who are ill in body, in mind, and in spirit. I bring before thee the sick persons I love and those who have no one to pray for them. Touch them with the healing grace of God, and if physical healing is not His will, grant them the deeper healing of a soul at peace with God." },
-      { theme: "The Spiritual Battle", prayer: "O St. Padre Pio, thou knew the spiritual battle as few saints have — thou encountered the devil directly and physically, yet wast not overcome, because thy trust in God was complete. I ask thy intercession in my own spiritual struggles: against the temptations I keep falling into, against the darkness that descends on my soul, against discouragement and despair. Arm me with prayer, the sacraments, and holy boldness." },
-      { theme: "His Intercession for Souls", prayer: "O St. Padre Pio, intercede for me as thou didst for so many souls who came to thee burdened and left consoled. I ask to be among those for whom thou prayest — through this novena and through my desire to imitate thy love for God. Intercede for me at the hour of my death, and do not cease to pray for me until I stand safely before the throne of God." },
+      { theme: "All Mankind, Especially Sinners", prayer: "Most merciful Jesus, whose very nature it is to have compassion on us and to forgive us — do not look upon our sins, but upon the trust we place in Thy infinite goodness. Receive us all into the abode of Thy most compassionate Heart. Never let us escape from It. We beg this of Thee by Thy love which unites Thee to the Father and the Holy Spirit. O omnipotence of Divine Mercy, help us in all our needs." },
+      { theme: "Priests and Religious", prayer: "Most merciful Jesus, from whom comes all that is good, increase Thy grace in men and women consecrated to Thy service. Grant them the light of Thy wisdom and protect them with Thy strength. Guard them from the world's contamination, and give them the grace of a burning charity. May the power of Thy mercy accompany them wherever they go." },
+      { theme: "Devout and Faithful Souls", prayer: "Most merciful Jesus, Thou dost bestow special graces on those who have given themselves to a life of fidelity and love. Grant that those who serve Thee with the constancy of daily devotion may become ever more deeply united to Thee. Strengthen them in times of trial, console them in darkness, and let Thy mercy sustain them as they sustain others." },
+      { theme: "Those Who Do Not Yet Know God", prayer: "Most compassionate Jesus, Thou art the Light of the whole world. Receive into the abode of Thy most compassionate Heart the souls of those who do not yet know Thee. Let the rays of Thy grace enlighten them that they, too, may glorify the generosity of Thy mercy for endless ages. May they come to know the God who loves them before they made any move toward Him." },
+      { theme: "Separated Brethren", prayer: "Most merciful Jesus, goodness itself, Thou dost not refuse light to those who seek it of Thee. Receive into the abode of Thy most compassionate Heart those souls who have separated from Thy Church. Draw them by Thy light into the unity of the Church, and do not let them escape from the abode of Thy most compassionate Heart." },
+      { theme: "The Meek and Humble", prayer: "Most merciful Jesus, Thou Thyself said: 'Learn from Me for I am meek and humble of Heart.' Receive into the abode of Thy most compassionate Heart all meek and humble souls and the souls of little children. These souls send all heaven into ecstasy, and they are the Father's favorites — they are a fragrant bouquet before the throne of God." },
+      { theme: "Those Who Venerate the Divine Mercy", prayer: "Most merciful Jesus, whose Heart is Love itself, receive into the abode of Thy most compassionate Heart the souls of those who particularly venerate and glorify the greatness of Thy mercy. These souls are mighty with the very power of God Himself. In the midst of all afflictions and adversities they go forward confident in God's mercy — united to Thee they carry all of mankind on their shoulders." },
+      { theme: "The Souls in Purgatory", prayer: "Most merciful Jesus, Thou Thyself have said that Thou desire mercy. Behold, I bring into the abode of Thy most compassionate Heart the souls in Purgatory — souls who are very dear to Thee, and yet who must make retribution to Thy justice. May the streams of blood and water which gushed forth from Thy Heart put out the flames of Purgatory." },
+      { theme: "Lukewarm Souls", prayer: "Most compassionate Jesus, Thou art compassion itself. I bring lukewarm souls into the abode of Thy most compassionate Heart. In this fire of pure love let these tepid souls — who, like corpses, fill Thee with such deep loathing — be once again set aflame. O most compassionate Jesus, exercise the omnipotence of Thy mercy and draw them into the very ardour of Thy love." },
     ],
   },
   {
-    id: "josemaria",
-    title: "St. Josemaría Escrivá",
-    subtitle: "Founder of Opus Dei · Apostle of Ordinary Life",
-    icon: "✏",
+    id: "our_lady_of_fatima",
+    title: "Our Lady of Fatima",
+    subtitle: "Our Lady of the Rosary · Call to Penance and Peace",
+    icon: "☀",
     color: "#1a2744",
-    feast: "June 26",
-    patron: "Opus Dei, diocesan priests, ordinary Christians seeking holiness",
-    intro: "St. Josemaría Escrivá (1902–1975) founded Opus Dei in 1928 after receiving a vision of the universal call to holiness through ordinary work and daily life. He was canonized by St. John Paul II in 2002. His central insight: the street, the office, and the kitchen are places of sanctity.",
-    openingPrayer: "O St. Josemaría, you showed the world that holiness is not reserved for monasteries but is found in the middle of the world — in work, in friendship, in family, in the texture of ordinary days. I ask your intercession as I pray this novena.",
-    closingPrayer: "St. Josemaría, obtain for me the grace to see God in the midst of my ordinary life — to sanctify my work, to love those around me with supernatural charity, and to bring Christ to every corner of my world. Help me to begin again whenever I fall, with the confidence of a child before a loving Father. Amen.",
+    feast: "May 13",
+    patron: "Peace, the rosary, Portugal, the conversion of Russia",
+    intro: "In 1917, the Blessed Virgin Mary appeared six times to three shepherd children — Lucia, Francisco, and Jacinta — near Fatima, Portugal, calling the world to prayer, penance, and the daily recitation of the Rosary for peace and the conversion of sinners. The apparitions culminated on October 13 in the Miracle of the Sun, witnessed by tens of thousands. May 13, the anniversary of the first apparition, is kept as her principal feast.",
+    openingPrayer: "O Most Holy Virgin Mary, Queen of the Most Holy Rosary, who at Fatima didst reveal to the shepherd children the treasures of grace hidden in the recitation of the Rosary, inspire my heart with a sincere love for this devotion, that by meditating on the Mysteries of our Redemption I may reap the fruit and obtain the graces I ask of thee in this novena.",
+    closingPrayer: "O Our Lady of Fatima, I thank thee for thy maternal warnings and thy call to prayer and penance throughout this novena. Obtain for me a deeper love for the Rosary, a spirit of true reparation, and, if it be God's will, the grace I have asked of thee. My Immaculate Heart will be thy refuge and the way that will lead thee to God. Amen.",
     days: [
-      { theme: "The Universal Call to Holiness", prayer: "O St. Josemaría, you heard from God the truth that the world had forgotten: every baptized soul is called to holiness. Not just priests and religious, but lawyers, mothers, students, workers — all. This is not an extraordinary calling but the ordinary consequence of Baptism. Help me to take my own call to holiness seriously, and to stop treating it as an ideal for others." },
-      { theme: "Sanctifying Ordinary Work", prayer: "O St. Josemaría, you taught that work is a participation in God's creative act and can be offered as prayer. The key is not what we do but the love with which we do it. Help me to bring this spirit to my work today — to do it well, as unto God, with attention and love. Let my ordinary tasks become an unbroken thread of prayer woven through the day." },
-      { theme: "Divine Filiation", prayer: "O St. Josemaría, the cornerstone of your teaching was divine filiation — the knowledge that we are truly children of God, not slaves or distant admirers. You prayed 'Abba, Father' with the simplicity and confidence of a beloved child. Grant me this same consciousness: that God is not an abstract principle or a distant judge but a Father who loves me personally and infinitely." },
-      { theme: "Unity of Life", prayer: "O St. Josemaría, you taught unity of life — that faith is not a compartment separate from work, family, and leisure, but the animating principle of everything. I confess that I often live a divided life: religious on Sundays, secular the rest of the week. Help me to weave faith into the whole fabric of my existence, so that there is no act, however small, that is not offered to God." },
-      { theme: "Apostolate of Friendship", prayer: "O St. Josemaría, you taught that the most natural apostolate is friendship — that souls are won not by argument but by the contagion of a genuine Christian life. Give me a holy zeal for the souls of those around me — not the zeal that lectures and moralizes, but the zeal that serves, listens, and loves until others ask what makes us different." },
-      { theme: "The Cross", prayer: "O St. Josemaría, you saw in the Cross not an obstacle but the very shape of the Christian life. You taught your sons and daughters to embrace contradiction, failure, illness, and humiliation as the royal road to union with Christ. Grant me this perspective when my own cross grows heavy: that it is not a sign of abandonment but of intimacy with a God who was not ashamed to die." },
-      { theme: "Humility & Beginning Again", prayer: "O St. Josemaría, one of your most consoling teachings was the call to begin again — that the response to every fall is not despair but a humble new beginning, with the cheerfulness of a child who falls learning to walk. I have fallen many times and grown weary of my own weakness. Grant me the grace to rise once more, without self-pity, and to approach God with the trust of a child, not the shame of a slave." },
-      { theme: "Love for the Church", prayer: "O St. Josemaría, you had a burning, filial love for the Church and for the Pope. Intercede today for the Church: for her unity, her fidelity to Tradition, and her courage in the face of the world's hostility and internal division. Strengthen the love for the Church in my own heart, that I may serve her without bitterness and love her without illusion." },
-      { theme: "Interior Life", prayer: "O St. Josemaría, everything in your teaching rested on the foundation of a serious interior life — daily Mass when possible, mental prayer, examination of conscience, frequent Confession, the Rosary. Help me to order my days so that these practices have their proper place — not squeezed into the margins but given the time they deserve as the most important acts of my day." },
-    ],
-  },
-  {
-    id: "st_jude",
-    title: "St. Jude Thaddaeus",
-    subtitle: "Patron of Hopeless Cases",
-    icon: "🕯",
-    color: "#7a1c1c",
-    feast: "October 28",
-    patron: "Hopeless cases, desperate situations, hospitals, the forgotten",
-    intro: "St. Jude Thaddaeus was one of the Twelve Apostles, cousin of Our Lord, and author of the Epistle of Jude. He is invoked as the patron of hopeless and desperate cases — perhaps because, sharing a name with the traitor Judas, he was often overlooked by those seeking heavenly help.",
-    openingPrayer: "O most holy Apostle St. Jude, faithful servant and friend of Jesus, the Church honors and invokes thee universally as the patron of hopeless cases — of things despaired of. Pray for me who am so miserable and helpless. I promise to honor thee as my patron and to make known thy glorious intercession.",
-    closingPrayer: "O glorious Apostle St. Jude, I thank thee for hearing my prayer. Grant that I may never lose hope in God's mercy, no matter how desperate my circumstances appear. Intercede for me that I may persevere in faith, in hope, and in love until I come at last to see the God whom thou didst serve and now behold face to face. Amen.",
-    days: [
-      { theme: "Hope in God Alone", prayer: "O St. Jude, I come to thee in a situation that seems hopeless to me, and perhaps it is — by human measure. But God's measure is different. What is impossible with men is possible with God (Luke 18:27). Grant me a hope that is not anchored in circumstances but in the character of God Himself — a God who raises the dead and calls into being what does not exist (Romans 4:17)." },
-      { theme: "His Apostolic Witness", prayer: "O St. Jude, Apostle and martyr, thou preached the Gospel at the cost of thy life. Thou died rather than deny the Christ thou had walked with and touched. Grant me a faith that has the same weight and seriousness — not a comfortable faith that costs nothing, but a faith that is worth dying for and therefore worth living for. Strengthen my resolve to hold fast to the faith whatever it costs." },
-      { theme: "Contending for the Faith", prayer: "O St. Jude, whose epistle urges us to contend earnestly for the faith once delivered to the saints (Jude 1:3), intercede for me in my own struggles to hold and defend the faith. I face the quiet apostasy of a culture that has abandoned God. Grant me a holy combativeness for the truth, joined with the charity that wins souls." },
-      { theme: "In Desperate Need", prayer: "O St. Jude, I bring before thee now the specific need that has brought me to this novena — the situation I cannot resolve, the suffering I cannot bear, the person I cannot reach, the sin I cannot break. I do not demand a miracle, but I ask for one if it be God's will. And if not, I ask for the grace to bear my cross with the same fidelity that thou bore thine." },
-      { theme: "The Forgotten", prayer: "O St. Jude, patron of those who feel overlooked and forgotten, intercede for all who cry out and are not heard — the chronically ill, the imprisoned, the elderly, the abandoned. I pray today not only for my own needs but for all those in desperate situations who have no one to advocate for them. Let thy powerful intercession reach those who feel furthest from God's mercy." },
-      { theme: "Mercy for Sinners", prayer: "O St. Jude, the mercy of God is the last hope of sinners — including me. I have sinned gravely, and sometimes my sins seem to multiply faster than my repentance. Yet God's mercy is greater than my sin. Remind me that God is able to keep us from stumbling and to present us faultless before His glory (Jude 1:24). I cling to that promise today." },
-      { theme: "Fidelity in Small Things", prayer: "O St. Jude, the hopeless cases that most defeat us are often not dramatic crises but the slow erosion of daily fidelity — prayers abandoned, resolutions broken, small compromises accumulated. Intercede for me that I may be faithful in small things, trusting that great holiness is built one small act of love at a time. Let me not despair of the slow work of sanctification." },
-      { theme: "Protection from Despair", prayer: "O St. Jude, despair is the most dangerous sin — for it holds that one is beyond God's mercy, which is a lie. Protect me from this spiritual catastrophe. When my soul grows dark and I am tempted to believe that God has abandoned me or that my case is truly hopeless, remind me of thy patronage: thou art the saint of hopeless cases precisely because no case is truly hopeless for God." },
-      { theme: "Thanksgiving and Trust", prayer: "O St. Jude, as I complete this novena I thank thee whether or not I have received what I asked for. God's ways are not my ways. Perhaps He has given me something better than what I asked — perhaps He has given me closer union with Himself through this trial. I place my petition at thy feet and leave it there. Intercede for me that whatever God's answer, I will receive it with faith, with hope, and with love." },
+      { theme: "Appearing to the Little Ones", prayer: "Our Lady of Fatima, thou didst not appear to bishops or scholars but to three shepherd children tending sheep in a field — Lucia only ten, Francisco nine, and Jacinta but seven. Teach me the childlike simplicity of heart that made them ready to receive thee, and let me not think myself too important, too busy, or too sophisticated to hear what heaven wishes to say." },
+      { theme: "Do You Wish to Offer Yourselves to God?", prayer: "Our Lady of Fatima, at thy first apparition thou didst ask the children if they were willing to offer themselves to God and to bear whatever sufferings He might send, as an act of reparation for sin and a plea for the conversion of sinners. I ask for the grace to answer this question as they did — with an unhesitating yes — and to offer my own small sufferings for the same intention." },
+      { theme: "Prayer, Especially the Rosary", prayer: "Our Lady of Fatima, thy constant instruction at every apparition was the same: pray the Rosary every day. Amid all the devotions of the Church, thou didst single out this simple prayer as the great weapon against evil. Renew in me a daily fidelity to the Rosary, not as a burden but as time spent walking through the mysteries of Christ at thy side." },
+      { theme: "Penance for Sinners", prayer: "Our Lady of Fatima, thou didst show the children a vision of hell and tell them that souls go there for want of someone to pray and sacrifice for them. I have grown too comfortable, too unwilling to deny myself even small things for the sake of souls. Grant me a renewed spirit of penance — not for its own sake, but as an act of love for sinners who have no one else praying for them." },
+      { theme: "The Immaculate Heart", prayer: "Our Lady of Fatima, thou didst show the children thy Immaculate Heart, encircled with thorns, and promise that this Heart would be their refuge and the way that would lead them to God. I consecrate this day to thy Immaculate Heart. Draw my own heart to resemble thine — pierced by sorrow for sin, yet overflowing with love and trust in God." },
+      { theme: "For Peace in the World", prayer: "Our Lady of Fatima, thou didst warn that if thy requests were not heeded, a still greater war would follow, and thou didst ask for prayer and the consecration of the world to thy Immaculate Heart as the path to peace. I pray today for peace among nations at war and division within families, entrusting to thee every conflict I cannot resolve on my own." },
+      { theme: "The Miracle of the Sun", prayer: "Our Lady of Fatima, on October 13, 1917, thou didst grant the great sign thou hadst promised — the sun appearing to spin and plunge toward the earth before tens of thousands of witnesses, believers and skeptics alike, so that all might believe. Strengthen my own faith with the same confidence those witnesses received, even though I have not seen what they saw." },
+      { theme: "Jacinta and Francisco's Fidelity", prayer: "Our Lady of Fatima, Francisco and Jacinta died within a few years of the apparitions, having lived out thy requests with heroic fidelity even as children, and were canonized as saints. Let their short lives be a reproach to my excuses. If children could live thy message so faithfully, grant me the resolve to do the same, whatever years remain to me." },
+      { theme: "My Own Petition and Consecration", prayer: "Our Lady of Fatima, on this final day I bring before thee my own particular need [here silently name the person or intention], and I renew my consecration to thy Immaculate Heart. Be, as thou hast promised, my refuge in every trial, and lead me, as thou dost lead all who trust in thee, safely to thy Son." },
     ],
   },
   {
@@ -5256,6 +5248,167 @@ const NOVENAS = [
     ],
   },
   {
+    id: "sacred_heart",
+    title: "Sacred Heart of Jesus",
+    subtitle: "Nine Days of Reparation & Love",
+    icon: "❤",
+    color: "#7a1c1c",
+    feast: "June (Friday after Corpus Christi)",
+    patron: "Reparation, mercy for sinners, conversion of the lukewarm",
+    intro: "This novena is prayed in honor of the Sacred Heart of Jesus, whose burning love for mankind was revealed to St. Margaret Mary Alacoque. It is traditionally begun nine days before the Feast of the Sacred Heart.",
+    openingPrayer: "O my Jesus, You have said: 'Truly I say to you, ask and you will receive, seek and you will find, knock and the door will be opened to you.' Behold, I knock, I seek, and I ask for the grace of this novena.",
+    closingPrayer: "O Sacred Heart of Jesus, I have asked for many graces, but above all I ask for this: that my heart may be converted and conformed to Thine. Take my heart and possess it entirely. Let it love only what Thou lovest, will only what Thou willest, be united to Thine in all things. Amen.",
+    days: [
+      { theme: "Surrender", prayer: "O Sacred Heart of Jesus, I come before Thee in the poverty of my soul. I have strayed from Thee and relied on my own strength. Today I surrender myself entirely to Thy Heart. Let Thy love be the fire that consumes my pride, my self-sufficiency, and all that stands between my soul and Thee. I trust in Thy mercy. Accept this poor heart as Thine own." },
+      { theme: "Reparation", prayer: "O Sacred Heart of Jesus, wounded by the sins of men, I offer this day in reparation for my own sins and for the sins of those who do not love Thee, who know Thee not, or who have forgotten Thy love. Receive my poor acts of this day as an offering of love. I grieve for every offence against Thee. Have mercy on sinners, and have mercy on me." },
+      { theme: "Confidence", prayer: "O Sacred Heart of Jesus, Thou art my refuge and my strength. The world offers false consolations and empty promises, but Thou alone art steadfast. Today I cast all my anxieties into Thy Heart, trusting in Thy promise to those who consecrate themselves to Thee. Grant me a faith that does not falter when trials come, and a hope rooted not in circumstances but in Thee alone." },
+      { theme: "Charity", prayer: "O Sacred Heart of Jesus, Who art Love itself, enkindle in my heart a fire of true charity — not the sentimental imitation the world offers, but the love that bears all things, endures all things, and seeks not its own. Let me love my neighbor for love of Thee, even when that love is costly. Let my charity be the overflow of my love for Thee." },
+      { theme: "Humility", prayer: "O Sacred Heart of Jesus, meek and humble of Heart, make my heart like unto Thine. I confess that pride is the root of my greatest failures — the pride that resists correction, that seeks its own glory, that finds others' success bitter. Pierce this pride with the wound of Thy humility. Let me decrease that Thou mayest increase in all I do." },
+      { theme: "Perseverance", prayer: "O Sacred Heart of Jesus, Thou who didst persevere even to the agony of the Cross, grant me the grace of holy perseverance. I am weak and easily discouraged. I begin well and fall away. I promise and relapse. Thou knowest my weakness better than I do. Grant me the grace not of never falling, but of always rising — to approach Thy Heart again and again without despair." },
+      { theme: "Purity of Intention", prayer: "O Sacred Heart of Jesus, purify my intentions. Too often I pray with divided attention, work with mixed motives, and serve with one eye on my own reputation. Grant me the singleness of purpose that seeks only Thy glory and the good of souls. Let every act of this day — however small — be done purely for love of Thee." },
+      { theme: "Intercession for Others", prayer: "O Sacred Heart of Jesus, I bring before Thee today all those I love, and all those I find difficult to love. I bring the lukewarm, the lapsed, and the lost. I bring those in suffering of body or soul who have no one to pray for them. Receive this novena day as an offering for them. Let Thy grace reach those who are farthest from Thee, especially those for whom no one prays." },
+      { theme: "Consecration", prayer: "O Sacred Heart of Jesus, on this final day I consecrate myself entirely to Thee — my mind, my will, my heart, my body, my past, my present, and my future. I am Thine. Whatever comes, let me find in Thy Heart my dwelling place. I ask for the grace of final perseverance: that this consecration may not be a moment's devotion but the direction of my whole life. Sacred Heart of Jesus, I place my trust in Thee." },
+    ],
+  },
+  {
+    id: "josemaria",
+    title: "St. Josemaría Escrivá",
+    subtitle: "Founder of Opus Dei · Apostle of Ordinary Life",
+    icon: "✏",
+    color: "#1a2744",
+    feast: "June 26",
+    patron: "Opus Dei, diocesan priests, ordinary Christians seeking holiness",
+    intro: "St. Josemaría Escrivá (1902–1975) founded Opus Dei in 1928 after receiving a vision of the universal call to holiness through ordinary work and daily life. He was canonized by St. John Paul II in 2002. His central insight: the street, the office, and the kitchen are places of sanctity.",
+    openingPrayer: "O St. Josemaría, you showed the world that holiness is not reserved for monasteries but is found in the middle of the world — in work, in friendship, in family, in the texture of ordinary days. I ask your intercession as I pray this novena.",
+    closingPrayer: "St. Josemaría, obtain for me the grace to see God in the midst of my ordinary life — to sanctify my work, to love those around me with supernatural charity, and to bring Christ to every corner of my world. Help me to begin again whenever I fall, with the confidence of a child before a loving Father. Amen.",
+    days: [
+      { theme: "The Universal Call to Holiness", prayer: "O St. Josemaría, you heard from God the truth that the world had forgotten: every baptized soul is called to holiness. Not just priests and religious, but lawyers, mothers, students, workers — all. This is not an extraordinary calling but the ordinary consequence of Baptism. Help me to take my own call to holiness seriously, and to stop treating it as an ideal for others." },
+      { theme: "Sanctifying Ordinary Work", prayer: "O St. Josemaría, you taught that work is a participation in God's creative act and can be offered as prayer. The key is not what we do but the love with which we do it. Help me to bring this spirit to my work today — to do it well, as unto God, with attention and love. Let my ordinary tasks become an unbroken thread of prayer woven through the day." },
+      { theme: "Divine Filiation", prayer: "O St. Josemaría, the cornerstone of your teaching was divine filiation — the knowledge that we are truly children of God, not slaves or distant admirers. You prayed 'Abba, Father' with the simplicity and confidence of a beloved child. Grant me this same consciousness: that God is not an abstract principle or a distant judge but a Father who loves me personally and infinitely." },
+      { theme: "Unity of Life", prayer: "O St. Josemaría, you taught unity of life — that faith is not a compartment separate from work, family, and leisure, but the animating principle of everything. I confess that I often live a divided life: religious on Sundays, secular the rest of the week. Help me to weave faith into the whole fabric of my existence, so that there is no act, however small, that is not offered to God." },
+      { theme: "Apostolate of Friendship", prayer: "O St. Josemaría, you taught that the most natural apostolate is friendship — that souls are won not by argument but by the contagion of a genuine Christian life. Give me a holy zeal for the souls of those around me — not the zeal that lectures and moralizes, but the zeal that serves, listens, and loves until others ask what makes us different." },
+      { theme: "The Cross", prayer: "O St. Josemaría, you saw in the Cross not an obstacle but the very shape of the Christian life. You taught your sons and daughters to embrace contradiction, failure, illness, and humiliation as the royal road to union with Christ. Grant me this perspective when my own cross grows heavy: that it is not a sign of abandonment but of intimacy with a God who was not ashamed to die." },
+      { theme: "Humility & Beginning Again", prayer: "O St. Josemaría, one of your most consoling teachings was the call to begin again — that the response to every fall is not despair but a humble new beginning, with the cheerfulness of a child who falls learning to walk. I have fallen many times and grown weary of my own weakness. Grant me the grace to rise once more, without self-pity, and to approach God with the trust of a child, not the shame of a slave." },
+      { theme: "Love for the Church", prayer: "O St. Josemaría, you had a burning, filial love for the Church and for the Pope. Intercede today for the Church: for her unity, her fidelity to Tradition, and her courage in the face of the world's hostility and internal division. Strengthen the love for the Church in my own heart, that I may serve her without bitterness and love her without illusion." },
+      { theme: "Interior Life", prayer: "O St. Josemaría, everything in your teaching rested on the foundation of a serious interior life — daily Mass when possible, mental prayer, examination of conscience, frequent Confession, the Rosary. Help me to order my days so that these practices have their proper place — not squeezed into the margins but given the time they deserve as the most important acts of my day." },
+    ],
+  },
+  {
+    id: "st_benedict",
+    title: "St. Benedict",
+    subtitle: "Father of Western Monasticism · Patron Against Evil",
+    icon: "☩",
+    color: "#1a2744",
+    feast: "July 11",
+    patron: "Europe, students, monks, farm workers, protection from poison and evil spirits",
+    intro: "St. Benedict of Nursia (c. 480–547) left the corruption of Rome as a young man to live as a hermit in a cave at Subiaco, and from that solitude went on to found twelve monasteries and write the Rule of St. Benedict, the foundation of Western monastic life. He is best known today for the medal that bears his image — inscribed with 'Vade retro Satana' ('Begone, Satan') and long used by the faithful for protection against evil, temptation, and poison. He was declared Patron of Europe by Pope Paul VI in 1964.",
+    openingPrayer: "O St. Benedict, thou who didst overcome the assaults of the evil one through prayer, penance, and steadfast trust in God, I place myself under thy powerful protection as I begin this novena. Shield me and those I love from every snare of the enemy, and obtain for me the grace I now ask of thee.",
+    closingPrayer: "O St. Benedict, I thank thee for thy protection and intercession throughout this novena. May the sign of thy holy cross be my defense in every temptation, and may I never wander far from the God who called thee out of the world and into deeper union with Himself. Ora et labora — pray and work — be the rhythm of my life from this day forward. Amen.",
+    days: [
+      { theme: "Leaving the World", prayer: "O St. Benedict, as a young man thou wert sent to study in Rome, but disgusted by the vice and corruption thou saw there, thou didst leave everything behind to live alone in a cave at Subiaco. Grant me the courage to recognize what in my own life draws me toward corruption, and the will to leave it, even when leaving costs me comfort or belonging." },
+      { theme: "Victory Over Temptation", prayer: "O St. Benedict, when a fierce temptation of the flesh assailed thee in thy solitude, thou didst throw thyself into a thicket of thorns and nettles, choosing the pain of the body over the ruin of the soul, and the temptation left thee never to return with such force. Grant me thy same resolve — to take whatever drastic measure is needed rather than yield to sin, and never to underestimate what my own will can accomplish with God's grace." },
+      { theme: "Protection From Poison and Evil", prayer: "O St. Benedict, when jealous monks twice attempted to poison thee — once in bread, once in wine — thou wert preserved by God's providence, the raven carrying away the poisoned loaf and the cup shattering at thy blessing. Through thy intercession and the medal that bears thy image, I ask protection from every hidden harm, every malicious intent, and every snare the evil one sets before me and those I love." },
+      { theme: "Vade Retro Satana", prayer: "O St. Benedict, the medal struck in thy honor bears the words 'Vade retro Satana' — Begone, Satan — a command of confidence against the enemy of souls. I make this prayer my own today. Whatever spiritual attack, temptation, or oppression I face, let me meet it not with fear but with the same confident authority that Christ gives to those who call upon His Cross." },
+      { theme: "Founding Monte Cassino", prayer: "O St. Benedict, after years of solitude thou didst found the great monastery of Monte Cassino, gathering monks into a stable community ordered entirely toward God. Show me the value of stability and community in my own spiritual life — that holiness is rarely achieved alone, and that I need others, ordered rightly toward God, to help me persevere." },
+      { theme: "Ora et Labora", prayer: "O St. Benedict, thy Rule ordered the monk's whole day around prayer and work, ora et labora, teaching that both are offerings to God when done with the right spirit. Help me to see my own daily labor — however ordinary — as something to be sanctified, and to guard time for prayer as jealously as I guard time for anything else that matters to me." },
+      { theme: "The Rule of Obedience and Humility", prayer: "O St. Benedict, thy Rule places obedience and humility at the very foundation of the spiritual life, teaching that the proud man cannot receive the grace that flows so freely to the humble. Root out in me whatever pride resists correction or authority rightly exercised, and grant me the humility that makes room for God to work." },
+      { theme: "Scholastica, His Sister", prayer: "O St. Benedict, thy twin sister Scholastica, a woman of equal holiness, once begged thee to stay and speak with her of heavenly things through the night, and when thou didst refuse, her prayers brought forth a storm that kept thee there until dawn — because, as thou thyself said, she loved more. Teach me that love sometimes sees further than rule and reason, and that the claims of holy love deserve to be honored." },
+      { theme: "Patron of Europe", prayer: "O St. Benedict, declared Patron of Europe for the civilization thy monasteries preserved and built through centuries of upheaval, thy legacy endures wherever the Rule is kept and wherever thy medal is worn in faith. On this final day, I ask thy protection over my own household, my own work, and my own soul, that I may build something lasting on the same foundation of prayer thou didst lay at Subiaco and Monte Cassino." },
+    ],
+  },
+  {
+    id: "ezequiel_moreno",
+    title: "St. Ezequiel Moreno",
+    subtitle: "Bishop & Missionary · Patron of Cancer Patients",
+    icon: "🕊",
+    color: "#7a1c1c",
+    feast: "August 19",
+    patron: "Cancer patients, the missions, Augustinian Recollects",
+    intro: "St. Ezequiel Moreno (1848–1906) was a Spanish Augustinian Recollect who spent fifteen years as a missionary priest in the Philippines before serving as Bishop of Pasto, Colombia, during years of civil war. He died of cancer, the very illness for which he is now invoked as patron. He was canonized in 1992 by St. John Paul II.",
+    openingPrayer: "O St. Ezequiel Moreno, faithful missionary and shepherd, thou who didst carry the Gospel across oceans and didst bear in thy own body the affliction of cancer, hear my prayer as I begin this novena. Obtain for me the grace I need, and above all the grace to unite my sufferings to Christ's as thou didst unite thine.",
+    closingPrayer: "O St. Ezequiel Moreno, I thank thee for thy intercession throughout this novena. Thou who didst not flee from the labor of the missions nor from the pain of thy final illness, obtain for me courage in hardship and, if it be God's will, the healing I seek. Above all, obtain for me the peace of a soul surrendered entirely to God. Amen.",
+    days: [
+      { theme: "His Missionary Zeal", prayer: "O St. Ezequiel Moreno, at seventeen thou left thy home in Alfaro to enter religious life, and soon after crossed the ocean to bring Christ to the islands of the Philippines. Thou did not count the cost of distance or hardship when souls were at stake. Grant me some portion of thy zeal — a readiness to go wherever love of God requires, even when it costs me comfort, familiarity, or ease." },
+      { theme: "Patience in a Foreign Land", prayer: "O St. Ezequiel Moreno, for fifteen years thou labored among the peoples of Mindoro, Palawan, and Luzon, learning their language and their ways so that the Gospel might reach them in truth. Teach me the patient humility of the missionary — to serve people as they are, not as I wish them to be, and to let love, not convenience, set the pace of my service." },
+      { theme: "Fidelity Amid Conflict", prayer: "O St. Ezequiel Moreno, as Bishop of Pasto thou shepherded thy people through years of civil war in Colombia, remaining a voice of clarity and strength when the world around thee was in turmoil. When conflict and division surround me — in my family, my community, or my own heart — intercede that I may remain steady in charity and unshaken in truth." },
+      { theme: "Bearing Illness", prayer: "O St. Ezequiel Moreno, thou didst receive the diagnosis of cancer not as an interruption of thy mission but as its final chapter, offered with the same obedience that had marked thy whole life. I bring before thee today all who suffer from cancer — the newly diagnosed, those in treatment, those for whom a cure is no longer possible. Obtain for them courage, and for their families, strength to accompany them." },
+      { theme: "My Own Petition", prayer: "O St. Ezequiel Moreno, patron of those who carry this particular cross, I bring before thee now my own need [here silently name the person or intention]. Thou who knew this suffering from within, intercede before God's throne. I ask for healing if it be His will, and for the grace to trust His providence whether the answer is yes, not yet, or not as I hoped." },
+      { theme: "Obedience Even to the End", prayer: "O St. Ezequiel Moreno, when thy own desire was to remain with thy people in Pasto, thou set it aside in obedience to those who urged thee toward treatment, journeying instead toward Spain, though death met thee at Monteagudo before the journey's completion. Teach me this same obedience — the willingness to set aside my own preference and trust those charged with my care, and ultimately to trust God's timing above my own plans." },
+      { theme: "Devotion to the Sacred Heart", prayer: "O St. Ezequiel Moreno, thy pastoral life was rooted in a deep devotion to the Sacred Heart of Jesus, the wellspring from which thy strength and compassion flowed. Draw me deeper into this same devotion. Let every hardship I carry — illness, fatigue, fear — be brought first to the Heart of Christ before it is brought anywhere else." },
+      { theme: "Comfort for the Suffering", prayer: "O St. Ezequiel Moreno, countless who suffer with cancer have found comfort through thy intercession since thy death. I pray today not only for myself but for every person, known to me or not, who lies awake tonight in fear of this disease or in the pain of its treatment. Be near to them as thou art near to all who call upon thee in this particular affliction." },
+      { theme: "Final Surrender", prayer: "O St. Ezequiel Moreno, on this final day I ask for the grace that marked thy own death — a complete surrender to God's will, offered without bitterness and without fear. Whatever burden I carry, whatever the outcome of my petition, let me place it, as thou didst place thy own life, entirely into the hands of the Father. Pray for me now and at the hour of my death." },
+    ],
+  },
+  {
+    id: "padre_pio",
+    title: "St. Padre Pio of Pietrelcina",
+    subtitle: "Stigmatist · Confessor of Millions",
+    icon: "🩸",
+    color: "#7a1c1c",
+    feast: "September 23",
+    patron: "Civil defense volunteers, adolescents, stress relief, the sick",
+    intro: "St. Padre Pio (1887–1968) was a Capuchin Franciscan priest who bore the wounds of Christ in his body for fifty years. He spent up to eighteen hours a day in the confessional and is reported to have miraculously read souls. His counsel: 'Pray, hope, and don't worry.'",
+    openingPrayer: "O St. Padre Pio, wounded with the five wounds of Christ, I come before thee with confidence. Thou who spent thy life bringing souls to God through the confessional and through thy suffering — look upon me with compassion and bring my petition before the throne of grace.",
+    closingPrayer: "Dear Padre Pio, as I end this novena I ask thee to continue to intercede for me. Teach me thy counsel: to pray, to hope, and not to worry. Obtain for me a faith that does not flinch and a love that does not count the cost. Amen.",
+    days: [
+      { theme: "The Stigmata", prayer: "O St. Padre Pio, God chose thee to be configured to the suffering Christ in a visible and extraordinary way. The wounds of Jesus appeared in thy flesh. I do not ask for extraordinary gifts, but I ask to share in what they signify: a true participation in Christ's redemptive suffering. Let me embrace the crosses of my daily life not with resentment but with the offering of love, united to Christ's Passion." },
+      { theme: "The Confessional", prayer: "O St. Padre Pio, thou spent more of thy priestly life in the confessional than in any other ministry. Thou had a supernatural knowledge of souls and led thousands to true repentance. Intercede for me that I may approach the Sacrament of Penance with genuine contrition — not fear of punishment but grief for having offended a God who is all love. Obtain for me a good confessor and the grace of a thorough, humble confession." },
+      { theme: "His Prayer Life", prayer: "O St. Padre Pio, thy days began before dawn and were spent almost entirely in prayer. The Mass lasted hours for thee, because thou wast truly present at Calvary. Intercede for me who am so easily distracted and discouraged in prayer. Obtain for me a love of prayer that is not dependent on feeling but rooted in faith — the faith that God hears, and that prayer is never wasted." },
+      { theme: "Pray, Hope, Don't Worry", prayer: "O St. Padre Pio, thy counsel was simple and profound: 'Pray, hope, and don't worry.' I confess that worry is one of my greatest failings — I carry tomorrow's burdens today, and multiply suffering by anticipation. Help me to pray instead of panic, to hope instead of despair, to trust instead of control. Let thy counsel become the pattern of my days." },
+      { theme: "His Suffering", prayer: "O St. Padre Pio, thou suffered not only the physical wounds of the stigmata but also spiritual darkness, demonic attacks, and misunderstanding from ecclesiastical superiors who restricted thy ministry for years. Thou endured all of this in obedience and without bitterness. When I suffer — in body, soul, or relationships — let me look to thy example and find in it the courage to offer rather than complain." },
+      { theme: "His Love for the Mass", prayer: "O St. Padre Pio, thou once said it would be easier for the world to survive without the sun than without the Holy Sacrifice of the Mass. Help me to understand what thou understood — that the Mass is not merely a ritual but the same sacrifice of Calvary, made present on the altar. Rekindle in me a reverence for the Mass, a desire to attend, a gratitude for this gift that no one in heaven can receive as we can." },
+      { theme: "Intercession for the Sick", prayer: "O St. Padre Pio, who bore sickness in thy own body and ministered to the sick throughout thy life — intercede today for all those who are ill in body, in mind, and in spirit. I bring before thee the sick persons I love and those who have no one to pray for them. Touch them with the healing grace of God, and if physical healing is not His will, grant them the deeper healing of a soul at peace with God." },
+      { theme: "The Spiritual Battle", prayer: "O St. Padre Pio, thou knew the spiritual battle as few saints have — thou encountered the devil directly and physically, yet wast not overcome, because thy trust in God was complete. I ask thy intercession in my own spiritual struggles: against the temptations I keep falling into, against the darkness that descends on my soul, against discouragement and despair. Arm me with prayer, the sacraments, and holy boldness." },
+      { theme: "His Intercession for Souls", prayer: "O St. Padre Pio, intercede for me as thou didst for so many souls who came to thee burdened and left consoled. I ask to be among those for whom thou prayest — through this novena and through my desire to imitate thy love for God. Intercede for me at the hour of my death, and do not cease to pray for me until I stand safely before the throne of God." },
+    ],
+  },
+  {
+    id: "st_jude",
+    title: "St. Jude Thaddaeus",
+    subtitle: "Patron of Hopeless Cases",
+    icon: "🕯",
+    color: "#7a1c1c",
+    feast: "October 28",
+    patron: "Hopeless cases, desperate situations, hospitals, the forgotten",
+    intro: "St. Jude Thaddaeus was one of the Twelve Apostles, cousin of Our Lord, and author of the Epistle of Jude. He is invoked as the patron of hopeless and desperate cases — perhaps because, sharing a name with the traitor Judas, he was often overlooked by those seeking heavenly help.",
+    openingPrayer: "O most holy Apostle St. Jude, faithful servant and friend of Jesus, the Church honors and invokes thee universally as the patron of hopeless cases — of things despaired of. Pray for me who am so miserable and helpless. I promise to honor thee as my patron and to make known thy glorious intercession.",
+    closingPrayer: "O glorious Apostle St. Jude, I thank thee for hearing my prayer. Grant that I may never lose hope in God's mercy, no matter how desperate my circumstances appear. Intercede for me that I may persevere in faith, in hope, and in love until I come at last to see the God whom thou didst serve and now behold face to face. Amen.",
+    days: [
+      { theme: "Hope in God Alone", prayer: "O St. Jude, I come to thee in a situation that seems hopeless to me, and perhaps it is — by human measure. But God's measure is different. What is impossible with men is possible with God (Luke 18:27). Grant me a hope that is not anchored in circumstances but in the character of God Himself — a God who raises the dead and calls into being what does not exist (Romans 4:17)." },
+      { theme: "His Apostolic Witness", prayer: "O St. Jude, Apostle and martyr, thou preached the Gospel at the cost of thy life. Thou died rather than deny the Christ thou had walked with and touched. Grant me a faith that has the same weight and seriousness — not a comfortable faith that costs nothing, but a faith that is worth dying for and therefore worth living for. Strengthen my resolve to hold fast to the faith whatever it costs." },
+      { theme: "Contending for the Faith", prayer: "O St. Jude, whose epistle urges us to contend earnestly for the faith once delivered to the saints (Jude 1:3), intercede for me in my own struggles to hold and defend the faith. I face the quiet apostasy of a culture that has abandoned God. Grant me a holy combativeness for the truth, joined with the charity that wins souls." },
+      { theme: "In Desperate Need", prayer: "O St. Jude, I bring before thee now the specific need that has brought me to this novena — the situation I cannot resolve, the suffering I cannot bear, the person I cannot reach, the sin I cannot break. I do not demand a miracle, but I ask for one if it be God's will. And if not, I ask for the grace to bear my cross with the same fidelity that thou bore thine." },
+      { theme: "The Forgotten", prayer: "O St. Jude, patron of those who feel overlooked and forgotten, intercede for all who cry out and are not heard — the chronically ill, the imprisoned, the elderly, the abandoned. I pray today not only for my own needs but for all those in desperate situations who have no one to advocate for them. Let thy powerful intercession reach those who feel furthest from God's mercy." },
+      { theme: "Mercy for Sinners", prayer: "O St. Jude, the mercy of God is the last hope of sinners — including me. I have sinned gravely, and sometimes my sins seem to multiply faster than my repentance. Yet God's mercy is greater than my sin. Remind me that God is able to keep us from stumbling and to present us faultless before His glory (Jude 1:24). I cling to that promise today." },
+      { theme: "Fidelity in Small Things", prayer: "O St. Jude, the hopeless cases that most defeat us are often not dramatic crises but the slow erosion of daily fidelity — prayers abandoned, resolutions broken, small compromises accumulated. Intercede for me that I may be faithful in small things, trusting that great holiness is built one small act of love at a time. Let me not despair of the slow work of sanctification." },
+      { theme: "Protection from Despair", prayer: "O St. Jude, despair is the most dangerous sin — for it holds that one is beyond God's mercy, which is a lie. Protect me from this spiritual catastrophe. When my soul grows dark and I am tempted to believe that God has abandoned me or that my case is truly hopeless, remind me of thy patronage: thou art the saint of hopeless cases precisely because no case is truly hopeless for God." },
+      { theme: "Thanksgiving and Trust", prayer: "O St. Jude, as I complete this novena I thank thee whether or not I have received what I asked for. God's ways are not my ways. Perhaps He has given me something better than what I asked — perhaps He has given me closer union with Himself through this trial. I place my petition at thy feet and leave it there. Intercede for me that whatever God's answer, I will receive it with faith, with hope, and with love." },
+    ],
+  },
+  {
+    id: "all_souls",
+    title: "The Holy Souls in Purgatory",
+    subtitle: "All Souls' Day · Prayers for the Faithful Departed",
+    icon: "✝",
+    color: "#1a2744",
+    feast: "November 2",
+    patron: "The souls in Purgatory, the dying, mourners",
+    intro: "On November 2, the day after All Saints, the Church commemorates all the faithful departed who are being purified in Purgatory before entering the joy of Heaven. Praying for the dead is among the oldest practices of the Church, rooted in Scripture (2 Maccabees 12:46) and expressed in every Mass. This novena is traditionally prayed for the Poor Souls — one's own departed family and friends, and those forgotten by all who once loved them.",
+    openingPrayer: "O God, the Creator and Redeemer of all the faithful, grant unto the souls of Thy departed servants the remission of all their sins, that through our pious supplications they may obtain the pardon they have always desired. As I begin this novena, hear my prayer on behalf of the Holy Souls in Purgatory, and grant them, through Thy mercy, a speedy entrance into the joy of Thy presence.",
+    closingPrayer: "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May the souls of all the faithful departed, through the mercy of God, rest in peace. And may the perpetual light of Thy presence shine upon all those I have carried in this novena, that we may one day be reunited in the joy of Heaven. Amen.",
+    days: [
+      { theme: "The Justice and Mercy of Purgatory", prayer: "O Lord, Thou art both perfectly just and perfectly merciful, and Purgatory is the meeting place of these two truths — the purification owed to souls not yet ready for the fullness of Thy presence, and the certain hope that they will one day see Thee face to face. Help me to understand this teaching not as a fear to dread but as a mercy to be grateful for, both for the dead and, one day, for myself." },
+      { theme: "A Holy and Wholesome Thought", prayer: "O Lord, Scripture tells us it is a holy and wholesome thought to pray for the dead, that they may be loosed from their sins. I have too often let the departed slip from my prayers as quickly as they slipped from my daily thoughts. Renew in me today a steady, faithful practice of praying for the dead, not as an occasional kindness but as a holy duty I owe them." },
+      { theme: "The Communion of Saints", prayer: "O Lord, I believe in the Communion of Saints — the mystical bond that unites the Church on earth, the Church suffering in Purgatory, and the Church triumphant in Heaven. The souls in Purgatory cannot pray for themselves as we can pray for them, yet they are still our brothers and sisters in Christ. Let me take seriously this bond, and let my prayers cross the veil to reach them." },
+      { theme: "My Own Departed", prayer: "O Lord, I bring before Thee today by name those I have loved and lost: [here silently name your departed family and friends]. Thou knowest what they meant to me, and Thou knowest what, if anything, still remains to be purified in them. Grant them, I beg Thee, the mercy I cannot fully measure, and let my love for them continue to bear fruit through my prayer." },
+      { theme: "Those No One Remembers", prayer: "O Lord, I think today of the forgotten dead — those who died without family, without friends, without a single soul left on earth to pray for them. Grant that my prayer this day may reach those for whom no one else is praying: the abandoned, the estranged, the anonymous poor whose graves, if they have any, no one visits. Let none be left forgotten before Thee." },
+      { theme: "The Souls Nearest to Heaven", prayer: "O Lord, tradition holds that some souls in Purgatory are very near to the joy of Heaven, needing only a little more purification before they see Thy face. I ask that whatever prayer I offer today be applied, according to Thy will, to hasten the entrance of these souls into glory, that they may in turn intercede for me and for all whom I love." },
+      { theme: "Purified by Love", prayer: "O Lord, the suffering of Purgatory is not the suffering of punishment alone, but the burning purification of love — souls who now see clearly how imperfectly they loved Thee, and who long with an unbearable longing to be united to Thee fully. Let this truth deepen my own love for Thee now, in this life, that I may love Thee more completely before I am called to render my account." },
+      { theme: "The Church's Treasury of Merit", prayer: "O Lord, Thy Church, from the merits of Christ and the saints, offers indulgences that can be applied to the Holy Souls, lessening the debt still owed by their sins. I ask for the grace to make use of these treasures more faithfully — through Confession, Communion, prayer for the Holy Father's intentions, and detachment from sin — that my prayer for the dead may bear its fullest fruit." },
+      { theme: "Eternal Rest Grant Unto Them", prayer: "O Lord, on this final day of the novena, I commend once more to Thy mercy all the Holy Souls in Purgatory — my own departed, the forgotten dead, and every soul for whom this prayer may be the last one offered on earth. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May they rest in peace, and may I one day join them in Thy presence." },
+    ],
+  },
+  {
     id: "immaculate_conception",
     title: "Immaculate Conception",
     subtitle: "Nine Days of Marian Devotion",
@@ -5279,26 +5432,26 @@ const NOVENAS = [
     ],
   },
   {
-    id: "divine_mercy",
-    title: "Divine Mercy",
-    subtitle: "Nine Days of Trust in God's Mercy",
-    icon: "💧",
-    color: "#7a1c1c",
-    feast: "Divine Mercy Sunday (Second Sunday of Easter)",
-    patron: "Sinners, the dying, those in despair of God's mercy",
-    intro: "The Divine Mercy devotion was given in a series of visions in the 1930s. Our Lord asked that a Feast of Divine Mercy be observed on the Sunday after Easter and that a novena begin on Good Friday. Each day is prayed for a different group of souls.",
-    openingPrayer: "O Jesus, eternal truth, our life, I call upon Thee and I beg Thy mercy for poor sinners. O sweetest Heart of Jesus, full of pity and compassion, I implore Thy mercy for poor sinners. Amen.",
-    closingPrayer: "O Blood and Water that gushed forth from the Heart of Jesus as a fount of mercy for us — I trust in Thee. Jesus, I trust in Thee. Make of me a worthy vessel of Thy mercy, that I may bring others to trust in Thee as I have learned to trust. Amen.",
+    id: "guadalupe",
+    title: "Our Lady of Guadalupe",
+    subtitle: "Queen of the Americas · Star of the New Evangelization",
+    icon: "🌹",
+    color: "#1a2744",
+    feast: "December 12",
+    patron: "The Americas, the unborn, the poor, indigenous peoples",
+    intro: "Our Lady appeared to St. Juan Diego on Tepeyac Hill in 1531, leaving her miraculous image on his tilma. Under her patronage, millions converted to the Faith. This novena is traditionally prayed before her feast on December 12.",
+    openingPrayer: "Our Lady of Guadalupe, by the grace of God you appeared to your servant Juan Diego and left on his cloak your holy image. Hear my prayer as I come before you in this novena, trusting in your powerful intercession before your divine Son.",
+    closingPrayer: "Most Holy Virgin, thou didst choose to reside among us by leaving us thine image. We beseech thee to obtain for us from thy divine Son the graces we have asked during these nine days, but above all, obtain for us the grace of final perseverance in His love. Amen.",
     days: [
-      { theme: "All Mankind, Especially Sinners", prayer: "Most merciful Jesus, whose very nature it is to have compassion on us and to forgive us — do not look upon our sins, but upon the trust we place in Thy infinite goodness. Receive us all into the abode of Thy most compassionate Heart. Never let us escape from It. We beg this of Thee by Thy love which unites Thee to the Father and the Holy Spirit. O omnipotence of Divine Mercy, help us in all our needs." },
-      { theme: "Priests and Religious", prayer: "Most merciful Jesus, from whom comes all that is good, increase Thy grace in men and women consecrated to Thy service. Grant them the light of Thy wisdom and protect them with Thy strength. Guard them from the world's contamination, and give them the grace of a burning charity. May the power of Thy mercy accompany them wherever they go." },
-      { theme: "Devout and Faithful Souls", prayer: "Most merciful Jesus, Thou dost bestow special graces on those who have given themselves to a life of fidelity and love. Grant that those who serve Thee with the constancy of daily devotion may become ever more deeply united to Thee. Strengthen them in times of trial, console them in darkness, and let Thy mercy sustain them as they sustain others." },
-      { theme: "Those Who Do Not Yet Know God", prayer: "Most compassionate Jesus, Thou art the Light of the whole world. Receive into the abode of Thy most compassionate Heart the souls of those who do not yet know Thee. Let the rays of Thy grace enlighten them that they, too, may glorify the generosity of Thy mercy for endless ages. May they come to know the God who loves them before they made any move toward Him." },
-      { theme: "Separated Brethren", prayer: "Most merciful Jesus, goodness itself, Thou dost not refuse light to those who seek it of Thee. Receive into the abode of Thy most compassionate Heart those souls who have separated from Thy Church. Draw them by Thy light into the unity of the Church, and do not let them escape from the abode of Thy most compassionate Heart." },
-      { theme: "The Meek and Humble", prayer: "Most merciful Jesus, Thou Thyself said: 'Learn from Me for I am meek and humble of Heart.' Receive into the abode of Thy most compassionate Heart all meek and humble souls and the souls of little children. These souls send all heaven into ecstasy, and they are the Father's favorites — they are a fragrant bouquet before the throne of God." },
-      { theme: "Those Who Venerate the Divine Mercy", prayer: "Most merciful Jesus, whose Heart is Love itself, receive into the abode of Thy most compassionate Heart the souls of those who particularly venerate and glorify the greatness of Thy mercy. These souls are mighty with the very power of God Himself. In the midst of all afflictions and adversities they go forward confident in God's mercy — united to Thee they carry all of mankind on their shoulders." },
-      { theme: "The Souls in Purgatory", prayer: "Most merciful Jesus, Thou Thyself have said that Thou desire mercy. Behold, I bring into the abode of Thy most compassionate Heart the souls in Purgatory — souls who are very dear to Thee, and yet who must make retribution to Thy justice. May the streams of blood and water which gushed forth from Thy Heart put out the flames of Purgatory." },
-      { theme: "Lukewarm Souls", prayer: "Most compassionate Jesus, Thou art compassion itself. I bring lukewarm souls into the abode of Thy most compassionate Heart. In this fire of pure love let these tepid souls — who, like corpses, fill Thee with such deep loathing — be once again set aflame. O most compassionate Jesus, exercise the omnipotence of Thy mercy and draw them into the very ardour of Thy love." },
+      { theme: "Her Apparition", prayer: "Our Lady of Guadalupe, you came not to the powerful but to the humble. You appeared to Juan Diego — a poor indigenous man — and showed the world that God's designs are accomplished not through human prestige but through holy simplicity. Grant me the humility to hear God's voice as Juan Diego heard it, even when the message seems beyond my station or ability. Help me to say, as he did, 'Here I am.'" },
+      { theme: "Her Motherhood", prayer: "Our Lady of Guadalupe, you spoke to Juan Diego with the tenderness of a mother: 'Am I not here, I who am your Mother?' I come before you as a child before its mother, bringing before you all my needs — spiritual and temporal. You know what I carry. You know what I fear. Intercede for me before your divine Son, and draw me ever closer to His Sacred Heart." },
+      { theme: "The Unborn", prayer: "Our Lady of Guadalupe, you are the patron of the unborn, depicted in your tilma as a woman with child, bearing the Child of the world's salvation. I pray today for all unborn children — for their protection, for the conversion of those who do not see their dignity, and for mothers and fathers in crisis. Be the advocate of every child who has no voice, as you were the advocate of Juan Diego when no one believed him." },
+      { theme: "Conversion", prayer: "Our Lady of Guadalupe, through your apparition and miraculous image, nine million people came to the Faith in a matter of years. This was not human persuasion but your intercession. I ask today for the conversion of someone I love — someone who has left the Faith, who has never known it, or who knows it but does not live it. Place them under your mantle as you placed the stars on your cloak." },
+      { theme: "The Poor", prayer: "Our Lady of Guadalupe, you came to the poor and the marginalized. You stood with those whom the powerful dismissed. Open my heart to see the poor as you see them — not as burdens but as Christ Himself in disguise (cf. Matthew 25:40). Move me to concrete works of mercy, not merely sympathy. Grant that my charity may have the warmth of a mother's love rather than the coldness of obligation." },
+      { theme: "Faith Under Trial", prayer: "Our Lady of Guadalupe, Juan Diego carried your message even when the bishop did not believe him. He persisted not out of stubbornness but out of obedience to you. Grant me the same perseverance in following God's call even when it is met with skepticism or rejection. When my faith is tested by the disbelief of the world around me, let me return again and again to the certainty of your maternal presence." },
+      { theme: "The Church in the Americas", prayer: "Our Lady of Guadalupe, Queen of the Americas, I pray for the Church in this land — for bishops, priests, and deacons; for catechists, teachers, and parents; for all the faithful who struggle to hand on the Faith. Purify the Church. Strengthen what is weak. Correct what has gone astray. Raise up holy priests and consecrated souls. Let the New Evangelization bear the fruit that your original apparition bore." },
+      { theme: "Trust in Providence", prayer: "Our Lady of Guadalupe, Juan Diego's uncle was gravely ill, and in his grief Juan feared he would miss the message you had entrusted to him. Yet you healed the uncle and fulfilled all your promises. Teach me this trust — that God's plans are not thwarted by our circumstances, that even our detours and disasters are within His providence. Let me not lose heart when the way seems blocked." },
+      { theme: "Her Perpetual Intercession", prayer: "Our Lady of Guadalupe, as I complete this novena I consecrate myself to your maternal care. I ask you to place me and all those I love under your sacred mantle. Intercede for us with your divine Son — not only for the intention of this novena, but throughout our lives and at the hour of our death. Be our advocate before God as you were Juan Diego's advocate before the bishop." },
     ],
   },
 ];
@@ -5311,6 +5464,9 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
   const [selected, setSelected] = useState(null);
   const [dayIdx, setDayIdx] = useState(0);
   const [completedDays, setCompletedDays] = useState({});
+  const [intentions, setIntentions] = useState({});
+  const [intentionDraft, setIntentionDraft] = useState("");
+  const [editingIntention, setEditingIntention] = useState(false);
   const [storageReady, setStorageReady] = useState(false);
   const [fade, setFade] = useState(true);
   const scrollRef = useRef(null);
@@ -5321,12 +5477,22 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
         const result = await window.storage.get("novena_progress");
         if (result && result.value) setCompletedDays(JSON.parse(result.value));
       } catch (_) {}
+      try {
+        const result2 = await window.storage.get("novena_intentions");
+        if (result2 && result2.value) setIntentions(JSON.parse(result2.value));
+      } catch (_) {}
       setStorageReady(true);
     })();
   }, []);
 
   const saveProgress = async (updated) => {
     try { await window.storage.set("novena_progress", JSON.stringify(updated)); } catch (_) {}
+  };
+
+  const saveIntention = async (id, text) => {
+    const updated = { ...intentions, [id]: text };
+    setIntentions(updated);
+    try { await window.storage.set("novena_intentions", JSON.stringify(updated)); } catch (_) {}
   };
 
   const getDaysCompleted = (id) => (completedDays[id] || Array(9).fill(false)).filter(Boolean).length;
@@ -5352,11 +5518,17 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
     setTimeout(() => { fn(); setFade(true); if (scrollRef.current) scrollRef.current.scrollTop = 0; }, 160);
   };
 
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [view, selected, dayIdx]);
+
   const openNovena = (novena) => {
     setSelected(novena);
     const days = completedDays[novena.id] || Array(9).fill(false);
     const firstIncomplete = days.findIndex(d => !d);
     setDayIdx(firstIncomplete === -1 ? 8 : firstIncomplete);
+    setIntentionDraft(intentions[novena.id] || "");
+    setEditingIntention(false);
     setView("detail");
   };
 
@@ -5374,7 +5546,7 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
     return (
       <>
         <GlobalTopBar title="Novena Guide" dark={dark} setDark={setDark} fszGlobal={fszGlobal} setFszGlobal={setFszGlobal} showBack={true} onBack={goHome} />
-        <div style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
+        <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "18px 20px 28px" }}>
           <div style={{ textAlign: "center", marginBottom: 22 }}>
             <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 60, height: 60, borderRadius: "50%", background: T.goldFaint, border: `1.5px solid rgba(212,168,67,0.25)`, marginBottom: 10 }}>
               <span style={{ fontSize: fz(26) }}>🕯</span>
@@ -5387,7 +5559,7 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
               const done = getDaysCompleted(nov.id);
               const isComplete = done === 9;
               return (
-                <button key={nov.id} onClick={() => openNovena(nov)} style={{
+                <button key={nov.id} onClick={() => transition(() => openNovena(nov))} style={{
                   display: "flex", alignItems: "center", gap: 14, padding: "14px 16px",
                   background: T.warmWhite,
                   border: `1px solid ${isComplete ? "rgba(212,168,67,0.45)" : T.cardBorder}`,
@@ -5441,13 +5613,44 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
             <span style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.08em", textTransform: "uppercase" }}>Patron of · </span>
             <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(14), color: T.inkDark, fontStyle: "italic" }}>{selected.patron}</span>
           </div>
+          <Card style={{ marginBottom: 18 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: editingIntention ? 8 : 0 }}>
+              <CardTitle color={T.navyText}>My Intention</CardTitle>
+              {!editingIntention && (
+                <button onClick={() => setEditingIntention(true)} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "EB Garamond, serif", fontSize: fz(12.5), color: T.gold, fontStyle: "italic", textDecoration: "underline", padding: 0 }}>
+                  {intentions[selected.id] ? "Edit" : "Add"}
+                </button>
+              )}
+            </div>
+            {editingIntention ? (
+              <div>
+                <textarea
+                  value={intentionDraft}
+                  onChange={(e) => setIntentionDraft(e.target.value)}
+                  placeholder="e.g. For the healing of my mother, or for a difficult decision I must make…"
+                  rows={3}
+                  style={{ width: "100%", boxSizing: "border-box", fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.5, padding: "8px 10px", borderRadius: 8, border: `1px solid ${T.cardBorderStrong}`, background: T.warmWhite, resize: "vertical" }}
+                />
+                <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+                  <button onClick={() => { saveIntention(selected.id, intentionDraft.trim()); setEditingIntention(false); }} style={{ flex: 1, padding: "8px", fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: T.warmWhite, background: `linear-gradient(135deg, ${T.navy}, ${T.navyLight})`, border: "none", borderRadius: 8, cursor: "pointer" }}>Save</button>
+                  {intentions[selected.id] && (
+                    <button onClick={() => { saveIntention(selected.id, ""); setIntentionDraft(""); setEditingIntention(false); }} style={{ padding: "8px 12px", fontFamily: "EB Garamond, serif", fontSize: fz(13), color: T.inkLight, fontStyle: "italic", background: "none", border: `1px solid ${T.cardBorder}`, borderRadius: 8, cursor: "pointer" }}>Clear</button>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: intentions[selected.id] ? T.inkDark : T.inkLight, fontStyle: "italic", lineHeight: 1.6, margin: 0 }}>
+                {intentions[selected.id] || "No intention set. Tap “Add” to name what you are praying for during this novena."}
+              </p>
+            )}
+          </Card>
           <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(11), fontWeight: 700, color: T.navyText, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>Nine Days</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 18 }}>
             {selected.days.map((day, i) => {
               const done2 = isDayDone(selected.id, i);
               const isNext = !done2 && (i === 0 || isDayDone(selected.id, i - 1));
               return (
-                <button key={i} onClick={() => { setDayIdx(i); setView("pray"); }} style={{
+                <button key={i} onClick={() => transition(() => { setDayIdx(i); setView("pray"); })} style={{
                   display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
                   background: done2 ? "rgba(212,168,67,0.08)" : T.warmWhite,
                   border: `1px solid ${done2 ? "rgba(212,168,67,0.35)" : isNext ? T.cardBorderStrong : T.cardBorder}`,
@@ -5499,9 +5702,25 @@ function NovenaTab({ goHome, dark, setDark, fszGlobal, setFszGlobal }) {
             <CardTitle color={T.navyText}>Opening Prayer</CardTitle>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(16), color: T.inkDark, lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>{selected.openingPrayer}</p>
           </Card>
+          {intentions[selected.id] ? (
+            <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.gold}` }}>
+              <CardTitle color={T.gold}>My Intention</CardTitle>
+              <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15.5), color: T.inkDark, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{intentions[selected.id]}</p>
+            </Card>
+          ) : (
+            <button onClick={() => transition(() => setView("detail"))} style={{ display: "block", width: "100%", marginBottom: 14, padding: "10px 14px", background: "none", border: `1px dashed ${T.cardBorderStrong}`, borderRadius: 10, cursor: "pointer", textAlign: "center" }}>
+              <span style={{ fontFamily: "EB Garamond, serif", fontSize: fz(13.5), color: T.inkLight, fontStyle: "italic" }}>+ Add an intention for this novena</span>
+            </button>
+          )}
           <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.crimson}` }}>
             <CardTitle color={T.crimson}>Day {dayIdx + 1} — {day.theme}</CardTitle>
             <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(17), color: T.inkDark, lineHeight: 1.8, margin: 0 }}>{day.prayer}</p>
+          </Card>
+          <Card style={{ marginBottom: 14, borderLeft: `3px solid ${T.navy}` }}>
+            <CardTitle color={T.navyText}>Our Father, Hail Mary & Glory Be</CardTitle>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, margin: "0 0 12px" }}>{ROSARY_PRAYERS.ourFather}</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, margin: "0 0 12px" }}>{ROSARY_PRAYERS.hailMary}</p>
+            <p style={{ fontFamily: "EB Garamond, serif", fontSize: fz(15), color: T.inkDark, lineHeight: 1.7, margin: 0 }}>{ROSARY_PRAYERS.gloryBe}</p>
           </Card>
           <Card style={{ marginBottom: 20, borderLeft: `3px solid ${T.gold}` }}>
             <CardTitle color={T.gold}>Closing Prayer</CardTitle>
@@ -6874,15 +7093,16 @@ export default function Custos() {
           {/* Sources */}
           <div style={{ background: T.navy, padding: "40px 20px", margin: "0 -0px" }}>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: fz(10), fontWeight: 700, color: T.gold, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 6 }}>The Closed Universe</div>
-            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>57 Approved Sources. Nothing Else.</h2>
+            <h2 style={{ fontFamily: "Cinzel, serif", fontSize: fz(22), fontWeight: 500, color: "#fff", textAlign: "center", marginBottom: 20 }}>72 Approved Sources. Nothing Else.</h2>
             {[
-              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims only" },
-              { icon: "📕", title: "Catechisms", desc: "Baltimore, Roman, Pius X" },
+              { icon: "📜", title: "Sacred Scripture", desc: "Douay-Rheims Bible — required for all quotations" },
+              { icon: "📕", title: "4 Catechisms", desc: "Roman, Baltimore, Pius X · CCC supplementary only" },
               { icon: "⛪", title: "4 Church Councils", desc: "Lateran IV, Florence, Trent, Vatican I" },
-              { icon: "✉", title: "34 Encyclicals & Apostolic Docs · 1 Papal Bull", desc: "Gregory XVI through Benedict XVI · Quo Primum (Pius V, 1570)" },
-              { icon: "📋", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
-              { icon: "🏛", title: "15 Doctors", desc: "Aquinas, Augustine, Bellarmine, and more" },
-              { icon: "⚖", title: "Canon Law", desc: "1917 and 1983 Codes, side by side" },
+              { icon: "✉", title: "37 Encyclicals & Apostolic Constitutions", desc: "Leo XII (1826) through Benedict XVI (2005)" },
+              { icon: "📋", title: "7 Other Papal Documents", desc: "4 Motu Proprio · Quo Primum · Apostolicae Curae · Lamentabili Sane" },
+              { icon: "📃", title: "5 CDF Instructions", desc: "3 in forma specifica · 2 in common form" },
+              { icon: "🏛", title: "15 Doctors of the Church", desc: "Aquinas, Augustine, Bellarmine, and more" },
+              { icon: "⚖", title: "2 Codes of Canon Law", desc: "1917 and 1983 Codes, side by side" },
             ].map((s, i) => (
               <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "10px 14px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,168,67,0.15)", borderRadius: 10, marginBottom: 8 }}>
                 <span style={{ fontSize: 18, flexShrink: 0 }}>{s.icon}</span>
